@@ -1,0 +1,41 @@
+{
+    "name": "@wildberries-tech/ui-kit-react",
+    "version": "0.0.1",
+    "description": "React UI kit",
+    "main": "index.js",
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1",
+        "storybook:start": "start-storybook --disable-telemetry -p 6006",
+        "storybook:build": "build-storybook --disable-telemetry -o ./build"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/wildberries-tech/ui-kit-react.git"
+    },
+    "author": "",
+    "license": "ISC",
+    "bugs": {
+        "url": "https://github.com/wildberries-tech/ui-kit-react/issues"
+    },
+    "homepage": "https://github.com/wildberries-tech/ui-kit-react#readme",
+    "workspaces": [
+        "packages/*"
+    ],
+    "devDependencies": {
+        "@babel/core": "^7.19.1",
+        "@storybook/addon-actions": "^6.5.12",
+        "@storybook/addon-essentials": "^6.5.12",
+        "@storybook/addon-interactions": "^6.5.12",
+        "@storybook/addon-links": "^6.5.12",
+        "@storybook/builder-webpack5": "^6.5.12",
+        "@storybook/manager-webpack5": "^6.5.12",
+        "@storybook/react": "^6.5.12",
+        "@storybook/testing-library": "^0.0.13",
+        "babel-loader": "^8.2.5",
+        "webpack": "^5.74.0"
+    },
+    "dependencies": {
+        "react": "^17.0.2",
+        "react-dom": "^17.0.2"
+    }
+}
