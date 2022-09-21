@@ -1,1 +1,1 @@
-{"v":3,"stories":{"documentation-example-introduction--page":{"id":"documentation-example-introduction--page","title":"Documentation/Example/Introduction","name":"Page","importPath":"./docs/test.stories.mdx"}}}
+{"v":3,"stories":{"documentation-example-introduction--page":{"id":"documentation-example-introduction--page","title":"Documentation/Example/Introduction","name":"Page","importPath":"./docs/test.stories.mdx"},"components-palette--page":{"id":"components-palette--page","title":"Components/Palette","name":"Page","importPath":"./packages/palette/index.stories.mdx"}}}
