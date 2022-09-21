@@ -1,9 +1,18 @@
 {
     "name": "@wildberries-tech/ui-kit-react",
     "version": "0.0.1",
-    "description": "React UI kit",
+    "description": "WildBerries react ui-kit",
+    "keywords": [
+        "wb",
+        "wildberries",
+        "ui",
+        "ui-kit",
+        "react"
+    ],
+    "homepage": "https://github.com/wildberries-tech/ui-kit-react#readme",
     "main": "index.js",
     "scripts": {
+        "lint:style": "stylelint ./packages/**/*.{css,pcss}",
         "test": "echo \"Error: no test specified\" && exit 1",
         "storybook:start": "start-storybook --disable-telemetry -p 6006",
         "storybook:build": "build-storybook --disable-telemetry -o ./build"
@@ -13,29 +22,43 @@
         "url": "git+https://github.com/wildberries-tech/ui-kit-react.git"
     },
     "author": "",
-    "license": "ISC",
+    "license": "MIT",
     "bugs": {
         "url": "https://github.com/wildberries-tech/ui-kit-react/issues"
     },
-    "homepage": "https://github.com/wildberries-tech/ui-kit-react#readme",
     "workspaces": [
         "packages/*"
     ],
     "devDependencies": {
         "@babel/core": "^7.19.1",
+        "@ronilaukkarinen/stylelint-a11y": "^1.2.4",
         "@storybook/addon-actions": "^6.5.12",
         "@storybook/addon-essentials": "^6.5.12",
         "@storybook/addon-interactions": "^6.5.12",
         "@storybook/addon-links": "^6.5.12",
+        "@storybook/addons": "^6.5.12",
         "@storybook/builder-webpack5": "^6.5.12",
         "@storybook/manager-webpack5": "^6.5.12",
         "@storybook/react": "^6.5.12",
         "@storybook/testing-library": "^0.0.13",
+        "@storybook/theming": "^6.5.12",
         "babel-loader": "^8.2.5",
+        "stylelint": "^14.12.1",
+        "stylelint-declaration-block-no-ignored-properties": "^2.5.0",
         "webpack": "^5.74.0"
     },
     "dependencies": {
         "react": "^17.0.2",
         "react-dom": "^17.0.2"
+    },
+    "contributors": [
+        {
+            "name": "Aleksey Novikov",
+            "url": "https://github.com/lamo2k123"
+        }
+    ],
+    "engines": {
+        "node": ">=16",
+        "npm": ">=7"
     }
 }
