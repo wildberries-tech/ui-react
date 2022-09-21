@@ -9,7 +9,7 @@ module.exports = {
     }, {
         directory  : '../packages',
         titlePrefix: 'Components',
-        files      : '*.stories.@(js|jsx|ts|tsx|mdx)'
+        files      : '**/*.stories.@(js|jsx|ts|tsx|mdx)'
     }],
     addons: [
         '@storybook/addon-links',
@@ -20,5 +20,6 @@ module.exports = {
     features: {
         storyStoreV7: true,
         postcss     : false
-    }
+    },
+    staticDirs: ['../public']
 }
