@@ -9,5 +9,6 @@ jobs:
       - name: stylelint
         uses: reviewdog/action-stylelint@v1
         with:
-          reporter: github-pr-review # Change reporter.
+          fail_on_error: true
+          reporter: github-pr-review
           stylelint_input: './packages/**/*.{css,pcss}'
