@@ -1,0 +1,29 @@
+{
+    "name": "@wb-ui-react/use-classnames",
+    "version": "1.0.0",
+    "description": "WildBerries react UI hook classnames",
+    "main": "dist/index.js",
+    "types": "dist/index.d.ts",
+    "peerDependencies": {
+        "classnames": "*",
+        "react": "*"
+    },
+    "scripts": {
+        "build": "webpack --entry ./index.ts -c ./../../webpack.config.js",
+        "postbuild": "tsc",
+        "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/wildberries-tech/ui-kit-react.git"
+    },
+    "author": "",
+    "license": "ISC",
+    "bugs": {
+        "url": "https://github.com/wildberries-tech/ui-kit-react/issues"
+    },
+    "homepage": "https://github.com/wildberries-tech/ui-kit-react#readme",
+    "dependencies": {
+        "@wb-ui-react/use-constant": "file:packages/use-constant"
+    }
+}

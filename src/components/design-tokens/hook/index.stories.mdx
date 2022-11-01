@@ -1,0 +1,52 @@
+import { Meta } from '@storybook/addon-docs';
+
+import Readme from './../readme.mdx';
+import Source from './source.mdx';
+
+<Meta
+    title="Design Tokens/Hook"
+    parameters={{
+        backgrounds: {
+            disable: true,
+            grid: {
+                disable: true
+            }
+        },
+        viewMode: 'docs',
+        previewTabs: {
+            canvas: {
+                hidden: true
+            }
+        }
+    }}
+/>
+
+<Readme />
+
+## Использование
+Импорт хука в код.
+```tsx
+import { useDesignTokens } from '@wb-tech/ui-react';
+```
+
+Хук возвращает объект с атрибутами для использования.
+```tsx
+import React from 'react';
+import { render } from 'react-dom';
+
+import { useDesignTokens } from '@wb-tech/ui-react';
+
+const App = () => {
+    const attrs = useDesignTokens();
+
+    return (
+        <div {...attrs}>
+            <YourAppCode />
+        </div>
+    );
+}
+
+render(<App />, document.getElementById('root'));
+```
+
+<Source />
