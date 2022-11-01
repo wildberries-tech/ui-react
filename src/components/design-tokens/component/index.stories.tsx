@@ -1,0 +1,41 @@
+import { ComponentMeta, ComponentStory } from '@storybook/react';
+
+import Readme from './readme.mdx';
+
+import { DesignTokens } from './';
+
+const META: ComponentMeta<typeof DesignTokens> = {
+    title    : 'Design Tokens/Component',
+    component: DesignTokens,
+    args     : {
+        children: 'Любое содержимое из типа ReactNode'
+    },
+    argTypes : {
+        children: {
+            control: 'text',
+            table: {
+                type: {
+                    summary: 'ReactNode'
+                }
+            }
+        },
+        className: {
+            control: 'text'
+        }
+    },
+    parameters: {
+        docs: {
+            page: Readme
+        },
+        design: {
+            type: "figma",
+            url : "https://www.figma.com/file/c2MtpBedt0dYAz20eepwzX/%E2%9D%96-WB-Partners-DS?node-id=5%3A17",
+        },
+    },
+};
+
+export default META;
+
+const Template: ComponentStory<typeof DesignTokens> = (props) => <DesignTokens {...props} />;
+
+export const Component = Template.bind({});
