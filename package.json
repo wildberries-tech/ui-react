@@ -12,11 +12,12 @@
     ],
     "homepage": "https://github.com/wildberries-tech/ui-kit-react#readme",
     "scripts": {
-        "lint:style": "stylelint ./packages/**/*.{css,pcss}",
+        "lint:style": "stylelint ./src/**/*.{css,pcss}",
         "test": "echo \"Error: no test specified\" && exit 1",
         "storybook:start": "start-storybook --disable-telemetry -p 6006",
         "storybook:build": "build-storybook --disable-telemetry -o ./build",
-        "compile:tokens": "node ./style-dictionary.js"
+        "compile:tokens": "node ./tools/style-dictionary.js",
+        "postcompile:tokens": "stylelint ./src/components/design-tokens/hook/index.module.pcss --fix"
     },
     "repository": {
         "type": "git",

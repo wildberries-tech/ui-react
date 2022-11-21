@@ -1,0 +1,194 @@
+import { Meta } from '@storybook/addon-docs';
+
+<Meta
+    title="use-classnames"
+    parameters={{
+        backgrounds: {
+            disable: true,
+            grid: {
+                disable: true
+            }
+        },
+        viewMode: 'docs',
+        previewTabs: {
+            canvas: {
+                hidden: true
+            }
+        }
+    }}
+/>
+
+## use-classnames
+Хук для удобной работы с CSS модулями. Возвращает функцию доступа к CSS классам.
+Поддерживает типизированные CSS модули.
+
+## Использование
+Импорт хука в код.
+```tsx
+import { useClassnames } from '@wb-tech/ui-react';
+```
+
+# Примеры
+Ваш CSS модуль.
+```css
+/* ./my-component-style.css */
+.my-component-block {
+    display: block;
+
+    &__element {
+        background-color: #000000;
+
+        &_mod {
+            background-color: #ffffff;
+        }
+    }
+}
+```
+
+#### Базовый пример использования
+---
+```tsx
+import { useClassnames } from '@wb-tech/ui-react';
+
+import style from './my-component-style.css';
+
+export const MyComponent = () => {
+    const cn = useClassnames(style);
+
+    return (
+        // Результат строки класса "my-component-block"
+        <div className={cn('my-component-block')}>
+            <div
+                children="Элемент блока"
+                // Результат строки класса "my-component-block__element my-component-block__element_mod"
+                className={cn('my-component-block__element', {
+                    'my-component-block__element_mod': true
+                })}
+            />
+        </div>
+    );
+}
+```
+
+#### Пример комбинирования CSS модулей.
+---
+Компонент:
+```tsx
+import { useClassnames, IStyle } from '@wb-tech/ui-react';
+
+import style from './my-component-style.css';
+
+export interface IProps {
+    className?: string | IStyle
+}
+
+export const MyComponent = (props: IProps) => {
+    const cn = useClassnames(style, props.className);
+
+    return (
+        <div className={cn('my-component-block')}>
+            <div
+                children="Элемент блока"
+                className={cn('my-component-block__element', {
+                    'my-component-block__element_mod': true
+                })}
+            />
+        </div>
+    );
+}
+```
+
+Вызов компонента:
+```tsx
+// Вызов с передачей строки в className
+<MyComponent className="my-other-class" />
+
+// Результат (Вызова с передачей строки в className)
+<div class="my-component-block my-other-class">
+    <div class="my-component-block__element my-component-block__element_mod">Элемент блока</div>
+</div>
+
+
+// Вызов с передачей модуля в className
+<MyComponent
+    className={{
+        'my-component-block'             : 'custom-block',
+        'my-component-block__element'    : 'custom-element',
+        'my-component-block__element_mod': 'custom-mod'
+    }}
+/>
+
+// Результат (Вызова с передачей модуля в className)
+<div class="my-component-block custom-block">
+    <div class="my-component-block__element custom-element my-component-block__element_mod custom-mod">Элемент блока</div>
+</div>
+```
+
+#### Пример без использования комбинирования CSS модулей.
+---
+Компонент:
+```tsx
+import { useClassnames, IStyle } from '@wb-tech/ui-react';
+
+import style from './my-component-style.css';
+
+export interface IProps {
+    className?: string | IStyle
+}
+
+export const MyComponent = (props: IProps) => {
+    // В аргумент комбинирования передан false
+    const cn = useClassnames(style, props.className, false);
+
+    return (
+        <div className={cn('my-component-block')}>
+            <div
+                children="Элемент блока"
+                className={cn('my-component-block__element', {
+                    'my-component-block__element_mod': true
+                })}
+            />
+        </div>
+    );
+}
+```
+
+Вызов компонента:
+```tsx
+// Вызов с передачей строки в className
+<MyComponent className="my-other-class" />
+
+// Результат (Вызова с передачей строки в className)
+<div class="my-component-block my-other-class">
+    <div class="my-component-block__element my-component-block__element_mod">Элемент блока</div>
+</div>
+
+
+// Вызов с передачей модуля в className
+<MyComponent
+    className={{
+        'my-component-block'             : 'custom-block',
+        'my-component-block__element'    : 'custom-element',
+        'my-component-block__element_mod': 'custom-mod'
+    }}
+/>
+
+// Результат (Вызова с передачей модуля в className)
+<div class="custom-block">
+    <div class="custom-element custom-mod">Элемент блока</div>
+</div>
+```
+
+#### Пример с использование типов CSS модулей.
+---
+```tsx
+import { useClassnames } from '@wb-tech/ui-react';
+
+import style from './my-component-style.css';
+
+export const MyComponent = () => {
+    const cn = useClassnames<typeof style>(style);
+
+    // ...
+}
+```

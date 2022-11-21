@@ -15,7 +15,7 @@ type TReturnFunction<TArgs = Argument> = (
     ...args: Array<keyof TArgs | Record<keyof TArgs, Value>>
 ) => string;
 
-export const classNames = <TTarget = Binding, TSource = Binding>(targetStyle: Record<keyof TTarget, string>, sourceStyle?: Record<keyof TSource, string> | string, combine?: boolean): TReturnFunction<TTarget & TSource> => {
+const classNames = <TTarget = Binding, TSource = Binding>(targetStyle: Record<keyof TTarget, string>, sourceStyle?: Record<keyof TSource, string> | string, combine = true): TReturnFunction<TTarget & TSource> => {
     if(typeof sourceStyle === 'object' && !Array.isArray(sourceStyle)) {
         if(combine === true) {
             const style: Binding = { ...targetStyle };

@@ -1,6 +1,6 @@
 import { useMemo } from 'react';
 
-import { IStyle, useClassnames } from '../../../hooks/use-classnames/index';
+import { IStyle, useClassnames } from '../../../hooks/use-classnames';
 
 import style from './index.module.pcss';
 

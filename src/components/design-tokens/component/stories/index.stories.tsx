@@ -1,8 +1,8 @@
 import { ComponentMeta, ComponentStory } from '@storybook/react';
 
-import Readme from './readme.mdx';
+import Docs from './index.docs.mdx';
 
-import { DesignTokens } from './';
+import { DesignTokens } from '../index';
 
 const META: ComponentMeta<typeof DesignTokens> = {
     title    : 'Design Tokens/Component',
@@ -25,7 +25,7 @@ const META: ComponentMeta<typeof DesignTokens> = {
     },
     parameters: {
         docs: {
-            page: Readme
+            page: Docs
         },
         design: {
             type: "figma",

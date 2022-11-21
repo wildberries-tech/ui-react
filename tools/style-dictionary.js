@@ -1,5 +1,5 @@
 const StyleDictionary = require('style-dictionary').extend({
-    "source": ["tokens.json"],
+    "source": ["./src/components/design-tokens/hook/tokens.json"],
     "platforms": {
         "css": {
             "transforms": [
@@ -13,7 +13,7 @@ const StyleDictionary = require('style-dictionary').extend({
             ],
             "files": [{
                 "format": "css/variables",
-                "destination": "src/components/design-tokens/hook/index.module.pcss",
+                "destination": "./src/components/design-tokens/hook/index.module.pcss",
                 "options": {
                     "selector": ".design-tokens"
                 }
