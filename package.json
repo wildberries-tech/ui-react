@@ -1,6 +1,6 @@
 {
     "name": "@wb-tech/ui-react",
-    "version": "0.0.1",
+    "version": "0.0.3",
     "description": "WildBerries react ui-kit",
     "main": "src/index.ts",
     "keywords": [
@@ -77,10 +77,7 @@
         "react-dom": "16.x || 17.x"
     },
     "contributors": [
-        {
-            "name": "Aleksey Novikov",
-            "url": "https://github.com/lamo2k123"
-        }
+        "Aleksey Novikov (https://github.com/lamo2k123)"
     ],
     "engines": {
         "node": ">=16",
