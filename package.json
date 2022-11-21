@@ -1,6 +1,6 @@
 {
     "name": "@wb-tech/ui-react",
-    "version": "0.0.1",
+    "version": "0.0.3",
     "description": "WildBerries react ui-kit",
     "main": "src/index.ts",
     "keywords": [
@@ -66,16 +66,18 @@
         "typescript": "^4.8.4",
         "webpack": "^5.74.0"
     },
+    "private": false,
+    "publishConfig": {
+        "access": "public",
+        "registry": "https://registry.npmjs.org/"
+    },
     "dependencies": {
         "classnames": "2.x",
         "react": "16.x || 17.x",
         "react-dom": "16.x || 17.x"
     },
     "contributors": [
-        {
-            "name": "Aleksey Novikov",
-            "url": "https://github.com/lamo2k123"
-        }
+        "Aleksey Novikov (https://github.com/lamo2k123)"
     ],
     "engines": {
         "node": ">=16",
