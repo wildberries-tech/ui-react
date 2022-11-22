@@ -1,7 +1,6 @@
 import React, { forwardRef, InputHTMLAttributes, ReactNode, useMemo } from 'react';
 
 import { IStyle, useClassnames } from '../../hooks/use-classnames';
-
 import style from './index.module.pcss';
 
 type TAttributes = 'checked' | 'defaultChecked' | 'onChange' | 'onClick' | 'onBlur' | 'onFocus' | 'autoFocus' | 'id' | 'tabIndex' | 'disabled';

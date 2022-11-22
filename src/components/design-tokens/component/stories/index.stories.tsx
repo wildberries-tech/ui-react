@@ -1,7 +1,6 @@
 import { ComponentMeta, ComponentStory } from '@storybook/react';
 
 import Docs from './index.docs.mdx';
-
 import { DesignTokens } from '../index';
 
 const META: ComponentMeta<typeof DesignTokens> = {
