@@ -1,7 +1,6 @@
 import { useMemo } from 'react';
 
 import { IStyle, useClassnames } from '../../../hooks/use-classnames';
-
 import style from './index.module.pcss';
 
 export interface IOptions {
@@ -16,4 +15,4 @@ export const useDesignTokens = (options: IOptions) => {
             className: cn('design-tokens')
         };
     }, [options.className]);
-}
+};

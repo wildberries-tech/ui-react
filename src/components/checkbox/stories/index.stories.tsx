@@ -1,7 +1,6 @@
 import { ComponentMeta, ComponentStory } from '@storybook/react';
 
 import Docs from './index.docs.mdx';
-
 import { Checkbox } from '../index';
 
 const META: ComponentMeta<typeof Checkbox> = {
@@ -10,7 +9,7 @@ const META: ComponentMeta<typeof Checkbox> = {
     args     : {
         name: 'my-checkbox'
     },
-    argTypes : {
+    argTypes: {
         className: {
             control: 'text'
         },
@@ -22,25 +21,25 @@ const META: ComponentMeta<typeof Checkbox> = {
         },
         onChange: {
             control: false,
-            table: {
+            table  : {
                 category: 'Events'
             }
         },
         onBlur: {
             control: false,
-            table: {
+            table  : {
                 category: 'Events'
             }
         },
         onFocus: {
             control: false,
-            table: {
+            table  : {
                 category: 'Events'
             }
         },
         onClick: {
             control: false,
-            table: {
+            table  : {
                 category: 'Events'
             }
         }
@@ -50,8 +49,8 @@ const META: ComponentMeta<typeof Checkbox> = {
             page: Docs
         },
         design: {
-            type: "figma",
-            url : "https://www.figma.com/file/c2MtpBedt0dYAz20eepwzX/%E2%9D%96-WB-Partners-DS?node-id=3273%3A113867",
+            type: 'figma',
+            url : 'https://www.figma.com/file/c2MtpBedt0dYAz20eepwzX/%E2%9D%96-WB-Partners-DS?node-id=3273%3A113867'
         },
         options: {
             showPanel: false
@@ -71,7 +70,7 @@ Sandbox.parameters = {
     actions: {
         argTypesRegex: '^on.*'
     }
-}
+};
 
 export const NoText = Template.bind({});
 
@@ -84,4 +83,4 @@ export const TextAndDescription = Template.bind({});
 TextAndDescription.args = {
     label      : 'Checkbox label',
     description: 'Description checkbox'
-}
+};

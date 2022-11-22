@@ -9,10 +9,10 @@ const META: ComponentMeta<typeof DesignTokens> = {
     args     : {
         children: 'Любое содержимое из типа ReactNode'
     },
-    argTypes : {
+    argTypes: {
         children: {
             control: 'text',
-            table: {
+            table  : {
                 type: {
                     summary: 'ReactNode'
                 }
@@ -27,10 +27,10 @@ const META: ComponentMeta<typeof DesignTokens> = {
             page: Docs
         },
         design: {
-            type: "figma",
-            url : "https://www.figma.com/file/c2MtpBedt0dYAz20eepwzX/%E2%9D%96-WB-Partners-DS?node-id=5%3A17",
-        },
-    },
+            type: 'figma',
+            url : 'https://www.figma.com/file/c2MtpBedt0dYAz20eepwzX/%E2%9D%96-WB-Partners-DS?node-id=5%3A17'
+        }
+    }
 };
 
 export default META;

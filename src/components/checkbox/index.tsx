@@ -33,7 +33,7 @@ export const Checkbox = forwardRef<HTMLInputElement | null, IProps>(({ tabIndex 
         <label
             className={cn('checkbox', {
                 'checkbox_disabled'   : props.disabled,
-                'checkbox_description': props.description,
+                'checkbox_description': props.description
             })}
         >
             <input
