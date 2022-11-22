@@ -43,8 +43,7 @@
             "node": {
                 "extensions": [
                     ".ts",
-                    ".tsx",
-                    ".js"
+                    ".tsx"
                 ]
             }
         }
@@ -52,7 +51,7 @@
     "overrides": [
         {
             "files": [
-                "*.stories.@(ts|tsx|js|jsx|mjs|cjs)"
+                "**/*.stories.@(ts|tsx|js|jsx|mjs|cjs)"
             ],
             "rules": {
                 "import/no-anonymous-default-export": "off",
@@ -252,24 +251,6 @@
                         "sibling",
                         "index"
                     ]
-                ],
-                "pathGroups": [
-                    {
-                        "pattern": "#component/**",
-                        "group": "internal"
-                    },
-                    {
-                        "pattern": "#route/**",
-                        "group": "internal"
-                    },
-                    {
-                        "pattern": "#**/**",
-                        "group": "builtin"
-                    },
-                    {
-                        "pattern": "#config",
-                        "group": "unknown"
-                    }
                 ],
                 "pathGroupsExcludedImportTypes": [
                     "core"

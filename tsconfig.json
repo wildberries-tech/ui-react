@@ -22,10 +22,6 @@
         "noImplicitAny": true,
         "noImplicitThis": true,
         "strictNullChecks": true,
-        "typeRoots": [
-            "./types",
-            "./node_modules/@types"
-        ],
         "noFallthroughCasesInSwitch": true
     },
     "exclude": [
