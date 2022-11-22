@@ -11,7 +11,7 @@ jobs:
         with:
           fail_on_error: true
           reporter: github-pr-review
-          stylelint_input: './packages/**/*.{css,pcss}'
+          stylelint_input: './src/**/*.{css,pcss}'
   eslint:
     name: runner / eslint
     runs-on: ubuntu-latest
