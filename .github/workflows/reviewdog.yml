@@ -42,7 +42,6 @@ jobs:
           test-script: npm run test:ci
           output: report-markdown
           coverage-file: ./coverage/report.json
-          base-coverage-file: ./coverage/report.json
       - uses: marocchino/sticky-pull-request-comment@v2
         with:
           message: ${{ steps.coverage.outputs.report }}
