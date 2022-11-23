@@ -17,4 +17,3 @@ export const DesignTokens = ({ tagName = 'div', ...props }: IProps) => {
         children: props.children
     });
 };
-

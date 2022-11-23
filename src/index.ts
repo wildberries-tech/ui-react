@@ -1,3 +1,4 @@
-export * from './components/design-tokens';
+export { DesignTokens } from './components/design-tokens';
+export { Checkbox } from './components/checkbox';
 
-export * from './hooks/use-classnames';
+export { useClassnames } from './hooks/use-classnames';

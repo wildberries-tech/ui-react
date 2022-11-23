@@ -17,7 +17,7 @@ type TReturnFunction<TArgs = Argument> = (
 
 const classNames = <TTarget = Binding, TSource = Binding>(targetStyle: Record<keyof TTarget, string>, sourceStyle?: Record<keyof TSource, string> | string, combine = true): TReturnFunction<TTarget & TSource> => {
     if(typeof sourceStyle === 'object' && !Array.isArray(sourceStyle)) {
-        if(combine === true) {
+        if(combine) {
             const style: Binding = { ...targetStyle };
             const keys = Object.keys(sourceStyle);
 
@@ -45,7 +45,6 @@ const classNames = <TTarget = Binding, TSource = Binding>(targetStyle: Record<ke
 
     return classnames.bind(targetStyle) as TReturnFunction<TTarget & TSource>;
 };
-
 
 export const useClassnames = <TTarget = Binding, TSource = Binding>(targetStyle: Record<keyof TTarget, string>, sourceStyle?: Record<keyof TSource, string> | string, combine?: boolean) => {
     return useMemo(() => classNames<TTarget, TSource>(targetStyle, sourceStyle, combine), [targetStyle, sourceStyle, combine]);
