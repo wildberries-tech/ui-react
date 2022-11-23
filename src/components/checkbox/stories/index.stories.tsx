@@ -52,9 +52,6 @@ const META: ComponentMeta<typeof Checkbox> = {
         design: {
             type: 'figma',
             url : 'https://www.figma.com/file/c2MtpBedt0dYAz20eepwzX/%E2%9D%96-WB-Partners-DS?node-id=3273%3A113867'
-        },
-        options: {
-            showPanel: false
         }
     }
 };
@@ -65,9 +62,6 @@ const Template: ComponentStory<typeof Checkbox> = (props) => <Checkbox {...props
 
 export const Sandbox = Template.bind({});
 Sandbox.parameters = {
-    options: {
-        showPanel: true
-    },
     actions: {
         argTypesRegex: '^on.*'
     }

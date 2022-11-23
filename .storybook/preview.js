@@ -3,7 +3,8 @@ import React from 'react';
 import { DesignTokens } from '../src';
 
 export const parameters = {
-    layout: 'centered',
+    viewMode: 'docs',
+    layout  : 'centered',
     controls: {
         expanded: true,
         sort    : 'requiredFirst',

@@ -1,0 +1,60 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Direction 1`] = `
+<fieldset
+  className="checkbox-group checkbox-group_row"
+>
+  Mock
+</fieldset>
+`;
+
+exports[`Direction 2`] = `
+<fieldset
+  className="checkbox-group checkbox-group_row"
+>
+  Mock
+</fieldset>
+`;
+
+exports[`Direction 3`] = `
+<fieldset
+  className="checkbox-group checkbox-group_column"
+>
+  Mock
+</fieldset>
+`;
+
+exports[`Disable 1`] = `
+<fieldset
+  className="checkbox-group checkbox-group_row"
+  disabled={true}
+>
+  <legend
+    className="checkbox-group__legend"
+  >
+    Legend name
+  </legend>
+  Mock
+</fieldset>
+`;
+
+exports[`Legend 1`] = `
+<fieldset
+  className="checkbox-group checkbox-group_row"
+>
+  <legend
+    className="checkbox-group__legend"
+  >
+    Legend name
+  </legend>
+  Mock
+</fieldset>
+`;
+
+exports[`No Legend 1`] = `
+<fieldset
+  className="checkbox-group checkbox-group_row"
+>
+  Mock
+</fieldset>
+`;
