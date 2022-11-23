@@ -2,8 +2,9 @@ name: Publish package to NPM
 on:
   release:
     types: [created]
+
 jobs:
-  build:
+  publish:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
@@ -14,3 +15,22 @@ jobs:
       - run: npm publish --access=public
         env:
           NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
+
+  notification:
+    needs: publish
+    name: Notification
+    runs-on: ubuntu-latest
+    steps:
+      - name: Send telegram message
+        uses: appleboy/telegram-action@master
+        with:
+          token: ${{ secrets.TELEGRAM_TOKEN }}
+          to: ${{ secrets.TELEGRAM_CHAT }}
+          format: markdown
+          message: |
+            Опубликована новая версия: `@wb-tech/ui-react@${{ github.ref_name }}`
+
+            Команды для быстрого копирования в буфер 👆:
+            NPM - `npm i @wb-tech/ui-react@${{ github.ref_name }} -S`
+            Yarn - `yarn add @wb-tech/ui-react@${{ github.ref_name }} -S`
+            PNPM - `pnpm add @wb-tech/ui-react@${{ github.ref_name }} -S`
