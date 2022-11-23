@@ -8,5 +8,13 @@ module.exports = {
     coverageReporters   : ['clover', 'json', 'lcov', 'text', 'cobertura'],
     moduleNameMapper    : {
         '\\.(css|pcss)$'   : 'identity-obj-proxy'
+    },
+    coverageThreshold: {
+        global: {
+            branches: 65,
+            functions: 65,
+            lines: 65,
+            statements: 65,
+        }
     }
 };

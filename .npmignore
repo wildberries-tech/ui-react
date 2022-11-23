@@ -9,3 +9,4 @@ stories
 .stylelintrc.json
 CONTRIBUTING.md
 webpack.config.js
+coverage
