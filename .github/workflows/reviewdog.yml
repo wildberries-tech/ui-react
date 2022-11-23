@@ -39,10 +39,9 @@ jobs:
       - uses: ArtiomTr/jest-coverage-report-action@v2
         id: coverage
         with:
-          test-script: 'npm run test:ci'
-          output: report-markdown
-          coverage-file: ./coverage/report.json
-          base-coverage-file: ./coverage/report.json
+          test-script: npm run test:ci -- --outputFile=report.json
+          output: comment, report-markdown
+          skip-step: none
       - uses: marocchino/sticky-pull-request-comment@v2
         with:
           message: ${{ steps.coverage.outputs.report }}

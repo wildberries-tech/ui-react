@@ -5,7 +5,7 @@ module.exports = {
     moduleFileExtensions: ['js', 'ts', 'tsx'],
     moduleDirectories   : ['node_modules'],
     testMatch           : ['**/__tests__/**/*.ts?(x)'],
-    coverageReporters   : ['clover', 'json', 'lcov', 'text', 'cobertura'],
+    coverageReporters   : ['text'],
     moduleNameMapper    : {
         '\\.(css|pcss)$'   : 'identity-obj-proxy'
     },
