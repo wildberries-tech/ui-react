@@ -40,7 +40,7 @@ jobs:
         id: coverage
         with:
           test-script: npm run test:ci -- --outputFile=report.json
-          output: report-markdown
+          output: comment, report-markdown
           skip-step: none
       - uses: marocchino/sticky-pull-request-comment@v2
         with:
