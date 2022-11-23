@@ -16,6 +16,7 @@ jobs:
         with:
           token: ${{ secrets.TELEGRAM_TOKEN }}
           to: ${{ secrets.TELEGRAM_CHAT }}
+          format: markdown
           message: |
             Новый PR от `${{ github.actor }}` в `${{ github.repository }}`.
 
