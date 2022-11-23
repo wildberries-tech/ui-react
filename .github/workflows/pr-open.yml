@@ -17,9 +17,6 @@ jobs:
           token: ${{ secrets.TELEGRAM_TOKEN }}
           to: ${{ secrets.TELEGRAM_CHAT }}
           message: |
-            ${{ github.actor }} created commit:
-            Commit message: ${{ github.event.commits[0].message }}
+            Новый PR от `${{ github.actor }}` в `${{ github.repository }}`.
 
-            Repository: ${{ github.repository }}
-
-            See changes: https://github.com/${{ github.repository }}/commit/${{github.sha}}
+            Ссылка на PR: ${{ github.server_url }}/${{ github.repository }}/pull/${{ github.event.number }}
