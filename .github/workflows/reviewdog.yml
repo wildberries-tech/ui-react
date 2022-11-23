@@ -39,7 +39,7 @@ jobs:
       - uses: ArtiomTr/jest-coverage-report-action@v2
         id: coverage
         with:
-          test-script: 'npm run test:ci'
+          test-script: npm run test:ci
           output: report-markdown
           coverage-file: ./coverage/report.json
           base-coverage-file: ./coverage/report.json
