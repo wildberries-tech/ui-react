@@ -17,7 +17,7 @@
         "storybook:start": "start-storybook --disable-telemetry -p 6006",
         "storybook:build": "build-storybook --disable-telemetry -o ./build",
         "test": "jest --coverage",
-        "test:ci": "jest --ci --coverage --json --testLocationInResults --outputFile=coverage/report.json",
+        "test:ci": "jest --ci --coverage --json --testLocationInResults --outputFile=./coverage/report.json",
         "compile:tokens": "node ./tools/style-dictionary.js",
         "postcompile:tokens": "stylelint ./src/components/design-tokens/hook/index.module.pcss --fix"
     },
