@@ -1,0 +1,110 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Direction 1`] = `
+<fieldset
+  className="checkbox-group checkbox-group_row"
+>
+  Mock
+</fieldset>
+`;
+
+exports[`Direction 2`] = `
+<fieldset
+  className="checkbox-group checkbox-group_row"
+>
+  Mock
+</fieldset>
+`;
+
+exports[`Direction 3`] = `
+<fieldset
+  className="checkbox-group checkbox-group_column"
+>
+  Mock
+</fieldset>
+`;
+
+exports[`Disable 1`] = `
+<fieldset
+  className="checkbox-group checkbox-group_row"
+  disabled={true}
+>
+  <legend
+    className="checkbox-group__legend"
+  >
+    Legend name
+  </legend>
+  Mock
+</fieldset>
+`;
+
+exports[`Legend 1`] = `
+<fieldset
+  className="checkbox-group checkbox-group_row"
+>
+  <legend
+    className="checkbox-group__legend"
+  >
+    Legend name
+  </legend>
+  Mock
+</fieldset>
+`;
+
+exports[`No Legend 1`] = `
+<fieldset
+  className="checkbox-group checkbox-group_row"
+>
+  Mock
+</fieldset>
+`;
+
+exports[`No label 1`] = `
+<fieldset
+  className="checkbox-group checkbox-group_row"
+>
+  <label
+    className="checkbox"
+  >
+    <input
+      aria-checked={false}
+      className="checkbox__input"
+      name="checkbox-1"
+      role="checkbox"
+      tabIndex={0}
+      type="checkbox"
+    />
+  </label>
+  <label
+    className="checkbox"
+  >
+    <input
+      aria-checked={false}
+      className="checkbox__input"
+      name="checkbox-1"
+      role="checkbox"
+      tabIndex={0}
+      type="checkbox"
+    />
+    Label
+  </label>
+  <label
+    className="checkbox checkbox_description"
+  >
+    <input
+      aria-checked={false}
+      className="checkbox__input"
+      name="checkbox-1"
+      role="checkbox"
+      tabIndex={0}
+      type="checkbox"
+    />
+    Label
+    <span
+      className="checkbox__description"
+    >
+      Description
+    </span>
+  </label>
+</fieldset>
+`;
