@@ -29,11 +29,8 @@ jobs:
           message: |
             📝 Пользователь `${{ github.actor }}` создал issue в `${{ github.repository }}`.
 
-            ```
-            ${{ github.event.issue.title }}
-
-            ${{ github.event.issue.body }}
-            ```
+            **Название**: ${{ github.event.issue.title }}
+            **Описание**: ${{ github.event.issue.body }}
 
             Ссылка: ${{ github.event.issue.html_url }}
 
@@ -51,11 +48,8 @@ jobs:
           message: |
             🔍 Пользователь `${{ github.actor }}` прислал PR в `${{ github.repository }}`.
 
-            ```
-            ${{ github.event.pull_request.title }}
-
-            ${{ github.event.pull_request.body }}
-            ```
+            **Название**: ${{ github.event.pull_request.title }}
+            **Описание**: ${{ github.event.pull_request.body }}
 
             Ссылка: ${{ github.event.pull_request.html_url }}
 
