@@ -1,0 +1,93 @@
+name: Notification
+
+on:
+  issues:
+    types: [opened]
+  release:
+    types: [created]
+  pull_request:
+    types: [opened]
+    branches:
+      - develop
+  workflow_run:
+    workflows: [Publish package, Build and Deploy Storybook]
+    types:
+      - completed
+
+jobs:
+  issue_opened:
+    name: New issue notification
+    runs-on: ubuntu-latest
+    steps:
+      - name: Send telegram message
+        if: ${{ github.event_name == 'issues' && github.event.action == 'opened' }}
+        uses: appleboy/telegram-action@master
+        with:
+          token: ${{ secrets.TELEGRAM_TOKEN }}
+          to: ${{ secrets.TELEGRAM_CHAT }}
+          format: markdown
+          message: |
+            📝 Пользователь `${{ github.actor }}` создал issue в `${{ github.repository }}`.
+
+            ```
+            ${{ github.event.issue.title }}
+
+            ${{ github.event.issue.body }}
+            ```
+
+            Ссылка: ${{ github.event.issue.html_url }}
+
+  pr_opened:
+    name: New PR notification
+    runs-on: ubuntu-latest
+    steps:
+      - name: Send telegram message
+        uses: appleboy/telegram-action@master
+        if: ${{ github.event_name == 'pull_request' && github.event.action == 'opened' }}
+        with:
+          token: ${{ secrets.TELEGRAM_TOKEN }}
+          to: ${{ secrets.TELEGRAM_CHAT }}
+          format: markdown
+          message: |
+            🔍 Пользователь `${{ github.actor }}` прислал PR в `${{ github.repository }}`.
+
+            ```
+            ${{ github.event.pull_request.title }}
+
+            ${{ github.event.pull_request.body }}
+            ```
+
+            Ссылка: ${{ github.event.pull_request.html_url }}
+
+  publish:
+    name: New version publish
+    runs-on: ubuntu-latest
+    steps:
+      - name: Send telegram message
+        uses: appleboy/telegram-action@master
+        if: ${{ github.event.workflow.name == 'Publish package' && github.event.workflow_run.conclusion == 'success' }}
+        with:
+          token: ${{ secrets.TELEGRAM_TOKEN }}
+          to: ${{ secrets.TELEGRAM_CHAT }}
+          format: markdown
+          message: |
+            📦 Опубликована новая версия: `@wb-tech/ui-react@${{ github.ref_name }}`
+
+            Команды для быстрого копирования в буфер 👆:
+            NPM - `npm i @wb-tech/ui-react@${{ github.ref_name }} -S`
+            Yarn - `yarn add @wb-tech/ui-react@${{ github.ref_name }} -S`
+            PNPM - `pnpm add @wb-tech/ui-react@${{ github.ref_name }} -S`
+
+  storybook:
+    name: Storybook
+    runs-on: ubuntu-latest
+    steps:
+      - name: Send telegram message
+        uses: appleboy/telegram-action@master
+        if: ${{ github.event.workflow.name == 'Build and Deploy Storybook' && github.event.workflow_run.conclusion == 'success' }}
+        with:
+          token: ${{ secrets.TELEGRAM_TOKEN }}
+          to: ${{ secrets.TELEGRAM_CHAT }}
+          format: markdown
+          message: |
+            🎉 Обновлен storybook: https://wildberries-tech.github.io/ui-react/

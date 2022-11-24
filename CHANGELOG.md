@@ -1,6 +1,8 @@
 # Changelog
 
 **unreleased**
+
+**Release 0.0.4**
 - Добавлен компонент `checkbox`
 - Добавлен eslint
 - Добавлена система тестирования
