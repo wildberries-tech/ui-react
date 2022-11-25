@@ -25,17 +25,7 @@ const META: ComponentMeta<typeof CheckboxGroup> = {
             control: 'text'
         },
         children: {
-            type: {
-                name    : 'other',
-                value   : 'ReactNode',
-                required: true
-            },
-            control: false,
-            table  : {
-                type: {
-                    summary: 'ReactNode'
-                }
-            }
+            control: false
         }
     },
     parameters: {

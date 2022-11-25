@@ -1,0 +1,641 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`No props 1`] = `
+<svg
+  className="ui-loader ui-loader_medium"
+  viewBox="0 0 50 50"
+>
+  <circle
+    className="ui-loader__circle ui-loader__circle_white"
+    cx="25"
+    cy="25"
+    fill="none"
+    r="20"
+    strokeWidth="3"
+  />
+</svg>
+`;
+
+exports[`Only size large 1`] = `
+<svg
+  className="ui-loader ui-loader_large"
+  viewBox="0 0 50 50"
+>
+  <circle
+    className="ui-loader__circle ui-loader__circle_white"
+    cx="25"
+    cy="25"
+    fill="none"
+    r="20"
+    strokeWidth="3"
+  />
+</svg>
+`;
+
+exports[`Only size medium 1`] = `
+<svg
+  className="ui-loader ui-loader_medium"
+  viewBox="0 0 50 50"
+>
+  <circle
+    className="ui-loader__circle ui-loader__circle_white"
+    cx="25"
+    cy="25"
+    fill="none"
+    r="20"
+    strokeWidth="3"
+  />
+</svg>
+`;
+
+exports[`Only size small 1`] = `
+<svg
+  className="ui-loader ui-loader_small"
+  viewBox="0 0 50 50"
+>
+  <circle
+    className="ui-loader__circle ui-loader__circle_white"
+    cx="25"
+    cy="25"
+    fill="none"
+    r="20"
+    strokeWidth="3"
+  />
+</svg>
+`;
+
+exports[`Only style dark-purple 1`] = `
+<svg
+  className="ui-loader ui-loader_medium"
+  viewBox="0 0 50 50"
+>
+  <circle
+    className="ui-loader__circle ui-loader__circle_dark-purple"
+    cx="25"
+    cy="25"
+    fill="none"
+    r="20"
+    strokeWidth="3"
+  />
+</svg>
+`;
+
+exports[`Only style dark-purple 2`] = `
+<svg
+  className="ui-loader ui-loader_medium"
+  viewBox="0 0 50 50"
+>
+  <circle
+    className="ui-loader__circle ui-loader__circle_dark-purple"
+    cx="25"
+    cy="25"
+    fill="none"
+    r="20"
+    strokeWidth="3"
+  />
+</svg>
+`;
+
+exports[`Only style dark-purple 3`] = `
+<svg
+  className="ui-loader ui-loader_medium"
+  viewBox="0 0 50 50"
+>
+  <circle
+    className="ui-loader__circle ui-loader__circle_dark-purple"
+    cx="25"
+    cy="25"
+    fill="none"
+    r="20"
+    strokeWidth="3"
+  />
+</svg>
+`;
+
+exports[`Only style grey 1`] = `
+<svg
+  className="ui-loader ui-loader_medium"
+  viewBox="0 0 50 50"
+>
+  <circle
+    className="ui-loader__circle ui-loader__circle_grey"
+    cx="25"
+    cy="25"
+    fill="none"
+    r="20"
+    strokeWidth="3"
+  />
+</svg>
+`;
+
+exports[`Only style grey 2`] = `
+<svg
+  className="ui-loader ui-loader_medium"
+  viewBox="0 0 50 50"
+>
+  <circle
+    className="ui-loader__circle ui-loader__circle_grey"
+    cx="25"
+    cy="25"
+    fill="none"
+    r="20"
+    strokeWidth="3"
+  />
+</svg>
+`;
+
+exports[`Only style grey 3`] = `
+<svg
+  className="ui-loader ui-loader_medium"
+  viewBox="0 0 50 50"
+>
+  <circle
+    className="ui-loader__circle ui-loader__circle_grey"
+    cx="25"
+    cy="25"
+    fill="none"
+    r="20"
+    strokeWidth="3"
+  />
+</svg>
+`;
+
+exports[`Only style light-green 1`] = `
+<svg
+  className="ui-loader ui-loader_medium"
+  viewBox="0 0 50 50"
+>
+  <circle
+    className="ui-loader__circle ui-loader__circle_light-green"
+    cx="25"
+    cy="25"
+    fill="none"
+    r="20"
+    strokeWidth="3"
+  />
+</svg>
+`;
+
+exports[`Only style light-green 2`] = `
+<svg
+  className="ui-loader ui-loader_medium"
+  viewBox="0 0 50 50"
+>
+  <circle
+    className="ui-loader__circle ui-loader__circle_light-green"
+    cx="25"
+    cy="25"
+    fill="none"
+    r="20"
+    strokeWidth="3"
+  />
+</svg>
+`;
+
+exports[`Only style light-green 3`] = `
+<svg
+  className="ui-loader ui-loader_medium"
+  viewBox="0 0 50 50"
+>
+  <circle
+    className="ui-loader__circle ui-loader__circle_light-green"
+    cx="25"
+    cy="25"
+    fill="none"
+    r="20"
+    strokeWidth="3"
+  />
+</svg>
+`;
+
+exports[`Only style red 1`] = `
+<svg
+  className="ui-loader ui-loader_medium"
+  viewBox="0 0 50 50"
+>
+  <circle
+    className="ui-loader__circle ui-loader__circle_red"
+    cx="25"
+    cy="25"
+    fill="none"
+    r="20"
+    strokeWidth="3"
+  />
+</svg>
+`;
+
+exports[`Only style red 2`] = `
+<svg
+  className="ui-loader ui-loader_medium"
+  viewBox="0 0 50 50"
+>
+  <circle
+    className="ui-loader__circle ui-loader__circle_red"
+    cx="25"
+    cy="25"
+    fill="none"
+    r="20"
+    strokeWidth="3"
+  />
+</svg>
+`;
+
+exports[`Only style red 3`] = `
+<svg
+  className="ui-loader ui-loader_medium"
+  viewBox="0 0 50 50"
+>
+  <circle
+    className="ui-loader__circle ui-loader__circle_red"
+    cx="25"
+    cy="25"
+    fill="none"
+    r="20"
+    strokeWidth="3"
+  />
+</svg>
+`;
+
+exports[`Only style rich-grey 1`] = `
+<svg
+  className="ui-loader ui-loader_medium"
+  viewBox="0 0 50 50"
+>
+  <circle
+    className="ui-loader__circle ui-loader__circle_rich-grey"
+    cx="25"
+    cy="25"
+    fill="none"
+    r="20"
+    strokeWidth="3"
+  />
+</svg>
+`;
+
+exports[`Only style rich-grey 2`] = `
+<svg
+  className="ui-loader ui-loader_medium"
+  viewBox="0 0 50 50"
+>
+  <circle
+    className="ui-loader__circle ui-loader__circle_rich-grey"
+    cx="25"
+    cy="25"
+    fill="none"
+    r="20"
+    strokeWidth="3"
+  />
+</svg>
+`;
+
+exports[`Only style rich-grey 3`] = `
+<svg
+  className="ui-loader ui-loader_medium"
+  viewBox="0 0 50 50"
+>
+  <circle
+    className="ui-loader__circle ui-loader__circle_rich-grey"
+    cx="25"
+    cy="25"
+    fill="none"
+    r="20"
+    strokeWidth="3"
+  />
+</svg>
+`;
+
+exports[`Only style white 1`] = `
+<svg
+  className="ui-loader ui-loader_medium"
+  viewBox="0 0 50 50"
+>
+  <circle
+    className="ui-loader__circle ui-loader__circle_white"
+    cx="25"
+    cy="25"
+    fill="none"
+    r="20"
+    strokeWidth="3"
+  />
+</svg>
+`;
+
+exports[`Only style white 2`] = `
+<svg
+  className="ui-loader ui-loader_medium"
+  viewBox="0 0 50 50"
+>
+  <circle
+    className="ui-loader__circle ui-loader__circle_white"
+    cx="25"
+    cy="25"
+    fill="none"
+    r="20"
+    strokeWidth="3"
+  />
+</svg>
+`;
+
+exports[`Only style white 3`] = `
+<svg
+  className="ui-loader ui-loader_medium"
+  viewBox="0 0 50 50"
+>
+  <circle
+    className="ui-loader__circle ui-loader__circle_white"
+    cx="25"
+    cy="25"
+    fill="none"
+    r="20"
+    strokeWidth="3"
+  />
+</svg>
+`;
+
+exports[`large dark-purple 1`] = `
+<svg
+  className="ui-loader ui-loader_large"
+  viewBox="0 0 50 50"
+>
+  <circle
+    className="ui-loader__circle ui-loader__circle_dark-purple"
+    cx="25"
+    cy="25"
+    fill="none"
+    r="20"
+    strokeWidth="3"
+  />
+</svg>
+`;
+
+exports[`large grey 1`] = `
+<svg
+  className="ui-loader ui-loader_large"
+  viewBox="0 0 50 50"
+>
+  <circle
+    className="ui-loader__circle ui-loader__circle_grey"
+    cx="25"
+    cy="25"
+    fill="none"
+    r="20"
+    strokeWidth="3"
+  />
+</svg>
+`;
+
+exports[`large light-green 1`] = `
+<svg
+  className="ui-loader ui-loader_large"
+  viewBox="0 0 50 50"
+>
+  <circle
+    className="ui-loader__circle ui-loader__circle_light-green"
+    cx="25"
+    cy="25"
+    fill="none"
+    r="20"
+    strokeWidth="3"
+  />
+</svg>
+`;
+
+exports[`large red 1`] = `
+<svg
+  className="ui-loader ui-loader_large"
+  viewBox="0 0 50 50"
+>
+  <circle
+    className="ui-loader__circle ui-loader__circle_red"
+    cx="25"
+    cy="25"
+    fill="none"
+    r="20"
+    strokeWidth="3"
+  />
+</svg>
+`;
+
+exports[`large rich-grey 1`] = `
+<svg
+  className="ui-loader ui-loader_large"
+  viewBox="0 0 50 50"
+>
+  <circle
+    className="ui-loader__circle ui-loader__circle_rich-grey"
+    cx="25"
+    cy="25"
+    fill="none"
+    r="20"
+    strokeWidth="3"
+  />
+</svg>
+`;
+
+exports[`large white 1`] = `
+<svg
+  className="ui-loader ui-loader_large"
+  viewBox="0 0 50 50"
+>
+  <circle
+    className="ui-loader__circle ui-loader__circle_white"
+    cx="25"
+    cy="25"
+    fill="none"
+    r="20"
+    strokeWidth="3"
+  />
+</svg>
+`;
+
+exports[`medium dark-purple 1`] = `
+<svg
+  className="ui-loader ui-loader_medium"
+  viewBox="0 0 50 50"
+>
+  <circle
+    className="ui-loader__circle ui-loader__circle_dark-purple"
+    cx="25"
+    cy="25"
+    fill="none"
+    r="20"
+    strokeWidth="3"
+  />
+</svg>
+`;
+
+exports[`medium grey 1`] = `
+<svg
+  className="ui-loader ui-loader_medium"
+  viewBox="0 0 50 50"
+>
+  <circle
+    className="ui-loader__circle ui-loader__circle_grey"
+    cx="25"
+    cy="25"
+    fill="none"
+    r="20"
+    strokeWidth="3"
+  />
+</svg>
+`;
+
+exports[`medium light-green 1`] = `
+<svg
+  className="ui-loader ui-loader_medium"
+  viewBox="0 0 50 50"
+>
+  <circle
+    className="ui-loader__circle ui-loader__circle_light-green"
+    cx="25"
+    cy="25"
+    fill="none"
+    r="20"
+    strokeWidth="3"
+  />
+</svg>
+`;
+
+exports[`medium red 1`] = `
+<svg
+  className="ui-loader ui-loader_medium"
+  viewBox="0 0 50 50"
+>
+  <circle
+    className="ui-loader__circle ui-loader__circle_red"
+    cx="25"
+    cy="25"
+    fill="none"
+    r="20"
+    strokeWidth="3"
+  />
+</svg>
+`;
+
+exports[`medium rich-grey 1`] = `
+<svg
+  className="ui-loader ui-loader_medium"
+  viewBox="0 0 50 50"
+>
+  <circle
+    className="ui-loader__circle ui-loader__circle_rich-grey"
+    cx="25"
+    cy="25"
+    fill="none"
+    r="20"
+    strokeWidth="3"
+  />
+</svg>
+`;
+
+exports[`medium white 1`] = `
+<svg
+  className="ui-loader ui-loader_medium"
+  viewBox="0 0 50 50"
+>
+  <circle
+    className="ui-loader__circle ui-loader__circle_white"
+    cx="25"
+    cy="25"
+    fill="none"
+    r="20"
+    strokeWidth="3"
+  />
+</svg>
+`;
+
+exports[`small dark-purple 1`] = `
+<svg
+  className="ui-loader ui-loader_small"
+  viewBox="0 0 50 50"
+>
+  <circle
+    className="ui-loader__circle ui-loader__circle_dark-purple"
+    cx="25"
+    cy="25"
+    fill="none"
+    r="20"
+    strokeWidth="3"
+  />
+</svg>
+`;
+
+exports[`small grey 1`] = `
+<svg
+  className="ui-loader ui-loader_small"
+  viewBox="0 0 50 50"
+>
+  <circle
+    className="ui-loader__circle ui-loader__circle_grey"
+    cx="25"
+    cy="25"
+    fill="none"
+    r="20"
+    strokeWidth="3"
+  />
+</svg>
+`;
+
+exports[`small light-green 1`] = `
+<svg
+  className="ui-loader ui-loader_small"
+  viewBox="0 0 50 50"
+>
+  <circle
+    className="ui-loader__circle ui-loader__circle_light-green"
+    cx="25"
+    cy="25"
+    fill="none"
+    r="20"
+    strokeWidth="3"
+  />
+</svg>
+`;
+
+exports[`small red 1`] = `
+<svg
+  className="ui-loader ui-loader_small"
+  viewBox="0 0 50 50"
+>
+  <circle
+    className="ui-loader__circle ui-loader__circle_red"
+    cx="25"
+    cy="25"
+    fill="none"
+    r="20"
+    strokeWidth="3"
+  />
+</svg>
+`;
+
+exports[`small rich-grey 1`] = `
+<svg
+  className="ui-loader ui-loader_small"
+  viewBox="0 0 50 50"
+>
+  <circle
+    className="ui-loader__circle ui-loader__circle_rich-grey"
+    cx="25"
+    cy="25"
+    fill="none"
+    r="20"
+    strokeWidth="3"
+  />
+</svg>
+`;
+
+exports[`small white 1`] = `
+<svg
+  className="ui-loader ui-loader_small"
+  viewBox="0 0 50 50"
+>
+  <circle
+    className="ui-loader__circle ui-loader__circle_white"
+    cx="25"
+    cy="25"
+    fill="none"
+    r="20"
+    strokeWidth="3"
+  />
+</svg>
+`;

@@ -11,14 +11,14 @@ export const parameters = {
         matchers: {
             color: /(background|color)$/i,
             date : /Date$/
-        },
+        }
     }
 };
 
 export const decorators = [
     (Story) => (
         <DesignTokens>
-            <Story />
+            <Story/>
         </DesignTokens>
     )
 ];

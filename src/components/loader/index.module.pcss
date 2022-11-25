@@ -1,0 +1,72 @@
+.ui-loader {
+    display: block;
+    animation: rotate 2s linear infinite;
+    width: var(--size, 20px);
+    height: var(--size, 20px);
+
+    &_small {
+        --size: 20px;
+    }
+
+    &_medium {
+        --size: 32px;
+    }
+
+    &_large {
+        --size: 50px;
+    }
+
+    &__circle {
+        stroke: var(--color, #fff);
+        animation: dash 1.5s ease-in-out infinite;
+
+        &_white {
+            --color: var(--color-icon-inverse);
+        }
+
+        &_rich-grey {
+            --color: var(--color-icon-basic);
+        }
+
+        &_grey {
+            --color: var(--color-icon-secondary);
+        }
+
+        &_red {
+            --color: var(--color-icon-error);
+        }
+
+        &_light-green {
+            --color: var(--color-bg-success);
+        }
+
+        &_dark-purple {
+            --color: var(--color-icon-brand);
+        }
+    }
+}
+
+@keyframes :local(rotate) {
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes :local(dash) {
+
+    0% {
+        stroke-dasharray: 1, 150;
+        stroke-dashoffset: 0;
+    }
+
+    50% {
+        stroke-dasharray: 90, 150;
+        stroke-dashoffset: -35;
+    }
+
+    100% {
+        stroke-dasharray: 90, 150;
+        stroke-dashoffset: -124;
+    }
+}
