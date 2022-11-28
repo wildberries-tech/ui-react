@@ -12,12 +12,7 @@ const META: ComponentMeta<typeof DesignTokens> = {
     },
     argTypes: {
         children: {
-            control: 'text',
-            table  : {
-                type: {
-                    summary: 'ReactNode'
-                }
-            }
+            control: 'text'
         },
         className: {
             control: 'text'

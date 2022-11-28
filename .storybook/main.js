@@ -53,13 +53,14 @@ module.exports = {
     typescript: {
         reactDocgen: 'react-docgen-typescript',
         reactDocgenTypescriptOptions: {
+            skipChildrenPropWithoutDoc: false,
+            shouldExtractLiteralValuesFromEnum: true,
+            savePropValueAsString: true,
             compilerOptions: {
                 allowSyntheticDefaultImports: true,
                 esModuleInterop             : true
             },
-            shouldExtractLiteralValuesFromEnum: true,
-            savePropValueAsString: true,
-            propFilter: prop => true /* your filter */
+            propFilter: true
         },
     }
 }
