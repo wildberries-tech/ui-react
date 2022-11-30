@@ -5,7 +5,7 @@ import style from './index.module.pcss';
 
 export interface IProps {
     className?: IStyle | string,
-    presetSize?: 'small' | 'medium' | 'large',
+    presetSize?: 'small' | 'medium' | 'large' | 'button',
     presetStyle?: 'white' | 'rich-grey' | 'grey' | 'red' | 'light-green' | 'dark-purple'
 }
 
@@ -15,8 +15,8 @@ export const Loader = ({ presetSize = 'medium', presetStyle = 'white', ...props 
     return (
         <svg
             viewBox="0 0 50 50"
-            className={cn('ui-loader', {
-                [`ui-loader_${presetSize}`]: presetSize
+            className={cn('loader', {
+                [`loader_${presetSize}`]: presetSize
             })}
         >
             <circle
@@ -25,8 +25,8 @@ export const Loader = ({ presetSize = 'medium', presetStyle = 'white', ...props 
                 r="20"
                 fill="none"
                 strokeWidth="3"
-                className={cn('ui-loader__circle', {
-                    [`ui-loader__circle_${presetStyle}`]: presetStyle
+                className={cn('loader__circle', {
+                    [`loader__circle_${presetStyle}`]: presetStyle
                 })}
             />
         </svg>
