@@ -27,9 +27,10 @@ jobs:
       - uses: actions/checkout@v3
       - uses: reviewdog/action-eslint@v1
         with:
+          level: error
           fail_on_error: true
           reporter: github-pr-review
-          eslint_flags: '. --ext .ts,.tsx'
+          eslint_flags: '. --ext .ts,.tsx --quiet'
 
   tests:
     name: runner / test
