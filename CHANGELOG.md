@@ -1,6 +1,7 @@
 # Changelog
 
 **unreleased**
+- Добавлены базовые иконки
 
 **Release 0.0.4**
 - Добавлен компонент `checkbox`

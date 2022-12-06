@@ -1,0 +1,20 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ClassName string 1`] = `
+<svg
+  className="my-class"
+  height={24}
+  viewBox="0 0 24 24"
+  width={24}
+  xmlns="http://www.w3.org/2000/svg"
+/>
+`;
+
+exports[`Default 1`] = `
+<svg
+  height={24}
+  viewBox="0 0 24 24"
+  width={24}
+  xmlns="http://www.w3.org/2000/svg"
+/>
+`;
