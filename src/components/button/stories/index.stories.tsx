@@ -117,13 +117,3 @@ IconTextIcon.args = {
         <IconCircleMenu key={2} />
     ]
 };
-
-export const Fragments = Sandbox.bind({});
-Fragments.args = {
-    presetStyle: 'default',
-    children   : (
-        <Fragment>
-            123
-        </Fragment>
-    )
-};
