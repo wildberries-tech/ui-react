@@ -1,78 +1,72 @@
 import React from 'react';
 import renderer from 'react-test-renderer';
 
-import { Button, IProps } from './../index';
-
-const PRESET_SIZE: Array<IProps['presetSize']> = ['large', 'medium', 'small'];
-const PRESET_STYLE: Array<IProps['presetStyle']> = ['default', 'dashed', 'success', 'negative', 'primary', 'accent'];
+import { Button } from './../index';
+import { IconVideo } from './../../icons/video';
+import { IconCircleMenu } from './../../icons/circle-menu';
 
 const CHILDREN = 'Рыбный текст кнопки';
 
-it('Default', () => {
-    const tree = renderer.create(<Button children={CHILDREN} />).toJSON();
-
-    expect(tree).toMatchSnapshot();
-});
-
-for(const size of PRESET_SIZE) {
-    // eslint-disable-next-line no-loop-func
-    it(`Only size ${size}`, () => {
-        const tree = renderer
-            .create(
-                <Button
-                    presetSize={size}
-                    children={CHILDREN}
-                />
-            )
-            .toJSON();
+describe('Button', () => {
+    it('Default', () => {
+        const tree = renderer.create(<Button children={CHILDREN} />).toJSON();
 
         expect(tree).toMatchSnapshot();
     });
 
-    for(const style of PRESET_STYLE) {
-        // eslint-disable-next-line no-loop-func
-        it(`Only style ${style}`, () => {
-            const tree = renderer
-                .create(
-                    <Button
-                        presetStyle={style}
-                        children={CHILDREN}
-                    />
-                )
-                .toJSON();
+    it('isLoader', () => {
+        const tree = renderer.create(<Button children={CHILDREN} isLoader={true} />).toJSON();
 
-            expect(tree).toMatchSnapshot();
-        });
+        expect(tree).toMatchSnapshot();
+    });
 
-        // eslint-disable-next-line no-loop-func
-        it(`${size} ${style}`, () => {
-            const tree = renderer
-                .create(
-                    <Button
-                        presetSize={size}
-                        presetStyle={style}
-                        children={CHILDREN}
-                    />
-                )
-                .toJSON();
+    it('isCompact', () => {
+        const tree = renderer.create(<Button children={CHILDREN} isCompact={true} />).toJSON();
 
-            expect(tree).toMatchSnapshot();
-        });
+        expect(tree).toMatchSnapshot();
+    });
 
-        // eslint-disable-next-line no-loop-func
-        it(`${size} ${style} disabled`, () => {
-            const tree = renderer
-                .create(
-                    <Button
-                        presetSize={size}
-                        presetStyle={style}
-                        disabled={true}
-                        children={CHILDREN}
-                    />
-                )
-                .toJSON();
+    it('Icon + Text', () => {
+        const tree = renderer.create(
+            <Button>
+                <IconVideo />
+                {CHILDREN}
+            </Button>
+        ).toJSON();
 
-            expect(tree).toMatchSnapshot();
-        });
-    }
-}
+        expect(tree).toMatchSnapshot();
+    });
+
+    it('Icon', () => {
+        const tree = renderer.create(
+            <Button>
+                <IconVideo />
+            </Button>
+        ).toJSON();
+
+        expect(tree).toMatchSnapshot();
+    });
+
+    it('Multi icon', () => {
+        const tree = renderer.create(
+            <Button>
+                <IconVideo />
+                <IconCircleMenu />
+            </Button>
+        ).toJSON();
+
+        expect(tree).toMatchSnapshot();
+    });
+
+    it('SVG', () => {
+        const tree = renderer.create(
+            <Button>
+                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18">
+                    <path fill="#fff" d="m7.172 11.4 6.794-6.9L15 5.55 7.172 13.5 3 9.263l1.034-1.05L7.172 11.4Z" />
+                </svg>
+            </Button>
+        ).toJSON();
+
+        expect(tree).toMatchSnapshot();
+    });
+});

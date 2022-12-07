@@ -1,10 +1,9 @@
-import React, { ButtonHTMLAttributes, isValidElement, useMemo } from 'react';
+import React, { ButtonHTMLAttributes, useMemo } from 'react';
+import { isFragment, isElement } from 'react-is';
 
 import { IStyle, useClassnames } from './../../hooks/use-classnames';
 import { Loader } from './../loader';
 import style from './index.module.pcss';
-
-// Pick
 
 type TAttributes = 'type' | 'tabIndex' | 'onFocus' | 'onClick' | 'children' | 'accessKey' | 'disabled';
 
@@ -27,7 +26,8 @@ const LOADER_STYLE_MAP = {
 } as const;
 
 const isValidCompact = (element: IProps['children']) => {
-    return isValidElement(element) && (element.type === 'svg' || (typeof element.type !== 'string' && element.type.name?.startsWith('Icon')));
+    // @ts-ignore
+    return isElement(element) && (element.type === 'svg' || (!isFragment(element) && element.type.name.startsWith('Icon')));
 };
 
 const isCompact = (element: IProps['children']) => {

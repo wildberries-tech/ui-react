@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { Fragment } from 'react';
 import { ComponentStory, ComponentMeta } from '@storybook/react';
 
 import { IconVideo } from './../../icons/video';
@@ -116,4 +116,14 @@ IconTextIcon.args = {
         'Кнопка',
         <IconCircleMenu key={2} />
     ]
+};
+
+export const Fragments = Sandbox.bind({});
+Fragments.args = {
+    presetStyle: 'default',
+    children   : (
+        <Fragment>
+            123
+        </Fragment>
+    )
 };
