@@ -12,7 +12,8 @@ export interface IProps extends Pick<ButtonHTMLAttributes<HTMLButtonElement>, TA
     className?: IStyle | string,
     presetSize?: 'large' | 'medium' | 'small',
     presetStyle?: 'primary' | 'default' | 'dashed' | 'ghost' | 'negative' | 'success' | 'deprecated',
-    isLoader?: boolean
+    isLoader?: boolean,
+    isCompact?: boolean
 }
 
 const LOADER_STYLE_MAP = {
@@ -24,6 +25,14 @@ const LOADER_STYLE_MAP = {
     success   : 'rich-grey',
     deprecated: 'white'
 } as const;
+
+const isValidCompact = (element: IProps['children']) => {
+    return isValidElement(element) && (element.type === 'svg' || (typeof element.type !== 'string' && element.type.name?.startsWith('Icon')));
+};
+
+const isCompact = (element: IProps['children']) => {
+    return Array.isArray(element) ? element.every(isValidCompact) : isValidCompact(element);
+};
 
 export const Button = ({ presetSize = 'medium', presetStyle = 'default', type = 'button', ...props }: IProps) => {
     const cn = useClassnames<typeof style>(style, props.className);
@@ -52,7 +61,7 @@ export const Button = ({ presetSize = 'medium', presetStyle = 'default', type = 
             className={cn('button', {
                 [`button_${presetSize}`] : presetSize,
                 [`button_${presetStyle}`]: presetStyle,
-                'button_compact'         : isValidElement(props.children) && props.children.type === 'svg'
+                'button_compact'         : typeof props.isCompact === 'undefined' ? isCompact(props.children) : props.isCompact
             })}
             children={elChildren}
         />

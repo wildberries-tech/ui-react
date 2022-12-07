@@ -3,7 +3,7 @@ import { Canvas, Story, ArgsTable } from '@storybook/addon-docs';
 import { Button } from './../';
 
 ## Button
-????
+Компонент конфигурируемой кнопки соответствующей дизайну.
 
 ## Использование
 Импорт компонента в код.
@@ -11,9 +11,25 @@ import { Button } from './../';
 import { Button } from '@wb-tech/ui-react';
 ```
 
-Ниже приведены примеры всех состояний описанных в дизайн системе.
+Ниже приведены примеры основных состояний описанных в дизайн системе.
 <Canvas>
+    <Story id="components-button--ghost" />
+    <Story id="components-button--default" />
     <Story id="components-button--primary" />
+    <Story id="components-button--dashed" />
+    <Story id="components-button--negative" />
+    <Story id="components-button--success" />
+    <Story id="components-button--deprecated" />
+</Canvas>
+
+<Canvas>
+    <Story id="components-button--icon" />
+    <Story id="components-button--double-icon" />
+</Canvas>
+
+<Canvas>
+    <Story id="components-button--icon-text" />
+    <Story id="components-button--icon-text-icon" />
 </Canvas>
 
 ## Параметры

@@ -1,6 +1,8 @@
-import React, { Fragment } from 'react';
+import React from 'react';
 import { ComponentStory, ComponentMeta } from '@storybook/react';
 
+import { IconVideo } from './../../icons/video';
+import { IconCircleMenu } from './../../icons/circle-menu';
 import Docs from './index.docs.mdx';
 import { Button } from '../index';
 
@@ -84,8 +86,34 @@ export const Icon = Sandbox.bind({});
 Icon.args = {
     presetStyle: 'primary',
     children: (
-        <svg key="1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24">
-            <path d="M6.594 2A4.573 4.573 0 0 0 2 6.406V7h2v-.5A2.59 2.59 0 0 1 6.594 4H7V2h-.406zM9 2v2h2V2H9zm4 0v2h2V2h-2zm4 0v2h.5c1.4.055 2.5 1.193 2.5 2.594V7h2v-.406A4.573 4.573 0 0 0 17.594 2H17zM2 9v2h2V9H2zm18 0v2h2V9h-2zM2 13v2h2v-2H2zm18 0v2h2v-2h-2zM2 17v.594A4.574 4.574 0 0 0 6.594 22H7v-2h-.406A2.59 2.59 0 0 1 4 17.5V17H2zm18 0v.406A2.59 2.59 0 0 1 17.5 20H17v2h.594A4.574 4.574 0 0 0 22 17.406V17h-2zM9 20v2h2v-2H9zm4 0v2h2v-2h-2z"/>
-        </svg>
+        <IconVideo />
     )
+};
+
+export const DoubleIcon = Sandbox.bind({});
+DoubleIcon.args = {
+    presetStyle: 'primary',
+    children   : [
+        <IconVideo key={1} />,
+        <IconCircleMenu key={2} />
+    ]
+};
+
+export const IconText = Sandbox.bind({});
+IconText.args = {
+    presetStyle: 'default',
+    children   : [
+        <IconVideo key={1} />,
+        'Кнопка'
+    ]
+};
+
+export const IconTextIcon = Sandbox.bind({});
+IconTextIcon.args = {
+    presetStyle: 'default',
+    children   : [
+        <IconVideo key={1} />,
+        'Кнопка',
+        <IconCircleMenu key={2} />
+    ]
 };
