@@ -2,11 +2,11 @@
 
 exports[`No props 1`] = `
 <svg
-  className="ui-loader ui-loader_medium"
+  className="loader loader_medium"
   viewBox="0 0 50 50"
 >
   <circle
-    className="ui-loader__circle ui-loader__circle_white"
+    className="loader__circle loader__circle_white"
     cx="25"
     cy="25"
     fill="none"
@@ -18,11 +18,11 @@ exports[`No props 1`] = `
 
 exports[`Only size large 1`] = `
 <svg
-  className="ui-loader ui-loader_large"
+  className="loader loader_large"
   viewBox="0 0 50 50"
 >
   <circle
-    className="ui-loader__circle ui-loader__circle_white"
+    className="loader__circle loader__circle_white"
     cx="25"
     cy="25"
     fill="none"
@@ -34,11 +34,11 @@ exports[`Only size large 1`] = `
 
 exports[`Only size medium 1`] = `
 <svg
-  className="ui-loader ui-loader_medium"
+  className="loader loader_medium"
   viewBox="0 0 50 50"
 >
   <circle
-    className="ui-loader__circle ui-loader__circle_white"
+    className="loader__circle loader__circle_white"
     cx="25"
     cy="25"
     fill="none"
@@ -50,11 +50,11 @@ exports[`Only size medium 1`] = `
 
 exports[`Only size small 1`] = `
 <svg
-  className="ui-loader ui-loader_small"
+  className="loader loader_small"
   viewBox="0 0 50 50"
 >
   <circle
-    className="ui-loader__circle ui-loader__circle_white"
+    className="loader__circle loader__circle_white"
     cx="25"
     cy="25"
     fill="none"
@@ -66,11 +66,11 @@ exports[`Only size small 1`] = `
 
 exports[`Only style dark-purple 1`] = `
 <svg
-  className="ui-loader ui-loader_medium"
+  className="loader loader_medium"
   viewBox="0 0 50 50"
 >
   <circle
-    className="ui-loader__circle ui-loader__circle_dark-purple"
+    className="loader__circle loader__circle_dark-purple"
     cx="25"
     cy="25"
     fill="none"
@@ -82,11 +82,11 @@ exports[`Only style dark-purple 1`] = `
 
 exports[`Only style dark-purple 2`] = `
 <svg
-  className="ui-loader ui-loader_medium"
+  className="loader loader_medium"
   viewBox="0 0 50 50"
 >
   <circle
-    className="ui-loader__circle ui-loader__circle_dark-purple"
+    className="loader__circle loader__circle_dark-purple"
     cx="25"
     cy="25"
     fill="none"
@@ -98,11 +98,11 @@ exports[`Only style dark-purple 2`] = `
 
 exports[`Only style dark-purple 3`] = `
 <svg
-  className="ui-loader ui-loader_medium"
+  className="loader loader_medium"
   viewBox="0 0 50 50"
 >
   <circle
-    className="ui-loader__circle ui-loader__circle_dark-purple"
+    className="loader__circle loader__circle_dark-purple"
     cx="25"
     cy="25"
     fill="none"
@@ -114,11 +114,11 @@ exports[`Only style dark-purple 3`] = `
 
 exports[`Only style grey 1`] = `
 <svg
-  className="ui-loader ui-loader_medium"
+  className="loader loader_medium"
   viewBox="0 0 50 50"
 >
   <circle
-    className="ui-loader__circle ui-loader__circle_grey"
+    className="loader__circle loader__circle_grey"
     cx="25"
     cy="25"
     fill="none"
@@ -130,11 +130,11 @@ exports[`Only style grey 1`] = `
 
 exports[`Only style grey 2`] = `
 <svg
-  className="ui-loader ui-loader_medium"
+  className="loader loader_medium"
   viewBox="0 0 50 50"
 >
   <circle
-    className="ui-loader__circle ui-loader__circle_grey"
+    className="loader__circle loader__circle_grey"
     cx="25"
     cy="25"
     fill="none"
@@ -146,11 +146,11 @@ exports[`Only style grey 2`] = `
 
 exports[`Only style grey 3`] = `
 <svg
-  className="ui-loader ui-loader_medium"
+  className="loader loader_medium"
   viewBox="0 0 50 50"
 >
   <circle
-    className="ui-loader__circle ui-loader__circle_grey"
+    className="loader__circle loader__circle_grey"
     cx="25"
     cy="25"
     fill="none"
@@ -162,11 +162,11 @@ exports[`Only style grey 3`] = `
 
 exports[`Only style light-green 1`] = `
 <svg
-  className="ui-loader ui-loader_medium"
+  className="loader loader_medium"
   viewBox="0 0 50 50"
 >
   <circle
-    className="ui-loader__circle ui-loader__circle_light-green"
+    className="loader__circle loader__circle_light-green"
     cx="25"
     cy="25"
     fill="none"
@@ -178,11 +178,11 @@ exports[`Only style light-green 1`] = `
 
 exports[`Only style light-green 2`] = `
 <svg
-  className="ui-loader ui-loader_medium"
+  className="loader loader_medium"
   viewBox="0 0 50 50"
 >
   <circle
-    className="ui-loader__circle ui-loader__circle_light-green"
+    className="loader__circle loader__circle_light-green"
     cx="25"
     cy="25"
     fill="none"
@@ -194,11 +194,11 @@ exports[`Only style light-green 2`] = `
 
 exports[`Only style light-green 3`] = `
 <svg
-  className="ui-loader ui-loader_medium"
+  className="loader loader_medium"
   viewBox="0 0 50 50"
 >
   <circle
-    className="ui-loader__circle ui-loader__circle_light-green"
+    className="loader__circle loader__circle_light-green"
     cx="25"
     cy="25"
     fill="none"
@@ -210,11 +210,11 @@ exports[`Only style light-green 3`] = `
 
 exports[`Only style red 1`] = `
 <svg
-  className="ui-loader ui-loader_medium"
+  className="loader loader_medium"
   viewBox="0 0 50 50"
 >
   <circle
-    className="ui-loader__circle ui-loader__circle_red"
+    className="loader__circle loader__circle_red"
     cx="25"
     cy="25"
     fill="none"
@@ -226,11 +226,11 @@ exports[`Only style red 1`] = `
 
 exports[`Only style red 2`] = `
 <svg
-  className="ui-loader ui-loader_medium"
+  className="loader loader_medium"
   viewBox="0 0 50 50"
 >
   <circle
-    className="ui-loader__circle ui-loader__circle_red"
+    className="loader__circle loader__circle_red"
     cx="25"
     cy="25"
     fill="none"
@@ -242,11 +242,11 @@ exports[`Only style red 2`] = `
 
 exports[`Only style red 3`] = `
 <svg
-  className="ui-loader ui-loader_medium"
+  className="loader loader_medium"
   viewBox="0 0 50 50"
 >
   <circle
-    className="ui-loader__circle ui-loader__circle_red"
+    className="loader__circle loader__circle_red"
     cx="25"
     cy="25"
     fill="none"
@@ -258,11 +258,11 @@ exports[`Only style red 3`] = `
 
 exports[`Only style rich-grey 1`] = `
 <svg
-  className="ui-loader ui-loader_medium"
+  className="loader loader_medium"
   viewBox="0 0 50 50"
 >
   <circle
-    className="ui-loader__circle ui-loader__circle_rich-grey"
+    className="loader__circle loader__circle_rich-grey"
     cx="25"
     cy="25"
     fill="none"
@@ -274,11 +274,11 @@ exports[`Only style rich-grey 1`] = `
 
 exports[`Only style rich-grey 2`] = `
 <svg
-  className="ui-loader ui-loader_medium"
+  className="loader loader_medium"
   viewBox="0 0 50 50"
 >
   <circle
-    className="ui-loader__circle ui-loader__circle_rich-grey"
+    className="loader__circle loader__circle_rich-grey"
     cx="25"
     cy="25"
     fill="none"
@@ -290,11 +290,11 @@ exports[`Only style rich-grey 2`] = `
 
 exports[`Only style rich-grey 3`] = `
 <svg
-  className="ui-loader ui-loader_medium"
+  className="loader loader_medium"
   viewBox="0 0 50 50"
 >
   <circle
-    className="ui-loader__circle ui-loader__circle_rich-grey"
+    className="loader__circle loader__circle_rich-grey"
     cx="25"
     cy="25"
     fill="none"
@@ -306,11 +306,11 @@ exports[`Only style rich-grey 3`] = `
 
 exports[`Only style white 1`] = `
 <svg
-  className="ui-loader ui-loader_medium"
+  className="loader loader_medium"
   viewBox="0 0 50 50"
 >
   <circle
-    className="ui-loader__circle ui-loader__circle_white"
+    className="loader__circle loader__circle_white"
     cx="25"
     cy="25"
     fill="none"
@@ -322,11 +322,11 @@ exports[`Only style white 1`] = `
 
 exports[`Only style white 2`] = `
 <svg
-  className="ui-loader ui-loader_medium"
+  className="loader loader_medium"
   viewBox="0 0 50 50"
 >
   <circle
-    className="ui-loader__circle ui-loader__circle_white"
+    className="loader__circle loader__circle_white"
     cx="25"
     cy="25"
     fill="none"
@@ -338,11 +338,11 @@ exports[`Only style white 2`] = `
 
 exports[`Only style white 3`] = `
 <svg
-  className="ui-loader ui-loader_medium"
+  className="loader loader_medium"
   viewBox="0 0 50 50"
 >
   <circle
-    className="ui-loader__circle ui-loader__circle_white"
+    className="loader__circle loader__circle_white"
     cx="25"
     cy="25"
     fill="none"
@@ -354,11 +354,11 @@ exports[`Only style white 3`] = `
 
 exports[`large dark-purple 1`] = `
 <svg
-  className="ui-loader ui-loader_large"
+  className="loader loader_large"
   viewBox="0 0 50 50"
 >
   <circle
-    className="ui-loader__circle ui-loader__circle_dark-purple"
+    className="loader__circle loader__circle_dark-purple"
     cx="25"
     cy="25"
     fill="none"
@@ -370,11 +370,11 @@ exports[`large dark-purple 1`] = `
 
 exports[`large grey 1`] = `
 <svg
-  className="ui-loader ui-loader_large"
+  className="loader loader_large"
   viewBox="0 0 50 50"
 >
   <circle
-    className="ui-loader__circle ui-loader__circle_grey"
+    className="loader__circle loader__circle_grey"
     cx="25"
     cy="25"
     fill="none"
@@ -386,11 +386,11 @@ exports[`large grey 1`] = `
 
 exports[`large light-green 1`] = `
 <svg
-  className="ui-loader ui-loader_large"
+  className="loader loader_large"
   viewBox="0 0 50 50"
 >
   <circle
-    className="ui-loader__circle ui-loader__circle_light-green"
+    className="loader__circle loader__circle_light-green"
     cx="25"
     cy="25"
     fill="none"
@@ -402,11 +402,11 @@ exports[`large light-green 1`] = `
 
 exports[`large red 1`] = `
 <svg
-  className="ui-loader ui-loader_large"
+  className="loader loader_large"
   viewBox="0 0 50 50"
 >
   <circle
-    className="ui-loader__circle ui-loader__circle_red"
+    className="loader__circle loader__circle_red"
     cx="25"
     cy="25"
     fill="none"
@@ -418,11 +418,11 @@ exports[`large red 1`] = `
 
 exports[`large rich-grey 1`] = `
 <svg
-  className="ui-loader ui-loader_large"
+  className="loader loader_large"
   viewBox="0 0 50 50"
 >
   <circle
-    className="ui-loader__circle ui-loader__circle_rich-grey"
+    className="loader__circle loader__circle_rich-grey"
     cx="25"
     cy="25"
     fill="none"
@@ -434,11 +434,11 @@ exports[`large rich-grey 1`] = `
 
 exports[`large white 1`] = `
 <svg
-  className="ui-loader ui-loader_large"
+  className="loader loader_large"
   viewBox="0 0 50 50"
 >
   <circle
-    className="ui-loader__circle ui-loader__circle_white"
+    className="loader__circle loader__circle_white"
     cx="25"
     cy="25"
     fill="none"
@@ -450,11 +450,11 @@ exports[`large white 1`] = `
 
 exports[`medium dark-purple 1`] = `
 <svg
-  className="ui-loader ui-loader_medium"
+  className="loader loader_medium"
   viewBox="0 0 50 50"
 >
   <circle
-    className="ui-loader__circle ui-loader__circle_dark-purple"
+    className="loader__circle loader__circle_dark-purple"
     cx="25"
     cy="25"
     fill="none"
@@ -466,11 +466,11 @@ exports[`medium dark-purple 1`] = `
 
 exports[`medium grey 1`] = `
 <svg
-  className="ui-loader ui-loader_medium"
+  className="loader loader_medium"
   viewBox="0 0 50 50"
 >
   <circle
-    className="ui-loader__circle ui-loader__circle_grey"
+    className="loader__circle loader__circle_grey"
     cx="25"
     cy="25"
     fill="none"
@@ -482,11 +482,11 @@ exports[`medium grey 1`] = `
 
 exports[`medium light-green 1`] = `
 <svg
-  className="ui-loader ui-loader_medium"
+  className="loader loader_medium"
   viewBox="0 0 50 50"
 >
   <circle
-    className="ui-loader__circle ui-loader__circle_light-green"
+    className="loader__circle loader__circle_light-green"
     cx="25"
     cy="25"
     fill="none"
@@ -498,11 +498,11 @@ exports[`medium light-green 1`] = `
 
 exports[`medium red 1`] = `
 <svg
-  className="ui-loader ui-loader_medium"
+  className="loader loader_medium"
   viewBox="0 0 50 50"
 >
   <circle
-    className="ui-loader__circle ui-loader__circle_red"
+    className="loader__circle loader__circle_red"
     cx="25"
     cy="25"
     fill="none"
@@ -514,11 +514,11 @@ exports[`medium red 1`] = `
 
 exports[`medium rich-grey 1`] = `
 <svg
-  className="ui-loader ui-loader_medium"
+  className="loader loader_medium"
   viewBox="0 0 50 50"
 >
   <circle
-    className="ui-loader__circle ui-loader__circle_rich-grey"
+    className="loader__circle loader__circle_rich-grey"
     cx="25"
     cy="25"
     fill="none"
@@ -530,11 +530,11 @@ exports[`medium rich-grey 1`] = `
 
 exports[`medium white 1`] = `
 <svg
-  className="ui-loader ui-loader_medium"
+  className="loader loader_medium"
   viewBox="0 0 50 50"
 >
   <circle
-    className="ui-loader__circle ui-loader__circle_white"
+    className="loader__circle loader__circle_white"
     cx="25"
     cy="25"
     fill="none"
@@ -546,11 +546,11 @@ exports[`medium white 1`] = `
 
 exports[`small dark-purple 1`] = `
 <svg
-  className="ui-loader ui-loader_small"
+  className="loader loader_small"
   viewBox="0 0 50 50"
 >
   <circle
-    className="ui-loader__circle ui-loader__circle_dark-purple"
+    className="loader__circle loader__circle_dark-purple"
     cx="25"
     cy="25"
     fill="none"
@@ -562,11 +562,11 @@ exports[`small dark-purple 1`] = `
 
 exports[`small grey 1`] = `
 <svg
-  className="ui-loader ui-loader_small"
+  className="loader loader_small"
   viewBox="0 0 50 50"
 >
   <circle
-    className="ui-loader__circle ui-loader__circle_grey"
+    className="loader__circle loader__circle_grey"
     cx="25"
     cy="25"
     fill="none"
@@ -578,11 +578,11 @@ exports[`small grey 1`] = `
 
 exports[`small light-green 1`] = `
 <svg
-  className="ui-loader ui-loader_small"
+  className="loader loader_small"
   viewBox="0 0 50 50"
 >
   <circle
-    className="ui-loader__circle ui-loader__circle_light-green"
+    className="loader__circle loader__circle_light-green"
     cx="25"
     cy="25"
     fill="none"
@@ -594,11 +594,11 @@ exports[`small light-green 1`] = `
 
 exports[`small red 1`] = `
 <svg
-  className="ui-loader ui-loader_small"
+  className="loader loader_small"
   viewBox="0 0 50 50"
 >
   <circle
-    className="ui-loader__circle ui-loader__circle_red"
+    className="loader__circle loader__circle_red"
     cx="25"
     cy="25"
     fill="none"
@@ -610,11 +610,11 @@ exports[`small red 1`] = `
 
 exports[`small rich-grey 1`] = `
 <svg
-  className="ui-loader ui-loader_small"
+  className="loader loader_small"
   viewBox="0 0 50 50"
 >
   <circle
-    className="ui-loader__circle ui-loader__circle_rich-grey"
+    className="loader__circle loader__circle_rich-grey"
     cx="25"
     cy="25"
     fill="none"
@@ -626,11 +626,11 @@ exports[`small rich-grey 1`] = `
 
 exports[`small white 1`] = `
 <svg
-  className="ui-loader ui-loader_small"
+  className="loader loader_small"
   viewBox="0 0 50 50"
 >
   <circle
-    className="ui-loader__circle ui-loader__circle_white"
+    className="loader__circle loader__circle_white"
     cx="25"
     cy="25"
     fill="none"
