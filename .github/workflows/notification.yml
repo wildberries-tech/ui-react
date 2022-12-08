@@ -65,12 +65,12 @@ jobs:
           to: ${{ secrets.TELEGRAM_CHAT }}
           format: markdown
           message: |
-            📦 Опубликована новая версия: `@wb-tech/ui-react@${{ github.ref_name }}`
+            📦 Опубликована новая версия: `@wb-tech/ui-react@${{ github.event.workflow_run.head_branch }}`
 
             Команды для быстрого копирования в буфер 👆:
-            NPM - `npm i @wb-tech/ui-react@${{ github.ref_name }} -S`
-            Yarn - `yarn add @wb-tech/ui-react@${{ github.ref_name }} -S`
-            PNPM - `pnpm add @wb-tech/ui-react@${{ github.ref_name }} -S`
+            NPM - `npm i @wb-tech/ui-react@${{ github.event.workflow_run.head_branch }} -S`
+            Yarn - `yarn add @wb-tech/ui-react@${{ github.event.workflow_run.head_branch }} -S`
+            PNPM - `pnpm add @wb-tech/ui-react@${{ github.event.workflow_run.head_branch }} -S`
 
   storybook:
     name: Storybook
