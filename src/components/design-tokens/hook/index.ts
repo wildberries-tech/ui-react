@@ -7,7 +7,7 @@ export interface IOptions {
     className?: string | IStyle
 }
 
-export const useDesignTokens = (options: IOptions) => {
+export const useDesignTokens = (options: IOptions = {}) => {
     const cn = useClassnames<typeof style>(style, options.className);
 
     return useMemo(() => {
