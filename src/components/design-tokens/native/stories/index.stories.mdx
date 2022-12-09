@@ -1,0 +1,38 @@
+import { Meta } from '@storybook/addon-docs';
+
+<Meta
+    title="Design Tokens/Native"
+    parameters={{
+        backgrounds: {
+            disable: true,
+            grid: {
+                disable: true
+            }
+        },
+        viewMode: 'docs',
+        previewTabs: {
+            canvas: {
+                hidden: true
+            }
+        }
+    }}
+/>
+
+## Design Tokens
+Предоставляет набор дизайн токенов в виде CSS переменных. Все предоставляемые переменные ограничены областью использования указанного элемента.
+
+Содержит параметры: цветовая палитра, типографика, скругления, тени.
+
+## Использование
+```tsx
+import { useDesignTokensNative } from '@wb-tech/ui-react';
+```
+
+Устанавливает на указанный елемент класс с переменными дизайн системы.
+```tsx
+import { useDesignTokensNative } from '@wb-tech/ui-react';
+
+useDesignTokensNative(document.getElementById('root'))
+// или
+useDesignTokensNative(document.body)
+```

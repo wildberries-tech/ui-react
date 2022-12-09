@@ -1,4 +1,4 @@
-export { DesignTokens } from './components/design-tokens';
+export { DesignTokens, useDesignTokensNative, useDesignTokens } from './components/design-tokens';
 export { Checkbox } from './components/checkbox';
 export { CheckboxGroup } from './components/checkbox-group';
 export { Loader } from './components/loader';
@@ -94,4 +94,3 @@ export { IconZoomIn } from './components/icons/zoom-in';
 export { IconZoomOut } from './components/icons/zoom-out';
 
 export { useClassnames } from './hooks/use-classnames';
-export { useDesignTokens } from './components/design-tokens/hook';
