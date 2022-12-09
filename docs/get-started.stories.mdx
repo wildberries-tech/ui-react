@@ -1,0 +1,65 @@
+import { Meta } from '@storybook/addon-docs';
+
+<Meta
+    title="Как начать"
+    parameters={{
+        backgrounds: {
+            disable: true,
+            grid: {
+                disable: true
+            }
+        },
+        viewMode: 'docs',
+        previewTabs: {
+            canvas: {
+                hidden: true
+            }
+        }
+    }}
+/>
+
+## Как начать использовать
+1. Установка пакета кита в проект
+```
+npm i @wb-tech/ui-react -S
+```
+
+2. Подключение билдера
+```js
+// Webpack 5
+// webpack.config.js
+const { extendWebpackConfig } = require('@wb-tech/ui-react/builders');
+
+module.exports = extendWebpackConfig({
+    entry: {
+        main: './src/index.js'
+    },
+    output: {
+        path    : './dist',
+        filename: '[name].bundle.js'
+    },
+    ...
+}, {
+    // Передать в опции MiniCssExtractPlugin если он используется в проекте
+    useMiniCssExtractPlugin: MiniCssExtractPlugin
+});
+```
+
+3. Указать область действия дизайн токенов
+```tsx
+import React from 'react';
+import { render } from 'react-dom';
+import { DesignTokens } from '@wb-tech/ui-react';
+
+// ...
+
+render((
+    <Provider store={store}>
+        <DesignTokens>
+            <Routes />
+        </DesignTokens>
+    </Provider>
+));
+```
+
+4. Использовать компоненты `@wb-tech/ui-react`

@@ -2,6 +2,7 @@ export { DesignTokens } from './components/design-tokens';
 export { Checkbox } from './components/checkbox';
 export { CheckboxGroup } from './components/checkbox-group';
 export { Loader } from './components/loader';
+export { Button } from './components/button';
 export { IconBarChart } from './components/icons/bar-chart';
 export { IconBook } from './components/icons/book';
 export { IconBookmark } from './components/icons/bookmark';

@@ -41,7 +41,7 @@ module.exports = (config, options = {}) => {
             test   : /(\.module)?\.p?css$/,
             include: !options.disableInclude ? new RegExp(name) : undefined,
             use    : [{
-                loader : require.resolve('style-loader'),
+                loader : options.useMiniCssExtractPlugin ? options.useMiniCssExtractPlugin.loader : require.resolve('style-loader'),
             }, options.enableCSSTypings ? {
                 loader : '@teamsupercell/typings-for-css-modules-loader',
                 options: {
