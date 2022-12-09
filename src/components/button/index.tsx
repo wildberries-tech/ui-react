@@ -27,7 +27,7 @@ const LOADER_STYLE_MAP = {
 
 const isValidCompact = (element: IProps['children']) => {
     // @ts-ignore
-    return isElement(element) && (element.type === 'svg' || (!isFragment(element) && element.type.name.startsWith('Icon')));
+    return isElement(element) && (element.type === 'svg' || (!isFragment(element) && element.type.name?.startsWith('Icon')));
 };
 
 const isCompact = (element: IProps['children']) => {
