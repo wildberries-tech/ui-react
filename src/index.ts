@@ -94,3 +94,4 @@ export { IconZoomIn } from './components/icons/zoom-in';
 export { IconZoomOut } from './components/icons/zoom-out';
 
 export { useClassnames } from './hooks/use-classnames';
+export { useDesignTokens } from './components/design-tokens/hook';
