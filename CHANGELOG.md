@@ -1,7 +1,7 @@
 # Changelog
 
 **unreleased**
--
+- Добавлены иконки группы Security
 
 **Release 0.0.11**
 - Добавлен экпорт типов `useClassnames`
