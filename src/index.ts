@@ -92,6 +92,17 @@ export { IconVideo } from './components/icons/video';
 export { IconVideoNo } from './components/icons/video-no';
 export { IconZoomIn } from './components/icons/zoom-in';
 export { IconZoomOut } from './components/icons/zoom-out';
+export { IconKey } from './components/icons/key';
+export { IconKeyNo } from './components/icons/key-no';
+export { IconLock } from './components/icons/lock';
+export { IconLockCircle } from './components/icons/lock-circle';
+export { IconLockNo } from './components/icons/lock-no';
+export { IconShield } from './components/icons/shield';
+export { IconShieldLock } from './components/icons/shield-lock';
+export { IconShieldNo } from './components/icons/shield-no';
+export { IconShieldOk } from './components/icons/shield-ok';
+export { IconUnlock } from './components/icons/unlock';
+export { IconVerified } from './components/icons/verified';
 
 export { useClassnames } from './hooks/use-classnames';
 export type { IStyle } from './hooks/use-classnames';
