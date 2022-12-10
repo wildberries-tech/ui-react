@@ -2,6 +2,8 @@
 
 **unreleased**
 - Добавлены иконки группы Security
+- Добавлены иконки группы Notifications
+- Добавлены иконки группы Time
 
 **Release 0.0.11**
 - Добавлен экпорт типов `useClassnames`
