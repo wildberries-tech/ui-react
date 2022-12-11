@@ -239,6 +239,14 @@ export { IconChattingCommentMinus } from './components/icons/chatting/comment-mi
 export { IconChattingCommentPlus } from './components/icons/chatting/comment-plus';
 export { IconChattingCommentText } from './components/icons/chatting/comment-text';
 export { IconChattingQuestion } from './components/icons/chatting/question';
+export { IconConnectionAirplay } from './components/icons/connection/airplay';
+export { IconConnectionBluetooth } from './components/icons/connection/bluetooth';
+export { IconConnectionBluetoothNo } from './components/icons/connection/bluetooth-no';
+export { IconConnectionBroadcast } from './components/icons/connection/broadcast';
+export { IconConnectionBroadcasting } from './components/icons/connection/broadcasting';
+export { IconConnectionCast } from './components/icons/connection/cast';
+export { IconConnectionWiFi } from './components/icons/connection/wi-fi';
+export { IconConnectionWiFiNo } from './components/icons/connection/wi-fi-no';
 
 export { useClassnames } from './hooks/use-classnames';
 export type { IStyle } from './hooks/use-classnames';
