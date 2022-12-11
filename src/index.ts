@@ -232,6 +232,13 @@ export { IconCallOutcoming } from './components/icons/call/outcoming';
 export { IconCallPhone } from './components/icons/call/phone';
 export { IconCallRecieved } from './components/icons/call/recieved';
 export { IconCallVoicemail } from './components/icons/call/voicemail';
+export { IconChattingComment } from './components/icons/chatting/comment';
+export { IconChattingCommentChecked } from './components/icons/chatting/comment-checked';
+export { IconChattingCommentDelete } from './components/icons/chatting/comment-delete';
+export { IconChattingCommentMinus } from './components/icons/chatting/comment-minus';
+export { IconChattingCommentPlus } from './components/icons/chatting/comment-plus';
+export { IconChattingCommentText } from './components/icons/chatting/comment-text';
+export { IconChattingQuestion } from './components/icons/chatting/question';
 
 export { useClassnames } from './hooks/use-classnames';
 export type { IStyle } from './hooks/use-classnames';
