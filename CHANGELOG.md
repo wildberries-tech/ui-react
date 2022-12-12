@@ -1,6 +1,8 @@
 # Changelog
 
 **unreleased**
+- Изменено название пропса `isLoader` -> `isLoading` в компоненте `Button`
+- Добавлен компонент `ButtonGroup`
 
 **Release 0.0.5**
 - Добавлены базовые иконки

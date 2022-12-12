@@ -15,7 +15,7 @@ describe('Button', () => {
     });
 
     it('isLoader', () => {
-        const tree = renderer.create(<Button children={CHILDREN} isLoader={true} />).toJSON();
+        const tree = renderer.create(<Button children={CHILDREN} isLoading={true} />).toJSON();
 
         expect(tree).toMatchSnapshot();
     });

@@ -1,0 +1,41 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Desktop Column 1`] = `
+<div
+  className="button-group button-group_column button-group_desktop"
+/>
+`;
+
+exports[`Desktop Row 1`] = `
+<div
+  className="button-group button-group_row button-group_desktop"
+/>
+`;
+
+exports[`Mobile Column 1`] = `
+<div
+  className="button-group button-group_column button-group_mobile"
+/>
+`;
+
+exports[`Mobile Row 1`] = `
+<div
+  className="button-group button-group_row button-group_mobile"
+/>
+`;
+
+exports[`tagName 1`] = `
+<span
+  className="button-group button-group_column button-group_desktop"
+>
+  MOCK
+</span>
+`;
+
+exports[`tagName empty string (storybook) 1`] = `
+<div
+  className="button-group button-group_column button-group_desktop"
+>
+  MOCK
+</div>
+`;
