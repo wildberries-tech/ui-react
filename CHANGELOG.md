@@ -1,6 +1,8 @@
 # Changelog
 
 **unreleased**
+- Изменено название пропса `isLoader` -> `isLoading` в компоненте `Button`
+- Добавлен компонент `ButtonGroup`
 - Добавлены иконки группы Security
 - Добавлены иконки группы Notifications
 - Добавлены иконки группы Time

@@ -11,7 +11,7 @@ export interface IProps extends Pick<ButtonHTMLAttributes<HTMLButtonElement>, TA
     className?: IStyle | string,
     presetSize?: 'large' | 'medium' | 'small',
     presetStyle?: 'primary' | 'default' | 'dashed' | 'ghost' | 'negative' | 'success' | 'deprecated',
-    isLoader?: boolean,
+    isLoading?: boolean,
     isCompact?: boolean
 }
 
@@ -38,7 +38,7 @@ export const Button = ({ presetSize = 'medium', presetStyle = 'default', type = 
     const cn = useClassnames<typeof style>(style, props.className);
 
     const elChildren = useMemo(() => {
-        if(props.isLoader) {
+        if(props.isLoading) {
             return (
                 <Loader
                     presetStyle={LOADER_STYLE_MAP[presetStyle]}
@@ -48,13 +48,13 @@ export const Button = ({ presetSize = 'medium', presetStyle = 'default', type = 
         }
 
         return props.children;
-    }, [props.children, props.isLoader, presetStyle]);
+    }, [props.children, props.isLoading, presetStyle]);
 
     return (
         <button
             type={type}
-            disabled={props.isLoader || props.disabled}
-            tabIndex={props.isLoader || props.disabled ? -1 : props.tabIndex}
+            disabled={props.isLoading || props.disabled}
+            tabIndex={props.isLoading || props.disabled ? -1 : props.tabIndex}
             onFocus={props.onFocus}
             onClick={props.onClick}
             accessKey={props.accessKey}

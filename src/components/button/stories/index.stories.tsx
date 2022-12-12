@@ -7,7 +7,7 @@ import Docs from './index.docs.mdx';
 import { Button } from '../index';
 
 const META: ComponentMeta<typeof Button> = {
-    title    : 'Button',
+    title    : 'Buttons/Button',
     component: Button,
     args     : {
         children: 'Кнопка'

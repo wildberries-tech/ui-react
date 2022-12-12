@@ -1,0 +1,21 @@
+.button-group {
+    display: grid;
+    grid-auto-flow: var(--grid-flow, row);
+    grid-gap: var(--grid-gap, 16px);
+
+    &_row {
+        --grid-flow: row;
+    }
+
+    &_column {
+        --grid-flow: column;
+    }
+
+    &_desktop {
+        --grid-gap: 16px;
+    }
+
+    &_mobile {
+        --grid-gap: 8px;
+    }
+}
