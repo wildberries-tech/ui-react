@@ -1,6 +1,8 @@
 # Changelog
 
 **unreleased**
+
+**Release 0.0.12**
 - Изменено название пропса `isLoader` -> `isLoading` в компоненте `Button`
 - Добавлен компонент `ButtonGroup`
 - Добавлены иконки группы Security
