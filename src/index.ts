@@ -255,7 +255,7 @@ export { IconEditorBrushS } from './components/icons/editor/brush-s';
 export { IconEditorBrushXL } from './components/icons/editor/brush-xl';
 export { IconEditorClearStyle } from './components/icons/editor/clear-style';
 export { IconEditorCut } from './components/icons/editor/cut';
-export { IconEditorDelete } from './components/icons/editor/delete';
+export { IconEditorDelete } from './components/icons/editor/remove-delete';
 export { IconEditorDrop } from './components/icons/editor/drop';
 export { IconEditorEraser } from './components/icons/editor/eraser';
 export { IconEditorImage } from './components/icons/editor/image';
