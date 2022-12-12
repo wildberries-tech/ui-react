@@ -1,7 +1,7 @@
 import React from 'react';
 import { IconGallery, IconItem } from '@storybook/addon-docs';
 
-const context = require.context('./../', false, /^\.\/(?!index|_).*\.tsx$/);
+const context = require.context('./../', true, /^\.\/(?!index|_|stories|__tests__).*\.tsx$/);
 
 export default () => {
     return (
