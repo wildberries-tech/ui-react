@@ -1,4 +1,4 @@
-import { createElement, ReactNode } from 'react';
+import { createElement, ReactHTML, ReactNode } from 'react';
 
 import { IStyle, useClassnames } from './../../hooks/use-classnames';
 import style from './index.module.pcss';
@@ -8,7 +8,7 @@ export interface IProps {
     direction?: 'row' | 'column',
     presetStyle?: 'desktop' | 'mobile',
     children?: ReactNode,
-    tagName?: string
+    tagName?: keyof ReactHTML
 }
 
 export const ButtonGroup = ({ direction = 'column', tagName = 'div', presetStyle = 'desktop', ...props }: IProps) => {

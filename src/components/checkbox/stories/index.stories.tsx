@@ -5,7 +5,7 @@ import Docs from './index.docs.mdx';
 import { Checkbox } from '../index';
 
 const META: ComponentMeta<typeof Checkbox> = {
-    title    : 'Checkbox',
+    title    : 'Checkboxes/Checkbox',
     component: Checkbox,
     args     : {
         name: 'my-checkbox'
