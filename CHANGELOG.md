@@ -1,6 +1,8 @@
 # Changelog
 
 **unreleased**
+- Добавлен компонент `InputText`
+- Исправлен тип `tagName` в `ButtonGroup`
 
 **Release 0.0.12**
 - Изменено название пропса `isLoader` -> `isLoading` в компоненте `Button`
