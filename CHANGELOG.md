@@ -1,6 +1,7 @@
 # Changelog
 
 **unreleased**
+- Документация при использование JEST
 
 **Release 0.0.12**
 - Изменено название пропса `isLoader` -> `isLoading` в компоненте `Button`
