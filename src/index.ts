@@ -4,6 +4,7 @@ export { CheckboxGroup } from './components/checkbox-group';
 export { Loader } from './components/loader';
 export { Button } from './components/button';
 export { ButtonGroup } from './components/button-group';
+export { InputText } from './components/input-text';
 export { IconBarChart } from './components/icons/bar-chart';
 export { IconBook } from './components/icons/book';
 export { IconBookmark } from './components/icons/bookmark';

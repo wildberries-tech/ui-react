@@ -8,7 +8,7 @@ export interface IProps {
     direction?: 'row' | 'column',
     presetStyle?: 'desktop' | 'mobile',
     children?: ReactNode,
-    tagName?: keyof ReactHTML
+    tagName?: keyof ReactHTML | ''
 }
 
 export const ButtonGroup = ({ direction = 'column', tagName = 'div', presetStyle = 'desktop', ...props }: IProps) => {
