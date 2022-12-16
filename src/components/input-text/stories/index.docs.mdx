@@ -1,0 +1,37 @@
+import { Canvas, Story, ArgsTable } from '@storybook/addon-docs';
+
+import { InputText } from './../';
+
+## InputText
+Компонент `InputText` предназначен для строковых данных и поддерживает нативные типы `email`, `password`, `search`, `text`, `tel` и `url` соответствующий дизайну и его состояния.
+Имеет максимально нативный API для беспроблемной работы c библиотеками управления формами такие как `react-hook-form`, `formik`, `final-form` и т.д.
+
+## Использование
+Импорт компонента в код.
+```tsx
+import { InputText } from '@wb-tech/ui-react';
+```
+
+Ниже приведены примеры основных состояний описанных в дизайн системе.
+<Canvas isColumn={true}>
+    <Story id="components-inputs-text--default" />
+    <Story id="components-inputs-text--label" />
+    <Story id="components-inputs-text--disabled" />
+    <Story id="components-inputs-text--required" />
+    <Story id="components-inputs-text--read-only" />
+    <Story id="components-inputs-text--description" />
+</Canvas>
+
+<Canvas isColumn={true}>
+    <Story id="components-inputs-text--error-status" />
+    <Story id="components-inputs-text--error-status-and-message" />
+</Canvas>
+
+<Canvas isColumn={true}>
+    <Story id="components-inputs-text--icon-after" />
+    <Story id="components-inputs-text--icon-before" />
+    <Story id="components-inputs-text--icon-before-and-after" />
+</Canvas>
+
+## Параметры
+<ArgsTable of={InputText} />
