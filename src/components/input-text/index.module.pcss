@@ -1,0 +1,124 @@
+.input-text {
+    display: grid;
+    grid-row-gap: 2px;
+    font-family: Lato, sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 20px;
+    width: 100%;
+
+    @media (hover: hover) and (pointer: fine) {
+
+        &__input {
+
+            &:hover:not(&_disabled) {
+                border-color: var(--color-border-brand);
+            }
+        }
+    }
+
+    &__label {
+        display: grid;
+        grid-auto-flow: column;
+        grid-column-gap: 4px;
+        color: var(--color-text-headers);
+        margin-bottom: 6px;
+        justify-content: flex-start;
+
+        @media (hover: hover) and (pointer: fine) {
+
+            &:not(&_disabled) {
+                cursor: pointer;
+            }
+        }
+    }
+
+    &__label-required {
+        color: var(--color-text-error);
+        font-size: 16px;
+        vertical-align: super;
+    }
+
+    &__field {
+        display: grid;
+        grid-auto-flow: column;
+        grid-column-gap: 8px;
+        padding: 9px 11px;
+        margin: 0;
+        border: solid 1px var(--color-border-basic);
+        border-radius: 4px;
+        background-color: var(--color-bg-base);
+        height: 24px;
+        transition: all 200ms linear;
+        fill: var(--color-icon-secondary);
+        grid-template-columns: var(--grid-template-columns, 1fr);
+
+        &:focus-within {
+            box-shadow: 0 0 0 2px var(--color-analytics-blue);
+        }
+
+        &_disabled,
+        &_read-only {
+            background-color: var(--color-bg-base-1);
+            border-color: var(--color-border-basic);
+        }
+
+        &_is-error {
+            border-color: var(--color-border-error);
+        }
+
+        &_before-and-after {
+            --grid-template-columns: auto 1fr auto;
+        }
+
+        &_before {
+            --grid-template-columns: auto 1fr;
+        }
+
+        &_after {
+            --grid-template-columns: 1fr auto;
+        }
+
+        @media screen and (prefers-reduced-motion: reduce) {
+            transition: none;
+        }
+    }
+
+    &__input {
+        font-family: inherit;
+        font-style: inherit;
+        font-weight: inherit;
+        font-size: inherit;
+        line-height: inherit;
+        outline: none;
+        border: none;
+        padding: 0;
+        margin: 0;
+        display: block;
+        background-color: transparent;
+
+        &::placeholder {
+            color: var(--color-text-disabled);
+        }
+
+        &[disabled] {
+            color: var(--color-text-disabled);
+        }
+
+        &[readonly] {
+            color: var(--color-text-basic);
+        }
+    }
+
+    &__error,
+    &__description {
+        color: var(--color-text-error);
+        font-size: 13px;
+        line-height: 16px;
+    }
+
+    &__description {
+        color: var(--color-text-headers);
+    }
+}
