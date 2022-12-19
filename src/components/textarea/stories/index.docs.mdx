@@ -1,0 +1,32 @@
+import { Canvas, Story, StoryTable } from '@storybook/addon-docs';
+
+## InputTextarea
+Компонент `InputTextarea` позволяет легко создавать многострочные поля ввода текста.
+
+## Использование
+Импорт компонента в код.
+```tsx
+import { InputTextarea } from '@wb-tech/ui-react';
+```
+
+Ниже приведены примеры основных состояний описанных в дизайн системе.
+<Canvas isColumn={true}>
+    <Story id="components-inputs-textarea--default" />
+    <Story id="components-inputs-textarea--label" />
+    <Story id="components-inputs-textarea--disabled" />
+    <Story id="components-inputs-textarea--required" />
+    <Story id="components-inputs-textarea--read-only" />
+    <Story id="components-inputs-textarea--description" />
+</Canvas>
+
+<Canvas isColumn={true}>
+    <Story id="components-inputs-textarea--error-status" />
+    <Story id="components-inputs-textarea--error-status-and-message" />
+</Canvas>
+
+## API
+Эта таблица параметров позволяет взаимодействовать с компонентом.
+<Canvas withSource="open">
+    <Story id="components-inputs-textarea--api" />
+</Canvas>
+<StoryTable story="^" />
