@@ -1,0 +1,158 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Default 1`] = `
+<label
+  className="input-textarea"
+>
+  <textarea
+    className="input-textarea__input"
+    name="default"
+    tabIndex={0}
+  />
+</label>
+`;
+
+exports[`Description ReactNode 1`] = `
+<label
+  className="input-textarea"
+>
+  <textarea
+    className="input-textarea__input"
+    name="default"
+    tabIndex={0}
+  />
+  <div>
+    Description ReactNode
+  </div>
+</label>
+`;
+
+exports[`Description string 1`] = `
+<label
+  className="input-textarea"
+>
+  <textarea
+    className="input-textarea__input"
+    name="default"
+    tabIndex={0}
+  />
+  <span
+    className="input-textarea__description"
+  >
+    Description string
+  </span>
+</label>
+`;
+
+exports[`Error & Message ReactNode 1`] = `
+<label
+  className="input-textarea"
+>
+  <div
+    className="input-textarea__label"
+  >
+    Input label
+  </div>
+  <textarea
+    className="input-textarea__input input-textarea__input_is-error"
+    name="default"
+    tabIndex={0}
+  />
+  <div>
+    Custom error
+  </div>
+</label>
+`;
+
+exports[`Error & Message string 1`] = `
+<label
+  className="input-textarea"
+>
+  <div
+    className="input-textarea__label"
+  >
+    Input label
+  </div>
+  <textarea
+    className="input-textarea__input input-textarea__input_is-error"
+    name="default"
+    tabIndex={0}
+  />
+  <span
+    className="input-textarea__error"
+  >
+    Message
+  </span>
+</label>
+`;
+
+exports[`Label 1`] = `
+<label
+  className="input-textarea"
+>
+  <div
+    className="input-textarea__label"
+  >
+    Input label
+  </div>
+  <textarea
+    className="input-textarea__input"
+    name="default"
+    tabIndex={0}
+  />
+</label>
+`;
+
+exports[`Required 1`] = `
+<label
+  className="input-textarea"
+>
+  <textarea
+    className="input-textarea__input"
+    name="default"
+    required={true}
+    tabIndex={0}
+  />
+</label>
+`;
+
+exports[`disabled & readOnly 1`] = `
+<label
+  className="input-textarea"
+>
+  <textarea
+    className="input-textarea__input"
+    disabled={true}
+    name="default"
+    readOnly={true}
+    tabIndex={-1}
+  />
+</label>
+`;
+
+exports[`disabled 1`] = `
+<label
+  className="input-textarea"
+>
+  <textarea
+    className="input-textarea__input"
+    disabled={true}
+    name="default"
+    tabIndex={-1}
+  />
+</label>
+`;
+
+exports[`readOnly 1`] = `
+<label
+  className="input-textarea"
+>
+  <textarea
+    className="input-textarea__input"
+    disabled={true}
+    name="default"
+    readOnly={true}
+    tabIndex={-1}
+  />
+</label>
+`;

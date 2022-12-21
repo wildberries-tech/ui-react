@@ -1,17 +1,15 @@
 import React from 'react';
 import { ComponentMeta, ComponentStory } from '@storybook/react';
 
-import { IconEye } from './../../icons/eye';
-import { IconGlobe } from './../../icons/globe';
 import Docs from './index.docs.mdx';
-import { InputText } from '../index';
+import { InputTextarea } from '../index';
 
-const META: ComponentMeta<typeof InputText> = {
-    title    : 'Inputs/Text',
-    component: InputText,
+const META: ComponentMeta<typeof InputTextarea> = {
+    title    : 'Inputs/Textarea',
+    component: InputTextarea,
     args     : {
-        name       : 'text-input-name',
-        placeholder: 'Placeholder text'
+        name       : 'textarea-field',
+        placeholder: 'Заполни меня полностью...'
     },
     argTypes: {
         className: {
@@ -57,40 +55,19 @@ const META: ComponentMeta<typeof InputText> = {
         },
         design: {
             type: 'figma',
-            url : 'https://www.figma.com/file/c2MtpBedt0dYAz20eepwzX/%E2%9D%96-WB-Partners-DS?node-id=5518%3A111977&t=TgfvRSzjWTadnmp1-0'
+            url : 'https://www.figma.com/file/c2MtpBedt0dYAz20eepwzX/%E2%9D%96-WB-Partners-DS?node-id=810%3A70610&t=c3RPRf1ZvacTDN86-0'
         }
     }
 };
 
 export default META;
 
-const Template: ComponentStory<typeof InputText> = (props) => <InputText {...props} />;
+const Template: ComponentStory<typeof InputTextarea> = (props) => <InputTextarea {...props} />;
 
-export const Sandbox = Template.bind({});
-Sandbox.parameters = {
-    actions: {
-        argTypesRegex: '^on.*'
-    }
-};
+export const API = Template.bind({});
 
 export const Default = Template.bind({});
 Default.args = {};
-
-export const IconAfter = Template.bind({});
-IconAfter.args = {
-    elAfter: <IconEye />
-};
-
-export const IconBefore = Template.bind({});
-IconBefore.args = {
-    elBefore: <IconGlobe />
-};
-
-export const IconBeforeAndAfter = Template.bind({});
-IconBeforeAndAfter.args = {
-    elAfter : <IconEye />,
-    elBefore: <IconGlobe />
-};
 
 export const Label = Template.bind({});
 Label.args = {

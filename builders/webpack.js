@@ -1,5 +1,6 @@
 const { join } = require('path');
-const { name } = require('./../package.json');
+
+const RE_INCLUDE = /@wb-tech(\/|\\{1,2})ui-react/;
 
 module.exports = (config, options = {}) => {
     if(!config.module) {
@@ -25,7 +26,7 @@ module.exports = (config, options = {}) => {
     if(!options.disableTSRule) {
         config.module.rules.push({
             test   : /\.tsx?$/,
-            include: !options.disableInclude ? new RegExp(name) : undefined,
+            include: !options.disableInclude ? RE_INCLUDE : undefined,
             use    : [{
                 loader : require.resolve('ts-loader'),
                 options: {
@@ -39,7 +40,7 @@ module.exports = (config, options = {}) => {
     if(!options.disablePCSSRule) {
         config.module.rules.push({
             test   : /(\.module)?\.p?css$/,
-            include: !options.disableInclude ? new RegExp(name) : undefined,
+            include: !options.disableInclude ? RE_INCLUDE : undefined,
             use    : [{
                 loader : options.useMiniCssExtractPlugin ? options.useMiniCssExtractPlugin.loader : require.resolve('style-loader'),
             }, options.enableCSSTypings ? {
