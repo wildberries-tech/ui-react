@@ -1,5 +1,4 @@
 import React from 'react';
-import { Source } from '@storybook/addon-docs';
 
 // eslint-disable-next-line import/no-webpack-loader-syntax, import/no-unresolved
 import source from '!../index.module.pcss?raw';
@@ -8,6 +7,7 @@ import style from './index.module.pcss';
 
 const COLOR_LINES = source.match(/(--color-*.+): (.*);$/gm);
 const COLORS = COLOR_LINES?.map((item) => {
+    // eslint-disable-next-line @typescript-eslint/prefer-regexp-exec
     const [, name, value] = item.match(/^(--color-*.+): (.*);$/) || [];
 
     return {
@@ -50,5 +50,43 @@ export const Colors = () => {
                 </li>
             ))}
         </ul>
+    );
+};
+
+const SHADOW_LINES = source.match(/(--box-shadow-*.+): (.*);$/gm);
+const SHADOWS = SHADOW_LINES?.map((item) => {
+    // eslint-disable-next-line @typescript-eslint/prefer-regexp-exec
+    const [, name, value] = item.match(/^(--box-shadow-*.+): (.*);$/) || [];
+
+    return {
+        name,
+        value
+    };
+});
+
+export const Shadow = () => {
+    return (
+        <div className={style['story-shadows']}>
+            {SHADOWS?.map((item, index) => (
+                <div
+                    key={index}
+                    className={style['story-shadows__item']}
+                    style={{
+                        boxShadow: item.value
+                    }}
+                >
+                    {item.name.replace('--box-shadow-', '').replace(/-/g, ' ')}
+                    <ul className={style['story-shadows__access-list']}>
+                        <li className={style['story-shadows__access-item']}>
+                            CSS:
+                            <code
+                                className={style['story-shadows__code']}
+                                children={item.name}
+                            />
+                        </li>
+                    </ul>
+                </div>
+            ))}
+        </div>
     );
 };
