@@ -1,0 +1,45 @@
+.splitter {
+    display: grid;
+    height: 100%;
+    width: 100%;
+    box-sizing: border-box;
+
+    &_column {
+        grid-auto-flow: column;
+    }
+
+    &_row {
+        grid-auto-flow: row;
+    }
+
+    &__item {
+        display: grid;
+        border-left: solid 1px rgb(0 0 0 / 10%);
+        padding: 60px 20px 20px;
+        height: 100%;
+        width: 100%;
+        box-sizing: border-box;
+        justify-items: center;
+        justify-content: center;
+        align-items: center;
+        align-content: center;
+        position: relative;
+
+        &[data-title]::before {
+            content: attr(data-title);
+            position: absolute;
+            top: 0;
+            right: 0;
+            left: 0;
+            font-family: monospace;
+            font-size: 20px;
+            line-height: 40px;
+            text-align: center;
+            border-bottom: solid 1px rgb(0 0 0 / 10%);
+        }
+
+        &:first-child {
+            border: none;
+        }
+    }
+}

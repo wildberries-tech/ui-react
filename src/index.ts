@@ -1,4 +1,5 @@
 export { DesignTokens, useDesignTokensNative, useDesignTokens } from './components/design-tokens';
+export { Tag } from './components/tag';
 export { Checkbox } from './components/checkbox';
 export { CheckboxGroup } from './components/checkbox-group';
 export { Loader } from './components/loader';

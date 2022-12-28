@@ -10,7 +10,6 @@ module.exports = {
         files      : '**/*.stories.@(js|jsx|ts|tsx|mdx)'
     }, {
         directory  : '../src/components',
-        titlePrefix: 'Components',
         files      : '**/*.stories.@(js|jsx|ts|tsx|mdx)'
     }, {
         directory  : '../src/hooks',
@@ -18,10 +17,11 @@ module.exports = {
         files      : '**/*.stories.@(js|jsx|ts|tsx|mdx)'
     }],
     addons: [
-        '@storybook/addon-actions',
         '@storybook/addon-viewport',
         '@storybook/addon-docs',
         '@storybook/addon-controls',
+        '@lamo2k123/storybook-addon-component-tokens',
+        '@storybook/addon-actions',
         '@storybook/addon-backgrounds',
         '@storybook/addon-toolbars',
         '@storybook/addon-measure',
