@@ -4,7 +4,7 @@ import { DesignTokens } from '../src';
 
 export const parameters = {
     viewMode: 'docs',
-    layout  : 'centered',
+    layout  : 'fullscreen',
     controls: {
         expanded: true,
         sort    : 'requiredFirst',

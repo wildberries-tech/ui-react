@@ -1,0 +1,79 @@
+.tag {
+    display: grid;
+    grid-auto-flow: column;
+    grid-column-gap: var(--tag-gap, 8px);
+    align-items: center;
+    padding: var(--tag-padding, 4px 8px);
+    font-family: var(--font-family-primary);
+    font-size: var(--tag-font-size, 13px);
+    font-style: normal;
+    font-weight: var(--tag-font-weight, 400);
+    line-height: var(--tag-line-height, 16px);
+    color: var(--tag-color, var(--color-text-basic));
+    background-color: var(--tag-bg-color, var(--color-bg-plate));
+    border-radius: 4px;
+    fill: var(--tag-color);
+    width: fit-content;
+
+    &_size-medium {
+        --tag-padding: 10px 12px;
+    }
+
+    &_size-large {
+        --tag-padding: 12px 16px;
+        --tag-font-size: 16px;
+        --tag-line-height: 20px;
+    }
+
+    &_style-badge-success {
+        --tag-color: var(--color-text-success);
+        --tag-bg-color: var(--color-bg-success);
+        --tag-font-weight: 700;
+    }
+
+    &_style-badge-rollbacked {
+        --tag-color: var(--color-text-secondary);
+        --tag-bg-color: var(--color-bg-plate);
+        --tag-font-weight: 700;
+    }
+
+    &_style-badge-active {
+        --tag-color: var(--color-text-warning);
+        --tag-bg-color: var(--color-bg-warning);
+        --tag-font-weight: 700;
+    }
+
+    &_style-badge-processing {
+        --tag-color: var(--color-text-link);
+        --tag-bg-color: var(--color-components-bg-lightblue);
+        --tag-font-weight: 700;
+    }
+
+    &_style-badge-failed {
+        --tag-color: var(--color-text-error);
+        --tag-bg-color: var(--color-bg-error);
+        --tag-font-weight: 700;
+    }
+
+    &_style-badge-purple {
+        --tag-color: var(--color-text-brand);
+        --tag-bg-color: var(--color-components-bg-lightpurple);
+        --tag-font-weight: 700;
+    }
+
+    &_interactive {
+
+        @media (hover: hover) and (pointer: fine) {
+
+            &:hover {
+                cursor: pointer;
+                opacity: 0.8;
+            }
+        }
+    }
+
+    & > svg {
+        width: 16px;
+        height: 16px;
+    }
+}

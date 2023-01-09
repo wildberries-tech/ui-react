@@ -1,0 +1,42 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Default 1`] = `
+<span
+  className="tag tag_style-tag tag_size-small"
+>
+  Название тега
+</span>
+`;
+
+exports[`Interactive 1`] = `
+<span
+  className="tag tag_style-tag tag_size-small tag_interactive"
+  onClick={[MockFunction]}
+>
+  Название тега
+</span>
+`;
+
+exports[`presetSize 1`] = `
+<span
+  className="tag tag_style-tag tag_size-small"
+>
+  Название тега
+</span>
+`;
+
+exports[`presetSize 2`] = `
+<span
+  className="tag tag_style-tag tag_size-medium"
+>
+  Название тега
+</span>
+`;
+
+exports[`presetSize 3`] = `
+<span
+  className="tag tag_style-tag tag_size-large"
+>
+  Название тега
+</span>
+`;
