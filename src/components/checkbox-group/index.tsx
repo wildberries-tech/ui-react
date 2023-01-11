@@ -3,7 +3,7 @@ import React, { FieldsetHTMLAttributes, ReactNode, useMemo } from 'react';
 import { IStyle, useClassnames } from '../../hooks/use-classnames';
 import style from './index.module.pcss';
 
-export interface IProps extends Pick<FieldsetHTMLAttributes<HTMLFieldSetElement>, 'disabled'> {
+export interface IProps extends Pick<FieldsetHTMLAttributes<HTMLFieldSetElement>, 'disabled' | 'id'> {
     children: ReactNode,
     className?: string | IStyle,
     legend?: ReactNode,
@@ -26,6 +26,7 @@ export const CheckboxGroup = ({ direction = 'row', ...props }: IProps) => {
 
     return (
         <fieldset
+            id={props.id}
             disabled={props.disabled}
             className={cn('checkbox-group', {
                 [`checkbox-group_${direction}`]: direction
