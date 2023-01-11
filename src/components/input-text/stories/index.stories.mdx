@@ -1,0 +1,294 @@
+import { Canvas, Meta, Story, StoryTable, Heading, Description } from '@storybook/addon-docs';
+
+import { Splitter } from '../../../components-stories/splitter';
+import { IconEye } from './../../icons/eye';
+import { IconGlobe } from './../../icons/globe';
+import { InputText } from './../';
+
+<Meta
+    title="Components/Inputs/Text"
+    component={InputText}
+    args={{
+        name       : 'text-input-name',
+        placeholder: 'Placeholder text'
+    }}
+    argTypes={{
+        className: {
+            control: 'text'
+        },
+        elError: {
+            control: 'text'
+        },
+        elDescription: {
+            control: 'text'
+        },
+        label: {
+            control: 'text'
+        },
+        onChange: {
+            control: false,
+            table  : {
+                category: 'Events'
+            }
+        },
+        onBlur: {
+            control: false,
+            table  : {
+                category: 'Events'
+            }
+        },
+        onFocus: {
+            control: false,
+            table  : {
+                category: 'Events'
+            }
+        },
+        onClick: {
+            control: false,
+            table  : {
+                category: 'Events'
+            }
+        }
+    }}
+    parameters={{
+        cssProps: {
+            values : {
+                '--input-text-border-color-hover': {
+                    defaultValue: 'var(--color-border-brand)',
+                    selector    : '#input-text-css-api',
+                    value       : '#3a0078',
+                    description : 'Цвет бордера при ховере'
+                },
+                '--input-text-label-color': {
+                    defaultValue: 'var(--color-text-headers)',
+                    selector    : '#input-text-css-api',
+                    value       : '#4e4e53',
+                    description : 'Цвет текста лейбла'
+                },
+                '--input-text-label-required-color': {
+                    defaultValue: 'var(--color-text-error)',
+                    selector    : '#input-text-css-api',
+                    value       : '#f96666',
+                    description : 'Цвет символа указывающего на обязательность поля'
+                },
+                '--input-text-border-color': {
+                    defaultValue: 'var(--color-border-basic)',
+                    selector    : '#input-text-css-api',
+                    value       : '#d1cfd7',
+                    description : 'Цвет бордера'
+                },
+                '--input-text-bg-color': {
+                    defaultValue: 'var(--color-bg-base)',
+                    selector    : '#input-text-css-api',
+                    value       : '#ffffff',
+                    description : 'Цвет фона'
+                },
+                '--color-analytics-blue': {
+                    defaultValue: 'var(--color-bg-base)',
+                    selector    : '#input-text-css-api',
+                    value       : '#5067de',
+                    description : 'Цвет в состояние фокуса'
+                },
+                '--input-text-bg-color-disabled': {
+                    defaultValue: 'var(--color-bg-base-1)',
+                    selector    : '#input-text-css-api',
+                    value       : '#f7f7fa',
+                    description : 'Цвет фона в состояние disabled и readonly'
+                },
+                '--input-text-border-color-disabled': {
+                    defaultValue: 'var(--color-border-basic)',
+                    selector    : '#input-text-css-api',
+                    value       : '#d1cfd7',
+                    description : 'Цвет бордера в состояние disabled и readonly'
+                },
+                '--input-text-border-color-error': {
+                    defaultValue: 'var(--color-border-error)',
+                    selector    : '#input-text-css-api',
+                    value       : '#f96666',
+                    description : 'Цвет бордера в состояние error'
+                },
+                '--input-text-color-placeholder': {
+                    defaultValue: 'var(--color-text-disabled)',
+                    selector    : '#input-text-css-api',
+                    value       : '#b8b6bf',
+                    description : 'Цвет текста плейсхолдера'
+                },
+                '--input-text-color-disabled': {
+                    defaultValue: 'var(--color-text-disabled)',
+                    selector    : '#input-text-css-api',
+                    value       : '#b8b6bf',
+                    description : 'Цвет текста в состояние disabled'
+                },
+                '--input-text-color-readonly': {
+                    defaultValue: 'var(--color-text-basic)',
+                    selector    : '#input-text-css-api',
+                    value       : '#000000',
+                    description : 'Цвет текста в состояние readonly'
+                },
+                '--input-text-color-error': {
+                    defaultValue: 'var(--color-text-error)',
+                    selector    : '#input-text-css-api',
+                    value       : '#f96666',
+                    description : 'Цвет текста ошибки'
+                },
+                '--input-text-color-description': {
+                    defaultValue: 'var(--color-text-headers)',
+                    selector    : '#input-text-css-api',
+                    value       : '#4e4e53',
+                    description : 'Цвет текста описания'
+                }
+            }
+        },
+        design: {
+            type: 'figma',
+            url : 'https://www.figma.com/file/c2MtpBedt0dYAz20eepwzX/%E2%9D%96-WB-Partners-DS?node-id=5518%3A111977&t=TgfvRSzjWTadnmp1-0'
+        }
+    }}
+/>
+
+export const Template = (args) => <InputText {...args } />
+
+<Story
+    name="API"
+    parameters={{
+        actions: {
+            argTypesRegex: '^on.*'
+        }
+    }}
+>
+    {(props) => (
+        <Splitter
+            titles={[
+                'Controls',
+                'CSS Controls'
+            ]}
+        >
+            <InputText {...props} />
+            <InputText {...props} id="input-text-css-api" />
+        </Splitter>
+    )}
+</Story>
+
+<Heading>InputText</Heading>
+<Description
+    markdown="
+        Компонент `InputText` предназначен для строковых данных и поддерживает нативные типы `email`, `password`, `search`, `text`, `tel` и `url` соответствующий дизайну и его состояния.
+        Имеет максимально нативный API для беспроблемной работы c библиотеками управления формами такие как `react-hook-form`, `formik`, `final-form` и т.д.
+    "
+/>
+
+<Heading>Использование</Heading>
+<Description>Импорт компонента в код.</Description>
+
+```tsx
+import { InputText } from '@wb-tech/ui-react';
+```
+
+<Heading>Примеры</Heading>
+<Description>Ниже приведены примеры состояний описанных в дизайн системе.</Description>
+
+<Canvas isColumn={true}>
+    <Story
+        name="default-hidden-story"
+        children={Template.bind({})}
+    />
+    <Story
+        name="label-hidden-story"
+        children={Template.bind({})}
+        args={{
+            label: 'Field label'
+        }}
+    />
+    <Story
+        name="disabled-hidden-story"
+        children={Template.bind({})}
+        args={{
+            label   : 'Field label',
+            disabled: true
+        }}
+    />
+    <Story
+        name="required-hidden-story"
+        children={Template.bind({})}
+        args={{
+            label   : 'Field label',
+            required: true
+        }}
+    />
+    <Story
+        name="read-only-hidden-story"
+        children={Template.bind({})}
+        args={{
+            label   : 'Field label',
+            readOnly: true,
+            value   : 'Read only value'
+        }}
+    />
+    <Story
+        name="description-hidden-story"
+        children={Template.bind({})}
+        args={{
+            label        : 'Field label',
+            elDescription: 'Description text'
+        }}
+    />
+</Canvas>
+
+<Canvas isColumn={true}>
+    <Story
+        name="error-status-hidden-story"
+        children={Template.bind({})}
+        args={{
+            label  : 'Field label',
+            isError: true,
+            value  : 'Read only value'
+        }}
+    />
+    <Story
+        name="error-status-and-message-hidden-story"
+        children={Template.bind({})}
+        args={{
+            label  : 'Field label',
+            isError: true,
+            elError: 'Error message text',
+            value  : 'Read only value'
+        }}
+    />
+</Canvas>
+
+<Canvas isColumn={true}>
+    <Story
+        name="icon-after-hidden-story"
+        children={Template.bind({})}
+        args={{
+            elAfter: <IconEye />
+        }}
+    />
+    <Story
+        name="icon-before-hidden-story"
+        children={Template.bind({})}
+        args={{
+            elBefore: <IconGlobe />
+        }}
+    />
+    <Story
+        name="icon-before-and-after-hidden-story"
+        children={Template.bind({})}
+        args={{
+            elAfter : <IconEye />,
+            elBefore: <IconGlobe />
+        }}
+    />
+</Canvas>
+
+<Heading>API</Heading>
+<Description>Эта таблица параметров позволяет взаимодействовать с компонентом.</Description>
+
+<Canvas withSource="open">
+    <Story
+        name="interactive-hidden-story"
+        children={Template.bind({})}
+    />
+</Canvas>
+
+<StoryTable story="interactive-hidden-story" />

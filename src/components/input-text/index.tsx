@@ -81,6 +81,7 @@ export const InputText = forwardRef<HTMLInputElement | null, IProps>(({ tabIndex
     return (
         <label
             className={cn('input-text')}
+            id={props.id}
         >
             {elLabel}
             <div
@@ -96,7 +97,7 @@ export const InputText = forwardRef<HTMLInputElement | null, IProps>(({ tabIndex
                 {props.elBefore}
                 <input
                     ref={ref}
-                    id={props.id}
+                    id={props.id ? `${props.id}-input` : undefined}
                     name={props.name}
                     type={type}
                     value={props.value}
