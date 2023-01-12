@@ -1,7 +1,7 @@
 .checkbox {
     display: grid;
     grid-gap: 4px 14px;
-    color: var(--color-label);
+    color: var(--checkbox-label-color);
     font-family: Lato, sans-serif;
     font-style: normal;
     font-weight: 400;
@@ -10,11 +10,12 @@
     grid-auto-flow: column;
     justify-content: flex-start;
 
-    --color-label: var(--color-text-basic);
     --color-description: var(--color-text-secondary);
+    --checkbox-label-color: var(--color-text-basic);
 
     &_disabled {
-        --color-label: var(--color-text-disabled);
+        color: var(--checkbox-label-color);
+
         --color-description: var(--color-text-disabled);
     }
 
