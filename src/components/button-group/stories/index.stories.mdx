@@ -1,0 +1,135 @@
+import { Canvas, Meta, Story, StoryTable, Heading, Description } from '@storybook/addon-docs';
+
+import { Splitter } from '../../../components-stories/splitter';
+import { Button } from '../../button/index';
+import { ButtonGroup } from './../';
+
+<Meta
+    title="Components/Buttons/Button Group"
+    component={ButtonGroup}
+    subcomponents={{
+        Button
+    }}
+    args={{
+        children: [
+            <Button key="1" presetStyle="primary" children="Send" />,
+            <Button key="2" presetStyle="default" children="Cancel" />
+        ]
+    }}
+    argTypes={{
+        className: {
+            control: 'text'
+        },
+        children: {
+            control: 'text'
+        }
+    }}
+    parameters={{
+        cssProps: {
+            values : {
+                '--button-group-custom-gap': {
+                    defaultValue: 'undefined',
+                    selector    : '#button-group-css-api',
+                    value       : '16px',
+                    description : 'Расстояние между дочерними элементами'
+                }
+            }
+        },
+        design: {
+            type: 'figma',
+            url : 'https://www.figma.com/file/c2MtpBedt0dYAz20eepwzX/%E2%9D%96-WB-Partners-DS?node-id=3250%3A112858&t=kP2lzF6gosdgFD3W-0'
+        }
+    }}
+/>
+
+export const Template = (args) => <ButtonGroup {...args } />
+
+<Story
+    name="API"
+    parameters={{
+        actions: {
+            argTypesRegex: '^on.*'
+        }
+    }}
+>
+    {(props) => (
+        <Splitter
+            titles={[
+                'Controls',
+                'CSS Controls'
+            ]}
+        >
+            <ButtonGroup {...props} />
+            <ButtonGroup {...props} id="button-group-css-api" />
+        </Splitter>
+    )}
+</Story>
+
+<Heading>ButtonGroup</Heading>
+<Description>Компонент формирования группы кнопок соответствующей дизайну.</Description>
+
+<Heading>Использование</Heading>
+<Description>Импорт компонента в код.</Description>
+
+```tsx
+import { ButtonGroup } from '@wb-tech/ui-react';
+```
+
+<Heading>Примеры</Heading>
+<Description>Ниже приведены примеры состояний описанных в дизайн системе.</Description>
+
+<Canvas>
+    <Story
+        name="column-desktop-hidden-story"
+        children={Template.bind({})}
+        args={{
+            direction  : 'column',
+            presetStyle: 'desktop'
+        }}
+    />
+</Canvas>
+
+<Canvas>
+    <Story
+        name="column-mobile-hidden-story"
+        children={Template.bind({})}
+        args={{
+            direction  : 'column',
+            presetStyle: 'mobile'
+        }}
+    />
+</Canvas>
+
+<Canvas>
+    <Story
+        name="row-desktop-hidden-story"
+        children={Template.bind({})}
+        args={{
+            direction  : 'row',
+            presetStyle: 'desktop'
+        }}
+    />
+</Canvas>
+
+<Canvas>
+    <Story
+        name="row-mobile-hidden-story"
+        children={Template.bind({})}
+        args={{
+            direction  : 'row',
+            presetStyle: 'mobile'
+        }}
+    />
+</Canvas>
+
+<Heading>API</Heading>
+<Description>Эта таблица параметров позволяет взаимодействовать с компонентом.</Description>
+
+<Canvas withSource="open">
+    <Story
+        name="interactive-hidden-story"
+        children={Template.bind({})}
+    />
+</Canvas>
+
+<StoryTable story="interactive-hidden-story" />

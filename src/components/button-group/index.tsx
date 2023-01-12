@@ -4,6 +4,7 @@ import { IStyle, useClassnames } from './../../hooks/use-classnames';
 import style from './index.module.pcss';
 
 export interface IProps {
+    id?: string,
     className?: IStyle | string,
     direction?: 'row' | 'column',
     presetStyle?: 'desktop' | 'mobile',
@@ -15,6 +16,7 @@ export const ButtonGroup = ({ direction = 'column', tagName = 'div', presetStyle
     const cn = useClassnames<typeof style>(style, props.className);
 
     return createElement(tagName || 'div', {
+        id       : props.id,
         children : props.children,
         className: cn('button-group', {
             [`button-group_${direction}`]  : direction,

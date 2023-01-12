@@ -1,8 +1,10 @@
 .loader {
     display: block;
-    animation: rotate 2s linear infinite;
-    width: var(--size, 20px);
-    height: var(--size, 20px);
+    animation: rotate var(--loader-animation-speed, 2s) linear infinite;
+    width: var(--loader-size-custom, var(--size));
+    height: var(--loader-size-custom, var(--size));
+
+    --loader-animation-speed: 2s;
 
     &_small {
         --size: 20px;
@@ -21,8 +23,8 @@
     }
 
     &__circle {
-        stroke: var(--color, #fff);
-        animation: dash 1.5s ease-in-out infinite;
+        stroke: var(--loader-color-custom, var(--color));
+        animation: dash var(--loader-animation-speed, 2s) ease-in-out infinite;
 
         &_white {
             --color: var(--color-icon-inverse);

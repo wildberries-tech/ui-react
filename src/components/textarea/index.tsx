@@ -3,7 +3,7 @@ import React, { forwardRef, TextareaHTMLAttributes, ReactNode, useMemo } from 'r
 import { IStyle, useClassnames } from '../../hooks/use-classnames';
 import style from './index.module.pcss';
 
-type TAttributes = 'id' | 'onChange' | 'onClick' | 'onBlur' | 'onFocus' | 'autoFocus' | 'tabIndex' | 'disabled' | 'maxLength' | 'minLength' | 'placeholder' | 'readOnly' | 'required' | 'autoComplete' | 'inputMode' | 'title' | 'autoCorrect' | 'cols' | 'rows' | 'wrap';
+type TAttributes = 'onChange' | 'onClick' | 'onBlur' | 'onFocus' | 'autoFocus' | 'tabIndex' | 'disabled' | 'maxLength' | 'minLength' | 'placeholder' | 'readOnly' | 'required' | 'autoComplete' | 'inputMode' | 'title' | 'autoCorrect' | 'cols' | 'rows' | 'wrap';
 
 export interface IProps extends Pick<TextareaHTMLAttributes<HTMLTextAreaElement>, TAttributes> {
     name: string,
@@ -13,7 +13,8 @@ export interface IProps extends Pick<TextareaHTMLAttributes<HTMLTextAreaElement>
     defaultValue?: string,
     isError?: boolean,
     elError?: ReactNode,
-    elDescription?: ReactNode
+    elDescription?: ReactNode,
+    id?: string
 }
 
 export const InputTextarea = forwardRef<HTMLTextAreaElement | null, IProps>(({ tabIndex = 0, ...props }, ref) => {
@@ -76,11 +77,13 @@ export const InputTextarea = forwardRef<HTMLTextAreaElement | null, IProps>(({ t
     }, [props.elDescription]);
 
     return (
-        <label className={cn('input-textarea')}>
+        <label
+            id={props.id}
+            className={cn('input-textarea')}
+        >
             {elLabel}
             <textarea
                 ref={ref}
-                id={props.id}
                 name={props.name}
                 value={props.value}
                 defaultValue={props.defaultValue}

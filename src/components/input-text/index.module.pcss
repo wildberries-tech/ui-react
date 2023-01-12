@@ -8,12 +8,27 @@
     line-height: 20px;
     width: 100%;
 
+    --input-text-border-color-hover: var(--color-border-brand);
+    --input-text-border-color: var(--color-border-basic);
+    --input-text-bg-color: var(--color-bg-base);
+    --input-text-bg-color-disabled: var(--color-bg-base-1);
+    --input-text-border-color-disabled: var(--color-border-basic);
+    --input-text-border-color-error: var(--color-border-error);
+    --input-text-focus-color: var(--color-analytics-blue);
+    --input-text-label-color: var(--color-text-headers);
+    --input-text-label-required-color: var(--color-text-error);
+    --input-text-color-placeholder: var(--color-text-disabled);
+    --input-text-color-disabled: var(--color-text-disabled);
+    --input-text-color-readonly: var(--color-text-basic);
+    --input-text-color-error: var(--color-text-error);
+    --input-text-color-description: var(--color-text-headers);
+
     @media (hover: hover) and (pointer: fine) {
 
-        &__input {
+        &__field {
 
             &:hover:not(&_disabled) {
-                border-color: var(--color-border-brand);
+                border-color: var(--input-text-border-color-hover);
             }
         }
     }
@@ -22,7 +37,7 @@
         display: grid;
         grid-auto-flow: column;
         grid-column-gap: 4px;
-        color: var(--color-text-headers);
+        color: var(--input-text-label-color);
         margin-bottom: 6px;
         justify-content: flex-start;
 
@@ -35,7 +50,7 @@
     }
 
     &__label-required {
-        color: var(--color-text-error);
+        color: var(--input-text-label-required-color);
         font-size: 16px;
         vertical-align: super;
     }
@@ -46,26 +61,26 @@
         grid-column-gap: 8px;
         padding: 9px 11px;
         margin: 0;
-        border: solid 1px var(--color-border-basic);
+        border: solid 1px var(--input-text-border-color);
         border-radius: 4px;
-        background-color: var(--color-bg-base);
+        background-color: var(--input-text-bg-color);
         height: 24px;
         transition: all 200ms linear;
         fill: var(--color-icon-secondary);
         grid-template-columns: var(--grid-template-columns, 1fr);
 
         &:focus-within {
-            box-shadow: 0 0 0 2px var(--color-analytics-blue);
+            box-shadow: 0 0 0 2px var(--input-text-focus-color);
         }
 
         &_disabled,
         &_read-only {
-            background-color: var(--color-bg-base-1);
-            border-color: var(--color-border-basic);
+            background-color: var(--input-text-bg-color-disabled);
+            border-color: var(--input-text-border-color-disabled);
         }
 
         &_is-error {
-            border-color: var(--color-border-error);
+            border-color: var(--input-text-border-color-error);
         }
 
         &_before-and-after {
@@ -99,26 +114,26 @@
         background-color: transparent;
 
         &::placeholder {
-            color: var(--color-text-disabled);
+            color: var(--input-text-color-placeholder);
         }
 
         &[disabled] {
-            color: var(--color-text-disabled);
+            color: var(--input-text-color-disabled);
         }
 
         &[readonly] {
-            color: var(--color-text-basic);
+            color: var(--input-text-color-readonly);
         }
     }
 
     &__error,
     &__description {
-        color: var(--color-text-error);
+        color: var(--input-text-color-error);
         font-size: 13px;
         line-height: 16px;
     }
 
     &__description {
-        color: var(--color-text-headers);
+        color: var(--input-text-color-description);
     }
 }

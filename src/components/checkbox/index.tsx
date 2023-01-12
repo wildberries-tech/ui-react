@@ -31,6 +31,7 @@ export const Checkbox = forwardRef<HTMLInputElement | null, IProps>(({ tabIndex 
 
     return (
         <label
+            id={props.id}
             className={cn('checkbox', {
                 'checkbox_disabled'   : props.disabled,
                 'checkbox_description': props.description
@@ -38,7 +39,7 @@ export const Checkbox = forwardRef<HTMLInputElement | null, IProps>(({ tabIndex 
         >
             <input
                 ref={ref}
-                id={props.id}
+                id={props.id ? `${props.id}-input` : undefined}
                 name={props.name}
                 role="checkbox"
                 type="checkbox"

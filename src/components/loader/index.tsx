@@ -4,6 +4,7 @@ import { IStyle, useClassnames } from './../../hooks/use-classnames';
 import style from './index.module.pcss';
 
 export interface IProps {
+    id?: string,
     className?: IStyle | string,
     presetSize?: 'small' | 'medium' | 'large' | 'button',
     presetStyle?: 'white' | 'rich-grey' | 'grey' | 'red' | 'light-green' | 'dark-purple'
@@ -14,6 +15,7 @@ export const Loader = ({ presetSize = 'medium', presetStyle = 'white', ...props 
 
     return (
         <svg
+            id={props.id}
             viewBox="0 0 50 50"
             className={cn('loader', {
                 [`loader_${presetSize}`]: presetSize

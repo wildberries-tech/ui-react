@@ -4,7 +4,12 @@
     border: none;
     display: flex;
     width: 100%;
-    gap: 8px 32px;
+    gap: var(--checkbox-group-gap);
+
+    --checkbox-group-gap: 8px 32px;
+    --checkbox-group-legend-gap: 16px;
+    --checkbox-group-legend-color: var(--color-text-headers);
+    --checkbox-group-legend-font-size: 16px;
 
     &_row {
         flex-wrap: wrap;
@@ -17,13 +22,13 @@
     &__legend {
         width: 100%;
         padding: 0;
-        margin: 0 0 16px;
+        margin: 0 0 var(--checkbox-group-legend-gap);
         font-family: Lato, sans-serif;
         font-style: normal;
         font-weight: 400;
-        font-size: 16px;
+        font-size: var(--checkbox-group-legend-font-size);
         line-height: 20px;
-        color: var(--color-text-headers);
+        color: var(--checkbox-group-legend-color);
         flex-grow: 1;
     }
 }
