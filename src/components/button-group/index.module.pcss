@@ -1,7 +1,7 @@
 .button-group {
     display: grid;
     grid-auto-flow: var(--grid-flow, row);
-    grid-gap: var(--grid-gap, 16px);
+    grid-gap: var(--button-group-custom-gap, var(--grid-gap));
 
     &_row {
         --grid-flow: row;

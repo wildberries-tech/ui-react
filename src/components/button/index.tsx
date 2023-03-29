@@ -5,7 +5,7 @@ import { IStyle, useClassnames } from './../../hooks/use-classnames';
 import { Loader } from './../loader';
 import style from './index.module.pcss';
 
-type TAttributes = 'type' | 'tabIndex' | 'onFocus' | 'onClick' | 'children' | 'accessKey' | 'disabled';
+type TAttributes = 'id' | 'type' | 'tabIndex' | 'onFocus' | 'onClick' | 'children' | 'accessKey' | 'disabled';
 
 export interface IProps extends Pick<ButtonHTMLAttributes<HTMLButtonElement>, TAttributes> {
     className?: IStyle | string,
@@ -52,6 +52,7 @@ export const Button = ({ presetSize = 'medium', presetStyle = 'default', type = 
 
     return (
         <button
+            id={props.id}
             type={type}
             disabled={props.isLoading || props.disabled}
             tabIndex={props.isLoading || props.disabled ? -1 : props.tabIndex}

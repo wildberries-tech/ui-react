@@ -7,6 +7,8 @@ export { Button } from './components/button';
 export { ButtonGroup } from './components/button-group';
 export { InputText } from './components/input-text';
 export { InputTextarea } from './components/textarea';
+export { NavItem } from './components/nav-item';
+
 export { IconBarChart } from './components/icons/bar-chart';
 export { IconBook } from './components/icons/book';
 export { IconBookmark } from './components/icons/bookmark';
