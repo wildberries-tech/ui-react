@@ -1,4 +1,4 @@
-import React, { useMemo, AnchorHTMLAttributes } from 'react';
+import React, { useMemo, AnchorHTMLAttributes, forwardRef } from 'react';
 
 import { IStyle, useClassnames } from '../../hooks/use-classnames';
 import style from './index.module.pcss';
@@ -11,7 +11,7 @@ export interface IProps extends Pick<AnchorHTMLAttributes<HTMLAnchorElement>, TP
     isDisabled?: boolean
 }
 
-export const NavItem = ({ className, isDisabled, presetStyle = 'default', ...props }: IProps) => {
+export const NavItem = forwardRef<HTMLAnchorElement | null, IProps>(({ className, isDisabled, presetStyle = 'default', ...props }, ref) => {
     const cn = useClassnames(style, className);
 
     const title = useMemo(() => {
@@ -26,6 +26,7 @@ export const NavItem = ({ className, isDisabled, presetStyle = 'default', ...pro
 
     return (
         <a
+            ref={ref}
             {...props}
             className={cn('nav-item', {
                 [`nav-item_preset-${presetStyle}`]: presetStyle,
@@ -34,4 +35,4 @@ export const NavItem = ({ className, isDisabled, presetStyle = 'default', ...pro
             title={title}
         />
     );
-};
+});
