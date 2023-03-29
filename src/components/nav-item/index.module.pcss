@@ -1,0 +1,55 @@
+.nav-item {
+    font-family: var(--font-family-primary);
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 20px;
+    color: var(--local-color-text);
+    display: grid;
+    grid-auto-flow: column;
+    grid-column-gap: 6px;
+    border-radius: 8px;
+    background-color: var(--local-color-background);
+    transition: all 150ms linear;
+    text-decoration: none;
+    padding: 8px 12px;
+
+    --local-color-text: var(--color-text-basic);
+    --local-color-text-disabled: var(--color-text-disabled);
+    --local-color-background: var(--color-bg-base);
+    --local-color-background-hover: var(--color-bg-plate);
+    --local-color-background-active: var(--color-bg-plate-1);
+    --local-color-background-disabled: var(--color-bg-base);
+    --local-color-focus: var(--color-border-focused);
+
+    &_preset-active {
+        --local-color-text: var(--color-text-brand-1);
+        --local-color-background: var(--color-components-bg-mainmenu-active);
+        --local-color-background-hover: var(--color-components-bg-mainmenu-active-hover);
+        --local-color-background-active: var(--color-components-bg-mainmenu-active-pressed);
+        --local-color-background-disabled: var(--color-components-bg-mainmenu-active-disabled);
+    }
+
+    @media (hover: hover) and (pointer: fine) {
+
+        &:hover:not(&_disabled) {
+            cursor: pointer;
+
+            --local-color-background: var(--local-color-background-hover);
+        }
+    }
+
+    &:focus:not(&_disabled) {
+        box-shadow: 0 0 0 2px var(--local-color-focus);
+    }
+
+    &:active:not(&_disabled) {
+        --local-color-background: var(--local-color-background-active);
+    }
+
+    &_disabled {
+        cursor: default;
+
+        --local-color-text: var(--color-text-disabled);
+        --local-color-background: var(--local-color-background-disabled);
+    }
+}
