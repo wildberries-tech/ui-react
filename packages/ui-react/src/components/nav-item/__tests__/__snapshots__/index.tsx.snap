@@ -1,0 +1,42 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Active 1`] = `
+<a
+  className="nav-item nav-item_preset-active"
+  href="#active"
+  title="Тайтл"
+>
+  Элемент
+</a>
+`;
+
+exports[`Default 1`] = `
+<a
+  className="nav-item nav-item_preset-default"
+  href="#"
+  title="Элемент"
+>
+  Элемент
+</a>
+`;
+
+exports[`Disable 1`] = `
+<a
+  className="nav-item nav-item_preset-active nav-item_disabled"
+  href="#active"
+  title="Тайтл"
+>
+  Элемент
+</a>
+`;
+
+exports[`Download 1`] = `
+<a
+  className="nav-item nav-item_preset-active"
+  download={true}
+  href="#active"
+  title="Тайтл"
+>
+  Элемент
+</a>
+`;

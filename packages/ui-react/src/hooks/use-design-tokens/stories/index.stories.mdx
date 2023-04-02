@@ -1,0 +1,41 @@
+import { Meta } from '@storybook/blocks';
+
+<Meta
+    title="Hooks/useDesignTokens"
+/>
+
+# useDesignTokens
+Хук `useDesignTokens` - это пользовательский хук в React, который предоставляет доступ к переменным дизайн-токенов, определенным в рамках дизайн-системы проекта.
+Использование хука позволяет упростить доступ к значениям дизайн-токенов в проекте и повысить согласованность дизайна.
+
+Содержит параметры: цветовая палитра, типографика, скругления, тени.
+
+## Использование
+Импорт хука в код.
+```tsx
+import { useDesignTokens } from '@wb-tech/ui-react';
+```
+
+Хук возвращает объект с атрибутами для использования.
+```tsx
+import React from 'react';
+import { render } from 'react-dom';
+
+import { useDesignTokens } from '@wb-tech/ui-react';
+
+const App = () => {
+    const attrs = useDesignTokens();
+
+    return (
+        <div {...attrs}>
+            <YourAppCode />
+        </div>
+    );
+}
+
+render(<App />, document.getElementById('root'));
+```
+
+[Палитра](?path=/docs/native-design-tokens-палитра--документация#палитра)
+
+[Тени](?path=/docs/native-design-tokens-тени--документация#тени)

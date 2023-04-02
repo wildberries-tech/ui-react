@@ -1,0 +1,31 @@
+.gallery {
+
+    &__code {
+        position: sticky;
+        z-index: 2;
+        top: 10px;
+    }
+
+    &__input {
+        margin-bottom: 20px;
+    }
+
+    &__icon {
+
+        &_selected {
+            /* stylelint-disable-next-line declaration-no-important */
+            width: 30px !important;
+            /* stylelint-disable-next-line declaration-no-important */
+            height: 30px !important;
+            fill: var(--color-analytics-pink);
+            transition: all 150ms linear;
+        }
+
+        @media (hover: hover) and (pointer: fine) {
+
+            &:hover {
+                cursor: pointer;
+            }
+        }
+    }
+}

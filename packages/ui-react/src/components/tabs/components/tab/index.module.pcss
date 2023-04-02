@@ -1,0 +1,165 @@
+.tab {
+    display: grid;
+    padding: 10px 24px;
+    grid-auto-flow: column;
+    grid-column-gap: 8px;
+    background-color: var(--tab-background-color);
+    font-family: var(--font-family-primary);
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 20px;
+    color: var(--tab-color);
+    transition: all 150ms linear;
+    position: relative;
+
+    @media screen and (prefers-reduced-motion: reduce) {
+        transition: none;
+    }
+
+    @media (hover: hover) and (pointer: fine) {
+
+        &:hover:not(&_disabled) {
+            cursor: pointer;
+
+            --tab-background-color: var(--tab-background-color-hover);
+            --tab-color: var(--tab-color-hover);
+
+            &:is(^&_selected) {
+                --tab-background-color: var(--tab-background-color-hover-selected);
+                --tab-color: var(--tab-color-selected-hover);
+            }
+        }
+    }
+
+    &_preset-pane {
+        border: 1px solid var(--color-border-basic);
+        border-bottom: none;
+
+        --tab-background-color: var(--color-bg-base-1);
+        --tab-background-color-selected: var(--color-bg-base);
+        --tab-background-color-active: var(--color-bg-plate);
+        --tab-background-color-hover: var(--color-bg-plate);
+        --tab-background-color-hover-selected: var(--color-bg-plate);
+        --tab-color: var(--color-text-basic);
+        --tab-color-hover: var(--color-text-basic);
+        --tab-color-active: var(--color-text-basic);
+        --tab-color-selected: var(--color-text-basic);
+        --tab-color-selected-hover: var(--color-text-basic);
+        --tab-color-disabled: rgba(0, 0, 0, 0.4);
+        --tab-focus-color: var(--color-analytics-cyan);
+
+        &:first-child {
+            border-top-left-radius: 4px;
+        }
+
+        &:last-child {
+            border-top-right-radius: 4px;
+        }
+
+        & + & {
+            border-left: none;
+        }
+
+        /* stylelint-disable selector-class-pattern */
+        &^&_selected::after {
+            content: "";
+            display: block;
+            position: absolute;
+            height: 3px;
+            left: 0;
+            right: 0;
+            bottom: -1px;
+            background-color: var(--tab-background-color);
+            z-index: 2;
+            transition: all 150ms linear;
+
+            @media screen and (prefers-reduced-motion: reduce) {
+                transition: none;
+            }
+        }
+        /* stylelint-enable */
+    }
+
+    &_preset-page {
+        --tab-background-color: var(--color-bg-base-1);
+        --tab-background-color-hover: var(--color-bg-plate);
+        --tab-background-color-active: var(--color-bg-brand-2);
+        --tab-background-color-selected: var(--color-bg-brand-2);
+        --tab-background-color-hover-selected: var(--color-bg-brand-2);
+        --tab-color: var(--color-text-basic);
+        --tab-color-hover: var(--color-text-basic);
+        --tab-color-active: var(--color-text-inverse);
+        --tab-color-selected: var(--color-text-inverse);
+        --tab-color-selected-hover: var(--color-text-inverse);
+        --tab-color-disabled: rgba(0, 0, 0, 0.4);
+        --tab-focus-color: var(--color-analytics-cyan);
+
+        &:first-child {
+            border-top-left-radius: 4px;
+            border-bottom-left-radius: 4px;
+        }
+
+        &:last-child {
+            border-top-right-radius: 4px;
+            border-bottom-right-radius: 4px;
+        }
+
+        & + & {
+            border-left: solid 1px var(--color-border-basic);
+        }
+    }
+
+    &_preset-section {
+        font-size: 18px;
+        padding: 12px 32px 12px 0;
+        border-bottom: solid 1px var(--color-border-basic);
+
+        --tab-background-color: transparent;
+        --tab-background-color-hover: transparent;
+        --tab-background-color-active: transparent;
+        --tab-background-color-selected: transparent;
+        --tab-background-color-hover-selected: transparent;
+        --tab-color: var(--color-text-basic);
+        --tab-color-hover: var(--color-text-brand-1);
+        --tab-color-active: var(--color-bg-accent);
+        --tab-color-selected: var(--color-text-basic);
+        --tab-color-selected-hover: var(--color-text-basic);
+        --tab-color-disabled: var(--color-text-secondary);
+        --tab-focus-color: var(--color-analytics-cyan);
+
+        /* stylelint-disable selector-class-pattern */
+        &^&_selected::after {
+            content: "";
+            display: block;
+            position: absolute;
+            height: 2px;
+            left: 0;
+            right: 32px;
+            bottom: -1px;
+            background-color: var(--color-bg-accent);
+            z-index: 2;
+        }
+        /* stylelint-enable */
+    }
+
+    &_disabled {
+        --tab-color: var(--tab-color-disabled);
+    }
+
+    &_selected {
+        --tab-background-color: var(--tab-background-color-selected);
+        --tab-color: var(--tab-color-selected);
+    }
+
+    &:focus-visible {
+        outline: none;
+        box-shadow: 0 0 0 2px var(--tab-focus-color);
+        z-index: 1;
+    }
+
+    &:active:not(&_disabled) {
+        --tab-background-color: var(--tab-background-color-active);
+        --tab-color: var(--tab-color-active);
+    }
+}

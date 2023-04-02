@@ -1,30 +1,40 @@
 {
     "compilerOptions": {
-        "baseUrl": ".",
-        "target": "es6",
+        "target": "ESNext",
+        "useDefineForClassFields": true,
         "lib": [
-            "dom",
-            "es6"
+            "DOM",
+            "DOM.Iterable",
+            "ESNext"
         ],
-        "allowJs": true,
+        "allowJs": false,
         "skipLibCheck": true,
-        "esModuleInterop": true,
+        "useUnknownInCatchVariables": true,
+        "esModuleInterop": false,
         "allowSyntheticDefaultImports": true,
+        "strictNullChecks": true,
         "strict": true,
         "forceConsistentCasingInFileNames": true,
-        "module": "esnext",
-        "moduleResolution": "node",
-        "resolveJsonModule": true,
-        "suppressImplicitAnyIndexErrors": true,
-        "isolatedModules": true,
-        "noEmit": false,
-        "jsx": "react-jsx",
+        "module": "ESNext",
         "noImplicitAny": true,
-        "noImplicitThis": true,
-        "strictNullChecks": true,
-        "noFallthroughCasesInSwitch": true
+        "moduleResolution": "Node",
+        "resolveJsonModule": true,
+        "isolatedModules": true,
+        "noEmit": true,
+        "jsx": "react-jsx",
+        "paths": {
+        },
+        "typeRoots": [
+            "./packages/ui-react/src/types",
+            "./node_modules/@types"
+        ]
     },
-    "exclude": [
-        "node_modules"
-    ]
+    "include": [
+        ".storybook/**/*",
+        "packages/**/*",
+        "vite.config.ts"
+    ],
+    "references": [{
+        "path": "./tsconfig.node.json"
+    }]
 }

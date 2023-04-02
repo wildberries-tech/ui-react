@@ -1,0 +1,670 @@
+---
+root: true
+ignorePatterns:
+  - '*.pcss.d.ts'
+  - preview-head.html
+  - manager-head.html
+  - node_modules
+  - .git
+  - .idea
+overrides:
+  # YAML files (yaml, yml)
+  - parser: yaml-eslint-parser
+    parserOptions:
+      defaultYAMLVersion: '1.2'
+    files:
+      - '*.yaml'
+      - '*.yml'
+    plugins:
+      - yml
+    rules:
+      yml/block-mapping-colon-indicator-newline: error
+      yml/block-mapping-question-indicator-newline: error
+      yml/block-mapping: error
+      yml/block-sequence-hyphen-indicator-newline: error
+      yml/block-sequence: error
+      yml/file-extension: error
+      yml/no-empty-document: error
+      yml/no-empty-key: error
+      yml/no-empty-mapping-value: error
+      yml/no-empty-sequence-entry: error
+      yml/no-tab-indent: error
+      yml/plain-scalar: error
+      yml/require-string-key: error
+      yml/flow-mapping-curly-newline: error
+      yml/flow-sequence-bracket-newline: error
+      yml/flow-sequence-bracket-spacing: error
+      yml/key-spacing: error
+      yml/no-irregular-whitespace: error
+      yml/no-multiple-empty-lines: error
+      yml/spaced-comment: error
+      yml/flow-mapping-curly-spacing:
+        - error
+        - always
+        - arraysInObjects: false
+          objectsInObjects: true
+      yml/quotes:
+        - error
+        - prefer: single
+          avoidEscape: true
+      yml/indent:
+        - error
+        - 2
+        - indentBlockSequences: true
+          indicatorValueIndent: 2
+      yml/key-name-casing: off
+
+  # HTML files (html, htm)
+  - parser: '@html-eslint/parser'
+    files:
+      - '*.html'
+      - '*.htm'
+    plugins:
+      - '@html-eslint'
+    rules:
+      '@html-eslint/require-doctype': error
+      '@html-eslint/no-duplicate-id': error
+      '@html-eslint/no-inline-styles': error
+      '@html-eslint/require-li-container': error
+      '@html-eslint/no-obsolete-tags': error
+      '@html-eslint/require-closing-tags': error
+      '@html-eslint/require-meta-charset': error
+      '@html-eslint/no-target-blank': error
+      '@html-eslint/no-duplicate-attrs': error
+      '@html-eslint/require-button-type': error
+      '@html-eslint/no-multiple-h1': error
+      '@html-eslint/require-lang': error
+      '@html-eslint/require-meta-description': error
+      '@html-eslint/require-title': error
+      '@html-eslint/no-abstract-roles': error
+      '@html-eslint/no-accesskey-attrs': error
+      '@html-eslint/no-aria-hidden-body': error
+      '@html-eslint/no-non-scalable-viewport': error
+      '@html-eslint/no-skip-heading-levels': error
+      '@html-eslint/require-frame-title': error
+      '@html-eslint/require-img-alt': error
+      '@html-eslint/require-meta-viewport': error
+      '@html-eslint/element-newline': error
+      '@html-eslint/no-extra-spacing-attrs': error
+      '@html-eslint/no-multiple-empty-lines': error
+      '@html-eslint/no-trailing-spaces': error
+      '@html-eslint/quotes': error
+      '@html-eslint/indent':
+        - error
+        - 4
+      '@html-eslint/id-naming-convention':
+        - error
+        - kebab-case
+      '@html-eslint/require-attrs':
+        - error
+        - tag: svg
+          attr: viewBox
+        - tag: a
+          attr: title
+        - tag: input
+          attr: name
+        - tag: input
+          attr: type
+
+  # JSON files (json)
+  - files:
+      - '*.json'
+    plugins:
+      - json
+    rules:
+      json/*: error
+
+  # TypeScript files (ts, tsx)
+  - parser: '@typescript-eslint/parser'
+    files:
+      - '*.ts'
+      - '*.tsx'
+    parserOptions:
+      errorOnUnknownASTType: true
+      project: ./tsconfig.json
+      jsx: true
+      ecmaFeatures:
+        jsx: true
+    settings:
+      react:
+        version: detect
+      import/extensions:
+        - .ts
+        - .tsx
+        - .js
+      import/parsers:
+        '@typescript-eslint/parser':
+          - .ts
+          - .tsx
+          - .js
+      import/internal-regex:
+        - classnames/bind
+      import/resolver:
+        node:
+          extensions:
+            - .ts
+            - .tsx
+            - .js
+        typescript:
+          extensions:
+            - .ts
+            - .tsx
+          project: ./tsconfig.json
+    extends:
+      - 'eslint:recommended'
+      - 'plugin:@typescript-eslint/recommended'
+    plugins:
+      - '@typescript-eslint'
+      - react
+      - import
+    rules:
+      react/boolean-prop-naming: error
+      react/default-props-match-prop-types: error
+      react/display-name: off
+      react/forbid-component-props:
+        - error
+        - forbid:
+            - style
+      react/forbid-dom-props: error
+      react/forbid-elements: error
+      react/forbid-foreign-prop-types: error
+      react/hook-use-state: error
+      react/iframe-missing-sandbox: error
+      react/jsx-child-element-spacing: off
+      react/jsx-closing-tag-location: error
+      react/jsx-curly-spacing: error
+      react/jsx-equals-spacing: error
+      react/jsx-filename-extension:
+        - error
+        - extensions:
+            - .tsx
+      react/jsx-handler-names: error
+      react/jsx-key: error
+      react/jsx-newline:
+        - error
+        - prevent: true
+      react/jsx-no-bind: off
+      react/jsx-no-comment-textnodes: error
+      react/jsx-no-constructed-context-values: error
+      react/jsx-no-duplicate-props: error
+      react/jsx-no-leaked-render: error
+      react/jsx-no-literal: off
+      react/jsx-no-script-url: error
+      react/jsx-no-target-blank: error
+      react/jsx-no-undef: error
+      react/jsx-no-useless-fragment: error
+      react/jsx-one-expression-per-line:
+        - error
+        - allow: literal
+      react/jsx-pascal-case:
+        - error
+        - allowAllCaps: true
+      react/jsx-props-no-multi-spaces: error
+      react/jsx-props-no-spreading: off
+      react/jsx-tag-spacing: error
+      react/jsx-uses-react: error
+      react/jsx-uses-vars: error
+      react/no-access-state-in-setstate: error
+      react/no-adjacent-inline-elements: error
+      react/no-array-index-key: off
+      react/no-arrow-function-lifecycle: error
+      react/no-danger: error
+      react/no-danger-with-children: error
+      react/no-deprecated: error
+      react/no-did-mount-set-state: error
+      react/no-did-update-set-state: error
+      react/no-direct-mutation-state: error
+      react/no-find-dom-node: error
+      react/no-invalid-html-attribute: error
+      react/no-is-mounted: error
+      react/no-multi-comp: error
+      react/no-namespace: error
+      react/no-object-type-as-default-prop: error
+      react/no-redundant-should-component-update: error
+      react/no-render-return-value: error
+      react/no-set-state: error
+      react/no-string-refs: error
+      react/no-this-in-sfc: error
+      react/no-typos: error
+      react/no-unescaped-entities: error
+      react/no-unknown-property: error
+      react/no-unsafe: error
+      react/no-unstable-nested-components: error
+      react/no-unused-class-component-methods: error
+      react/no-unused-prop-types: error
+      react/no-unused-state: error
+      react/no-will-update-set-state: error
+      react/prefer-read-only-props: error
+      react/prefer-stateless-function: error
+      react/prop-types: error
+      react/react-in-jsx-scope: error
+      react/require-default-props: off
+      react/require-optimization: error
+      react/require-render-return: error
+      react/self-closing-comp: error
+      react/state-in-constructor: error
+      react/style-prop-object: error
+      react/void-dom-elements-no-children: error
+      react/jsx-wrap-multilines:
+        - error
+        - declaration: parens-new-line
+          assignment: parens-new-line
+          return: parens-new-line
+          arrow: parens-new-line
+          condition: parens-new-line
+          logical: parens-new-line
+          prop: parens-new-line
+      react/jsx-max-props-per-line:
+        - error
+        - maximum: 1
+      react/jsx-indent:
+        - error
+        - 4
+      react/jsx-indent-props:
+        - error
+        - 4
+      react/jsx-fragments:
+        - error
+        - element
+      react/jsx-first-prop-new-line:
+        - error
+        - multiline-multiprop
+      react/jsx-curly-newline:
+        - error
+        - never
+      react/jsx-curly-brace-presence:
+        - error
+        - never
+      react/jsx-closing-bracket-location:
+        - error
+        - tag-aligned
+      react/jsx-boolean-value:
+        - error
+        - always
+      react/function-component-definition:
+        - error
+        - namedComponents: arrow-function
+          unnamedComponents: arrow-function
+
+      import/export: error
+      import/no-empty-named-blocks: error
+      import/no-extraneous-dependencies: off
+      import/no-mutable-exports: error
+      import/no-named-as-default: error
+      import/no-named-as-default-member: error
+      import/no-unused-modules: error
+      import/no-nodejs-modules: error
+      import/default: error
+      import/named: off
+      import/no-absolute-path: error
+      import/no-cycle: error
+      import/no-dynamic-require: error
+      import/no-relative-parent-imports: off
+      import/no-self-import: error
+      import/no-unresolved: off
+      import/no-useless-path-segments:
+        - error
+        - noUselessIndex: true
+      import/order:
+        - error
+        - newlines-between: always
+          warnOnUnassignedImports: true
+          groups:
+            - builtin
+            - external
+            - internal
+            - parent
+            - sibling
+            - index
+          pathGroups:
+            - pattern: '#core/**'
+              group: internal
+            - pattern: classnames/bind
+              group: external
+      block-spacing: off
+      brace-style: off
+      comma-dangle: off
+      comma-spacing: off
+      default-param-last: off
+      dot-notation: off
+      func-call-spacing: off
+      indent: off
+      key-spacing: off
+      keyword-spacing: off
+      lines-around-comment: off
+      lines-between-class-members: off
+      no-dupe-class-members: off
+      no-empty-function: off
+      no-extra-parens: off
+      no-extra-semi: off
+      no-implied-eval: off
+      no-invalid-this: off
+      no-loop-func: off
+      no-loss-of-precision: off
+      no-redeclare: off
+      no-restricted-imports: off
+      no-shadow: off
+      no-throw-literal: off
+      no-unused-expressions: off
+      no-unused-vars: off
+      no-use-before-define: off
+      no-useless-constructor: off
+      object-curly-spacing: off
+      padding-line-between-statements: off
+      quotes: off
+      require-await: off
+      no-return-await: off
+      semi: off
+      space-before-blocks: off
+      space-before-function-paren: off
+      space-infix-ops: off
+      no-mixed-spaces-and-tabs: error
+      array-bracket-spacing: error
+      arrow-parens: error
+      arrow-spacing: error
+      comma-style: error
+      computed-property-spacing: error
+      generator-star-spacing: error
+      implicit-arrow-linebreak: error
+      linebreak-style: error
+      no-multi-spaces: off
+      object-property-newline: error
+      rest-spread-spacing: error
+      semi-spacing: error
+      semi-style: error
+      space-unary-ops: error
+      switch-colon-spacing: error
+      template-curly-spacing: error
+      template-tag-spacing: error
+      unicode-bom: error
+      yield-star-spacing: error
+      operator-linebreak:
+        - error
+        - none
+      newline-per-chained-call:
+        - error
+        - ignoreChainWithDepth: 2
+      max-statements-per-line:
+        - error
+        - max: 1
+      jsx-quotes:
+        - error
+        - prefer-double
+      dot-location:
+        - error
+        - property
+      function-paren-newline:
+        - error
+        - multiline-arguments
+      function-call-argument-newline:
+        - error
+        - consistent
+      array-element-newline:
+        - error
+        - consistent
+      array-bracket-newline:
+        - error
+        - consistent
+      no-multiple-empty-lines:
+        - error
+        - max: 1
+      padded-blocks:
+        - error
+        - never
+      no-whitespace-before-property: error
+      nonblock-statement-body-position: error
+      space-in-parens: error
+      no-tabs: error
+      object-curly-newline:
+        - error
+        - multiline: true
+          consistent: true
+
+      '@typescript-eslint/array-type':
+        - error
+        - default: generic
+          readonly: generic
+      '@typescript-eslint/await-thenable': error
+      '@typescript-eslint/ban-tslint-comment': error
+      '@typescript-eslint/consistent-generic-constructors': error
+      '@typescript-eslint/consistent-indexed-object-style': error
+      '@typescript-eslint/consistent-type-assertions': error
+      '@typescript-eslint/consistent-type-definitions': error
+      '@typescript-eslint/consistent-type-exports': error
+      '@typescript-eslint/explicit-member-accessibility': error
+      '@typescript-eslint/member-delimiter-style':
+        - error
+        - multiline:
+            delimiter: comma
+            requireLast: false
+          singleline:
+            delimiter: comma
+            requireLast: false
+      '@typescript-eslint/method-signature-style': error
+      '@typescript-eslint/naming-convention':
+        - error
+        - format:
+            - StrictPascalCase
+          selector: interface
+          filter:
+            regex: '^(ImportMetaEnv|ImportMeta)$'
+            match: false
+          prefix:
+            - I
+        - format:
+            - StrictPascalCase
+          selector: typeAlias
+          prefix:
+            - T
+        - format:
+            - StrictPascalCase
+          selector: enum
+          prefix:
+            - E
+        - format:
+            - camelCase
+            - UPPER_CASE
+          selector:
+            - typeProperty
+            - typeMethod
+            - enumMember
+        - format:
+            - camelCase
+            - snake_case
+            - UPPER_CASE
+            - PascalCase
+          selector:
+            - parameterProperty
+            - objectLiteralProperty
+          filter:
+            regex: '^(#|[a-z-]+(__[a-z-]+)?(_[a-z-]+)?$)'
+            match: false
+        - format:
+            - camelCase
+            - PascalCase
+          selector:
+            - objectLiteralMethod
+            - classMethod
+            - classProperty
+            - function
+            - parameter
+        - format:
+            - camelCase
+            - UPPER_CASE
+            - PascalCase
+          selector:
+            - variable
+        - format:
+            - PascalCase
+          selector:
+            - class
+        - format:
+            - PascalCase
+            - camelCase
+          types:
+            - function
+          selector:
+            - variable
+      '@typescript-eslint/no-base-to-string': error
+      '@typescript-eslint/no-confusing-non-null-assertion': error
+      '@typescript-eslint/prefer-reduce-type-parameter': error
+      '@typescript-eslint/no-duplicate-enum-values': error
+      '@typescript-eslint/no-dynamic-delete': error
+      '@typescript-eslint/no-floating-promises': error
+      '@typescript-eslint/no-for-in-array': error
+      '@typescript-eslint/no-import-type-side-effects': error
+      '@typescript-eslint/no-invalid-void-type': error
+      '@typescript-eslint/no-meaningless-void-operator': error
+      '@typescript-eslint/no-misused-promises': error
+      '@typescript-eslint/no-mixed-enums': error
+      '@typescript-eslint/no-non-null-asserted-nullish-coalescing': error
+      '@typescript-eslint/no-redundant-type-constituents': error
+      '@typescript-eslint/no-require-imports': error
+      '@typescript-eslint/no-unnecessary-boolean-literal-compare': error
+      '@typescript-eslint/no-unnecessary-condition': error
+      '@typescript-eslint/no-unnecessary-type-arguments': error
+      '@typescript-eslint/no-unnecessary-type-assertion': error
+      '@typescript-eslint/no-unsafe-argument': off
+      '@typescript-eslint/no-unsafe-assignment': off
+      '@typescript-eslint/no-unsafe-call': off
+      '@typescript-eslint/no-unsafe-declaration-merging': error
+      '@typescript-eslint/no-unsafe-member-access': off
+      '@typescript-eslint/no-unsafe-return': off
+      '@typescript-eslint/no-useless-empty-export': error
+      '@typescript-eslint/non-nullable-type-assertion-style': error
+      '@typescript-eslint/prefer-enum-initializers': error
+      '@typescript-eslint/prefer-for-of': error
+      '@typescript-eslint/prefer-function-type': error
+      '@typescript-eslint/prefer-includes': error
+      '@typescript-eslint/prefer-literal-enum-member': error
+      '@typescript-eslint/prefer-nullish-coalescing': error
+      '@typescript-eslint/prefer-optional-chain': error
+      '@typescript-eslint/prefer-regexp-exec': error
+      '@typescript-eslint/prefer-return-this-type': error
+      '@typescript-eslint/prefer-string-starts-ends-with': error
+      '@typescript-eslint/prefer-ts-expect-error': error
+      '@typescript-eslint/promise-function-async': error
+      '@typescript-eslint/require-array-sort-compare': error
+      '@typescript-eslint/restrict-plus-operands': error
+      '@typescript-eslint/restrict-template-expressions': error
+      '@typescript-eslint/strict-boolean-expressions': off
+      '@typescript-eslint/switch-exhaustiveness-check': error
+      '@typescript-eslint/type-annotation-spacing':
+        - error
+        - after: true
+          before: false
+          overrides:
+            arrow:
+              before: true
+              after: true
+      '@typescript-eslint/unified-signatures': error
+      '@typescript-eslint/block-spacing': error
+      '@typescript-eslint/brace-style': error
+      '@typescript-eslint/comma-dangle': error
+      '@typescript-eslint/comma-spacing': error
+      '@typescript-eslint/default-param-last': error
+      '@typescript-eslint/dot-notation': error
+      '@typescript-eslint/func-call-spacing': error
+      '@typescript-eslint/indent':
+        - error
+        - 4
+        - VariableDeclarator: first
+          MemberExpression: 1
+          FunctionDeclaration:
+            body: 1
+            parameters: 1
+          FunctionExpression:
+            body: 1
+            parameters: 1
+          CallExpression:
+            arguments: 1
+          ArrayExpression: 1
+          ObjectExpression: 1
+          ImportDeclaration: 1
+          flatTernaryExpressions: false
+      '@typescript-eslint/key-spacing':
+        - off
+        - afterColon: true
+          mode: strict
+          align: colon
+      '@typescript-eslint/keyword-spacing':
+        - error
+        - before: true
+          after: true
+          overrides:
+            if:
+              after: false
+            for:
+              after: false
+            while:
+              after: false
+      '@typescript-eslint/lines-around-comment': off
+      '@typescript-eslint/lines-between-class-members':
+        - error
+        - always
+      '@typescript-eslint/no-dupe-class-members': error
+      '@typescript-eslint/no-empty-function': error
+      '@typescript-eslint/no-extra-parens':
+        - error
+        - all
+        - ignoreJSX: all
+      '@typescript-eslint/no-extra-semi': error
+      '@typescript-eslint/no-implied-eval': error
+      '@typescript-eslint/no-invalid-this': error
+      '@typescript-eslint/no-loop-func': error
+      '@typescript-eslint/no-loss-of-precision': error
+      '@typescript-eslint/no-redeclare': error
+      '@typescript-eslint/no-restricted-imports': error
+      '@typescript-eslint/no-shadow': error
+      '@typescript-eslint/no-throw-literal': error
+      '@typescript-eslint/no-unused-expressions': error
+      '@typescript-eslint/no-unused-vars': error
+      '@typescript-eslint/no-use-before-define': error
+      '@typescript-eslint/no-useless-constructor': error
+      '@typescript-eslint/require-await': error
+      '@typescript-eslint/return-await': error
+      '@typescript-eslint/semi': error
+      '@typescript-eslint/space-before-blocks': error
+      '@typescript-eslint/space-infix-ops': error
+      '@typescript-eslint/space-before-function-paren':
+        - error
+        - asyncArrow: always
+          named: never
+      '@typescript-eslint/quotes':
+        - error
+        - single
+        - avoidEscape: true
+      '@typescript-eslint/object-curly-spacing':
+        - error
+        - always
+        - arraysInObjects: false
+          objectsInObjects: true
+      '@typescript-eslint/padding-line-between-statements':
+        - error
+        - blankLine: always
+          prev: '*'
+          next:
+            - interface
+            - type
+        - blankLine: always
+          prev: '*'
+          next: return
+        - blankLine: always
+          prev: '*'
+          next:
+            - export
+        - blankLine: any
+          prev: export
+          next: export
+        - blankLine: always
+          prev: '*'
+          next: expression
+        - blankLine: always
+          prev: import
+          next: '*'
+        - blankLine: any
+          prev: import
+          next: import
+        - blankLine: always
+          prev: '*'
+          next: block-like

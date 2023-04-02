@@ -1,0 +1,108 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Default use 1`] = `
+<div
+  className="tabs"
+  data-rttabs={true}
+  onClick={[Function]}
+  onKeyDown={[Function]}
+>
+  <ul
+    className="tab-list"
+    role="tablist"
+  >
+    <li
+      aria-controls="panel:r0:0"
+      aria-disabled="false"
+      aria-selected="true"
+      className="tab tab_preset-pane tab_selected"
+      data-rttab={true}
+      id="tab:r0:0"
+      role="tab"
+      tabIndex="0"
+    >
+      Tab #1
+    </li>
+  </ul>
+  <div
+    aria-labelledby="tab:r0:0"
+    className="tab-panel tab-panel_preset-pane tab-panel_selected"
+    id="panel:r0:0"
+    role="tabpanel"
+  >
+    Panel #1
+  </div>
+</div>
+`;
+
+exports[`Empty 1`] = `null`;
+
+exports[`Function elements 1`] = `
+<div
+  className="tabs"
+  data-rttabs={true}
+  onClick={[Function]}
+  onKeyDown={[Function]}
+>
+  <ul
+    className="tab-list"
+    role="tablist"
+  >
+    <li
+      aria-controls="panel:r2:0"
+      aria-disabled="false"
+      aria-selected="true"
+      className="tab tab_preset-pane tab_selected"
+      data-rttab={true}
+      id="tab:r2:0"
+      role="tab"
+      tabIndex="0"
+    >
+      Tab #1
+    </li>
+  </ul>
+  <div
+    aria-labelledby="tab:r2:0"
+    className="tab-panel tab-panel_preset-pane tab-panel_selected"
+    id="panel:r2:0"
+    role="tabpanel"
+  >
+    Panel #1
+  </div>
+</div>
+`;
+
+exports[`Without ID 1`] = `
+<div
+  className="tabs"
+  data-rttabs={true}
+  onClick={[Function]}
+  onKeyDown={[Function]}
+>
+  <ul
+    className="tab-list"
+    role="tablist"
+  >
+    <li
+      aria-controls="panel:r1:0"
+      aria-disabled="false"
+      aria-selected="true"
+      className="tab tab_preset-pane tab_selected"
+      data-rttab={true}
+      id="tab:r1:0"
+      role="tab"
+      tabIndex="0"
+    >
+      Tab #1
+    </li>
+  </ul>
+  <div
+    aria-labelledby="tab:r1:0"
+    className="tab-panel tab-panel_preset-pane tab-panel_selected"
+    id="panel:r1:0"
+    role="tabpanel"
+  >
+    Panel #1
+  </div>
+</div>
+`;
