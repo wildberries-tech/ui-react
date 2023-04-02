@@ -26,6 +26,13 @@ const config: StorybookConfig = {
     core: {
         disableTelemetry: true
     },
+    viteFinal(result, options) {
+        if(process.env.NODE_ENV === 'production') {
+            delete result.css?.modules;
+        }
+
+        return result;
+    },
     typescript: {
         check: false,
         reactDocgen: 'react-docgen-typescript',
