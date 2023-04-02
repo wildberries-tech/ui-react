@@ -1,0 +1,2 @@
+import{a as n}from"./jsx-runtime-68f49b4e.js";const a=({xmlns:e="http://www.w3.org/2000/svg",width:r=24,height:s=24,viewBox:t="0 0 24 24",...l})=>n("svg",{xmlns:e,width:r,height:s,viewBox:t,...l});try{a.displayName="SVG",a.__docgenInfo={description:"",displayName:"SVG",props:{children:{defaultValue:null,description:"",name:"children",required:!1,type:{name:"ReactNode"}},className:{defaultValue:null,description:"",name:"className",required:!1,type:{name:"string"}}}}}catch{}export{a as S};
+//# sourceMappingURL=index-f6f0a7b7.js.map
