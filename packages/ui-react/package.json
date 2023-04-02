@@ -1,6 +1,6 @@
 {
     "name": "@wb-tech/ui-react",
-    "version": "0.1.2",
+    "version": "0.1.8",
     "description": "WildBerries react ui-kit",
     "main": "src/index.ts",
     "homepage": "https://github.com/wildberries-tech/ui-kit-react#readme",
