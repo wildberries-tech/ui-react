@@ -3,7 +3,6 @@
   "version": "0.1.9",
   "description": "",
   "main": "index.js",
-  "devDependencies": {},
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -16,5 +15,13 @@
   "bugs": {
     "url": "https://github.com/wildberries-tech/ui-kit-react/issues"
   },
-  "homepage": "https://github.com/wildberries-tech/ui-kit-react#readme"
+  "homepage": "https://github.com/wildberries-tech/ui-kit-react#readme",
+  "dependencies": {
+    "css-loader": "6.7.3",
+    "postcss-loader": "7.1.0",
+    "postcss-nested": "6.0.1",
+    "postcss-nested-ancestors": "3.0.0",
+    "style-loader": "3.3.2",
+    "ts-loader": "9.4.2"
+  }
 }
