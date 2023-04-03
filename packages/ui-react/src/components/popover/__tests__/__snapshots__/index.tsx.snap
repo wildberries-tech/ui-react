@@ -1,0 +1,172 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Arrow 1`] = `
+<DocumentFragment>
+  <div>
+    Text trigger
+  </div>
+</DocumentFragment>
+`;
+
+exports[`Arrow 2`] = `
+<DocumentFragment>
+  <div>
+    Text trigger
+  </div>
+  <div
+    class="popover__content"
+    style="position: fixed; top: 0px; left: 0px;"
+  >
+    Text render
+    <svg
+      height="15.999999999999998"
+      preserveAspectRatio="xMaxYMax"
+      style="position: absolute; top: 0px; left: 0px; transform: translateX(-50%);"
+      viewBox="0 0 15.999999999999998 8"
+      width="15.999999999999998"
+    >
+      <path
+        d="M 0 8 H 15.999999999999998 C 8.999999999999998 1 7.999999999999999 0 7.999999999999999 0 C 7.999999999999999 0 6.999999999999999 1 0 8"
+        fill="white"
+        stroke="black"
+        stroke-width="0"
+      />
+      <path
+        d="M 0 8 H 15.999999999999998 L 15.999999999999998 8 H 0 Z"
+        fill="white"
+      />
+    </svg>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`Close 1`] = `
+<DocumentFragment>
+  <div>
+    <div>
+      Text trigger
+    </div>
+    <div>
+      Out click
+    </div>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`Close 2`] = `
+<DocumentFragment>
+  <div>
+    <div>
+      Text trigger
+    </div>
+    <div>
+      Out click
+    </div>
+    <div
+      class="popover__content"
+      style="position: fixed; top: 0px; left: 0px;"
+    >
+      Text render
+    </div>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`Close 3`] = `
+<DocumentFragment>
+  <div>
+    <div>
+      Text trigger
+    </div>
+    <div>
+      Out click
+    </div>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`Default use 1`] = `
+<DocumentFragment>
+  <div>
+    Text trigger
+  </div>
+</DocumentFragment>
+`;
+
+exports[`Default use 2`] = `
+<DocumentFragment>
+  <div>
+    Text trigger
+  </div>
+  <div
+    class="popover__content"
+    style="position: fixed; top: 0px; left: 0px;"
+  >
+    Text render
+  </div>
+</DocumentFragment>
+`;
+
+exports[`Element 1`] = `
+<DocumentFragment>
+  <a
+    href="#"
+  >
+    Text trigger
+  </a>
+</DocumentFragment>
+`;
+
+exports[`Element 2`] = `
+<DocumentFragment>
+  <a
+    href="#"
+  >
+    Text trigger
+  </a>
+  <div
+    class="popover__content"
+    style="position: fixed; top: 0px; left: 0px;"
+  >
+    Text render
+  </div>
+</DocumentFragment>
+`;
+
+exports[`Hover 1`] = `
+<DocumentFragment>
+  <div>
+    Text trigger
+  </div>
+</DocumentFragment>
+`;
+
+exports[`Hover 2`] = `
+<DocumentFragment>
+  <div>
+    Text trigger
+  </div>
+</DocumentFragment>
+`;
+
+exports[`Render function 1`] = `
+<DocumentFragment>
+  <div>
+    Text trigger
+  </div>
+</DocumentFragment>
+`;
+
+exports[`Render function 2`] = `
+<DocumentFragment>
+  <div>
+    Text trigger
+  </div>
+  <div
+    class="popover__content"
+    style="position: fixed; top: 0px; left: 0px;"
+  >
+    Text render
+  </div>
+</DocumentFragment>
+`;

@@ -1,0 +1,326 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Default 1`] = `
+<label
+  className="input-text"
+>
+  <div
+    className="input-text__field"
+  >
+    <input
+      className="input-text__input"
+      name="default"
+      tabIndex={0}
+      type="text"
+    />
+  </div>
+</label>
+`;
+
+exports[`Description ReactNode 1`] = `
+<label
+  className="input-text"
+>
+  <div
+    className="input-text__field"
+  >
+    <input
+      className="input-text__input"
+      name="default"
+      tabIndex={0}
+      type="text"
+    />
+  </div>
+  <div>
+    Description ReactNode
+  </div>
+</label>
+`;
+
+exports[`Description string 1`] = `
+<label
+  className="input-text"
+>
+  <div
+    className="input-text__field"
+  >
+    <input
+      className="input-text__input"
+      name="default"
+      tabIndex={0}
+      type="text"
+    />
+  </div>
+  <span
+    className="input-text__description"
+  >
+    Description string
+  </span>
+</label>
+`;
+
+exports[`Error & Message ReactNode 1`] = `
+<label
+  className="input-text"
+>
+  <div
+    className="input-text__label"
+  >
+    Input label
+  </div>
+  <div
+    className="input-text__field input-text__field_is-error"
+  >
+    <input
+      className="input-text__input"
+      name="default"
+      tabIndex={0}
+      type="text"
+    />
+  </div>
+  <div>
+    Custom error
+  </div>
+</label>
+`;
+
+exports[`Error & Message string 1`] = `
+<label
+  className="input-text"
+>
+  <div
+    className="input-text__label"
+  >
+    Input label
+  </div>
+  <div
+    className="input-text__field input-text__field_is-error"
+  >
+    <input
+      className="input-text__input"
+      name="default"
+      tabIndex={0}
+      type="text"
+    />
+  </div>
+  <span
+    className="input-text__error"
+  >
+    Message
+  </span>
+</label>
+`;
+
+exports[`Label 1`] = `
+<label
+  className="input-text"
+>
+  <div
+    className="input-text__label"
+  >
+    Input label
+  </div>
+  <div
+    className="input-text__field"
+  >
+    <input
+      className="input-text__input"
+      name="default"
+      tabIndex={0}
+      type="text"
+    />
+  </div>
+</label>
+`;
+
+exports[`Required 1`] = `
+<label
+  className="input-text"
+>
+  <div
+    className="input-text__field"
+  >
+    <input
+      className="input-text__input"
+      name="default"
+      required={true}
+      tabIndex={0}
+      type="text"
+    />
+  </div>
+</label>
+`;
+
+exports[`With ID 1`] = `
+<label
+  className="input-text"
+  id="test-id"
+>
+  <div
+    className="input-text__field"
+  >
+    <input
+      className="input-text__input"
+      id="test-id-input"
+      name="default"
+      tabIndex={0}
+      type="text"
+    />
+  </div>
+</label>
+`;
+
+exports[`disabled & readOnly 1`] = `
+<label
+  className="input-text"
+>
+  <div
+    className="input-text__field input-text__field_disabled input-text__field_read-only"
+  >
+    <input
+      className="input-text__input"
+      disabled={true}
+      name="default"
+      readOnly={true}
+      tabIndex={-1}
+      type="text"
+    />
+  </div>
+</label>
+`;
+
+exports[`disabled 1`] = `
+<label
+  className="input-text"
+>
+  <div
+    className="input-text__field input-text__field_disabled"
+  >
+    <input
+      className="input-text__input"
+      disabled={true}
+      name="default"
+      tabIndex={-1}
+      type="text"
+    />
+  </div>
+</label>
+`;
+
+exports[`elAfter 1`] = `
+<label
+  className="input-text"
+>
+  <div
+    className="input-text__field input-text__field_after"
+  >
+    <input
+      className="input-text__input"
+      name="default"
+      tabIndex={0}
+      type="text"
+    />
+    <svg
+      height={24}
+      viewBox="0 0 24 24"
+      width={24}
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <path
+        clipRule="evenodd"
+        d="M12 4c2.728 0 5.336 1.43 7.766 3.781a23.31 23.31 0 0 1 2.24 2.515c.399.516.681.923.837 1.165l.344.539-.345.539c-.154.242-.437.649-.836 1.165-.66.857-1.41 1.713-2.24 2.515C17.336 18.569 14.728 20 12 20c-2.728 0-5.336-1.43-7.766-3.781a23.312 23.312 0 0 1-2.24-2.515 17.482 17.482 0 0 1-.836-1.165L.813 12l.345-.539c.155-.242.437-.649.836-1.165.66-.857 1.41-1.713 2.24-2.515C6.664 5.431 9.272 4 12 4Zm8.422 7.517a21.32 21.32 0 0 0-2.046-2.298C16.283 7.194 14.106 6 12 6 9.895 6 7.718 7.194 5.624 9.219A21.324 21.324 0 0 0 3.216 12a21.319 21.319 0 0 0 2.408 2.781C7.718 16.806 9.895 18 12 18c2.105 0 4.283-1.194 6.376-3.219A21.314 21.314 0 0 0 20.784 12c-.11-.152-.231-.314-.362-.483ZM8 12a4 4 0 1 0 8 0 4 4 0 0 0-8 0Zm6 0a2 2 0 1 1-4 0 2 2 0 0 1 4 0Z"
+        fillRule="evenodd"
+      />
+    </svg>
+  </div>
+</label>
+`;
+
+exports[`elBefore & elAfter 1`] = `
+<label
+  className="input-text"
+>
+  <div
+    className="input-text__field input-text__field_before-and-after"
+  >
+    <svg
+      height={24}
+      viewBox="0 0 24 24"
+      width={24}
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <path
+        clipRule="evenodd"
+        d="M12 4c2.728 0 5.336 1.43 7.766 3.781a23.31 23.31 0 0 1 2.24 2.515c.399.516.681.923.837 1.165l.344.539-.345.539c-.154.242-.437.649-.836 1.165-.66.857-1.41 1.713-2.24 2.515C17.336 18.569 14.728 20 12 20c-2.728 0-5.336-1.43-7.766-3.781a23.312 23.312 0 0 1-2.24-2.515 17.482 17.482 0 0 1-.836-1.165L.813 12l.345-.539c.155-.242.437-.649.836-1.165.66-.857 1.41-1.713 2.24-2.515C6.664 5.431 9.272 4 12 4Zm8.422 7.517a21.32 21.32 0 0 0-2.046-2.298C16.283 7.194 14.106 6 12 6 9.895 6 7.718 7.194 5.624 9.219A21.324 21.324 0 0 0 3.216 12a21.319 21.319 0 0 0 2.408 2.781C7.718 16.806 9.895 18 12 18c2.105 0 4.283-1.194 6.376-3.219A21.314 21.314 0 0 0 20.784 12c-.11-.152-.231-.314-.362-.483ZM8 12a4 4 0 1 0 8 0 4 4 0 0 0-8 0Zm6 0a2 2 0 1 1-4 0 2 2 0 0 1 4 0Z"
+        fillRule="evenodd"
+      />
+    </svg>
+    <input
+      className="input-text__input"
+      name="default"
+      tabIndex={0}
+      type="text"
+    />
+    <svg
+      height={24}
+      viewBox="0 0 24 24"
+      width={24}
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <path
+        clipRule="evenodd"
+        d="M12 4c2.728 0 5.336 1.43 7.766 3.781a23.31 23.31 0 0 1 2.24 2.515c.399.516.681.923.837 1.165l.344.539-.345.539c-.154.242-.437.649-.836 1.165-.66.857-1.41 1.713-2.24 2.515C17.336 18.569 14.728 20 12 20c-2.728 0-5.336-1.43-7.766-3.781a23.312 23.312 0 0 1-2.24-2.515 17.482 17.482 0 0 1-.836-1.165L.813 12l.345-.539c.155-.242.437-.649.836-1.165.66-.857 1.41-1.713 2.24-2.515C6.664 5.431 9.272 4 12 4Zm8.422 7.517a21.32 21.32 0 0 0-2.046-2.298C16.283 7.194 14.106 6 12 6 9.895 6 7.718 7.194 5.624 9.219A21.324 21.324 0 0 0 3.216 12a21.319 21.319 0 0 0 2.408 2.781C7.718 16.806 9.895 18 12 18c2.105 0 4.283-1.194 6.376-3.219A21.314 21.314 0 0 0 20.784 12c-.11-.152-.231-.314-.362-.483ZM8 12a4 4 0 1 0 8 0 4 4 0 0 0-8 0Zm6 0a2 2 0 1 1-4 0 2 2 0 0 1 4 0Z"
+        fillRule="evenodd"
+      />
+    </svg>
+  </div>
+</label>
+`;
+
+exports[`elBefore 1`] = `
+<label
+  className="input-text"
+>
+  <div
+    className="input-text__field input-text__field_before"
+  >
+    <svg
+      height={24}
+      viewBox="0 0 24 24"
+      width={24}
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <path
+        clipRule="evenodd"
+        d="M12 4c2.728 0 5.336 1.43 7.766 3.781a23.31 23.31 0 0 1 2.24 2.515c.399.516.681.923.837 1.165l.344.539-.345.539c-.154.242-.437.649-.836 1.165-.66.857-1.41 1.713-2.24 2.515C17.336 18.569 14.728 20 12 20c-2.728 0-5.336-1.43-7.766-3.781a23.312 23.312 0 0 1-2.24-2.515 17.482 17.482 0 0 1-.836-1.165L.813 12l.345-.539c.155-.242.437-.649.836-1.165.66-.857 1.41-1.713 2.24-2.515C6.664 5.431 9.272 4 12 4Zm8.422 7.517a21.32 21.32 0 0 0-2.046-2.298C16.283 7.194 14.106 6 12 6 9.895 6 7.718 7.194 5.624 9.219A21.324 21.324 0 0 0 3.216 12a21.319 21.319 0 0 0 2.408 2.781C7.718 16.806 9.895 18 12 18c2.105 0 4.283-1.194 6.376-3.219A21.314 21.314 0 0 0 20.784 12c-.11-.152-.231-.314-.362-.483ZM8 12a4 4 0 1 0 8 0 4 4 0 0 0-8 0Zm6 0a2 2 0 1 1-4 0 2 2 0 0 1 4 0Z"
+        fillRule="evenodd"
+      />
+    </svg>
+    <input
+      className="input-text__input"
+      name="default"
+      tabIndex={0}
+      type="text"
+    />
+  </div>
+</label>
+`;
+
+exports[`readOnly 1`] = `
+<label
+  className="input-text"
+>
+  <div
+    className="input-text__field input-text__field_read-only"
+  >
+    <input
+      className="input-text__input"
+      disabled={true}
+      name="default"
+      readOnly={true}
+      tabIndex={-1}
+      type="text"
+    />
+  </div>
+</label>
+`;

@@ -1,0 +1,21 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Custom tag 1`] = `
+<main
+  className="design-tokens"
+>
+  <div>
+    My APP
+  </div>
+</main>
+`;
+
+exports[`Default use 1`] = `
+<div
+  className="design-tokens"
+>
+  <div>
+    My APP
+  </div>
+</div>
+`;
