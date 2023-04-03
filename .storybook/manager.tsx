@@ -4,7 +4,7 @@ addons.setConfig({
     theme: {
         base      : 'light',
         brandTitle: 'WB UI-React',
-        brandImage: 'favicon-60.svg',
+        brandImage: './favicon-60.svg',
         fontBase: '"Open Sans", sans-serif',
         fontCode: 'monospace'
     }
