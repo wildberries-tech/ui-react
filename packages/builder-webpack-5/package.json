@@ -18,7 +18,7 @@
   "homepage": "https://github.com/wildberries-tech/ui-kit-react#readme",
   "dependencies": {
     "css-loader": "6.7.3",
-    "postcss-loader": "7.1.0",
+    "postcss-loader": "7.2.4",
     "postcss-nested": "6.0.1",
     "postcss-nested-ancestors": "3.0.0",
     "style-loader": "3.3.2",

@@ -30,7 +30,7 @@ export function useClassnames<TTarget, TSource>(target: TTarget, source?: TSourc
                 const result = { ...target } as Record<string, string>;
 
                 for(const [key, value] of Object.entries(source)) {
-                    // @ts-expect-error Need fix
+                    // @ts-ignore Need fix
                     // eslint-disable-next-line @typescript-eslint/no-unsafe-assignment, @typescript-eslint/restrict-template-expressions
                     result[key] = result[key] ? `${result[key]} ${source[key]}` : value;
                 }

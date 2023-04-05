@@ -21,6 +21,7 @@
     "bugs": {
         "url": "https://github.com/wildberries-tech/ui-kit-react/issues"
     },
+    "sideEffects": false,
     "dependencies": {
         "react": "16.x || 17.x || 18.x",
         "react-laag": "2.x",
