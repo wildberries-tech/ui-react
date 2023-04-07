@@ -1,4 +1,4 @@
-import { Meta } from '@storybook/addon-docs';
+import { Meta, Source } from '@storybook/blocks';
 
 <Meta
     title="Как начать"
@@ -24,28 +24,15 @@ import { Meta } from '@storybook/addon-docs';
 npm i @wb-tech/ui-react -S
 ```
 
-2. Подключение билдера
-```js
-// Webpack 5
-// webpack.config.js
-const { extendWebpackConfig } = require('@wb-tech/ui-react/builders');
-
-module.exports = extendWebpackConfig({
-    entry: {
-        main: './src/index.js'
-    },
-    output: {
-        path    : './dist',
-        filename: '[name].bundle.js'
-    },
-    ...
-}, {
-    // Передать в опции MiniCssExtractPlugin если он используется в проекте
-    useMiniCssExtractPlugin: MiniCssExtractPlugin
-});
+2. Установка пакета билдера в проект. (В примере используется вариант для webpack 5)
+- [Builder webpack 5](?path=/docs/builders-webpack-5--документация)
+```
+npm i @wb-tech/builder-webpack-5 -D
 ```
 
-3. Указать область действия дизайн токенов
+3. Подключение билдера ([Документация по @wb-tech/builder-webpack-5](?path=/docs/builders-webpack-5--документация))
+
+4. Указать область действия дизайн токенов
 ```tsx
 import React from 'react';
 import { render } from 'react-dom';
@@ -62,4 +49,4 @@ render((
 ));
 ```
 
-4. Использовать компоненты `@wb-tech/ui-react`
+5. Использовать компоненты `@wb-tech/ui-react`

@@ -1,6 +1,6 @@
 {
     "name": "@wb-tech/ui-react",
-    "version": "0.1.9",
+    "version": "0.1.11",
     "description": "WildBerries react ui-kit",
     "main": "src/index.ts",
     "homepage": "https://github.com/wildberries-tech/ui-kit-react#readme",
@@ -21,9 +21,13 @@
     "bugs": {
         "url": "https://github.com/wildberries-tech/ui-kit-react/issues"
     },
+    "sideEffects": false,
     "dependencies": {
         "react": "16.x || 17.x || 18.x",
         "react-laag": "2.x",
-        "react-tabs": "6.x"
+        "react-tabs": "6.x",
+        "@types/react-is": "17.x || 18.x",
+        "classnames": "2.x",
+        "react-is": "17.x || 18.x"
     }
 }
