@@ -18,14 +18,8 @@ const preview: Preview = {
             page: () => <DocsAuto />
         },
         options: {
-            // @ts-expect-error не потдерживает типы в среде исполнения
-            storySort: (a, b) => {
-                if(a.title === 'Документация') {
-                    return 1;
-                }
-
-                // eslint-disable-next-line @typescript-eslint/no-unsafe-return
-                return a.title === b.title ? 0 : a.id.localeCompare(b.id, undefined, { numeric: true });
+            storySort: {
+                order: ['Documentation', 'Builders'],
             }
         }
     }
