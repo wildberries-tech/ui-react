@@ -9,7 +9,6 @@
     width: 100%;
 
     --input-textarea-border-color-hover: var(--color-border-brand);
-    --input-textarea-label-gap: 4px;
     --input-textarea-label-color: var(--color-text-headers);
     --input-textarea-label-margin-bottom: 6px;
     --input-textarea-required-color: var(--color-text-error);
@@ -36,12 +35,18 @@
     }
 
     &__label {
-        display: grid;
-        grid-auto-flow: column;
-        grid-column-gap: var(--input-textarea-label-gap);
         color: var(--input-textarea-label-color);
         margin-bottom: var(--input-textarea-label-margin-bottom);
-        justify-content: flex-start;
+
+        &_required {
+
+            &::after {
+                content: "*";
+                padding-left: 4px;
+                color: var(--input-textarea-required-color);
+                font-size: 16px;
+            }
+        }
 
         @media (hover: hover) and (pointer: fine) {
 
@@ -49,12 +54,6 @@
                 cursor: pointer;
             }
         }
-    }
-
-    &__label-required {
-        color: var(--input-textarea-required-color);
-        font-size: 16px;
-        vertical-align: super;
     }
 
     &__input {

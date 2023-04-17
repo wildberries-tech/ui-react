@@ -39,6 +39,13 @@ export const Required: StoryObj<typeof META> = {
     }
 };
 
+export const RequiredMultiline: StoryObj<typeof META> = {
+    args: {
+        label   : 'Field label Field labelField labelField labelField labelField labelField labelField labelField labelField labelField labelField labelField labelField labelField labelField labelField labelField labelField labelField label',
+        required: true
+    }
+};
+
 export const ReadOnly: StoryObj<typeof META> = {
     args: {
         label   : 'Field label',

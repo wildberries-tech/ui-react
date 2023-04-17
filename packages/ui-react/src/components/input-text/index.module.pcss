@@ -34,12 +34,18 @@
     }
 
     &__label {
-        display: grid;
-        grid-auto-flow: column;
-        grid-column-gap: 4px;
         color: var(--input-text-label-color);
         margin-bottom: 6px;
-        justify-content: flex-start;
+
+        &_required {
+
+            &::after {
+                content: "*";
+                padding-left: 4px;
+                color: var(--input-text-label-required-color);
+                font-size: 16px;
+            }
+        }
 
         @media (hover: hover) and (pointer: fine) {
 
@@ -47,12 +53,6 @@
                 cursor: pointer;
             }
         }
-    }
-
-    &__label-required {
-        color: var(--input-text-label-required-color);
-        font-size: 16px;
-        vertical-align: super;
     }
 
     &__field {

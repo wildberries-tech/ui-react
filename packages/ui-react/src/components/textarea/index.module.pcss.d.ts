@@ -9,8 +9,8 @@ interface Stylesheet {
     'input-textarea__input_disabled': string
     'input-textarea__input_is-error': string
     'input-textarea__label': string
-    'input-textarea__label-required': string
     'input-textarea__label_disabled': string
+    'input-textarea__label_required': string
 }
 
 
