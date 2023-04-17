@@ -6,7 +6,7 @@ import { IconVerified } from '../../icons/verified';
 import { IconGlobe } from '../../icons/globe';
 
 const META: Meta<typeof Tag> = {
-    title: 'Components/Tag',
+    title: 'Components/Tag (Badge)',
     component: Tag,
     tags: ['autodocs'],
     args: {

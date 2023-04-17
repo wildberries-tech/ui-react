@@ -1,6 +1,6 @@
 # Changelog
 
-**unreleased**
+**Release 0.1.0**
 - Документация при использовании JEST
 - Добавлен компонент `InputText`
 - Исправлен тип `tagName` в `ButtonGroup`
