@@ -133,31 +133,19 @@ export interface IProps {
 export const InputText = forwardRef<HTMLInputElement | null, IProps>(({ tabIndex = 0, type = 'text', ...props }, ref) => {
     const cn = useClassnames(style, props.className);
 
-    const elRequired = useMemo(() => {
-        if(props.required) {
-            return (
-                <sup
-                    className={cn('input-text__label-required')}
-                    children="*"
-                />
-            );
-        }
-    }, [props.required]);
-
     const elLabel = useMemo(() => {
         if(props.label) {
             return (
                 <div
                     className={cn('input-text__label', {
-                        'input-text__label_disabled': props.disabled ?? props.readOnly
+                        'input-text__label_disabled': props.disabled ?? props.readOnly,
+                        'input-text__label_required': props.required
                     })}
-                >
-                    {props.label}
-                    {elRequired}
-                </div>
+                    children={props.label}
+                />
             );
         }
-    }, [props.label, props.disabled, props.readOnly, elRequired]);
+    }, [props.label, props.disabled, props.readOnly, props.required]);
 
     const elError = useMemo(() => {
         if(props.elError) {
