@@ -4,7 +4,7 @@ import { TStyle, useClassnames } from '../../hooks/use-classnames';
 
 import style from './index.module.pcss';
 
-interface IProps extends Pick<HTMLAttributes<HTMLSpanElement>, 'onClick' | 'onDrag' | 'onMouseEnter' | 'onMouseLeave'> {
+export interface IProps extends Pick<HTMLAttributes<HTMLSpanElement>, 'onClick' | 'onDrag' | 'onMouseEnter' | 'onMouseLeave'> {
     /**
      * Если параметр `id` не указан, то компонент будет создан без уникального идентификатора.
      */
