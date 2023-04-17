@@ -1,7 +1,11 @@
 /* eslint-env node */
 const { join } = require('path');
 
+const typescript = require('typescript');
+
 const RE_INCLUDE = /@wb-tech(\/|\\{1,2})ui-react/;
+
+const isTS49AndHigher = typescript.version.startsWith('4.9') || typescript.version.startsWith('5');
 
 module.exports = (config, options = {}) => {
     if(!config.module) {
@@ -31,7 +35,7 @@ module.exports = (config, options = {}) => {
             use    : [{
                 loader : require.resolve('ts-loader'),
                 options: {
-                    configFile   : join(__dirname, './tsconfig.json'),
+                    configFile   : join(__dirname, isTS49AndHigher ? './tsconfig.json' : './tsconfig.old.json'),
                     transpileOnly: true
                 }
             }]
