@@ -35,8 +35,6 @@ export const DocsSetup = () => {
     const parameters = context.attachedCSFFile.meta.parameters;
     const setup = parameters.documentation?.setup;
 
-    console.log(context);
-
     const elDefault = useMemo(() => {
         if(!setup?.default || setup.default.disabled !== true) {
             return (
@@ -49,7 +47,11 @@ export const DocsSetup = () => {
                             />
                             <Source
                                 language="ts"
-                                code={`import { ${componentName} } from '@wb-tech/ui-react';`}
+                                code={`
+import { ${componentName} } from '@wb-tech/ui-react';
+// или
+import { ${componentName}, type IProps${componentName} } from '@wb-tech/ui-react';
+`}
                             />
                         </li>
                         <li>

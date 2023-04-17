@@ -7,31 +7,32 @@ export { useDesignTokensNative } from './native/design-tokens';
  * Hooks
  **/
 export { useClassnames, type TStyle } from './hooks/use-classnames';
-export { useDesignTokens } from './hooks/use-design-tokens';
+export { useDesignTokens, type IOptions as IOptionsDesignTokens } from './hooks/use-design-tokens';
 
 /**
  * Components
  **/
-export { DesignTokens } from './components/design-tokens';
-export { TabsComposition } from './components/tabs';
-export { Tabs } from './components/tabs/components/tabs';
-export { Tab } from './components/tabs/components/tab';
-export { TabList } from './components/tabs/components/tab-list';
-export { TabPanel } from './components/tabs/components/tab-panel';
-export { Tag } from './components/tag';
-export { Loader } from './components/loader';
-export { InputText } from './components/input-text';
-export { InputTextarea } from './components/textarea';
-export { NavItem } from './components/nav-item';
-export { Checkbox } from './components/checkbox';
-export { CheckboxGroup } from './components/checkbox-group';
-export { Button } from './components/button';
-export { ButtonGroup } from './components/button-group';
-export { Popover } from './components/popover';
+export { DesignTokens, type IProps as IPropsDesignTokens } from './components/design-tokens';
+export { TabsComposition, type IProps as IPropsTabsComposition } from './components/tabs';
+export { Tabs, type IProps as IPropsTabs } from './components/tabs/components/tabs';
+export { Tab, type IProps as IPropsTab } from './components/tabs/components/tab';
+export { TabList, type IProps as IPropsTabList } from './components/tabs/components/tab-list';
+export { TabPanel, type IProps as IPropsTabPanel } from './components/tabs/components/tab-panel';
+export { Tag, type IProps as IPropsTag } from './components/tag';
+export { Loader, type IProps as IPropsLoader } from './components/loader';
+export { InputText, type IProps as IPropsInputText } from './components/input-text';
+export { InputTextarea, type IProps as IPropsInputTextarea } from './components/textarea';
+export { NavItem, type IProps as IPropsNavItem } from './components/nav-item';
+export { Checkbox, type IProps as IPropsCheckbox } from './components/checkbox';
+export { CheckboxGroup, type IProps as IPropsCheckboxGroup } from './components/checkbox-group';
+export { Button, type IProps as IPropsButton } from './components/button';
+export { ButtonGroup, type IProps as IPropsButtonGroup } from './components/button-group';
+export { Popover, type IProps as IPropsPopover } from './components/popover';
 
 /**
  * Icons
  **/
+export type { IProps as IPropsIcon } from './components/icons';
 export { IconBarChart } from './components/icons/bar-chart';
 export { IconBook } from './components/icons/book';
 export { IconBookmark } from './components/icons/bookmark';
