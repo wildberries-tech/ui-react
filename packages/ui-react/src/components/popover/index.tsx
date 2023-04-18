@@ -121,6 +121,7 @@ export const Popover = ({ trigger = 'click', auto = true, placement = 'bottom-ce
             return (
                 <div
                     {...attrs}
+                    className={cn('popover__trigger')}
                     children={props.children}
                 />
             );
