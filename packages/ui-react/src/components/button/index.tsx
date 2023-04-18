@@ -1,7 +1,7 @@
 import React, { ButtonHTMLAttributes, useMemo } from 'react';
 import { isFragment, isElement } from 'react-is';
 
-import { TStyle, useClassnames } from '../../hooks/use-classnames';
+import { type TStyle, useClassnames } from '../../hooks/use-classnames';
 import { Loader } from '../loader';
 
 import style from './index.module.pcss';

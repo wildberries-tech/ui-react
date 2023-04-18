@@ -1,0 +1,50 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Default 1`] = `
+<span
+  className="counter counter_preset-style-orange counter_preset-size-small"
+>
+  99
+</span>
+`;
+
+exports[`Gray 1`] = `
+<span
+  className="counter counter_preset-style-dark-gray counter_preset-size-small"
+>
+  99
+</span>
+`;
+
+exports[`Gray 2`] = `
+<span
+  className="counter counter_preset-style-dark-gray counter_preset-size-big"
+>
+  99
+</span>
+`;
+
+exports[`Interactive 1`] = `
+<span
+  className="counter counter_preset-style-orange counter_preset-size-small counter_interactive"
+  onClick={[MockFunction]}
+>
+  11
+</span>
+`;
+
+exports[`Orange 1`] = `
+<span
+  className="counter counter_preset-style-orange counter_preset-size-small"
+>
+  99
+</span>
+`;
+
+exports[`Orange 2`] = `
+<span
+  className="counter counter_preset-style-orange counter_preset-size-big"
+>
+  99
+</span>
+`;
