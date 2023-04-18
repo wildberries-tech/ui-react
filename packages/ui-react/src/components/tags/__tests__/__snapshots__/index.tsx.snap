@@ -1,0 +1,45 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Custom tagName 1`] = `
+<ul
+  className="tags"
+>
+  <span
+    className="tag tag_style-tag tag_size-small"
+  >
+    Название тега
+  </span>
+  <span
+    className="tag tag_style-tag tag_size-small"
+  >
+    Название тега #2
+  </span>
+  <span
+    className="tag tag_style-tag tag_size-small"
+  >
+    Название тега #3
+  </span>
+</ul>
+`;
+
+exports[`Default 1`] = `
+<div
+  className="tags"
+>
+  <span
+    className="tag tag_style-tag tag_size-small"
+  >
+    Название тега
+  </span>
+  <span
+    className="tag tag_style-tag tag_size-small"
+  >
+    Название тега #2
+  </span>
+  <span
+    className="tag tag_style-tag tag_size-small"
+  >
+    Название тега #3
+  </span>
+</div>
+`;

@@ -29,6 +29,7 @@ export { Button, type IProps as IPropsButton } from './components/button';
 export { ButtonGroup, type IProps as IPropsButtonGroup } from './components/button-group';
 export { Popover, type IProps as IPropsPopover } from './components/popover';
 export { Counter, type IProps as IPropsCounter } from './components/counter';
+export { Tags, type IProps as IPropsTags } from './components/tags';
 
 /**
  * Icons
