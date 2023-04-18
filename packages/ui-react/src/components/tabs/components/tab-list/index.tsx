@@ -1,7 +1,7 @@
 import React from 'react';
 import { TabList as TabListSource, type TabListProps } from 'react-tabs';
 
-import { TStyle, useClassnames } from '../../../../hooks/use-classnames';
+import { type TStyle, useClassnames } from '../../../../hooks/use-classnames';
 
 import style from './index.module.pcss';
 

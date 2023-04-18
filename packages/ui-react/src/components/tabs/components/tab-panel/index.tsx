@@ -1,7 +1,7 @@
 import React, { ReactNode, useContext } from 'react';
 import { TabPanel as TabPanelSource, type TabPanelProps } from 'react-tabs';
 
-import { TStyle, useClassnames } from '../../../../hooks/use-classnames';
+import { type TStyle, useClassnames } from '../../../../hooks/use-classnames';
 import { context } from '../../context';
 
 import style from './index.module.pcss';

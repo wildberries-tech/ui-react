@@ -1,6 +1,6 @@
 import React, { FieldsetHTMLAttributes, ReactNode, useMemo } from 'react';
 
-import { TStyle, useClassnames } from '../../hooks/use-classnames';
+import { type TStyle, useClassnames } from '../../hooks/use-classnames';
 
 import style from './index.module.pcss';
 

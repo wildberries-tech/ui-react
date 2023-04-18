@@ -1,0 +1,43 @@
+.counter {
+    font-family: var(--font-family-primary);
+    font-style: normal;
+    font-weight: var(--counter-font-weight);
+    font-size: 13px;
+    line-height: 16px;
+    padding: var(--counter-padding);
+    border-radius: var(--counter-border-radius);
+    background-color: var(--counter-background-color);
+    color: var(--counter-color);
+
+    &_preset-size-small {
+        --counter-padding: 1px 5px;
+        --counter-border-radius: 9px;
+    }
+
+    &_preset-size-big {
+        --counter-padding: 4px 8px;
+        --counter-border-radius: 12px;
+    }
+
+    &_preset-style-orange {
+        --counter-background-color: var(--color-bg-accent);
+        --counter-font-weight: 700;
+        --counter-color: var(--color-text-inverse);
+    }
+
+    &_preset-style-dark-gray {
+        --counter-background-color: #727279;
+        --counter-font-weight: 500;
+        --counter-color: #343434;
+    }
+
+    &_interactive {
+
+        @media (hover: hover) and (pointer: fine) {
+
+            &:hover {
+                cursor: pointer;
+            }
+        }
+    }
+}
