@@ -1,6 +1,7 @@
 import type { Meta, StoryObj } from '@storybook/react';
 
 import { Counter } from '..';
+import module from '../index.module.pcss';
 
 const META: Meta<typeof Counter> = {
     title: 'Components/Counter',
@@ -8,6 +9,11 @@ const META: Meta<typeof Counter> = {
     tags: ['autodocs'],
     args: {
         children: '999'
+    },
+    parameters: {
+        css: {
+            module
+        }
     }
 };
 

@@ -1,11 +1,17 @@
 import type { Meta, StoryObj } from '@storybook/react';
 
 import { Loader } from '..';
+import module from '../index.module.pcss';
 
 const META: Meta<typeof Loader> = {
     title: 'Components/Loader',
     component: Loader,
-    tags: ['autodocs']
+    tags: ['autodocs'],
+    parameters: {
+        css: {
+            module
+        }
+    }
 };
 
 export default META;

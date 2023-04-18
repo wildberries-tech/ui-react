@@ -4,6 +4,7 @@ import type { Meta, StoryObj } from '@storybook/react';
 import { Tag } from '..';
 import { IconVerified } from '../../icons/verified';
 import { IconGlobe } from '../../icons/globe';
+import module from '../index.module.pcss';
 
 const META: Meta<typeof Tag> = {
     title: 'Components/Tag (Badge)',
@@ -11,6 +12,11 @@ const META: Meta<typeof Tag> = {
     tags: ['autodocs'],
     args: {
         children: 'Название тега'
+    },
+    parameters: {
+        css: {
+            module
+        }
     }
 };
 

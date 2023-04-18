@@ -2,6 +2,7 @@ import React from 'react';
 import type { Meta, StoryObj } from '@storybook/react';
 
 import { Tooltip } from '..';
+import module from '../index.module.pcss';
 
 const META: Meta<typeof Tooltip> = {
     title: 'Components/Tooltip',
@@ -10,6 +11,12 @@ const META: Meta<typeof Tooltip> = {
     args: {
         children: 'Trigger',
         render: 'По умолчанию доступны смежные категории размещения. Вы можете отключить размещение в какой-либо из категорий.'
+    },
+    parameters: {
+        css: {
+            html: false,
+            module
+        }
     }
 };
 

@@ -4,6 +4,7 @@ import type { Meta, StoryObj } from '@storybook/react';
 import { InputText } from '..';
 import { IconEye } from '../../icons/eye';
 import { IconGlobe } from '../../icons/globe';
+import module from '../index.module.pcss';
 
 const META: Meta<typeof InputText> = {
     title: 'Components/Fields/Text',
@@ -12,6 +13,11 @@ const META: Meta<typeof InputText> = {
     args: {
         name       : 'text-input-name',
         placeholder: 'Placeholder text'
+    },
+    parameters: {
+        css: {
+            module
+        }
     }
 };
 
