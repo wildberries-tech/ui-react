@@ -1,6 +1,7 @@
 import type { Meta, StoryObj } from '@storybook/react';
 
 import { InputTextarea } from '..';
+import module from '../index.module.pcss';
 
 const META: Meta<typeof InputTextarea> = {
     title: 'Components/Fields/Textarea',
@@ -9,6 +10,11 @@ const META: Meta<typeof InputTextarea> = {
     args: {
         name       : 'textarea-field',
         placeholder: 'Заполни меня полностью...'
+    },
+    parameters: {
+        css: {
+            module
+        }
     }
 };
 

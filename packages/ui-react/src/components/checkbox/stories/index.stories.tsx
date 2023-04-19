@@ -1,6 +1,7 @@
 import type { Meta, StoryObj } from '@storybook/react';
 
 import { Checkbox } from '..';
+import module from '../index.module.pcss';
 
 const META: Meta<typeof Checkbox> = {
     title: 'Components/Fields/Checkboxes/Checkbox',
@@ -8,6 +9,11 @@ const META: Meta<typeof Checkbox> = {
     tags: ['autodocs'],
     args: {
         name: 'my-checkbox'
+    },
+    parameters: {
+        css: {
+            module
+        }
     }
 };
 

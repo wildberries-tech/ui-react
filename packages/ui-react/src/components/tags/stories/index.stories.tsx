@@ -3,6 +3,7 @@ import type { Meta, StoryObj } from '@storybook/react';
 
 import { Tag } from '../../tag';
 import { Tags } from '..';
+import module from '../index.module.pcss';
 
 const META: Meta<typeof Tags> = {
     title: 'Components/Tags',
@@ -46,6 +47,11 @@ const META: Meta<typeof Tags> = {
                 presetStyle="badge-purple"
             />
         ]
+    },
+    parameters: {
+        css: {
+            module
+        }
     }
 };
 

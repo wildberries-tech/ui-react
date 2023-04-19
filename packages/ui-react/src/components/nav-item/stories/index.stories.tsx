@@ -1,6 +1,7 @@
 import type { Meta, StoryObj } from '@storybook/react';
 
 import { NavItem } from '..';
+import module from '../index.module.pcss';
 
 const META: Meta<typeof NavItem> = {
     title: 'Components/NavItem',
@@ -9,6 +10,11 @@ const META: Meta<typeof NavItem> = {
     args: {
         children: 'Кнопка',
         href: '#'
+    },
+    parameters: {
+        css: {
+            module
+        }
     }
 };
 

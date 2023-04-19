@@ -3,6 +3,7 @@ import type { Meta, StoryObj } from '@storybook/react';
 
 import { CheckboxGroup } from '..';
 import { Checkbox } from '../../checkbox';
+import module from '../index.module.pcss';
 
 const META: Meta<typeof CheckboxGroup> = {
     title: 'Components/Fields/Checkboxes/CheckboxGroup',
@@ -27,6 +28,11 @@ const META: Meta<typeof CheckboxGroup> = {
                 description="Description checkbox 3"
             />
         ]
+    },
+    parameters: {
+        css: {
+            module
+        }
     }
 };
 

@@ -3,6 +3,7 @@ import type { Meta, StoryObj } from '@storybook/react';
 
 import { ButtonGroup } from '..';
 import { Button } from '../../button';
+import module from '../index.module.pcss';
 
 const META: Meta<typeof ButtonGroup> = {
     title: 'Components/Buttons/Button Group',
@@ -21,6 +22,11 @@ const META: Meta<typeof ButtonGroup> = {
                 children="Cancel"
             />
         ]
+    },
+    parameters: {
+        css: {
+            module
+        }
     }
 };
 

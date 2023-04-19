@@ -2,6 +2,10 @@ import React from 'react';
 import type { Meta, StoryObj } from '@storybook/react';
 
 import { TabsComposition } from '..';
+import moduleTabs from '../components/tabs/index.module.pcss';
+import moduleTab from '../components/tab/index.module.pcss';
+import moduleTabPanel from '../components/tab-panel/index.module.pcss';
+import moduleTabList from '../components/tab-list/index.module.pcss';
 
 import { SetupExtended } from './setup.extended';
 
@@ -20,6 +24,9 @@ const META: Meta<typeof TabsComposition> = {
                     content: <SetupExtended />
                 }
             }
+        },
+        css: {
+            module: Object.assign(moduleTabs, moduleTab, moduleTabPanel, moduleTabList)
         }
     },
     args: {
