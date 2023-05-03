@@ -1,0 +1,70 @@
+.switch {
+    display: grid;
+    grid-auto-flow: column;
+    grid-column-gap: 12px;
+
+    --switch-background-color: var(--color-border-basic);
+    --switch-background-color-hover: rgba(209, 207, 215, 0.8);
+
+    @media (hover: hover) and (pointer: fine) {
+
+        &:hover:not(&_disabled) {
+            cursor: pointer;
+
+            --switch-background-color: var(--switch-background-color-hover);
+        }
+    }
+
+    &__input {
+        display: none;
+        opacity: 0;
+        width: 0;
+        height: 0;
+    }
+
+    &__input-view {
+        box-sizing: border-box;
+        border-radius: 8px;
+        padding: 0;
+        margin: 0;
+        height: 16px;
+        width: 28px;
+        background-color: var(--switch-background-color);
+        position: relative;
+        transition: all 150ms linear;
+
+        @media screen and (prefers-reduced-motion: reduce) {
+            transition: none;
+        }
+
+        &::before {
+            content: "";
+            display: block;
+            width: 14px;
+            height: 14px;
+            background-color: var(--color-bg-base);
+            border-radius: 50%;
+            position: absolute;
+            top: 1px;
+            left: 1px;
+            box-shadow: -1px 0 2px rgba(0, 0, 0, 0.08);
+            transition: all 150ms linear;
+
+            @media screen and (prefers-reduced-motion: reduce) {
+                transition: none;
+            }
+        }
+    }
+
+    &__input:checked + &__input-view {
+
+        &::before {
+            left: calc(100% - 15px);
+        }
+    }
+
+    &__input:not([disabled]) + &__input-view:focus {
+        outline: none;
+        box-shadow: 0 0 0 2px rgba(80, 103, 222, 0.2);
+    }
+}
