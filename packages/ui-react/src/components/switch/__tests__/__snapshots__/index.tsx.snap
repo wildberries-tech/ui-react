@@ -1,0 +1,270 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Default Checked & disabled 1`] = `
+<label
+  className="switch switch_disabled"
+>
+  <input
+    aria-checked={true}
+    checked={true}
+    className="switch__input"
+    disabled={true}
+    name="default"
+    role="checkbox"
+    tabIndex={-1}
+    type="checkbox"
+  />
+  <div
+    className="switch__input-view"
+    tabIndex={-1}
+  />
+</label>
+`;
+
+exports[`Default Checked 1`] = `
+<label
+  className="switch"
+>
+  <input
+    aria-checked={true}
+    checked={true}
+    className="switch__input"
+    name="default"
+    role="checkbox"
+    tabIndex={0}
+    type="checkbox"
+  />
+  <div
+    className="switch__input-view"
+    tabIndex={0}
+  />
+</label>
+`;
+
+exports[`Default Not checked & disabled 1`] = `
+<label
+  className="switch switch_disabled"
+>
+  <input
+    aria-checked={false}
+    className="switch__input"
+    disabled={true}
+    name="default"
+    role="checkbox"
+    tabIndex={-1}
+    type="checkbox"
+  />
+  <div
+    className="switch__input-view"
+    tabIndex={-1}
+  />
+</label>
+`;
+
+exports[`Default Not checked 1`] = `
+<label
+  className="switch"
+>
+  <input
+    aria-checked={false}
+    className="switch__input"
+    name="default"
+    role="checkbox"
+    tabIndex={0}
+    type="checkbox"
+  />
+  <div
+    className="switch__input-view"
+    tabIndex={0}
+  />
+</label>
+`;
+
+exports[`Default With ID 1`] = `
+<label
+  className="switch"
+  id="custom-id"
+>
+  <input
+    aria-checked={false}
+    className="switch__input"
+    id="custom-id-input"
+    name="default"
+    role="checkbox"
+    tabIndex={0}
+    type="checkbox"
+  />
+  <div
+    className="switch__input-view"
+    tabIndex={0}
+  />
+</label>
+`;
+
+exports[`Label & Description Checked & disabled 1`] = `
+<label
+  className="switch switch_disabled"
+>
+  <input
+    aria-checked={true}
+    checked={true}
+    className="switch__input"
+    disabled={true}
+    name="default"
+    role="checkbox"
+    tabIndex={-1}
+    type="checkbox"
+  />
+  <div
+    className="switch__input-view"
+    tabIndex={-1}
+  />
+  Checkbox label
+</label>
+`;
+
+exports[`Label & Description Checked 1`] = `
+<label
+  className="switch"
+>
+  <input
+    aria-checked={true}
+    checked={true}
+    className="switch__input"
+    name="default"
+    role="checkbox"
+    tabIndex={0}
+    type="checkbox"
+  />
+  <div
+    className="switch__input-view"
+    tabIndex={0}
+  />
+  Checkbox label
+</label>
+`;
+
+exports[`Label & Description Not checked & disabled 1`] = `
+<label
+  className="switch switch_disabled"
+>
+  <input
+    aria-checked={false}
+    className="switch__input"
+    disabled={true}
+    name="default"
+    role="checkbox"
+    tabIndex={-1}
+    type="checkbox"
+  />
+  <div
+    className="switch__input-view"
+    tabIndex={-1}
+  />
+  Checkbox label
+</label>
+`;
+
+exports[`Label & Description Not checked 1`] = `
+<label
+  className="switch"
+>
+  <input
+    aria-checked={false}
+    className="switch__input"
+    name="default"
+    role="checkbox"
+    tabIndex={0}
+    type="checkbox"
+  />
+  <div
+    className="switch__input-view"
+    tabIndex={0}
+  />
+  Checkbox label
+</label>
+`;
+
+exports[`Label Checked & disabled 1`] = `
+<label
+  className="switch switch_disabled"
+>
+  <input
+    aria-checked={true}
+    checked={true}
+    className="switch__input"
+    disabled={true}
+    name="default"
+    role="checkbox"
+    tabIndex={-1}
+    type="checkbox"
+  />
+  <div
+    className="switch__input-view"
+    tabIndex={-1}
+  />
+  Checkbox label
+</label>
+`;
+
+exports[`Label Checked 1`] = `
+<label
+  className="switch"
+>
+  <input
+    aria-checked={true}
+    checked={true}
+    className="switch__input"
+    name="default"
+    role="checkbox"
+    tabIndex={0}
+    type="checkbox"
+  />
+  <div
+    className="switch__input-view"
+    tabIndex={0}
+  />
+  Checkbox label
+</label>
+`;
+
+exports[`Label Not checked & disabled 1`] = `
+<label
+  className="switch switch_disabled"
+>
+  <input
+    aria-checked={false}
+    className="switch__input"
+    disabled={true}
+    name="default"
+    role="checkbox"
+    tabIndex={-1}
+    type="checkbox"
+  />
+  <div
+    className="switch__input-view"
+    tabIndex={-1}
+  />
+  Checkbox label
+</label>
+`;
+
+exports[`Label Not checked 1`] = `
+<label
+  className="switch"
+>
+  <input
+    aria-checked={false}
+    className="switch__input"
+    name="default"
+    role="checkbox"
+    tabIndex={0}
+    type="checkbox"
+  />
+  <div
+    className="switch__input-view"
+    tabIndex={0}
+  />
+  Checkbox label
+</label>
+`;
