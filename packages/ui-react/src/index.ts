@@ -31,7 +31,8 @@ export { Popover, type IProps as IPropsPopover } from './components/popover';
 export { Counter, type IProps as IPropsCounter } from './components/counter';
 export { Tags, type IProps as IPropsTags } from './components/tags';
 export { Switch, type IProps as IPropsSwitch } from './components/switch';
-export { Typography, type IProps as IPropsTypography } from './components/typography';
+export { Title, type IProps as IPropsTypographyTitle } from './components/typography/title';
+export { Text, type IProps as IPropsTypographyText } from './components/typography/text';
 
 /**
  * Icons

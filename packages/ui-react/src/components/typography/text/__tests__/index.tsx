@@ -1,22 +1,23 @@
 import React from 'react';
 import * as renderer from 'react-test-renderer';
 
-import { Typography, typographySize, typographyColor, typographyTags } from '..';
+import { Text, typographyTextSize, typographyTextTags } from '..';
+import { typographyColor } from '../../types';
 
-describe('Typography', () => {
-    typographySize.map((size) => {
-        return typographyTags.map((tag) => {
+describe('Text', () => {
+    typographyTextSize.map((size) => {
+        return typographyTextTags.map((tag) => {
             return typographyColor.map((color) => {
                 test(`${size}: ${tag}: ${color}`, () => {
                     const tree = renderer.create(
-                        <Typography
+                        <Text
                             key={`${size}: ${tag}: ${color}`}
-                            size={size}
-                            tag={tag}
-                            color={color}
+                            presetSize={size}
+                            tagName={tag}
+                            presetColor={color}
                         >
                             {`${size}: ${tag}: ${color}`}
-                        </Typography>
+                        </Text>
                     ).toJSON();
 
                     expect(tree).toMatchSnapshot();
