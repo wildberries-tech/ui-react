@@ -9,6 +9,7 @@ interface Stylesheet {
     'typography_color-disabled': string
     'typography_color-error': string
     'typography_color-headers': string
+    'typography_color-inherit': string
     'typography_color-inverse': string
     'typography_color-link': string
     'typography_color-secondary': string
