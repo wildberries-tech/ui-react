@@ -1,12 +1,4 @@
-import React, {
-    cloneElement,
-    MutableRefObject,
-    ReactNode,
-    useCallback,
-    useMemo,
-    useRef,
-    useState
-} from 'react';
+import React, { cloneElement, MutableRefObject, ReactNode, useCallback, useMemo, useRef, useState } from 'react';
 import { useLayer, useHover, Arrow, mergeRefs } from 'react-laag';
 import { isElement } from 'react-is';
 import type { Options } from 'react-laag/dist/types';
@@ -115,8 +107,7 @@ export const Popover = ({ trigger = 'click', auto = true, placement = 'bottom-ce
         if(trigger === 'hover') {
             attrs = {
                 ...attrs,
-                ...hoverProps,
-                ...triggerProps
+                ...hoverProps
             };
         } else {
             attrs.onClick = (e: MouseEvent) => {
