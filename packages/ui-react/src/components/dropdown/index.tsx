@@ -1,11 +1,8 @@
 import React, { HTMLAttributes, ReactElement, ReactNode, useCallback } from 'react';
-import { UseLayerOptions } from 'react-laag';
-import { PlacementType } from 'react-laag/dist/PlacementType';
-import { UseHoverOptions } from 'react-laag/dist/useHover';
 import { isElement } from 'react-is';
 
-import { type TStyle, useClassnames } from '../../hooks/use-classnames';
-import { Popover } from '../popover';
+import { useClassnames } from '../../hooks/use-classnames';
+import { Popover, IProps as IPopoverProps } from '../popover';
 import { IconMoreVertical } from '../icons/more-vertical';
 import { IconArrowsChevronBottom } from '../icons/arrows/chevron-bottom';
 
@@ -23,35 +20,11 @@ interface ICustomTriggerElement {
     triggerText?: string
 }
 
-export interface IProps<T extends ReactElement | ICustomTriggerElement = any> extends Pick<HTMLAttributes<HTMLDivElement>, 'style'> {
+export interface IProps<T extends ReactElement | ICustomTriggerElement = any> extends Pick<HTMLAttributes<HTMLDivElement>, 'style'>, Omit<IPopoverProps, 'syncOptionsWidth'> {
     /**
-     * Задает дополнительные CSS классы для стилизации компонента.
-     **/
-    className?: string | TStyle,
-    /**
-     * Children - выпадающий элемент дропдауна
+     * Render выпадающего элемента дропдауна
      **/
     render?: ((isOpen: boolean, onClose: () => void) => ReactNode | Array<ReactNode> | null),
-    /**
-     * Свойства слоя компонента React-laag
-     **/
-    layerOptions?: Partial<UseLayerOptions>,
-    /**
-     * Позиционирование элемента дропдауна
-     **/
-    placement?: PlacementType,
-    /**
-     * Событие закрытия дропдауна
-     */
-    onClose?: () => void,
-    /**
-     * Событие, при котором будет открываться `Dropdown`.
-     */
-    trigger?: 'click' | 'hover',
-    /**
-     * Свойства события hover компонента React-laag
-     **/
-    hoverOptions?: UseHoverOptions,
     /**
      * Триггер-элемент дропдауна
      */
@@ -105,9 +78,9 @@ export const Dropdown = ({ placement = 'bottom-end', ...props }: IProps) => {
 
     return (
         <Popover
-            className={cn('dropdown')}
             placement={placement}
             children={elTrigger}
+            syncOptionsWidth={true}
             {...props}
         />
     );

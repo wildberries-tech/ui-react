@@ -189,34 +189,3 @@ export const CustomElementTriggerText: StoryFn<typeof META> = () => {
     );
 };
 
-// eslint-disable-next-line react/no-multi-comp
-export const HoverDropdown: StoryFn<typeof META> = () => {
-    const [active, setActive] = useState<string>('Нажать');
-
-    return (
-        <Dropdown
-            triggerElement={{
-                elRightIcon: <IconArrowsChevronRight />,
-                elLeftIcon: <IconDownload />,
-                triggerText: active
-            }}
-            trigger="hover"
-            render={(isOpen, onClose) => {
-                return dropdownOptions.map((option, index) => (
-                    <div
-                        key={index}
-                        onClick={() => {
-                            option.handleClick();
-
-                            setActive(option.label);
-
-                            onClose();
-                        }}
-                    >
-                        {option.label}
-                    </div>
-                ));
-            }}
-        />
-    );
-};
