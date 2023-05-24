@@ -27,7 +27,7 @@ test('Default use', async () => {
                 elLeftIcon: <IconDownload />,
                 triggerText: 'Trigger'
             }}
-            children={(isOpen, onClose) => {
+            render={(isOpen, onClose) => {
                 return dropdownOptions.map((option, index) => (
                     <div
                         key={index}

@@ -41,14 +41,20 @@ export const Default: StoryObj<typeof META> = {
             triggerText: 'Нажать',
             elRightIcon: 'dots'
         },
-        children: dropdownOptions.map((option, index) => (
-            <div
-                key={index}
-                onClick={option.handleClick}
-            >
-                {option.label}
-            </div>
-        ))
+        render: (isOpen, onClose) => {
+            return dropdownOptions.map((option, index) => (
+                <div
+                    key={index}
+                    onClick={() => {
+                        option.handleClick();
+
+                        onClose();
+                    }}
+                >
+                    {option.label}
+                </div>
+            ));
+        }
     }
 };
 
@@ -58,14 +64,20 @@ export const DefaultOptions: StoryObj<typeof META> = {
             triggerText: 'Нажать',
             elRightIcon: 'chevron'
         },
-        children: dropdownOptions.map((option, index) => (
-            <div
-                key={index}
-                onClick={option.handleClick}
-            >
-                {option.label}
-            </div>
-        ))
+        render: (isOpen, onClose) => {
+            return dropdownOptions.map((option, index) => (
+                <div
+                    key={index}
+                    onClick={() => {
+                        option.handleClick();
+
+                        onClose();
+                    }}
+                >
+                    {option.label}
+                </div>
+            ));
+        }
     }
 };
 
@@ -75,14 +87,20 @@ export const CustomRightIcon: StoryObj<typeof META> = {
             triggerText: 'Нажать',
             elRightIcon: <IconArrowsChevronRight />
         },
-        children: dropdownOptions.map((option, index) => (
-            <div
-                key={index}
-                onClick={option.handleClick}
-            >
-                {option.label}
-            </div>
-        ))
+        render: (isOpen, onClose) => {
+            return dropdownOptions.map((option, index) => (
+                <div
+                    key={index}
+                    onClick={() => {
+                        option.handleClick();
+
+                        onClose();
+                    }}
+                >
+                    {option.label}
+                </div>
+            ));
+        }
     }
 };
 
@@ -93,19 +111,25 @@ export const CustomRightLeftIcon: StoryObj<typeof META> = {
             elRightIcon: <IconArrowsChevronRight />,
             elLeftIcon: <IconDownload />
         },
-        children: dropdownOptions.map((option, index) => (
-            <div
-                key={index}
-                onClick={option.handleClick}
-            >
-                {option.label}
-            </div>
-        ))
+        render: (isOpen, onClose) => {
+            return dropdownOptions.map((option, index) => (
+                <div
+                    key={index}
+                    onClick={() => {
+                        option.handleClick();
+
+                        onClose();
+                    }}
+                >
+                    {option.label}
+                </div>
+            ));
+        }
     }
 };
 
 export const ActiveElementTriggerText: StoryFn<typeof META> = () => {
-    const [active, setActive] = useState<string>('Нажать');
+    const [active, setActive] = useState<string>('Нажать триггер');
 
     return (
         <Dropdown
@@ -114,18 +138,22 @@ export const ActiveElementTriggerText: StoryFn<typeof META> = () => {
                     {active}
                 </div>
             )}
-            children={dropdownOptions.map((option, index) => (
-                <div
-                    key={index}
-                    onClick={() => {
-                        option.handleClick();
+            render={(isOpen, onClose) => {
+                return dropdownOptions.map((option, index) => (
+                    <div
+                        key={index}
+                        onClick={() => {
+                            option.handleClick();
 
-                        setActive(option.label);
-                    }}
-                >
-                    {option.label}
-                </div>
-            ))}
+                            setActive(option.label);
+
+                            onClose();
+                        }}
+                    >
+                        {option.label}
+                    </div>
+                ));
+            }}
         />
     );
 };
@@ -141,24 +169,28 @@ export const CustomElementTriggerText: StoryFn<typeof META> = () => {
                 elLeftIcon: <IconDownload />,
                 triggerText: active
             }}
-            children={dropdownOptions.map((option, index) => (
-                <div
-                    key={index}
-                    onClick={() => {
-                        option.handleClick();
+            render={(isOpen, onClose) => {
+                return dropdownOptions.map((option, index) => (
+                    <div
+                        key={index}
+                        onClick={() => {
+                            option.handleClick();
 
-                        setActive(option.label);
-                    }}
-                >
-                    {option.label}
-                </div>
-            ))}
+                            setActive(option.label);
+
+                            onClose();
+                        }}
+                    >
+                        {option.label}
+                    </div>
+                ));
+            }}
         />
     );
 };
 
 // eslint-disable-next-line react/no-multi-comp
-export const ChildrenFunction: StoryFn<typeof META> = () => {
+export const HoverDropdown: StoryFn<typeof META> = () => {
     const [active, setActive] = useState<string>('Нажать');
 
     return (
@@ -168,16 +200,17 @@ export const ChildrenFunction: StoryFn<typeof META> = () => {
                 elLeftIcon: <IconDownload />,
                 triggerText: active
             }}
-            children={(isOpen, onClose) => {
+            trigger="hover"
+            render={(isOpen, onClose) => {
                 return dropdownOptions.map((option, index) => (
                     <div
                         key={index}
                         onClick={() => {
                             option.handleClick();
 
-                            onClose();
-
                             setActive(option.label);
+
+                            onClose();
                         }}
                     >
                         {option.label}

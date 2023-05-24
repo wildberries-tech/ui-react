@@ -16,7 +16,7 @@ export interface IProps {
     /**
      * Принимает элементы, которые будут использованы в качестве триггера.
      **/
-    children?: ReactNode,
+    children?: ReactNode | ((isOpen: boolean, onClose: () => void) => ReactNode),
     /**
      * Событие, при котором будет открываться `Popover`.
      **/
@@ -51,7 +51,7 @@ export interface IProps {
     /**
      * Определяет, какой контент будет отображаться внутри всплывающего окна.
      **/
-    render?: ReactNode | (() => ReactNode),
+    render?: ReactNode | ((isOpen: boolean, onClose: () => void) => ReactNode),
     hoverOptions?: UseHoverOptions,
     /**
      * Определяет, должна ли стрелка быть отображена внутри всплывающего блока.
@@ -113,8 +113,10 @@ export const Popover = ({ trigger = 'click', auto = true, placement = 'bottom-ce
             };
         }
 
-        if(isElement(props.children)) {
-            return cloneElement(props.children, attrs);
+        const childrenElement = typeof props.children === 'function' ? props.children(isOpen, onClose) : props.children;
+
+        if(isElement(childrenElement)) {
+            return cloneElement(childrenElement, attrs);
         }
 
         if(props.children) {
@@ -122,7 +124,7 @@ export const Popover = ({ trigger = 'click', auto = true, placement = 'bottom-ce
                 <div
                     {...attrs}
                     className={cn('popover__trigger')}
-                    children={props.children}
+                    children={childrenElement}
                 />
             );
         }
@@ -146,7 +148,7 @@ export const Popover = ({ trigger = 'click', auto = true, placement = 'bottom-ce
                     {...layerProps}
                     className={cn('popover__content')}
                 >
-                    {typeof props.render === 'function' ? props.render() : props.render}
+                    {typeof props.render === 'function' ? props.render(isOpen, onClose) : props.render}
                     {elArrow}
                 </div>
             );
