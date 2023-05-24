@@ -46,7 +46,7 @@ test('Default use', async () => {
 
     expect(asFragment()).toMatchSnapshot();
 
-    fireEvent.click(getByText('Text trigger'));
+    fireEvent.click(getByText('Trigger'));
 
     await waitFor(() => {
         expect(asFragment()).toMatchSnapshot();
