@@ -2,81 +2,85 @@
 
 exports[`Default use 1`] = `
 <DocumentFragment>
-  <div
-    class="dropdown__trigger"
-  >
-    <svg
-      height="24"
-      viewBox="0 0 24 24"
-      width="24"
-      xmlns="http://www.w3.org/2000/svg"
+  <div>
+    <div
+      class="dropdown__trigger"
     >
-      <path
-        clip-rule="evenodd"
-        d="M16.293 9.293 13 12.586V2h-2v10.586L7.707 9.293l-1.414 1.414L12 16.414l5.707-5.707-1.414-1.414ZM22 20v-4h-2v4H4v-4H2v4a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2Z"
-        fill-rule="evenodd"
-      />
-    </svg>
-    Trigger
-    <svg
-      height="24"
-      viewBox="0 0 24 24"
-      width="24"
-      xmlns="http://www.w3.org/2000/svg"
-    >
-      <path
-        clip-rule="evenodd"
-        d="M14.586 12 7.293 4.707l1.414-1.414L17.414 12l-8.707 8.707-1.414-1.414L14.586 12Z"
-        fill-rule="evenodd"
-      />
-    </svg>
+      <svg
+        height="24"
+        viewBox="0 0 24 24"
+        width="24"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <path
+          clip-rule="evenodd"
+          d="M16.293 9.293 13 12.586V2h-2v10.586L7.707 9.293l-1.414 1.414L12 16.414l5.707-5.707-1.414-1.414ZM22 20v-4h-2v4H4v-4H2v4a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2Z"
+          fill-rule="evenodd"
+        />
+      </svg>
+      Trigger
+      <svg
+        height="24"
+        viewBox="0 0 24 24"
+        width="24"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <path
+          clip-rule="evenodd"
+          d="M14.586 12 7.293 4.707l1.414-1.414L17.414 12l-8.707 8.707-1.414-1.414L14.586 12Z"
+          fill-rule="evenodd"
+        />
+      </svg>
+    </div>
   </div>
 </DocumentFragment>
 `;
 
 exports[`Default use 2`] = `
 <DocumentFragment>
-  <div
-    class="dropdown__trigger"
-  >
-    <svg
-      height="24"
-      viewBox="0 0 24 24"
-      width="24"
-      xmlns="http://www.w3.org/2000/svg"
+  <div>
+    <div
+      class="dropdown__trigger"
     >
-      <path
-        clip-rule="evenodd"
-        d="M16.293 9.293 13 12.586V2h-2v10.586L7.707 9.293l-1.414 1.414L12 16.414l5.707-5.707-1.414-1.414ZM22 20v-4h-2v4H4v-4H2v4a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2Z"
-        fill-rule="evenodd"
-      />
-    </svg>
-    Trigger
-    <svg
-      height="24"
-      viewBox="0 0 24 24"
-      width="24"
-      xmlns="http://www.w3.org/2000/svg"
+      <svg
+        height="24"
+        viewBox="0 0 24 24"
+        width="24"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <path
+          clip-rule="evenodd"
+          d="M16.293 9.293 13 12.586V2h-2v10.586L7.707 9.293l-1.414 1.414L12 16.414l5.707-5.707-1.414-1.414ZM22 20v-4h-2v4H4v-4H2v4a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2Z"
+          fill-rule="evenodd"
+        />
+      </svg>
+      Trigger
+      <svg
+        height="24"
+        viewBox="0 0 24 24"
+        width="24"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <path
+          clip-rule="evenodd"
+          d="M14.586 12 7.293 4.707l1.414-1.414L17.414 12l-8.707 8.707-1.414-1.414L14.586 12Z"
+          fill-rule="evenodd"
+        />
+      </svg>
+    </div>
+    <div
+      class="popover__content"
+      style="position: fixed; top: 0px; left: 0px; min-width: 0;"
     >
-      <path
-        clip-rule="evenodd"
-        d="M14.586 12 7.293 4.707l1.414-1.414L17.414 12l-8.707 8.707-1.414-1.414L14.586 12Z"
-        fill-rule="evenodd"
-      />
-    </svg>
-  </div>
-  <div
-    class="popover__content"
-    style="position: fixed; top: 0px; left: 0px;"
-  >
-    <div>
-      Option 1
-    </div>
-    <div>
-      Option 2
-    </div>
-    <div>
-      Option 3
+      <div>
+        Option 1
+      </div>
+      <div>
+        Option 2
+      </div>
+      <div>
+        Option 3
+      </div>
     </div>
   </div>
 </DocumentFragment>
