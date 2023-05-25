@@ -1,4 +1,4 @@
-import React, { cloneElement, Fragment, ReactNode, useCallback, useMemo, useRef, useState } from 'react';
+import React, { cloneElement, MutableRefObject, ReactNode, useCallback, useMemo, useRef, useState } from 'react';
 import { useLayer, useHover, Arrow, mergeRefs } from 'react-laag';
 import { isElement } from 'react-is';
 import type { Options } from 'react-laag/dist/types';
@@ -16,7 +16,7 @@ export interface IProps {
     /**
      * Принимает элементы, которые будут использованы в качестве триггера.
      **/
-    children?: ReactNode,
+    children?: ReactNode | ((isOpen: boolean, onClose: () => void) => ReactNode),
     /**
      * Событие, при котором будет открываться `Popover`.
      **/
@@ -51,7 +51,7 @@ export interface IProps {
     /**
      * Определяет, какой контент будет отображаться внутри всплывающего окна.
      **/
-    render?: ReactNode | (() => ReactNode),
+    render?: ReactNode | ((isOpen: boolean, onClose: () => void, ref: MutableRefObject<HTMLElement | null>) => ReactNode),
     hoverOptions?: UseHoverOptions,
     /**
      * Определяет, должна ли стрелка быть отображена внутри всплывающего блока.
@@ -64,7 +64,11 @@ export interface IProps {
         borderWidth?: number,
         borderColor?: string,
         backgroundColor?: string
-    }
+    },
+    /**
+     * Устанавливает минимальную ширину выпадающего списка, равную элементу триггера
+     **/
+    syncOptionsWidth?: boolean
 }
 
 /**
@@ -113,8 +117,10 @@ export const Popover = ({ trigger = 'click', auto = true, placement = 'bottom-ce
             };
         }
 
-        if(isElement(props.children)) {
-            return cloneElement(props.children, attrs);
+        const childrenElement = typeof props.children === 'function' ? props.children(isOpen, onClose) : props.children;
+
+        if(isElement(childrenElement)) {
+            return cloneElement(childrenElement, attrs);
         }
 
         if(props.children) {
@@ -122,7 +128,7 @@ export const Popover = ({ trigger = 'click', auto = true, placement = 'bottom-ce
                 <div
                     {...attrs}
                     className={cn('popover__trigger')}
-                    children={props.children}
+                    children={childrenElement}
                 />
             );
         }
@@ -144,9 +150,13 @@ export const Popover = ({ trigger = 'click', auto = true, placement = 'bottom-ce
             return renderLayer(
                 <div
                     {...layerProps}
+                    style={{
+                        ...layerProps.style,
+                        minWidth: props.syncOptionsWidth ? $trigger.current?.offsetWidth : undefined
+                    }}
                     className={cn('popover__content')}
                 >
-                    {typeof props.render === 'function' ? props.render() : props.render}
+                    {typeof props.render === 'function' ? props.render(isOpen, onClose, $trigger) : props.render}
                     {elArrow}
                 </div>
             );
@@ -154,9 +164,9 @@ export const Popover = ({ trigger = 'click', auto = true, placement = 'bottom-ce
     }, [isOpen, isOver, trigger, layerProps, elArrow, renderLayer]);
 
     return (
-        <Fragment>
+        <div>
             {elTrigger}
             {elContent}
-        </Fragment>
+        </div>
     );
 };
