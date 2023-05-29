@@ -4,22 +4,36 @@ import * as renderer from 'react-test-renderer';
 import { Title, typographyTitleTags } from '..';
 import { typographyColor } from '../../types';
 
-describe('Title', () => {
+describe('Text', () => {
     typographyTitleTags.map((tag) => {
-        return typographyColor.map((color) => {
-            test(`${tag}: ${color}`, () => {
-                const tree = renderer.create(
-                    <Title
-                        key={`${tag}: ${color}`}
-                        tagName={tag}
-                        presetColor={color}
-                    >
-                        {`${tag}: ${color}`}
-                    </Title>
-                ).toJSON();
+        test(tag, () => {
+            const tree = renderer.create(
+                <Title
+                    key={tag}
+                    tagName={tag}
+                >
+                    {tag}
+                </Title>
+            ).toJSON();
 
-                expect(tree).toMatchSnapshot();
-            });
+            expect(tree).toMatchSnapshot();
+        });
+    });
+});
+
+describe('Text', () => {
+    typographyColor.map((color) => {
+        test(color, () => {
+            const tree = renderer.create(
+                <Title
+                    key={color}
+                    presetColor={color}
+                >
+                    {color}
+                </Title>
+            ).toJSON();
+
+            expect(tree).toMatchSnapshot();
         });
     });
 });

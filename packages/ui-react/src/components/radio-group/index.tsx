@@ -5,11 +5,33 @@ import { Text } from '../typography/text';
 
 import style from './index.module.pcss';
 
-export interface IProps extends Pick<FieldsetHTMLAttributes<HTMLFieldSetElement>, 'disabled' | 'id'> {
+type TNative = FieldsetHTMLAttributes<HTMLFieldSetElement>;
+
+export interface IProps {
+    /**
+     * React-компоненты `Checkbox`, которые являются частью группы.
+     **/
     children: ReactNode,
+    /**
+     * Определяет CSS-классы, которые будут применены к корневому элементу
+     **/
     className?: string | TStyle,
+    /**
+     * Текст, который будет использован в качестве заголовка группы чекбоксов.
+     **/
     legend?: ReactNode,
-    direction?: 'row' | 'column'
+    /**
+     * Направление, в котором будут располагаться чекбоксы.
+     **/
+    direction?: 'row' | 'column',
+    /**
+     * Определяет, должны ли все чекбоксы в группе быть отключеными.
+     **/
+    disabled?: TNative['disabled'],
+    /**
+     * Уникальный идентификатор компонента
+     **/
+    id?: TNative['id']
 }
 
 export const RadioGroup = ({ direction = 'row', ...props }: IProps) => {
