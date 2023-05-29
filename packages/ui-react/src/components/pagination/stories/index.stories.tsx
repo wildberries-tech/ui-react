@@ -38,6 +38,23 @@ export const Default: StoryFn<typeof Pagination> = () => {
     );
 };
 
+export const ErrorProps: StoryFn<typeof Pagination> = () => {
+    const [currentPageOne, setCurrentPageOne] = useState<number>(1);
+
+    return (
+        <Pagination
+            i18n={{
+                label: 'Показать записей'
+            }}
+            currentPage={currentPageOne}
+            onChangePage={setCurrentPageOne}
+            numberOfItems={10}
+            numberItemsPerPage={10}
+            showPageInput={true}
+        />
+    );
+};
+
 // eslint-disable-next-line react/no-multi-comp
 export const ManyItems: StoryFn<typeof Pagination> = () => {
     const [currentPageOne, setCurrentPageOne] = useState<number>(1);

@@ -162,7 +162,11 @@ export const Pagination = ({
     }, [numberItemsPerPage]);
 
     if(props.showPageInput && !placeholder) {
-        throw new Error('Для инпута ручного выбора страницы обязательно необходимо указать placeholder');
+        return (
+            <Text presetColor="error">
+                Для инпута ручного выбора страницы обязательно необходимо указать placeholder
+            </Text>
+        );
     }
 
     return (
