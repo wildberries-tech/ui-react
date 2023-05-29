@@ -4,7 +4,7 @@ import { TStyle, useClassnames } from '../../../hooks/use-classnames';
 import { typographyColor } from '../types';
 import style from '../index.module.pcss';
 
-export const typographyTextTags = ['p', 'span', 'strong', 'a', 'b', 'i', 'em'] as const;
+export const typographyTextTags = ['p', 'span', 'strong', 'a', 'b', 'i', 'em', 'legend'] as const;
 export const typographyTextSize = ['large', 'large-bold', 'body', 'body-bold', 'caption', 'caption-bold'] as const;
 
 export type TTypographyTextTags = typeof typographyTextTags[number];

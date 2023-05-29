@@ -384,6 +384,102 @@ exports[`Text body: i: warning 1`] = `
 </i>
 `;
 
+exports[`Text body: legend: basic 1`] = `
+<legend
+  className="typography typography_size-body typography_color-basic"
+>
+  body: legend: basic
+</legend>
+`;
+
+exports[`Text body: legend: brand 1`] = `
+<legend
+  className="typography typography_size-body typography_color-brand"
+>
+  body: legend: brand
+</legend>
+`;
+
+exports[`Text body: legend: brand-1 1`] = `
+<legend
+  className="typography typography_size-body typography_color-brand-1"
+>
+  body: legend: brand-1
+</legend>
+`;
+
+exports[`Text body: legend: disabled 1`] = `
+<legend
+  className="typography typography_size-body typography_color-disabled"
+>
+  body: legend: disabled
+</legend>
+`;
+
+exports[`Text body: legend: error 1`] = `
+<legend
+  className="typography typography_size-body typography_color-error"
+>
+  body: legend: error
+</legend>
+`;
+
+exports[`Text body: legend: headers 1`] = `
+<legend
+  className="typography typography_size-body typography_color-headers"
+>
+  body: legend: headers
+</legend>
+`;
+
+exports[`Text body: legend: inherit 1`] = `
+<legend
+  className="typography typography_size-body typography_color-inherit"
+>
+  body: legend: inherit
+</legend>
+`;
+
+exports[`Text body: legend: inverse 1`] = `
+<legend
+  className="typography typography_size-body typography_color-inverse"
+>
+  body: legend: inverse
+</legend>
+`;
+
+exports[`Text body: legend: link 1`] = `
+<legend
+  className="typography typography_size-body typography_color-link"
+>
+  body: legend: link
+</legend>
+`;
+
+exports[`Text body: legend: secondary 1`] = `
+<legend
+  className="typography typography_size-body typography_color-secondary"
+>
+  body: legend: secondary
+</legend>
+`;
+
+exports[`Text body: legend: success 1`] = `
+<legend
+  className="typography typography_size-body typography_color-success"
+>
+  body: legend: success
+</legend>
+`;
+
+exports[`Text body: legend: warning 1`] = `
+<legend
+  className="typography typography_size-body typography_color-warning"
+>
+  body: legend: warning
+</legend>
+`;
+
 exports[`Text body: p: basic 1`] = `
 <p
   className="typography typography_size-body typography_color-basic"
@@ -1054,6 +1150,102 @@ exports[`Text body-bold: i: warning 1`] = `
 >
   body-bold: i: warning
 </i>
+`;
+
+exports[`Text body-bold: legend: basic 1`] = `
+<legend
+  className="typography typography_size-body-bold typography_color-basic"
+>
+  body-bold: legend: basic
+</legend>
+`;
+
+exports[`Text body-bold: legend: brand 1`] = `
+<legend
+  className="typography typography_size-body-bold typography_color-brand"
+>
+  body-bold: legend: brand
+</legend>
+`;
+
+exports[`Text body-bold: legend: brand-1 1`] = `
+<legend
+  className="typography typography_size-body-bold typography_color-brand-1"
+>
+  body-bold: legend: brand-1
+</legend>
+`;
+
+exports[`Text body-bold: legend: disabled 1`] = `
+<legend
+  className="typography typography_size-body-bold typography_color-disabled"
+>
+  body-bold: legend: disabled
+</legend>
+`;
+
+exports[`Text body-bold: legend: error 1`] = `
+<legend
+  className="typography typography_size-body-bold typography_color-error"
+>
+  body-bold: legend: error
+</legend>
+`;
+
+exports[`Text body-bold: legend: headers 1`] = `
+<legend
+  className="typography typography_size-body-bold typography_color-headers"
+>
+  body-bold: legend: headers
+</legend>
+`;
+
+exports[`Text body-bold: legend: inherit 1`] = `
+<legend
+  className="typography typography_size-body-bold typography_color-inherit"
+>
+  body-bold: legend: inherit
+</legend>
+`;
+
+exports[`Text body-bold: legend: inverse 1`] = `
+<legend
+  className="typography typography_size-body-bold typography_color-inverse"
+>
+  body-bold: legend: inverse
+</legend>
+`;
+
+exports[`Text body-bold: legend: link 1`] = `
+<legend
+  className="typography typography_size-body-bold typography_color-link"
+>
+  body-bold: legend: link
+</legend>
+`;
+
+exports[`Text body-bold: legend: secondary 1`] = `
+<legend
+  className="typography typography_size-body-bold typography_color-secondary"
+>
+  body-bold: legend: secondary
+</legend>
+`;
+
+exports[`Text body-bold: legend: success 1`] = `
+<legend
+  className="typography typography_size-body-bold typography_color-success"
+>
+  body-bold: legend: success
+</legend>
+`;
+
+exports[`Text body-bold: legend: warning 1`] = `
+<legend
+  className="typography typography_size-body-bold typography_color-warning"
+>
+  body-bold: legend: warning
+</legend>
 `;
 
 exports[`Text body-bold: p: basic 1`] = `
@@ -1728,6 +1920,102 @@ exports[`Text caption: i: warning 1`] = `
 </i>
 `;
 
+exports[`Text caption: legend: basic 1`] = `
+<legend
+  className="typography typography_size-caption typography_color-basic"
+>
+  caption: legend: basic
+</legend>
+`;
+
+exports[`Text caption: legend: brand 1`] = `
+<legend
+  className="typography typography_size-caption typography_color-brand"
+>
+  caption: legend: brand
+</legend>
+`;
+
+exports[`Text caption: legend: brand-1 1`] = `
+<legend
+  className="typography typography_size-caption typography_color-brand-1"
+>
+  caption: legend: brand-1
+</legend>
+`;
+
+exports[`Text caption: legend: disabled 1`] = `
+<legend
+  className="typography typography_size-caption typography_color-disabled"
+>
+  caption: legend: disabled
+</legend>
+`;
+
+exports[`Text caption: legend: error 1`] = `
+<legend
+  className="typography typography_size-caption typography_color-error"
+>
+  caption: legend: error
+</legend>
+`;
+
+exports[`Text caption: legend: headers 1`] = `
+<legend
+  className="typography typography_size-caption typography_color-headers"
+>
+  caption: legend: headers
+</legend>
+`;
+
+exports[`Text caption: legend: inherit 1`] = `
+<legend
+  className="typography typography_size-caption typography_color-inherit"
+>
+  caption: legend: inherit
+</legend>
+`;
+
+exports[`Text caption: legend: inverse 1`] = `
+<legend
+  className="typography typography_size-caption typography_color-inverse"
+>
+  caption: legend: inverse
+</legend>
+`;
+
+exports[`Text caption: legend: link 1`] = `
+<legend
+  className="typography typography_size-caption typography_color-link"
+>
+  caption: legend: link
+</legend>
+`;
+
+exports[`Text caption: legend: secondary 1`] = `
+<legend
+  className="typography typography_size-caption typography_color-secondary"
+>
+  caption: legend: secondary
+</legend>
+`;
+
+exports[`Text caption: legend: success 1`] = `
+<legend
+  className="typography typography_size-caption typography_color-success"
+>
+  caption: legend: success
+</legend>
+`;
+
+exports[`Text caption: legend: warning 1`] = `
+<legend
+  className="typography typography_size-caption typography_color-warning"
+>
+  caption: legend: warning
+</legend>
+`;
+
 exports[`Text caption: p: basic 1`] = `
 <p
   className="typography typography_size-caption typography_color-basic"
@@ -2398,6 +2686,102 @@ exports[`Text caption-bold: i: warning 1`] = `
 >
   caption-bold: i: warning
 </i>
+`;
+
+exports[`Text caption-bold: legend: basic 1`] = `
+<legend
+  className="typography typography_size-caption-bold typography_color-basic"
+>
+  caption-bold: legend: basic
+</legend>
+`;
+
+exports[`Text caption-bold: legend: brand 1`] = `
+<legend
+  className="typography typography_size-caption-bold typography_color-brand"
+>
+  caption-bold: legend: brand
+</legend>
+`;
+
+exports[`Text caption-bold: legend: brand-1 1`] = `
+<legend
+  className="typography typography_size-caption-bold typography_color-brand-1"
+>
+  caption-bold: legend: brand-1
+</legend>
+`;
+
+exports[`Text caption-bold: legend: disabled 1`] = `
+<legend
+  className="typography typography_size-caption-bold typography_color-disabled"
+>
+  caption-bold: legend: disabled
+</legend>
+`;
+
+exports[`Text caption-bold: legend: error 1`] = `
+<legend
+  className="typography typography_size-caption-bold typography_color-error"
+>
+  caption-bold: legend: error
+</legend>
+`;
+
+exports[`Text caption-bold: legend: headers 1`] = `
+<legend
+  className="typography typography_size-caption-bold typography_color-headers"
+>
+  caption-bold: legend: headers
+</legend>
+`;
+
+exports[`Text caption-bold: legend: inherit 1`] = `
+<legend
+  className="typography typography_size-caption-bold typography_color-inherit"
+>
+  caption-bold: legend: inherit
+</legend>
+`;
+
+exports[`Text caption-bold: legend: inverse 1`] = `
+<legend
+  className="typography typography_size-caption-bold typography_color-inverse"
+>
+  caption-bold: legend: inverse
+</legend>
+`;
+
+exports[`Text caption-bold: legend: link 1`] = `
+<legend
+  className="typography typography_size-caption-bold typography_color-link"
+>
+  caption-bold: legend: link
+</legend>
+`;
+
+exports[`Text caption-bold: legend: secondary 1`] = `
+<legend
+  className="typography typography_size-caption-bold typography_color-secondary"
+>
+  caption-bold: legend: secondary
+</legend>
+`;
+
+exports[`Text caption-bold: legend: success 1`] = `
+<legend
+  className="typography typography_size-caption-bold typography_color-success"
+>
+  caption-bold: legend: success
+</legend>
+`;
+
+exports[`Text caption-bold: legend: warning 1`] = `
+<legend
+  className="typography typography_size-caption-bold typography_color-warning"
+>
+  caption-bold: legend: warning
+</legend>
 `;
 
 exports[`Text caption-bold: p: basic 1`] = `
@@ -3072,6 +3456,102 @@ exports[`Text large: i: warning 1`] = `
 </i>
 `;
 
+exports[`Text large: legend: basic 1`] = `
+<legend
+  className="typography typography_size-large typography_color-basic"
+>
+  large: legend: basic
+</legend>
+`;
+
+exports[`Text large: legend: brand 1`] = `
+<legend
+  className="typography typography_size-large typography_color-brand"
+>
+  large: legend: brand
+</legend>
+`;
+
+exports[`Text large: legend: brand-1 1`] = `
+<legend
+  className="typography typography_size-large typography_color-brand-1"
+>
+  large: legend: brand-1
+</legend>
+`;
+
+exports[`Text large: legend: disabled 1`] = `
+<legend
+  className="typography typography_size-large typography_color-disabled"
+>
+  large: legend: disabled
+</legend>
+`;
+
+exports[`Text large: legend: error 1`] = `
+<legend
+  className="typography typography_size-large typography_color-error"
+>
+  large: legend: error
+</legend>
+`;
+
+exports[`Text large: legend: headers 1`] = `
+<legend
+  className="typography typography_size-large typography_color-headers"
+>
+  large: legend: headers
+</legend>
+`;
+
+exports[`Text large: legend: inherit 1`] = `
+<legend
+  className="typography typography_size-large typography_color-inherit"
+>
+  large: legend: inherit
+</legend>
+`;
+
+exports[`Text large: legend: inverse 1`] = `
+<legend
+  className="typography typography_size-large typography_color-inverse"
+>
+  large: legend: inverse
+</legend>
+`;
+
+exports[`Text large: legend: link 1`] = `
+<legend
+  className="typography typography_size-large typography_color-link"
+>
+  large: legend: link
+</legend>
+`;
+
+exports[`Text large: legend: secondary 1`] = `
+<legend
+  className="typography typography_size-large typography_color-secondary"
+>
+  large: legend: secondary
+</legend>
+`;
+
+exports[`Text large: legend: success 1`] = `
+<legend
+  className="typography typography_size-large typography_color-success"
+>
+  large: legend: success
+</legend>
+`;
+
+exports[`Text large: legend: warning 1`] = `
+<legend
+  className="typography typography_size-large typography_color-warning"
+>
+  large: legend: warning
+</legend>
+`;
+
 exports[`Text large: p: basic 1`] = `
 <p
   className="typography typography_size-large typography_color-basic"
@@ -3742,6 +4222,102 @@ exports[`Text large-bold: i: warning 1`] = `
 >
   large-bold: i: warning
 </i>
+`;
+
+exports[`Text large-bold: legend: basic 1`] = `
+<legend
+  className="typography typography_size-large-bold typography_color-basic"
+>
+  large-bold: legend: basic
+</legend>
+`;
+
+exports[`Text large-bold: legend: brand 1`] = `
+<legend
+  className="typography typography_size-large-bold typography_color-brand"
+>
+  large-bold: legend: brand
+</legend>
+`;
+
+exports[`Text large-bold: legend: brand-1 1`] = `
+<legend
+  className="typography typography_size-large-bold typography_color-brand-1"
+>
+  large-bold: legend: brand-1
+</legend>
+`;
+
+exports[`Text large-bold: legend: disabled 1`] = `
+<legend
+  className="typography typography_size-large-bold typography_color-disabled"
+>
+  large-bold: legend: disabled
+</legend>
+`;
+
+exports[`Text large-bold: legend: error 1`] = `
+<legend
+  className="typography typography_size-large-bold typography_color-error"
+>
+  large-bold: legend: error
+</legend>
+`;
+
+exports[`Text large-bold: legend: headers 1`] = `
+<legend
+  className="typography typography_size-large-bold typography_color-headers"
+>
+  large-bold: legend: headers
+</legend>
+`;
+
+exports[`Text large-bold: legend: inherit 1`] = `
+<legend
+  className="typography typography_size-large-bold typography_color-inherit"
+>
+  large-bold: legend: inherit
+</legend>
+`;
+
+exports[`Text large-bold: legend: inverse 1`] = `
+<legend
+  className="typography typography_size-large-bold typography_color-inverse"
+>
+  large-bold: legend: inverse
+</legend>
+`;
+
+exports[`Text large-bold: legend: link 1`] = `
+<legend
+  className="typography typography_size-large-bold typography_color-link"
+>
+  large-bold: legend: link
+</legend>
+`;
+
+exports[`Text large-bold: legend: secondary 1`] = `
+<legend
+  className="typography typography_size-large-bold typography_color-secondary"
+>
+  large-bold: legend: secondary
+</legend>
+`;
+
+exports[`Text large-bold: legend: success 1`] = `
+<legend
+  className="typography typography_size-large-bold typography_color-success"
+>
+  large-bold: legend: success
+</legend>
+`;
+
+exports[`Text large-bold: legend: warning 1`] = `
+<legend
+  className="typography typography_size-large-bold typography_color-warning"
+>
+  large-bold: legend: warning
+</legend>
 `;
 
 exports[`Text large-bold: p: basic 1`] = `
