@@ -38,7 +38,7 @@ const childrenWithDesc = children.map((item, index) => {
 });
 
 const META: Meta<typeof RadioGroup> = {
-    title: 'Components/RadioGroup',
+    title: 'Components/Fields/Radios/RadioGroup',
     component: RadioGroup,
     tags: ['autodocs'],
     args: {
