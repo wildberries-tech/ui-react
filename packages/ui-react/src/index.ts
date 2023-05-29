@@ -10,6 +10,11 @@ export { useClassnames, type TStyle } from './hooks/use-classnames';
 export { useDesignTokens, type IOptions as IOptionsDesignTokens } from './hooks/use-design-tokens';
 
 /**
+ * Tools
+ **/
+export { debounce } from './tools/debounce';
+
+/**
  * Components
  **/
 export { DesignTokens, type IProps as IPropsDesignTokens } from './components/design-tokens';
@@ -35,6 +40,7 @@ export { Title, type IProps as IPropsTypographyTitle } from './components/typogr
 export { Text, type IProps as IPropsTypographyText } from './components/typography/text';
 export { Tooltip, type IProps as IPropsTooltip } from './components/tooltip';
 export { Dropdown, type IProps as IPropsDropdown } from './components/dropdown';
+export { Pagination, type IProps as IPropsPagination } from './components/pagination';
 
 /**
  * Icons

@@ -9,6 +9,9 @@ import { IconArrowsChevronBottom } from '../icons/arrows/chevron-bottom';
 import style from './index.module.pcss';
 
 interface ICustomTriggerElement {
+    /**
+     * Левая иконка дропдауна
+     */
     elLeftIcon?: ReactElement,
     /**
      * Вариант правой иконки дропдауна
@@ -24,7 +27,7 @@ export interface IProps<T extends ReactElement | ICustomTriggerElement = any> ex
     /**
      * Render выпадающего элемента дропдауна
      **/
-    render?: ((isOpen: boolean, onClose: () => void) => ReactNode | Array<ReactNode> | null),
+    render?: ((isOpen: boolean, onClose: () => void) => ReactNode | null),
     /**
      * Триггер-элемент дропдауна
      */
@@ -38,7 +41,11 @@ export const Dropdown = ({ placement = 'bottom-end', ...props }: IProps) => {
         if(props.triggerElement?.elRightIcon === 'dots') {
             return (
                 <IconMoreVertical
-                    svg={{ className: cn('dropdown__trigger-icon') }}
+                    svg={{
+                        className: cn('dropdown__trigger-icon', {
+                            'dropdown__trigger-icon_active-dots': isOpen
+                        })
+                    }}
                 />
             );
         }
@@ -47,8 +54,8 @@ export const Dropdown = ({ placement = 'bottom-end', ...props }: IProps) => {
             return (
                 <IconArrowsChevronBottom
                     svg={{
-                        className: cn('dropdown__trigger-icon', {
-                            'dropdown__trigger-icon_active': isOpen
+                        className: cn('dropdown__trigger-icon', 'dropdown__trigger-icon_chevron', {
+                            'dropdown__trigger-icon_active-chevron': isOpen
                         })
                     }}
                 />
@@ -60,11 +67,7 @@ export const Dropdown = ({ placement = 'bottom-end', ...props }: IProps) => {
 
     const elTrigger = useCallback((isOpen: boolean) => {
         if(isElement(props.triggerElement)) {
-            return (
-                <div className={cn('dropdown__trigger')}>
-                    {props.triggerElement}
-                </div>
-            );
+            return props.triggerElement;
         }
 
         return (
@@ -81,6 +84,10 @@ export const Dropdown = ({ placement = 'bottom-end', ...props }: IProps) => {
             placement={placement}
             children={elTrigger}
             syncOptionsWidth={true}
+            triggerOffset={4}
+            className={{
+                'popover__content': cn('dropdown__content')
+            }}
             {...props}
         />
     );

@@ -1,0 +1,16 @@
+.dropdown-option {
+    padding: 12px;
+    transition: 100ms ease background-color;
+
+    @media (hover: hover) and (pointer: fine) {
+
+        &:hover {
+            background-color: var(--color-bg-plate);
+            cursor: pointer;
+        }
+    }
+
+    &_active {
+        color: var(--color-text-warning);
+    }
+}

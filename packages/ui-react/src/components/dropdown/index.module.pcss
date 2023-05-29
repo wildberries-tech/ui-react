@@ -4,7 +4,6 @@
 
     &__content {
         display: grid;
-        padding: 8px 0;
     }
 
     &__trigger {
@@ -35,8 +34,18 @@
         fill: var(--color-icon-basic);
         transition: 300ms ease transform;
 
-        &_active {
+        &_chevron {
+            width: 16px;
+            height: 16px;
+        }
+
+        &_active-chevron {
             transform: rotate(180deg);
+            fill: var(--color-icon-brand);
+        }
+
+        &_active-dots {
+            fill: var(--color-icon-brand);
         }
     }
 }

@@ -1,4 +1,13 @@
-import React, { cloneElement, MutableRefObject, ReactNode, useCallback, useMemo, useRef, useState } from 'react';
+import React, {
+    cloneElement,
+    Fragment,
+    MutableRefObject,
+    ReactNode,
+    useCallback,
+    useMemo,
+    useRef,
+    useState
+} from 'react';
 import { useLayer, useHover, Arrow, mergeRefs } from 'react-laag';
 import { isElement } from 'react-is';
 import type { Options } from 'react-laag/dist/types';
@@ -164,9 +173,9 @@ export const Popover = ({ trigger = 'click', auto = true, placement = 'bottom-ce
     }, [isOpen, isOver, trigger, layerProps, elArrow, renderLayer]);
 
     return (
-        <div>
+        <Fragment>
             {elTrigger}
             {elContent}
-        </div>
+        </Fragment>
     );
 };

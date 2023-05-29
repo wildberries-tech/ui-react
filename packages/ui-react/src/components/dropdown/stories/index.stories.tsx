@@ -5,6 +5,7 @@ import { Dropdown } from '..';
 import module from '../../popover/index.module.pcss';
 import { IconArrowsChevronRight } from '../../icons/arrows/chevron-right';
 import { IconDownload } from '../../icons/download';
+import { DropdownOption } from '../components/option';
 
 const META: Meta<typeof Dropdown> = {
     title    : 'Components/Dropdown',
@@ -66,7 +67,7 @@ export const DefaultOptions: StoryObj<typeof META> = {
         },
         render: (isOpen, onClose) => {
             return dropdownOptions.map((option, index) => (
-                <div
+                <DropdownOption
                     key={index}
                     onClick={() => {
                         option.handleClick();
@@ -75,10 +76,41 @@ export const DefaultOptions: StoryObj<typeof META> = {
                     }}
                 >
                     {option.label}
-                </div>
+                </DropdownOption>
             ));
         }
     }
+};
+
+export const DefaultOptionsSelected: StoryFn<typeof META> = () => {
+    const [active, setActive] = useState<string>('Нажать');
+
+    return (
+        <Dropdown
+            triggerElement={{
+                elRightIcon: <IconArrowsChevronRight />,
+                elLeftIcon: <IconDownload />,
+                triggerText: active
+            }}
+            render={(isOpen, onClose) => {
+                return dropdownOptions.map((option, index) => (
+                    <DropdownOption
+                        key={index}
+                        isActive={option.label === active}
+                        onClick={() => {
+                            option.handleClick();
+
+                            setActive(option.label);
+
+                            onClose();
+                        }}
+                    >
+                        {option.label}
+                    </DropdownOption>
+                ));
+            }}
+        />
+    );
 };
 
 export const CustomRightIcon: StoryObj<typeof META> = {
@@ -128,6 +160,7 @@ export const CustomRightLeftIcon: StoryObj<typeof META> = {
     }
 };
 
+// eslint-disable-next-line react/no-multi-comp
 export const ActiveElementTriggerText: StoryFn<typeof META> = () => {
     const [active, setActive] = useState<string>('Нажать триггер');
 
