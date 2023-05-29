@@ -38,6 +38,7 @@ export const Default: StoryFn<typeof Pagination> = () => {
     );
 };
 
+// eslint-disable-next-line react/no-multi-comp
 export const ErrorProps: StoryFn<typeof Pagination> = () => {
     const [currentPageOne, setCurrentPageOne] = useState<number>(1);
 
