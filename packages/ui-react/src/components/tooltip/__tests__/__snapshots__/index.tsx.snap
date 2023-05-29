@@ -3,12 +3,10 @@
 exports[`Close 1`] = `
 <DocumentFragment>
   <div>
-    <div>
-      <div
-        class="popover__trigger"
-      >
-        Text trigger
-      </div>
+    <div
+      class="popover__trigger"
+    >
+      Text trigger
     </div>
     <div>
       Out click
@@ -20,39 +18,37 @@ exports[`Close 1`] = `
 exports[`Close 2`] = `
 <DocumentFragment>
   <div>
-    <div>
-      <div
-        class="popover__trigger"
-      >
-        Text trigger
-      </div>
-      <div
-        class="popover__content"
-        style="position: fixed; top: 0px; left: 0px;"
-      >
-        Text render
-        <svg
-          height="11.999999999999998"
-          preserveAspectRatio="xMaxYMax"
-          style="position: absolute; top: 0px; left: 0px; transform: translateX(-50%);"
-          viewBox="0 0 11.999999999999998 6"
-          width="11.999999999999998"
-        >
-          <path
-            d="M 0 6 H 11.999999999999998 C 6.749999999999999 0.75 5.999999999999999 0 5.999999999999999 0 C 5.999999999999999 0 5.249999999999999 0.75 0 6"
-            fill="var(--tooltip-background-color)"
-            stroke="black"
-            stroke-width="0"
-          />
-          <path
-            d="M 0 6 H 11.999999999999998 L 11.999999999999998 6 H 0 Z"
-            fill="var(--tooltip-background-color)"
-          />
-        </svg>
-      </div>
+    <div
+      class="popover__trigger"
+    >
+      Text trigger
     </div>
     <div>
       Out click
+    </div>
+    <div
+      class="popover__content"
+      style="position: fixed; top: 0px; left: 0px;"
+    >
+      Text render
+      <svg
+        height="11.999999999999998"
+        preserveAspectRatio="xMaxYMax"
+        style="position: absolute; top: 0px; left: 0px; transform: translateX(-50%);"
+        viewBox="0 0 11.999999999999998 6"
+        width="11.999999999999998"
+      >
+        <path
+          d="M 0 6 H 11.999999999999998 C 6.749999999999999 0.75 5.999999999999999 0 5.999999999999999 0 C 5.999999999999999 0 5.249999999999999 0.75 0 6"
+          fill="var(--tooltip-background-color)"
+          stroke="black"
+          stroke-width="0"
+        />
+        <path
+          d="M 0 6 H 11.999999999999998 L 11.999999999999998 6 H 0 Z"
+          fill="var(--tooltip-background-color)"
+        />
+      </svg>
     </div>
   </div>
 </DocumentFragment>
@@ -61,12 +57,10 @@ exports[`Close 2`] = `
 exports[`Close 3`] = `
 <DocumentFragment>
   <div>
-    <div>
-      <div
-        class="popover__trigger"
-      >
-        Text trigger
-      </div>
+    <div
+      class="popover__trigger"
+    >
+      Text trigger
     </div>
     <div>
       Out click
@@ -77,168 +71,152 @@ exports[`Close 3`] = `
 
 exports[`Default use 1`] = `
 <DocumentFragment>
-  <div>
-    <div
-      class="popover__trigger"
-    >
-      Text trigger
-    </div>
+  <div
+    class="popover__trigger"
+  >
+    Text trigger
   </div>
 </DocumentFragment>
 `;
 
 exports[`Default use 2`] = `
 <DocumentFragment>
-  <div>
-    <div
-      class="popover__trigger"
+  <div
+    class="popover__trigger"
+  >
+    Text trigger
+  </div>
+  <div
+    class="popover__content"
+    style="position: fixed; top: 0px; left: 0px;"
+  >
+    Text render
+    <svg
+      height="11.999999999999998"
+      preserveAspectRatio="xMaxYMax"
+      style="position: absolute; top: 0px; left: 0px; transform: translateX(-50%);"
+      viewBox="0 0 11.999999999999998 6"
+      width="11.999999999999998"
     >
-      Text trigger
-    </div>
-    <div
-      class="popover__content"
-      style="position: fixed; top: 0px; left: 0px;"
-    >
-      Text render
-      <svg
-        height="11.999999999999998"
-        preserveAspectRatio="xMaxYMax"
-        style="position: absolute; top: 0px; left: 0px; transform: translateX(-50%);"
-        viewBox="0 0 11.999999999999998 6"
-        width="11.999999999999998"
-      >
-        <path
-          d="M 0 6 H 11.999999999999998 C 6.749999999999999 0.75 5.999999999999999 0 5.999999999999999 0 C 5.999999999999999 0 5.249999999999999 0.75 0 6"
-          fill="var(--tooltip-background-color)"
-          stroke="black"
-          stroke-width="0"
-        />
-        <path
-          d="M 0 6 H 11.999999999999998 L 11.999999999999998 6 H 0 Z"
-          fill="var(--tooltip-background-color)"
-        />
-      </svg>
-    </div>
+      <path
+        d="M 0 6 H 11.999999999999998 C 6.749999999999999 0.75 5.999999999999999 0 5.999999999999999 0 C 5.999999999999999 0 5.249999999999999 0.75 0 6"
+        fill="var(--tooltip-background-color)"
+        stroke="black"
+        stroke-width="0"
+      />
+      <path
+        d="M 0 6 H 11.999999999999998 L 11.999999999999998 6 H 0 Z"
+        fill="var(--tooltip-background-color)"
+      />
+    </svg>
   </div>
 </DocumentFragment>
 `;
 
 exports[`Element 1`] = `
 <DocumentFragment>
-  <div>
-    <a
-      href="#"
-    >
-      Text trigger
-    </a>
-  </div>
+  <a
+    href="#"
+  >
+    Text trigger
+  </a>
 </DocumentFragment>
 `;
 
 exports[`Element 2`] = `
 <DocumentFragment>
-  <div>
-    <a
-      href="#"
+  <a
+    href="#"
+  >
+    Text trigger
+  </a>
+  <div
+    class="popover__content"
+    style="position: fixed; top: 0px; left: 0px;"
+  >
+    Text render
+    <svg
+      height="11.999999999999998"
+      preserveAspectRatio="xMaxYMax"
+      style="position: absolute; top: 0px; left: 0px; transform: translateX(-50%);"
+      viewBox="0 0 11.999999999999998 6"
+      width="11.999999999999998"
     >
-      Text trigger
-    </a>
-    <div
-      class="popover__content"
-      style="position: fixed; top: 0px; left: 0px;"
-    >
-      Text render
-      <svg
-        height="11.999999999999998"
-        preserveAspectRatio="xMaxYMax"
-        style="position: absolute; top: 0px; left: 0px; transform: translateX(-50%);"
-        viewBox="0 0 11.999999999999998 6"
-        width="11.999999999999998"
-      >
-        <path
-          d="M 0 6 H 11.999999999999998 C 6.749999999999999 0.75 5.999999999999999 0 5.999999999999999 0 C 5.999999999999999 0 5.249999999999999 0.75 0 6"
-          fill="var(--tooltip-background-color)"
-          stroke="black"
-          stroke-width="0"
-        />
-        <path
-          d="M 0 6 H 11.999999999999998 L 11.999999999999998 6 H 0 Z"
-          fill="var(--tooltip-background-color)"
-        />
-      </svg>
-    </div>
+      <path
+        d="M 0 6 H 11.999999999999998 C 6.749999999999999 0.75 5.999999999999999 0 5.999999999999999 0 C 5.999999999999999 0 5.249999999999999 0.75 0 6"
+        fill="var(--tooltip-background-color)"
+        stroke="black"
+        stroke-width="0"
+      />
+      <path
+        d="M 0 6 H 11.999999999999998 L 11.999999999999998 6 H 0 Z"
+        fill="var(--tooltip-background-color)"
+      />
+    </svg>
   </div>
 </DocumentFragment>
 `;
 
 exports[`Hover 1`] = `
 <DocumentFragment>
-  <div>
-    <div
-      class="popover__trigger"
-    >
-      Text trigger
-    </div>
+  <div
+    class="popover__trigger"
+  >
+    Text trigger
   </div>
 </DocumentFragment>
 `;
 
 exports[`Hover 2`] = `
 <DocumentFragment>
-  <div>
-    <div
-      class="popover__trigger"
-    >
-      Text trigger
-    </div>
+  <div
+    class="popover__trigger"
+  >
+    Text trigger
   </div>
 </DocumentFragment>
 `;
 
 exports[`Render function 1`] = `
 <DocumentFragment>
-  <div>
-    <div
-      class="popover__trigger"
-    >
-      Text trigger
-    </div>
+  <div
+    class="popover__trigger"
+  >
+    Text trigger
   </div>
 </DocumentFragment>
 `;
 
 exports[`Render function 2`] = `
 <DocumentFragment>
-  <div>
-    <div
-      class="popover__trigger"
+  <div
+    class="popover__trigger"
+  >
+    Text trigger
+  </div>
+  <div
+    class="popover__content"
+    style="position: fixed; top: 0px; left: 0px;"
+  >
+    Text render
+    <svg
+      height="11.999999999999998"
+      preserveAspectRatio="xMaxYMax"
+      style="position: absolute; top: 0px; left: 0px; transform: translateX(-50%);"
+      viewBox="0 0 11.999999999999998 6"
+      width="11.999999999999998"
     >
-      Text trigger
-    </div>
-    <div
-      class="popover__content"
-      style="position: fixed; top: 0px; left: 0px;"
-    >
-      Text render
-      <svg
-        height="11.999999999999998"
-        preserveAspectRatio="xMaxYMax"
-        style="position: absolute; top: 0px; left: 0px; transform: translateX(-50%);"
-        viewBox="0 0 11.999999999999998 6"
-        width="11.999999999999998"
-      >
-        <path
-          d="M 0 6 H 11.999999999999998 C 6.749999999999999 0.75 5.999999999999999 0 5.999999999999999 0 C 5.999999999999999 0 5.249999999999999 0.75 0 6"
-          fill="var(--tooltip-background-color)"
-          stroke="black"
-          stroke-width="0"
-        />
-        <path
-          d="M 0 6 H 11.999999999999998 L 11.999999999999998 6 H 0 Z"
-          fill="var(--tooltip-background-color)"
-        />
-      </svg>
-    </div>
+      <path
+        d="M 0 6 H 11.999999999999998 C 6.749999999999999 0.75 5.999999999999999 0 5.999999999999999 0 C 5.999999999999999 0 5.249999999999999 0.75 0 6"
+        fill="var(--tooltip-background-color)"
+        stroke="black"
+        stroke-width="0"
+      />
+      <path
+        d="M 0 6 H 11.999999999999998 L 11.999999999999998 6 H 0 Z"
+        fill="var(--tooltip-background-color)"
+      />
+    </svg>
   </div>
 </DocumentFragment>
 `;

@@ -23,6 +23,72 @@ test('Default use', async () => {
     const { asFragment, getByText } = render(
         <Dropdown
             triggerElement={{
+                elRightIcon: 'dots',
+                triggerText: 'Trigger'
+            }}
+            render={(isOpen, onClose) => {
+                return dropdownOptions.map((option, index) => (
+                    <div
+                        key={index}
+                        onClick={() => {
+                            option.handleClick();
+
+                            onClose();
+                        }}
+                    >
+                        {option.label}
+                    </div>
+                ));
+            }}
+        />
+    );
+
+    expect(asFragment()).toMatchSnapshot();
+
+    fireEvent.click(getByText('Trigger'));
+
+    await waitFor(() => {
+        expect(asFragment()).toMatchSnapshot();
+    });
+});
+
+test('Default use icon dots', async () => {
+    const { asFragment, getByText } = render(
+        <Dropdown
+            triggerElement={{
+                elRightIcon: 'chevron',
+                triggerText: 'Trigger'
+            }}
+            render={(isOpen, onClose) => {
+                return dropdownOptions.map((option, index) => (
+                    <div
+                        key={index}
+                        onClick={() => {
+                            option.handleClick();
+
+                            onClose();
+                        }}
+                    >
+                        {option.label}
+                    </div>
+                ));
+            }}
+        />
+    );
+
+    expect(asFragment()).toMatchSnapshot();
+
+    fireEvent.click(getByText('Trigger'));
+
+    await waitFor(() => {
+        expect(asFragment()).toMatchSnapshot();
+    });
+});
+
+test('Default use', async () => {
+    const { asFragment, getByText } = render(
+        <Dropdown
+            triggerElement={{
                 elRightIcon: <IconArrowsChevronRight />,
                 elLeftIcon: <IconDownload />,
                 triggerText: 'Trigger'

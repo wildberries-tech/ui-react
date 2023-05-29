@@ -1,0 +1,57 @@
+.pagination {
+    --pagination-size: 44px;
+    width: max-content;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 12px;
+    transition: 0.3s;
+
+    &__buttons-container {
+        height: var(--pagination-size);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 16px;
+    }
+
+    &__trigger {
+        display: flex;
+        align-items: center;
+    }
+
+    &__count {
+        width: 16px;
+        display: inline-flex;
+        justify-content: flex-end;
+    }
+
+    &__dropdown-trigger {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        width: 84px;
+        border: 1px solid var(--color-border-basic);
+        height: var(--pagination-size);
+        padding: 0 12px;
+        box-sizing: border-box;
+        border-radius: 4px;
+        justify-content: space-between;
+    }
+
+    &__dropdown-trigger-text {
+        flex-grow: 1;
+    }
+
+    &__dropdown-trigger-icon {
+        width: 16px;
+        height: 16px;
+        fill: var(--color-icon-basic);
+    }
+
+    &__page-input {
+        width: 128px;
+        font-size: 18px;
+        line-height: 24px;
+    }
+}

@@ -1,0 +1,41 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Active option 1`] = `
+<DocumentFragment>
+  <div
+    class="dropdown-option dropdown-option_active"
+  >
+    Content
+  </div>
+</DocumentFragment>
+`;
+
+exports[`Active option 2`] = `
+<DocumentFragment>
+  <div
+    class="dropdown-option dropdown-option_active"
+  >
+    Content
+  </div>
+</DocumentFragment>
+`;
+
+exports[`Default use 1`] = `
+<DocumentFragment>
+  <div
+    class="dropdown-option"
+  >
+    Content
+  </div>
+</DocumentFragment>
+`;
+
+exports[`Default use 2`] = `
+<DocumentFragment>
+  <div
+    class="dropdown-option"
+  >
+    Content
+  </div>
+</DocumentFragment>
+`;
