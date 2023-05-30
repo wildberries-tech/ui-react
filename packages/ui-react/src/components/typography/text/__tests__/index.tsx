@@ -6,23 +6,51 @@ import { typographyColor } from '../../types';
 
 describe('Text', () => {
     typographyTextSize.map((size) => {
-        return typographyTextTags.map((tag) => {
-            return typographyColor.map((color) => {
-                test(`${size}: ${tag}: ${color}`, () => {
-                    const tree = renderer.create(
-                        <Text
-                            key={`${size}: ${tag}: ${color}`}
-                            presetSize={size}
-                            tagName={tag}
-                            presetColor={color}
-                        >
-                            {`${size}: ${tag}: ${color}`}
-                        </Text>
-                    ).toJSON();
+        test(size, () => {
+            const tree = renderer.create(
+                <Text
+                    key={size}
+                    presetSize={size}
+                >
+                    {size}
+                </Text>
+            ).toJSON();
 
-                    expect(tree).toMatchSnapshot();
-                });
-            });
+            expect(tree).toMatchSnapshot();
+        });
+    });
+});
+
+describe('Text', () => {
+    typographyTextTags.map((tag) => {
+        test(tag, () => {
+            const tree = renderer.create(
+                <Text
+                    key={tag}
+                    tagName={tag}
+                >
+                    {tag}
+                </Text>
+            ).toJSON();
+
+            expect(tree).toMatchSnapshot();
+        });
+    });
+});
+
+describe('Text', () => {
+    typographyColor.map((color) => {
+        test(color, () => {
+            const tree = renderer.create(
+                <Text
+                    key={color}
+                    presetColor={color}
+                >
+                    {color}
+                </Text>
+            ).toJSON();
+
+            expect(tree).toMatchSnapshot();
         });
     });
 });

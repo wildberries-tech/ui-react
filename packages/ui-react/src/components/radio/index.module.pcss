@@ -1,0 +1,82 @@
+.radio {
+    display: grid;
+    grid-auto-flow: column;
+    gap: 4px 14px;
+    align-items: flex-start;
+    justify-content: flex-start;
+
+    &_description {
+        grid-auto-flow: initial;
+        grid-template-areas: "a b" "a c";
+    }
+
+    @media (hover: hover) and (pointer: fine) {
+
+        &:hover:not(&_disabled) {
+            cursor: pointer;
+        }
+    }
+
+    &__label {
+        align-self: center;
+
+        &_disabled {
+            opacity: 0.4;
+        }
+    }
+
+    &__input {
+        margin: 0;
+        padding: 0;
+        appearance: none;
+        border: 1px solid var(--color-border-basic);
+        border-radius: 50%;
+        width: 20px;
+        height: 20px;
+        box-sizing: border-box;
+        transition: all 200ms linear;
+
+        @media screen and (prefers-reduced-motion: reduce) {
+            transition: none;
+        }
+
+        @media (hover: hover) and (pointer: fine) {
+
+            &:hover:not([disabled]) {
+                cursor: pointer;
+                border-color: var(--color-border-brand);
+            }
+        }
+
+        &:checked {
+            border-color: var(--color-bg-brand-1);
+            border-width: 6px;
+
+            @media (hover: hover) and (pointer: fine) {
+
+                &:hover:not([disabled]) {
+                    border-color: var(--color-bg-brand);
+                }
+            }
+        }
+
+        &[disabled] {
+            background-color: var(--color-bg-plate);
+        }
+
+        &:checked[disabled] {
+            border-color: var(--color-bg-plate-1);
+            background-color: transparent;
+        }
+
+        &:focus:not([disabled]) {
+            outline: none;
+            box-shadow: 0 0 0 2px rgba(80, 103, 222, 0.2);
+        }
+    }
+
+    &__description {
+        color: var(--color-text-secondary);
+        grid-area: c;
+    }
+}

@@ -1,0 +1,120 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Default 1`] = `
+<label
+  className="radio"
+>
+  <input
+    aria-checked={false}
+    className="radio__input"
+    name="default"
+    role="radio"
+    tabIndex={1}
+    type="radio"
+  />
+  <p
+    className="typography typography_size-body typography_color-basic"
+  />
+</label>
+`;
+
+exports[`Default Checked 1`] = `
+<label
+  className="radio"
+>
+  <input
+    aria-checked={true}
+    checked={true}
+    className="radio__input"
+    name="default"
+    role="radio"
+    tabIndex={1}
+    type="radio"
+  />
+  <p
+    className="typography typography_size-body typography_color-basic"
+  />
+</label>
+`;
+
+exports[`Default Checked Disabled 1`] = `
+<label
+  className="radio radio_disabled"
+>
+  <input
+    aria-checked={true}
+    checked={true}
+    className="radio__input"
+    disabled={true}
+    name="default"
+    role="radio"
+    tabIndex={-1}
+    type="radio"
+  />
+  <p
+    className="typography typography_size-body typography_color-basic"
+  />
+</label>
+`;
+
+exports[`Disabled 1`] = `
+<label
+  className="radio radio_disabled"
+>
+  <input
+    aria-checked={false}
+    className="radio__input"
+    disabled={true}
+    name="default"
+    role="radio"
+    tabIndex={-1}
+    type="radio"
+  />
+  <p
+    className="typography typography_size-body typography_color-basic"
+  />
+</label>
+`;
+
+exports[`With Description 1`] = `
+<label
+  className="radio radio_description"
+>
+  <input
+    aria-checked={false}
+    className="radio__input"
+    name="default"
+    role="radio"
+    tabIndex={1}
+    type="radio"
+  />
+  <p
+    className="typography typography_size-body typography_color-basic"
+  />
+  <span
+    className="radio__description"
+  >
+    Desc
+  </span>
+</label>
+`;
+
+exports[`With Id 1`] = `
+<label
+  className="radio"
+  id="id"
+>
+  <input
+    aria-checked={false}
+    className="radio__input"
+    id="id-input"
+    name="default"
+    role="radio"
+    tabIndex={0}
+    type="radio"
+  />
+  <p
+    className="typography typography_size-body typography_color-basic"
+  />
+</label>
+`;

@@ -1,385 +1,129 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Title h1: basic 1`] = `
+exports[`Text basic 1`] = `
 <h1
   className="typography typography_size-h1 typography_color-basic"
 >
-  h1: basic
+  basic
 </h1>
 `;
 
-exports[`Title h1: brand 1`] = `
+exports[`Text brand 1`] = `
 <h1
   className="typography typography_size-h1 typography_color-brand"
 >
-  h1: brand
+  brand
 </h1>
 `;
 
-exports[`Title h1: brand-1 1`] = `
+exports[`Text brand-1 1`] = `
 <h1
   className="typography typography_size-h1 typography_color-brand-1"
 >
-  h1: brand-1
+  brand-1
 </h1>
 `;
 
-exports[`Title h1: disabled 1`] = `
+exports[`Text disabled 1`] = `
 <h1
   className="typography typography_size-h1 typography_color-disabled"
 >
-  h1: disabled
+  disabled
 </h1>
 `;
 
-exports[`Title h1: error 1`] = `
+exports[`Text error 1`] = `
 <h1
   className="typography typography_size-h1 typography_color-error"
 >
-  h1: error
+  error
 </h1>
 `;
 
-exports[`Title h1: headers 1`] = `
+exports[`Text h1 1`] = `
 <h1
-  className="typography typography_size-h1 typography_color-headers"
+  className="typography typography_size-h1 typography_color-basic"
 >
-  h1: headers
+  h1
 </h1>
 `;
 
-exports[`Title h1: inherit 1`] = `
-<h1
-  className="typography typography_size-h1 typography_color-inherit"
->
-  h1: inherit
-</h1>
-`;
-
-exports[`Title h1: inverse 1`] = `
-<h1
-  className="typography typography_size-h1 typography_color-inverse"
->
-  h1: inverse
-</h1>
-`;
-
-exports[`Title h1: link 1`] = `
-<h1
-  className="typography typography_size-h1 typography_color-link"
->
-  h1: link
-</h1>
-`;
-
-exports[`Title h1: secondary 1`] = `
-<h1
-  className="typography typography_size-h1 typography_color-secondary"
->
-  h1: secondary
-</h1>
-`;
-
-exports[`Title h1: success 1`] = `
-<h1
-  className="typography typography_size-h1 typography_color-success"
->
-  h1: success
-</h1>
-`;
-
-exports[`Title h1: warning 1`] = `
-<h1
-  className="typography typography_size-h1 typography_color-warning"
->
-  h1: warning
-</h1>
-`;
-
-exports[`Title h2: basic 1`] = `
+exports[`Text h2 1`] = `
 <h2
   className="typography typography_size-h2 typography_color-basic"
 >
-  h2: basic
+  h2
 </h2>
 `;
 
-exports[`Title h2: brand 1`] = `
-<h2
-  className="typography typography_size-h2 typography_color-brand"
->
-  h2: brand
-</h2>
-`;
-
-exports[`Title h2: brand-1 1`] = `
-<h2
-  className="typography typography_size-h2 typography_color-brand-1"
->
-  h2: brand-1
-</h2>
-`;
-
-exports[`Title h2: disabled 1`] = `
-<h2
-  className="typography typography_size-h2 typography_color-disabled"
->
-  h2: disabled
-</h2>
-`;
-
-exports[`Title h2: error 1`] = `
-<h2
-  className="typography typography_size-h2 typography_color-error"
->
-  h2: error
-</h2>
-`;
-
-exports[`Title h2: headers 1`] = `
-<h2
-  className="typography typography_size-h2 typography_color-headers"
->
-  h2: headers
-</h2>
-`;
-
-exports[`Title h2: inherit 1`] = `
-<h2
-  className="typography typography_size-h2 typography_color-inherit"
->
-  h2: inherit
-</h2>
-`;
-
-exports[`Title h2: inverse 1`] = `
-<h2
-  className="typography typography_size-h2 typography_color-inverse"
->
-  h2: inverse
-</h2>
-`;
-
-exports[`Title h2: link 1`] = `
-<h2
-  className="typography typography_size-h2 typography_color-link"
->
-  h2: link
-</h2>
-`;
-
-exports[`Title h2: secondary 1`] = `
-<h2
-  className="typography typography_size-h2 typography_color-secondary"
->
-  h2: secondary
-</h2>
-`;
-
-exports[`Title h2: success 1`] = `
-<h2
-  className="typography typography_size-h2 typography_color-success"
->
-  h2: success
-</h2>
-`;
-
-exports[`Title h2: warning 1`] = `
-<h2
-  className="typography typography_size-h2 typography_color-warning"
->
-  h2: warning
-</h2>
-`;
-
-exports[`Title h3: basic 1`] = `
+exports[`Text h3 1`] = `
 <h3
   className="typography typography_size-h3 typography_color-basic"
 >
-  h3: basic
+  h3
 </h3>
 `;
 
-exports[`Title h3: brand 1`] = `
-<h3
-  className="typography typography_size-h3 typography_color-brand"
->
-  h3: brand
-</h3>
-`;
-
-exports[`Title h3: brand-1 1`] = `
-<h3
-  className="typography typography_size-h3 typography_color-brand-1"
->
-  h3: brand-1
-</h3>
-`;
-
-exports[`Title h3: disabled 1`] = `
-<h3
-  className="typography typography_size-h3 typography_color-disabled"
->
-  h3: disabled
-</h3>
-`;
-
-exports[`Title h3: error 1`] = `
-<h3
-  className="typography typography_size-h3 typography_color-error"
->
-  h3: error
-</h3>
-`;
-
-exports[`Title h3: headers 1`] = `
-<h3
-  className="typography typography_size-h3 typography_color-headers"
->
-  h3: headers
-</h3>
-`;
-
-exports[`Title h3: inherit 1`] = `
-<h3
-  className="typography typography_size-h3 typography_color-inherit"
->
-  h3: inherit
-</h3>
-`;
-
-exports[`Title h3: inverse 1`] = `
-<h3
-  className="typography typography_size-h3 typography_color-inverse"
->
-  h3: inverse
-</h3>
-`;
-
-exports[`Title h3: link 1`] = `
-<h3
-  className="typography typography_size-h3 typography_color-link"
->
-  h3: link
-</h3>
-`;
-
-exports[`Title h3: secondary 1`] = `
-<h3
-  className="typography typography_size-h3 typography_color-secondary"
->
-  h3: secondary
-</h3>
-`;
-
-exports[`Title h3: success 1`] = `
-<h3
-  className="typography typography_size-h3 typography_color-success"
->
-  h3: success
-</h3>
-`;
-
-exports[`Title h3: warning 1`] = `
-<h3
-  className="typography typography_size-h3 typography_color-warning"
->
-  h3: warning
-</h3>
-`;
-
-exports[`Title h4: basic 1`] = `
+exports[`Text h4 1`] = `
 <h4
   className="typography typography_size-h4 typography_color-basic"
 >
-  h4: basic
+  h4
 </h4>
 `;
 
-exports[`Title h4: brand 1`] = `
-<h4
-  className="typography typography_size-h4 typography_color-brand"
+exports[`Text headers 1`] = `
+<h1
+  className="typography typography_size-h1 typography_color-headers"
 >
-  h4: brand
-</h4>
+  headers
+</h1>
 `;
 
-exports[`Title h4: brand-1 1`] = `
-<h4
-  className="typography typography_size-h4 typography_color-brand-1"
+exports[`Text inherit 1`] = `
+<h1
+  className="typography typography_size-h1 typography_color-inherit"
 >
-  h4: brand-1
-</h4>
+  inherit
+</h1>
 `;
 
-exports[`Title h4: disabled 1`] = `
-<h4
-  className="typography typography_size-h4 typography_color-disabled"
+exports[`Text inverse 1`] = `
+<h1
+  className="typography typography_size-h1 typography_color-inverse"
 >
-  h4: disabled
-</h4>
+  inverse
+</h1>
 `;
 
-exports[`Title h4: error 1`] = `
-<h4
-  className="typography typography_size-h4 typography_color-error"
+exports[`Text link 1`] = `
+<h1
+  className="typography typography_size-h1 typography_color-link"
 >
-  h4: error
-</h4>
+  link
+</h1>
 `;
 
-exports[`Title h4: headers 1`] = `
-<h4
-  className="typography typography_size-h4 typography_color-headers"
+exports[`Text secondary 1`] = `
+<h1
+  className="typography typography_size-h1 typography_color-secondary"
 >
-  h4: headers
-</h4>
+  secondary
+</h1>
 `;
 
-exports[`Title h4: inherit 1`] = `
-<h4
-  className="typography typography_size-h4 typography_color-inherit"
+exports[`Text success 1`] = `
+<h1
+  className="typography typography_size-h1 typography_color-success"
 >
-  h4: inherit
-</h4>
+  success
+</h1>
 `;
 
-exports[`Title h4: inverse 1`] = `
-<h4
-  className="typography typography_size-h4 typography_color-inverse"
+exports[`Text warning 1`] = `
+<h1
+  className="typography typography_size-h1 typography_color-warning"
 >
-  h4: inverse
-</h4>
-`;
-
-exports[`Title h4: link 1`] = `
-<h4
-  className="typography typography_size-h4 typography_color-link"
->
-  h4: link
-</h4>
-`;
-
-exports[`Title h4: secondary 1`] = `
-<h4
-  className="typography typography_size-h4 typography_color-secondary"
->
-  h4: secondary
-</h4>
-`;
-
-exports[`Title h4: success 1`] = `
-<h4
-  className="typography typography_size-h4 typography_color-success"
->
-  h4: success
-</h4>
-`;
-
-exports[`Title h4: warning 1`] = `
-<h4
-  className="typography typography_size-h4 typography_color-warning"
->
-  h4: warning
-</h4>
+  warning
+</h1>
 `;

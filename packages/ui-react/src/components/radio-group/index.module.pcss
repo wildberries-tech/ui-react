@@ -1,0 +1,24 @@
+.radio-group {
+    padding: 0;
+    margin: 0;
+    border: none;
+    display: grid;
+    width: 100%;
+    gap: 16px 32px;
+
+    &_row {
+        flex-wrap: wrap;
+    }
+
+    &_column {
+        flex-direction: column;
+    }
+
+    &__legend {
+        width: 100%;
+        padding: 0;
+        margin: 0 0 16px;
+        color: var(--checkbox-group-legend-color);
+        flex-grow: 1;
+    }
+}
