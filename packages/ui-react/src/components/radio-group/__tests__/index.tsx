@@ -48,3 +48,17 @@ test('Legend', () => {
     expect(tree.toJSON()).toMatchSnapshot();
 });
 
+test('Legend Object', () => {
+    const tree = create(
+        <RadioGroup
+            children={children}
+            legend={{
+                presetColor: 'error',
+                presetSize: 'caption'
+            }}
+        />
+    );
+
+    expect(tree.toJSON()).toMatchSnapshot();
+});
+
