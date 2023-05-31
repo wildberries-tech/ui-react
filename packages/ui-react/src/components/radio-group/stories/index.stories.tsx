@@ -68,6 +68,18 @@ export const Legend: StoryObj<typeof RadioGroup> = {
     }
 };
 
+export const LegendObject: StoryObj<typeof RadioGroup> = {
+    args: {
+        children,
+        legend: {
+            presetSize: 'body',
+            presetColor: 'error',
+            children: 'Errored legend'
+        },
+        direction: 'column'
+    }
+};
+
 export const WithDescription: StoryObj<typeof RadioGroup> = {
     args: {
         children: childrenWithDesc,

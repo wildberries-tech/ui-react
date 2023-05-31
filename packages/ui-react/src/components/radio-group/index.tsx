@@ -1,11 +1,14 @@
 import React, { FieldsetHTMLAttributes, ReactNode, useMemo } from 'react';
+import { isElement } from 'react-is';
 
 import { TStyle, useClassnames } from '../../hooks/use-classnames';
-import { Text } from '../typography/text';
+import { Text, IProps as ITextProps } from '../typography/text';
 
 import style from './index.module.pcss';
 
 type TNative = FieldsetHTMLAttributes<HTMLFieldSetElement>;
+
+type TLegendTypographyProps = Omit<ITextProps, 'tagName'>;
 
 export interface IProps {
     /**
@@ -19,7 +22,7 @@ export interface IProps {
     /**
      * Текст, который будет использован в качестве заголовка группы чекбоксов.
      **/
-    legend?: ReactNode,
+    legend?: ReactNode | TLegendTypographyProps,
     /**
      * Направление, в котором будут располагаться чекбоксы.
      **/
@@ -39,13 +42,25 @@ export const RadioGroup = ({ direction = 'row', ...props }: IProps) => {
 
     const elLegend = useMemo(() => {
         if(props.legend) {
-            return (
-                <Text
-                    tagName="legend"
-                    className={cn('radio-group__legend')}
-                    children={props.legend}
-                />
-            );
+            if(isElement(props.legend) || typeof props.legend === 'string') {
+                return (
+                    <Text
+                        tagName="legend"
+                        className={cn('radio-group__legend')}
+                        children={props.legend}
+                    />
+                );
+            }
+
+            if(!isElement(props.legend) && typeof props.legend === 'object') {
+                return (
+                    <Text
+                        tagName="legend"
+                        className={cn('radio-group__legend')}
+                        {...props.legend as TLegendTypographyProps}
+                    />
+                );
+            }
         }
     }, [props.legend]);
 

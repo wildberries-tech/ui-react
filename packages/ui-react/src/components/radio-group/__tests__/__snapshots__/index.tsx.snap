@@ -154,3 +154,81 @@ exports[`Legend 1`] = `
   </label>
 </fieldset>
 `;
+
+exports[`Legend Object 1`] = `
+<fieldset
+  className="radio-group radio-group_row"
+>
+  <legend
+    className="typography typography_size-caption typography_color-error"
+  />
+  <label
+    className="radio"
+  >
+    <input
+      aria-checked={false}
+      className="radio__input"
+      name="name-1"
+      role="radio"
+      tabIndex={0}
+      type="radio"
+    />
+    <p
+      className="typography typography_size-body typography_color-basic"
+    >
+      label-1
+    </p>
+  </label>
+  <label
+    className="radio"
+  >
+    <input
+      aria-checked={false}
+      className="radio__input"
+      name="name-2"
+      role="radio"
+      tabIndex={0}
+      type="radio"
+    />
+    <p
+      className="typography typography_size-body typography_color-basic"
+    >
+      label-2
+    </p>
+  </label>
+  <label
+    className="radio"
+  >
+    <input
+      aria-checked={false}
+      className="radio__input"
+      name="name-3"
+      role="radio"
+      tabIndex={0}
+      type="radio"
+    />
+    <p
+      className="typography typography_size-body typography_color-basic"
+    >
+      label-3
+    </p>
+  </label>
+  <label
+    className="radio"
+  >
+    <input
+      aria-checked={false}
+      className="radio__input"
+      name="name-4"
+      role="radio"
+      tabIndex={0}
+      type="radio"
+    />
+    <p
+      className="typography typography_size-body typography_color-basic"
+    >
+      label-4
+    </p>
+  </label>
+</fieldset>
+`;
