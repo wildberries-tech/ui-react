@@ -2,7 +2,6 @@
 .storybook
 docs
 public
-tools
 stories
 .idea
 .editorconfig
