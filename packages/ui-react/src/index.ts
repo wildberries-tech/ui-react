@@ -41,6 +41,8 @@ export { Text, type IProps as IPropsTypographyText } from './components/typograp
 export { Tooltip, type IProps as IPropsTooltip } from './components/tooltip';
 export { Dropdown, type IProps as IPropsDropdown } from './components/dropdown';
 export { Pagination, type IProps as IPropsPagination } from './components/pagination';
+export { Radio, type IProps as IPropsRadio } from './components/radio';
+export { RadioGroup, type IProps as IPropsRadioGroup } from './components/radio-group';
 
 /**
  * Icons
