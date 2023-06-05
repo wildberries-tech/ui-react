@@ -38,6 +38,24 @@ test('Arrow', async () => {
     });
 });
 
+test('CustomTagName', async () => {
+    const { asFragment, getByText } = render(
+        <Popover
+            children="Text trigger"
+            render="Text render"
+            triggerTagName="section"
+        />
+    );
+
+    expect(asFragment()).toMatchSnapshot();
+
+    fireEvent.click(getByText('Text trigger'));
+
+    await waitFor(() => {
+        expect(asFragment()).toMatchSnapshot();
+    });
+});
+
 test('Close', async () => {
     const { asFragment, getByText } = render(
         <div>

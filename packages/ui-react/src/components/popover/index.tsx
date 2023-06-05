@@ -1,7 +1,7 @@
 import React, {
-    cloneElement,
+    cloneElement, createElement,
     Fragment,
-    MutableRefObject,
+    MutableRefObject, ReactHTML,
     ReactNode,
     useCallback,
     useMemo,
@@ -22,6 +22,10 @@ export interface IProps {
      * Задает дополнительные CSS классы для стилизации компонента.
      **/
     className?: TStyle | string,
+    /**
+     * Тег, который будет использоваться для рендеринга компонента.
+     **/
+    triggerTagName?: keyof ReactHTML | '',
     /**
      * Принимает элементы, которые будут использованы в качестве триггера.
      **/
@@ -83,7 +87,7 @@ export interface IProps {
 /**
  * Компонент `Popover` используется для отображения содержимого во всплывающем блоке при клике или наведении на указанный элемент-триггер. Поповер может использоваться для отображения дополнительной информации, подсказок или контекстного меню.
  **/
-export const Popover = ({ trigger = 'click', auto = true, placement = 'bottom-center', ...props }: IProps) => {
+export const Popover = ({ trigger = 'click', triggerTagName = 'div', auto = true, placement = 'bottom-center', ...props }: IProps) => {
     const cn = useClassnames(style, props.className);
     const [isOpen, setIsOpen] = useState(!!props.defaultIsOpen);
     const [isOver, hoverProps] = useHover(props.hoverOptions);
@@ -133,15 +137,13 @@ export const Popover = ({ trigger = 'click', auto = true, placement = 'bottom-ce
         }
 
         if(props.children) {
-            return (
-                <div
-                    {...attrs}
-                    className={cn('popover__trigger')}
-                    children={childrenElement}
-                />
-            );
+            return createElement(triggerTagName, {
+                ...attrs,
+                className: cn('popover__trigger'),
+                children: childrenElement
+            });
         }
-    }, [props.children, trigger, hoverProps, triggerProps]);
+    }, [props.children, trigger, hoverProps, triggerProps, triggerTagName]);
 
     const elArrow = useMemo(() => {
         if(props.arrow) {
