@@ -40,6 +40,7 @@ export { Title, type IProps as IPropsTypographyTitle } from './components/typogr
 export { Text, type IProps as IPropsTypographyText } from './components/typography/text';
 export { Tooltip, type IProps as IPropsTooltip } from './components/tooltip';
 export { Dropdown, type IProps as IPropsDropdown } from './components/dropdown';
+export { DropdownOption, type IProps as IPropsDropdownOption } from './components/dropdown/components/option';
 export { Pagination, type IProps as IPropsPagination } from './components/pagination';
 export { Radio, type IProps as IPropsRadio } from './components/radio';
 export { RadioGroup, type IProps as IPropsRadioGroup } from './components/radio-group';
