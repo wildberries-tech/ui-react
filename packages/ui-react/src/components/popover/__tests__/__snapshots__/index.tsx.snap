@@ -95,6 +95,32 @@ exports[`Close 3`] = `
 </DocumentFragment>
 `;
 
+exports[`CustomTagName 1`] = `
+<DocumentFragment>
+  <section
+    class="popover__trigger"
+  >
+    Text trigger
+  </section>
+</DocumentFragment>
+`;
+
+exports[`CustomTagName 2`] = `
+<DocumentFragment>
+  <section
+    class="popover__trigger"
+  >
+    Text trigger
+  </section>
+  <div
+    class="popover__content"
+    style="position: fixed; top: 0px; left: 0px;"
+  >
+    Text render
+  </div>
+</DocumentFragment>
+`;
+
 exports[`Default use 1`] = `
 <DocumentFragment>
   <div

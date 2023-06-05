@@ -30,6 +30,21 @@ export const Hover: StoryObj<typeof META> = {
     }
 };
 
+export const CustomTagName: StoryObj<typeof META> = {
+    args: {
+        trigger: 'hover',
+        triggerTagName: 'section'
+    }
+};
+
+export const CustomTagNameChildren: StoryObj<typeof META> = {
+    args: {
+        trigger: 'hover',
+        triggerTagName: 'section',
+        children: 'Test'
+    }
+};
+
 export const Elements: StoryObj<typeof META> = {
     args: {
         children: (

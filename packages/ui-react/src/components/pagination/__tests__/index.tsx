@@ -107,8 +107,10 @@ test('Clicks on elements', async () => {
     expect(asFragment()).toMatchSnapshot();
 
     const $input = screen.getByPlaceholderText(placeholderText);
-    const $preset = screen.getByText('Показать записей').childNodes[1];
+    const $preset = screen.getByText('Показать записей').childNodes[1].childNodes[0];
     const $pageButton = screen.getByText('3');
+
+    console.log('$preset', $preset);
 
     fireEvent.click($preset);
 

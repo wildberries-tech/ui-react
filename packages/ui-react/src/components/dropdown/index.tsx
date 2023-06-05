@@ -23,7 +23,7 @@ interface ICustomTriggerElement {
     triggerText?: string
 }
 
-export interface IProps<T extends ReactElement | ICustomTriggerElement = any> extends Pick<HTMLAttributes<HTMLDivElement>, 'style'>, Omit<IPopoverProps, 'syncOptionsWidth'> {
+export interface IProps<T extends ReactElement | ICustomTriggerElement = any> extends Pick<HTMLAttributes<HTMLDivElement>, 'style'>, IPopoverProps {
     /**
      * Render выпадающего элемента дропдауна
      **/
@@ -34,7 +34,7 @@ export interface IProps<T extends ReactElement | ICustomTriggerElement = any> ex
     triggerElement?: T
 }
 
-export const Dropdown = ({ placement = 'bottom-end', ...props }: IProps) => {
+export const Dropdown = ({ placement = 'bottom-end', syncOptionsWidth = true, ...props }: IProps) => {
     const cn = useClassnames(style, props.className, true);
 
     const elRightIconRender = useCallback((isOpen: boolean) => {
@@ -80,16 +80,18 @@ export const Dropdown = ({ placement = 'bottom-end', ...props }: IProps) => {
     }, [props.triggerElement]);
 
     return (
-        <Popover
-            placement={placement}
-            children={elTrigger}
-            syncOptionsWidth={true}
-            triggerOffset={4}
-            className={{
-                'popover__content': cn('dropdown__content')
-            }}
-            {...props}
-        />
+        <div className={cn('dropdown')}>
+            <Popover
+                placement={placement}
+                children={elTrigger}
+                triggerOffset={4}
+                syncOptionsWidth={syncOptionsWidth}
+                className={{
+                    'popover__content': cn('dropdown__content')
+                }}
+                {...props}
+            />
+        </div>
     );
 };
 
