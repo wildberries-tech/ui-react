@@ -88,6 +88,5 @@
     "workspaces": [
         "packages/ui-react",
         "packages/builder-webpack-5"
-    ],
-    "sideEffects": true
+    ]
 }
