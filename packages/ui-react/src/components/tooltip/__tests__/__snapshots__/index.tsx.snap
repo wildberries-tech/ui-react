@@ -26,7 +26,7 @@ exports[`Close 2`] = `
     <div>
       Out click
     </div>
-    <div
+    <span
       class="popover__content"
       style="position: fixed; top: 0px; left: 0px;"
     >
@@ -49,7 +49,7 @@ exports[`Close 2`] = `
           fill="var(--tooltip-background-color)"
         />
       </svg>
-    </div>
+    </span>
   </div>
 </DocumentFragment>
 `;
@@ -86,7 +86,7 @@ exports[`Default use 2`] = `
   >
     Text trigger
   </div>
-  <div
+  <span
     class="popover__content"
     style="position: fixed; top: 0px; left: 0px;"
   >
@@ -109,28 +109,36 @@ exports[`Default use 2`] = `
         fill="var(--tooltip-background-color)"
       />
     </svg>
-  </div>
+  </span>
 </DocumentFragment>
 `;
 
 exports[`Element 1`] = `
 <DocumentFragment>
-  <a
-    href="#"
+  <span
+    class="popover__trigger"
   >
-    Text trigger
-  </a>
+    <a
+      href="#"
+    >
+      Text trigger
+    </a>
+  </span>
 </DocumentFragment>
 `;
 
 exports[`Element 2`] = `
 <DocumentFragment>
-  <a
-    href="#"
+  <span
+    class="popover__trigger"
   >
-    Text trigger
-  </a>
-  <div
+    <a
+      href="#"
+    >
+      Text trigger
+    </a>
+  </span>
+  <span
     class="popover__content"
     style="position: fixed; top: 0px; left: 0px;"
   >
@@ -153,7 +161,7 @@ exports[`Element 2`] = `
         fill="var(--tooltip-background-color)"
       />
     </svg>
-  </div>
+  </span>
 </DocumentFragment>
 `;
 
@@ -194,7 +202,7 @@ exports[`Render function 2`] = `
   >
     Text trigger
   </div>
-  <div
+  <span
     class="popover__content"
     style="position: fixed; top: 0px; left: 0px;"
   >
@@ -217,6 +225,6 @@ exports[`Render function 2`] = `
         fill="var(--tooltip-background-color)"
       />
     </svg>
-  </div>
+  </span>
 </DocumentFragment>
 `;

@@ -11,6 +11,15 @@
     }
 
     &__trigger {
-        display: inline;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+
+        @media (hover: hover) and (pointer: fine) {
+
+            &:hover {
+                cursor: pointer;
+            }
+        }
     }
 }

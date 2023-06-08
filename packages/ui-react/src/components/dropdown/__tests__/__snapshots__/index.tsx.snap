@@ -5,24 +5,28 @@ exports[`Default use 1`] = `
   <div
     class="dropdown"
   >
-    <div
-      class="dropdown__trigger"
+    <span
+      class="popover__trigger"
     >
-      Trigger
-      <svg
-        class="dropdown__trigger-icon"
-        height="24"
-        viewBox="0 0 24 24"
-        width="24"
-        xmlns="http://www.w3.org/2000/svg"
+      <div
+        class="dropdown__trigger"
       >
-        <path
-          clip-rule="evenodd"
-          d="M10 5a2 2 0 1 0 4 0 2 2 0 0 0-4 0Zm2 9a2 2 0 1 1 0-4 2 2 0 0 1 0 4Zm0 7a2 2 0 1 1 0-4 2 2 0 0 1 0 4Z"
-          fill-rule="evenodd"
-        />
-      </svg>
-    </div>
+        Trigger
+        <svg
+          class="dropdown__trigger-icon"
+          height="24"
+          viewBox="0 0 24 24"
+          width="24"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            clip-rule="evenodd"
+            d="M10 5a2 2 0 1 0 4 0 2 2 0 0 0-4 0Zm2 9a2 2 0 1 1 0-4 2 2 0 0 1 0 4Zm0 7a2 2 0 1 1 0-4 2 2 0 0 1 0 4Z"
+            fill-rule="evenodd"
+          />
+        </svg>
+      </div>
+    </span>
   </div>
 </DocumentFragment>
 `;
@@ -32,25 +36,29 @@ exports[`Default use 2`] = `
   <div
     class="dropdown"
   >
-    <div
-      class="dropdown__trigger"
+    <span
+      class="popover__trigger"
     >
-      Trigger
-      <svg
-        class="dropdown__trigger-icon dropdown__trigger-icon_active-dots"
-        height="24"
-        viewBox="0 0 24 24"
-        width="24"
-        xmlns="http://www.w3.org/2000/svg"
+      <div
+        class="dropdown__trigger"
       >
-        <path
-          clip-rule="evenodd"
-          d="M10 5a2 2 0 1 0 4 0 2 2 0 0 0-4 0Zm2 9a2 2 0 1 1 0-4 2 2 0 0 1 0 4Zm0 7a2 2 0 1 1 0-4 2 2 0 0 1 0 4Z"
-          fill-rule="evenodd"
-        />
-      </svg>
-    </div>
-    <div
+        Trigger
+        <svg
+          class="dropdown__trigger-icon dropdown__trigger-icon_active-dots"
+          height="24"
+          viewBox="0 0 24 24"
+          width="24"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            clip-rule="evenodd"
+            d="M10 5a2 2 0 1 0 4 0 2 2 0 0 0-4 0Zm2 9a2 2 0 1 1 0-4 2 2 0 0 1 0 4Zm0 7a2 2 0 1 1 0-4 2 2 0 0 1 0 4Z"
+            fill-rule="evenodd"
+          />
+        </svg>
+      </div>
+    </span>
+    <span
       class="dropdown__content"
       style="position: fixed; top: 0px; left: 0px; min-width: 0;"
     >
@@ -63,97 +71,7 @@ exports[`Default use 2`] = `
       <div>
         Option 3
       </div>
-    </div>
-  </div>
-</DocumentFragment>
-`;
-
-exports[`Default use 3`] = `
-<DocumentFragment>
-  <div
-    class="dropdown"
-  >
-    <div
-      class="dropdown__trigger"
-    >
-      <svg
-        height="24"
-        viewBox="0 0 24 24"
-        width="24"
-        xmlns="http://www.w3.org/2000/svg"
-      >
-        <path
-          clip-rule="evenodd"
-          d="M16.293 9.293 13 12.586V2h-2v10.586L7.707 9.293l-1.414 1.414L12 16.414l5.707-5.707-1.414-1.414ZM22 20v-4h-2v4H4v-4H2v4a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2Z"
-          fill-rule="evenodd"
-        />
-      </svg>
-      Trigger
-      <svg
-        height="24"
-        viewBox="0 0 24 24"
-        width="24"
-        xmlns="http://www.w3.org/2000/svg"
-      >
-        <path
-          clip-rule="evenodd"
-          d="M14.586 12 7.293 4.707l1.414-1.414L17.414 12l-8.707 8.707-1.414-1.414L14.586 12Z"
-          fill-rule="evenodd"
-        />
-      </svg>
-    </div>
-  </div>
-</DocumentFragment>
-`;
-
-exports[`Default use 4`] = `
-<DocumentFragment>
-  <div
-    class="dropdown"
-  >
-    <div
-      class="dropdown__trigger"
-    >
-      <svg
-        height="24"
-        viewBox="0 0 24 24"
-        width="24"
-        xmlns="http://www.w3.org/2000/svg"
-      >
-        <path
-          clip-rule="evenodd"
-          d="M16.293 9.293 13 12.586V2h-2v10.586L7.707 9.293l-1.414 1.414L12 16.414l5.707-5.707-1.414-1.414ZM22 20v-4h-2v4H4v-4H2v4a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2Z"
-          fill-rule="evenodd"
-        />
-      </svg>
-      Trigger
-      <svg
-        height="24"
-        viewBox="0 0 24 24"
-        width="24"
-        xmlns="http://www.w3.org/2000/svg"
-      >
-        <path
-          clip-rule="evenodd"
-          d="M14.586 12 7.293 4.707l1.414-1.414L17.414 12l-8.707 8.707-1.414-1.414L14.586 12Z"
-          fill-rule="evenodd"
-        />
-      </svg>
-    </div>
-    <div
-      class="dropdown__content"
-      style="position: fixed; top: 0px; left: 0px; min-width: 0;"
-    >
-      <div>
-        Option 1
-      </div>
-      <div>
-        Option 2
-      </div>
-      <div>
-        Option 3
-      </div>
-    </div>
+    </span>
   </div>
 </DocumentFragment>
 `;
@@ -163,24 +81,28 @@ exports[`Default use icon dots 1`] = `
   <div
     class="dropdown"
   >
-    <div
-      class="dropdown__trigger"
+    <span
+      class="popover__trigger"
     >
-      Trigger
-      <svg
-        class="dropdown__trigger-icon dropdown__trigger-icon_chevron"
-        height="24"
-        viewBox="0 0 24 24"
-        width="24"
-        xmlns="http://www.w3.org/2000/svg"
+      <div
+        class="dropdown__trigger"
       >
-        <path
-          clip-rule="evenodd"
-          d="m19.293 7.293 1.414 1.414L12 17.414 3.293 8.707l1.414-1.414L12 14.586l7.293-7.293Z"
-          fill-rule="evenodd"
-        />
-      </svg>
-    </div>
+        Trigger
+        <svg
+          class="dropdown__trigger-icon dropdown__trigger-icon_chevron"
+          height="24"
+          viewBox="0 0 24 24"
+          width="24"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            clip-rule="evenodd"
+            d="m19.293 7.293 1.414 1.414L12 17.414 3.293 8.707l1.414-1.414L12 14.586l7.293-7.293Z"
+            fill-rule="evenodd"
+          />
+        </svg>
+      </div>
+    </span>
   </div>
 </DocumentFragment>
 `;
@@ -190,25 +112,29 @@ exports[`Default use icon dots 2`] = `
   <div
     class="dropdown"
   >
-    <div
-      class="dropdown__trigger"
+    <span
+      class="popover__trigger"
     >
-      Trigger
-      <svg
-        class="dropdown__trigger-icon dropdown__trigger-icon_chevron dropdown__trigger-icon_active-chevron"
-        height="24"
-        viewBox="0 0 24 24"
-        width="24"
-        xmlns="http://www.w3.org/2000/svg"
+      <div
+        class="dropdown__trigger"
       >
-        <path
-          clip-rule="evenodd"
-          d="m19.293 7.293 1.414 1.414L12 17.414 3.293 8.707l1.414-1.414L12 14.586l7.293-7.293Z"
-          fill-rule="evenodd"
-        />
-      </svg>
-    </div>
-    <div
+        Trigger
+        <svg
+          class="dropdown__trigger-icon dropdown__trigger-icon_chevron dropdown__trigger-icon_active-chevron"
+          height="24"
+          viewBox="0 0 24 24"
+          width="24"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            clip-rule="evenodd"
+            d="m19.293 7.293 1.414 1.414L12 17.414 3.293 8.707l1.414-1.414L12 14.586l7.293-7.293Z"
+            fill-rule="evenodd"
+          />
+        </svg>
+      </div>
+    </span>
+    <span
       class="dropdown__content"
       style="position: fixed; top: 0px; left: 0px; min-width: 0;"
     >
@@ -221,7 +147,223 @@ exports[`Default use icon dots 2`] = `
       <div>
         Option 3
       </div>
-    </div>
+    </span>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`Trigger button 1`] = `
+<DocumentFragment>
+  <div
+    class="dropdown"
+  >
+    <span
+      class="popover__trigger"
+    >
+      <button
+        class="button button_medium button_default"
+        type="button"
+      >
+        Button
+      </button>
+    </span>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`Trigger button 2`] = `
+<DocumentFragment>
+  <div
+    class="dropdown"
+  >
+    <span
+      class="popover__trigger"
+    >
+      <button
+        class="button button_medium button_default"
+        type="button"
+      >
+        Button
+      </button>
+    </span>
+    <span
+      class="dropdown__content"
+      style="position: fixed; top: 0px; left: 0px; min-width: 0;"
+    >
+      <div>
+        Option 1
+      </div>
+      <div>
+        Option 2
+      </div>
+      <div>
+        Option 3
+      </div>
+    </span>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`Trigger custom icon 1`] = `
+<DocumentFragment>
+  <div
+    class="dropdown"
+  >
+    <span
+      class="popover__trigger"
+    >
+      <svg
+        height="24"
+        role="Trigger"
+        viewBox="0 0 24 24"
+        width="24"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <path
+          clip-rule="evenodd"
+          d="M14.586 12 7.293 4.707l1.414-1.414L17.414 12l-8.707 8.707-1.414-1.414L14.586 12Z"
+          fill-rule="evenodd"
+        />
+      </svg>
+    </span>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`Trigger custom icon 2`] = `
+<DocumentFragment>
+  <div
+    class="dropdown"
+  >
+    <span
+      class="popover__trigger"
+    >
+      <svg
+        height="24"
+        role="Trigger"
+        viewBox="0 0 24 24"
+        width="24"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <path
+          clip-rule="evenodd"
+          d="M14.586 12 7.293 4.707l1.414-1.414L17.414 12l-8.707 8.707-1.414-1.414L14.586 12Z"
+          fill-rule="evenodd"
+        />
+      </svg>
+    </span>
+    <span
+      class="dropdown__content"
+      style="position: fixed; top: 0px; left: 0px; min-width: 0;"
+    >
+      <div>
+        Option 1
+      </div>
+      <div>
+        Option 2
+      </div>
+      <div>
+        Option 3
+      </div>
+    </span>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`Trigger left right icons 1`] = `
+<DocumentFragment>
+  <div
+    class="dropdown"
+  >
+    <span
+      class="popover__trigger"
+    >
+      <div
+        class="dropdown__trigger"
+      >
+        <svg
+          height="24"
+          viewBox="0 0 24 24"
+          width="24"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            clip-rule="evenodd"
+            d="M16.293 9.293 13 12.586V2h-2v10.586L7.707 9.293l-1.414 1.414L12 16.414l5.707-5.707-1.414-1.414ZM22 20v-4h-2v4H4v-4H2v4a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2Z"
+            fill-rule="evenodd"
+          />
+        </svg>
+        Trigger
+        <svg
+          height="24"
+          viewBox="0 0 24 24"
+          width="24"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            clip-rule="evenodd"
+            d="M14.586 12 7.293 4.707l1.414-1.414L17.414 12l-8.707 8.707-1.414-1.414L14.586 12Z"
+            fill-rule="evenodd"
+          />
+        </svg>
+      </div>
+    </span>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`Trigger left right icons 2`] = `
+<DocumentFragment>
+  <div
+    class="dropdown"
+  >
+    <span
+      class="popover__trigger"
+    >
+      <div
+        class="dropdown__trigger"
+      >
+        <svg
+          height="24"
+          viewBox="0 0 24 24"
+          width="24"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            clip-rule="evenodd"
+            d="M16.293 9.293 13 12.586V2h-2v10.586L7.707 9.293l-1.414 1.414L12 16.414l5.707-5.707-1.414-1.414ZM22 20v-4h-2v4H4v-4H2v4a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2Z"
+            fill-rule="evenodd"
+          />
+        </svg>
+        Trigger
+        <svg
+          height="24"
+          viewBox="0 0 24 24"
+          width="24"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            clip-rule="evenodd"
+            d="M14.586 12 7.293 4.707l1.414-1.414L17.414 12l-8.707 8.707-1.414-1.414L14.586 12Z"
+            fill-rule="evenodd"
+          />
+        </svg>
+      </div>
+    </span>
+    <span
+      class="dropdown__content"
+      style="position: fixed; top: 0px; left: 0px; min-width: 0;"
+    >
+      <div>
+        Option 1
+      </div>
+      <div>
+        Option 2
+      </div>
+      <div>
+        Option 3
+      </div>
+    </span>
   </div>
 </DocumentFragment>
 `;

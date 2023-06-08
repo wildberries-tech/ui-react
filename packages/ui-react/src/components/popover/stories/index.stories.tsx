@@ -1,8 +1,9 @@
 import React from 'react';
-import type { Meta, StoryObj } from '@storybook/react';
+import type { Meta, StoryFn, StoryObj } from '@storybook/react';
 
 import { Popover } from '..';
 import module from '../index.module.pcss';
+import { IconArrowsChevronBottom } from '../../icons/arrows/chevron-bottom';
 
 const META: Meta<typeof Popover> = {
     title: 'Components/Popover',
@@ -56,4 +57,35 @@ export const Elements: StoryObj<typeof META> = {
             />
         )
     }
+};
+
+export const TriggerInLine: StoryFn<typeof META> = () => {
+    return (
+        <p>
+            Some text&nbsp;
+            <Popover
+                children="trigger"
+                render="Option"
+                triggerTagName="span"
+            />
+        </p>
+    );
+};
+
+// eslint-disable-next-line react/no-multi-comp
+export const TriggerIcon: StoryFn<typeof META> = () => {
+    return (
+        <p
+            style={{
+                display: 'flex',
+                alignItems: 'center'
+            }}
+        >
+            Some text&nbsp;
+            <Popover
+                children={<IconArrowsChevronBottom />}
+                render="Option"
+            />
+        </p>
+    );
 };

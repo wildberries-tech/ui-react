@@ -1,4 +1,4 @@
-import React, { ButtonHTMLAttributes, useMemo } from 'react';
+import React, { ButtonHTMLAttributes, forwardRef, useMemo } from 'react';
 import { isFragment, isElement } from 'react-is';
 
 import { type TStyle, useClassnames } from '../../hooks/use-classnames';
@@ -85,7 +85,7 @@ const isCompact = (element: IProps['children']) => {
 /**
  * Компонент `Button` представляет собой кнопку, которая может использоваться для выполнения каких-либо действий в приложении.
  **/
-export const Button = ({ presetSize = 'medium', presetStyle = 'default', type = 'button', ...props }: IProps) => {
+export const Button = forwardRef<HTMLButtonElement | null, IProps>(({ presetSize = 'medium', presetStyle = 'default', type = 'button', ...props }, ref) => {
     const cn = useClassnames(style, props.className);
 
     const elChildren = useMemo(() => {
@@ -105,6 +105,7 @@ export const Button = ({ presetSize = 'medium', presetStyle = 'default', type = 
         <button
             id={props.id}
             type={type}
+            ref={ref}
             disabled={props.isLoading ?? props.disabled}
             tabIndex={props.isLoading || props.disabled ? -1 : props.tabIndex}
             onFocus={props.onFocus}
@@ -118,4 +119,4 @@ export const Button = ({ presetSize = 'medium', presetStyle = 'default', type = 
             children={elChildren}
         />
     );
-};
+});
