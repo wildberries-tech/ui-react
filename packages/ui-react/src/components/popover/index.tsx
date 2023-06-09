@@ -133,7 +133,14 @@ export const Popover = ({ trigger = 'click', triggerTagName = 'div', auto = true
         const childrenElement = typeof props.children === 'function' ? props.children(isOpen, onClose) : props.children;
 
         if(isElement(childrenElement)) {
-            return cloneElement(childrenElement, attrs);
+            return (
+                <span
+                    className={cn('popover__trigger')}
+                    {...attrs}
+                >
+                    {cloneElement(childrenElement)}
+                </span>
+            );
         }
 
         if(props.children) {
@@ -159,7 +166,7 @@ export const Popover = ({ trigger = 'click', triggerTagName = 'div', auto = true
     const elContent = useMemo(() => {
         if(isOpen || trigger === 'hover' && isOver) {
             return renderLayer(
-                <div
+                <span
                     {...layerProps}
                     style={{
                         ...layerProps.style,
@@ -169,7 +176,7 @@ export const Popover = ({ trigger = 'click', triggerTagName = 'div', auto = true
                 >
                     {typeof props.render === 'function' ? props.render(isOpen, onClose, $trigger) : props.render}
                     {elArrow}
-                </div>
+                </span>
             );
         }
     }, [isOpen, isOver, trigger, layerProps, elArrow, renderLayer]);

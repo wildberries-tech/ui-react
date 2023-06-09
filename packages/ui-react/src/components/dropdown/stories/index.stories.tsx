@@ -6,6 +6,7 @@ import module from '../../popover/index.module.pcss';
 import { IconArrowsChevronRight } from '../../icons/arrows/chevron-right';
 import { IconDownload } from '../../icons/download';
 import { DropdownOption } from '../components/option';
+import { Button } from '../../button';
 
 const META: Meta<typeof Dropdown> = {
     title    : 'Components/Dropdown',
@@ -210,6 +211,56 @@ export const CustomElementTriggerText: StoryFn<typeof META> = () => {
                             option.handleClick();
 
                             setActive(option.label);
+
+                            onClose();
+                        }}
+                    >
+                        {option.label}
+                    </div>
+                ));
+            }}
+        />
+    );
+};
+
+// eslint-disable-next-line react/no-multi-comp
+export const CustomElementTriggerButton: StoryFn<typeof META> = () => {
+    return (
+        <Dropdown
+            triggerElement={(
+                <Button>Button trigger</Button>
+            )}
+            render={(isOpen, onClose) => {
+                return dropdownOptions.map((option, index) => (
+                    <div
+                        key={index}
+                        onClick={() => {
+                            option.handleClick();
+
+                            onClose();
+                        }}
+                    >
+                        {option.label}
+                    </div>
+                ));
+            }}
+        />
+    );
+};
+
+// eslint-disable-next-line react/no-multi-comp
+export const CustomElementTriggerIcon: StoryFn<typeof META> = () => {
+    return (
+        <Dropdown
+            triggerElement={(
+                <IconArrowsChevronRight />
+            )}
+            render={(isOpen, onClose) => {
+                return dropdownOptions.map((option, index) => (
+                    <div
+                        key={index}
+                        onClick={() => {
+                            option.handleClick();
 
                             onClose();
                         }}

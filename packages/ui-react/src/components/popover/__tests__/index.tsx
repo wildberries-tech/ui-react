@@ -2,6 +2,7 @@ import React from 'react';
 import { render, fireEvent, waitFor } from '@testing-library/react';
 
 import { Popover } from '..';
+import { IconArrowsChevronBottom } from '../../icons/arrows/chevron-bottom';
 
 test('Default use', async () => {
     const { asFragment, getByText } = render(
@@ -128,6 +129,23 @@ test('Render function', async () => {
     expect(asFragment()).toMatchSnapshot();
 
     fireEvent.click(getByText('Text trigger'));
+
+    await waitFor(() => {
+        expect(asFragment()).toMatchSnapshot();
+    });
+});
+
+test('Icon trigger', async () => {
+    const { asFragment, getByRole } = render(
+        <Popover
+            children={<IconArrowsChevronBottom svg={{ role: 'Trigger' }} />}
+            render={() => 'Text render'}
+        />
+    );
+
+    expect(asFragment()).toMatchSnapshot();
+
+    fireEvent.click(getByRole('Trigger'));
 
     await waitFor(() => {
         expect(asFragment()).toMatchSnapshot();
