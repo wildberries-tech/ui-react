@@ -1,6 +1,6 @@
 import React, { Fragment, ReactNode, useContext, useMemo } from 'react';
-import { Title, Subtitle, Description, Unstyled, Primary, Controls, Stories, DocsContext, SourceContext, DocsContextProps } from '@storybook/blocks';
-import {TabsComposition, DesignTokens, useDesignTokensNative} from '@wb-tech/ui-react';
+import { Title, Subtitle, Description, Unstyled, Primary, Controls, Stories, DocsContext, DocsContextProps } from '@storybook/blocks';
+import { TabsComposition, DesignTokens, useDesignTokensNative } from '@wb-tech/ui-react';
 
 import { DocsSetup } from './setup';
 import { DocsCSSModule } from './css-module';
