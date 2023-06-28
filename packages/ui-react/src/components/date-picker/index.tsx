@@ -147,7 +147,9 @@ export const DatePicker = ({
     }, [props.disableDatesInPast, calendar.month]);
 
     useEffect(() => {
-        consoleFormat('DatePicker: Свойство `qa` нежелательно в продакшене');
+        if(props.qa) {
+            consoleFormat('DatePicker: Свойство `qa` нежелательно в продакшене');
+        }
     }, [props.qa]);
 
     useEffect(() => {
