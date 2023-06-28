@@ -1,9 +1,6 @@
 .modal {
     position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
+    inset: 0;
     display: grid;
     background-color: rgb(0 0 0 / 0.3);
     justify-items: center;
@@ -14,19 +11,13 @@
 
     &_bottom {
         background-color: transparent;
-        left: 50%;
-        right: auto;
+        inset: auto auto 32px 50%;
         transform: translateX(-50%);
-        bottom: 32px;
-        top: auto;
         overflow: visible;
-    }
-
-    &_center {
         position: fixed;
     }
 
-    &_bottom {
+    &_center {
         position: fixed;
     }
 
@@ -87,19 +78,19 @@
         position: relative;
         box-sizing: border-box;
 
-        &_S {
+        &_s {
             max-width: 400px;
         }
 
-        &_M {
+        &_m {
             max-width: 496px;
         }
 
-        &_L {
+        &_l {
             max-width: 696px;
         }
 
-        &_XL {
+        &_xl {
             max-width: 996px;
         }
     }
@@ -118,6 +109,7 @@
 
         &_no-header {
             grid-template-rows: 1fr;
+            padding-top: 32px;
         }
 
         &_default {
@@ -130,10 +122,6 @@
 
         &_bottom {
             padding: 24px;
-        }
-
-        &_no-header {
-            padding-top: 32px;
         }
     }
 

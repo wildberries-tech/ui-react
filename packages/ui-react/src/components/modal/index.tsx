@@ -22,7 +22,7 @@ export interface IProps {
     bodyPaddingPreset?: 'default' | 'reduced',
     isCloseIconShow?: boolean,
     isOpen?: boolean,
-    widthPreset?: 'S' | 'M' | 'L' | 'XL'
+    widthPreset?: 's' | 'm' | 'l' | 'xl'
 }
 
 export const Modal = ({
@@ -30,7 +30,7 @@ export const Modal = ({
     placement = 'center',
     bodyPaddingPreset = 'default',
     isCloseIconShow = true,
-    widthPreset = 'M',
+    widthPreset = 'm',
     isOpen = false,
     ...props
 }: IProps) => {
@@ -54,11 +54,11 @@ export const Modal = ({
     }, []);
 
     useEffect(() => {
-        if(placement === 'bottom' && (widthPreset === 'L' || widthPreset === 'XL')) {
+        if(placement === 'bottom' && (widthPreset === 'l' || widthPreset === 'xl')) {
             consoleFormat('Modal: Позиционирование `placement={bottom}` несовместимо с пресетами `widthPreset={L}` и `widthPreset={XL}`');
         }
 
-        if(placement === 'center' && widthPreset === 'S') {
+        if(placement === 'center' && widthPreset === 's') {
             consoleFormat('Modal: Позиционирование `placement={center}` несовместимо с пресетами `widthPreset={S}`');
         }
     }, [widthPreset, placement]);

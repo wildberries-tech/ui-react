@@ -55,7 +55,7 @@ export const DefaultSizeL: StoryFn<typeof META> = () => {
             <Button onClick={() => setIsOpen(true)}>Click to open</Button>
             <Modal
                 header="Modal header"
-                widthPreset="L"
+                widthPreset="l"
                 isOpen={isOpen}
                 onClose={() => setIsOpen(false)}
                 primaryButton={{
@@ -81,7 +81,7 @@ export const DefaultSizeXL: StoryFn<typeof META> = () => {
             <Button onClick={() => setIsOpen(true)}>Click to open</Button>
             <Modal
                 header="Modal header"
-                widthPreset="XL"
+                widthPreset="xl"
                 isOpen={isOpen}
                 onClose={() => setIsOpen(false)}
                 primaryButton={{
@@ -108,7 +108,7 @@ export const BottomSizeS: StoryFn<typeof META> = () => {
             <Modal
                 header="Modal header"
                 placement="bottom"
-                widthPreset="S"
+                widthPreset="s"
                 isOpen={isOpen}
                 onClose={() => setIsOpen(false)}
                 primaryButton={{
@@ -134,7 +134,7 @@ export const BottomPlacement: StoryFn<typeof META> = () => {
             <Button onClick={() => setIsOpen(true)}>Click to open</Button>
             <Modal
                 isOpen={isOpen}
-                widthPreset="XL"
+                widthPreset="xl"
                 placement="bottom"
                 onClose={() => setIsOpen(false)}
                 primaryButton={{

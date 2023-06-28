@@ -6,10 +6,10 @@ export const modal__body_reduced: string
 export const modal__children: string
 export const modal__children_bottom: string
 export const modal__content: string
-export const modal__content_L: string
-export const modal__content_M: string
-export const modal__content_S: string
-export const modal__content_XL: string
+export const modal__content_l: string
+export const modal__content_m: string
+export const modal__content_s: string
+export const modal__content_xl: string
 export const modal__footer: string
 export const modal__footer_bottom: string
 export const modal_bottom: string
@@ -27,10 +27,10 @@ interface Stylesheet {
     'modal__children': string
     'modal__children_bottom': string
     'modal__content': string
-    'modal__content_L': string
-    'modal__content_M': string
-    'modal__content_S': string
-    'modal__content_XL': string
+    'modal__content_l': string
+    'modal__content_m': string
+    'modal__content_s': string
+    'modal__content_xl': string
     'modal__footer': string
     'modal__footer_bottom': string
     'modal__header-wrapper': string

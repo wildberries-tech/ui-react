@@ -43,6 +43,7 @@ test('Single Button', async () => {
             <Modal
                 header="Modal header"
                 isOpen={isOpen}
+                widthPreset="m"
                 onClose={() => isOpen = false}
                 primaryButton={{
                     children: 'Primary button'
@@ -69,7 +70,7 @@ test('Placement bottom', async () => {
             <Button onClick={() => isOpen = true}>Trigger</Button>
             <Modal
                 placement="bottom"
-                widthPreset="XL"
+                widthPreset="xl"
                 header="Modal header"
                 isOpen={isOpen}
                 onClose={() => isOpen = false}
@@ -97,7 +98,7 @@ test('Placement bottom', async () => {
         <Fragment>
             <Button onClick={() => isOpen = true}>Trigger</Button>
             <Modal
-                widthPreset="S"
+                widthPreset="s"
                 header="Modal header"
                 isOpen={isOpen}
                 onClose={() => isOpen = false}
@@ -125,7 +126,7 @@ test('Esc press', async () => {
         <Fragment>
             <Button onClick={() => isOpen = true}>Trigger</Button>
             <Modal
-                widthPreset="S"
+                widthPreset="s"
                 header="Modal header"
                 isOpen={isOpen}
                 onClose={() => isOpen = false}
@@ -162,7 +163,7 @@ test('Layout click', async () => {
         <Fragment>
             <Button onClick={handleOpen}>Trigger</Button>
             <Modal
-                widthPreset="S"
+                widthPreset="s"
                 header="Modal header"
                 isOpen={true}
                 onClose={handleClose}
@@ -196,7 +197,7 @@ test('Header node', async () => {
         <Fragment>
             <Button onClick={handleOpen}>Trigger</Button>
             <Modal
-                widthPreset="S"
+                widthPreset="s"
                 header={(
                     <div>Modal header</div>
                 )}
@@ -232,7 +233,7 @@ test('isCloseIconShow', async () => {
         <Fragment>
             <Button onClick={handleOpen}>Trigger</Button>
             <Modal
-                widthPreset="S"
+                widthPreset="s"
                 isCloseIconShow={true}
                 isOpen={true}
                 onClose={handleClose}
@@ -266,7 +267,7 @@ test('isOpen false no buttons', async () => {
         <Fragment>
             <Button onClick={handleOpen}>Trigger</Button>
             <Modal
-                widthPreset="L"
+                widthPreset="l"
                 isCloseIconShow={true}
                 onClose={handleClose}
                 bodyPaddingPreset="reduced"
