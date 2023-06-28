@@ -80,6 +80,7 @@
         "@types/react-is": "17.x || 18.x",
         "body-scroll-lock": "4.0.0-beta.0",
         "classnames": "2.x",
+        "date-fns": "2.30.0",
         "react": "16.x || 17.x || 18.x",
         "react-dom": "16.x || 17.x || 18.x",
         "react-is": "17.x || 18.x"

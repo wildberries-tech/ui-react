@@ -45,6 +45,7 @@ export { Pagination, type IProps as IPropsPagination } from './components/pagina
 export { Radio, type IProps as IPropsRadio } from './components/radio';
 export { RadioGroup, type IProps as IPropsRadioGroup } from './components/radio-group';
 export { Modal, type IProps as IPropsModal } from './components/modal';
+export { DatePicker, type IProps as IPropsDatePicker } from './components/date-picker';
 
 /**
  * Icons
