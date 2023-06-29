@@ -1,16 +1,5 @@
 import React, { ChangeEvent, Fragment, useCallback, useEffect, useMemo, useRef, useState } from 'react';
 import {
-    InputText,
-    TStyle,
-    useClassnames,
-    IconCalendar,
-    Dropdown,
-    Checkbox,
-    Button,
-    IconArrowsArrowRight,
-    IconArrowsArrowLeft
-} from '@wb-tech/ui-react';
-import {
     add,
     addDays,
     eachDayOfInterval,
@@ -37,6 +26,14 @@ import {
 
 import { getWeekDaysList, TLanguage, TWeekdays, useDateFnsFormatWithOptions } from '../../hooks/use-format-with-options';
 import { consoleFormat } from '../../tools/console-format';
+import { InputText } from '../input-text';
+import { IconCalendar } from '../icons/calendar';
+import { IconArrowsArrowRight } from '../icons/arrows/arrow-right';
+import { IconArrowsArrowLeft } from '../icons/arrows/arrow-left';
+import { Checkbox } from '../checkbox';
+import { Dropdown } from '../dropdown';
+import { Button } from '../button';
+import { useClassnames, TStyle } from '../../hooks/use-classnames';
 
 import style from './index.module.pcss';
 
