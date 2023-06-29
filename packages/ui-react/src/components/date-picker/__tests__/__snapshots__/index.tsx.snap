@@ -1932,13 +1932,13 @@ exports[`Range Picker 2`] = `
                   27
                 </button>
                 <button
-                  class="date-picker__date date-picker__date_border date-picker__date_today"
+                  class="date-picker__date date-picker__date_border"
                   type="button"
                 >
                   28
                 </button>
                 <button
-                  class="date-picker__date date-picker__date_border"
+                  class="date-picker__date date-picker__date_border date-picker__date_today"
                   type="button"
                 >
                   29
@@ -2026,13 +2026,13 @@ exports[`Range Picker 2`] = `
                   27
                 </button>
                 <button
-                  class="date-picker__date date-picker__date_muted date-picker__date_today"
+                  class="date-picker__date date-picker__date_muted"
                   type="button"
                 >
                   28
                 </button>
                 <button
-                  class="date-picker__date date-picker__date_muted"
+                  class="date-picker__date date-picker__date_muted date-picker__date_today"
                   type="button"
                 >
                   29

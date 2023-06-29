@@ -85,12 +85,6 @@ interface ICalendar {
     months: TMonths
 }
 
-const defaultSelectedDateEmpty: TDateValuesArray = [];
-
-const elementFromPoint = (x: number, y: number) => {
-    return document.elementFromPoint(x, y);
-};
-
 const isElementVisible = (el?: Element): boolean | undefined => {
     if(!el) {
         return;
@@ -104,13 +98,15 @@ const isElementVisible = (el?: Element): boolean | undefined => {
         return false;
     }
 
-    const leftTopPosition = el.contains(elementFromPoint(rect.left, rect.top));
-    const rightTopPosition = el.contains(elementFromPoint(rect.right, rect.top));
-    const rightBottomPosition = el.contains(elementFromPoint(rect.right, rect.bottom));
-    const leftBottomPosition = el.contains(elementFromPoint(rect.left, rect.bottom));
+    const leftTopPosition = el.contains(document.elementFromPoint(rect.left, rect.top));
+    const rightTopPosition = el.contains(document.elementFromPoint(rect.right, rect.top));
+    const rightBottomPosition = el.contains(document.elementFromPoint(rect.right, rect.bottom));
+    const leftBottomPosition = el.contains(document.elementFromPoint(rect.left, rect.bottom));
 
     return leftBottomPosition || rightBottomPosition || leftTopPosition || rightTopPosition || undefined;
 };
+
+const defaultSelectedDateEmpty: TDateValuesArray = [];
 
 export const DatePicker = ({
     language = 'ru',
