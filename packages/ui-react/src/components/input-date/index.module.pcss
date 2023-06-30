@@ -1,0 +1,190 @@
+.input-date {
+    display: grid;
+    width: 100%;
+    grid-row-gap: 8px;
+    font-family: var(--font-family-primary);
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 20px;
+
+    --input-date-border-color-hover: var(--color-border-brand);
+    --input-date-border-color: var(--color-border-basic);
+    --input-date-bg-color: var(--color-bg-base);
+    --input-date-bg-color-disabled: var(--color-bg-base-1);
+    --input-date-border-color-disabled: var(--color-border-basic);
+    --input-date-border-color-error: var(--color-border-error);
+    --input-date-focus-color: var(--color-analytics-blue);
+    --input-date-label-color: var(--color-text-headers);
+    --input-date-label-required-color: var(--color-text-error);
+    --input-date-color-placeholder: var(--color-text-disabled);
+    --input-date-color-disabled: var(--color-text-disabled);
+    --input-date-color-readonly: var(--color-text-basic);
+    --input-date-color-error: var(--color-text-error);
+    --input-date-color-description: var(--color-text-headers);
+    --input-date-icon-color: var(--color-text-secondary);
+
+    @media (hover: hover) and (pointer: fine) {
+
+        &__field {
+
+            &:hover:not(&_disabled) {
+                border-color: var(--input-date-border-color-hover);
+            }
+        }
+    }
+
+    &__label {
+        color: var(--input-date-label-color);
+
+        &_required {
+
+            &::after {
+                content: "*";
+                padding-left: 4px;
+                color: var(--input-date-label-required-color);
+                font-size: 16px;
+            }
+        }
+
+        @media (hover: hover) and (pointer: fine) {
+
+            &:not(&_disabled) {
+                cursor: pointer;
+            }
+        }
+    }
+
+    &__input-wrapper {
+        position: relative;
+        height: max-content;
+    }
+
+    &__input-placeholder {
+        position: absolute;
+        left: 12px;
+        top: 50%;
+        margin-top: -8px;
+        color: var(--color-text-secondary);
+        font-weight: normal;
+        font-size: 14px;
+        line-height: 16px;
+
+        &_invisible {
+            display: none;
+        }
+    }
+
+    &__field {
+        position: relative;
+        display: grid;
+        grid-auto-flow: column;
+        grid-column-gap: 8px;
+        padding: 9px 11px;
+        margin: 0;
+        border: solid 1px var(--input-date-border-color);
+        border-radius: 4px;
+        background-color: var(--input-date-bg-color);
+        height: 44px;
+        transition: all 200ms linear;
+        fill: var(--color-icon-secondary);
+        grid-template-columns: var(--grid-template-columns, 1fr);
+        box-sizing: border-box;
+
+        &:focus-within {
+            box-shadow: 0 0 0 2px var(--input-date-focus-color);
+        }
+
+        &_invalid {
+            border-color: var(--input-date-border-color-error);
+        }
+
+        &_disabled,
+        &_read-only {
+            background-color: var(--input-date-bg-color-disabled);
+            border-color: var(--input-date-border-color-disabled);
+        }
+
+        @media screen and (prefers-reduced-motion: reduce) {
+            transition: none;
+        }
+    }
+
+    &__input {
+        min-width: 0;
+        font-family: inherit;
+        font-style: inherit;
+        font-weight: inherit;
+        font-size: inherit;
+        line-height: inherit;
+        outline: none;
+        border: none;
+        padding: 0;
+        margin: 0;
+        display: block;
+        background-color: transparent;
+
+        &::placeholder {
+            color: var(--input-date-color-placeholder);
+        }
+
+        &[disabled] {
+            color: var(--input-date-color-disabled);
+        }
+
+        &[readonly] {
+            color: var(--input-date-color-readonly);
+        }
+
+        &::-webkit-calendar-picker-indicator {
+            background: transparent;
+            bottom: 0;
+            right: 0;
+            top: 0;
+            left: 0;
+            color: transparent;
+            cursor: pointer;
+            height: auto;
+            position: absolute;
+            width: auto;
+            margin: 0;
+            padding: 0;
+            z-index: 2;
+        }
+
+        &::-webkit-datetime-edit-text { display: none; }
+
+        &::-webkit-datetime-edit-month-field { display: none; }
+
+        &::-webkit-datetime-edit-day-field { display: none; }
+
+        &::-webkit-datetime-edit-year-field { display: none; }
+
+        &_filled {
+
+            &::-webkit-datetime-edit-text { display: inherit; }
+
+            &::-webkit-datetime-edit-month-field { display: inherit; }
+
+            &::-webkit-datetime-edit-day-field { display: inherit; }
+
+            &::-webkit-datetime-edit-year-field { display: inherit; }
+        }
+    }
+
+    &__error {
+        color: var(--input-date-color-error);
+        font-size: 13px;
+        line-height: 16px;
+    }
+
+    &__icon {
+        position: absolute;
+        right: 8px;
+        top: 50%;
+        width: 18px;
+        height: 18px;
+        transform: translateY(-50%);
+        fill: var(--input-date-icon-color);
+    }
+}

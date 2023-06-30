@@ -3,7 +3,7 @@ import React, {
     Fragment,
     MutableRefObject, ReactHTML,
     ReactNode,
-    useCallback,
+    useCallback, useEffect,
     useMemo,
     useRef,
     useState
@@ -65,6 +65,7 @@ export interface IProps {
      * Определяет, какой контент будет отображаться внутри всплывающего окна.
      **/
     render?: ReactNode | ((isOpen: boolean, onClose: () => void, ref: MutableRefObject<HTMLElement | null>) => ReactNode),
+    onCloseCallback?: () => void,
     hoverOptions?: UseHoverOptions,
     /**
      * Определяет, должна ли стрелка быть отображена внутри всплывающего блока.
@@ -96,6 +97,12 @@ export const Popover = ({ trigger = 'click', triggerTagName = 'div', auto = true
     const onClose = useCallback(() => {
         setIsOpen(false);
     }, []);
+
+    useEffect(() => {
+        if(!isOpen || trigger === 'hover' && !isOver) {
+            props.onCloseCallback?.();
+        }
+    }, [isOpen, isOver, trigger]);
 
     const { renderLayer, triggerProps, layerProps, arrowProps } = useLayer({
         isOpen           : trigger === 'hover' ? isOver : isOpen,
@@ -163,6 +170,14 @@ export const Popover = ({ trigger = 'click', triggerTagName = 'div', auto = true
         }
     }, [props.arrow, props.arrowOptions, arrowProps]);
 
+    const elChildren = useMemo(() => {
+        if(typeof props.render === 'function') {
+            return props.render(isOpen, onClose, $trigger);
+        }
+
+        return props.render;
+    }, [props.render]);
+
     const elContent = useMemo(() => {
         if(isOpen || trigger === 'hover' && isOver) {
             return renderLayer(
@@ -174,7 +189,7 @@ export const Popover = ({ trigger = 'click', triggerTagName = 'div', auto = true
                     }}
                     className={cn('popover__content')}
                 >
-                    {typeof props.render === 'function' ? props.render(isOpen, onClose, $trigger) : props.render}
+                    {elChildren}
                     {elArrow}
                 </span>
             );

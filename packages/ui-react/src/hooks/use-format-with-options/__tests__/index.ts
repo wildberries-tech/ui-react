@@ -1,24 +1,24 @@
 import { renderHook } from '@testing-library/react';
+import { enUS, ru } from 'date-fns/locale';
 
-import { getLocale, getWeekDaysList, locales, localesHashmap, useDateFnsFormatWithOptions } from '..';
-
-test('Get locale', () => {
-    locales.forEach((localeItem) => {
-        const locale = getLocale(localeItem);
-
-        expect(locale).toBe(localesHashmap[localeItem]);
-    });
-});
+import { getWeekDaysList, useDateFnsFormatWithOptions } from '..';
 
 test('Hook useDate', () => {
-    const { result } = renderHook(() => useDateFnsFormatWithOptions('en'));
+    const { result } = renderHook(() => useDateFnsFormatWithOptions(enUS));
     const format = result.current;
 
-    expect(format(new Date('2022-06-26'), 'dd.MM.yyyy')).toBe('26.06.2022');
+    expect(format(new Date('2022-06-26'), 'yyyy-MM-dd')).toBe('2022-06-26');
+});
+
+test('Hook useDate RU', () => {
+    const { result } = renderHook(() => useDateFnsFormatWithOptions(ru));
+    const format = result.current;
+
+    expect(format(new Date('2022-06-28'), 'dd.MM.yyyy')).toBe('28.06.2022');
 });
 
 test('Get week days RU', () => {
-    const weekdays = getWeekDaysList('ru');
+    const weekdays = getWeekDaysList(ru);
 
     expect(weekdays).toStrictEqual({
         'monday': 'пн',
@@ -32,7 +32,7 @@ test('Get week days RU', () => {
 });
 
 test('Get week days EN', () => {
-    const weekdays = getWeekDaysList('en');
+    const weekdays = getWeekDaysList(enUS);
 
     expect(weekdays).toStrictEqual({
         'sunday': 'Su',
