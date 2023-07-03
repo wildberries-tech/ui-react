@@ -1,0 +1,259 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Default 1`] = `
+<label
+  className="input-date"
+>
+  <div
+    className="input-date__field"
+  >
+    <input
+      className="input-date__input"
+      name="default"
+      onChange={[Function]}
+      type="date"
+    />
+    <svg
+      className="input-date__icon"
+      height={24}
+      viewBox="0 0 24 24"
+      width={24}
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <path
+        clipRule="evenodd"
+        d="M6 6h2V5h8v1h2V5h2v3H4V5h2v1Zm-2 4v10h16V10H4Zm4-7h8V2h2v1h2a2 2 0 0 1 2 2v15a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h2V2h2v1Z"
+        fillRule="evenodd"
+      />
+    </svg>
+  </div>
+</label>
+`;
+
+exports[`Label 1`] = `
+<label
+  className="input-date"
+>
+  <div
+    className="input-date__label"
+  >
+    Input label
+  </div>
+  <div
+    className="input-date__field"
+  >
+    <input
+      className="input-date__input"
+      label="Input label"
+      name="default"
+      onChange={[Function]}
+      type="date"
+    />
+    <svg
+      className="input-date__icon"
+      height={24}
+      viewBox="0 0 24 24"
+      width={24}
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <path
+        clipRule="evenodd"
+        d="M6 6h2V5h8v1h2V5h2v3H4V5h2v1Zm-2 4v10h16V10H4Zm4-7h8V2h2v1h2a2 2 0 0 1 2 2v15a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h2V2h2v1Z"
+        fillRule="evenodd"
+      />
+    </svg>
+  </div>
+</label>
+`;
+
+exports[`Placeholder 1`] = `
+<label
+  className="input-date"
+>
+  <div
+    className="input-date__field"
+  >
+    <input
+      className="input-date__input"
+      name="default"
+      onChange={[Function]}
+      placeholder="Input label"
+      type="date"
+    />
+    <span
+      className="input-date__input-placeholder"
+    >
+      Input label
+    </span>
+    <svg
+      className="input-date__icon"
+      height={24}
+      viewBox="0 0 24 24"
+      width={24}
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <path
+        clipRule="evenodd"
+        d="M6 6h2V5h8v1h2V5h2v3H4V5h2v1Zm-2 4v10h16V10H4Zm4-7h8V2h2v1h2a2 2 0 0 1 2 2v15a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h2V2h2v1Z"
+        fillRule="evenodd"
+      />
+    </svg>
+  </div>
+</label>
+`;
+
+exports[`Required 1`] = `
+<label
+  className="input-date"
+>
+  <div
+    className="input-date__field"
+  >
+    <input
+      className="input-date__input"
+      name="default"
+      onChange={[Function]}
+      required={true}
+      type="date"
+    />
+    <svg
+      className="input-date__icon"
+      height={24}
+      viewBox="0 0 24 24"
+      width={24}
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <path
+        clipRule="evenodd"
+        d="M6 6h2V5h8v1h2V5h2v3H4V5h2v1Zm-2 4v10h16V10H4Zm4-7h8V2h2v1h2a2 2 0 0 1 2 2v15a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h2V2h2v1Z"
+        fillRule="evenodd"
+      />
+    </svg>
+  </div>
+</label>
+`;
+
+exports[`With ID 1`] = `
+<label
+  className="input-date"
+>
+  <div
+    className="input-date__field"
+  >
+    <input
+      className="input-date__input"
+      id="test-id"
+      name="default"
+      onChange={[Function]}
+      type="date"
+    />
+    <svg
+      className="input-date__icon"
+      height={24}
+      viewBox="0 0 24 24"
+      width={24}
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <path
+        clipRule="evenodd"
+        d="M6 6h2V5h8v1h2V5h2v3H4V5h2v1Zm-2 4v10h16V10H4Zm4-7h8V2h2v1h2a2 2 0 0 1 2 2v15a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h2V2h2v1Z"
+        fillRule="evenodd"
+      />
+    </svg>
+  </div>
+</label>
+`;
+
+exports[`disabled & readOnly 1`] = `
+<label
+  className="input-date"
+>
+  <div
+    className="input-date__field input-date__field_disabled input-date__field_read-only"
+  >
+    <input
+      className="input-date__input"
+      disabled={true}
+      name="default"
+      onChange={[Function]}
+      readOnly={true}
+      type="date"
+    />
+    <svg
+      className="input-date__icon"
+      height={24}
+      viewBox="0 0 24 24"
+      width={24}
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <path
+        clipRule="evenodd"
+        d="M6 6h2V5h8v1h2V5h2v3H4V5h2v1Zm-2 4v10h16V10H4Zm4-7h8V2h2v1h2a2 2 0 0 1 2 2v15a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h2V2h2v1Z"
+        fillRule="evenodd"
+      />
+    </svg>
+  </div>
+</label>
+`;
+
+exports[`disabled 1`] = `
+<label
+  className="input-date"
+>
+  <div
+    className="input-date__field input-date__field_disabled"
+  >
+    <input
+      className="input-date__input"
+      disabled={true}
+      name="default"
+      onChange={[Function]}
+      type="date"
+    />
+    <svg
+      className="input-date__icon"
+      height={24}
+      viewBox="0 0 24 24"
+      width={24}
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <path
+        clipRule="evenodd"
+        d="M6 6h2V5h8v1h2V5h2v3H4V5h2v1Zm-2 4v10h16V10H4Zm4-7h8V2h2v1h2a2 2 0 0 1 2 2v15a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h2V2h2v1Z"
+        fillRule="evenodd"
+      />
+    </svg>
+  </div>
+</label>
+`;
+
+exports[`readOnly 1`] = `
+<label
+  className="input-date"
+>
+  <div
+    className="input-date__field input-date__field_read-only"
+  >
+    <input
+      className="input-date__input"
+      name="default"
+      onChange={[Function]}
+      readOnly={true}
+      type="date"
+    />
+    <svg
+      className="input-date__icon"
+      height={24}
+      viewBox="0 0 24 24"
+      width={24}
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <path
+        clipRule="evenodd"
+        d="M6 6h2V5h8v1h2V5h2v3H4V5h2v1Zm-2 4v10h16V10H4Zm4-7h8V2h2v1h2a2 2 0 0 1 2 2v15a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h2V2h2v1Z"
+        fillRule="evenodd"
+      />
+    </svg>
+  </div>
+</label>
+`;

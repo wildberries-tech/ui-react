@@ -1,0 +1,138 @@
+.modal {
+    position: fixed;
+    inset: 0;
+    display: grid;
+    background-color: rgb(0 0 0 / 0.3);
+    justify-items: center;
+    align-items: center;
+    overflow: auto;
+    z-index: 1000;
+    font-family: var(--font-family-primary);
+
+    &_bottom {
+        background-color: transparent;
+        inset: auto auto 32px 50%;
+        transform: translateX(-50%);
+        overflow: visible;
+        position: fixed;
+    }
+
+    &_center {
+        position: fixed;
+    }
+
+    &__header-wrapper {
+        display: grid;
+        grid-template-columns: 1fr max-content;
+        align-items: center;
+        grid-gap: 8px;
+    }
+
+    &__footer {
+        display: grid;
+        grid-auto-flow: column;
+        grid-auto-columns: max-content;
+        align-items: center;
+        justify-content: flex-start;
+        column-gap: 24px;
+
+        &_bottom {
+            justify-content: center;
+            text-align: center;
+        }
+    }
+
+    &__icon-close {
+        width: 24px;
+        height: 24px;
+        fill: var(--color-icon-secondary);
+        padding: 6px;
+
+        &_default {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+        }
+
+        &_alone {
+            position: absolute;
+            top: 0;
+            right: 0;
+        }
+
+        @media (hover: hover) and (pointer: fine) {
+
+            &:hover {
+                cursor: pointer;
+                fill: var(--color-icon-basic);
+            }
+        }
+    }
+
+    &__content {
+        background-color: var(--color-bg-base);
+        box-shadow: 0 0 8px rgba(0, 0, 0, 0.15);
+        border-radius: 8px;
+        width: 100%;
+        min-width: 240px;
+        position: relative;
+        box-sizing: border-box;
+
+        &_s {
+            max-width: 400px;
+        }
+
+        &_m {
+            max-width: 496px;
+        }
+
+        &_l {
+            max-width: 696px;
+        }
+
+        &_xl {
+            max-width: 996px;
+        }
+    }
+
+    &__body {
+        display: grid;
+        grid-row-gap: 24px;
+        max-height: 75vh;
+        grid-template-rows: 36px 1fr;
+        width: 100%;
+        box-sizing: border-box;
+
+        &_with-buttons {
+            grid-template-rows: 36px 1fr 44px;
+        }
+
+        &_no-header {
+            grid-template-rows: 1fr;
+            padding-top: 32px;
+        }
+
+        &_default {
+            padding: 48px 48px 32px;
+        }
+
+        &_reduced {
+            padding: 24px;
+        }
+
+        &_bottom {
+            padding: 24px;
+        }
+    }
+
+    &__children {
+        max-height: 100%;
+        overflow-y: scroll;
+        display: flex;
+
+        &_bottom {
+            justify-content: center;
+            text-align: center;
+        }
+    }
+}

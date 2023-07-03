@@ -1,0 +1,221 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Default use 1`] = `
+<DocumentFragment>
+  <button
+    class="button button_medium button_default"
+    type="button"
+  >
+    Trigger
+  </button>
+</DocumentFragment>
+`;
+
+exports[`Default use 2`] = `
+<DocumentFragment>
+  <button
+    class="button button_medium button_default"
+    type="button"
+  >
+    Trigger
+  </button>
+</DocumentFragment>
+`;
+
+exports[`Esc press 1`] = `
+<DocumentFragment>
+  <button
+    class="button button_medium button_default"
+    type="button"
+  >
+    Trigger
+  </button>
+</DocumentFragment>
+`;
+
+exports[`Esc press 2`] = `
+<DocumentFragment>
+  <button
+    class="button button_medium button_default"
+    type="button"
+  >
+    Trigger
+  </button>
+</DocumentFragment>
+`;
+
+exports[`Header node 1`] = `
+<DocumentFragment>
+  <button
+    class="button button_medium button_default"
+    type="button"
+  >
+    Trigger
+  </button>
+</DocumentFragment>
+`;
+
+exports[`Header node 2`] = `
+<DocumentFragment>
+  <button
+    class="button button_medium button_default"
+    type="button"
+  >
+    Trigger
+  </button>
+</DocumentFragment>
+`;
+
+exports[`Layout click 1`] = `
+<DocumentFragment>
+  <button
+    class="button button_medium button_default"
+    type="button"
+  >
+    Trigger
+  </button>
+</DocumentFragment>
+`;
+
+exports[`Layout click 2`] = `
+<DocumentFragment>
+  <button
+    class="button button_medium button_default"
+    type="button"
+  >
+    Trigger
+  </button>
+</DocumentFragment>
+`;
+
+exports[`Placement bottom 1`] = `
+<DocumentFragment>
+  <button
+    class="button button_medium button_default"
+    type="button"
+  >
+    Trigger
+  </button>
+</DocumentFragment>
+`;
+
+exports[`Placement bottom 2`] = `
+<DocumentFragment>
+  <button
+    class="button button_medium button_default"
+    type="button"
+  >
+    Trigger
+  </button>
+</DocumentFragment>
+`;
+
+exports[`Placement bottom 3`] = `
+<DocumentFragment>
+  <button
+    class="button button_medium button_default"
+    type="button"
+  >
+    Trigger
+  </button>
+</DocumentFragment>
+`;
+
+exports[`Placement bottom 4`] = `
+<DocumentFragment>
+  <button
+    class="button button_medium button_default"
+    type="button"
+  >
+    Trigger
+  </button>
+</DocumentFragment>
+`;
+
+exports[`Single Button 1`] = `
+<DocumentFragment>
+  <button
+    class="button button_medium button_default"
+    type="button"
+  >
+    Trigger
+  </button>
+</DocumentFragment>
+`;
+
+exports[`Single Button 2`] = `
+<DocumentFragment>
+  <button
+    class="button button_medium button_default"
+    type="button"
+  >
+    Trigger
+  </button>
+</DocumentFragment>
+`;
+
+exports[`isCloseIconShow 1`] = `
+<DocumentFragment>
+  <button
+    class="button button_medium button_default"
+    type="button"
+  >
+    Trigger
+  </button>
+</DocumentFragment>
+`;
+
+exports[`isCloseIconShow 2`] = `
+<DocumentFragment>
+  <button
+    class="button button_medium button_default"
+    type="button"
+  >
+    Trigger
+  </button>
+</DocumentFragment>
+`;
+
+exports[`isOpen false no buttons 1`] = `
+<DocumentFragment>
+  <button
+    class="button button_medium button_default"
+    type="button"
+  >
+    Trigger
+  </button>
+</DocumentFragment>
+`;
+
+exports[`isOpen false no buttons 2`] = `
+<DocumentFragment>
+  <button
+    class="button button_medium button_default"
+    type="button"
+  >
+    Trigger
+  </button>
+</DocumentFragment>
+`;
+
+exports[`isOpen false no buttons 3`] = `
+<DocumentFragment>
+  <button
+    class="button button_medium button_default"
+    type="button"
+  >
+    Trigger
+  </button>
+</DocumentFragment>
+`;
+
+exports[`isOpen false no buttons 4`] = `
+<DocumentFragment>
+  <button
+    class="button button_medium button_default"
+    type="button"
+  >
+    Trigger
+  </button>
+</DocumentFragment>
+`;

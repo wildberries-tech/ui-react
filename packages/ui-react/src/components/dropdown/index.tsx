@@ -1,4 +1,4 @@
-import React, { HTMLAttributes, ReactElement, ReactNode, useCallback } from 'react';
+import React, { HTMLAttributes, MutableRefObject, ReactElement, ReactNode, useCallback } from 'react';
 import { isElement } from 'react-is';
 
 import { useClassnames } from '../../hooks/use-classnames';
@@ -27,7 +27,7 @@ export interface IProps<T extends ReactElement | ICustomTriggerElement = any> ex
     /**
      * Render выпадающего элемента дропдауна
      **/
-    render?: ((isOpen: boolean, onClose: () => void) => ReactNode | null),
+    render?: ((isOpen: boolean, onClose: () => void, ref: MutableRefObject<HTMLElement | null>) => ReactNode | null),
     /**
      * Триггер-элемент дропдауна
      */

@@ -1,4 +1,5 @@
 import { debounce } from '../debounce';
+import { consoleFormat } from '../console-format';
 
 jest.useFakeTimers();
 
@@ -15,4 +16,8 @@ test('Single execute', () => {
     jest.runAllTimers();
 
     expect(func).toBeCalledTimes(1);
+});
+
+test('Console format', () => {
+    consoleFormat('Text');
 });
