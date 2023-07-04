@@ -92,6 +92,24 @@ export const ManyItems: StoryFn<typeof Pagination> = () => {
 };
 
 // eslint-disable-next-line react/no-multi-comp
+export const ManyItemsCombinedTrigger: StoryFn<typeof Pagination> = () => {
+    const [currentPageOne, setCurrentPageOne] = useState<number>(1);
+
+    return (
+        <Pagination
+            i18n={{
+                label: 'Показать записей'
+            }}
+            isTriggerCombined={true}
+            currentPage={currentPageOne}
+            onChangePage={setCurrentPageOne}
+            numberOfItems={1000}
+            numberItemsPerPage={10}
+        />
+    );
+};
+
+// eslint-disable-next-line react/no-multi-comp
 export const ManyItemsWithInput: StoryFn<typeof Pagination> = () => {
     const [currentPageOne, setCurrentPageOne] = useState<number>(1);
 

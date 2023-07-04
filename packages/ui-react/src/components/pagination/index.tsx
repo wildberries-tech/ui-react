@@ -195,6 +195,7 @@ export const Pagination = ({
             <div className={cn('pagination__buttons-container')}>
                 {!props.isTriggerCombined && label}
                 <Dropdown
+                    className={cn('pagination__dropdown')}
                     triggerElement={elPaginationTrigger}
                     render={(isOpen, onClose) => {
                         return options.map((option, index) => (
