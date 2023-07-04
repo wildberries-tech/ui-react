@@ -5,10 +5,10 @@
     justify-content: center;
     align-items: center;
     padding: 12px;
-    transition: 0.3s;
+    transition: 0.3s ease;
+    box-sizing: border-box;
 
     &__buttons-container {
-        height: var(--pagination-size);
         display: flex;
         justify-content: center;
         align-items: center;
@@ -33,6 +33,10 @@
         border: 1px solid var(--color-border-basic);
         border-radius: 4px;
         padding: 0 12px;
+    }
+
+    &__dropdown {
+        width: auto;
     }
 
     &__dropdown-trigger {
