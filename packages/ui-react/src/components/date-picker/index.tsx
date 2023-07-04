@@ -548,6 +548,7 @@ export const DatePicker = ({
                                     isDisabled = isNotSameDay && isBeforeSelected;
 
                                     if(currentHoveredDate) {
+                                        // TODO тут падает, если заховерил значение не из интервала
                                         isHovered = isWithinInterval(dayItem.day, {
                                             start: selectedPeriod[0],
                                             end  : currentHoveredDate.day

@@ -243,13 +243,13 @@ exports[`Default Min Max Dates 2`] = `
                 class="date-picker__dates-week"
               >
                 <button
-                  class="date-picker__date date-picker__date_border date-picker__date_today"
+                  class="date-picker__date date-picker__date_border"
                   type="button"
                 >
                   03
                 </button>
                 <button
-                  class="date-picker__date date-picker__date_border"
+                  class="date-picker__date date-picker__date_border date-picker__date_today"
                   type="button"
                 >
                   04
@@ -721,13 +721,13 @@ exports[`Default Min Max Dates 4`] = `
                 class="date-picker__dates-week"
               >
                 <button
-                  class="date-picker__date date-picker__date_border date-picker__date_today"
+                  class="date-picker__date date-picker__date_border date-picker__date_disabled"
                   type="button"
                 >
                   03
                 </button>
                 <button
-                  class="date-picker__date date-picker__date_border"
+                  class="date-picker__date date-picker__date_border date-picker__date_today"
                   type="button"
                 >
                   04
@@ -1199,13 +1199,13 @@ exports[`Default Min Max Dates 6`] = `
                 class="date-picker__dates-week"
               >
                 <button
-                  class="date-picker__date date-picker__date_border date-picker__date_today"
+                  class="date-picker__date date-picker__date_border"
                   type="button"
                 >
                   03
                 </button>
                 <button
-                  class="date-picker__date date-picker__date_border"
+                  class="date-picker__date date-picker__date_border date-picker__date_today"
                   type="button"
                 >
                   04
@@ -3494,13 +3494,13 @@ exports[`Range Picker 2`] = `
                 class="date-picker__dates-week"
               >
                 <button
-                  class="date-picker__date date-picker__date_border date-picker__date_today"
+                  class="date-picker__date date-picker__date_border"
                   type="button"
                 >
                   03
                 </button>
                 <button
-                  class="date-picker__date date-picker__date_border"
+                  class="date-picker__date date-picker__date_border date-picker__date_today"
                   type="button"
                 >
                   04
@@ -7224,13 +7224,13 @@ exports[`Range Picker With Dates 2`] = `
                 class="date-picker__dates-week"
               >
                 <button
-                  class="date-picker__date date-picker__date_border date-picker__date_today"
+                  class="date-picker__date date-picker__date_border"
                   type="button"
                 >
                   03
                 </button>
                 <button
-                  class="date-picker__date date-picker__date_border"
+                  class="date-picker__date date-picker__date_border date-picker__date_today"
                   type="button"
                 >
                   04
@@ -9311,13 +9311,13 @@ exports[`Single With Dates 2`] = `
                 class="date-picker__dates-week"
               >
                 <button
-                  class="date-picker__date date-picker__date_border date-picker__date_today"
+                  class="date-picker__date date-picker__date_border"
                   type="button"
                 >
                   03
                 </button>
                 <button
-                  class="date-picker__date date-picker__date_border"
+                  class="date-picker__date date-picker__date_border date-picker__date_today"
                   type="button"
                 >
                   04

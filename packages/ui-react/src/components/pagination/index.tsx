@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useMemo, ChangeEvent, useRef } from 'react';
+import React, { useState, useEffect, useMemo, ChangeEvent, useRef, useCallback } from 'react';
 
 import { type TStyle, useClassnames } from '../../hooks/use-classnames';
 import { Dropdown } from '../dropdown';
@@ -72,7 +72,11 @@ export interface IProps {
     /**
      * Изменить таймаут инпута ручного выбора страницы, дефолт 300 мс
      **/
-    pageInputTimeout?: number
+    pageInputTimeout?: number,
+    /**
+     * Свойство позволяет объединить лейбл пагинации с триггером
+     **/
+    isTriggerCombined?: boolean
 }
 
 export const Pagination = ({
@@ -87,7 +91,7 @@ export const Pagination = ({
     },
     ...props
 }: IProps) => {
-    const cn = useClassnames(styles, props.className, true);
+    const cn = useClassnames(styles, props.className);
     const $input = useRef<HTMLInputElement>(null);
     const [numberOfPages, setNumberOfPages] = useState(0);
     const [isInputError, setIsInputError] = useState<boolean>(false);
@@ -143,9 +147,13 @@ export const Pagination = ({
         label  : String(preset)
     }));
 
-    const elPaginationTrigger = useMemo(() => {
+    const elDefaultTrigger = useCallback((isCombined?: boolean) => {
         return (
-            <div className={cn('pagination__dropdown-trigger')}>
+            <div
+                className={cn('pagination__dropdown-trigger', {
+                    'pagination__dropdown-trigger_combined': isCombined
+                })}
+            >
                 <Text
                     presetSize="large"
                     className={cn('pagination__dropdown-trigger-text')}
@@ -161,6 +169,19 @@ export const Pagination = ({
         );
     }, [numberItemsPerPage]);
 
+    const elPaginationTrigger = useMemo(() => {
+        if(props.isTriggerCombined) {
+            return (
+                <div className={cn('pagination__controls')}>
+                    {label}
+                    {elDefaultTrigger(true)}
+                </div>
+            );
+        }
+
+        return elDefaultTrigger();
+    }, [numberItemsPerPage, props.isTriggerCombined, label]);
+
     if(props.showPageInput && !placeholder) {
         return (
             <Text presetColor="error">
@@ -172,7 +193,7 @@ export const Pagination = ({
     return (
         <div className={cn('pagination')}>
             <div className={cn('pagination__buttons-container')}>
-                {label}
+                {!props.isTriggerCombined && label}
                 <Dropdown
                     triggerElement={elPaginationTrigger}
                     render={(isOpen, onClose) => {
