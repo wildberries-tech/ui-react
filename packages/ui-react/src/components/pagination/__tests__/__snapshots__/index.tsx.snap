@@ -314,6 +314,130 @@ exports[`Clicks on elements 2`] = `
 </DocumentFragment>
 `;
 
+exports[`Combined trigger 1`] = `
+<DocumentFragment>
+  <div
+    class="pagination"
+  >
+    <div
+      class="pagination__buttons-container"
+    >
+      <div
+        class="dropdown"
+      >
+        <span
+          class="popover__trigger"
+        >
+          <div
+            class="pagination__controls"
+          >
+            Показать записей
+            <div
+              class="pagination__dropdown-trigger pagination__dropdown-trigger_combined"
+            >
+              <p
+                class="typography typography_size-large typography_color-basic"
+              >
+                10
+              </p>
+              <svg
+                class="pagination__dropdown-trigger-icon"
+                height="24"
+                viewBox="0 0 24 24"
+                width="24"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  clip-rule="evenodd"
+                  d="m19.293 7.293 1.414 1.414L12 17.414 3.293 8.707l1.414-1.414L12 14.586l7.293-7.293Z"
+                  fill-rule="evenodd"
+                />
+              </svg>
+            </div>
+          </div>
+        </span>
+      </div>
+      <ul
+        class="pagination-buttons"
+      >
+        <li
+          class="pagination-buttons__item"
+        >
+          <button
+            class="pagination-buttons__button pagination-buttons__button_selected"
+            type="button"
+          >
+            1
+          </button>
+        </li>
+      </ul>
+    </div>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`Combined trigger 2`] = `
+<DocumentFragment>
+  <div
+    class="pagination"
+  >
+    <div
+      class="pagination__buttons-container"
+    >
+      <div
+        class="dropdown"
+      >
+        <span
+          class="popover__trigger"
+        >
+          <div
+            class="pagination__controls"
+          >
+            Показать записей
+            <div
+              class="pagination__dropdown-trigger pagination__dropdown-trigger_combined"
+            >
+              <p
+                class="typography typography_size-large typography_color-basic"
+              >
+                10
+              </p>
+              <svg
+                class="pagination__dropdown-trigger-icon"
+                height="24"
+                viewBox="0 0 24 24"
+                width="24"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  clip-rule="evenodd"
+                  d="m19.293 7.293 1.414 1.414L12 17.414 3.293 8.707l1.414-1.414L12 14.586l7.293-7.293Z"
+                  fill-rule="evenodd"
+                />
+              </svg>
+            </div>
+          </div>
+        </span>
+      </div>
+      <ul
+        class="pagination-buttons"
+      >
+        <li
+          class="pagination-buttons__item"
+        >
+          <button
+            class="pagination-buttons__button pagination-buttons__button_selected"
+            type="button"
+          >
+            1
+          </button>
+        </li>
+      </ul>
+    </div>
+  </div>
+</DocumentFragment>
+`;
+
 exports[`Default use 1`] = `
 <DocumentFragment>
   <div

@@ -39,6 +39,24 @@ export const Default: StoryFn<typeof Pagination> = () => {
 };
 
 // eslint-disable-next-line react/no-multi-comp
+export const CombinedTrigger: StoryFn<typeof Pagination> = () => {
+    const [currentPageOne, setCurrentPageOne] = useState<number>(1);
+
+    return (
+        <Pagination
+            i18n={{
+                label: 'Показать записей'
+            }}
+            isTriggerCombined={true}
+            currentPage={currentPageOne}
+            onChangePage={setCurrentPageOne}
+            numberOfItems={10}
+            numberItemsPerPage={10}
+        />
+    );
+};
+
+// eslint-disable-next-line react/no-multi-comp
 export const ErrorProps: StoryFn<typeof Pagination> = () => {
     const [currentPageOne, setCurrentPageOne] = useState<number>(1);
 

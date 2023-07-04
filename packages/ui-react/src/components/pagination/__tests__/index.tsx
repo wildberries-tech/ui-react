@@ -23,6 +23,27 @@ test('Default use', async () => {
     });
 });
 
+test('Combined trigger', async () => {
+    const { asFragment } = render(
+        <Pagination
+            i18n={{
+                label: 'Показать записей'
+            }}
+            isTriggerCombined={true}
+            currentPage={1}
+            onChangePage={() => 2}
+            numberOfItems={10}
+            numberItemsPerPage={10}
+        />
+    );
+
+    expect(asFragment()).toMatchSnapshot();
+
+    await waitFor(() => {
+        expect(asFragment()).toMatchSnapshot();
+    });
+});
+
 test('Many items', async () => {
     const { asFragment } = render(
         <Pagination
