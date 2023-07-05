@@ -31,6 +31,24 @@ export const Hover: StoryObj<typeof META> = {
     }
 };
 
+export const HoverAndOptionsHoverable: StoryObj<typeof META> = {
+    args: {
+        trigger: 'hover',
+        isOptionsHoverable: true
+    }
+};
+
+export const HoverAndOptionsHoverableOffset: StoryObj<typeof META> = {
+    args: {
+        trigger: 'hover',
+        isOptionsHoverable: true,
+        triggerOffset: 4,
+        hoverOptions: {
+            delayLeave: 300
+        }
+    }
+};
+
 export const CustomTagName: StoryObj<typeof META> = {
     args: {
         trigger: 'hover',

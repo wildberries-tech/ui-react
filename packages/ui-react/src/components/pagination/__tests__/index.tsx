@@ -44,6 +44,51 @@ test('Combined trigger', async () => {
     });
 });
 
+test('Combined trigger column', async () => {
+    const { asFragment } = render(
+        <Pagination
+            i18n={{
+                label: 'Показать записей'
+            }}
+            direction="column"
+            isTriggerCombined={true}
+            currentPage={1}
+            onChangePage={() => 2}
+            numberOfItems={10}
+            numberItemsPerPage={10}
+        />
+    );
+
+    expect(asFragment()).toMatchSnapshot();
+
+    await waitFor(() => {
+        expect(asFragment()).toMatchSnapshot();
+    });
+});
+
+test('Combined trigger column input', async () => {
+    const { asFragment } = render(
+        <Pagination
+            i18n={{
+                label: 'Показать записей'
+            }}
+            direction="column"
+            isTriggerCombined={true}
+            currentPage={1}
+            showPageInput={true}
+            onChangePage={() => 2}
+            numberOfItems={10}
+            numberItemsPerPage={10}
+        />
+    );
+
+    expect(asFragment()).toMatchSnapshot();
+
+    await waitFor(() => {
+        expect(asFragment()).toMatchSnapshot();
+    });
+});
+
 test('Many items', async () => {
     const { asFragment } = render(
         <Pagination

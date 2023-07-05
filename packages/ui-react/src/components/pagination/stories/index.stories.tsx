@@ -57,6 +57,43 @@ export const CombinedTrigger: StoryFn<typeof Pagination> = () => {
 };
 
 // eslint-disable-next-line react/no-multi-comp
+export const CombinedTriggerColumn: StoryFn<typeof Pagination> = () => {
+    const [currentPageOne, setCurrentPageOne] = useState<number>(1);
+
+    return (
+        <Pagination
+            i18n={{
+                label: 'Показать записей'
+            }}
+            direction="column"
+            isTriggerCombined={true}
+            currentPage={currentPageOne}
+            onChangePage={setCurrentPageOne}
+            numberOfItems={1000}
+            numberItemsPerPage={10}
+        />
+    );
+};
+
+// eslint-disable-next-line react/no-multi-comp
+export const Column: StoryFn<typeof Pagination> = () => {
+    const [currentPageOne, setCurrentPageOne] = useState<number>(1);
+
+    return (
+        <Pagination
+            i18n={{
+                label: 'Показать записей'
+            }}
+            direction="column"
+            currentPage={currentPageOne}
+            onChangePage={setCurrentPageOne}
+            numberOfItems={1000}
+            numberItemsPerPage={10}
+        />
+    );
+};
+
+// eslint-disable-next-line react/no-multi-comp
 export const ErrorProps: StoryFn<typeof Pagination> = () => {
     const [currentPageOne, setCurrentPageOne] = useState<number>(1);
 
@@ -124,6 +161,26 @@ export const ManyItemsWithInput: StoryFn<typeof Pagination> = () => {
                 setCurrentPageOne(page);
             }}
             numberOfItems={1000}
+            numberItemsPerPage={10}
+            showPageInput={true}
+        />
+    );
+};
+
+// eslint-disable-next-line react/no-multi-comp
+export const ManyItemsWithInputCombinedTrigger: StoryFn<typeof Pagination> = () => {
+    const [currentPageOne, setCurrentPageOne] = useState<number>(1);
+
+    return (
+        <Pagination
+            i18n={{
+                label: 'Показать записей',
+                placeholder: 'placeholder'
+            }}
+            isTriggerCombined={true}
+            currentPage={currentPageOne}
+            onChangePage={setCurrentPageOne}
+            numberOfItems={10}
             numberItemsPerPage={10}
             showPageInput={true}
         />

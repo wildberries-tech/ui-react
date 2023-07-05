@@ -59,7 +59,7 @@ exports[`Default use 2`] = `
       </div>
     </span>
     <span
-      class="dropdown__content"
+      class="popover__content"
       style="position: fixed; top: 0px; left: 0px; min-width: 0;"
     >
       <div>
@@ -135,7 +135,7 @@ exports[`Default use icon dots 2`] = `
       </div>
     </span>
     <span
-      class="dropdown__content"
+      class="popover__content"
       style="position: fixed; top: 0px; left: 0px; min-width: 0;"
     >
       <div>
@@ -187,7 +187,7 @@ exports[`Trigger button 2`] = `
       </button>
     </span>
     <span
-      class="dropdown__content"
+      class="popover__content"
       style="position: fixed; top: 0px; left: 0px; min-width: 0;"
     >
       <div>
@@ -253,7 +253,7 @@ exports[`Trigger custom icon 2`] = `
       </svg>
     </span>
     <span
-      class="dropdown__content"
+      class="popover__content"
       style="position: fixed; top: 0px; left: 0px; min-width: 0;"
     >
       <div>
@@ -351,7 +351,7 @@ exports[`Trigger left right icons 2`] = `
       </div>
     </span>
     <span
-      class="dropdown__content"
+      class="popover__content"
       style="position: fixed; top: 0px; left: 0px; min-width: 0;"
     >
       <div>

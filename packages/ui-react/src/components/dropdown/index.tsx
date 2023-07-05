@@ -34,8 +34,8 @@ export interface IProps<T extends ReactElement | ICustomTriggerElement = any> ex
     triggerElement?: T
 }
 
-export const Dropdown = ({ placement = 'bottom-end', syncOptionsWidth = true, ...props }: IProps) => {
-    const cn = useClassnames(style, props.className, true);
+export const Dropdown = ({ placement = 'bottom-end', syncOptionsWidth = true, className, ...props }: IProps) => {
+    const cn = useClassnames(style, className);
 
     const elRightIconRender = useCallback((isOpen: boolean) => {
         if(props.triggerElement?.elRightIcon === 'dots') {
@@ -85,10 +85,12 @@ export const Dropdown = ({ placement = 'bottom-end', syncOptionsWidth = true, ..
                 placement={placement}
                 children={elTrigger}
                 triggerOffset={4}
-                syncOptionsWidth={syncOptionsWidth}
-                className={{
-                    'popover__content': cn('dropdown__content')
+                isOptionsHoverable={true}
+                hoverOptions={{
+                    ...props.hoverOptions,
+                    delayLeave: props.hoverOptions?.delayLeave ?? 100
                 }}
+                syncOptionsWidth={syncOptionsWidth}
                 {...props}
             />
         </div>

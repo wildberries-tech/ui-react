@@ -82,7 +82,11 @@ export interface IProps {
     /**
      * Устанавливает минимальную ширину выпадающего списка, равную элементу триггера
      **/
-    syncOptionsWidth?: boolean
+    syncOptionsWidth?: boolean,
+    /**
+     * Свойство определяет, можно ли взаимодействовать с содержимым компонента
+     **/
+    isOptionsHoverable?: boolean
 }
 
 /**
@@ -105,16 +109,16 @@ export const Popover = ({ trigger = 'click', triggerTagName = 'div', auto = true
     }, [isOpen, isOver, trigger]);
 
     const { renderLayer, triggerProps, layerProps, arrowProps } = useLayer({
-        isOpen           : trigger === 'hover' ? isOver : isOpen,
-        onOutsideClick   : onClose,
-        onDisappear      : onClose,
-        container        : $trigger.current?.parentElement ?? undefined,
+        isOpen: trigger === 'hover' ? isOver : isOpen,
+        onOutsideClick: onClose,
+        onDisappear: onClose,
+        container: $trigger.current?.parentElement ?? undefined,
         overflowContainer: props.overflowContainer,
-        triggerOffset    : props.triggerOffset,
-        containerOffset  : props.containerOffset,
-        arrowOffset      : props.arrowOffset,
-        preferX          : props.preferX,
-        preferY          : props.preferY,
+        triggerOffset: props.triggerOffset,
+        containerOffset: props.containerOffset,
+        arrowOffset: props.arrowOffset,
+        preferX: props.preferX,
+        preferY: props.preferY,
         auto,
         placement
     });
@@ -183,6 +187,7 @@ export const Popover = ({ trigger = 'click', triggerTagName = 'div', auto = true
             return renderLayer(
                 <span
                     {...layerProps}
+                    {...(props.isOptionsHoverable ? hoverProps : {})}
                     style={{
                         ...layerProps.style,
                         minWidth: props.syncOptionsWidth ? $trigger.current?.offsetWidth : undefined
