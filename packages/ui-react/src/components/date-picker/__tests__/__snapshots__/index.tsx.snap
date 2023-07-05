@@ -95,7 +95,7 @@ exports[`Default Min Max Dates 2`] = `
       </button>
     </span>
     <span
-      class="dropdown__content"
+      class="popover__content"
       style="position: fixed; top: 0px; left: 0px; min-width: 0;"
     >
       <div
@@ -249,13 +249,13 @@ exports[`Default Min Max Dates 2`] = `
                   03
                 </button>
                 <button
-                  class="date-picker__date date-picker__date_border date-picker__date_today"
+                  class="date-picker__date date-picker__date_border"
                   type="button"
                 >
                   04
                 </button>
                 <button
-                  class="date-picker__date date-picker__date_border"
+                  class="date-picker__date date-picker__date_border date-picker__date_today"
                   type="button"
                 >
                   05
@@ -573,7 +573,7 @@ exports[`Default Min Max Dates 4`] = `
       </button>
     </span>
     <span
-      class="dropdown__content"
+      class="popover__content"
       style="position: fixed; top: 0px; left: 0px; min-width: 0;"
     >
       <div
@@ -727,13 +727,13 @@ exports[`Default Min Max Dates 4`] = `
                   03
                 </button>
                 <button
-                  class="date-picker__date date-picker__date_border date-picker__date_today"
+                  class="date-picker__date date-picker__date_border date-picker__date_disabled"
                   type="button"
                 >
                   04
                 </button>
                 <button
-                  class="date-picker__date date-picker__date_border"
+                  class="date-picker__date date-picker__date_border date-picker__date_today"
                   type="button"
                 >
                   05
@@ -1051,7 +1051,7 @@ exports[`Default Min Max Dates 6`] = `
       </button>
     </span>
     <span
-      class="dropdown__content"
+      class="popover__content"
       style="position: fixed; top: 0px; left: 0px; min-width: 0;"
     >
       <div
@@ -1205,13 +1205,13 @@ exports[`Default Min Max Dates 6`] = `
                   03
                 </button>
                 <button
-                  class="date-picker__date date-picker__date_border date-picker__date_today"
+                  class="date-picker__date date-picker__date_border"
                   type="button"
                 >
                   04
                 </button>
                 <button
-                  class="date-picker__date date-picker__date_border"
+                  class="date-picker__date date-picker__date_border date-picker__date_today"
                   type="button"
                 >
                   05
@@ -1627,7 +1627,7 @@ exports[`Range Picker 2`] = `
       </button>
     </span>
     <span
-      class="dropdown__content"
+      class="popover__content"
       style="position: fixed; top: 0px; left: 0px; min-width: 0;"
     >
       <div
@@ -3500,13 +3500,13 @@ exports[`Range Picker 2`] = `
                   03
                 </button>
                 <button
-                  class="date-picker__date date-picker__date_border date-picker__date_today"
+                  class="date-picker__date date-picker__date_border"
                   type="button"
                 >
                   04
                 </button>
                 <button
-                  class="date-picker__date date-picker__date_border"
+                  class="date-picker__date date-picker__date_border date-picker__date_today"
                   type="button"
                 >
                   05
@@ -5352,7 +5352,7 @@ exports[`Range Picker With Dates 2`] = `
       </button>
     </span>
     <span
-      class="dropdown__content"
+      class="popover__content"
       style="position: fixed; top: 0px; left: 0px; min-width: 0;"
     >
       <div
@@ -7230,13 +7230,13 @@ exports[`Range Picker With Dates 2`] = `
                   03
                 </button>
                 <button
-                  class="date-picker__date date-picker__date_border date-picker__date_today"
+                  class="date-picker__date date-picker__date_border"
                   type="button"
                 >
                   04
                 </button>
                 <button
-                  class="date-picker__date date-picker__date_border"
+                  class="date-picker__date date-picker__date_border date-picker__date_today"
                   type="button"
                 >
                   05
@@ -9163,7 +9163,7 @@ exports[`Single With Dates 2`] = `
       </button>
     </span>
     <span
-      class="dropdown__content"
+      class="popover__content"
       style="position: fixed; top: 0px; left: 0px; min-width: 0;"
     >
       <div
@@ -9317,13 +9317,13 @@ exports[`Single With Dates 2`] = `
                   03
                 </button>
                 <button
-                  class="date-picker__date date-picker__date_border date-picker__date_today"
+                  class="date-picker__date date-picker__date_border"
                   type="button"
                 >
                   04
                 </button>
                 <button
-                  class="date-picker__date date-picker__date_border"
+                  class="date-picker__date date-picker__date_border date-picker__date_today"
                   type="button"
                 >
                   05

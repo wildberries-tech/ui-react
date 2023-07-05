@@ -76,13 +76,18 @@ export interface IProps {
     /**
      * Свойство позволяет объединить лейбл пагинации с триггером
      **/
-    isTriggerCombined?: boolean
+    isTriggerCombined?: boolean,
+    /**
+     * Свойство определяет расположение триггера относительно кнопок
+     **/
+    direction?: 'row' | 'column'
 }
 
 export const Pagination = ({
     numberOfEdgeButtons = 4,
     numberOfMiddleButtons = 3,
     currentPage = 1,
+    direction = 'row',
     pageInputTimeout = DEFAULT_DEBOUNCE_TIMEOUT,
     itemsPerPagePreset = ITEMS_PER_PAGE_PRESETS,
     i18n: {
@@ -172,7 +177,11 @@ export const Pagination = ({
     const elPaginationTrigger = useMemo(() => {
         if(props.isTriggerCombined) {
             return (
-                <div className={cn('pagination__controls')}>
+                <div
+                    className={cn('pagination__controls', {
+                        'pagination__controls_combined': props.isTriggerCombined
+                    })}
+                >
                     {label}
                     {elDefaultTrigger(true)}
                 </div>
@@ -185,14 +194,30 @@ export const Pagination = ({
     if(props.showPageInput && !placeholder) {
         return (
             <Text presetColor="error">
-                Для инпута ручного выбора страницы обязательно необходимо указать placeholder
+                Для свойства showPageInput обязательно необходимо указать i18n.placeholder
+            </Text>
+        );
+    }
+
+    if(props.showPageInput && direction === 'column') {
+        return (
+            <Text presetColor="error">
+                Свойства showPageInput и direction === column несовместимы
             </Text>
         );
     }
 
     return (
-        <div className={cn('pagination')}>
-            <div className={cn('pagination__buttons-container')}>
+        <div
+            className={cn('pagination', {
+                [`pagination_${direction}`]: direction === 'column'
+            })}
+        >
+            <div
+                className={cn('pagination__wrapper', {
+                    'pagination__wrapper_combined': props.isTriggerCombined
+                })}
+            >
                 {!props.isTriggerCombined && label}
                 <Dropdown
                     className={cn('pagination__dropdown')}
@@ -206,32 +231,32 @@ export const Pagination = ({
 
                                     onClickPreset(option.value as number);
                                 }}
-                                className={cn('pagination__trigger')}
+                                className={cn('pagination__option')}
                             >
                                 {option.label}
                             </DropdownOption>
                         ));
                     }}
                 />
-                {props.showPageInput ? (
-                    <InputText
-                        ref={$input}
-                        className={cn('pagination__page-input')}
-                        name="pageNumber"
-                        autoComplete="off"
-                        isError={isInputError}
-                        onChange={onSetCurrentPage}
-                        placeholder={placeholder}
-                    />
-                ) : null}
-                <PaginationButtons
-                    currentPage={currentPageState}
-                    numberOfEdgeButtons={numberOfEdgeButtons}
-                    numberOfMiddleButtons={numberOfMiddleButtons}
-                    numberOfPages={numberOfPages}
-                    onChangePage={handleChangePage}
-                />
             </div>
+            {props.showPageInput ? (
+                <InputText
+                    ref={$input}
+                    className={cn('pagination__page-input')}
+                    name="pageNumber"
+                    autoComplete="off"
+                    isError={isInputError}
+                    onChange={onSetCurrentPage}
+                    placeholder={placeholder}
+                />
+            ) : null}
+            <PaginationButtons
+                currentPage={currentPageState}
+                numberOfEdgeButtons={numberOfEdgeButtons}
+                numberOfMiddleButtons={numberOfMiddleButtons}
+                numberOfPages={numberOfPages}
+                onChangePage={handleChangePage}
+            />
         </div>
     );
 };

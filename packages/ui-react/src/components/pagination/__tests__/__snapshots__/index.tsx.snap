@@ -6,7 +6,7 @@ exports[`Clicks on elements 1`] = `
     class="pagination"
   >
     <div
-      class="pagination__buttons-container"
+      class="pagination__wrapper"
     >
       Показать записей
       <div
@@ -39,109 +39,109 @@ exports[`Clicks on elements 1`] = `
           </div>
         </span>
       </div>
-      <label
-        class="input-text"
-      >
-        <div
-          class="input-text__field"
-        >
-          <input
-            autocomplete="off"
-            class="input-text__input"
-            name="pageNumber"
-            placeholder="№ страницы"
-            tabindex="0"
-            type="text"
-            value=""
-          />
-        </div>
-      </label>
-      <ul
-        class="pagination-buttons"
-      >
-        <li
-          class="pagination-buttons__item"
-        >
-          <button
-            class="pagination-buttons__button pagination-buttons__button_selected"
-            type="button"
-          >
-            1
-          </button>
-        </li>
-        <li
-          class="pagination-buttons__item"
-        >
-          <button
-            class="pagination-buttons__button"
-            type="button"
-          >
-            2
-          </button>
-        </li>
-        <li
-          class="pagination-buttons__item"
-        >
-          <button
-            class="pagination-buttons__button"
-            type="button"
-          >
-            3
-          </button>
-        </li>
-        <li
-          class="pagination-buttons__item"
-        >
-          <button
-            class="pagination-buttons__button"
-            type="button"
-          >
-            4
-          </button>
-        </li>
-        <li
-          class="pagination-buttons__item"
-        >
-          <span
-            class="pagination-buttons__dots"
-          >
-            ...
-          </span>
-        </li>
-        <li
-          class="pagination-buttons__item"
-        >
-          <button
-            class="pagination-buttons__button"
-            type="button"
-          >
-            100
-          </button>
-        </li>
-        <li
-          class="pagination-buttons__item"
-        >
-          <button
-            class="pagination-buttons__icon-button"
-            type="button"
-          >
-            <svg
-              class="pagination-buttons__icon"
-              height="24"
-              viewBox="0 0 24 24"
-              width="24"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <path
-                clip-rule="evenodd"
-                d="M14.586 12 7.293 4.707l1.414-1.414L17.414 12l-8.707 8.707-1.414-1.414L14.586 12Z"
-                fill-rule="evenodd"
-              />
-            </svg>
-          </button>
-        </li>
-      </ul>
     </div>
+    <label
+      class="input-text"
+    >
+      <div
+        class="input-text__field"
+      >
+        <input
+          autocomplete="off"
+          class="input-text__input"
+          name="pageNumber"
+          placeholder="№ страницы"
+          tabindex="0"
+          type="text"
+          value=""
+        />
+      </div>
+    </label>
+    <ul
+      class="pagination-buttons"
+    >
+      <li
+        class="pagination-buttons__item"
+      >
+        <button
+          class="pagination-buttons__button pagination-buttons__button_selected"
+          type="button"
+        >
+          1
+        </button>
+      </li>
+      <li
+        class="pagination-buttons__item"
+      >
+        <button
+          class="pagination-buttons__button"
+          type="button"
+        >
+          2
+        </button>
+      </li>
+      <li
+        class="pagination-buttons__item"
+      >
+        <button
+          class="pagination-buttons__button"
+          type="button"
+        >
+          3
+        </button>
+      </li>
+      <li
+        class="pagination-buttons__item"
+      >
+        <button
+          class="pagination-buttons__button"
+          type="button"
+        >
+          4
+        </button>
+      </li>
+      <li
+        class="pagination-buttons__item"
+      >
+        <span
+          class="pagination-buttons__dots"
+        >
+          ...
+        </span>
+      </li>
+      <li
+        class="pagination-buttons__item"
+      >
+        <button
+          class="pagination-buttons__button"
+          type="button"
+        >
+          100
+        </button>
+      </li>
+      <li
+        class="pagination-buttons__item"
+      >
+        <button
+          class="pagination-buttons__icon-button"
+          type="button"
+        >
+          <svg
+            class="pagination-buttons__icon"
+            height="24"
+            viewBox="0 0 24 24"
+            width="24"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              clip-rule="evenodd"
+              d="M14.586 12 7.293 4.707l1.414-1.414L17.414 12l-8.707 8.707-1.414-1.414L14.586 12Z"
+              fill-rule="evenodd"
+            />
+          </svg>
+        </button>
+      </li>
+    </ul>
   </div>
 </DocumentFragment>
 `;
@@ -152,7 +152,7 @@ exports[`Clicks on elements 2`] = `
     class="pagination"
   >
     <div
-      class="pagination__buttons-container"
+      class="pagination__wrapper"
     >
       Показать записей
       <div
@@ -185,131 +185,131 @@ exports[`Clicks on elements 2`] = `
           </div>
         </span>
       </div>
-      <label
-        class="input-text"
-      >
-        <div
-          class="input-text__field"
-        >
-          <input
-            autocomplete="off"
-            class="input-text__input"
-            name="pageNumber"
-            placeholder="№ страницы"
-            tabindex="0"
-            type="text"
-            value=""
-          />
-        </div>
-      </label>
-      <ul
-        class="pagination-buttons"
-      >
-        <li
-          class="pagination-buttons__item"
-        >
-          <button
-            class="pagination-buttons__icon-button"
-            type="button"
-          >
-            <svg
-              class="pagination-buttons__icon"
-              height="24"
-              viewBox="0 0 24 24"
-              width="24"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <path
-                clip-rule="evenodd"
-                d="m9.414 12 7.293 7.293-1.414 1.414L6.586 12l8.707-8.707 1.414 1.414L9.414 12Z"
-                fill-rule="evenodd"
-              />
-            </svg>
-          </button>
-        </li>
-        <li
-          class="pagination-buttons__item"
-        >
-          <button
-            class="pagination-buttons__button"
-            type="button"
-          >
-            1
-          </button>
-        </li>
-        <li
-          class="pagination-buttons__item"
-        >
-          <button
-            class="pagination-buttons__button"
-            type="button"
-          >
-            2
-          </button>
-        </li>
-        <li
-          class="pagination-buttons__item"
-        >
-          <button
-            class="pagination-buttons__button pagination-buttons__button_selected"
-            type="button"
-          >
-            3
-          </button>
-        </li>
-        <li
-          class="pagination-buttons__item"
-        >
-          <button
-            class="pagination-buttons__button"
-            type="button"
-          >
-            4
-          </button>
-        </li>
-        <li
-          class="pagination-buttons__item"
-        >
-          <span
-            class="pagination-buttons__dots"
-          >
-            ...
-          </span>
-        </li>
-        <li
-          class="pagination-buttons__item"
-        >
-          <button
-            class="pagination-buttons__button"
-            type="button"
-          >
-            20
-          </button>
-        </li>
-        <li
-          class="pagination-buttons__item"
-        >
-          <button
-            class="pagination-buttons__icon-button"
-            type="button"
-          >
-            <svg
-              class="pagination-buttons__icon"
-              height="24"
-              viewBox="0 0 24 24"
-              width="24"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <path
-                clip-rule="evenodd"
-                d="M14.586 12 7.293 4.707l1.414-1.414L17.414 12l-8.707 8.707-1.414-1.414L14.586 12Z"
-                fill-rule="evenodd"
-              />
-            </svg>
-          </button>
-        </li>
-      </ul>
     </div>
+    <label
+      class="input-text"
+    >
+      <div
+        class="input-text__field"
+      >
+        <input
+          autocomplete="off"
+          class="input-text__input"
+          name="pageNumber"
+          placeholder="№ страницы"
+          tabindex="0"
+          type="text"
+          value=""
+        />
+      </div>
+    </label>
+    <ul
+      class="pagination-buttons"
+    >
+      <li
+        class="pagination-buttons__item"
+      >
+        <button
+          class="pagination-buttons__icon-button"
+          type="button"
+        >
+          <svg
+            class="pagination-buttons__icon"
+            height="24"
+            viewBox="0 0 24 24"
+            width="24"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              clip-rule="evenodd"
+              d="m9.414 12 7.293 7.293-1.414 1.414L6.586 12l8.707-8.707 1.414 1.414L9.414 12Z"
+              fill-rule="evenodd"
+            />
+          </svg>
+        </button>
+      </li>
+      <li
+        class="pagination-buttons__item"
+      >
+        <button
+          class="pagination-buttons__button"
+          type="button"
+        >
+          1
+        </button>
+      </li>
+      <li
+        class="pagination-buttons__item"
+      >
+        <button
+          class="pagination-buttons__button"
+          type="button"
+        >
+          2
+        </button>
+      </li>
+      <li
+        class="pagination-buttons__item"
+      >
+        <button
+          class="pagination-buttons__button pagination-buttons__button_selected"
+          type="button"
+        >
+          3
+        </button>
+      </li>
+      <li
+        class="pagination-buttons__item"
+      >
+        <button
+          class="pagination-buttons__button"
+          type="button"
+        >
+          4
+        </button>
+      </li>
+      <li
+        class="pagination-buttons__item"
+      >
+        <span
+          class="pagination-buttons__dots"
+        >
+          ...
+        </span>
+      </li>
+      <li
+        class="pagination-buttons__item"
+      >
+        <button
+          class="pagination-buttons__button"
+          type="button"
+        >
+          20
+        </button>
+      </li>
+      <li
+        class="pagination-buttons__item"
+      >
+        <button
+          class="pagination-buttons__icon-button"
+          type="button"
+        >
+          <svg
+            class="pagination-buttons__icon"
+            height="24"
+            viewBox="0 0 24 24"
+            width="24"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              clip-rule="evenodd"
+              d="M14.586 12 7.293 4.707l1.414-1.414L17.414 12l-8.707 8.707-1.414-1.414L14.586 12Z"
+              fill-rule="evenodd"
+            />
+          </svg>
+        </button>
+      </li>
+    </ul>
   </div>
 </DocumentFragment>
 `;
@@ -320,7 +320,7 @@ exports[`Combined trigger 1`] = `
     class="pagination"
   >
     <div
-      class="pagination__buttons-container"
+      class="pagination__wrapper pagination__wrapper_combined"
     >
       <div
         class="dropdown"
@@ -329,7 +329,7 @@ exports[`Combined trigger 1`] = `
           class="popover__trigger"
         >
           <div
-            class="pagination__controls"
+            class="pagination__controls pagination__controls_combined"
           >
             Показать записей
             <div
@@ -357,21 +357,21 @@ exports[`Combined trigger 1`] = `
           </div>
         </span>
       </div>
-      <ul
-        class="pagination-buttons"
-      >
-        <li
-          class="pagination-buttons__item"
-        >
-          <button
-            class="pagination-buttons__button pagination-buttons__button_selected"
-            type="button"
-          >
-            1
-          </button>
-        </li>
-      </ul>
     </div>
+    <ul
+      class="pagination-buttons"
+    >
+      <li
+        class="pagination-buttons__item"
+      >
+        <button
+          class="pagination-buttons__button pagination-buttons__button_selected"
+          type="button"
+        >
+          1
+        </button>
+      </li>
+    </ul>
   </div>
 </DocumentFragment>
 `;
@@ -382,7 +382,7 @@ exports[`Combined trigger 2`] = `
     class="pagination"
   >
     <div
-      class="pagination__buttons-container"
+      class="pagination__wrapper pagination__wrapper_combined"
     >
       <div
         class="dropdown"
@@ -391,7 +391,7 @@ exports[`Combined trigger 2`] = `
           class="popover__trigger"
         >
           <div
-            class="pagination__controls"
+            class="pagination__controls pagination__controls_combined"
           >
             Показать записей
             <div
@@ -419,22 +419,166 @@ exports[`Combined trigger 2`] = `
           </div>
         </span>
       </div>
-      <ul
-        class="pagination-buttons"
-      >
-        <li
-          class="pagination-buttons__item"
-        >
-          <button
-            class="pagination-buttons__button pagination-buttons__button_selected"
-            type="button"
-          >
-            1
-          </button>
-        </li>
-      </ul>
     </div>
+    <ul
+      class="pagination-buttons"
+    >
+      <li
+        class="pagination-buttons__item"
+      >
+        <button
+          class="pagination-buttons__button pagination-buttons__button_selected"
+          type="button"
+        >
+          1
+        </button>
+      </li>
+    </ul>
   </div>
+</DocumentFragment>
+`;
+
+exports[`Combined trigger column 1`] = `
+<DocumentFragment>
+  <div
+    class="pagination pagination_column"
+  >
+    <div
+      class="pagination__wrapper pagination__wrapper_combined"
+    >
+      <div
+        class="dropdown"
+      >
+        <span
+          class="popover__trigger"
+        >
+          <div
+            class="pagination__controls pagination__controls_combined"
+          >
+            Показать записей
+            <div
+              class="pagination__dropdown-trigger pagination__dropdown-trigger_combined"
+            >
+              <p
+                class="typography typography_size-large typography_color-basic"
+              >
+                10
+              </p>
+              <svg
+                class="pagination__dropdown-trigger-icon"
+                height="24"
+                viewBox="0 0 24 24"
+                width="24"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  clip-rule="evenodd"
+                  d="m19.293 7.293 1.414 1.414L12 17.414 3.293 8.707l1.414-1.414L12 14.586l7.293-7.293Z"
+                  fill-rule="evenodd"
+                />
+              </svg>
+            </div>
+          </div>
+        </span>
+      </div>
+    </div>
+    <ul
+      class="pagination-buttons"
+    >
+      <li
+        class="pagination-buttons__item"
+      >
+        <button
+          class="pagination-buttons__button pagination-buttons__button_selected"
+          type="button"
+        >
+          1
+        </button>
+      </li>
+    </ul>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`Combined trigger column 2`] = `
+<DocumentFragment>
+  <div
+    class="pagination pagination_column"
+  >
+    <div
+      class="pagination__wrapper pagination__wrapper_combined"
+    >
+      <div
+        class="dropdown"
+      >
+        <span
+          class="popover__trigger"
+        >
+          <div
+            class="pagination__controls pagination__controls_combined"
+          >
+            Показать записей
+            <div
+              class="pagination__dropdown-trigger pagination__dropdown-trigger_combined"
+            >
+              <p
+                class="typography typography_size-large typography_color-basic"
+              >
+                10
+              </p>
+              <svg
+                class="pagination__dropdown-trigger-icon"
+                height="24"
+                viewBox="0 0 24 24"
+                width="24"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  clip-rule="evenodd"
+                  d="m19.293 7.293 1.414 1.414L12 17.414 3.293 8.707l1.414-1.414L12 14.586l7.293-7.293Z"
+                  fill-rule="evenodd"
+                />
+              </svg>
+            </div>
+          </div>
+        </span>
+      </div>
+    </div>
+    <ul
+      class="pagination-buttons"
+    >
+      <li
+        class="pagination-buttons__item"
+      >
+        <button
+          class="pagination-buttons__button pagination-buttons__button_selected"
+          type="button"
+        >
+          1
+        </button>
+      </li>
+    </ul>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`Combined trigger column input 1`] = `
+<DocumentFragment>
+  <p
+    class="typography typography_size-body typography_color-error"
+  >
+    Для свойства showPageInput обязательно необходимо указать i18n.placeholder
+  </p>
+</DocumentFragment>
+`;
+
+exports[`Combined trigger column input 2`] = `
+<DocumentFragment>
+  <p
+    class="typography typography_size-body typography_color-error"
+  >
+    Для свойства showPageInput обязательно необходимо указать i18n.placeholder
+  </p>
 </DocumentFragment>
 `;
 
@@ -444,7 +588,7 @@ exports[`Default use 1`] = `
     class="pagination"
   >
     <div
-      class="pagination__buttons-container"
+      class="pagination__wrapper"
     >
       Показать записей
       <div
@@ -477,21 +621,21 @@ exports[`Default use 1`] = `
           </div>
         </span>
       </div>
-      <ul
-        class="pagination-buttons"
-      >
-        <li
-          class="pagination-buttons__item"
-        >
-          <button
-            class="pagination-buttons__button pagination-buttons__button_selected"
-            type="button"
-          >
-            1
-          </button>
-        </li>
-      </ul>
     </div>
+    <ul
+      class="pagination-buttons"
+    >
+      <li
+        class="pagination-buttons__item"
+      >
+        <button
+          class="pagination-buttons__button pagination-buttons__button_selected"
+          type="button"
+        >
+          1
+        </button>
+      </li>
+    </ul>
   </div>
 </DocumentFragment>
 `;
@@ -502,7 +646,7 @@ exports[`Default use 2`] = `
     class="pagination"
   >
     <div
-      class="pagination__buttons-container"
+      class="pagination__wrapper"
     >
       Показать записей
       <div
@@ -535,21 +679,21 @@ exports[`Default use 2`] = `
           </div>
         </span>
       </div>
-      <ul
-        class="pagination-buttons"
-      >
-        <li
-          class="pagination-buttons__item"
-        >
-          <button
-            class="pagination-buttons__button pagination-buttons__button_selected"
-            type="button"
-          >
-            1
-          </button>
-        </li>
-      </ul>
     </div>
+    <ul
+      class="pagination-buttons"
+    >
+      <li
+        class="pagination-buttons__item"
+      >
+        <button
+          class="pagination-buttons__button pagination-buttons__button_selected"
+          type="button"
+        >
+          1
+        </button>
+      </li>
+    </ul>
   </div>
 </DocumentFragment>
 `;
@@ -560,7 +704,7 @@ exports[`Many items 1`] = `
     class="pagination"
   >
     <div
-      class="pagination__buttons-container"
+      class="pagination__wrapper"
     >
       Показать записей
       <div
@@ -593,92 +737,92 @@ exports[`Many items 1`] = `
           </div>
         </span>
       </div>
-      <ul
-        class="pagination-buttons"
-      >
-        <li
-          class="pagination-buttons__item"
-        >
-          <button
-            class="pagination-buttons__button pagination-buttons__button_selected"
-            type="button"
-          >
-            1
-          </button>
-        </li>
-        <li
-          class="pagination-buttons__item"
-        >
-          <button
-            class="pagination-buttons__button"
-            type="button"
-          >
-            2
-          </button>
-        </li>
-        <li
-          class="pagination-buttons__item"
-        >
-          <button
-            class="pagination-buttons__button"
-            type="button"
-          >
-            3
-          </button>
-        </li>
-        <li
-          class="pagination-buttons__item"
-        >
-          <button
-            class="pagination-buttons__button"
-            type="button"
-          >
-            4
-          </button>
-        </li>
-        <li
-          class="pagination-buttons__item"
-        >
-          <span
-            class="pagination-buttons__dots"
-          >
-            ...
-          </span>
-        </li>
-        <li
-          class="pagination-buttons__item"
-        >
-          <button
-            class="pagination-buttons__button"
-            type="button"
-          >
-            100
-          </button>
-        </li>
-        <li
-          class="pagination-buttons__item"
-        >
-          <button
-            class="pagination-buttons__icon-button"
-            type="button"
-          >
-            <svg
-              class="pagination-buttons__icon"
-              height="24"
-              viewBox="0 0 24 24"
-              width="24"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <path
-                clip-rule="evenodd"
-                d="M14.586 12 7.293 4.707l1.414-1.414L17.414 12l-8.707 8.707-1.414-1.414L14.586 12Z"
-                fill-rule="evenodd"
-              />
-            </svg>
-          </button>
-        </li>
-      </ul>
     </div>
+    <ul
+      class="pagination-buttons"
+    >
+      <li
+        class="pagination-buttons__item"
+      >
+        <button
+          class="pagination-buttons__button pagination-buttons__button_selected"
+          type="button"
+        >
+          1
+        </button>
+      </li>
+      <li
+        class="pagination-buttons__item"
+      >
+        <button
+          class="pagination-buttons__button"
+          type="button"
+        >
+          2
+        </button>
+      </li>
+      <li
+        class="pagination-buttons__item"
+      >
+        <button
+          class="pagination-buttons__button"
+          type="button"
+        >
+          3
+        </button>
+      </li>
+      <li
+        class="pagination-buttons__item"
+      >
+        <button
+          class="pagination-buttons__button"
+          type="button"
+        >
+          4
+        </button>
+      </li>
+      <li
+        class="pagination-buttons__item"
+      >
+        <span
+          class="pagination-buttons__dots"
+        >
+          ...
+        </span>
+      </li>
+      <li
+        class="pagination-buttons__item"
+      >
+        <button
+          class="pagination-buttons__button"
+          type="button"
+        >
+          100
+        </button>
+      </li>
+      <li
+        class="pagination-buttons__item"
+      >
+        <button
+          class="pagination-buttons__icon-button"
+          type="button"
+        >
+          <svg
+            class="pagination-buttons__icon"
+            height="24"
+            viewBox="0 0 24 24"
+            width="24"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              clip-rule="evenodd"
+              d="M14.586 12 7.293 4.707l1.414-1.414L17.414 12l-8.707 8.707-1.414-1.414L14.586 12Z"
+              fill-rule="evenodd"
+            />
+          </svg>
+        </button>
+      </li>
+    </ul>
   </div>
 </DocumentFragment>
 `;
@@ -689,7 +833,7 @@ exports[`Many items 2`] = `
     class="pagination"
   >
     <div
-      class="pagination__buttons-container"
+      class="pagination__wrapper"
     >
       Показать записей
       <div
@@ -722,92 +866,92 @@ exports[`Many items 2`] = `
           </div>
         </span>
       </div>
-      <ul
-        class="pagination-buttons"
-      >
-        <li
-          class="pagination-buttons__item"
-        >
-          <button
-            class="pagination-buttons__button pagination-buttons__button_selected"
-            type="button"
-          >
-            1
-          </button>
-        </li>
-        <li
-          class="pagination-buttons__item"
-        >
-          <button
-            class="pagination-buttons__button"
-            type="button"
-          >
-            2
-          </button>
-        </li>
-        <li
-          class="pagination-buttons__item"
-        >
-          <button
-            class="pagination-buttons__button"
-            type="button"
-          >
-            3
-          </button>
-        </li>
-        <li
-          class="pagination-buttons__item"
-        >
-          <button
-            class="pagination-buttons__button"
-            type="button"
-          >
-            4
-          </button>
-        </li>
-        <li
-          class="pagination-buttons__item"
-        >
-          <span
-            class="pagination-buttons__dots"
-          >
-            ...
-          </span>
-        </li>
-        <li
-          class="pagination-buttons__item"
-        >
-          <button
-            class="pagination-buttons__button"
-            type="button"
-          >
-            100
-          </button>
-        </li>
-        <li
-          class="pagination-buttons__item"
-        >
-          <button
-            class="pagination-buttons__icon-button"
-            type="button"
-          >
-            <svg
-              class="pagination-buttons__icon"
-              height="24"
-              viewBox="0 0 24 24"
-              width="24"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <path
-                clip-rule="evenodd"
-                d="M14.586 12 7.293 4.707l1.414-1.414L17.414 12l-8.707 8.707-1.414-1.414L14.586 12Z"
-                fill-rule="evenodd"
-              />
-            </svg>
-          </button>
-        </li>
-      </ul>
     </div>
+    <ul
+      class="pagination-buttons"
+    >
+      <li
+        class="pagination-buttons__item"
+      >
+        <button
+          class="pagination-buttons__button pagination-buttons__button_selected"
+          type="button"
+        >
+          1
+        </button>
+      </li>
+      <li
+        class="pagination-buttons__item"
+      >
+        <button
+          class="pagination-buttons__button"
+          type="button"
+        >
+          2
+        </button>
+      </li>
+      <li
+        class="pagination-buttons__item"
+      >
+        <button
+          class="pagination-buttons__button"
+          type="button"
+        >
+          3
+        </button>
+      </li>
+      <li
+        class="pagination-buttons__item"
+      >
+        <button
+          class="pagination-buttons__button"
+          type="button"
+        >
+          4
+        </button>
+      </li>
+      <li
+        class="pagination-buttons__item"
+      >
+        <span
+          class="pagination-buttons__dots"
+        >
+          ...
+        </span>
+      </li>
+      <li
+        class="pagination-buttons__item"
+      >
+        <button
+          class="pagination-buttons__button"
+          type="button"
+        >
+          100
+        </button>
+      </li>
+      <li
+        class="pagination-buttons__item"
+      >
+        <button
+          class="pagination-buttons__icon-button"
+          type="button"
+        >
+          <svg
+            class="pagination-buttons__icon"
+            height="24"
+            viewBox="0 0 24 24"
+            width="24"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              clip-rule="evenodd"
+              d="M14.586 12 7.293 4.707l1.414-1.414L17.414 12l-8.707 8.707-1.414-1.414L14.586 12Z"
+              fill-rule="evenodd"
+            />
+          </svg>
+        </button>
+      </li>
+    </ul>
   </div>
 </DocumentFragment>
 `;
@@ -818,7 +962,7 @@ exports[`Many items with input 1`] = `
     class="pagination"
   >
     <div
-      class="pagination__buttons-container"
+      class="pagination__wrapper"
     >
       Показать записей
       <div
@@ -851,109 +995,109 @@ exports[`Many items with input 1`] = `
           </div>
         </span>
       </div>
-      <label
-        class="input-text"
-      >
-        <div
-          class="input-text__field"
-        >
-          <input
-            autocomplete="off"
-            class="input-text__input"
-            name="pageNumber"
-            placeholder="№ страницы"
-            tabindex="0"
-            type="text"
-            value=""
-          />
-        </div>
-      </label>
-      <ul
-        class="pagination-buttons"
-      >
-        <li
-          class="pagination-buttons__item"
-        >
-          <button
-            class="pagination-buttons__button pagination-buttons__button_selected"
-            type="button"
-          >
-            1
-          </button>
-        </li>
-        <li
-          class="pagination-buttons__item"
-        >
-          <button
-            class="pagination-buttons__button"
-            type="button"
-          >
-            2
-          </button>
-        </li>
-        <li
-          class="pagination-buttons__item"
-        >
-          <button
-            class="pagination-buttons__button"
-            type="button"
-          >
-            3
-          </button>
-        </li>
-        <li
-          class="pagination-buttons__item"
-        >
-          <button
-            class="pagination-buttons__button"
-            type="button"
-          >
-            4
-          </button>
-        </li>
-        <li
-          class="pagination-buttons__item"
-        >
-          <span
-            class="pagination-buttons__dots"
-          >
-            ...
-          </span>
-        </li>
-        <li
-          class="pagination-buttons__item"
-        >
-          <button
-            class="pagination-buttons__button"
-            type="button"
-          >
-            100
-          </button>
-        </li>
-        <li
-          class="pagination-buttons__item"
-        >
-          <button
-            class="pagination-buttons__icon-button"
-            type="button"
-          >
-            <svg
-              class="pagination-buttons__icon"
-              height="24"
-              viewBox="0 0 24 24"
-              width="24"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <path
-                clip-rule="evenodd"
-                d="M14.586 12 7.293 4.707l1.414-1.414L17.414 12l-8.707 8.707-1.414-1.414L14.586 12Z"
-                fill-rule="evenodd"
-              />
-            </svg>
-          </button>
-        </li>
-      </ul>
     </div>
+    <label
+      class="input-text"
+    >
+      <div
+        class="input-text__field"
+      >
+        <input
+          autocomplete="off"
+          class="input-text__input"
+          name="pageNumber"
+          placeholder="№ страницы"
+          tabindex="0"
+          type="text"
+          value=""
+        />
+      </div>
+    </label>
+    <ul
+      class="pagination-buttons"
+    >
+      <li
+        class="pagination-buttons__item"
+      >
+        <button
+          class="pagination-buttons__button pagination-buttons__button_selected"
+          type="button"
+        >
+          1
+        </button>
+      </li>
+      <li
+        class="pagination-buttons__item"
+      >
+        <button
+          class="pagination-buttons__button"
+          type="button"
+        >
+          2
+        </button>
+      </li>
+      <li
+        class="pagination-buttons__item"
+      >
+        <button
+          class="pagination-buttons__button"
+          type="button"
+        >
+          3
+        </button>
+      </li>
+      <li
+        class="pagination-buttons__item"
+      >
+        <button
+          class="pagination-buttons__button"
+          type="button"
+        >
+          4
+        </button>
+      </li>
+      <li
+        class="pagination-buttons__item"
+      >
+        <span
+          class="pagination-buttons__dots"
+        >
+          ...
+        </span>
+      </li>
+      <li
+        class="pagination-buttons__item"
+      >
+        <button
+          class="pagination-buttons__button"
+          type="button"
+        >
+          100
+        </button>
+      </li>
+      <li
+        class="pagination-buttons__item"
+      >
+        <button
+          class="pagination-buttons__icon-button"
+          type="button"
+        >
+          <svg
+            class="pagination-buttons__icon"
+            height="24"
+            viewBox="0 0 24 24"
+            width="24"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              clip-rule="evenodd"
+              d="M14.586 12 7.293 4.707l1.414-1.414L17.414 12l-8.707 8.707-1.414-1.414L14.586 12Z"
+              fill-rule="evenodd"
+            />
+          </svg>
+        </button>
+      </li>
+    </ul>
   </div>
 </DocumentFragment>
 `;
@@ -964,7 +1108,7 @@ exports[`Many items with input 2`] = `
     class="pagination"
   >
     <div
-      class="pagination__buttons-container"
+      class="pagination__wrapper"
     >
       Показать записей
       <div
@@ -997,109 +1141,109 @@ exports[`Many items with input 2`] = `
           </div>
         </span>
       </div>
-      <label
-        class="input-text"
-      >
-        <div
-          class="input-text__field"
-        >
-          <input
-            autocomplete="off"
-            class="input-text__input"
-            name="pageNumber"
-            placeholder="№ страницы"
-            tabindex="0"
-            type="text"
-            value=""
-          />
-        </div>
-      </label>
-      <ul
-        class="pagination-buttons"
-      >
-        <li
-          class="pagination-buttons__item"
-        >
-          <button
-            class="pagination-buttons__button pagination-buttons__button_selected"
-            type="button"
-          >
-            1
-          </button>
-        </li>
-        <li
-          class="pagination-buttons__item"
-        >
-          <button
-            class="pagination-buttons__button"
-            type="button"
-          >
-            2
-          </button>
-        </li>
-        <li
-          class="pagination-buttons__item"
-        >
-          <button
-            class="pagination-buttons__button"
-            type="button"
-          >
-            3
-          </button>
-        </li>
-        <li
-          class="pagination-buttons__item"
-        >
-          <button
-            class="pagination-buttons__button"
-            type="button"
-          >
-            4
-          </button>
-        </li>
-        <li
-          class="pagination-buttons__item"
-        >
-          <span
-            class="pagination-buttons__dots"
-          >
-            ...
-          </span>
-        </li>
-        <li
-          class="pagination-buttons__item"
-        >
-          <button
-            class="pagination-buttons__button"
-            type="button"
-          >
-            100
-          </button>
-        </li>
-        <li
-          class="pagination-buttons__item"
-        >
-          <button
-            class="pagination-buttons__icon-button"
-            type="button"
-          >
-            <svg
-              class="pagination-buttons__icon"
-              height="24"
-              viewBox="0 0 24 24"
-              width="24"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <path
-                clip-rule="evenodd"
-                d="M14.586 12 7.293 4.707l1.414-1.414L17.414 12l-8.707 8.707-1.414-1.414L14.586 12Z"
-                fill-rule="evenodd"
-              />
-            </svg>
-          </button>
-        </li>
-      </ul>
     </div>
+    <label
+      class="input-text"
+    >
+      <div
+        class="input-text__field"
+      >
+        <input
+          autocomplete="off"
+          class="input-text__input"
+          name="pageNumber"
+          placeholder="№ страницы"
+          tabindex="0"
+          type="text"
+          value=""
+        />
+      </div>
+    </label>
+    <ul
+      class="pagination-buttons"
+    >
+      <li
+        class="pagination-buttons__item"
+      >
+        <button
+          class="pagination-buttons__button pagination-buttons__button_selected"
+          type="button"
+        >
+          1
+        </button>
+      </li>
+      <li
+        class="pagination-buttons__item"
+      >
+        <button
+          class="pagination-buttons__button"
+          type="button"
+        >
+          2
+        </button>
+      </li>
+      <li
+        class="pagination-buttons__item"
+      >
+        <button
+          class="pagination-buttons__button"
+          type="button"
+        >
+          3
+        </button>
+      </li>
+      <li
+        class="pagination-buttons__item"
+      >
+        <button
+          class="pagination-buttons__button"
+          type="button"
+        >
+          4
+        </button>
+      </li>
+      <li
+        class="pagination-buttons__item"
+      >
+        <span
+          class="pagination-buttons__dots"
+        >
+          ...
+        </span>
+      </li>
+      <li
+        class="pagination-buttons__item"
+      >
+        <button
+          class="pagination-buttons__button"
+          type="button"
+        >
+          100
+        </button>
+      </li>
+      <li
+        class="pagination-buttons__item"
+      >
+        <button
+          class="pagination-buttons__icon-button"
+          type="button"
+        >
+          <svg
+            class="pagination-buttons__icon"
+            height="24"
+            viewBox="0 0 24 24"
+            width="24"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              clip-rule="evenodd"
+              d="M14.586 12 7.293 4.707l1.414-1.414L17.414 12l-8.707 8.707-1.414-1.414L14.586 12Z"
+              fill-rule="evenodd"
+            />
+          </svg>
+        </button>
+      </li>
+    </ul>
   </div>
 </DocumentFragment>
 `;
@@ -1109,7 +1253,7 @@ exports[`Throw error 1`] = `
   <p
     class="typography typography_size-body typography_color-error"
   >
-    Для инпута ручного выбора страницы обязательно необходимо указать placeholder
+    Для свойства showPageInput обязательно необходимо указать i18n.placeholder
   </p>
 </DocumentFragment>
 `;
@@ -1119,7 +1263,7 @@ exports[`Throw error 2`] = `
   <p
     class="typography typography_size-body typography_color-error"
   >
-    Для инпута ручного выбора страницы обязательно необходимо указать placeholder
+    Для свойства showPageInput обязательно необходимо указать i18n.placeholder
   </p>
 </DocumentFragment>
 `;
@@ -1130,7 +1274,7 @@ exports[`Zero pages 1`] = `
     class="pagination"
   >
     <div
-      class="pagination__buttons-container"
+      class="pagination__wrapper"
     >
       Показать записей
       <div
@@ -1163,38 +1307,38 @@ exports[`Zero pages 1`] = `
           </div>
         </span>
       </div>
-      <label
-        class="input-text"
-      >
-        <div
-          class="input-text__field"
-        >
-          <input
-            autocomplete="off"
-            class="input-text__input"
-            name="pageNumber"
-            placeholder="№ страницы"
-            tabindex="0"
-            type="text"
-            value=""
-          />
-        </div>
-      </label>
-      <ul
-        class="pagination-buttons"
-      >
-        <li
-          class="pagination-buttons__item"
-        >
-          <button
-            class="pagination-buttons__button pagination-buttons__button_selected"
-            type="button"
-          >
-            1
-          </button>
-        </li>
-      </ul>
     </div>
+    <label
+      class="input-text"
+    >
+      <div
+        class="input-text__field"
+      >
+        <input
+          autocomplete="off"
+          class="input-text__input"
+          name="pageNumber"
+          placeholder="№ страницы"
+          tabindex="0"
+          type="text"
+          value=""
+        />
+      </div>
+    </label>
+    <ul
+      class="pagination-buttons"
+    >
+      <li
+        class="pagination-buttons__item"
+      >
+        <button
+          class="pagination-buttons__button pagination-buttons__button_selected"
+          type="button"
+        >
+          1
+        </button>
+      </li>
+    </ul>
   </div>
 </DocumentFragment>
 `;
@@ -1205,7 +1349,7 @@ exports[`Zero pages 2`] = `
     class="pagination"
   >
     <div
-      class="pagination__buttons-container"
+      class="pagination__wrapper"
     >
       Показать записей
       <div
@@ -1238,38 +1382,38 @@ exports[`Zero pages 2`] = `
           </div>
         </span>
       </div>
-      <label
-        class="input-text"
-      >
-        <div
-          class="input-text__field"
-        >
-          <input
-            autocomplete="off"
-            class="input-text__input"
-            name="pageNumber"
-            placeholder="№ страницы"
-            tabindex="0"
-            type="text"
-            value=""
-          />
-        </div>
-      </label>
-      <ul
-        class="pagination-buttons"
-      >
-        <li
-          class="pagination-buttons__item"
-        >
-          <button
-            class="pagination-buttons__button pagination-buttons__button_selected"
-            type="button"
-          >
-            1
-          </button>
-        </li>
-      </ul>
     </div>
+    <label
+      class="input-text"
+    >
+      <div
+        class="input-text__field"
+      >
+        <input
+          autocomplete="off"
+          class="input-text__input"
+          name="pageNumber"
+          placeholder="№ страницы"
+          tabindex="0"
+          type="text"
+          value=""
+        />
+      </div>
+    </label>
+    <ul
+      class="pagination-buttons"
+    >
+      <li
+        class="pagination-buttons__item"
+      >
+        <button
+          class="pagination-buttons__button pagination-buttons__button_selected"
+          type="button"
+        >
+          1
+        </button>
+      </li>
+    </ul>
   </div>
 </DocumentFragment>
 `;
