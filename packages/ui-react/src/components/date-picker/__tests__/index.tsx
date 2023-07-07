@@ -191,3 +191,46 @@ test('Same period', async () => {
     });
 });
 
+test('Date Range Is Mobile', async () => {
+    const { asFragment, getByTitle } = render(
+        <DatePicker
+            i18nConfig={{
+                locale: ru,
+                translation: i18nValues
+            }}
+            isMobile={true}
+            isDateRange={true}
+            qa={true}
+        />
+    );
+
+    expect(asFragment()).toMatchSnapshot();
+
+    fireEvent.click(getByTitle('date-picker'));
+
+    await waitFor(() => {
+        expect(asFragment()).toMatchSnapshot();
+    });
+});
+
+test('Datepicker Is Mobile', async () => {
+    const { asFragment, getByTitle } = render(
+        <DatePicker
+            i18nConfig={{
+                locale: ru,
+                translation: i18nValues
+            }}
+            isMobile={true}
+            qa={true}
+        />
+    );
+
+    expect(asFragment()).toMatchSnapshot();
+
+    fireEvent.click(getByTitle('date-picker'));
+
+    await waitFor(() => {
+        expect(asFragment()).toMatchSnapshot();
+    });
+});
+

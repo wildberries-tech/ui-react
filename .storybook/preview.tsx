@@ -1,5 +1,6 @@
 import React from 'react';
 import type { Preview, Decorator } from '@storybook/react';
+import { INITIAL_VIEWPORTS } from '@storybook/addon-viewport';
 
 import { DesignTokens } from '../packages/ui-react/src/components/design-tokens';
 
@@ -21,7 +22,10 @@ const preview: Preview = {
             storySort: {
                 order: ['Documentation', 'Builders'],
             }
-        }
+        },
+        viewport: {
+            viewports: INITIAL_VIEWPORTS
+        },
     }
 };
 

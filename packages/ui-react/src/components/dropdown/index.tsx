@@ -1,7 +1,7 @@
 import React, { HTMLAttributes, MutableRefObject, ReactElement, ReactNode, useCallback } from 'react';
 import { isElement } from 'react-is';
 
-import { useClassnames } from '../../hooks/use-classnames';
+import { TStyle, useClassnames } from '../../hooks/use-classnames';
 import { Popover, IProps as IPopoverProps } from '../popover';
 import { IconMoreVertical } from '../icons/more-vertical';
 import { IconArrowsChevronBottom } from '../icons/arrows/chevron-bottom';
@@ -31,7 +31,11 @@ export interface IProps<T extends ReactElement | ICustomTriggerElement = any> ex
     /**
      * Триггер-элемент дропдауна
      */
-    triggerElement?: T
+    triggerElement?: T | ((isOpen: boolean) => T | null),
+    /**
+     * Задает дополнительные CSS классы для стилизации родительского компонента Popover
+     */
+    popoverClassname?: TStyle | string
 }
 
 export const Dropdown = ({ placement = 'bottom-end', syncOptionsWidth = true, className, ...props }: IProps) => {
@@ -66,6 +70,10 @@ export const Dropdown = ({ placement = 'bottom-end', syncOptionsWidth = true, cl
     }, [props.triggerElement?.elRightIcon]);
 
     const elTrigger = useCallback((isOpen: boolean) => {
+        if(typeof props.triggerElement === 'function') {
+            return props.triggerElement(isOpen);
+        }
+
         if(isElement(props.triggerElement)) {
             return props.triggerElement;
         }
@@ -82,6 +90,7 @@ export const Dropdown = ({ placement = 'bottom-end', syncOptionsWidth = true, cl
     return (
         <div className={cn('dropdown')}>
             <Popover
+                className={props.popoverClassname}
                 placement={placement}
                 children={elTrigger}
                 triggerOffset={4}

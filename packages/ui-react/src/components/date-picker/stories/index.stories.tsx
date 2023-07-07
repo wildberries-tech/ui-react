@@ -37,6 +37,19 @@ export const DateRange: StoryObj<typeof META> = {
     }
 };
 
+export const DateRangeMobile: StoryObj<typeof META> = {
+    args: {
+        isDateRange: true,
+        isMobile   : true
+    }
+};
+
+export const DatePickerMobile: StoryObj<typeof META> = {
+    args: {
+        isMobile: true
+    }
+};
+
 export const DateRangeDefaultDates: StoryObj<typeof META> = {
     args: {
         isDateRange: true,
