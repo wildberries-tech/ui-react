@@ -56,3 +56,11 @@ export const DateRangeDefaultDates: StoryObj<typeof META> = {
         defaultSelectedDate: [new Date('2023-06-25'), new Date('2023-06-27')]
     }
 };
+
+export const DateRangeDefaultDatesMobile: StoryObj<typeof META> = {
+    args: {
+        isDateRange: true,
+        isMobile: true,
+        defaultSelectedDate: [new Date('2023-06-25'), new Date('2023-06-27')]
+    }
+};
