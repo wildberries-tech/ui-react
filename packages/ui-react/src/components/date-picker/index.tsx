@@ -22,7 +22,9 @@ import {
     addMonths,
     startOfYear,
     eachWeekOfInterval,
-    Locale, parse, isValid
+    Locale,
+    parse,
+    isValid
 } from 'date-fns';
 import { ru } from 'date-fns/locale';
 
@@ -32,6 +34,7 @@ import { InputText } from '../input-text';
 import { IconCalendar } from '../icons/calendar';
 import { IconArrowsArrowRight } from '../icons/arrows/arrow-right';
 import { IconArrowsArrowLeft } from '../icons/arrows/arrow-left';
+import { IconClear } from '../icons/clear';
 import { Checkbox } from '../checkbox';
 import { Dropdown } from '../dropdown';
 import { Button } from '../button';
@@ -56,6 +59,7 @@ export interface IConfigI18n {
 
 export interface IProps {
     className?: string | TStyle,
+    dropdownClassName?: TStyle,
     readOnly?: boolean,
     placeholder?: string,
     isDateRange?: boolean,
@@ -69,6 +73,7 @@ export interface IProps {
     enabled?: boolean,
     onChange?: (value: TDateValuesArray) => void,
     i18nConfig: IConfigI18n,
+    isMobile?: boolean,
     qa?: boolean
 }
 
@@ -148,6 +153,7 @@ export const DatePicker = ({
 
     const $container = useRef<HTMLDivElement>(null);
 
+    const [isMobileOpen, setIsMobileOpen] = useState<boolean>(false);
     const [selected, setSelected] = useState<Date>();
     const [minDate, setMinDate] = useState<Date>(defaultMinDate ?? startOfYear(new Date()));
     const [maxDate, setMaxDate] = useState<Date>(defaultMaxDate ?? new Date());
@@ -352,6 +358,10 @@ export const DatePicker = ({
             callback?.();
 
             props.onChange?.(selectedPeriod);
+
+            if(props.isMobile) {
+                setIsMobileOpen(false);
+            }
         }
     };
 
@@ -457,6 +467,10 @@ export const DatePicker = ({
     };
 
     const onScrollToCurrentItem = () => {
+        if(props.isMobile) {
+            setIsMobileOpen(true);
+        }
+
         setTimeout(() => {
             const modal = document.getElementById('date-body');
 
@@ -483,7 +497,7 @@ export const DatePicker = ({
         }
     }, [selectedPeriod]);
 
-    const elMonthItem = useCallback((monthItem: TMonths[number], onClose: () => void) => {
+    const elMonthItem = useCallback((monthItem: TMonths[number], onClose?: () => void) => {
         const days: Array<IDays> = [{
             name     : 'monday',
             isWeekend: false
@@ -571,7 +585,7 @@ export const DatePicker = ({
                                             }
 
                                             if(!props.isDateRange) {
-                                                onClose();
+                                                onClose?.();
                                             }
                                         }}
                                         data-scroll={isDataScroll}
@@ -602,7 +616,7 @@ export const DatePicker = ({
         currentHoveredDate
     ]);
 
-    const elCalendarBody = useCallback((onClose: () => void) => {
+    const elCalendarBody = useCallback((onClose?: () => void) => {
         return (
             <div
                 className={cn('date-picker__calendar-body')}
@@ -613,7 +627,7 @@ export const DatePicker = ({
         );
     }, [calendar, elMonthItem]);
 
-    const elPeriodCalendar = useCallback((onClose: () => void) => {
+    const elPeriodCalendar = useCallback((onClose?: () => void) => {
         const startValue = selectedPeriod[0] ? format(selectedPeriod[0], 'yyyy-MM-dd') : '';
         const endValue = selectedPeriod[1] ? format(selectedPeriod[1], 'yyyy-MM-dd') : '';
 
@@ -626,18 +640,20 @@ export const DatePicker = ({
                         label={i18nConfig.translation['whole-period']}
                         onChange={onChangeCheckboxButt}
                     />
-                    <InputDate
-                        label={i18nConfig.translation['start-date']}
-                        name="startDate"
-                        value={startValue}
-                        onChange={onChangeDate(0)}
-                    />
-                    <InputDate
-                        label={i18nConfig.translation['end-date']}
-                        name="endDate"
-                        value={endValue}
-                        onChange={onChangeDate(1)}
-                    />
+                    <div className={cn('date-picker__period-calendar-inputs')}>
+                        <InputDate
+                            label={i18nConfig.translation['start-date']}
+                            name="startDate"
+                            value={startValue}
+                            onChange={onChangeDate(0)}
+                        />
+                        <InputDate
+                            label={i18nConfig.translation['end-date']}
+                            name="endDate"
+                            value={endValue}
+                            onChange={onChangeDate(1)}
+                        />
+                    </div>
                     <Button
                         type="button"
                         presetStyle="primary"
@@ -650,7 +666,7 @@ export const DatePicker = ({
                 </div>
             );
         }
-    }, [isAllPeriod, selectedPeriod, props.isDateRange]);
+    }, [isAllPeriod, selectedPeriod, props.isDateRange, props.isMobile]);
 
     const onClickChangeButton = (type: 'plus' | 'minus') => {
         const amount = type === 'plus' ? 1 : -1;
@@ -668,50 +684,65 @@ export const DatePicker = ({
         }
     };
 
-    const elCalendar = useCallback((onClose: () => void) => {
+    const elCalendar = useCallback((onClose?: () => void) => {
         return (
             <div
                 ref={$container}
                 className={cn('date-picker__wrap-calendar', {
-                    'date-picker__wrap-calendar_date-range': props.isDateRange
+                    'date-picker__wrap-calendar_date-range': props.isDateRange,
+                    'date-picker__wrap-calendar_is-mobile' : props.isMobile
                 })}
             >
-                <div className={cn('date-picker__calendar')}>
+                <div
+                    className={cn('date-picker__calendar', {
+                        'date-picker__calendar_date-range': props.isDateRange
+                    })}
+                >
                     <div className={cn('date-picker__month-row')}>
-                        <button
-                            type="button"
-                            onClick={() => onClickChangeButton('minus')}
-                            className={cn('date-picker__row-left', {
-                                'date-picker__row-left_disabled': disabledDatesInPast
-                            })}
-                        >
-                            <IconArrowsArrowLeft />
-                        </button>
-                        <div className={cn('date-picker__row-center')}>
-                            {props.isDateRange ? format(calendar.month, 'yyyy') : format(calendar.month, 'LLLL yyyy')}
+                        {!!props.isMobile && <span />}
+                        <div className={cn('date-picker__month-row-controls')}>
+                            <button
+                                type="button"
+                                onClick={() => onClickChangeButton('minus')}
+                                className={cn('date-picker__row-left', {
+                                    'date-picker__row-left_disabled': disabledDatesInPast
+                                })}
+                            >
+                                <IconArrowsArrowLeft />
+                            </button>
+                            <div className={cn('date-picker__row-center')}>
+                                {props.isDateRange ? format(calendar.month, 'yyyy') : format(calendar.month, 'LLLL yyyy')}
+                            </div>
+                            <button
+                                type="button"
+                                className={cn('date-picker__row-right')}
+                                onClick={() => onClickChangeButton('plus')}
+                            >
+                                <IconArrowsArrowRight />
+                            </button>
                         </div>
-                        <button
-                            type="button"
-                            className={cn('date-picker__row-right')}
-                            onClick={() => onClickChangeButton('plus')}
-                        >
-                            <IconArrowsArrowRight />
-                        </button>
+                        {!!props.isMobile && (
+                            <IconClear
+                                svg={{
+                                    onClick: () => setIsMobileOpen(false)
+                                }}
+                            />
+                        )}
                     </div>
                     {elCalendarBody(onClose)}
                 </div>
                 {elPeriodCalendar(onClose)}
             </div>
         );
-    }, [elCalendarBody, elPeriodCalendar, props.isDateRange, calendar.month, disabledDatesInPast]);
+    }, [elCalendarBody, elPeriodCalendar, props.isDateRange, calendar.month, disabledDatesInPast, props.isMobile]);
 
     const elTriggerElement = useMemo(() => {
         return (
             <button
                 type="button"
                 title={props.qa ? 'date-picker' : undefined}
-                className={cn('date-picker', {
-                    'date-picker_range': props.isDateRange
+                className={cn('date-picker__trigger', {
+                    'date-picker__trigger_range': props.isDateRange
                 })}
                 onClick={onScrollToCurrentItem}
             >
@@ -734,7 +765,7 @@ export const DatePicker = ({
                 />
             </button>
         );
-    }, [props.readOnly, props.placeholder, displayDate, props.isDateRange]);
+    }, [props.readOnly, props.placeholder, displayDate, props.isDateRange, props.isMobile]);
 
     const onCloseCalendar = () => {
         setCalendar(defaultCalendar);
@@ -744,8 +775,21 @@ export const DatePicker = ({
         return elTriggerElement;
     }
 
+    if(props.isMobile) {
+        return (
+            <div className={cn('date-picker')}>
+                {elTriggerElement}
+                {Boolean(isMobileOpen) && elCalendar()}
+            </div>
+        );
+    }
+
     return (
         <Dropdown
+            className={{
+                'dropdown': cn('date-picker'),
+                ...props.dropdownClassName
+            }}
             placement="bottom-start"
             render={(isOpen, onClose) => elCalendar(onClose)}
             onCloseCallback={onCloseCalendar}

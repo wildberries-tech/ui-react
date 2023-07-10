@@ -1,15 +1,4226 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+exports[`Date Range Is Mobile 1`] = `
+<DocumentFragment>
+  <div
+    class="date-picker"
+  >
+    <button
+      class="date-picker__trigger date-picker__trigger_range"
+      title="date-picker"
+      type="button"
+    >
+      <label
+        class="input-text"
+      >
+        <div
+          class="date-picker__input-field input-text__field_read-only input-text__field_after"
+        >
+          <input
+            class="input-text__input"
+            disabled=""
+            name="date-picker"
+            readonly=""
+            tabindex="-1"
+            type="text"
+            value=""
+          />
+          <svg
+            class="date-picker__calendar-icon"
+            height="24"
+            viewBox="0 0 24 24"
+            width="24"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              clip-rule="evenodd"
+              d="M6 6h2V5h8v1h2V5h2v3H4V5h2v1Zm-2 4v10h16V10H4Zm4-7h8V2h2v1h2a2 2 0 0 1 2 2v15a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h2V2h2v1Z"
+              fill-rule="evenodd"
+            />
+          </svg>
+        </div>
+      </label>
+    </button>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`Date Range Is Mobile 2`] = `
+<DocumentFragment>
+  <div
+    class="date-picker"
+  >
+    <button
+      class="date-picker__trigger date-picker__trigger_range"
+      title="date-picker"
+      type="button"
+    >
+      <label
+        class="input-text"
+      >
+        <div
+          class="date-picker__input-field input-text__field_read-only input-text__field_after"
+        >
+          <input
+            class="input-text__input"
+            disabled=""
+            name="date-picker"
+            readonly=""
+            tabindex="-1"
+            type="text"
+            value=""
+          />
+          <svg
+            class="date-picker__calendar-icon"
+            height="24"
+            viewBox="0 0 24 24"
+            width="24"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              clip-rule="evenodd"
+              d="M6 6h2V5h8v1h2V5h2v3H4V5h2v1Zm-2 4v10h16V10H4Zm4-7h8V2h2v1h2a2 2 0 0 1 2 2v15a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h2V2h2v1Z"
+              fill-rule="evenodd"
+            />
+          </svg>
+        </div>
+      </label>
+    </button>
+    <div
+      class="date-picker__wrap-calendar date-picker__wrap-calendar_date-range date-picker__wrap-calendar_is-mobile"
+    >
+      <div
+        class="date-picker__calendar date-picker__calendar_date-range"
+      >
+        <div
+          class="date-picker__month-row"
+        >
+          <span />
+          <div
+            class="date-picker__month-row-controls"
+          >
+            <button
+              class="date-picker__row-left"
+              type="button"
+            >
+              <svg
+                height="24"
+                viewBox="0 0 24 24"
+                width="24"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  clip-rule="evenodd"
+                  d="m6.414 13 6.293 6.293-1.414 1.414L2.586 12l8.707-8.707 1.414 1.414L6.414 11H21v2H6.414Z"
+                  fill-rule="evenodd"
+                />
+              </svg>
+            </button>
+            <div
+              class="date-picker__row-center"
+            >
+              2023
+            </div>
+            <button
+              class="date-picker__row-right"
+              type="button"
+            >
+              <svg
+                height="24"
+                viewBox="0 0 24 24"
+                width="24"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  clip-rule="evenodd"
+                  d="M17.586 13H3v-2h14.586l-6.293-6.293 1.414-1.414L21.414 12l-8.707 8.707-1.414-1.414L17.586 13Z"
+                  fill-rule="evenodd"
+                />
+              </svg>
+            </button>
+          </div>
+          <svg
+            height="24"
+            viewBox="0 0 24 24"
+            width="24"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M19.778 18.364 13.414 12l6.364-6.364-1.414-1.414L12 10.586 5.636 4.222 4.222 5.636 10.586 12l-6.364 6.364 1.414 1.414L12 13.414l6.364 6.364 1.414-1.414Z"
+            />
+          </svg>
+        </div>
+        <div
+          class="date-picker__calendar-body"
+          id="date-body"
+        >
+          <div
+            class="date-picker__month-name"
+          >
+            январь
+          </div>
+          <div
+            class="date-picker__weekdays"
+          >
+            <div
+              class="date-picker__weekday"
+            >
+              пн
+            </div>
+            <div
+              class="date-picker__weekday"
+            >
+              вт
+            </div>
+            <div
+              class="date-picker__weekday"
+            >
+              ср
+            </div>
+            <div
+              class="date-picker__weekday"
+            >
+              чт
+            </div>
+            <div
+              class="date-picker__weekday"
+            >
+              пт
+            </div>
+            <div
+              class="date-picker__weekday date-picker__weekday_weekend"
+            >
+              сб
+            </div>
+            <div
+              class="date-picker__weekday date-picker__weekday_weekend"
+            >
+              вс
+            </div>
+          </div>
+          <div
+            class="date-picker__dates"
+          >
+            <div
+              class="date-picker__dates-week"
+            >
+              <button
+                class="date-picker__date date-picker__date_muted date-picker__date_disabled"
+                type="button"
+              >
+                26
+              </button>
+              <button
+                class="date-picker__date date-picker__date_muted date-picker__date_disabled"
+                type="button"
+              >
+                27
+              </button>
+              <button
+                class="date-picker__date date-picker__date_muted date-picker__date_disabled"
+                type="button"
+              >
+                28
+              </button>
+              <button
+                class="date-picker__date date-picker__date_muted date-picker__date_disabled"
+                type="button"
+              >
+                29
+              </button>
+              <button
+                class="date-picker__date date-picker__date_muted date-picker__date_disabled"
+                type="button"
+              >
+                30
+              </button>
+              <button
+                class="date-picker__date date-picker__date_muted date-picker__date_last-day date-picker__date_disabled"
+                type="button"
+              >
+                31
+              </button>
+              <button
+                class="date-picker__date date-picker__date_border date-picker__date_first-day"
+                type="button"
+              >
+                01
+              </button>
+            </div>
+            <div
+              class="date-picker__dates-week"
+            >
+              <button
+                class="date-picker__date date-picker__date_border"
+                type="button"
+              >
+                02
+              </button>
+              <button
+                class="date-picker__date date-picker__date_border"
+                type="button"
+              >
+                03
+              </button>
+              <button
+                class="date-picker__date date-picker__date_border"
+                type="button"
+              >
+                04
+              </button>
+              <button
+                class="date-picker__date date-picker__date_border"
+                type="button"
+              >
+                05
+              </button>
+              <button
+                class="date-picker__date date-picker__date_border"
+                type="button"
+              >
+                06
+              </button>
+              <button
+                class="date-picker__date date-picker__date_border"
+                type="button"
+              >
+                07
+              </button>
+              <button
+                class="date-picker__date date-picker__date_border"
+                type="button"
+              >
+                08
+              </button>
+            </div>
+            <div
+              class="date-picker__dates-week"
+            >
+              <button
+                class="date-picker__date date-picker__date_border"
+                type="button"
+              >
+                09
+              </button>
+              <button
+                class="date-picker__date date-picker__date_border"
+                type="button"
+              >
+                10
+              </button>
+              <button
+                class="date-picker__date date-picker__date_border"
+                type="button"
+              >
+                11
+              </button>
+              <button
+                class="date-picker__date date-picker__date_border"
+                type="button"
+              >
+                12
+              </button>
+              <button
+                class="date-picker__date date-picker__date_border"
+                type="button"
+              >
+                13
+              </button>
+              <button
+                class="date-picker__date date-picker__date_border"
+                type="button"
+              >
+                14
+              </button>
+              <button
+                class="date-picker__date date-picker__date_border"
+                type="button"
+              >
+                15
+              </button>
+            </div>
+            <div
+              class="date-picker__dates-week"
+            >
+              <button
+                class="date-picker__date date-picker__date_border"
+                type="button"
+              >
+                16
+              </button>
+              <button
+                class="date-picker__date date-picker__date_border"
+                type="button"
+              >
+                17
+              </button>
+              <button
+                class="date-picker__date date-picker__date_border"
+                type="button"
+              >
+                18
+              </button>
+              <button
+                class="date-picker__date date-picker__date_border"
+                type="button"
+              >
+                19
+              </button>
+              <button
+                class="date-picker__date date-picker__date_border"
+                type="button"
+              >
+                20
+              </button>
+              <button
+                class="date-picker__date date-picker__date_border"
+                type="button"
+              >
+                21
+              </button>
+              <button
+                class="date-picker__date date-picker__date_border"
+                type="button"
+              >
+                22
+              </button>
+            </div>
+            <div
+              class="date-picker__dates-week"
+            >
+              <button
+                class="date-picker__date date-picker__date_border"
+                type="button"
+              >
+                23
+              </button>
+              <button
+                class="date-picker__date date-picker__date_border"
+                type="button"
+              >
+                24
+              </button>
+              <button
+                class="date-picker__date date-picker__date_border"
+                type="button"
+              >
+                25
+              </button>
+              <button
+                class="date-picker__date date-picker__date_border"
+                type="button"
+              >
+                26
+              </button>
+              <button
+                class="date-picker__date date-picker__date_border"
+                type="button"
+              >
+                27
+              </button>
+              <button
+                class="date-picker__date date-picker__date_border"
+                type="button"
+              >
+                28
+              </button>
+              <button
+                class="date-picker__date date-picker__date_border"
+                type="button"
+              >
+                29
+              </button>
+            </div>
+            <div
+              class="date-picker__dates-week"
+            >
+              <button
+                class="date-picker__date date-picker__date_border"
+                type="button"
+              >
+                30
+              </button>
+              <button
+                class="date-picker__date date-picker__date_border date-picker__date_last-day"
+                type="button"
+              >
+                31
+              </button>
+              <button
+                class="date-picker__date date-picker__date_muted date-picker__date_first-day"
+                type="button"
+              >
+                01
+              </button>
+              <button
+                class="date-picker__date date-picker__date_muted"
+                type="button"
+              >
+                02
+              </button>
+              <button
+                class="date-picker__date date-picker__date_muted"
+                type="button"
+              >
+                03
+              </button>
+              <button
+                class="date-picker__date date-picker__date_muted"
+                type="button"
+              >
+                04
+              </button>
+              <button
+                class="date-picker__date date-picker__date_muted"
+                type="button"
+              >
+                05
+              </button>
+            </div>
+          </div>
+          <div
+            class="date-picker__month-name"
+          >
+            февраль
+          </div>
+          <div
+            class="date-picker__weekdays"
+          >
+            <div
+              class="date-picker__weekday"
+            >
+              пн
+            </div>
+            <div
+              class="date-picker__weekday"
+            >
+              вт
+            </div>
+            <div
+              class="date-picker__weekday"
+            >
+              ср
+            </div>
+            <div
+              class="date-picker__weekday"
+            >
+              чт
+            </div>
+            <div
+              class="date-picker__weekday"
+            >
+              пт
+            </div>
+            <div
+              class="date-picker__weekday date-picker__weekday_weekend"
+            >
+              сб
+            </div>
+            <div
+              class="date-picker__weekday date-picker__weekday_weekend"
+            >
+              вс
+            </div>
+          </div>
+          <div
+            class="date-picker__dates"
+          >
+            <div
+              class="date-picker__dates-week"
+            >
+              <button
+                class="date-picker__date date-picker__date_muted"
+                type="button"
+              >
+                30
+              </button>
+              <button
+                class="date-picker__date date-picker__date_muted date-picker__date_last-day"
+                type="button"
+              >
+                31
+              </button>
+              <button
+                class="date-picker__date date-picker__date_border date-picker__date_first-day"
+                type="button"
+              >
+                01
+              </button>
+              <button
+                class="date-picker__date date-picker__date_border"
+                type="button"
+              >
+                02
+              </button>
+              <button
+                class="date-picker__date date-picker__date_border"
+                type="button"
+              >
+                03
+              </button>
+              <button
+                class="date-picker__date date-picker__date_border"
+                type="button"
+              >
+                04
+              </button>
+              <button
+                class="date-picker__date date-picker__date_border"
+                type="button"
+              >
+                05
+              </button>
+            </div>
+            <div
+              class="date-picker__dates-week"
+            >
+              <button
+                class="date-picker__date date-picker__date_border"
+                type="button"
+              >
+                06
+              </button>
+              <button
+                class="date-picker__date date-picker__date_border"
+                type="button"
+              >
+                07
+              </button>
+              <button
+                class="date-picker__date date-picker__date_border"
+                type="button"
+              >
+                08
+              </button>
+              <button
+                class="date-picker__date date-picker__date_border"
+                type="button"
+              >
+                09
+              </button>
+              <button
+                class="date-picker__date date-picker__date_border"
+                type="button"
+              >
+                10
+              </button>
+              <button
+                class="date-picker__date date-picker__date_border"
+                type="button"
+              >
+                11
+              </button>
+              <button
+                class="date-picker__date date-picker__date_border"
+                type="button"
+              >
+                12
+              </button>
+            </div>
+            <div
+              class="date-picker__dates-week"
+            >
+              <button
+                class="date-picker__date date-picker__date_border"
+                type="button"
+              >
+                13
+              </button>
+              <button
+                class="date-picker__date date-picker__date_border"
+                type="button"
+              >
+                14
+              </button>
+              <button
+                class="date-picker__date date-picker__date_border"
+                type="button"
+              >
+                15
+              </button>
+              <button
+                class="date-picker__date date-picker__date_border"
+                type="button"
+              >
+                16
+              </button>
+              <button
+                class="date-picker__date date-picker__date_border"
+                type="button"
+              >
+                17
+              </button>
+              <button
+                class="date-picker__date date-picker__date_border"
+                type="button"
+              >
+                18
+              </button>
+              <button
+                class="date-picker__date date-picker__date_border"
+                type="button"
+              >
+                19
+              </button>
+            </div>
+            <div
+              class="date-picker__dates-week"
+            >
+              <button
+                class="date-picker__date date-picker__date_border"
+                type="button"
+              >
+                20
+              </button>
+              <button
+                class="date-picker__date date-picker__date_border"
+                type="button"
+              >
+                21
+              </button>
+              <button
+                class="date-picker__date date-picker__date_border"
+                type="button"
+              >
+                22
+              </button>
+              <button
+                class="date-picker__date date-picker__date_border"
+                type="button"
+              >
+                23
+              </button>
+              <button
+                class="date-picker__date date-picker__date_border"
+                type="button"
+              >
+                24
+              </button>
+              <button
+                class="date-picker__date date-picker__date_border"
+                type="button"
+              >
+                25
+              </button>
+              <button
+                class="date-picker__date date-picker__date_border"
+                type="button"
+              >
+                26
+              </button>
+            </div>
+            <div
+              class="date-picker__dates-week"
+            >
+              <button
+                class="date-picker__date date-picker__date_border"
+                type="button"
+              >
+                27
+              </button>
+              <button
+                class="date-picker__date date-picker__date_border date-picker__date_last-day"
+                type="button"
+              >
+                28
+              </button>
+              <button
+                class="date-picker__date date-picker__date_muted date-picker__date_first-day"
+                type="button"
+              >
+                01
+              </button>
+              <button
+                class="date-picker__date date-picker__date_muted"
+                type="button"
+              >
+                02
+              </button>
+              <button
+                class="date-picker__date date-picker__date_muted"
+                type="button"
+              >
+                03
+              </button>
+              <button
+                class="date-picker__date date-picker__date_muted"
+                type="button"
+              >
+                04
+              </button>
+              <button
+                class="date-picker__date date-picker__date_muted"
+                type="button"
+              >
+                05
+              </button>
+            </div>
+          </div>
+          <div
+            class="date-picker__month-name"
+          >
+            март
+          </div>
+          <div
+            class="date-picker__weekdays"
+          >
+            <div
+              class="date-picker__weekday"
+            >
+              пн
+            </div>
+            <div
+              class="date-picker__weekday"
+            >
+              вт
+            </div>
+            <div
+              class="date-picker__weekday"
+            >
+              ср
+            </div>
+            <div
+              class="date-picker__weekday"
+            >
+              чт
+            </div>
+            <div
+              class="date-picker__weekday"
+            >
+              пт
+            </div>
+            <div
+              class="date-picker__weekday date-picker__weekday_weekend"
+            >
+              сб
+            </div>
+            <div
+              class="date-picker__weekday date-picker__weekday_weekend"
+            >
+              вс
+            </div>
+          </div>
+          <div
+            class="date-picker__dates"
+          >
+            <div
+              class="date-picker__dates-week"
+            >
+              <button
+                class="date-picker__date date-picker__date_muted"
+                type="button"
+              >
+                27
+              </button>
+              <button
+                class="date-picker__date date-picker__date_muted date-picker__date_last-day"
+                type="button"
+              >
+                28
+              </button>
+              <button
+                class="date-picker__date date-picker__date_border date-picker__date_first-day"
+                type="button"
+              >
+                01
+              </button>
+              <button
+                class="date-picker__date date-picker__date_border"
+                type="button"
+              >
+                02
+              </button>
+              <button
+                class="date-picker__date date-picker__date_border"
+                type="button"
+              >
+                03
+              </button>
+              <button
+                class="date-picker__date date-picker__date_border"
+                type="button"
+              >
+                04
+              </button>
+              <button
+                class="date-picker__date date-picker__date_border"
+                type="button"
+              >
+                05
+              </button>
+            </div>
+            <div
+              class="date-picker__dates-week"
+            >
+              <button
+                class="date-picker__date date-picker__date_border"
+                type="button"
+              >
+                06
+              </button>
+              <button
+                class="date-picker__date date-picker__date_border"
+                type="button"
+              >
+                07
+              </button>
+              <button
+                class="date-picker__date date-picker__date_border"
+                type="button"
+              >
+                08
+              </button>
+              <button
+                class="date-picker__date date-picker__date_border"
+                type="button"
+              >
+                09
+              </button>
+              <button
+                class="date-picker__date date-picker__date_border"
+                type="button"
+              >
+                10
+              </button>
+              <button
+                class="date-picker__date date-picker__date_border"
+                type="button"
+              >
+                11
+              </button>
+              <button
+                class="date-picker__date date-picker__date_border"
+                type="button"
+              >
+                12
+              </button>
+            </div>
+            <div
+              class="date-picker__dates-week"
+            >
+              <button
+                class="date-picker__date date-picker__date_border"
+                type="button"
+              >
+                13
+              </button>
+              <button
+                class="date-picker__date date-picker__date_border"
+                type="button"
+              >
+                14
+              </button>
+              <button
+                class="date-picker__date date-picker__date_border"
+                type="button"
+              >
+                15
+              </button>
+              <button
+                class="date-picker__date date-picker__date_border"
+                type="button"
+              >
+                16
+              </button>
+              <button
+                class="date-picker__date date-picker__date_border"
+                type="button"
+              >
+                17
+              </button>
+              <button
+                class="date-picker__date date-picker__date_border"
+                type="button"
+              >
+                18
+              </button>
+              <button
+                class="date-picker__date date-picker__date_border"
+                type="button"
+              >
+                19
+              </button>
+            </div>
+            <div
+              class="date-picker__dates-week"
+            >
+              <button
+                class="date-picker__date date-picker__date_border"
+                type="button"
+              >
+                20
+              </button>
+              <button
+                class="date-picker__date date-picker__date_border"
+                type="button"
+              >
+                21
+              </button>
+              <button
+                class="date-picker__date date-picker__date_border"
+                type="button"
+              >
+                22
+              </button>
+              <button
+                class="date-picker__date date-picker__date_border"
+                type="button"
+              >
+                23
+              </button>
+              <button
+                class="date-picker__date date-picker__date_border"
+                type="button"
+              >
+                24
+              </button>
+              <button
+                class="date-picker__date date-picker__date_border"
+                type="button"
+              >
+                25
+              </button>
+              <button
+                class="date-picker__date date-picker__date_border"
+                type="button"
+              >
+                26
+              </button>
+            </div>
+            <div
+              class="date-picker__dates-week"
+            >
+              <button
+                class="date-picker__date date-picker__date_border"
+                type="button"
+              >
+                27
+              </button>
+              <button
+                class="date-picker__date date-picker__date_border"
+                type="button"
+              >
+                28
+              </button>
+              <button
+                class="date-picker__date date-picker__date_border"
+                type="button"
+              >
+                29
+              </button>
+              <button
+                class="date-picker__date date-picker__date_border"
+                type="button"
+              >
+                30
+              </button>
+              <button
+                class="date-picker__date date-picker__date_border date-picker__date_last-day"
+                type="button"
+              >
+                31
+              </button>
+              <button
+                class="date-picker__date date-picker__date_muted date-picker__date_first-day"
+                type="button"
+              >
+                01
+              </button>
+              <button
+                class="date-picker__date date-picker__date_muted"
+                type="button"
+              >
+                02
+              </button>
+            </div>
+          </div>
+          <div
+            class="date-picker__month-name"
+          >
+            апрель
+          </div>
+          <div
+            class="date-picker__weekdays"
+          >
+            <div
+              class="date-picker__weekday"
+            >
+              пн
+            </div>
+            <div
+              class="date-picker__weekday"
+            >
+              вт
+            </div>
+            <div
+              class="date-picker__weekday"
+            >
+              ср
+            </div>
+            <div
+              class="date-picker__weekday"
+            >
+              чт
+            </div>
+            <div
+              class="date-picker__weekday"
+            >
+              пт
+            </div>
+            <div
+              class="date-picker__weekday date-picker__weekday_weekend"
+            >
+              сб
+            </div>
+            <div
+              class="date-picker__weekday date-picker__weekday_weekend"
+            >
+              вс
+            </div>
+          </div>
+          <div
+            class="date-picker__dates"
+          >
+            <div
+              class="date-picker__dates-week"
+            >
+              <button
+                class="date-picker__date date-picker__date_muted"
+                type="button"
+              >
+                27
+              </button>
+              <button
+                class="date-picker__date date-picker__date_muted"
+                type="button"
+              >
+                28
+              </button>
+              <button
+                class="date-picker__date date-picker__date_muted"
+                type="button"
+              >
+                29
+              </button>
+              <button
+                class="date-picker__date date-picker__date_muted"
+                type="button"
+              >
+                30
+              </button>
+              <button
+                class="date-picker__date date-picker__date_muted date-picker__date_last-day"
+                type="button"
+              >
+                31
+              </button>
+              <button
+                class="date-picker__date date-picker__date_border date-picker__date_first-day"
+                type="button"
+              >
+                01
+              </button>
+              <button
+                class="date-picker__date date-picker__date_border"
+                type="button"
+              >
+                02
+              </button>
+            </div>
+            <div
+              class="date-picker__dates-week"
+            >
+              <button
+                class="date-picker__date date-picker__date_border"
+                type="button"
+              >
+                03
+              </button>
+              <button
+                class="date-picker__date date-picker__date_border"
+                type="button"
+              >
+                04
+              </button>
+              <button
+                class="date-picker__date date-picker__date_border"
+                type="button"
+              >
+                05
+              </button>
+              <button
+                class="date-picker__date date-picker__date_border"
+                type="button"
+              >
+                06
+              </button>
+              <button
+                class="date-picker__date date-picker__date_border"
+                type="button"
+              >
+                07
+              </button>
+              <button
+                class="date-picker__date date-picker__date_border"
+                type="button"
+              >
+                08
+              </button>
+              <button
+                class="date-picker__date date-picker__date_border"
+                type="button"
+              >
+                09
+              </button>
+            </div>
+            <div
+              class="date-picker__dates-week"
+            >
+              <button
+                class="date-picker__date date-picker__date_border"
+                type="button"
+              >
+                10
+              </button>
+              <button
+                class="date-picker__date date-picker__date_border"
+                type="button"
+              >
+                11
+              </button>
+              <button
+                class="date-picker__date date-picker__date_border"
+                type="button"
+              >
+                12
+              </button>
+              <button
+                class="date-picker__date date-picker__date_border"
+                type="button"
+              >
+                13
+              </button>
+              <button
+                class="date-picker__date date-picker__date_border"
+                type="button"
+              >
+                14
+              </button>
+              <button
+                class="date-picker__date date-picker__date_border"
+                type="button"
+              >
+                15
+              </button>
+              <button
+                class="date-picker__date date-picker__date_border"
+                type="button"
+              >
+                16
+              </button>
+            </div>
+            <div
+              class="date-picker__dates-week"
+            >
+              <button
+                class="date-picker__date date-picker__date_border"
+                type="button"
+              >
+                17
+              </button>
+              <button
+                class="date-picker__date date-picker__date_border"
+                type="button"
+              >
+                18
+              </button>
+              <button
+                class="date-picker__date date-picker__date_border"
+                type="button"
+              >
+                19
+              </button>
+              <button
+                class="date-picker__date date-picker__date_border"
+                type="button"
+              >
+                20
+              </button>
+              <button
+                class="date-picker__date date-picker__date_border"
+                type="button"
+              >
+                21
+              </button>
+              <button
+                class="date-picker__date date-picker__date_border"
+                type="button"
+              >
+                22
+              </button>
+              <button
+                class="date-picker__date date-picker__date_border"
+                type="button"
+              >
+                23
+              </button>
+            </div>
+            <div
+              class="date-picker__dates-week"
+            >
+              <button
+                class="date-picker__date date-picker__date_border"
+                type="button"
+              >
+                24
+              </button>
+              <button
+                class="date-picker__date date-picker__date_border"
+                type="button"
+              >
+                25
+              </button>
+              <button
+                class="date-picker__date date-picker__date_border"
+                type="button"
+              >
+                26
+              </button>
+              <button
+                class="date-picker__date date-picker__date_border"
+                type="button"
+              >
+                27
+              </button>
+              <button
+                class="date-picker__date date-picker__date_border"
+                type="button"
+              >
+                28
+              </button>
+              <button
+                class="date-picker__date date-picker__date_border"
+                type="button"
+              >
+                29
+              </button>
+              <button
+                class="date-picker__date date-picker__date_border date-picker__date_last-day"
+                type="button"
+              >
+                30
+              </button>
+            </div>
+          </div>
+          <div
+            class="date-picker__month-name"
+          >
+            май
+          </div>
+          <div
+            class="date-picker__weekdays"
+          >
+            <div
+              class="date-picker__weekday"
+            >
+              пн
+            </div>
+            <div
+              class="date-picker__weekday"
+            >
+              вт
+            </div>
+            <div
+              class="date-picker__weekday"
+            >
+              ср
+            </div>
+            <div
+              class="date-picker__weekday"
+            >
+              чт
+            </div>
+            <div
+              class="date-picker__weekday"
+            >
+              пт
+            </div>
+            <div
+              class="date-picker__weekday date-picker__weekday_weekend"
+            >
+              сб
+            </div>
+            <div
+              class="date-picker__weekday date-picker__weekday_weekend"
+            >
+              вс
+            </div>
+          </div>
+          <div
+            class="date-picker__dates"
+          >
+            <div
+              class="date-picker__dates-week"
+            >
+              <button
+                class="date-picker__date date-picker__date_border date-picker__date_first-day"
+                type="button"
+              >
+                01
+              </button>
+              <button
+                class="date-picker__date date-picker__date_border"
+                type="button"
+              >
+                02
+              </button>
+              <button
+                class="date-picker__date date-picker__date_border"
+                type="button"
+              >
+                03
+              </button>
+              <button
+                class="date-picker__date date-picker__date_border"
+                type="button"
+              >
+                04
+              </button>
+              <button
+                class="date-picker__date date-picker__date_border"
+                type="button"
+              >
+                05
+              </button>
+              <button
+                class="date-picker__date date-picker__date_border"
+                type="button"
+              >
+                06
+              </button>
+              <button
+                class="date-picker__date date-picker__date_border"
+                type="button"
+              >
+                07
+              </button>
+            </div>
+            <div
+              class="date-picker__dates-week"
+            >
+              <button
+                class="date-picker__date date-picker__date_border"
+                type="button"
+              >
+                08
+              </button>
+              <button
+                class="date-picker__date date-picker__date_border"
+                type="button"
+              >
+                09
+              </button>
+              <button
+                class="date-picker__date date-picker__date_border"
+                type="button"
+              >
+                10
+              </button>
+              <button
+                class="date-picker__date date-picker__date_border"
+                type="button"
+              >
+                11
+              </button>
+              <button
+                class="date-picker__date date-picker__date_border"
+                type="button"
+              >
+                12
+              </button>
+              <button
+                class="date-picker__date date-picker__date_border"
+                type="button"
+              >
+                13
+              </button>
+              <button
+                class="date-picker__date date-picker__date_border"
+                type="button"
+              >
+                14
+              </button>
+            </div>
+            <div
+              class="date-picker__dates-week"
+            >
+              <button
+                class="date-picker__date date-picker__date_border"
+                type="button"
+              >
+                15
+              </button>
+              <button
+                class="date-picker__date date-picker__date_border"
+                type="button"
+              >
+                16
+              </button>
+              <button
+                class="date-picker__date date-picker__date_border"
+                type="button"
+              >
+                17
+              </button>
+              <button
+                class="date-picker__date date-picker__date_border"
+                type="button"
+              >
+                18
+              </button>
+              <button
+                class="date-picker__date date-picker__date_border"
+                type="button"
+              >
+                19
+              </button>
+              <button
+                class="date-picker__date date-picker__date_border"
+                type="button"
+              >
+                20
+              </button>
+              <button
+                class="date-picker__date date-picker__date_border"
+                type="button"
+              >
+                21
+              </button>
+            </div>
+            <div
+              class="date-picker__dates-week"
+            >
+              <button
+                class="date-picker__date date-picker__date_border"
+                type="button"
+              >
+                22
+              </button>
+              <button
+                class="date-picker__date date-picker__date_border"
+                type="button"
+              >
+                23
+              </button>
+              <button
+                class="date-picker__date date-picker__date_border"
+                type="button"
+              >
+                24
+              </button>
+              <button
+                class="date-picker__date date-picker__date_border"
+                type="button"
+              >
+                25
+              </button>
+              <button
+                class="date-picker__date date-picker__date_border"
+                type="button"
+              >
+                26
+              </button>
+              <button
+                class="date-picker__date date-picker__date_border"
+                type="button"
+              >
+                27
+              </button>
+              <button
+                class="date-picker__date date-picker__date_border"
+                type="button"
+              >
+                28
+              </button>
+            </div>
+            <div
+              class="date-picker__dates-week"
+            >
+              <button
+                class="date-picker__date date-picker__date_border"
+                type="button"
+              >
+                29
+              </button>
+              <button
+                class="date-picker__date date-picker__date_border"
+                type="button"
+              >
+                30
+              </button>
+              <button
+                class="date-picker__date date-picker__date_border date-picker__date_last-day"
+                type="button"
+              >
+                31
+              </button>
+              <button
+                class="date-picker__date date-picker__date_muted date-picker__date_first-day"
+                type="button"
+              >
+                01
+              </button>
+              <button
+                class="date-picker__date date-picker__date_muted"
+                type="button"
+              >
+                02
+              </button>
+              <button
+                class="date-picker__date date-picker__date_muted"
+                type="button"
+              >
+                03
+              </button>
+              <button
+                class="date-picker__date date-picker__date_muted"
+                type="button"
+              >
+                04
+              </button>
+            </div>
+          </div>
+          <div
+            class="date-picker__month-name"
+          >
+            июнь
+          </div>
+          <div
+            class="date-picker__weekdays"
+          >
+            <div
+              class="date-picker__weekday"
+            >
+              пн
+            </div>
+            <div
+              class="date-picker__weekday"
+            >
+              вт
+            </div>
+            <div
+              class="date-picker__weekday"
+            >
+              ср
+            </div>
+            <div
+              class="date-picker__weekday"
+            >
+              чт
+            </div>
+            <div
+              class="date-picker__weekday"
+            >
+              пт
+            </div>
+            <div
+              class="date-picker__weekday date-picker__weekday_weekend"
+            >
+              сб
+            </div>
+            <div
+              class="date-picker__weekday date-picker__weekday_weekend"
+            >
+              вс
+            </div>
+          </div>
+          <div
+            class="date-picker__dates"
+          >
+            <div
+              class="date-picker__dates-week"
+            >
+              <button
+                class="date-picker__date date-picker__date_muted"
+                type="button"
+              >
+                29
+              </button>
+              <button
+                class="date-picker__date date-picker__date_muted"
+                type="button"
+              >
+                30
+              </button>
+              <button
+                class="date-picker__date date-picker__date_muted date-picker__date_last-day"
+                type="button"
+              >
+                31
+              </button>
+              <button
+                class="date-picker__date date-picker__date_border date-picker__date_first-day"
+                type="button"
+              >
+                01
+              </button>
+              <button
+                class="date-picker__date date-picker__date_border"
+                type="button"
+              >
+                02
+              </button>
+              <button
+                class="date-picker__date date-picker__date_border"
+                type="button"
+              >
+                03
+              </button>
+              <button
+                class="date-picker__date date-picker__date_border"
+                type="button"
+              >
+                04
+              </button>
+            </div>
+            <div
+              class="date-picker__dates-week"
+            >
+              <button
+                class="date-picker__date date-picker__date_border"
+                type="button"
+              >
+                05
+              </button>
+              <button
+                class="date-picker__date date-picker__date_border"
+                type="button"
+              >
+                06
+              </button>
+              <button
+                class="date-picker__date date-picker__date_border"
+                type="button"
+              >
+                07
+              </button>
+              <button
+                class="date-picker__date date-picker__date_border"
+                type="button"
+              >
+                08
+              </button>
+              <button
+                class="date-picker__date date-picker__date_border"
+                type="button"
+              >
+                09
+              </button>
+              <button
+                class="date-picker__date date-picker__date_border"
+                type="button"
+              >
+                10
+              </button>
+              <button
+                class="date-picker__date date-picker__date_border"
+                type="button"
+              >
+                11
+              </button>
+            </div>
+            <div
+              class="date-picker__dates-week"
+            >
+              <button
+                class="date-picker__date date-picker__date_border"
+                type="button"
+              >
+                12
+              </button>
+              <button
+                class="date-picker__date date-picker__date_border"
+                type="button"
+              >
+                13
+              </button>
+              <button
+                class="date-picker__date date-picker__date_border"
+                type="button"
+              >
+                14
+              </button>
+              <button
+                class="date-picker__date date-picker__date_border"
+                type="button"
+              >
+                15
+              </button>
+              <button
+                class="date-picker__date date-picker__date_border"
+                type="button"
+              >
+                16
+              </button>
+              <button
+                class="date-picker__date date-picker__date_border"
+                type="button"
+              >
+                17
+              </button>
+              <button
+                class="date-picker__date date-picker__date_border"
+                type="button"
+              >
+                18
+              </button>
+            </div>
+            <div
+              class="date-picker__dates-week"
+            >
+              <button
+                class="date-picker__date date-picker__date_border"
+                type="button"
+              >
+                19
+              </button>
+              <button
+                class="date-picker__date date-picker__date_border"
+                type="button"
+              >
+                20
+              </button>
+              <button
+                class="date-picker__date date-picker__date_border"
+                type="button"
+              >
+                21
+              </button>
+              <button
+                class="date-picker__date date-picker__date_border"
+                type="button"
+              >
+                22
+              </button>
+              <button
+                class="date-picker__date date-picker__date_border"
+                type="button"
+              >
+                23
+              </button>
+              <button
+                class="date-picker__date date-picker__date_border"
+                type="button"
+              >
+                24
+              </button>
+              <button
+                class="date-picker__date date-picker__date_border"
+                type="button"
+              >
+                25
+              </button>
+            </div>
+            <div
+              class="date-picker__dates-week"
+            >
+              <button
+                class="date-picker__date date-picker__date_border"
+                type="button"
+              >
+                26
+              </button>
+              <button
+                class="date-picker__date date-picker__date_border"
+                type="button"
+              >
+                27
+              </button>
+              <button
+                class="date-picker__date date-picker__date_border"
+                type="button"
+              >
+                28
+              </button>
+              <button
+                class="date-picker__date date-picker__date_border"
+                type="button"
+              >
+                29
+              </button>
+              <button
+                class="date-picker__date date-picker__date_border date-picker__date_last-day"
+                type="button"
+              >
+                30
+              </button>
+              <button
+                class="date-picker__date date-picker__date_muted date-picker__date_first-day"
+                type="button"
+              >
+                01
+              </button>
+              <button
+                class="date-picker__date date-picker__date_muted"
+                type="button"
+              >
+                02
+              </button>
+            </div>
+          </div>
+          <div
+            class="date-picker__month-name"
+          >
+            июль
+          </div>
+          <div
+            class="date-picker__weekdays"
+          >
+            <div
+              class="date-picker__weekday"
+            >
+              пн
+            </div>
+            <div
+              class="date-picker__weekday"
+            >
+              вт
+            </div>
+            <div
+              class="date-picker__weekday"
+            >
+              ср
+            </div>
+            <div
+              class="date-picker__weekday"
+            >
+              чт
+            </div>
+            <div
+              class="date-picker__weekday"
+            >
+              пт
+            </div>
+            <div
+              class="date-picker__weekday date-picker__weekday_weekend"
+            >
+              сб
+            </div>
+            <div
+              class="date-picker__weekday date-picker__weekday_weekend"
+            >
+              вс
+            </div>
+          </div>
+          <div
+            class="date-picker__dates"
+          >
+            <div
+              class="date-picker__dates-week"
+            >
+              <button
+                class="date-picker__date date-picker__date_muted"
+                type="button"
+              >
+                26
+              </button>
+              <button
+                class="date-picker__date date-picker__date_muted"
+                type="button"
+              >
+                27
+              </button>
+              <button
+                class="date-picker__date date-picker__date_muted"
+                type="button"
+              >
+                28
+              </button>
+              <button
+                class="date-picker__date date-picker__date_muted"
+                type="button"
+              >
+                29
+              </button>
+              <button
+                class="date-picker__date date-picker__date_muted date-picker__date_last-day"
+                type="button"
+              >
+                30
+              </button>
+              <button
+                class="date-picker__date date-picker__date_border date-picker__date_first-day"
+                type="button"
+              >
+                01
+              </button>
+              <button
+                class="date-picker__date date-picker__date_border"
+                type="button"
+              >
+                02
+              </button>
+            </div>
+            <div
+              class="date-picker__dates-week"
+            >
+              <button
+                class="date-picker__date date-picker__date_border"
+                type="button"
+              >
+                03
+              </button>
+              <button
+                class="date-picker__date date-picker__date_border"
+                type="button"
+              >
+                04
+              </button>
+              <button
+                class="date-picker__date date-picker__date_border"
+                type="button"
+              >
+                05
+              </button>
+              <button
+                class="date-picker__date date-picker__date_border"
+                type="button"
+              >
+                06
+              </button>
+              <button
+                class="date-picker__date date-picker__date_border date-picker__date_today"
+                type="button"
+              >
+                07
+              </button>
+              <button
+                class="date-picker__date date-picker__date_border"
+                type="button"
+              >
+                08
+              </button>
+              <button
+                class="date-picker__date date-picker__date_border"
+                type="button"
+              >
+                09
+              </button>
+            </div>
+            <div
+              class="date-picker__dates-week"
+            >
+              <button
+                class="date-picker__date date-picker__date_border"
+                type="button"
+              >
+                10
+              </button>
+              <button
+                class="date-picker__date date-picker__date_border"
+                type="button"
+              >
+                11
+              </button>
+              <button
+                class="date-picker__date date-picker__date_border"
+                type="button"
+              >
+                12
+              </button>
+              <button
+                class="date-picker__date date-picker__date_border"
+                type="button"
+              >
+                13
+              </button>
+              <button
+                class="date-picker__date date-picker__date_border"
+                type="button"
+              >
+                14
+              </button>
+              <button
+                class="date-picker__date date-picker__date_border"
+                type="button"
+              >
+                15
+              </button>
+              <button
+                class="date-picker__date date-picker__date_border"
+                type="button"
+              >
+                16
+              </button>
+            </div>
+            <div
+              class="date-picker__dates-week"
+            >
+              <button
+                class="date-picker__date date-picker__date_border"
+                type="button"
+              >
+                17
+              </button>
+              <button
+                class="date-picker__date date-picker__date_border"
+                type="button"
+              >
+                18
+              </button>
+              <button
+                class="date-picker__date date-picker__date_border"
+                type="button"
+              >
+                19
+              </button>
+              <button
+                class="date-picker__date date-picker__date_border"
+                type="button"
+              >
+                20
+              </button>
+              <button
+                class="date-picker__date date-picker__date_border"
+                type="button"
+              >
+                21
+              </button>
+              <button
+                class="date-picker__date date-picker__date_border"
+                type="button"
+              >
+                22
+              </button>
+              <button
+                class="date-picker__date date-picker__date_border"
+                type="button"
+              >
+                23
+              </button>
+            </div>
+            <div
+              class="date-picker__dates-week"
+            >
+              <button
+                class="date-picker__date date-picker__date_border"
+                type="button"
+              >
+                24
+              </button>
+              <button
+                class="date-picker__date date-picker__date_border"
+                type="button"
+              >
+                25
+              </button>
+              <button
+                class="date-picker__date date-picker__date_border"
+                type="button"
+              >
+                26
+              </button>
+              <button
+                class="date-picker__date date-picker__date_border"
+                type="button"
+              >
+                27
+              </button>
+              <button
+                class="date-picker__date date-picker__date_border"
+                type="button"
+              >
+                28
+              </button>
+              <button
+                class="date-picker__date date-picker__date_border"
+                type="button"
+              >
+                29
+              </button>
+              <button
+                class="date-picker__date date-picker__date_border"
+                type="button"
+              >
+                30
+              </button>
+            </div>
+            <div
+              class="date-picker__dates-week"
+            >
+              <button
+                class="date-picker__date date-picker__date_border date-picker__date_last-day"
+                type="button"
+              >
+                31
+              </button>
+              <button
+                class="date-picker__date date-picker__date_muted date-picker__date_first-day"
+                type="button"
+              >
+                01
+              </button>
+              <button
+                class="date-picker__date date-picker__date_muted"
+                type="button"
+              >
+                02
+              </button>
+              <button
+                class="date-picker__date date-picker__date_muted"
+                type="button"
+              >
+                03
+              </button>
+              <button
+                class="date-picker__date date-picker__date_muted"
+                type="button"
+              >
+                04
+              </button>
+              <button
+                class="date-picker__date date-picker__date_muted"
+                type="button"
+              >
+                05
+              </button>
+              <button
+                class="date-picker__date date-picker__date_muted"
+                type="button"
+              >
+                06
+              </button>
+            </div>
+          </div>
+          <div
+            class="date-picker__month-name"
+          >
+            август
+          </div>
+          <div
+            class="date-picker__weekdays"
+          >
+            <div
+              class="date-picker__weekday"
+            >
+              пн
+            </div>
+            <div
+              class="date-picker__weekday"
+            >
+              вт
+            </div>
+            <div
+              class="date-picker__weekday"
+            >
+              ср
+            </div>
+            <div
+              class="date-picker__weekday"
+            >
+              чт
+            </div>
+            <div
+              class="date-picker__weekday"
+            >
+              пт
+            </div>
+            <div
+              class="date-picker__weekday date-picker__weekday_weekend"
+            >
+              сб
+            </div>
+            <div
+              class="date-picker__weekday date-picker__weekday_weekend"
+            >
+              вс
+            </div>
+          </div>
+          <div
+            class="date-picker__dates"
+          >
+            <div
+              class="date-picker__dates-week"
+            >
+              <button
+                class="date-picker__date date-picker__date_muted date-picker__date_last-day"
+                type="button"
+              >
+                31
+              </button>
+              <button
+                class="date-picker__date date-picker__date_border date-picker__date_first-day"
+                type="button"
+              >
+                01
+              </button>
+              <button
+                class="date-picker__date date-picker__date_border"
+                type="button"
+              >
+                02
+              </button>
+              <button
+                class="date-picker__date date-picker__date_border"
+                type="button"
+              >
+                03
+              </button>
+              <button
+                class="date-picker__date date-picker__date_border"
+                type="button"
+              >
+                04
+              </button>
+              <button
+                class="date-picker__date date-picker__date_border"
+                type="button"
+              >
+                05
+              </button>
+              <button
+                class="date-picker__date date-picker__date_border"
+                type="button"
+              >
+                06
+              </button>
+            </div>
+            <div
+              class="date-picker__dates-week"
+            >
+              <button
+                class="date-picker__date date-picker__date_border"
+                type="button"
+              >
+                07
+              </button>
+              <button
+                class="date-picker__date date-picker__date_border"
+                type="button"
+              >
+                08
+              </button>
+              <button
+                class="date-picker__date date-picker__date_border"
+                type="button"
+              >
+                09
+              </button>
+              <button
+                class="date-picker__date date-picker__date_border"
+                type="button"
+              >
+                10
+              </button>
+              <button
+                class="date-picker__date date-picker__date_border"
+                type="button"
+              >
+                11
+              </button>
+              <button
+                class="date-picker__date date-picker__date_border"
+                type="button"
+              >
+                12
+              </button>
+              <button
+                class="date-picker__date date-picker__date_border"
+                type="button"
+              >
+                13
+              </button>
+            </div>
+            <div
+              class="date-picker__dates-week"
+            >
+              <button
+                class="date-picker__date date-picker__date_border"
+                type="button"
+              >
+                14
+              </button>
+              <button
+                class="date-picker__date date-picker__date_border"
+                type="button"
+              >
+                15
+              </button>
+              <button
+                class="date-picker__date date-picker__date_border"
+                type="button"
+              >
+                16
+              </button>
+              <button
+                class="date-picker__date date-picker__date_border"
+                type="button"
+              >
+                17
+              </button>
+              <button
+                class="date-picker__date date-picker__date_border"
+                type="button"
+              >
+                18
+              </button>
+              <button
+                class="date-picker__date date-picker__date_border"
+                type="button"
+              >
+                19
+              </button>
+              <button
+                class="date-picker__date date-picker__date_border"
+                type="button"
+              >
+                20
+              </button>
+            </div>
+            <div
+              class="date-picker__dates-week"
+            >
+              <button
+                class="date-picker__date date-picker__date_border"
+                type="button"
+              >
+                21
+              </button>
+              <button
+                class="date-picker__date date-picker__date_border"
+                type="button"
+              >
+                22
+              </button>
+              <button
+                class="date-picker__date date-picker__date_border"
+                type="button"
+              >
+                23
+              </button>
+              <button
+                class="date-picker__date date-picker__date_border"
+                type="button"
+              >
+                24
+              </button>
+              <button
+                class="date-picker__date date-picker__date_border"
+                type="button"
+              >
+                25
+              </button>
+              <button
+                class="date-picker__date date-picker__date_border"
+                type="button"
+              >
+                26
+              </button>
+              <button
+                class="date-picker__date date-picker__date_border"
+                type="button"
+              >
+                27
+              </button>
+            </div>
+            <div
+              class="date-picker__dates-week"
+            >
+              <button
+                class="date-picker__date date-picker__date_border"
+                type="button"
+              >
+                28
+              </button>
+              <button
+                class="date-picker__date date-picker__date_border"
+                type="button"
+              >
+                29
+              </button>
+              <button
+                class="date-picker__date date-picker__date_border"
+                type="button"
+              >
+                30
+              </button>
+              <button
+                class="date-picker__date date-picker__date_border date-picker__date_last-day"
+                type="button"
+              >
+                31
+              </button>
+              <button
+                class="date-picker__date date-picker__date_muted date-picker__date_first-day"
+                type="button"
+              >
+                01
+              </button>
+              <button
+                class="date-picker__date date-picker__date_muted"
+                type="button"
+              >
+                02
+              </button>
+              <button
+                class="date-picker__date date-picker__date_muted"
+                type="button"
+              >
+                03
+              </button>
+            </div>
+          </div>
+          <div
+            class="date-picker__month-name"
+          >
+            сентябрь
+          </div>
+          <div
+            class="date-picker__weekdays"
+          >
+            <div
+              class="date-picker__weekday"
+            >
+              пн
+            </div>
+            <div
+              class="date-picker__weekday"
+            >
+              вт
+            </div>
+            <div
+              class="date-picker__weekday"
+            >
+              ср
+            </div>
+            <div
+              class="date-picker__weekday"
+            >
+              чт
+            </div>
+            <div
+              class="date-picker__weekday"
+            >
+              пт
+            </div>
+            <div
+              class="date-picker__weekday date-picker__weekday_weekend"
+            >
+              сб
+            </div>
+            <div
+              class="date-picker__weekday date-picker__weekday_weekend"
+            >
+              вс
+            </div>
+          </div>
+          <div
+            class="date-picker__dates"
+          >
+            <div
+              class="date-picker__dates-week"
+            >
+              <button
+                class="date-picker__date date-picker__date_muted"
+                type="button"
+              >
+                28
+              </button>
+              <button
+                class="date-picker__date date-picker__date_muted"
+                type="button"
+              >
+                29
+              </button>
+              <button
+                class="date-picker__date date-picker__date_muted"
+                type="button"
+              >
+                30
+              </button>
+              <button
+                class="date-picker__date date-picker__date_muted date-picker__date_last-day"
+                type="button"
+              >
+                31
+              </button>
+              <button
+                class="date-picker__date date-picker__date_border date-picker__date_first-day"
+                type="button"
+              >
+                01
+              </button>
+              <button
+                class="date-picker__date date-picker__date_border"
+                type="button"
+              >
+                02
+              </button>
+              <button
+                class="date-picker__date date-picker__date_border"
+                type="button"
+              >
+                03
+              </button>
+            </div>
+            <div
+              class="date-picker__dates-week"
+            >
+              <button
+                class="date-picker__date date-picker__date_border"
+                type="button"
+              >
+                04
+              </button>
+              <button
+                class="date-picker__date date-picker__date_border"
+                type="button"
+              >
+                05
+              </button>
+              <button
+                class="date-picker__date date-picker__date_border"
+                type="button"
+              >
+                06
+              </button>
+              <button
+                class="date-picker__date date-picker__date_border"
+                type="button"
+              >
+                07
+              </button>
+              <button
+                class="date-picker__date date-picker__date_border"
+                type="button"
+              >
+                08
+              </button>
+              <button
+                class="date-picker__date date-picker__date_border"
+                type="button"
+              >
+                09
+              </button>
+              <button
+                class="date-picker__date date-picker__date_border"
+                type="button"
+              >
+                10
+              </button>
+            </div>
+            <div
+              class="date-picker__dates-week"
+            >
+              <button
+                class="date-picker__date date-picker__date_border"
+                type="button"
+              >
+                11
+              </button>
+              <button
+                class="date-picker__date date-picker__date_border"
+                type="button"
+              >
+                12
+              </button>
+              <button
+                class="date-picker__date date-picker__date_border"
+                type="button"
+              >
+                13
+              </button>
+              <button
+                class="date-picker__date date-picker__date_border"
+                type="button"
+              >
+                14
+              </button>
+              <button
+                class="date-picker__date date-picker__date_border"
+                type="button"
+              >
+                15
+              </button>
+              <button
+                class="date-picker__date date-picker__date_border"
+                type="button"
+              >
+                16
+              </button>
+              <button
+                class="date-picker__date date-picker__date_border"
+                type="button"
+              >
+                17
+              </button>
+            </div>
+            <div
+              class="date-picker__dates-week"
+            >
+              <button
+                class="date-picker__date date-picker__date_border"
+                type="button"
+              >
+                18
+              </button>
+              <button
+                class="date-picker__date date-picker__date_border"
+                type="button"
+              >
+                19
+              </button>
+              <button
+                class="date-picker__date date-picker__date_border"
+                type="button"
+              >
+                20
+              </button>
+              <button
+                class="date-picker__date date-picker__date_border"
+                type="button"
+              >
+                21
+              </button>
+              <button
+                class="date-picker__date date-picker__date_border"
+                type="button"
+              >
+                22
+              </button>
+              <button
+                class="date-picker__date date-picker__date_border"
+                type="button"
+              >
+                23
+              </button>
+              <button
+                class="date-picker__date date-picker__date_border"
+                type="button"
+              >
+                24
+              </button>
+            </div>
+            <div
+              class="date-picker__dates-week"
+            >
+              <button
+                class="date-picker__date date-picker__date_border"
+                type="button"
+              >
+                25
+              </button>
+              <button
+                class="date-picker__date date-picker__date_border"
+                type="button"
+              >
+                26
+              </button>
+              <button
+                class="date-picker__date date-picker__date_border"
+                type="button"
+              >
+                27
+              </button>
+              <button
+                class="date-picker__date date-picker__date_border"
+                type="button"
+              >
+                28
+              </button>
+              <button
+                class="date-picker__date date-picker__date_border"
+                type="button"
+              >
+                29
+              </button>
+              <button
+                class="date-picker__date date-picker__date_border date-picker__date_last-day"
+                type="button"
+              >
+                30
+              </button>
+              <button
+                class="date-picker__date date-picker__date_muted date-picker__date_first-day"
+                type="button"
+              >
+                01
+              </button>
+            </div>
+          </div>
+          <div
+            class="date-picker__month-name"
+          >
+            октябрь
+          </div>
+          <div
+            class="date-picker__weekdays"
+          >
+            <div
+              class="date-picker__weekday"
+            >
+              пн
+            </div>
+            <div
+              class="date-picker__weekday"
+            >
+              вт
+            </div>
+            <div
+              class="date-picker__weekday"
+            >
+              ср
+            </div>
+            <div
+              class="date-picker__weekday"
+            >
+              чт
+            </div>
+            <div
+              class="date-picker__weekday"
+            >
+              пт
+            </div>
+            <div
+              class="date-picker__weekday date-picker__weekday_weekend"
+            >
+              сб
+            </div>
+            <div
+              class="date-picker__weekday date-picker__weekday_weekend"
+            >
+              вс
+            </div>
+          </div>
+          <div
+            class="date-picker__dates"
+          >
+            <div
+              class="date-picker__dates-week"
+            >
+              <button
+                class="date-picker__date date-picker__date_muted"
+                type="button"
+              >
+                25
+              </button>
+              <button
+                class="date-picker__date date-picker__date_muted"
+                type="button"
+              >
+                26
+              </button>
+              <button
+                class="date-picker__date date-picker__date_muted"
+                type="button"
+              >
+                27
+              </button>
+              <button
+                class="date-picker__date date-picker__date_muted"
+                type="button"
+              >
+                28
+              </button>
+              <button
+                class="date-picker__date date-picker__date_muted"
+                type="button"
+              >
+                29
+              </button>
+              <button
+                class="date-picker__date date-picker__date_muted date-picker__date_last-day"
+                type="button"
+              >
+                30
+              </button>
+              <button
+                class="date-picker__date date-picker__date_border date-picker__date_first-day"
+                type="button"
+              >
+                01
+              </button>
+            </div>
+            <div
+              class="date-picker__dates-week"
+            >
+              <button
+                class="date-picker__date date-picker__date_border"
+                type="button"
+              >
+                02
+              </button>
+              <button
+                class="date-picker__date date-picker__date_border"
+                type="button"
+              >
+                03
+              </button>
+              <button
+                class="date-picker__date date-picker__date_border"
+                type="button"
+              >
+                04
+              </button>
+              <button
+                class="date-picker__date date-picker__date_border"
+                type="button"
+              >
+                05
+              </button>
+              <button
+                class="date-picker__date date-picker__date_border"
+                type="button"
+              >
+                06
+              </button>
+              <button
+                class="date-picker__date date-picker__date_border"
+                type="button"
+              >
+                07
+              </button>
+              <button
+                class="date-picker__date date-picker__date_border"
+                type="button"
+              >
+                08
+              </button>
+            </div>
+            <div
+              class="date-picker__dates-week"
+            >
+              <button
+                class="date-picker__date date-picker__date_border"
+                type="button"
+              >
+                09
+              </button>
+              <button
+                class="date-picker__date date-picker__date_border"
+                type="button"
+              >
+                10
+              </button>
+              <button
+                class="date-picker__date date-picker__date_border"
+                type="button"
+              >
+                11
+              </button>
+              <button
+                class="date-picker__date date-picker__date_border"
+                type="button"
+              >
+                12
+              </button>
+              <button
+                class="date-picker__date date-picker__date_border"
+                type="button"
+              >
+                13
+              </button>
+              <button
+                class="date-picker__date date-picker__date_border"
+                type="button"
+              >
+                14
+              </button>
+              <button
+                class="date-picker__date date-picker__date_border"
+                type="button"
+              >
+                15
+              </button>
+            </div>
+            <div
+              class="date-picker__dates-week"
+            >
+              <button
+                class="date-picker__date date-picker__date_border"
+                type="button"
+              >
+                16
+              </button>
+              <button
+                class="date-picker__date date-picker__date_border"
+                type="button"
+              >
+                17
+              </button>
+              <button
+                class="date-picker__date date-picker__date_border"
+                type="button"
+              >
+                18
+              </button>
+              <button
+                class="date-picker__date date-picker__date_border"
+                type="button"
+              >
+                19
+              </button>
+              <button
+                class="date-picker__date date-picker__date_border"
+                type="button"
+              >
+                20
+              </button>
+              <button
+                class="date-picker__date date-picker__date_border"
+                type="button"
+              >
+                21
+              </button>
+              <button
+                class="date-picker__date date-picker__date_border"
+                type="button"
+              >
+                22
+              </button>
+            </div>
+            <div
+              class="date-picker__dates-week"
+            >
+              <button
+                class="date-picker__date date-picker__date_border"
+                type="button"
+              >
+                23
+              </button>
+              <button
+                class="date-picker__date date-picker__date_border"
+                type="button"
+              >
+                24
+              </button>
+              <button
+                class="date-picker__date date-picker__date_border"
+                type="button"
+              >
+                25
+              </button>
+              <button
+                class="date-picker__date date-picker__date_border"
+                type="button"
+              >
+                26
+              </button>
+              <button
+                class="date-picker__date date-picker__date_border"
+                type="button"
+              >
+                27
+              </button>
+              <button
+                class="date-picker__date date-picker__date_border"
+                type="button"
+              >
+                28
+              </button>
+              <button
+                class="date-picker__date date-picker__date_border"
+                type="button"
+              >
+                29
+              </button>
+            </div>
+            <div
+              class="date-picker__dates-week"
+            >
+              <button
+                class="date-picker__date date-picker__date_border"
+                type="button"
+              >
+                30
+              </button>
+              <button
+                class="date-picker__date date-picker__date_border date-picker__date_last-day"
+                type="button"
+              >
+                31
+              </button>
+              <button
+                class="date-picker__date date-picker__date_muted date-picker__date_first-day"
+                type="button"
+              >
+                01
+              </button>
+              <button
+                class="date-picker__date date-picker__date_muted"
+                type="button"
+              >
+                02
+              </button>
+              <button
+                class="date-picker__date date-picker__date_muted"
+                type="button"
+              >
+                03
+              </button>
+              <button
+                class="date-picker__date date-picker__date_muted"
+                type="button"
+              >
+                04
+              </button>
+              <button
+                class="date-picker__date date-picker__date_muted"
+                type="button"
+              >
+                05
+              </button>
+            </div>
+          </div>
+          <div
+            class="date-picker__month-name"
+          >
+            ноябрь
+          </div>
+          <div
+            class="date-picker__weekdays"
+          >
+            <div
+              class="date-picker__weekday"
+            >
+              пн
+            </div>
+            <div
+              class="date-picker__weekday"
+            >
+              вт
+            </div>
+            <div
+              class="date-picker__weekday"
+            >
+              ср
+            </div>
+            <div
+              class="date-picker__weekday"
+            >
+              чт
+            </div>
+            <div
+              class="date-picker__weekday"
+            >
+              пт
+            </div>
+            <div
+              class="date-picker__weekday date-picker__weekday_weekend"
+            >
+              сб
+            </div>
+            <div
+              class="date-picker__weekday date-picker__weekday_weekend"
+            >
+              вс
+            </div>
+          </div>
+          <div
+            class="date-picker__dates"
+          >
+            <div
+              class="date-picker__dates-week"
+            >
+              <button
+                class="date-picker__date date-picker__date_muted"
+                type="button"
+              >
+                30
+              </button>
+              <button
+                class="date-picker__date date-picker__date_muted date-picker__date_last-day"
+                type="button"
+              >
+                31
+              </button>
+              <button
+                class="date-picker__date date-picker__date_border date-picker__date_first-day"
+                type="button"
+              >
+                01
+              </button>
+              <button
+                class="date-picker__date date-picker__date_border"
+                type="button"
+              >
+                02
+              </button>
+              <button
+                class="date-picker__date date-picker__date_border"
+                type="button"
+              >
+                03
+              </button>
+              <button
+                class="date-picker__date date-picker__date_border"
+                type="button"
+              >
+                04
+              </button>
+              <button
+                class="date-picker__date date-picker__date_border"
+                type="button"
+              >
+                05
+              </button>
+            </div>
+            <div
+              class="date-picker__dates-week"
+            >
+              <button
+                class="date-picker__date date-picker__date_border"
+                type="button"
+              >
+                06
+              </button>
+              <button
+                class="date-picker__date date-picker__date_border"
+                type="button"
+              >
+                07
+              </button>
+              <button
+                class="date-picker__date date-picker__date_border"
+                type="button"
+              >
+                08
+              </button>
+              <button
+                class="date-picker__date date-picker__date_border"
+                type="button"
+              >
+                09
+              </button>
+              <button
+                class="date-picker__date date-picker__date_border"
+                type="button"
+              >
+                10
+              </button>
+              <button
+                class="date-picker__date date-picker__date_border"
+                type="button"
+              >
+                11
+              </button>
+              <button
+                class="date-picker__date date-picker__date_border"
+                type="button"
+              >
+                12
+              </button>
+            </div>
+            <div
+              class="date-picker__dates-week"
+            >
+              <button
+                class="date-picker__date date-picker__date_border"
+                type="button"
+              >
+                13
+              </button>
+              <button
+                class="date-picker__date date-picker__date_border"
+                type="button"
+              >
+                14
+              </button>
+              <button
+                class="date-picker__date date-picker__date_border"
+                type="button"
+              >
+                15
+              </button>
+              <button
+                class="date-picker__date date-picker__date_border"
+                type="button"
+              >
+                16
+              </button>
+              <button
+                class="date-picker__date date-picker__date_border"
+                type="button"
+              >
+                17
+              </button>
+              <button
+                class="date-picker__date date-picker__date_border"
+                type="button"
+              >
+                18
+              </button>
+              <button
+                class="date-picker__date date-picker__date_border"
+                type="button"
+              >
+                19
+              </button>
+            </div>
+            <div
+              class="date-picker__dates-week"
+            >
+              <button
+                class="date-picker__date date-picker__date_border"
+                type="button"
+              >
+                20
+              </button>
+              <button
+                class="date-picker__date date-picker__date_border"
+                type="button"
+              >
+                21
+              </button>
+              <button
+                class="date-picker__date date-picker__date_border"
+                type="button"
+              >
+                22
+              </button>
+              <button
+                class="date-picker__date date-picker__date_border"
+                type="button"
+              >
+                23
+              </button>
+              <button
+                class="date-picker__date date-picker__date_border"
+                type="button"
+              >
+                24
+              </button>
+              <button
+                class="date-picker__date date-picker__date_border"
+                type="button"
+              >
+                25
+              </button>
+              <button
+                class="date-picker__date date-picker__date_border"
+                type="button"
+              >
+                26
+              </button>
+            </div>
+            <div
+              class="date-picker__dates-week"
+            >
+              <button
+                class="date-picker__date date-picker__date_border"
+                type="button"
+              >
+                27
+              </button>
+              <button
+                class="date-picker__date date-picker__date_border"
+                type="button"
+              >
+                28
+              </button>
+              <button
+                class="date-picker__date date-picker__date_border"
+                type="button"
+              >
+                29
+              </button>
+              <button
+                class="date-picker__date date-picker__date_border date-picker__date_last-day"
+                type="button"
+              >
+                30
+              </button>
+              <button
+                class="date-picker__date date-picker__date_muted date-picker__date_first-day"
+                type="button"
+              >
+                01
+              </button>
+              <button
+                class="date-picker__date date-picker__date_muted"
+                type="button"
+              >
+                02
+              </button>
+              <button
+                class="date-picker__date date-picker__date_muted"
+                type="button"
+              >
+                03
+              </button>
+            </div>
+          </div>
+          <div
+            class="date-picker__month-name"
+          >
+            декабрь
+          </div>
+          <div
+            class="date-picker__weekdays"
+          >
+            <div
+              class="date-picker__weekday"
+            >
+              пн
+            </div>
+            <div
+              class="date-picker__weekday"
+            >
+              вт
+            </div>
+            <div
+              class="date-picker__weekday"
+            >
+              ср
+            </div>
+            <div
+              class="date-picker__weekday"
+            >
+              чт
+            </div>
+            <div
+              class="date-picker__weekday"
+            >
+              пт
+            </div>
+            <div
+              class="date-picker__weekday date-picker__weekday_weekend"
+            >
+              сб
+            </div>
+            <div
+              class="date-picker__weekday date-picker__weekday_weekend"
+            >
+              вс
+            </div>
+          </div>
+          <div
+            class="date-picker__dates"
+          >
+            <div
+              class="date-picker__dates-week"
+            >
+              <button
+                class="date-picker__date date-picker__date_muted"
+                type="button"
+              >
+                27
+              </button>
+              <button
+                class="date-picker__date date-picker__date_muted"
+                type="button"
+              >
+                28
+              </button>
+              <button
+                class="date-picker__date date-picker__date_muted"
+                type="button"
+              >
+                29
+              </button>
+              <button
+                class="date-picker__date date-picker__date_muted date-picker__date_last-day"
+                type="button"
+              >
+                30
+              </button>
+              <button
+                class="date-picker__date date-picker__date_border date-picker__date_first-day"
+                type="button"
+              >
+                01
+              </button>
+              <button
+                class="date-picker__date date-picker__date_border"
+                type="button"
+              >
+                02
+              </button>
+              <button
+                class="date-picker__date date-picker__date_border"
+                type="button"
+              >
+                03
+              </button>
+            </div>
+            <div
+              class="date-picker__dates-week"
+            >
+              <button
+                class="date-picker__date date-picker__date_border"
+                type="button"
+              >
+                04
+              </button>
+              <button
+                class="date-picker__date date-picker__date_border"
+                type="button"
+              >
+                05
+              </button>
+              <button
+                class="date-picker__date date-picker__date_border"
+                type="button"
+              >
+                06
+              </button>
+              <button
+                class="date-picker__date date-picker__date_border"
+                type="button"
+              >
+                07
+              </button>
+              <button
+                class="date-picker__date date-picker__date_border"
+                type="button"
+              >
+                08
+              </button>
+              <button
+                class="date-picker__date date-picker__date_border"
+                type="button"
+              >
+                09
+              </button>
+              <button
+                class="date-picker__date date-picker__date_border"
+                type="button"
+              >
+                10
+              </button>
+            </div>
+            <div
+              class="date-picker__dates-week"
+            >
+              <button
+                class="date-picker__date date-picker__date_border"
+                type="button"
+              >
+                11
+              </button>
+              <button
+                class="date-picker__date date-picker__date_border"
+                type="button"
+              >
+                12
+              </button>
+              <button
+                class="date-picker__date date-picker__date_border"
+                type="button"
+              >
+                13
+              </button>
+              <button
+                class="date-picker__date date-picker__date_border"
+                type="button"
+              >
+                14
+              </button>
+              <button
+                class="date-picker__date date-picker__date_border"
+                type="button"
+              >
+                15
+              </button>
+              <button
+                class="date-picker__date date-picker__date_border"
+                type="button"
+              >
+                16
+              </button>
+              <button
+                class="date-picker__date date-picker__date_border"
+                type="button"
+              >
+                17
+              </button>
+            </div>
+            <div
+              class="date-picker__dates-week"
+            >
+              <button
+                class="date-picker__date date-picker__date_border"
+                type="button"
+              >
+                18
+              </button>
+              <button
+                class="date-picker__date date-picker__date_border"
+                type="button"
+              >
+                19
+              </button>
+              <button
+                class="date-picker__date date-picker__date_border"
+                type="button"
+              >
+                20
+              </button>
+              <button
+                class="date-picker__date date-picker__date_border"
+                type="button"
+              >
+                21
+              </button>
+              <button
+                class="date-picker__date date-picker__date_border"
+                type="button"
+              >
+                22
+              </button>
+              <button
+                class="date-picker__date date-picker__date_border"
+                type="button"
+              >
+                23
+              </button>
+              <button
+                class="date-picker__date date-picker__date_border"
+                type="button"
+              >
+                24
+              </button>
+            </div>
+            <div
+              class="date-picker__dates-week"
+            >
+              <button
+                class="date-picker__date date-picker__date_border"
+                type="button"
+              >
+                25
+              </button>
+              <button
+                class="date-picker__date date-picker__date_border"
+                type="button"
+              >
+                26
+              </button>
+              <button
+                class="date-picker__date date-picker__date_border"
+                type="button"
+              >
+                27
+              </button>
+              <button
+                class="date-picker__date date-picker__date_border"
+                type="button"
+              >
+                28
+              </button>
+              <button
+                class="date-picker__date date-picker__date_border"
+                type="button"
+              >
+                29
+              </button>
+              <button
+                class="date-picker__date date-picker__date_border"
+                type="button"
+              >
+                30
+              </button>
+              <button
+                class="date-picker__date date-picker__date_border date-picker__date_last-day"
+                type="button"
+              >
+                31
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div
+        class="date-picker__period-calendar"
+      >
+        <label
+          class="checkbox"
+        >
+          <input
+            aria-checked="false"
+            class="checkbox__input"
+            name="isAllPeriod"
+            role="checkbox"
+            tabindex="0"
+            type="checkbox"
+            value=""
+          />
+          Весь период
+        </label>
+        <div
+          class="date-picker__period-calendar-inputs"
+        >
+          <label
+            class="input-date"
+          >
+            <div
+              class="input-date__label"
+            >
+              Начало периода
+            </div>
+            <div
+              class="input-date__field"
+            >
+              <input
+                class="input-date__input"
+                label="Начало периода"
+                name="startDate"
+                type="date"
+                value=""
+              />
+              <svg
+                class="input-date__icon"
+                height="24"
+                viewBox="0 0 24 24"
+                width="24"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  clip-rule="evenodd"
+                  d="M6 6h2V5h8v1h2V5h2v3H4V5h2v1Zm-2 4v10h16V10H4Zm4-7h8V2h2v1h2a2 2 0 0 1 2 2v15a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h2V2h2v1Z"
+                  fill-rule="evenodd"
+                />
+              </svg>
+            </div>
+          </label>
+          <label
+            class="input-date"
+          >
+            <div
+              class="input-date__label"
+            >
+              Конец периода
+            </div>
+            <div
+              class="input-date__field"
+            >
+              <input
+                class="input-date__input"
+                label="Конец периода"
+                name="endDate"
+                type="date"
+                value=""
+              />
+              <svg
+                class="input-date__icon"
+                height="24"
+                viewBox="0 0 24 24"
+                width="24"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  clip-rule="evenodd"
+                  d="M6 6h2V5h8v1h2V5h2v3H4V5h2v1Zm-2 4v10h16V10H4Zm4-7h8V2h2v1h2a2 2 0 0 1 2 2v15a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h2V2h2v1Z"
+                  fill-rule="evenodd"
+                />
+              </svg>
+            </div>
+          </label>
+        </div>
+        <button
+          class="button button_medium button_primary"
+          disabled=""
+          tabindex="-1"
+          type="button"
+        >
+          Применить
+        </button>
+      </div>
+    </div>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`Datepicker Is Mobile 1`] = `
+<DocumentFragment>
+  <div
+    class="date-picker"
+  >
+    <button
+      class="date-picker__trigger"
+      title="date-picker"
+      type="button"
+    >
+      <label
+        class="input-text"
+      >
+        <div
+          class="date-picker__input-field input-text__field_read-only input-text__field_after"
+        >
+          <input
+            class="input-text__input"
+            disabled=""
+            name="date-picker"
+            readonly=""
+            tabindex="-1"
+            type="text"
+            value=""
+          />
+          <svg
+            class="date-picker__calendar-icon"
+            height="24"
+            viewBox="0 0 24 24"
+            width="24"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              clip-rule="evenodd"
+              d="M6 6h2V5h8v1h2V5h2v3H4V5h2v1Zm-2 4v10h16V10H4Zm4-7h8V2h2v1h2a2 2 0 0 1 2 2v15a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h2V2h2v1Z"
+              fill-rule="evenodd"
+            />
+          </svg>
+        </div>
+      </label>
+    </button>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`Datepicker Is Mobile 2`] = `
+<DocumentFragment>
+  <div
+    class="date-picker"
+  >
+    <button
+      class="date-picker__trigger"
+      title="date-picker"
+      type="button"
+    >
+      <label
+        class="input-text"
+      >
+        <div
+          class="date-picker__input-field input-text__field_read-only input-text__field_after"
+        >
+          <input
+            class="input-text__input"
+            disabled=""
+            name="date-picker"
+            readonly=""
+            tabindex="-1"
+            type="text"
+            value=""
+          />
+          <svg
+            class="date-picker__calendar-icon"
+            height="24"
+            viewBox="0 0 24 24"
+            width="24"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              clip-rule="evenodd"
+              d="M6 6h2V5h8v1h2V5h2v3H4V5h2v1Zm-2 4v10h16V10H4Zm4-7h8V2h2v1h2a2 2 0 0 1 2 2v15a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h2V2h2v1Z"
+              fill-rule="evenodd"
+            />
+          </svg>
+        </div>
+      </label>
+    </button>
+    <div
+      class="date-picker__wrap-calendar date-picker__wrap-calendar_is-mobile"
+    >
+      <div
+        class="date-picker__calendar"
+      >
+        <div
+          class="date-picker__month-row"
+        >
+          <span />
+          <div
+            class="date-picker__month-row-controls"
+          >
+            <button
+              class="date-picker__row-left"
+              type="button"
+            >
+              <svg
+                height="24"
+                viewBox="0 0 24 24"
+                width="24"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  clip-rule="evenodd"
+                  d="m6.414 13 6.293 6.293-1.414 1.414L2.586 12l8.707-8.707 1.414 1.414L6.414 11H21v2H6.414Z"
+                  fill-rule="evenodd"
+                />
+              </svg>
+            </button>
+            <div
+              class="date-picker__row-center"
+            >
+              июль 2023
+            </div>
+            <button
+              class="date-picker__row-right"
+              type="button"
+            >
+              <svg
+                height="24"
+                viewBox="0 0 24 24"
+                width="24"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  clip-rule="evenodd"
+                  d="M17.586 13H3v-2h14.586l-6.293-6.293 1.414-1.414L21.414 12l-8.707 8.707-1.414-1.414L17.586 13Z"
+                  fill-rule="evenodd"
+                />
+              </svg>
+            </button>
+          </div>
+          <svg
+            height="24"
+            viewBox="0 0 24 24"
+            width="24"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M19.778 18.364 13.414 12l6.364-6.364-1.414-1.414L12 10.586 5.636 4.222 4.222 5.636 10.586 12l-6.364 6.364 1.414 1.414L12 13.414l6.364 6.364 1.414-1.414Z"
+            />
+          </svg>
+        </div>
+        <div
+          class="date-picker__calendar-body"
+          id="date-body"
+        >
+          <div
+            class="date-picker__weekdays"
+          >
+            <div
+              class="date-picker__weekday"
+            >
+              пн
+            </div>
+            <div
+              class="date-picker__weekday"
+            >
+              вт
+            </div>
+            <div
+              class="date-picker__weekday"
+            >
+              ср
+            </div>
+            <div
+              class="date-picker__weekday"
+            >
+              чт
+            </div>
+            <div
+              class="date-picker__weekday"
+            >
+              пт
+            </div>
+            <div
+              class="date-picker__weekday date-picker__weekday_weekend"
+            >
+              сб
+            </div>
+            <div
+              class="date-picker__weekday date-picker__weekday_weekend"
+            >
+              вс
+            </div>
+          </div>
+          <div
+            class="date-picker__dates"
+          >
+            <div
+              class="date-picker__dates-week"
+            >
+              <button
+                class="date-picker__date date-picker__date_muted"
+                type="button"
+              >
+                26
+              </button>
+              <button
+                class="date-picker__date date-picker__date_muted"
+                type="button"
+              >
+                27
+              </button>
+              <button
+                class="date-picker__date date-picker__date_muted"
+                type="button"
+              >
+                28
+              </button>
+              <button
+                class="date-picker__date date-picker__date_muted"
+                type="button"
+              >
+                29
+              </button>
+              <button
+                class="date-picker__date date-picker__date_muted date-picker__date_last-day"
+                type="button"
+              >
+                30
+              </button>
+              <button
+                class="date-picker__date date-picker__date_border date-picker__date_first-day"
+                type="button"
+              >
+                01
+              </button>
+              <button
+                class="date-picker__date date-picker__date_border"
+                type="button"
+              >
+                02
+              </button>
+            </div>
+            <div
+              class="date-picker__dates-week"
+            >
+              <button
+                class="date-picker__date date-picker__date_border"
+                type="button"
+              >
+                03
+              </button>
+              <button
+                class="date-picker__date date-picker__date_border"
+                type="button"
+              >
+                04
+              </button>
+              <button
+                class="date-picker__date date-picker__date_border"
+                type="button"
+              >
+                05
+              </button>
+              <button
+                class="date-picker__date date-picker__date_border"
+                type="button"
+              >
+                06
+              </button>
+              <button
+                class="date-picker__date date-picker__date_border date-picker__date_today"
+                type="button"
+              >
+                07
+              </button>
+              <button
+                class="date-picker__date date-picker__date_border"
+                type="button"
+              >
+                08
+              </button>
+              <button
+                class="date-picker__date date-picker__date_border"
+                type="button"
+              >
+                09
+              </button>
+            </div>
+            <div
+              class="date-picker__dates-week"
+            >
+              <button
+                class="date-picker__date date-picker__date_border"
+                type="button"
+              >
+                10
+              </button>
+              <button
+                class="date-picker__date date-picker__date_border"
+                type="button"
+              >
+                11
+              </button>
+              <button
+                class="date-picker__date date-picker__date_border"
+                type="button"
+              >
+                12
+              </button>
+              <button
+                class="date-picker__date date-picker__date_border"
+                type="button"
+              >
+                13
+              </button>
+              <button
+                class="date-picker__date date-picker__date_border"
+                type="button"
+              >
+                14
+              </button>
+              <button
+                class="date-picker__date date-picker__date_border"
+                type="button"
+              >
+                15
+              </button>
+              <button
+                class="date-picker__date date-picker__date_border"
+                type="button"
+              >
+                16
+              </button>
+            </div>
+            <div
+              class="date-picker__dates-week"
+            >
+              <button
+                class="date-picker__date date-picker__date_border"
+                type="button"
+              >
+                17
+              </button>
+              <button
+                class="date-picker__date date-picker__date_border"
+                type="button"
+              >
+                18
+              </button>
+              <button
+                class="date-picker__date date-picker__date_border"
+                type="button"
+              >
+                19
+              </button>
+              <button
+                class="date-picker__date date-picker__date_border"
+                type="button"
+              >
+                20
+              </button>
+              <button
+                class="date-picker__date date-picker__date_border"
+                type="button"
+              >
+                21
+              </button>
+              <button
+                class="date-picker__date date-picker__date_border"
+                type="button"
+              >
+                22
+              </button>
+              <button
+                class="date-picker__date date-picker__date_border"
+                type="button"
+              >
+                23
+              </button>
+            </div>
+            <div
+              class="date-picker__dates-week"
+            >
+              <button
+                class="date-picker__date date-picker__date_border"
+                type="button"
+              >
+                24
+              </button>
+              <button
+                class="date-picker__date date-picker__date_border"
+                type="button"
+              >
+                25
+              </button>
+              <button
+                class="date-picker__date date-picker__date_border"
+                type="button"
+              >
+                26
+              </button>
+              <button
+                class="date-picker__date date-picker__date_border"
+                type="button"
+              >
+                27
+              </button>
+              <button
+                class="date-picker__date date-picker__date_border"
+                type="button"
+              >
+                28
+              </button>
+              <button
+                class="date-picker__date date-picker__date_border"
+                type="button"
+              >
+                29
+              </button>
+              <button
+                class="date-picker__date date-picker__date_border"
+                type="button"
+              >
+                30
+              </button>
+            </div>
+            <div
+              class="date-picker__dates-week"
+            >
+              <button
+                class="date-picker__date date-picker__date_border date-picker__date_last-day"
+                type="button"
+              >
+                31
+              </button>
+              <button
+                class="date-picker__date date-picker__date_muted date-picker__date_first-day"
+                type="button"
+              >
+                01
+              </button>
+              <button
+                class="date-picker__date date-picker__date_muted"
+                type="button"
+              >
+                02
+              </button>
+              <button
+                class="date-picker__date date-picker__date_muted"
+                type="button"
+              >
+                03
+              </button>
+              <button
+                class="date-picker__date date-picker__date_muted"
+                type="button"
+              >
+                04
+              </button>
+              <button
+                class="date-picker__date date-picker__date_muted"
+                type="button"
+              >
+                05
+              </button>
+              <button
+                class="date-picker__date date-picker__date_muted"
+                type="button"
+              >
+                06
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</DocumentFragment>
+`;
+
 exports[`Default Min Max Dates 1`] = `
 <DocumentFragment>
   <div
-    class="dropdown"
+    class="date-picker"
   >
     <span
       class="popover__trigger"
     >
       <button
-        class="date-picker"
+        class="date-picker__trigger"
         title="date-picker"
         type="button"
       >
@@ -52,13 +4263,13 @@ exports[`Default Min Max Dates 1`] = `
 exports[`Default Min Max Dates 2`] = `
 <DocumentFragment>
   <div
-    class="dropdown"
+    class="date-picker"
   >
     <span
       class="popover__trigger"
     >
       <button
-        class="date-picker"
+        class="date-picker__trigger"
         title="date-picker"
         type="button"
       >
@@ -107,45 +4318,49 @@ exports[`Default Min Max Dates 2`] = `
           <div
             class="date-picker__month-row"
           >
-            <button
-              class="date-picker__row-left"
-              type="button"
-            >
-              <svg
-                height="24"
-                viewBox="0 0 24 24"
-                width="24"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <path
-                  clip-rule="evenodd"
-                  d="m6.414 13 6.293 6.293-1.414 1.414L2.586 12l8.707-8.707 1.414 1.414L6.414 11H21v2H6.414Z"
-                  fill-rule="evenodd"
-                />
-              </svg>
-            </button>
             <div
-              class="date-picker__row-center"
+              class="date-picker__month-row-controls"
             >
-              июль 2023
-            </div>
-            <button
-              class="date-picker__row-right"
-              type="button"
-            >
-              <svg
-                height="24"
-                viewBox="0 0 24 24"
-                width="24"
-                xmlns="http://www.w3.org/2000/svg"
+              <button
+                class="date-picker__row-left"
+                type="button"
               >
-                <path
-                  clip-rule="evenodd"
-                  d="M17.586 13H3v-2h14.586l-6.293-6.293 1.414-1.414L21.414 12l-8.707 8.707-1.414-1.414L17.586 13Z"
-                  fill-rule="evenodd"
-                />
-              </svg>
-            </button>
+                <svg
+                  height="24"
+                  viewBox="0 0 24 24"
+                  width="24"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    clip-rule="evenodd"
+                    d="m6.414 13 6.293 6.293-1.414 1.414L2.586 12l8.707-8.707 1.414 1.414L6.414 11H21v2H6.414Z"
+                    fill-rule="evenodd"
+                  />
+                </svg>
+              </button>
+              <div
+                class="date-picker__row-center"
+              >
+                июль 2023
+              </div>
+              <button
+                class="date-picker__row-right"
+                type="button"
+              >
+                <svg
+                  height="24"
+                  viewBox="0 0 24 24"
+                  width="24"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    clip-rule="evenodd"
+                    d="M17.586 13H3v-2h14.586l-6.293-6.293 1.414-1.414L21.414 12l-8.707 8.707-1.414-1.414L17.586 13Z"
+                    fill-rule="evenodd"
+                  />
+                </svg>
+              </button>
+            </div>
           </div>
           <div
             class="date-picker__calendar-body"
@@ -255,7 +4470,7 @@ exports[`Default Min Max Dates 2`] = `
                   04
                 </button>
                 <button
-                  class="date-picker__date date-picker__date_border date-picker__date_today"
+                  class="date-picker__date date-picker__date_border"
                   type="button"
                 >
                   05
@@ -267,7 +4482,7 @@ exports[`Default Min Max Dates 2`] = `
                   06
                 </button>
                 <button
-                  class="date-picker__date date-picker__date_border"
+                  class="date-picker__date date-picker__date_border date-picker__date_today"
                   type="button"
                 >
                   07
@@ -481,13 +4696,13 @@ exports[`Default Min Max Dates 2`] = `
 exports[`Default Min Max Dates 3`] = `
 <DocumentFragment>
   <div
-    class="dropdown"
+    class="date-picker"
   >
     <span
       class="popover__trigger"
     >
       <button
-        class="date-picker"
+        class="date-picker__trigger"
         title="date-picker"
         type="button"
       >
@@ -530,13 +4745,13 @@ exports[`Default Min Max Dates 3`] = `
 exports[`Default Min Max Dates 4`] = `
 <DocumentFragment>
   <div
-    class="dropdown"
+    class="date-picker"
   >
     <span
       class="popover__trigger"
     >
       <button
-        class="date-picker"
+        class="date-picker__trigger"
         title="date-picker"
         type="button"
       >
@@ -585,45 +4800,49 @@ exports[`Default Min Max Dates 4`] = `
           <div
             class="date-picker__month-row"
           >
-            <button
-              class="date-picker__row-left date-picker__row-left_disabled"
-              type="button"
-            >
-              <svg
-                height="24"
-                viewBox="0 0 24 24"
-                width="24"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <path
-                  clip-rule="evenodd"
-                  d="m6.414 13 6.293 6.293-1.414 1.414L2.586 12l8.707-8.707 1.414 1.414L6.414 11H21v2H6.414Z"
-                  fill-rule="evenodd"
-                />
-              </svg>
-            </button>
             <div
-              class="date-picker__row-center"
+              class="date-picker__month-row-controls"
             >
-              июль 2023
-            </div>
-            <button
-              class="date-picker__row-right"
-              type="button"
-            >
-              <svg
-                height="24"
-                viewBox="0 0 24 24"
-                width="24"
-                xmlns="http://www.w3.org/2000/svg"
+              <button
+                class="date-picker__row-left date-picker__row-left_disabled"
+                type="button"
               >
-                <path
-                  clip-rule="evenodd"
-                  d="M17.586 13H3v-2h14.586l-6.293-6.293 1.414-1.414L21.414 12l-8.707 8.707-1.414-1.414L17.586 13Z"
-                  fill-rule="evenodd"
-                />
-              </svg>
-            </button>
+                <svg
+                  height="24"
+                  viewBox="0 0 24 24"
+                  width="24"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    clip-rule="evenodd"
+                    d="m6.414 13 6.293 6.293-1.414 1.414L2.586 12l8.707-8.707 1.414 1.414L6.414 11H21v2H6.414Z"
+                    fill-rule="evenodd"
+                  />
+                </svg>
+              </button>
+              <div
+                class="date-picker__row-center"
+              >
+                июль 2023
+              </div>
+              <button
+                class="date-picker__row-right"
+                type="button"
+              >
+                <svg
+                  height="24"
+                  viewBox="0 0 24 24"
+                  width="24"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    clip-rule="evenodd"
+                    d="M17.586 13H3v-2h14.586l-6.293-6.293 1.414-1.414L21.414 12l-8.707 8.707-1.414-1.414L17.586 13Z"
+                    fill-rule="evenodd"
+                  />
+                </svg>
+              </button>
+            </div>
           </div>
           <div
             class="date-picker__calendar-body"
@@ -733,19 +4952,19 @@ exports[`Default Min Max Dates 4`] = `
                   04
                 </button>
                 <button
-                  class="date-picker__date date-picker__date_border date-picker__date_today"
+                  class="date-picker__date date-picker__date_border date-picker__date_disabled"
                   type="button"
                 >
                   05
                 </button>
                 <button
-                  class="date-picker__date date-picker__date_border"
+                  class="date-picker__date date-picker__date_border date-picker__date_disabled"
                   type="button"
                 >
                   06
                 </button>
                 <button
-                  class="date-picker__date date-picker__date_border"
+                  class="date-picker__date date-picker__date_border date-picker__date_today"
                   type="button"
                 >
                   07
@@ -959,13 +5178,13 @@ exports[`Default Min Max Dates 4`] = `
 exports[`Default Min Max Dates 5`] = `
 <DocumentFragment>
   <div
-    class="dropdown"
+    class="date-picker"
   >
     <span
       class="popover__trigger"
     >
       <button
-        class="date-picker"
+        class="date-picker__trigger"
         title="date-picker"
         type="button"
       >
@@ -1008,13 +5227,13 @@ exports[`Default Min Max Dates 5`] = `
 exports[`Default Min Max Dates 6`] = `
 <DocumentFragment>
   <div
-    class="dropdown"
+    class="date-picker"
   >
     <span
       class="popover__trigger"
     >
       <button
-        class="date-picker"
+        class="date-picker__trigger"
         title="date-picker"
         type="button"
       >
@@ -1063,45 +5282,49 @@ exports[`Default Min Max Dates 6`] = `
           <div
             class="date-picker__month-row"
           >
-            <button
-              class="date-picker__row-left date-picker__row-left_disabled"
-              type="button"
-            >
-              <svg
-                height="24"
-                viewBox="0 0 24 24"
-                width="24"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <path
-                  clip-rule="evenodd"
-                  d="m6.414 13 6.293 6.293-1.414 1.414L2.586 12l8.707-8.707 1.414 1.414L6.414 11H21v2H6.414Z"
-                  fill-rule="evenodd"
-                />
-              </svg>
-            </button>
             <div
-              class="date-picker__row-center"
+              class="date-picker__month-row-controls"
             >
-              июль 2023
-            </div>
-            <button
-              class="date-picker__row-right"
-              type="button"
-            >
-              <svg
-                height="24"
-                viewBox="0 0 24 24"
-                width="24"
-                xmlns="http://www.w3.org/2000/svg"
+              <button
+                class="date-picker__row-left date-picker__row-left_disabled"
+                type="button"
               >
-                <path
-                  clip-rule="evenodd"
-                  d="M17.586 13H3v-2h14.586l-6.293-6.293 1.414-1.414L21.414 12l-8.707 8.707-1.414-1.414L17.586 13Z"
-                  fill-rule="evenodd"
-                />
-              </svg>
-            </button>
+                <svg
+                  height="24"
+                  viewBox="0 0 24 24"
+                  width="24"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    clip-rule="evenodd"
+                    d="m6.414 13 6.293 6.293-1.414 1.414L2.586 12l8.707-8.707 1.414 1.414L6.414 11H21v2H6.414Z"
+                    fill-rule="evenodd"
+                  />
+                </svg>
+              </button>
+              <div
+                class="date-picker__row-center"
+              >
+                июль 2023
+              </div>
+              <button
+                class="date-picker__row-right"
+                type="button"
+              >
+                <svg
+                  height="24"
+                  viewBox="0 0 24 24"
+                  width="24"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    clip-rule="evenodd"
+                    d="M17.586 13H3v-2h14.586l-6.293-6.293 1.414-1.414L21.414 12l-8.707 8.707-1.414-1.414L17.586 13Z"
+                    fill-rule="evenodd"
+                  />
+                </svg>
+              </button>
+            </div>
           </div>
           <div
             class="date-picker__calendar-body"
@@ -1211,7 +5434,7 @@ exports[`Default Min Max Dates 6`] = `
                   04
                 </button>
                 <button
-                  class="date-picker__date date-picker__date_border date-picker__date_today"
+                  class="date-picker__date date-picker__date_border"
                   type="button"
                 >
                   05
@@ -1223,7 +5446,7 @@ exports[`Default Min Max Dates 6`] = `
                   06
                 </button>
                 <button
-                  class="date-picker__date date-picker__date_border"
+                  class="date-picker__date date-picker__date_border date-picker__date_today"
                   type="button"
                 >
                   07
@@ -1437,13 +5660,13 @@ exports[`Default Min Max Dates 6`] = `
 exports[`Default use 1`] = `
 <DocumentFragment>
   <div
-    class="dropdown"
+    class="date-picker"
   >
     <span
       class="popover__trigger"
     >
       <button
-        class="date-picker"
+        class="date-picker__trigger"
         title="date-picker"
         type="button"
       >
@@ -1486,13 +5709,13 @@ exports[`Default use 1`] = `
 exports[`Default use 2`] = `
 <DocumentFragment>
   <div
-    class="dropdown"
+    class="date-picker"
   >
     <span
       class="popover__trigger"
     >
       <button
-        class="date-picker"
+        class="date-picker__trigger"
         title="date-picker"
         type="button"
       >
@@ -1535,13 +5758,13 @@ exports[`Default use 2`] = `
 exports[`Range Picker 1`] = `
 <DocumentFragment>
   <div
-    class="dropdown"
+    class="date-picker"
   >
     <span
       class="popover__trigger"
     >
       <button
-        class="date-picker date-picker_range"
+        class="date-picker__trigger date-picker__trigger_range"
         title="date-picker"
         type="button"
       >
@@ -1584,13 +5807,13 @@ exports[`Range Picker 1`] = `
 exports[`Range Picker 2`] = `
 <DocumentFragment>
   <div
-    class="dropdown"
+    class="date-picker"
   >
     <span
       class="popover__trigger"
     >
       <button
-        class="date-picker date-picker_range"
+        class="date-picker__trigger date-picker__trigger_range"
         title="date-picker"
         type="button"
       >
@@ -1634,50 +5857,54 @@ exports[`Range Picker 2`] = `
         class="date-picker__wrap-calendar date-picker__wrap-calendar_date-range"
       >
         <div
-          class="date-picker__calendar"
+          class="date-picker__calendar date-picker__calendar_date-range"
         >
           <div
             class="date-picker__month-row"
           >
-            <button
-              class="date-picker__row-left"
-              type="button"
-            >
-              <svg
-                height="24"
-                viewBox="0 0 24 24"
-                width="24"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <path
-                  clip-rule="evenodd"
-                  d="m6.414 13 6.293 6.293-1.414 1.414L2.586 12l8.707-8.707 1.414 1.414L6.414 11H21v2H6.414Z"
-                  fill-rule="evenodd"
-                />
-              </svg>
-            </button>
             <div
-              class="date-picker__row-center"
+              class="date-picker__month-row-controls"
             >
-              2023
-            </div>
-            <button
-              class="date-picker__row-right"
-              type="button"
-            >
-              <svg
-                height="24"
-                viewBox="0 0 24 24"
-                width="24"
-                xmlns="http://www.w3.org/2000/svg"
+              <button
+                class="date-picker__row-left"
+                type="button"
               >
-                <path
-                  clip-rule="evenodd"
-                  d="M17.586 13H3v-2h14.586l-6.293-6.293 1.414-1.414L21.414 12l-8.707 8.707-1.414-1.414L17.586 13Z"
-                  fill-rule="evenodd"
-                />
-              </svg>
-            </button>
+                <svg
+                  height="24"
+                  viewBox="0 0 24 24"
+                  width="24"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    clip-rule="evenodd"
+                    d="m6.414 13 6.293 6.293-1.414 1.414L2.586 12l8.707-8.707 1.414 1.414L6.414 11H21v2H6.414Z"
+                    fill-rule="evenodd"
+                  />
+                </svg>
+              </button>
+              <div
+                class="date-picker__row-center"
+              >
+                2023
+              </div>
+              <button
+                class="date-picker__row-right"
+                type="button"
+              >
+                <svg
+                  height="24"
+                  viewBox="0 0 24 24"
+                  width="24"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    clip-rule="evenodd"
+                    d="M17.586 13H3v-2h14.586l-6.293-6.293 1.414-1.414L21.414 12l-8.707 8.707-1.414-1.414L17.586 13Z"
+                    fill-rule="evenodd"
+                  />
+                </svg>
+              </button>
+            </div>
           </div>
           <div
             class="date-picker__calendar-body"
@@ -3506,7 +7733,7 @@ exports[`Range Picker 2`] = `
                   04
                 </button>
                 <button
-                  class="date-picker__date date-picker__date_border date-picker__date_today"
+                  class="date-picker__date date-picker__date_border"
                   type="button"
                 >
                   05
@@ -3518,7 +7745,7 @@ exports[`Range Picker 2`] = `
                   06
                 </button>
                 <button
-                  class="date-picker__date date-picker__date_border"
+                  class="date-picker__date date-picker__date_border date-picker__date_today"
                   type="button"
                 >
                   07
@@ -5176,72 +9403,76 @@ exports[`Range Picker 2`] = `
             />
             Весь период
           </label>
-          <label
-            class="input-date"
+          <div
+            class="date-picker__period-calendar-inputs"
           >
-            <div
-              class="input-date__label"
+            <label
+              class="input-date"
             >
-              Начало периода
-            </div>
-            <div
-              class="input-date__field"
-            >
-              <input
-                class="input-date__input"
-                label="Начало периода"
-                name="startDate"
-                type="date"
-                value=""
-              />
-              <svg
-                class="input-date__icon"
-                height="24"
-                viewBox="0 0 24 24"
-                width="24"
-                xmlns="http://www.w3.org/2000/svg"
+              <div
+                class="input-date__label"
               >
-                <path
-                  clip-rule="evenodd"
-                  d="M6 6h2V5h8v1h2V5h2v3H4V5h2v1Zm-2 4v10h16V10H4Zm4-7h8V2h2v1h2a2 2 0 0 1 2 2v15a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h2V2h2v1Z"
-                  fill-rule="evenodd"
-                />
-              </svg>
-            </div>
-          </label>
-          <label
-            class="input-date"
-          >
-            <div
-              class="input-date__label"
-            >
-              Конец периода
-            </div>
-            <div
-              class="input-date__field"
-            >
-              <input
-                class="input-date__input"
-                label="Конец периода"
-                name="endDate"
-                type="date"
-                value=""
-              />
-              <svg
-                class="input-date__icon"
-                height="24"
-                viewBox="0 0 24 24"
-                width="24"
-                xmlns="http://www.w3.org/2000/svg"
+                Начало периода
+              </div>
+              <div
+                class="input-date__field"
               >
-                <path
-                  clip-rule="evenodd"
-                  d="M6 6h2V5h8v1h2V5h2v3H4V5h2v1Zm-2 4v10h16V10H4Zm4-7h8V2h2v1h2a2 2 0 0 1 2 2v15a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h2V2h2v1Z"
-                  fill-rule="evenodd"
+                <input
+                  class="input-date__input"
+                  label="Начало периода"
+                  name="startDate"
+                  type="date"
+                  value=""
                 />
-              </svg>
-            </div>
-          </label>
+                <svg
+                  class="input-date__icon"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  width="24"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    clip-rule="evenodd"
+                    d="M6 6h2V5h8v1h2V5h2v3H4V5h2v1Zm-2 4v10h16V10H4Zm4-7h8V2h2v1h2a2 2 0 0 1 2 2v15a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h2V2h2v1Z"
+                    fill-rule="evenodd"
+                  />
+                </svg>
+              </div>
+            </label>
+            <label
+              class="input-date"
+            >
+              <div
+                class="input-date__label"
+              >
+                Конец периода
+              </div>
+              <div
+                class="input-date__field"
+              >
+                <input
+                  class="input-date__input"
+                  label="Конец периода"
+                  name="endDate"
+                  type="date"
+                  value=""
+                />
+                <svg
+                  class="input-date__icon"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  width="24"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    clip-rule="evenodd"
+                    d="M6 6h2V5h8v1h2V5h2v3H4V5h2v1Zm-2 4v10h16V10H4Zm4-7h8V2h2v1h2a2 2 0 0 1 2 2v15a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h2V2h2v1Z"
+                    fill-rule="evenodd"
+                  />
+                </svg>
+              </div>
+            </label>
+          </div>
           <button
             class="button button_medium button_primary"
             disabled=""
@@ -5260,13 +9491,13 @@ exports[`Range Picker 2`] = `
 exports[`Range Picker With Dates 1`] = `
 <DocumentFragment>
   <div
-    class="dropdown"
+    class="date-picker"
   >
     <span
       class="popover__trigger"
     >
       <button
-        class="date-picker date-picker_range"
+        class="date-picker__trigger date-picker__trigger_range"
         title="date-picker"
         type="button"
       >
@@ -5309,13 +9540,13 @@ exports[`Range Picker With Dates 1`] = `
 exports[`Range Picker With Dates 2`] = `
 <DocumentFragment>
   <div
-    class="dropdown"
+    class="date-picker"
   >
     <span
       class="popover__trigger"
     >
       <button
-        class="date-picker date-picker_range"
+        class="date-picker__trigger date-picker__trigger_range"
         title="date-picker"
         type="button"
       >
@@ -5359,50 +9590,54 @@ exports[`Range Picker With Dates 2`] = `
         class="date-picker__wrap-calendar date-picker__wrap-calendar_date-range"
       >
         <div
-          class="date-picker__calendar"
+          class="date-picker__calendar date-picker__calendar_date-range"
         >
           <div
             class="date-picker__month-row"
           >
-            <button
-              class="date-picker__row-left"
-              type="button"
-            >
-              <svg
-                height="24"
-                viewBox="0 0 24 24"
-                width="24"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <path
-                  clip-rule="evenodd"
-                  d="m6.414 13 6.293 6.293-1.414 1.414L2.586 12l8.707-8.707 1.414 1.414L6.414 11H21v2H6.414Z"
-                  fill-rule="evenodd"
-                />
-              </svg>
-            </button>
             <div
-              class="date-picker__row-center"
+              class="date-picker__month-row-controls"
             >
-              2023
-            </div>
-            <button
-              class="date-picker__row-right"
-              type="button"
-            >
-              <svg
-                height="24"
-                viewBox="0 0 24 24"
-                width="24"
-                xmlns="http://www.w3.org/2000/svg"
+              <button
+                class="date-picker__row-left"
+                type="button"
               >
-                <path
-                  clip-rule="evenodd"
-                  d="M17.586 13H3v-2h14.586l-6.293-6.293 1.414-1.414L21.414 12l-8.707 8.707-1.414-1.414L17.586 13Z"
-                  fill-rule="evenodd"
-                />
-              </svg>
-            </button>
+                <svg
+                  height="24"
+                  viewBox="0 0 24 24"
+                  width="24"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    clip-rule="evenodd"
+                    d="m6.414 13 6.293 6.293-1.414 1.414L2.586 12l8.707-8.707 1.414 1.414L6.414 11H21v2H6.414Z"
+                    fill-rule="evenodd"
+                  />
+                </svg>
+              </button>
+              <div
+                class="date-picker__row-center"
+              >
+                2023
+              </div>
+              <button
+                class="date-picker__row-right"
+                type="button"
+              >
+                <svg
+                  height="24"
+                  viewBox="0 0 24 24"
+                  width="24"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    clip-rule="evenodd"
+                    d="M17.586 13H3v-2h14.586l-6.293-6.293 1.414-1.414L21.414 12l-8.707 8.707-1.414-1.414L17.586 13Z"
+                    fill-rule="evenodd"
+                  />
+                </svg>
+              </button>
+            </div>
           </div>
           <div
             class="date-picker__calendar-body"
@@ -7236,7 +11471,7 @@ exports[`Range Picker With Dates 2`] = `
                   04
                 </button>
                 <button
-                  class="date-picker__date date-picker__date_border date-picker__date_today"
+                  class="date-picker__date date-picker__date_border"
                   type="button"
                 >
                   05
@@ -7248,7 +11483,7 @@ exports[`Range Picker With Dates 2`] = `
                   06
                 </button>
                 <button
-                  class="date-picker__date date-picker__date_border"
+                  class="date-picker__date date-picker__date_border date-picker__date_today"
                   type="button"
                 >
                   07
@@ -8907,72 +13142,76 @@ exports[`Range Picker With Dates 2`] = `
             />
             Весь период
           </label>
-          <label
-            class="input-date"
+          <div
+            class="date-picker__period-calendar-inputs"
           >
-            <div
-              class="input-date__label"
+            <label
+              class="input-date"
             >
-              Начало периода
-            </div>
-            <div
-              class="input-date__field"
-            >
-              <input
-                class="input-date__input input-date__input_filled"
-                label="Начало периода"
-                name="startDate"
-                type="date"
-                value="2023-06-25"
-              />
-              <svg
-                class="input-date__icon"
-                height="24"
-                viewBox="0 0 24 24"
-                width="24"
-                xmlns="http://www.w3.org/2000/svg"
+              <div
+                class="input-date__label"
               >
-                <path
-                  clip-rule="evenodd"
-                  d="M6 6h2V5h8v1h2V5h2v3H4V5h2v1Zm-2 4v10h16V10H4Zm4-7h8V2h2v1h2a2 2 0 0 1 2 2v15a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h2V2h2v1Z"
-                  fill-rule="evenodd"
-                />
-              </svg>
-            </div>
-          </label>
-          <label
-            class="input-date"
-          >
-            <div
-              class="input-date__label"
-            >
-              Конец периода
-            </div>
-            <div
-              class="input-date__field"
-            >
-              <input
-                class="input-date__input input-date__input_filled"
-                label="Конец периода"
-                name="endDate"
-                type="date"
-                value="2023-06-27"
-              />
-              <svg
-                class="input-date__icon"
-                height="24"
-                viewBox="0 0 24 24"
-                width="24"
-                xmlns="http://www.w3.org/2000/svg"
+                Начало периода
+              </div>
+              <div
+                class="input-date__field"
               >
-                <path
-                  clip-rule="evenodd"
-                  d="M6 6h2V5h8v1h2V5h2v3H4V5h2v1Zm-2 4v10h16V10H4Zm4-7h8V2h2v1h2a2 2 0 0 1 2 2v15a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h2V2h2v1Z"
-                  fill-rule="evenodd"
+                <input
+                  class="input-date__input input-date__input_filled"
+                  label="Начало периода"
+                  name="startDate"
+                  type="date"
+                  value="2023-06-25"
                 />
-              </svg>
-            </div>
-          </label>
+                <svg
+                  class="input-date__icon"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  width="24"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    clip-rule="evenodd"
+                    d="M6 6h2V5h8v1h2V5h2v3H4V5h2v1Zm-2 4v10h16V10H4Zm4-7h8V2h2v1h2a2 2 0 0 1 2 2v15a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h2V2h2v1Z"
+                    fill-rule="evenodd"
+                  />
+                </svg>
+              </div>
+            </label>
+            <label
+              class="input-date"
+            >
+              <div
+                class="input-date__label"
+              >
+                Конец периода
+              </div>
+              <div
+                class="input-date__field"
+              >
+                <input
+                  class="input-date__input input-date__input_filled"
+                  label="Конец периода"
+                  name="endDate"
+                  type="date"
+                  value="2023-06-27"
+                />
+                <svg
+                  class="input-date__icon"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  width="24"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    clip-rule="evenodd"
+                    d="M6 6h2V5h8v1h2V5h2v3H4V5h2v1Zm-2 4v10h16V10H4Zm4-7h8V2h2v1h2a2 2 0 0 1 2 2v15a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h2V2h2v1Z"
+                    fill-rule="evenodd"
+                  />
+                </svg>
+              </div>
+            </label>
+          </div>
           <button
             class="button button_medium button_primary"
             type="button"
@@ -8989,7 +13228,7 @@ exports[`Range Picker With Dates 2`] = `
 exports[`Same period 1`] = `
 <DocumentFragment>
   <button
-    class="date-picker"
+    class="date-picker__trigger"
     title="date-picker"
     type="button"
   >
@@ -9030,7 +13269,7 @@ exports[`Same period 1`] = `
 exports[`Same period 2`] = `
 <DocumentFragment>
   <button
-    class="date-picker"
+    class="date-picker__trigger"
     title="date-picker"
     type="button"
   >
@@ -9071,13 +13310,13 @@ exports[`Same period 2`] = `
 exports[`Single With Dates 1`] = `
 <DocumentFragment>
   <div
-    class="dropdown"
+    class="date-picker"
   >
     <span
       class="popover__trigger"
     >
       <button
-        class="date-picker"
+        class="date-picker__trigger"
         title="date-picker"
         type="button"
       >
@@ -9120,13 +13359,13 @@ exports[`Single With Dates 1`] = `
 exports[`Single With Dates 2`] = `
 <DocumentFragment>
   <div
-    class="dropdown"
+    class="date-picker"
   >
     <span
       class="popover__trigger"
     >
       <button
-        class="date-picker"
+        class="date-picker__trigger"
         title="date-picker"
         type="button"
       >
@@ -9175,45 +13414,49 @@ exports[`Single With Dates 2`] = `
           <div
             class="date-picker__month-row"
           >
-            <button
-              class="date-picker__row-left"
-              type="button"
-            >
-              <svg
-                height="24"
-                viewBox="0 0 24 24"
-                width="24"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <path
-                  clip-rule="evenodd"
-                  d="m6.414 13 6.293 6.293-1.414 1.414L2.586 12l8.707-8.707 1.414 1.414L6.414 11H21v2H6.414Z"
-                  fill-rule="evenodd"
-                />
-              </svg>
-            </button>
             <div
-              class="date-picker__row-center"
+              class="date-picker__month-row-controls"
             >
-              июль 2023
-            </div>
-            <button
-              class="date-picker__row-right"
-              type="button"
-            >
-              <svg
-                height="24"
-                viewBox="0 0 24 24"
-                width="24"
-                xmlns="http://www.w3.org/2000/svg"
+              <button
+                class="date-picker__row-left"
+                type="button"
               >
-                <path
-                  clip-rule="evenodd"
-                  d="M17.586 13H3v-2h14.586l-6.293-6.293 1.414-1.414L21.414 12l-8.707 8.707-1.414-1.414L17.586 13Z"
-                  fill-rule="evenodd"
-                />
-              </svg>
-            </button>
+                <svg
+                  height="24"
+                  viewBox="0 0 24 24"
+                  width="24"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    clip-rule="evenodd"
+                    d="m6.414 13 6.293 6.293-1.414 1.414L2.586 12l8.707-8.707 1.414 1.414L6.414 11H21v2H6.414Z"
+                    fill-rule="evenodd"
+                  />
+                </svg>
+              </button>
+              <div
+                class="date-picker__row-center"
+              >
+                июль 2023
+              </div>
+              <button
+                class="date-picker__row-right"
+                type="button"
+              >
+                <svg
+                  height="24"
+                  viewBox="0 0 24 24"
+                  width="24"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    clip-rule="evenodd"
+                    d="M17.586 13H3v-2h14.586l-6.293-6.293 1.414-1.414L21.414 12l-8.707 8.707-1.414-1.414L17.586 13Z"
+                    fill-rule="evenodd"
+                  />
+                </svg>
+              </button>
+            </div>
           </div>
           <div
             class="date-picker__calendar-body"
@@ -9323,7 +13566,7 @@ exports[`Single With Dates 2`] = `
                   04
                 </button>
                 <button
-                  class="date-picker__date date-picker__date_border date-picker__date_today"
+                  class="date-picker__date date-picker__date_border"
                   type="button"
                 >
                   05
@@ -9335,7 +13578,7 @@ exports[`Single With Dates 2`] = `
                   06
                 </button>
                 <button
-                  class="date-picker__date date-picker__date_border"
+                  class="date-picker__date date-picker__date_border date-picker__date_today"
                   type="button"
                 >
                   07
