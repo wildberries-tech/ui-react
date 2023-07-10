@@ -467,10 +467,6 @@ export const DatePicker = ({
     };
 
     const onScrollToCurrentItem = () => {
-        if(props.isMobile) {
-            setIsMobileOpen(true);
-        }
-
         setTimeout(() => {
             const modal = document.getElementById('date-body');
 
@@ -489,6 +485,14 @@ export const DatePicker = ({
                 }
             }
         });
+    };
+
+    const onClickTrigger = () => {
+        if(props.isMobile) {
+            setIsMobileOpen(true);
+        }
+
+        onScrollToCurrentItem();
     };
 
     useEffect(() => {
@@ -744,7 +748,7 @@ export const DatePicker = ({
                 className={cn('date-picker__trigger', {
                     'date-picker__trigger_range': props.isDateRange
                 })}
-                onClick={onScrollToCurrentItem}
+                onClick={onClickTrigger}
             >
                 <InputText
                     disabled={props.readOnly}
