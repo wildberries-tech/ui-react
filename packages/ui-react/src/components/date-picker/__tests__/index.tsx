@@ -142,7 +142,7 @@ test('Default Min Max Dates', async () => {
     });
 });
 
-test('Default Min Max Dates', async () => {
+test('Default Min Max Dates Period', async () => {
     const { asFragment, getByTitle } = render(
         <DatePicker
             i18nConfig={{
