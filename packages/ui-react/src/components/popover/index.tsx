@@ -141,7 +141,7 @@ export const Popover = ({ trigger = 'click', triggerTagName = 'div', auto = true
             };
         }
 
-        const childrenElement = typeof props.children === 'function' ? props.children(isOpen, onClose) : props.children;
+        const childrenElement = typeof props.children === 'function' ? props.children(trigger === 'hover' ? isOver : isOpen, onClose) : props.children;
 
         if(isElement(childrenElement)) {
             return (
@@ -161,7 +161,7 @@ export const Popover = ({ trigger = 'click', triggerTagName = 'div', auto = true
                 children: childrenElement
             });
         }
-    }, [props.children, trigger, hoverProps, triggerProps, triggerTagName]);
+    }, [props.children, trigger, hoverProps, triggerProps, isOpen, isOver, triggerTagName]);
 
     const elArrow = useMemo(() => {
         if(props.arrow) {

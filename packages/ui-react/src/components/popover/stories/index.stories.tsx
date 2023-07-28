@@ -38,6 +38,18 @@ export const HoverAndOptionsHoverable: StoryObj<typeof META> = {
     }
 };
 
+export const HoverAndChildrenFunc: StoryObj<typeof META> = {
+    name: 'Ховер + Сhildren функция',
+    args: {
+        trigger : 'hover',
+        children: (isOpen, onClose) => {
+            console.info(isOpen, onClose);
+
+            return 'Children Function';
+        }
+    }
+};
+
 export const HoverAndOptionsHoverableOffset: StoryObj<typeof META> = {
     args: {
         trigger: 'hover',
