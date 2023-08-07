@@ -106,6 +106,7 @@ export const Button = forwardRef<HTMLButtonElement | null, IProps>(({ presetSize
             id={props.id}
             type={type}
             ref={ref}
+            // eslint-disable-next-line @typescript-eslint/prefer-nullish-coalescing
             disabled={props.isLoading || props.disabled}
             tabIndex={props.isLoading || props.disabled ? -1 : props.tabIndex}
             onFocus={props.onFocus}
