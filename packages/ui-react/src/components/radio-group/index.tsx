@@ -45,7 +45,7 @@ export const RadioGroup = ({ direction = 'row', ...props }: IProps) => {
             if(isElement(props.legend) || typeof props.legend === 'string') {
                 return (
                     <Text
-                        tagName="legend"
+                        parent="legend"
                         className={cn('radio-group__legend')}
                         children={props.legend}
                     />
@@ -55,7 +55,7 @@ export const RadioGroup = ({ direction = 'row', ...props }: IProps) => {
             if(!isElement(props.legend) && typeof props.legend === 'object') {
                 return (
                     <Text
-                        tagName="legend"
+                        parent="legend"
                         className={cn('radio-group__legend')}
                         {...props.legend as TLegendTypographyProps}
                     />

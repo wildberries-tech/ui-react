@@ -79,11 +79,11 @@ exports[`Legend 1`] = `
 <fieldset
   className="radio-group radio-group_row"
 >
-  <p
+  <legend
     className="typography typography_size-body typography_color-basic"
   >
     Legend
-  </p>
+  </legend>
   <label
     className="radio"
   >
@@ -159,7 +159,7 @@ exports[`Legend Object 1`] = `
 <fieldset
   className="radio-group radio-group_row"
 >
-  <p
+  <legend
     className="typography typography_size-caption typography_color-error"
   />
   <label
