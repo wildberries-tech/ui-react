@@ -2,6 +2,7 @@ import type { Meta, StoryObj } from '@storybook/react';
 
 import Typography from '../..';
 import module from '../../index.module.pcss';
+import { Button } from '../../../button';
 
 const META: Meta<typeof Typography.Text> = {
     title    : 'Components/Typography/Text',
@@ -22,6 +23,14 @@ export default META;
 export const TextLarge: StoryObj<typeof META> = {
     args: {
         presetSize: 'large',
+        parent: 'p',
+        children: 'Text large'
+    }
+};
+
+export const TagNameDeprecated: StoryObj<typeof META> = {
+    args: {
+        presetSize: 'large',
         tagName: 'p',
         children: 'Text large'
     }
@@ -30,7 +39,7 @@ export const TextLarge: StoryObj<typeof META> = {
 export const TextLargeBold: StoryObj<typeof META> = {
     args: {
         presetSize: 'large-bold',
-        tagName: 'p',
+        parent: 'p',
         children: 'Text large bold'
     }
 };
@@ -38,7 +47,7 @@ export const TextLargeBold: StoryObj<typeof META> = {
 export const TextBody: StoryObj<typeof META> = {
     args: {
         presetSize: 'body',
-        tagName: 'p',
+        parent: 'p',
         children: 'Text body'
     }
 };
@@ -46,7 +55,7 @@ export const TextBody: StoryObj<typeof META> = {
 export const TextBodyBold: StoryObj<typeof META> = {
     args: {
         presetSize: 'body-bold',
-        tagName: 'p',
+        parent: 'p',
         children: 'Text body bold'
     }
 };
@@ -54,7 +63,7 @@ export const TextBodyBold: StoryObj<typeof META> = {
 export const TextCaption: StoryObj<typeof META> = {
     args: {
         presetSize: 'caption',
-        tagName: 'p',
+        parent: 'p',
         children: 'Text caption'
     }
 };
@@ -62,7 +71,10 @@ export const TextCaption: StoryObj<typeof META> = {
 export const TextCaptionBold: StoryObj<typeof META> = {
     args: {
         presetSize: 'caption-bold',
-        tagName: 'p',
+        presetColor: 'inverse',
+        parent: Button,
+        type: 'button',
+        presetStyle: 'primary',
         children: 'Text caption bold'
     }
 };
