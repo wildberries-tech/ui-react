@@ -27,7 +27,7 @@ describe('Text', () => {
             const tree = renderer.create(
                 <Text
                     key={tag}
-                    parent={tag}
+                    tagName={tag}
                 >
                     {tag}
                 </Text>
@@ -43,24 +43,6 @@ describe('Text', () => {
         test(color, () => {
             const tree = renderer.create(
                 <Text
-                    key={color}
-                    presetColor={color}
-                >
-                    {color}
-                </Text>
-            ).toJSON();
-
-            expect(tree).toMatchSnapshot();
-        });
-    });
-});
-
-describe('Deprecated tagName', () => {
-    typographyColor.map((color) => {
-        test(color, () => {
-            const tree = renderer.create(
-                <Text
-                    tagName="p"
                     key={color}
                     presetColor={color}
                 >

@@ -23,7 +23,7 @@ export default META;
 export const TextLarge: StoryObj<typeof META> = {
     args: {
         presetSize: 'large',
-        parent: 'p',
+        tagName: 'p',
         children: 'Text large'
     }
 };
@@ -39,7 +39,7 @@ export const TagNameDeprecated: StoryObj<typeof META> = {
 export const TextLargeBold: StoryObj<typeof META> = {
     args: {
         presetSize: 'large-bold',
-        parent: 'p',
+        tagName: 'p',
         children: 'Text large bold'
     }
 };
@@ -47,7 +47,7 @@ export const TextLargeBold: StoryObj<typeof META> = {
 export const TextBody: StoryObj<typeof META> = {
     args: {
         presetSize: 'body',
-        parent: 'p',
+        tagName: 'p',
         children: 'Text body'
     }
 };
@@ -55,7 +55,7 @@ export const TextBody: StoryObj<typeof META> = {
 export const TextBodyBold: StoryObj<typeof META> = {
     args: {
         presetSize: 'body-bold',
-        parent: 'p',
+        tagName: 'p',
         children: 'Text body bold'
     }
 };
@@ -63,7 +63,7 @@ export const TextBodyBold: StoryObj<typeof META> = {
 export const TextCaption: StoryObj<typeof META> = {
     args: {
         presetSize: 'caption',
-        parent: 'p',
+        tagName: 'p',
         children: 'Text caption'
     }
 };
@@ -72,9 +72,11 @@ export const TextCaptionBold: StoryObj<typeof META> = {
     args: {
         presetSize: 'caption-bold',
         presetColor: 'inverse',
-        parent: Button,
-        type: 'button',
-        presetStyle: 'primary',
+        tagName: Button,
+        componentProps: {
+            type: 'button',
+            presetStyle: 'primary'
+        },
         children: 'Text caption bold'
     }
 };
