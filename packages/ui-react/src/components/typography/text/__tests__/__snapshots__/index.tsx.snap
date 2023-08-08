@@ -1,19 +1,19 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Text a 1`] = `
-<p
+<a
   className="typography typography_size-body typography_color-basic"
 >
   a
-</p>
+</a>
 `;
 
 exports[`Text b 1`] = `
-<p
+<b
   className="typography typography_size-body typography_color-basic"
 >
   b
-</p>
+</b>
 `;
 
 exports[`Text basic 1`] = `
@@ -81,11 +81,11 @@ exports[`Text disabled 1`] = `
 `;
 
 exports[`Text em 1`] = `
-<p
+<em
   className="typography typography_size-body typography_color-basic"
 >
   em
-</p>
+</em>
 `;
 
 exports[`Text error 1`] = `
@@ -105,11 +105,11 @@ exports[`Text headers 1`] = `
 `;
 
 exports[`Text i 1`] = `
-<p
+<i
   className="typography typography_size-body typography_color-basic"
 >
   i
-</p>
+</i>
 `;
 
 exports[`Text inherit 1`] = `
@@ -145,11 +145,11 @@ exports[`Text large-bold 1`] = `
 `;
 
 exports[`Text legend 1`] = `
-<p
+<legend
   className="typography typography_size-body typography_color-basic"
 >
   legend
-</p>
+</legend>
 `;
 
 exports[`Text link 1`] = `
@@ -177,19 +177,19 @@ exports[`Text secondary 1`] = `
 `;
 
 exports[`Text span 1`] = `
-<p
+<span
   className="typography typography_size-body typography_color-basic"
 >
   span
-</p>
+</span>
 `;
 
 exports[`Text strong 1`] = `
-<p
+<strong
   className="typography typography_size-body typography_color-basic"
 >
   strong
-</p>
+</strong>
 `;
 
 exports[`Text success 1`] = `

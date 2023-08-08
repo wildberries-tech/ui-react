@@ -27,7 +27,7 @@ describe('Text', () => {
             const tree = renderer.create(
                 <Text
                     key={tag}
-                    tagName={tag}
+                    parent={tag}
                 >
                     {tag}
                 </Text>

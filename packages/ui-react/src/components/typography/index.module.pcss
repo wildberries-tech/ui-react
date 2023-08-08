@@ -1,18 +1,10 @@
-:global {
+.typography {
 
-    h1,
-    h2,
-    h3,
-    h4,
-    h5,
-    h6,
-    p {
+    &:is(h1, h2, h3, h4, h5, h6, p) {
         margin: 0;
         padding: 0;
     }
-}
 
-.typography {
     --font-weight: 400;
     --font-weight-bold: 600;
     font-family: var(--font-family-primary);
