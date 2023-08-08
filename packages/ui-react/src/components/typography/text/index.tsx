@@ -51,7 +51,7 @@ export const Text = ({
 
     useEffect(() => {
         if(tagName) {
-            consoleFormat('Свойство `tagName` заменено на `parent`');
+            consoleFormat('Component: Text. Свойство `tagName` заменено на `parent`');
         }
     }, [tagName]);
 
