@@ -2011,7 +2011,7 @@ exports[`Date Range Is Mobile 2`] = `
               class="date-picker__dates-week"
             >
               <button
-                class="date-picker__date date-picker__date_border date-picker__date_today"
+                class="date-picker__date date-picker__date_border"
                 type="button"
               >
                 10
@@ -2295,7 +2295,7 @@ exports[`Date Range Is Mobile 2`] = `
                 07
               </button>
               <button
-                class="date-picker__date date-picker__date_border"
+                class="date-picker__date date-picker__date_border date-picker__date_today"
                 type="button"
               >
                 08
@@ -3850,7 +3850,7 @@ exports[`Datepicker Is Mobile 2`] = `
             <div
               class="date-picker__row-center"
             >
-              июль 2023
+              август 2023
             </div>
             <button
               class="date-picker__row-right"
@@ -3931,34 +3931,10 @@ exports[`Datepicker Is Mobile 2`] = `
               class="date-picker__dates-week"
             >
               <button
-                class="date-picker__date date-picker__date_muted"
-                type="button"
-              >
-                26
-              </button>
-              <button
-                class="date-picker__date date-picker__date_muted"
-                type="button"
-              >
-                27
-              </button>
-              <button
-                class="date-picker__date date-picker__date_muted"
-                type="button"
-              >
-                28
-              </button>
-              <button
-                class="date-picker__date date-picker__date_muted"
-                type="button"
-              >
-                29
-              </button>
-              <button
                 class="date-picker__date date-picker__date_muted date-picker__date_last-day"
                 type="button"
               >
-                30
+                31
               </button>
               <button
                 class="date-picker__date date-picker__date_border date-picker__date_first-day"
@@ -3972,10 +3948,6 @@ exports[`Datepicker Is Mobile 2`] = `
               >
                 02
               </button>
-            </div>
-            <div
-              class="date-picker__dates-week"
-            >
               <button
                 class="date-picker__date date-picker__date_border"
                 type="button"
@@ -4000,6 +3972,10 @@ exports[`Datepicker Is Mobile 2`] = `
               >
                 06
               </button>
+            </div>
+            <div
+              class="date-picker__dates-week"
+            >
               <button
                 class="date-picker__date date-picker__date_border"
                 type="button"
@@ -4007,7 +3983,7 @@ exports[`Datepicker Is Mobile 2`] = `
                 07
               </button>
               <button
-                class="date-picker__date date-picker__date_border"
+                class="date-picker__date date-picker__date_border date-picker__date_today"
                 type="button"
               >
                 08
@@ -4018,12 +3994,8 @@ exports[`Datepicker Is Mobile 2`] = `
               >
                 09
               </button>
-            </div>
-            <div
-              class="date-picker__dates-week"
-            >
               <button
-                class="date-picker__date date-picker__date_border date-picker__date_today"
+                class="date-picker__date date-picker__date_border"
                 type="button"
               >
                 10
@@ -4046,6 +4018,10 @@ exports[`Datepicker Is Mobile 2`] = `
               >
                 13
               </button>
+            </div>
+            <div
+              class="date-picker__dates-week"
+            >
               <button
                 class="date-picker__date date-picker__date_border"
                 type="button"
@@ -4064,10 +4040,6 @@ exports[`Datepicker Is Mobile 2`] = `
               >
                 16
               </button>
-            </div>
-            <div
-              class="date-picker__dates-week"
-            >
               <button
                 class="date-picker__date date-picker__date_border"
                 type="button"
@@ -4092,6 +4064,10 @@ exports[`Datepicker Is Mobile 2`] = `
               >
                 20
               </button>
+            </div>
+            <div
+              class="date-picker__dates-week"
+            >
               <button
                 class="date-picker__date date-picker__date_border"
                 type="button"
@@ -4110,10 +4086,6 @@ exports[`Datepicker Is Mobile 2`] = `
               >
                 23
               </button>
-            </div>
-            <div
-              class="date-picker__dates-week"
-            >
               <button
                 class="date-picker__date date-picker__date_border"
                 type="button"
@@ -4138,6 +4110,10 @@ exports[`Datepicker Is Mobile 2`] = `
               >
                 27
               </button>
+            </div>
+            <div
+              class="date-picker__dates-week"
+            >
               <button
                 class="date-picker__date date-picker__date_border"
                 type="button"
@@ -4156,10 +4132,6 @@ exports[`Datepicker Is Mobile 2`] = `
               >
                 30
               </button>
-            </div>
-            <div
-              class="date-picker__dates-week"
-            >
               <button
                 class="date-picker__date date-picker__date_border date-picker__date_last-day"
                 type="button"
@@ -4183,24 +4155,6 @@ exports[`Datepicker Is Mobile 2`] = `
                 type="button"
               >
                 03
-              </button>
-              <button
-                class="date-picker__date date-picker__date_muted"
-                type="button"
-              >
-                04
-              </button>
-              <button
-                class="date-picker__date date-picker__date_muted"
-                type="button"
-              >
-                05
-              </button>
-              <button
-                class="date-picker__date date-picker__date_muted"
-                type="button"
-              >
-                06
               </button>
             </div>
           </div>
@@ -4341,7 +4295,7 @@ exports[`Default Min Max Dates 2`] = `
               <div
                 class="date-picker__row-center"
               >
-                июль 2023
+                август 2023
               </div>
               <button
                 class="date-picker__row-right"
@@ -4412,34 +4366,10 @@ exports[`Default Min Max Dates 2`] = `
                 class="date-picker__dates-week"
               >
                 <button
-                  class="date-picker__date date-picker__date_muted"
-                  type="button"
-                >
-                  26
-                </button>
-                <button
-                  class="date-picker__date date-picker__date_muted"
-                  type="button"
-                >
-                  27
-                </button>
-                <button
-                  class="date-picker__date date-picker__date_muted"
-                  type="button"
-                >
-                  28
-                </button>
-                <button
-                  class="date-picker__date date-picker__date_muted"
-                  type="button"
-                >
-                  29
-                </button>
-                <button
                   class="date-picker__date date-picker__date_muted date-picker__date_last-day"
                   type="button"
                 >
-                  30
+                  31
                 </button>
                 <button
                   class="date-picker__date date-picker__date_border date-picker__date_first-day"
@@ -4453,10 +4383,6 @@ exports[`Default Min Max Dates 2`] = `
                 >
                   02
                 </button>
-              </div>
-              <div
-                class="date-picker__dates-week"
-              >
                 <button
                   class="date-picker__date date-picker__date_border"
                   type="button"
@@ -4481,6 +4407,10 @@ exports[`Default Min Max Dates 2`] = `
                 >
                   06
                 </button>
+              </div>
+              <div
+                class="date-picker__dates-week"
+              >
                 <button
                   class="date-picker__date date-picker__date_border"
                   type="button"
@@ -4488,7 +4418,7 @@ exports[`Default Min Max Dates 2`] = `
                   07
                 </button>
                 <button
-                  class="date-picker__date date-picker__date_border"
+                  class="date-picker__date date-picker__date_border date-picker__date_today"
                   type="button"
                 >
                   08
@@ -4499,12 +4429,8 @@ exports[`Default Min Max Dates 2`] = `
                 >
                   09
                 </button>
-              </div>
-              <div
-                class="date-picker__dates-week"
-              >
                 <button
-                  class="date-picker__date date-picker__date_border date-picker__date_today"
+                  class="date-picker__date date-picker__date_border"
                   type="button"
                 >
                   10
@@ -4527,6 +4453,10 @@ exports[`Default Min Max Dates 2`] = `
                 >
                   13
                 </button>
+              </div>
+              <div
+                class="date-picker__dates-week"
+              >
                 <button
                   class="date-picker__date date-picker__date_border"
                   type="button"
@@ -4545,10 +4475,6 @@ exports[`Default Min Max Dates 2`] = `
                 >
                   16
                 </button>
-              </div>
-              <div
-                class="date-picker__dates-week"
-              >
                 <button
                   class="date-picker__date date-picker__date_border"
                   type="button"
@@ -4573,6 +4499,10 @@ exports[`Default Min Max Dates 2`] = `
                 >
                   20
                 </button>
+              </div>
+              <div
+                class="date-picker__dates-week"
+              >
                 <button
                   class="date-picker__date date-picker__date_border"
                   type="button"
@@ -4591,10 +4521,6 @@ exports[`Default Min Max Dates 2`] = `
                 >
                   23
                 </button>
-              </div>
-              <div
-                class="date-picker__dates-week"
-              >
                 <button
                   class="date-picker__date date-picker__date_border"
                   type="button"
@@ -4619,6 +4545,10 @@ exports[`Default Min Max Dates 2`] = `
                 >
                   27
                 </button>
+              </div>
+              <div
+                class="date-picker__dates-week"
+              >
                 <button
                   class="date-picker__date date-picker__date_border"
                   type="button"
@@ -4637,10 +4567,6 @@ exports[`Default Min Max Dates 2`] = `
                 >
                   30
                 </button>
-              </div>
-              <div
-                class="date-picker__dates-week"
-              >
                 <button
                   class="date-picker__date date-picker__date_border date-picker__date_last-day"
                   type="button"
@@ -4664,24 +4590,6 @@ exports[`Default Min Max Dates 2`] = `
                   type="button"
                 >
                   03
-                </button>
-                <button
-                  class="date-picker__date date-picker__date_muted"
-                  type="button"
-                >
-                  04
-                </button>
-                <button
-                  class="date-picker__date date-picker__date_muted"
-                  type="button"
-                >
-                  05
-                </button>
-                <button
-                  class="date-picker__date date-picker__date_muted"
-                  type="button"
-                >
-                  06
                 </button>
               </div>
             </div>
@@ -4823,7 +4731,7 @@ exports[`Default Min Max Dates 4`] = `
               <div
                 class="date-picker__row-center"
               >
-                июль 2023
+                август 2023
               </div>
               <button
                 class="date-picker__row-right"
@@ -4894,34 +4802,10 @@ exports[`Default Min Max Dates 4`] = `
                 class="date-picker__dates-week"
               >
                 <button
-                  class="date-picker__date date-picker__date_muted date-picker__date_disabled"
-                  type="button"
-                >
-                  26
-                </button>
-                <button
-                  class="date-picker__date date-picker__date_muted date-picker__date_disabled"
-                  type="button"
-                >
-                  27
-                </button>
-                <button
-                  class="date-picker__date date-picker__date_muted date-picker__date_disabled"
-                  type="button"
-                >
-                  28
-                </button>
-                <button
-                  class="date-picker__date date-picker__date_muted date-picker__date_disabled"
-                  type="button"
-                >
-                  29
-                </button>
-                <button
                   class="date-picker__date date-picker__date_muted date-picker__date_last-day date-picker__date_disabled"
                   type="button"
                 >
-                  30
+                  31
                 </button>
                 <button
                   class="date-picker__date date-picker__date_border date-picker__date_first-day date-picker__date_disabled"
@@ -4935,10 +4819,6 @@ exports[`Default Min Max Dates 4`] = `
                 >
                   02
                 </button>
-              </div>
-              <div
-                class="date-picker__dates-week"
-              >
                 <button
                   class="date-picker__date date-picker__date_border date-picker__date_disabled"
                   type="button"
@@ -4963,6 +4843,10 @@ exports[`Default Min Max Dates 4`] = `
                 >
                   06
                 </button>
+              </div>
+              <div
+                class="date-picker__dates-week"
+              >
                 <button
                   class="date-picker__date date-picker__date_border date-picker__date_disabled"
                   type="button"
@@ -4970,23 +4854,19 @@ exports[`Default Min Max Dates 4`] = `
                   07
                 </button>
                 <button
-                  class="date-picker__date date-picker__date_border date-picker__date_disabled"
+                  class="date-picker__date date-picker__date_border date-picker__date_today"
                   type="button"
                 >
                   08
                 </button>
                 <button
-                  class="date-picker__date date-picker__date_border date-picker__date_disabled"
+                  class="date-picker__date date-picker__date_border"
                   type="button"
                 >
                   09
                 </button>
-              </div>
-              <div
-                class="date-picker__dates-week"
-              >
                 <button
-                  class="date-picker__date date-picker__date_border date-picker__date_today"
+                  class="date-picker__date date-picker__date_border"
                   type="button"
                 >
                   10
@@ -5009,6 +4889,10 @@ exports[`Default Min Max Dates 4`] = `
                 >
                   13
                 </button>
+              </div>
+              <div
+                class="date-picker__dates-week"
+              >
                 <button
                   class="date-picker__date date-picker__date_border"
                   type="button"
@@ -5027,10 +4911,6 @@ exports[`Default Min Max Dates 4`] = `
                 >
                   16
                 </button>
-              </div>
-              <div
-                class="date-picker__dates-week"
-              >
                 <button
                   class="date-picker__date date-picker__date_border"
                   type="button"
@@ -5055,6 +4935,10 @@ exports[`Default Min Max Dates 4`] = `
                 >
                   20
                 </button>
+              </div>
+              <div
+                class="date-picker__dates-week"
+              >
                 <button
                   class="date-picker__date date-picker__date_border"
                   type="button"
@@ -5073,10 +4957,6 @@ exports[`Default Min Max Dates 4`] = `
                 >
                   23
                 </button>
-              </div>
-              <div
-                class="date-picker__dates-week"
-              >
                 <button
                   class="date-picker__date date-picker__date_border"
                   type="button"
@@ -5101,6 +4981,10 @@ exports[`Default Min Max Dates 4`] = `
                 >
                   27
                 </button>
+              </div>
+              <div
+                class="date-picker__dates-week"
+              >
                 <button
                   class="date-picker__date date-picker__date_border"
                   type="button"
@@ -5119,10 +5003,6 @@ exports[`Default Min Max Dates 4`] = `
                 >
                   30
                 </button>
-              </div>
-              <div
-                class="date-picker__dates-week"
-              >
                 <button
                   class="date-picker__date date-picker__date_border date-picker__date_last-day"
                   type="button"
@@ -5146,24 +5026,6 @@ exports[`Default Min Max Dates 4`] = `
                   type="button"
                 >
                   03
-                </button>
-                <button
-                  class="date-picker__date date-picker__date_muted"
-                  type="button"
-                >
-                  04
-                </button>
-                <button
-                  class="date-picker__date date-picker__date_muted"
-                  type="button"
-                >
-                  05
-                </button>
-                <button
-                  class="date-picker__date date-picker__date_muted"
-                  type="button"
-                >
-                  06
                 </button>
               </div>
             </div>
@@ -5305,7 +5167,7 @@ exports[`Default Min Max Dates Period 2`] = `
               <div
                 class="date-picker__row-center"
               >
-                июль 2023
+                август 2023
               </div>
               <button
                 class="date-picker__row-right"
@@ -5376,34 +5238,10 @@ exports[`Default Min Max Dates Period 2`] = `
                 class="date-picker__dates-week"
               >
                 <button
-                  class="date-picker__date date-picker__date_muted"
-                  type="button"
-                >
-                  26
-                </button>
-                <button
-                  class="date-picker__date date-picker__date_muted"
-                  type="button"
-                >
-                  27
-                </button>
-                <button
-                  class="date-picker__date date-picker__date_muted"
-                  type="button"
-                >
-                  28
-                </button>
-                <button
-                  class="date-picker__date date-picker__date_muted"
-                  type="button"
-                >
-                  29
-                </button>
-                <button
                   class="date-picker__date date-picker__date_muted date-picker__date_last-day"
                   type="button"
                 >
-                  30
+                  31
                 </button>
                 <button
                   class="date-picker__date date-picker__date_border date-picker__date_first-day"
@@ -5417,10 +5255,6 @@ exports[`Default Min Max Dates Period 2`] = `
                 >
                   02
                 </button>
-              </div>
-              <div
-                class="date-picker__dates-week"
-              >
                 <button
                   class="date-picker__date date-picker__date_border"
                   type="button"
@@ -5445,6 +5279,10 @@ exports[`Default Min Max Dates Period 2`] = `
                 >
                   06
                 </button>
+              </div>
+              <div
+                class="date-picker__dates-week"
+              >
                 <button
                   class="date-picker__date date-picker__date_border"
                   type="button"
@@ -5452,7 +5290,7 @@ exports[`Default Min Max Dates Period 2`] = `
                   07
                 </button>
                 <button
-                  class="date-picker__date date-picker__date_border"
+                  class="date-picker__date date-picker__date_border date-picker__date_today"
                   type="button"
                 >
                   08
@@ -5463,12 +5301,8 @@ exports[`Default Min Max Dates Period 2`] = `
                 >
                   09
                 </button>
-              </div>
-              <div
-                class="date-picker__dates-week"
-              >
                 <button
-                  class="date-picker__date date-picker__date_border date-picker__date_today"
+                  class="date-picker__date date-picker__date_border"
                   type="button"
                 >
                   10
@@ -5491,6 +5325,10 @@ exports[`Default Min Max Dates Period 2`] = `
                 >
                   13
                 </button>
+              </div>
+              <div
+                class="date-picker__dates-week"
+              >
                 <button
                   class="date-picker__date date-picker__date_border"
                   type="button"
@@ -5509,10 +5347,6 @@ exports[`Default Min Max Dates Period 2`] = `
                 >
                   16
                 </button>
-              </div>
-              <div
-                class="date-picker__dates-week"
-              >
                 <button
                   class="date-picker__date date-picker__date_border"
                   type="button"
@@ -5537,6 +5371,10 @@ exports[`Default Min Max Dates Period 2`] = `
                 >
                   20
                 </button>
+              </div>
+              <div
+                class="date-picker__dates-week"
+              >
                 <button
                   class="date-picker__date date-picker__date_border"
                   type="button"
@@ -5555,10 +5393,6 @@ exports[`Default Min Max Dates Period 2`] = `
                 >
                   23
                 </button>
-              </div>
-              <div
-                class="date-picker__dates-week"
-              >
                 <button
                   class="date-picker__date date-picker__date_border"
                   type="button"
@@ -5583,6 +5417,10 @@ exports[`Default Min Max Dates Period 2`] = `
                 >
                   27
                 </button>
+              </div>
+              <div
+                class="date-picker__dates-week"
+              >
                 <button
                   class="date-picker__date date-picker__date_border"
                   type="button"
@@ -5601,10 +5439,6 @@ exports[`Default Min Max Dates Period 2`] = `
                 >
                   30
                 </button>
-              </div>
-              <div
-                class="date-picker__dates-week"
-              >
                 <button
                   class="date-picker__date date-picker__date_border date-picker__date_last-day"
                   type="button"
@@ -5628,24 +5462,6 @@ exports[`Default Min Max Dates Period 2`] = `
                   type="button"
                 >
                   03
-                </button>
-                <button
-                  class="date-picker__date date-picker__date_muted"
-                  type="button"
-                >
-                  04
-                </button>
-                <button
-                  class="date-picker__date date-picker__date_muted"
-                  type="button"
-                >
-                  05
-                </button>
-                <button
-                  class="date-picker__date date-picker__date_muted"
-                  type="button"
-                >
-                  06
                 </button>
               </div>
             </div>
@@ -7767,7 +7583,7 @@ exports[`Range Picker 2`] = `
                 class="date-picker__dates-week"
               >
                 <button
-                  class="date-picker__date date-picker__date_border date-picker__date_today"
+                  class="date-picker__date date-picker__date_border"
                   type="button"
                 >
                   10
@@ -8051,7 +7867,7 @@ exports[`Range Picker 2`] = `
                   07
                 </button>
                 <button
-                  class="date-picker__date date-picker__date_border"
+                  class="date-picker__date date-picker__date_border date-picker__date_today"
                   type="button"
                 >
                   08
@@ -11505,7 +11321,7 @@ exports[`Range Picker With Dates 2`] = `
                 class="date-picker__dates-week"
               >
                 <button
-                  class="date-picker__date date-picker__date_border date-picker__date_today"
+                  class="date-picker__date date-picker__date_border"
                   type="button"
                 >
                   10
@@ -11789,7 +11605,7 @@ exports[`Range Picker With Dates 2`] = `
                   07
                 </button>
                 <button
-                  class="date-picker__date date-picker__date_border"
+                  class="date-picker__date date-picker__date_border date-picker__date_today"
                   type="button"
                 >
                   08
@@ -13437,7 +13253,7 @@ exports[`Single With Dates 2`] = `
               <div
                 class="date-picker__row-center"
               >
-                июль 2023
+                август 2023
               </div>
               <button
                 class="date-picker__row-right"
@@ -13508,34 +13324,10 @@ exports[`Single With Dates 2`] = `
                 class="date-picker__dates-week"
               >
                 <button
-                  class="date-picker__date date-picker__date_muted"
-                  type="button"
-                >
-                  26
-                </button>
-                <button
-                  class="date-picker__date date-picker__date_muted"
-                  type="button"
-                >
-                  27
-                </button>
-                <button
-                  class="date-picker__date date-picker__date_muted"
-                  type="button"
-                >
-                  28
-                </button>
-                <button
-                  class="date-picker__date date-picker__date_muted"
-                  type="button"
-                >
-                  29
-                </button>
-                <button
                   class="date-picker__date date-picker__date_muted date-picker__date_last-day"
                   type="button"
                 >
-                  30
+                  31
                 </button>
                 <button
                   class="date-picker__date date-picker__date_border date-picker__date_first-day"
@@ -13549,10 +13341,6 @@ exports[`Single With Dates 2`] = `
                 >
                   02
                 </button>
-              </div>
-              <div
-                class="date-picker__dates-week"
-              >
                 <button
                   class="date-picker__date date-picker__date_border"
                   type="button"
@@ -13577,6 +13365,10 @@ exports[`Single With Dates 2`] = `
                 >
                   06
                 </button>
+              </div>
+              <div
+                class="date-picker__dates-week"
+              >
                 <button
                   class="date-picker__date date-picker__date_border"
                   type="button"
@@ -13584,7 +13376,7 @@ exports[`Single With Dates 2`] = `
                   07
                 </button>
                 <button
-                  class="date-picker__date date-picker__date_border"
+                  class="date-picker__date date-picker__date_border date-picker__date_today"
                   type="button"
                 >
                   08
@@ -13595,12 +13387,8 @@ exports[`Single With Dates 2`] = `
                 >
                   09
                 </button>
-              </div>
-              <div
-                class="date-picker__dates-week"
-              >
                 <button
-                  class="date-picker__date date-picker__date_border date-picker__date_today"
+                  class="date-picker__date date-picker__date_border"
                   type="button"
                 >
                   10
@@ -13623,6 +13411,10 @@ exports[`Single With Dates 2`] = `
                 >
                   13
                 </button>
+              </div>
+              <div
+                class="date-picker__dates-week"
+              >
                 <button
                   class="date-picker__date date-picker__date_border"
                   type="button"
@@ -13641,10 +13433,6 @@ exports[`Single With Dates 2`] = `
                 >
                   16
                 </button>
-              </div>
-              <div
-                class="date-picker__dates-week"
-              >
                 <button
                   class="date-picker__date date-picker__date_border"
                   type="button"
@@ -13669,6 +13457,10 @@ exports[`Single With Dates 2`] = `
                 >
                   20
                 </button>
+              </div>
+              <div
+                class="date-picker__dates-week"
+              >
                 <button
                   class="date-picker__date date-picker__date_border"
                   type="button"
@@ -13687,10 +13479,6 @@ exports[`Single With Dates 2`] = `
                 >
                   23
                 </button>
-              </div>
-              <div
-                class="date-picker__dates-week"
-              >
                 <button
                   class="date-picker__date date-picker__date_border"
                   type="button"
@@ -13715,6 +13503,10 @@ exports[`Single With Dates 2`] = `
                 >
                   27
                 </button>
+              </div>
+              <div
+                class="date-picker__dates-week"
+              >
                 <button
                   class="date-picker__date date-picker__date_border"
                   type="button"
@@ -13733,10 +13525,6 @@ exports[`Single With Dates 2`] = `
                 >
                   30
                 </button>
-              </div>
-              <div
-                class="date-picker__dates-week"
-              >
                 <button
                   class="date-picker__date date-picker__date_border date-picker__date_last-day"
                   type="button"
@@ -13760,24 +13548,6 @@ exports[`Single With Dates 2`] = `
                   type="button"
                 >
                   03
-                </button>
-                <button
-                  class="date-picker__date date-picker__date_muted"
-                  type="button"
-                >
-                  04
-                </button>
-                <button
-                  class="date-picker__date date-picker__date_muted"
-                  type="button"
-                >
-                  05
-                </button>
-                <button
-                  class="date-picker__date date-picker__date_muted"
-                  type="button"
-                >
-                  06
                 </button>
               </div>
             </div>

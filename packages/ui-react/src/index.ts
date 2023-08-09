@@ -37,7 +37,7 @@ export { Counter, type IProps as IPropsCounter } from './components/counter';
 export { Tags, type IProps as IPropsTags } from './components/tags';
 export { Switch, type IProps as IPropsSwitch } from './components/switch';
 export { Title, type IProps as IPropsTypographyTitle } from './components/typography/title';
-export { Text, type IProps as IPropsTypographyText } from './components/typography/text';
+export { Text, type TProps as IPropsTypographyText } from './components/typography/text';
 export { Tooltip, type IProps as IPropsTooltip } from './components/tooltip';
 export { Dropdown, type IProps as IPropsDropdown } from './components/dropdown';
 export { DropdownOption, type IProps as IPropsDropdownOption } from './components/dropdown/components/option';

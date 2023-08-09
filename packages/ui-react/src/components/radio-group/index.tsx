@@ -2,7 +2,7 @@ import React, { FieldsetHTMLAttributes, ReactNode, useMemo } from 'react';
 import { isElement } from 'react-is';
 
 import { TStyle, useClassnames } from '../../hooks/use-classnames';
-import { Text, IProps as ITextProps } from '../typography/text';
+import { Text, TProps as ITextProps } from '../typography/text';
 
 import style from './index.module.pcss';
 

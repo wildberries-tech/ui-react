@@ -2,6 +2,7 @@ import type { Meta, StoryObj } from '@storybook/react';
 
 import Typography from '../..';
 import module from '../../index.module.pcss';
+import { Button } from '../../../button';
 
 const META: Meta<typeof Typography.Text> = {
     title    : 'Components/Typography/Text',
@@ -20,6 +21,14 @@ const META: Meta<typeof Typography.Text> = {
 export default META;
 
 export const TextLarge: StoryObj<typeof META> = {
+    args: {
+        presetSize: 'large',
+        tagName: 'p',
+        children: 'Text large'
+    }
+};
+
+export const TagNameDeprecated: StoryObj<typeof META> = {
     args: {
         presetSize: 'large',
         tagName: 'p',
@@ -62,7 +71,12 @@ export const TextCaption: StoryObj<typeof META> = {
 export const TextCaptionBold: StoryObj<typeof META> = {
     args: {
         presetSize: 'caption-bold',
-        tagName: 'p',
+        presetColor: 'inverse',
+        tagName: Button,
+        componentProps: {
+            type: 'button',
+            presetStyle: 'primary'
+        },
         children: 'Text caption bold'
     }
 };
