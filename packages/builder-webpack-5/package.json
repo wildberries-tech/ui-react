@@ -1,6 +1,6 @@
 {
   "name": "@wb-tech/builder-webpack-5",
-  "version": "0.1.44",
+  "version": "0.1.45",
   "description": "",
   "main": "index.js",
   "scripts": {
