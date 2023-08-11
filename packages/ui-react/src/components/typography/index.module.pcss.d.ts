@@ -15,6 +15,7 @@ interface Stylesheet {
     'typography_color-secondary': string
     'typography_color-success': string
     'typography_color-warning': string
+    'typography_no-spacing': string
     'typography_size-body': string
     'typography_size-body-bold': string
     'typography_size-caption': string
