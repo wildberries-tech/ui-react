@@ -47,7 +47,8 @@ export const Text = ({
     const cn = useClassnames(style, className, true);
     const textClassName = cn('typography', {
         [`typography_size-${presetSize}`]: presetSize,
-        [`typography_color-${presetColor}`]: presetColor
+        [`typography_color-${presetColor}`]: presetColor,
+        'typography_no-spacing': typeof tagName === 'string'
     });
 
     if(typeof tagName === 'string') {
@@ -59,6 +60,7 @@ export const Text = ({
 
     return createElement(tagName, {
         ...props.componentProps,
+        children: props.children,
         className: textClassName
     });
 };

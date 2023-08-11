@@ -13,7 +13,7 @@ exports[`Default 1`] = `
     type="radio"
   />
   <p
-    className="typography typography_size-body typography_color-basic"
+    className="typography typography_size-body typography_color-basic typography_no-spacing"
   />
 </label>
 `;
@@ -32,7 +32,7 @@ exports[`Default Checked 1`] = `
     type="radio"
   />
   <p
-    className="typography typography_size-body typography_color-basic"
+    className="typography typography_size-body typography_color-basic typography_no-spacing"
   />
 </label>
 `;
@@ -52,7 +52,7 @@ exports[`Default Checked Disabled 1`] = `
     type="radio"
   />
   <p
-    className="typography typography_size-body typography_color-basic"
+    className="typography typography_size-body typography_color-basic typography_no-spacing"
   />
 </label>
 `;
@@ -71,7 +71,7 @@ exports[`Disabled 1`] = `
     type="radio"
   />
   <p
-    className="typography typography_size-body typography_color-basic"
+    className="typography typography_size-body typography_color-basic typography_no-spacing"
   />
 </label>
 `;
@@ -89,7 +89,7 @@ exports[`With Description 1`] = `
     type="radio"
   />
   <p
-    className="typography typography_size-body typography_color-basic"
+    className="typography typography_size-body typography_color-basic typography_no-spacing"
   />
   <span
     className="radio__description"
@@ -114,7 +114,7 @@ exports[`With Id 1`] = `
     type="radio"
   />
   <p
-    className="typography typography_size-body typography_color-basic"
+    className="typography typography_size-body typography_color-basic typography_no-spacing"
   />
 </label>
 `;

@@ -3,6 +3,7 @@ import * as renderer from 'react-test-renderer';
 
 import { Text, typographyTextSize, typographyTextTags } from '..';
 import { typographyColor } from '../../types';
+import { Button } from '../../../button';
 
 describe('Text', () => {
     typographyTextSize.map((size) => {
@@ -43,6 +44,24 @@ describe('Text', () => {
         test(color, () => {
             const tree = renderer.create(
                 <Text
+                    key={color}
+                    presetColor={color}
+                >
+                    {color}
+                </Text>
+            ).toJSON();
+
+            expect(tree).toMatchSnapshot();
+        });
+    });
+});
+
+describe('Component as prop', () => {
+    typographyColor.map((color) => {
+        test(color, () => {
+            const tree = renderer.create(
+                <Text
+                    tagName={Button}
                     key={color}
                     presetColor={color}
                 >
