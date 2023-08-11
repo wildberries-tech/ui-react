@@ -19,7 +19,7 @@ exports[`Clicks on elements 1`] = `
             class="pagination__dropdown-trigger"
           >
             <p
-              class="typography typography_size-large typography_color-basic"
+              class="typography typography_size-large typography_color-basic typography_no-spacing"
             >
               10
             </p>
@@ -165,7 +165,7 @@ exports[`Clicks on elements 2`] = `
             class="pagination__dropdown-trigger"
           >
             <p
-              class="typography typography_size-large typography_color-basic"
+              class="typography typography_size-large typography_color-basic typography_no-spacing"
             >
               50
             </p>
@@ -336,7 +336,7 @@ exports[`Combined trigger 1`] = `
               class="pagination__dropdown-trigger pagination__dropdown-trigger_combined"
             >
               <p
-                class="typography typography_size-large typography_color-basic"
+                class="typography typography_size-large typography_color-basic typography_no-spacing"
               >
                 10
               </p>
@@ -398,7 +398,7 @@ exports[`Combined trigger 2`] = `
               class="pagination__dropdown-trigger pagination__dropdown-trigger_combined"
             >
               <p
-                class="typography typography_size-large typography_color-basic"
+                class="typography typography_size-large typography_color-basic typography_no-spacing"
               >
                 10
               </p>
@@ -460,7 +460,7 @@ exports[`Combined trigger column 1`] = `
               class="pagination__dropdown-trigger pagination__dropdown-trigger_combined"
             >
               <p
-                class="typography typography_size-large typography_color-basic"
+                class="typography typography_size-large typography_color-basic typography_no-spacing"
               >
                 10
               </p>
@@ -522,7 +522,7 @@ exports[`Combined trigger column 2`] = `
               class="pagination__dropdown-trigger pagination__dropdown-trigger_combined"
             >
               <p
-                class="typography typography_size-large typography_color-basic"
+                class="typography typography_size-large typography_color-basic typography_no-spacing"
               >
                 10
               </p>
@@ -565,7 +565,7 @@ exports[`Combined trigger column 2`] = `
 exports[`Combined trigger column input 1`] = `
 <DocumentFragment>
   <p
-    class="typography typography_size-body typography_color-error"
+    class="typography typography_size-body typography_color-error typography_no-spacing"
   >
     Для свойства showPageInput обязательно необходимо указать i18n.placeholder
   </p>
@@ -575,7 +575,7 @@ exports[`Combined trigger column input 1`] = `
 exports[`Combined trigger column input 2`] = `
 <DocumentFragment>
   <p
-    class="typography typography_size-body typography_color-error"
+    class="typography typography_size-body typography_color-error typography_no-spacing"
   >
     Для свойства showPageInput обязательно необходимо указать i18n.placeholder
   </p>
@@ -601,7 +601,7 @@ exports[`Default use 1`] = `
             class="pagination__dropdown-trigger"
           >
             <p
-              class="typography typography_size-large typography_color-basic"
+              class="typography typography_size-large typography_color-basic typography_no-spacing"
             >
               10
             </p>
@@ -659,7 +659,7 @@ exports[`Default use 2`] = `
             class="pagination__dropdown-trigger"
           >
             <p
-              class="typography typography_size-large typography_color-basic"
+              class="typography typography_size-large typography_color-basic typography_no-spacing"
             >
               10
             </p>
@@ -717,7 +717,7 @@ exports[`Many items 1`] = `
             class="pagination__dropdown-trigger"
           >
             <p
-              class="typography typography_size-large typography_color-basic"
+              class="typography typography_size-large typography_color-basic typography_no-spacing"
             >
               10
             </p>
@@ -846,7 +846,7 @@ exports[`Many items 2`] = `
             class="pagination__dropdown-trigger"
           >
             <p
-              class="typography typography_size-large typography_color-basic"
+              class="typography typography_size-large typography_color-basic typography_no-spacing"
             >
               10
             </p>
@@ -975,7 +975,7 @@ exports[`Many items with input 1`] = `
             class="pagination__dropdown-trigger"
           >
             <p
-              class="typography typography_size-large typography_color-basic"
+              class="typography typography_size-large typography_color-basic typography_no-spacing"
             >
               10
             </p>
@@ -1121,7 +1121,7 @@ exports[`Many items with input 2`] = `
             class="pagination__dropdown-trigger"
           >
             <p
-              class="typography typography_size-large typography_color-basic"
+              class="typography typography_size-large typography_color-basic typography_no-spacing"
             >
               10
             </p>
@@ -1251,7 +1251,7 @@ exports[`Many items with input 2`] = `
 exports[`Throw error 1`] = `
 <DocumentFragment>
   <p
-    class="typography typography_size-body typography_color-error"
+    class="typography typography_size-body typography_color-error typography_no-spacing"
   >
     Для свойства showPageInput обязательно необходимо указать i18n.placeholder
   </p>
@@ -1261,7 +1261,7 @@ exports[`Throw error 1`] = `
 exports[`Throw error 2`] = `
 <DocumentFragment>
   <p
-    class="typography typography_size-body typography_color-error"
+    class="typography typography_size-body typography_color-error typography_no-spacing"
   >
     Для свойства showPageInput обязательно необходимо указать i18n.placeholder
   </p>
@@ -1287,7 +1287,7 @@ exports[`Zero pages 1`] = `
             class="pagination__dropdown-trigger"
           >
             <p
-              class="typography typography_size-large typography_color-basic"
+              class="typography typography_size-large typography_color-basic typography_no-spacing"
             >
               0
             </p>
@@ -1362,7 +1362,7 @@ exports[`Zero pages 2`] = `
             class="pagination__dropdown-trigger"
           >
             <p
-              class="typography typography_size-large typography_color-basic"
+              class="typography typography_size-large typography_color-basic typography_no-spacing"
             >
               0
             </p>

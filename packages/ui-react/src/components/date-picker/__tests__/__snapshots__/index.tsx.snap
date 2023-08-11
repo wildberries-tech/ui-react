@@ -2295,7 +2295,7 @@ exports[`Date Range Is Mobile 2`] = `
                 07
               </button>
               <button
-                class="date-picker__date date-picker__date_border date-picker__date_today"
+                class="date-picker__date date-picker__date_border"
                 type="button"
               >
                 08
@@ -2313,7 +2313,7 @@ exports[`Date Range Is Mobile 2`] = `
                 10
               </button>
               <button
-                class="date-picker__date date-picker__date_border"
+                class="date-picker__date date-picker__date_border date-picker__date_today"
                 type="button"
               >
                 11
@@ -3983,7 +3983,7 @@ exports[`Datepicker Is Mobile 2`] = `
                 07
               </button>
               <button
-                class="date-picker__date date-picker__date_border date-picker__date_today"
+                class="date-picker__date date-picker__date_border"
                 type="button"
               >
                 08
@@ -4001,7 +4001,7 @@ exports[`Datepicker Is Mobile 2`] = `
                 10
               </button>
               <button
-                class="date-picker__date date-picker__date_border"
+                class="date-picker__date date-picker__date_border date-picker__date_today"
                 type="button"
               >
                 11
@@ -4418,7 +4418,7 @@ exports[`Default Min Max Dates 2`] = `
                   07
                 </button>
                 <button
-                  class="date-picker__date date-picker__date_border date-picker__date_today"
+                  class="date-picker__date date-picker__date_border"
                   type="button"
                 >
                   08
@@ -4436,7 +4436,7 @@ exports[`Default Min Max Dates 2`] = `
                   10
                 </button>
                 <button
-                  class="date-picker__date date-picker__date_border"
+                  class="date-picker__date date-picker__date_border date-picker__date_today"
                   type="button"
                 >
                   11
@@ -4854,25 +4854,25 @@ exports[`Default Min Max Dates 4`] = `
                   07
                 </button>
                 <button
-                  class="date-picker__date date-picker__date_border date-picker__date_today"
+                  class="date-picker__date date-picker__date_border date-picker__date_disabled"
                   type="button"
                 >
                   08
                 </button>
                 <button
-                  class="date-picker__date date-picker__date_border"
+                  class="date-picker__date date-picker__date_border date-picker__date_disabled"
                   type="button"
                 >
                   09
                 </button>
                 <button
-                  class="date-picker__date date-picker__date_border"
+                  class="date-picker__date date-picker__date_border date-picker__date_disabled"
                   type="button"
                 >
                   10
                 </button>
                 <button
-                  class="date-picker__date date-picker__date_border"
+                  class="date-picker__date date-picker__date_border date-picker__date_today"
                   type="button"
                 >
                   11
@@ -5290,7 +5290,7 @@ exports[`Default Min Max Dates Period 2`] = `
                   07
                 </button>
                 <button
-                  class="date-picker__date date-picker__date_border date-picker__date_today"
+                  class="date-picker__date date-picker__date_border"
                   type="button"
                 >
                   08
@@ -5308,7 +5308,7 @@ exports[`Default Min Max Dates Period 2`] = `
                   10
                 </button>
                 <button
-                  class="date-picker__date date-picker__date_border"
+                  class="date-picker__date date-picker__date_border date-picker__date_today"
                   type="button"
                 >
                   11
@@ -7867,7 +7867,7 @@ exports[`Range Picker 2`] = `
                   07
                 </button>
                 <button
-                  class="date-picker__date date-picker__date_border date-picker__date_today"
+                  class="date-picker__date date-picker__date_border"
                   type="button"
                 >
                   08
@@ -7885,7 +7885,7 @@ exports[`Range Picker 2`] = `
                   10
                 </button>
                 <button
-                  class="date-picker__date date-picker__date_border"
+                  class="date-picker__date date-picker__date_border date-picker__date_today"
                   type="button"
                 >
                   11
@@ -11605,7 +11605,7 @@ exports[`Range Picker With Dates 2`] = `
                   07
                 </button>
                 <button
-                  class="date-picker__date date-picker__date_border date-picker__date_today"
+                  class="date-picker__date date-picker__date_border"
                   type="button"
                 >
                   08
@@ -11623,7 +11623,7 @@ exports[`Range Picker With Dates 2`] = `
                   10
                 </button>
                 <button
-                  class="date-picker__date date-picker__date_border"
+                  class="date-picker__date date-picker__date_border date-picker__date_today"
                   type="button"
                 >
                   11
@@ -13376,7 +13376,7 @@ exports[`Single With Dates 2`] = `
                   07
                 </button>
                 <button
-                  class="date-picker__date date-picker__date_border date-picker__date_today"
+                  class="date-picker__date date-picker__date_border"
                   type="button"
                 >
                   08
@@ -13394,7 +13394,7 @@ exports[`Single With Dates 2`] = `
                   10
                 </button>
                 <button
-                  class="date-picker__date date-picker__date_border"
+                  class="date-picker__date date-picker__date_border date-picker__date_today"
                   type="button"
                 >
                   11
