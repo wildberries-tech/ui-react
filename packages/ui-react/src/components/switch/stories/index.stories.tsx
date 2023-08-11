@@ -27,3 +27,18 @@ export const Label: StoryObj<typeof META> = {
     }
 };
 
+export const Disable: StoryObj<typeof META> = {
+    args: {
+        disabled: true,
+        label   : 'Checkbox label'
+    }
+};
+
+export const DisableActive: StoryObj<typeof META> = {
+    args: {
+        checked : true,
+        disabled: true,
+        label   : 'Checkbox label'
+    }
+};
+

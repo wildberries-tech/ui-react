@@ -2,6 +2,8 @@
     display: grid;
     grid-auto-flow: column;
     grid-column-gap: 12px;
+    place-items: center flex-start;
+    place-content: center flex-start;
 
     --switch-background-color: var(--color-border-basic);
     --switch-background-color-hover: rgba(209, 207, 215, 0.8);
@@ -57,10 +59,22 @@
     }
 
     &__input:checked + &__input-view {
+        --switch-background-color: var(--color-bg-brand);
 
         &::before {
             left: calc(100% - 15px);
         }
+    }
+
+    &__input[disabled] + &__input-view {
+
+        &::before {
+            opacity: 0.6;
+        }
+    }
+
+    &__input:checked[disabled] + &__input-view {
+        opacity: 0.4;
     }
 
     &__input:not([disabled]) + &__input-view:focus {
