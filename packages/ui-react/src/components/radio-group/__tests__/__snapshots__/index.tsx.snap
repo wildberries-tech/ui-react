@@ -16,7 +16,7 @@ exports[`Default 1`] = `
       type="radio"
     />
     <p
-      className="typography typography_size-body typography_color-basic"
+      className="typography typography_size-body typography_color-basic typography_no-spacing"
     >
       label-1
     </p>
@@ -33,7 +33,7 @@ exports[`Default 1`] = `
       type="radio"
     />
     <p
-      className="typography typography_size-body typography_color-basic"
+      className="typography typography_size-body typography_color-basic typography_no-spacing"
     >
       label-2
     </p>
@@ -50,7 +50,7 @@ exports[`Default 1`] = `
       type="radio"
     />
     <p
-      className="typography typography_size-body typography_color-basic"
+      className="typography typography_size-body typography_color-basic typography_no-spacing"
     >
       label-3
     </p>
@@ -67,7 +67,7 @@ exports[`Default 1`] = `
       type="radio"
     />
     <p
-      className="typography typography_size-body typography_color-basic"
+      className="typography typography_size-body typography_color-basic typography_no-spacing"
     >
       label-4
     </p>
@@ -80,7 +80,7 @@ exports[`Legend 1`] = `
   className="radio-group radio-group_row"
 >
   <legend
-    className="typography typography_size-body typography_color-basic"
+    className="typography typography_size-body typography_color-basic typography_no-spacing"
   >
     Legend
   </legend>
@@ -96,7 +96,7 @@ exports[`Legend 1`] = `
       type="radio"
     />
     <p
-      className="typography typography_size-body typography_color-basic"
+      className="typography typography_size-body typography_color-basic typography_no-spacing"
     >
       label-1
     </p>
@@ -113,7 +113,7 @@ exports[`Legend 1`] = `
       type="radio"
     />
     <p
-      className="typography typography_size-body typography_color-basic"
+      className="typography typography_size-body typography_color-basic typography_no-spacing"
     >
       label-2
     </p>
@@ -130,7 +130,7 @@ exports[`Legend 1`] = `
       type="radio"
     />
     <p
-      className="typography typography_size-body typography_color-basic"
+      className="typography typography_size-body typography_color-basic typography_no-spacing"
     >
       label-3
     </p>
@@ -147,7 +147,7 @@ exports[`Legend 1`] = `
       type="radio"
     />
     <p
-      className="typography typography_size-body typography_color-basic"
+      className="typography typography_size-body typography_color-basic typography_no-spacing"
     >
       label-4
     </p>
@@ -160,7 +160,7 @@ exports[`Legend Object 1`] = `
   className="radio-group radio-group_row"
 >
   <legend
-    className="typography typography_size-caption typography_color-error"
+    className="typography typography_size-caption typography_color-error typography_no-spacing"
   />
   <label
     className="radio"
@@ -174,7 +174,7 @@ exports[`Legend Object 1`] = `
       type="radio"
     />
     <p
-      className="typography typography_size-body typography_color-basic"
+      className="typography typography_size-body typography_color-basic typography_no-spacing"
     >
       label-1
     </p>
@@ -191,7 +191,7 @@ exports[`Legend Object 1`] = `
       type="radio"
     />
     <p
-      className="typography typography_size-body typography_color-basic"
+      className="typography typography_size-body typography_color-basic typography_no-spacing"
     >
       label-2
     </p>
@@ -208,7 +208,7 @@ exports[`Legend Object 1`] = `
       type="radio"
     />
     <p
-      className="typography typography_size-body typography_color-basic"
+      className="typography typography_size-body typography_color-basic typography_no-spacing"
     >
       label-3
     </p>
@@ -225,7 +225,7 @@ exports[`Legend Object 1`] = `
       type="radio"
     />
     <p
-      className="typography typography_size-body typography_color-basic"
+      className="typography typography_size-body typography_color-basic typography_no-spacing"
     >
       label-4
     </p>

@@ -22,7 +22,8 @@ export const Title = ({ tagName = 'h1', presetColor = 'basic', className, ...att
         ...attrs,
         className: cn('typography', {
             [`typography_size-${tagName}`]: tagName,
-            [`typography_color-${presetColor}`]: presetColor
+            [`typography_color-${presetColor}`]: presetColor,
+            'typography_no-spacing': typeof tagName === 'string'
         })
     });
 };
