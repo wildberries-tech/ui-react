@@ -3,8 +3,8 @@ import type { Meta, StoryObj } from '@storybook/react';
 
 import { Button } from '..';
 import module from '../index.module.pcss';
-import { IconVideo } from '../../icons/video';
-import { IconCircleMenu } from '../../icons/circle-menu';
+import { IconVideo } from '../../../icons/video';
+import { IconCircleMenu } from '../../../icons/circle-menu';
 
 const META: Meta<typeof Button> = {
     title: 'Components/Buttons/Button',

@@ -2,7 +2,7 @@ import type { Meta, StoryObj } from '@storybook/react';
 
 import Typography from '../..';
 import module from '../../index.module.pcss';
-import { Button } from '../../../button';
+import { Button } from '../../../button/v1';
 
 const META: Meta<typeof Typography.Text> = {
     title    : 'Components/Typography/Text',

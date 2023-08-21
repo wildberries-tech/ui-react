@@ -6,7 +6,7 @@ import module from '../../popover/index.module.pcss';
 import { IconArrowsChevronRight } from '../../icons/arrows/chevron-right';
 import { IconDownload } from '../../icons/download';
 import { DropdownOption } from '../components/option';
-import { Button } from '../../button';
+import { Button } from '../../button/v1';
 
 const META: Meta<typeof Dropdown> = {
     title    : 'Components/Dropdown',

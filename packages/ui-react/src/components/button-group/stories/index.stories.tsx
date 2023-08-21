@@ -2,7 +2,7 @@ import React from 'react';
 import type { Meta, StoryObj } from '@storybook/react';
 
 import { ButtonGroup } from '..';
-import { Button } from '../../button';
+import { Button } from '../../button/v1';
 import module from '../index.module.pcss';
 
 const META: Meta<typeof ButtonGroup> = {

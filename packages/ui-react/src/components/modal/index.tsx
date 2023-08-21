@@ -3,7 +3,7 @@ import { enableBodyScroll, disableBodyScroll } from 'body-scroll-lock';
 import { createPortal } from 'react-dom';
 
 import { TStyle, useClassnames } from '../../hooks/use-classnames';
-import { Button, IProps as IButtonProps } from '../button';
+import { Button, IProps as IButtonProps } from '../button/v1';
 import { Title } from '../typography/title';
 import { IconClear } from '../icons/clear';
 import { consoleFormat } from '../../tools/console-format';

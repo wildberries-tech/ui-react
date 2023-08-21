@@ -2,8 +2,8 @@ import React from 'react';
 import * as renderer from 'react-test-renderer';
 
 import { Button } from '..';
-import { IconVideo } from '../../icons/video';
-import { IconCircleMenu } from '../../icons/circle-menu';
+import { IconVideo } from '../../../icons/video';
+import { IconCircleMenu } from '../../../icons/circle-menu';
 
 const CHILDREN = 'Рыбный текст кнопки';
 

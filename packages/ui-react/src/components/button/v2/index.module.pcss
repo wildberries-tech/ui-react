@@ -1,0 +1,172 @@
+.button {
+    display: grid;
+    grid-auto-flow: column;
+    grid-column-gap: var(--button-column-gap, 6px);
+    align-items: center;
+    align-content: center;
+    justify-items: center;
+    justify-content: center;
+    box-sizing: border-box;
+    border-radius: var(--button-border-radius, 10px);
+    -webkit-appearance: none;
+    text-transform: none;
+    font-family: "ALS Hauss VF", sans-serif;
+    font-style: normal;
+    min-width: var(--button-min-width, auto);
+    color: var(--button-color, #fff);
+    background-color: var(--button-background-color, transparent);
+    font-weight: var(--button-font-weight, 400);
+    font-size: var(--button-font-size, 16px);
+    line-height: 20px;
+    padding: var(--button-padding-vertical, 12px) var(--button-padding-horizontal, 16px);
+    height: var(--button-height, 44px);
+    fill: currentColor;
+    border: none;
+    opacity: var(--button-opacity, 1);
+
+    --button-height: 44px;
+
+    &_primary,
+    &_primary-circle {
+        --button-background-color: var(--color-purple-500, #9a41fe);
+    }
+
+    &_secondary,
+    &_secondary-circle {
+        --button-background-color: var(--color-grey-900, #4a4a59);
+    }
+
+    &_interface,
+    &_interface-circle {
+        --button-background-color: var(--color-black, rgba(0, 0, 0, 0.08));
+        --button-color: var(--color-black, #000);
+    }
+
+    &_error {
+        --button-background-color: rgba(255, 70, 81, 0.08);
+        --button-color: var(--color-red-500, #ff4651);
+    }
+
+    &_ghost {
+        --button-color: var(--color-blue-500, #5067de);
+    }
+
+    &_ghost-error {
+        --button-color: var(--color-red-500, #ff4651);
+    }
+
+    &_primary-circle,
+    &_secondary-circle,
+    &_interface-circle {
+        --button-border-radius: 22px;
+    }
+
+    &_small {
+        --button-column-gap: 4px;
+        --button-border-radius: 8px;
+        --button-padding-horizontal: 12px;
+        --button-padding-vertical: 10px;
+        --button-height: 36px;
+        --button-font-size: 13px;
+
+        /* stylelint-disable selector-class-pattern */
+        &^&_primary-circle,
+        &^&_secondary-circle,
+        &^&_interface-circle {
+            --button-border-radius: 18px;
+        }
+        /* stylelint-enable selector-class-pattern */
+    }
+
+    &_compact {
+        --button-padding-horizontal: 4px;
+        --button-padding-vertical: 4px;
+        --button-min-width: var(--button-height);
+    }
+
+    @media (hover: hover) and (pointer: fine) {
+
+        &:hover:not([disabled]) {
+            cursor: pointer;
+
+            --button-opacity: 0.8;
+
+            /* stylelint-disable selector-class-pattern, selector-max-pseudo-class */
+            &^&_interface,
+            &^&_interface-circle {
+                --button-opacity: 1;
+                --button-background-color: var(--color-black, rgba(0, 0, 0, 0.12));
+            }
+
+            &^&_error {
+                --button-opacity: 1;
+                --button-background-color: rgba(255, 70, 81, 0.12);
+                --button-color: var(--color-black, #000);
+            }
+
+            &^&_ghost,
+            &^&_ghost-error {
+                --button-opacity: 1;
+                --button-color: var(--color-purple-500, #9a41fe);
+            }
+            /* stylelint-enable selector-class-pattern */
+        }
+    }
+
+    &:active:not([disabled]) {
+        --button-opacity: 1;
+        --button-color: rgba(255, 255, 255, 0.72);
+
+        /* stylelint-disable selector-class-pattern */
+        &^&_interface,
+        &^&_interface-circle {
+            --button-background-color: var(--color-black, rgba(0, 0, 0, 0.08));
+            --button-color: var(--color-black, #000);
+            --button-opacity: 0.72;
+        }
+
+        &^&_error {
+            --button-opacity: 1;
+            --button-background-color: rgba(255, 70, 81, 0.08);
+            --button-color: rgba(0, 0, 0, 0.72);
+        }
+
+        &^&_ghost,
+        &^&_ghost-error {
+            --button-opacity: 0.6;
+            --button-color: var(--color-purple-500, #9a41fe);
+        }
+        /* stylelint-enable selector-class-pattern */
+    }
+
+    &[disabled] {
+        --button-opacity: 0.32;
+
+        &^&_is-loading {
+            /* Надо продумать схему наследование цветов у текста в состояние загрузки */
+            --button-opacity: 0.7;
+        }
+    }
+
+    &_is-loading {
+        position: relative;
+        overflow: hidden;
+
+        &::before {
+            content: "";
+            z-index: 1;
+            position: absolute;
+            width: 120%;
+            background: conic-gradient(from 270deg at 50% 50%, rgba(0, 0, 0, 0) 0deg, rgba(0, 0, 0, 0.16) 360deg);
+            aspect-ratio: 1;
+            animation: rotate var(--loader-animation-speed, 2s) linear infinite;
+        }
+    }
+}
+
+@keyframes :local(rotate) {
+
+    100% {
+        transform: rotate(360deg);
+    }
+}

@@ -30,7 +30,7 @@ export { InputTextarea, type IProps as IPropsInputTextarea } from './components/
 export { NavItem, type IProps as IPropsNavItem } from './components/nav-item';
 export { Checkbox, type IProps as IPropsCheckbox } from './components/checkbox';
 export { CheckboxGroup, type IProps as IPropsCheckboxGroup } from './components/checkbox-group';
-export { Button, type IProps as IPropsButton } from './components/button';
+export { Button, type IProps as IPropsButton } from './components/button/v1';
 export { ButtonGroup, type IProps as IPropsButtonGroup } from './components/button-group';
 export { Popover, type IProps as IPropsPopover } from './components/popover';
 export { Counter, type IProps as IPropsCounter } from './components/counter';

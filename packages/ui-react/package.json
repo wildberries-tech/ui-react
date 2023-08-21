@@ -9,6 +9,10 @@
         "type": "git",
         "url": "git+https://github.com/wildberries-tech/ui-kit-react.git"
     },
+    "exports": {
+        ".": "./src/index.ts",
+        "./v2": "./src/index.v2.ts"
+    },
     "keywords": [
         "wb",
         "wildberries",
