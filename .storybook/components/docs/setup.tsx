@@ -1,6 +1,8 @@
 import React, { Fragment, ReactNode, useContext, useMemo } from 'react';
 import { Title, Subtitle, Heading, Subheading, Primary, Controls, Stories, Markdown, Source, DocsContext, DocsContextProps } from '@storybook/blocks';
 
+import { name } from './../../../packages/ui-react/package.json';
+
 interface IContext extends DocsContextProps {
     attachedCSFFile: {
         meta: {
@@ -11,6 +13,9 @@ interface IContext extends DocsContextProps {
                 fileName: string,
                 documentation?: {
                     setup?: {
+                        import?: {
+                            version?: string
+                        },
                         default?: {
                             disabled?: boolean,
                             title?: string
@@ -47,11 +52,7 @@ export const DocsSetup = () => {
                             />
                             <Source
                                 language="ts"
-                                code={`
-import { ${componentName} } from '@wb-tech/ui-react';
-// или
-import { ${componentName}, type IProps${componentName} } from '@wb-tech/ui-react';
-`}
+                                code={`import { ${componentName}, type IProps${componentName} } from '${name}${setup?.import?.version ? setup.import.version : ''}';`}
                             />
                         </li>
                         <li>

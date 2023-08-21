@@ -16,6 +16,13 @@ const META: Meta<typeof Button> = {
     parameters: {
         css: {
             module
+        },
+        documentation: {
+            setup: {
+                import: {
+                    version: '/v2'
+                }
+            }
         }
     }
 };
