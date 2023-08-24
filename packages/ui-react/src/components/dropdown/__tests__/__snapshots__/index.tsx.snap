@@ -1,5 +1,43 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+exports[`Custom container 1`] = `
+<DocumentFragment>
+  <div
+    class="dropdown"
+  >
+    <span
+      class="popover__trigger"
+    >
+      <button
+        class="button button_medium button_default"
+        type="button"
+      >
+        Button
+      </button>
+    </span>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`Custom container 2`] = `
+<DocumentFragment>
+  <div
+    class="dropdown"
+  >
+    <span
+      class="popover__trigger"
+    >
+      <button
+        class="button button_medium button_default"
+        type="button"
+      >
+        Button
+      </button>
+    </span>
+  </div>
+</DocumentFragment>
+`;
+
 exports[`Default use 1`] = `
 <DocumentFragment>
   <div

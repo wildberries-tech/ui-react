@@ -3,7 +3,7 @@ import * as renderer from 'react-test-renderer';
 
 import { Text, typographyTextSize, typographyTextTags } from '..';
 import { typographyColor } from '../../types';
-import { Button } from '../../../button';
+import { Button } from '../../../button/v1';
 
 describe('Text', () => {
     typographyTextSize.map((size) => {

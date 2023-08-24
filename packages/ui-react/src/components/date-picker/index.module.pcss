@@ -1,12 +1,5 @@
 /* stylelint-disable selector-type-no-unknown, selector-class-pattern, no-descending-specificity */
 .date-picker {
-    --date-picker-mobile-header-size: 74px;
-    --date-picker-date-switch-control-size: 24px;
-    --date-picker-date-switch-control-svg-size: 16px;
-    --date-picker-date-item-size: 38px;
-    --date-picker-date-item-before-size: 39px;
-    --date-picker-date-item-font-size: 13px;
-    --date-picker-mobile-z-index: 1;
     font-family: var(--font-family-primary);
     position: relative;
 
@@ -33,10 +26,6 @@
         background-color: var(--color-bg-base);
     }
 
-    &__calendar-icon {
-        fill: var(--color-icon-warning);
-    }
-
     &__period-calendar-inputs {
         display: flex;
         gap: 8px;
@@ -44,6 +33,13 @@
     }
 
     &__wrap-calendar {
+        --date-picker-mobile-header-size: 74px;
+        --date-picker-date-switch-control-size: 24px;
+        --date-picker-date-switch-control-svg-size: 16px;
+        --date-picker-date-item-size: 38px;
+        --date-picker-date-item-before-size: 39px;
+        --date-picker-date-item-font-size: 13px;
+        --date-picker-mobile-z-index: 1;
         display: flex;
         border-radius: 4px;
         box-shadow: 0 20px 20px 4px rgba(0, 0, 0, 0.1);

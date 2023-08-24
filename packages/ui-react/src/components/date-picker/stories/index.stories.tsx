@@ -40,7 +40,7 @@ export const DateRange: StoryObj<typeof META> = {
 export const DateRangeMobile: StoryObj<typeof META> = {
     args: {
         isDateRange: true,
-        isMobile   : true
+        isMobile: true
     }
 };
 
