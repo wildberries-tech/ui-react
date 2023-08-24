@@ -751,7 +751,7 @@ export const DatePicker = ({
         }
 
         return content;
-    }, [elCalendarBody, elPeriodCalendar, props.isDateRange, calendar.month, disabledDatesInPast, props.isMobile]);
+    }, [elCalendarBody, elPeriodCalendar, props.isDateRange, calendar.month, disabledDatesInPast, props.isMobile, container]);
 
     const elTriggerElement = useMemo(() => {
         return (
