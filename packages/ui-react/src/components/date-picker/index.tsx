@@ -1,4 +1,4 @@
-import React, { ChangeEvent, Fragment, useCallback, useEffect, useMemo, useRef, useState } from 'react';
+import React, { ChangeEvent, Fragment, ReactNode, useCallback, useEffect, useMemo, useRef, useState } from 'react';
 import {
     add,
     addDays,
@@ -27,11 +27,12 @@ import {
     isValid
 } from 'date-fns';
 import { ru } from 'date-fns/locale';
+import { createPortal } from 'react-dom';
 
 import { getWeekDaysList, TWeekdays, useDateFnsFormatWithOptions } from '../../hooks/use-format-with-options';
 import { consoleFormat } from '../../tools/console-format';
 import { InputText } from '../input-text';
-import { IconCalendar } from '../icons/calendar';
+import { IconCalendarDates } from '../icons/calendar-dates';
 import { IconArrowsArrowRight } from '../icons/arrows/arrow-right';
 import { IconArrowsArrowLeft } from '../icons/arrows/arrow-left';
 import { IconClear } from '../icons/clear';
@@ -74,7 +75,9 @@ export interface IProps {
     onChange?: (value: TDateValuesArray) => void,
     i18nConfig: IConfigI18n,
     isMobile?: boolean,
-    qa?: boolean
+    qa?: boolean,
+    container?: HTMLElement,
+    elCalendarIcon?: ReactNode
 }
 
 interface ICalendarDate {
@@ -139,6 +142,7 @@ const defaultTranslationConfig = {
 };
 
 export const DatePicker = ({
+    container = document.body,
     defaultMinDate,
     defaultMaxDate,
     defaultSelectedDate = defaultSelectedDateEmpty,
@@ -689,7 +693,7 @@ export const DatePicker = ({
     };
 
     const elCalendar = useCallback((onClose?: () => void) => {
-        return (
+        const content = (
             <div
                 ref={$container}
                 className={cn('date-picker__wrap-calendar', {
@@ -738,7 +742,16 @@ export const DatePicker = ({
                 {elPeriodCalendar(onClose)}
             </div>
         );
-    }, [elCalendarBody, elPeriodCalendar, props.isDateRange, calendar.month, disabledDatesInPast, props.isMobile]);
+
+        if(props.isMobile) {
+            return createPortal(
+                content,
+                container
+            );
+        }
+
+        return content;
+    }, [elCalendarBody, elPeriodCalendar, props.isDateRange, calendar.month, disabledDatesInPast, props.isMobile, container]);
 
     const elTriggerElement = useMemo(() => {
         return (
@@ -759,13 +772,7 @@ export const DatePicker = ({
                     className={{
                         'input-text__field': cn('date-picker__input-field')
                     }}
-                    elAfter={(
-                        <IconCalendar
-                            svg={{
-                                className: cn('date-picker__calendar-icon')
-                            }}
-                        />
-                    )}
+                    elAfter={<IconCalendarDates />}
                 />
             </button>
         );
@@ -794,6 +801,7 @@ export const DatePicker = ({
                 'dropdown': cn('date-picker'),
                 ...props.dropdownClassName
             }}
+            container={container}
             placement="bottom-start"
             render={(isOpen, onClose) => elCalendar(onClose)}
             onCloseCallback={onCloseCalendar}

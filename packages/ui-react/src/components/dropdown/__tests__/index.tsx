@@ -4,7 +4,7 @@ import { render, fireEvent, waitFor } from '@testing-library/react';
 import { Dropdown } from '..';
 import { IconArrowsChevronRight } from '../../icons/arrows/chevron-right';
 import { IconDownload } from '../../icons/download';
-import { Button } from '../../button';
+import { Button } from '../../button/v1';
 
 const dropdownOptions = [{
     label: 'Option 1',
@@ -155,6 +155,39 @@ test('Trigger custom icon', async () => {
 test('Trigger button', async () => {
     const { asFragment, getByText } = render(
         <Dropdown
+            triggerElement={(
+                <Button>Button</Button>
+            )}
+            render={(isOpen, onClose) => {
+                return dropdownOptions.map((option, index) => (
+                    <div
+                        key={index}
+                        onClick={() => {
+                            option.handleClick();
+
+                            onClose();
+                        }}
+                    >
+                        {option.label}
+                    </div>
+                ));
+            }}
+        />
+    );
+
+    expect(asFragment()).toMatchSnapshot();
+
+    fireEvent.click(getByText('Button'));
+
+    await waitFor(() => {
+        expect(asFragment()).toMatchSnapshot();
+    });
+});
+
+test('Custom container', async () => {
+    const { asFragment, getByText } = render(
+        <Dropdown
+            container={document.body}
             triggerElement={(
                 <Button>Button</Button>
             )}

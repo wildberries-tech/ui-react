@@ -86,7 +86,11 @@ export interface IProps {
     /**
      * Свойство определяет, можно ли взаимодействовать с содержимым компонента
      **/
-    isOptionsHoverable?: boolean
+    isOptionsHoverable?: boolean,
+    /**
+     * Свойство позволяет указать кастомный контейнер для рендера компонента
+     **/
+    container?: HTMLElement
 }
 
 /**
@@ -112,7 +116,7 @@ export const Popover = ({ trigger = 'click', triggerTagName = 'div', auto = true
         isOpen: trigger === 'hover' ? isOver : isOpen,
         onOutsideClick: onClose,
         onDisappear: onClose,
-        container: $trigger.current?.parentElement ?? undefined,
+        container: props.container ?? $trigger.current?.parentElement ?? undefined,
         overflowContainer: props.overflowContainer,
         triggerOffset: props.triggerOffset,
         containerOffset: props.containerOffset,

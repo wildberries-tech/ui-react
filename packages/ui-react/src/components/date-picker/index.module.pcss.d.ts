@@ -6,7 +6,6 @@ interface Stylesheet {
     'date-picker__calendar': string
     'date-picker__calendar-body': string
     'date-picker__calendar-button': string
-    'date-picker__calendar-icon': string
     'date-picker__calendar_date-range': string
     'date-picker__date': string
     'date-picker__date_border': string
