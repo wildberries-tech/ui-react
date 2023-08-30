@@ -115,6 +115,12 @@ export const Pagination = ({
         props.onChangePage?.(currentPageState);
     }, [currentPageState]);
 
+    useEffect(() => {
+        if(currentPage !== currentPageState) {
+            setCurrentPageState(currentPage);
+        }
+    }, [currentPage]);
+
     const resetInput = () => {
         setIsInputError(false);
 
