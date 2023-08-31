@@ -1,5 +1,5 @@
 import React from 'react';
-import { render, waitFor, screen, fireEvent } from '@testing-library/react';
+import {  render, waitFor, screen, fireEvent } from '@testing-library/react';
 
 import { Pagination } from '..';
 
@@ -215,3 +215,46 @@ test('Throw error', async () => {
         expect(asFragment()).toMatchSnapshot();
     });
 });
+
+test('Update page', async () => {
+    const { asFragment, rerender } = render(
+        <Pagination
+            i18n={{
+                label: 'Показать записей',
+                placeholder: 'placeholder'
+            }}
+            currentPage={2}
+            onChangePage={() => 2}
+            numberOfItems={1000}
+            numberItemsPerPage={10}
+            showPageInput={true}
+        />
+    );
+
+    expect(asFragment()).toMatchSnapshot();
+
+    await waitFor(() => {
+        expect(asFragment()).toMatchSnapshot();
+    });
+
+    rerender(
+        <Pagination
+            i18n={{
+                label: 'Показать записей',
+                placeholder: 'placeholder'
+            }}
+            currentPage={3}
+            onChangePage={() => 3}
+            numberOfItems={1000}
+            numberItemsPerPage={10}
+            showPageInput={true}
+        />
+    );
+
+    expect(asFragment()).toMatchSnapshot();
+
+    await waitFor(() => {
+        expect(asFragment()).toMatchSnapshot();
+    });
+});
+
