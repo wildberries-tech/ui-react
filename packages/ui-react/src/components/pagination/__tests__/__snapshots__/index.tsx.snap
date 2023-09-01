@@ -210,29 +210,7 @@ exports[`Clicks on elements 2`] = `
         class="pagination-buttons__item"
       >
         <button
-          class="pagination-buttons__icon-button"
-          type="button"
-        >
-          <svg
-            class="pagination-buttons__icon"
-            height="24"
-            viewBox="0 0 24 24"
-            width="24"
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            <path
-              clip-rule="evenodd"
-              d="m9.414 12 7.293 7.293-1.414 1.414L6.586 12l8.707-8.707 1.414 1.414L9.414 12Z"
-              fill-rule="evenodd"
-            />
-          </svg>
-        </button>
-      </li>
-      <li
-        class="pagination-buttons__item"
-      >
-        <button
-          class="pagination-buttons__button"
+          class="pagination-buttons__button pagination-buttons__button_selected"
           type="button"
         >
           1
@@ -252,7 +230,7 @@ exports[`Clicks on elements 2`] = `
         class="pagination-buttons__item"
       >
         <button
-          class="pagination-buttons__button pagination-buttons__button_selected"
+          class="pagination-buttons__button"
           type="button"
         >
           3
