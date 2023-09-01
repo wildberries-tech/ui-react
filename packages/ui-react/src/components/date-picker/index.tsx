@@ -143,8 +143,6 @@ const defaultTranslationConfig = {
 
 export const DatePicker = ({
     container = document.body,
-    defaultMinDate,
-    defaultMaxDate,
     defaultSelectedDate = defaultSelectedDateEmpty,
     i18nConfig = defaultTranslationConfig,
     ...props
@@ -157,18 +155,31 @@ export const DatePicker = ({
 
     const $container = useRef<HTMLDivElement>(null);
 
+    const defaultMinDate = props.defaultMinDate ?? startOfYear(new Date());
+    const defaultMaxDate = props.defaultMaxDate ?? new Date();
+
     const [isMobileOpen, setIsMobileOpen] = useState<boolean>(false);
     const [selected, setSelected] = useState<Date>();
-    const [minDate, setMinDate] = useState<Date>(defaultMinDate ?? startOfYear(new Date()));
-    const [maxDate, setMaxDate] = useState<Date>(defaultMaxDate ?? new Date());
+    const [minDate, setMinDate] = useState<Date>(defaultMinDate);
+    const [maxDate, setMaxDate] = useState<Date>(defaultMaxDate);
     const [selectedPeriod, setSelectedPeriod] = useState<TDateValuesArray>(defaultSelectedDate);
     const [currentHoveredDate, setCurrentHoveredDate] = useState<ICalendarDate | null>(null);
     const [displayDate, setDisplayDate] = useState<string>();
     const [isAllPeriod, setIsAllPeriod] = useState<boolean>(!!defaultSelectedDate.length);
 
+    useEffect(() => {
+        if(!props.defaultMinDate && defaultSelectedDate[0]) {
+            setMinDate(defaultSelectedDate[0]);
+        }
+
+        if(!props.defaultMaxDate && defaultSelectedDate[1]) {
+            setMaxDate(defaultSelectedDate[1]);
+        }
+    }, [props.defaultMaxDate, props.defaultMinDate, defaultSelectedDate]);
+
     const defaultCalendar = {
-        month   : new Date(),
-        selected: new Date(),
+        month   : defaultSelectedDate[0] ? new Date(defaultSelectedDate[0]) : new Date(),
+        selected: defaultSelectedDate[0] ? new Date(defaultSelectedDate[0]) : new Date(),
         dates   : [],
         months  : []
     };
@@ -190,18 +201,6 @@ export const DatePicker = ({
             consoleFormat('DatePicker: Свойство `isDateRange=false` не поддержвает длину `defaultSelectedDate` более 1');
         }
     }, [props.isDateRange, defaultSelectedDate]);
-
-    useEffect(() => {
-        if(defaultMinDate && disabledDatesInPast) {
-            setMinDate(new Date());
-        }
-    }, [defaultMinDate, disabledDatesInPast]);
-
-    useEffect(() => {
-        if(defaultMaxDate) {
-            setMaxDate(defaultMaxDate);
-        }
-    }, [defaultMaxDate]);
 
     const isSelected = (day: Date) => {
         if(selected) {
@@ -339,15 +338,15 @@ export const DatePicker = ({
 
                 setSelectedPeriod(value);
 
-                if(selectedPeriod.length) {
-                    selectedPeriod.sort((a, b) => {
+                if(value.length) {
+                    value.sort((a, b) => {
                         return a.getTime() - b.getTime();
                     });
 
-                    const firstSelectedPeriod = format(selectedPeriod[0], 'dd.MM.yyyy');
-                    const secondSelectedPeriod = format(selectedPeriod[1], 'dd.MM.yyyy');
+                    const firstSelectedPeriod = format(value[0], 'dd.MM.yyyy');
+                    const secondSelectedPeriod = format(value[1], 'dd.MM.yyyy');
 
-                    if(isSameDay(selectedPeriod[0], selectedPeriod[1])) {
+                    if(isSameDay(value[0], value[1])) {
                         setDisplayDate(firstSelectedPeriod);
                     } else {
                         setDisplayDate(`${firstSelectedPeriod} - ${secondSelectedPeriod}`);
@@ -361,8 +360,6 @@ export const DatePicker = ({
 
             callback?.();
 
-            props.onChange?.(selectedPeriod);
-
             if(props.isMobile) {
                 setIsMobileOpen(false);
             }
@@ -371,9 +368,15 @@ export const DatePicker = ({
 
     useEffect(() => {
         if(defaultSelectedDate.length) {
+            setSelectedPeriod(defaultSelectedDate);
+
             writeValue(defaultSelectedDate);
         }
-    }, []);
+    }, [defaultSelectedDate]);
+
+    useEffect(() => {
+        props.onChange?.(selectedPeriod);
+    }, [selectedPeriod]);
 
     const setDate = (date: ICalendarDate | [ICalendarDate, ICalendarDate]) => {
         if(Array.isArray(date)) {
