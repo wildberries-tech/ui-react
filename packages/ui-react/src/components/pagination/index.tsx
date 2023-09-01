@@ -100,7 +100,6 @@ export const Pagination = ({
     const $input = useRef<HTMLInputElement>(null);
     const [numberOfPages, setNumberOfPages] = useState(0);
     const [isInputError, setIsInputError] = useState<boolean>(false);
-    const [currentPageState, setCurrentPageState] = useState(currentPage);
     const [numberItemsPerPage, setNumberItemsPerPage] = useState<number>(props.numberItemsPerPage);
 
     useEffect(() => {
@@ -111,10 +110,6 @@ export const Pagination = ({
         }
     }, [props.numberOfItems, props.numberItemsPerPage, numberItemsPerPage]);
 
-    useEffect(() => {
-        props.onChangePage?.(currentPageState);
-    }, [currentPageState]);
-
     const resetInput = () => {
         setIsInputError(false);
 
@@ -124,7 +119,7 @@ export const Pagination = ({
     };
 
     const handleChangePage = (page: number) => {
-        setCurrentPageState(page);
+        props.onChangePage?.(page);
 
         resetInput();
     };
@@ -134,15 +129,15 @@ export const Pagination = ({
 
         resetInput();
 
-        setCurrentPageState(1);
-
         props.onChangePageSize?.(preset);
+
+        props.onChangePage?.(1);
     };
 
     const onSetCurrentPage = debounce((e: ChangeEvent<HTMLInputElement>) => {
         const value = parseInt(e.target.value, 10);
 
-        setCurrentPageState(!isNaN(value) ? value : 1);
+        props.onChangePage?.(!isNaN(value) ? value : 1);
 
         setIsInputError(value > numberOfPages);
     }, pageInputTimeout);
@@ -251,7 +246,7 @@ export const Pagination = ({
                 />
             ) : null}
             <PaginationButtons
-                currentPage={currentPageState}
+                currentPage={currentPage}
                 numberOfEdgeButtons={numberOfEdgeButtons}
                 numberOfMiddleButtons={numberOfMiddleButtons}
                 numberOfPages={numberOfPages}

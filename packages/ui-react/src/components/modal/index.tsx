@@ -57,10 +57,6 @@ export const Modal = ({
         if(placement === 'bottom' && (widthPreset === 'l' || widthPreset === 'xl')) {
             consoleFormat('Modal: Позиционирование `placement={bottom}` несовместимо с пресетами `widthPreset={L}` и `widthPreset={XL}`');
         }
-
-        if(placement === 'center' && widthPreset === 's') {
-            consoleFormat('Modal: Позиционирование `placement={center}` несовместимо с пресетами `widthPreset={S}`');
-        }
     }, [widthPreset, placement]);
 
     const escClick = (e: KeyboardEvent) => {
