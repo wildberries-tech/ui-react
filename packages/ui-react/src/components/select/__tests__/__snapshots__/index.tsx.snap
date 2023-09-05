@@ -1,0 +1,823 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Default 1`] = `
+<label
+  className="select"
+>
+  <div
+    className=" css-b62m3t-container"
+    onKeyDown={[Function]}
+  >
+    <span
+      className="css-1f43avz-a11yText-A11yText"
+      id="react-select-2-live-region"
+    />
+    <span
+      aria-atomic="false"
+      aria-live="polite"
+      aria-relevant="additions text"
+      className="css-1f43avz-a11yText-A11yText"
+    />
+    <div
+      className="select__control css-13cymwt-control"
+      onMouseDown={[Function]}
+      onTouchEnd={[Function]}
+    >
+      <div
+        className="select__value-container css-1fdsijx-ValueContainer"
+      >
+        <div
+          className="select__placeholder css-1jqq78o-placeholder"
+          id="react-select-2-placeholder"
+        />
+        <input
+          aria-autocomplete="list"
+          aria-describedby="react-select-2-placeholder"
+          aria-expanded={false}
+          aria-haspopup={true}
+          aria-readonly={true}
+          className="css-mohuvp-dummyInput-DummyInput"
+          disabled={false}
+          id="react-select-2-input"
+          inputMode="none"
+          onBlur={[Function]}
+          onChange={[Function]}
+          onFocus={[Function]}
+          role="combobox"
+          tabIndex={0}
+          value=""
+        />
+      </div>
+      <div
+        className=" css-1hb7zxy-IndicatorsContainer"
+      >
+        <svg
+          className="select__icon-arrow-bottom"
+          height={24}
+          viewBox="0 0 24 24"
+          width={24}
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            clipRule="evenodd"
+            d="m19.293 7.293 1.414 1.414L12 17.414 3.293 8.707l1.414-1.414L12 14.586l7.293-7.293Z"
+            fillRule="evenodd"
+          />
+        </svg>
+      </div>
+    </div>
+  </div>
+</label>
+`;
+
+exports[`Default menu open 1`] = `
+<label
+  className="select"
+>
+  <div
+    className=" css-b62m3t-container"
+    onKeyDown={[Function]}
+  >
+    <span
+      className="css-1f43avz-a11yText-A11yText"
+      id="react-select-3-live-region"
+    />
+    <span
+      aria-atomic="false"
+      aria-live="polite"
+      aria-relevant="additions text"
+      className="css-1f43avz-a11yText-A11yText"
+    />
+    <div
+      className="select__control css-13cymwt-control"
+      onMouseDown={[Function]}
+      onTouchEnd={[Function]}
+    >
+      <div
+        className="select__value-container css-1fdsijx-ValueContainer"
+      >
+        <div
+          className="select__placeholder css-1jqq78o-placeholder"
+          id="react-select-3-placeholder"
+        />
+        <input
+          aria-autocomplete="list"
+          aria-controls="react-select-3-listbox"
+          aria-describedby="react-select-3-placeholder"
+          aria-expanded={true}
+          aria-haspopup={true}
+          aria-owns="react-select-3-listbox"
+          aria-readonly={true}
+          className="css-mohuvp-dummyInput-DummyInput"
+          disabled={false}
+          id="react-select-3-input"
+          inputMode="none"
+          onBlur={[Function]}
+          onChange={[Function]}
+          onFocus={[Function]}
+          role="combobox"
+          tabIndex={0}
+          value=""
+        />
+      </div>
+      <div
+        className=" css-1hb7zxy-IndicatorsContainer"
+      >
+        <svg
+          className="select__icon-arrow-bottom select__icon-arrow-bottom_open"
+          height={24}
+          viewBox="0 0 24 24"
+          width={24}
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            clipRule="evenodd"
+            d="m19.293 7.293 1.414 1.414L12 17.414 3.293 8.707l1.414-1.414L12 14.586l7.293-7.293Z"
+            fillRule="evenodd"
+          />
+        </svg>
+      </div>
+    </div>
+    <div
+      className="select__menu css-1nmdiq5-menu"
+      id="react-select-3-listbox"
+      onMouseDown={[Function]}
+      onMouseMove={[Function]}
+    >
+      <div
+        className="select__menu-list css-1n6sfyn-MenuList"
+      >
+        <div
+          aria-disabled={false}
+          className="select__option css-10wo9uf-option"
+          id="react-select-3-option-0"
+          onClick={[Function]}
+          onMouseMove={[Function]}
+          onMouseOver={[Function]}
+          tabIndex={-1}
+        >
+          Мали
+        </div>
+        <div
+          aria-disabled={false}
+          className="select__option css-10wo9uf-option"
+          id="react-select-3-option-1"
+          onClick={[Function]}
+          onMouseMove={[Function]}
+          onMouseOver={[Function]}
+          tabIndex={-1}
+        >
+          <svg
+            height={24}
+            viewBox="0 0 24 24"
+            width={24}
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              clipRule="evenodd"
+              d="M3 5h12a2 2 0 0 1 2 2v1.382l6-3v13.236l-6-3V17a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V7a2 2 0 0 1 2-2Zm14 8.382 4 2V8.618l-4 2v2.764ZM3 7v10h12V7H3Z"
+              fillRule="evenodd"
+            />
+          </svg>
+          Индонезия
+        </div>
+        <div
+          aria-disabled={false}
+          className="select__option css-10wo9uf-option"
+          id="react-select-3-option-2"
+          onClick={[Function]}
+          onMouseMove={[Function]}
+          onMouseOver={[Function]}
+          tabIndex={-1}
+        >
+          Болгария
+          <svg
+            height={24}
+            viewBox="0 0 24 24"
+            width={24}
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              clipRule="evenodd"
+              d="M10 18a8 8 0 1 1 6.32-3.094l5.387 5.387-1.414 1.414-5.387-5.387A7.965 7.965 0 0 1 10 18Zm6-8a6 6 0 1 1-12 0 6 6 0 0 1 12 0Z"
+              fillRule="evenodd"
+            />
+          </svg>
+        </div>
+        <div
+          aria-disabled={false}
+          className="select__option css-10wo9uf-option"
+          id="react-select-3-option-3"
+          onClick={[Function]}
+          onMouseMove={[Function]}
+          onMouseOver={[Function]}
+          tabIndex={-1}
+        >
+          <svg
+            height={24}
+            viewBox="0 0 24 24"
+            width={24}
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              clipRule="evenodd"
+              d="M16.293 9.293 13 12.586V2h-2v10.586L7.707 9.293l-1.414 1.414L12 16.414l5.707-5.707-1.414-1.414ZM22 20v-4h-2v4H4v-4H2v4a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2Z"
+              fillRule="evenodd"
+            />
+          </svg>
+          Замбия
+          <svg
+            height={24}
+            viewBox="0 0 24 24"
+            width={24}
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              clipRule="evenodd"
+              d="M6 6h2V5h8v1h2V5h2v3H4V5h2v1Zm-2 4v10h16V10H4Zm4-7h8V2h2v1h2a2 2 0 0 1 2 2v15a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h2V2h2v1Z"
+              fillRule="evenodd"
+            />
+          </svg>
+        </div>
+        <div
+          aria-disabled={false}
+          className="select__option css-10wo9uf-option"
+          id="react-select-3-option-4"
+          onClick={[Function]}
+          onMouseMove={[Function]}
+          onMouseOver={[Function]}
+          tabIndex={-1}
+        >
+          <svg
+            height={24}
+            viewBox="0 0 24 24"
+            width={24}
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              clipRule="evenodd"
+              d="M20 19V9a2 2 0 0 0 2-2V5a2 2 0 0 0-2-2H4a2 2 0 0 0-2 2v2a2 2 0 0 0 2 2v10a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2ZM6 19V9h12v10H6Zm3-7v-2h6v2H9ZM4 7V5h16v2H4Z"
+              fillRule="evenodd"
+            />
+          </svg>
+          Мексика
+          <svg
+            height={24}
+            viewBox="0 0 24 24"
+            width={24}
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              clipRule="evenodd"
+              d="M1 12c0 6.075 4.925 11 11 11s11-4.925 11-11S18.075 1 12 1 1 5.925 1 12Zm20 0a9 9 0 1 1-18 0 9 9 0 0 1 18 0Zm-7.996 1.998h.999v2h-4v-2h1v-2h-1v-2h3v4Zm-.003-6a1 1 0 1 1-2 0 1 1 0 0 1 2 0Z"
+              fillRule="evenodd"
+            />
+          </svg>
+        </div>
+        <div
+          aria-disabled={true}
+          className="select__option select__option_disabled css-nkt5xy-option"
+          id="react-select-3-option-5"
+          tabIndex={-1}
+        >
+          Кыргызстан
+        </div>
+        <div
+          aria-disabled={false}
+          className="select__option css-10wo9uf-option"
+          id="react-select-3-option-6"
+          onClick={[Function]}
+          onMouseMove={[Function]}
+          onMouseOver={[Function]}
+          tabIndex={-1}
+        >
+          Кения
+        </div>
+        <div
+          aria-disabled={false}
+          className="select__option css-10wo9uf-option"
+          id="react-select-3-option-7"
+          onClick={[Function]}
+          onMouseMove={[Function]}
+          onMouseOver={[Function]}
+          tabIndex={-1}
+        >
+          Фарерские Острова (не признана)
+        </div>
+        <div
+          aria-disabled={false}
+          className="select__option css-10wo9uf-option"
+          id="react-select-3-option-8"
+          onClick={[Function]}
+          onMouseMove={[Function]}
+          onMouseOver={[Function]}
+          tabIndex={-1}
+        >
+          Филиппины
+        </div>
+        <div
+          aria-disabled={false}
+          className="select__option css-10wo9uf-option"
+          id="react-select-3-option-9"
+          onClick={[Function]}
+          onMouseMove={[Function]}
+          onMouseOver={[Function]}
+          tabIndex={-1}
+        >
+          Армения
+        </div>
+      </div>
+    </div>
+  </div>
+</label>
+`;
+
+exports[`Default value 1`] = `
+<label
+  className="select"
+>
+  <div
+    className=" css-b62m3t-container"
+    onKeyDown={[Function]}
+  >
+    <span
+      className="css-1f43avz-a11yText-A11yText"
+      id="react-select-6-live-region"
+    />
+    <span
+      aria-atomic="false"
+      aria-live="polite"
+      aria-relevant="additions text"
+      className="css-1f43avz-a11yText-A11yText"
+    />
+    <div
+      className="select__control css-13cymwt-control"
+      onMouseDown={[Function]}
+      onTouchEnd={[Function]}
+    >
+      <div
+        className="select__value-container css-1fdsijx-ValueContainer"
+      >
+        <div
+          className="select__single-value css-1dimb5e-singleValue"
+        >
+          Мали
+        </div>
+        <input
+          aria-autocomplete="list"
+          aria-controls="react-select-6-listbox"
+          aria-expanded={true}
+          aria-haspopup={true}
+          aria-owns="react-select-6-listbox"
+          aria-readonly={true}
+          className="css-mohuvp-dummyInput-DummyInput"
+          disabled={false}
+          id="react-select-6-input"
+          inputMode="none"
+          onBlur={[Function]}
+          onChange={[Function]}
+          onFocus={[Function]}
+          role="combobox"
+          tabIndex={0}
+          value=""
+        />
+      </div>
+      <div
+        className=" css-1hb7zxy-IndicatorsContainer"
+      >
+        <svg
+          className="select__icon-arrow-bottom select__icon-arrow-bottom_open"
+          height={24}
+          viewBox="0 0 24 24"
+          width={24}
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            clipRule="evenodd"
+            d="m19.293 7.293 1.414 1.414L12 17.414 3.293 8.707l1.414-1.414L12 14.586l7.293-7.293Z"
+            fillRule="evenodd"
+          />
+        </svg>
+      </div>
+    </div>
+    <div
+      className="select__menu css-1nmdiq5-menu"
+      id="react-select-6-listbox"
+      onMouseDown={[Function]}
+      onMouseMove={[Function]}
+    >
+      <div
+        className="select__menu-list css-1n6sfyn-MenuList"
+      >
+        <div
+          aria-disabled={false}
+          className="select__option select__option_focused select__option_selected css-tr4s17-option"
+          id="react-select-6-option-0"
+          onClick={[Function]}
+          onMouseMove={[Function]}
+          onMouseOver={[Function]}
+          tabIndex={-1}
+        >
+          <svg
+            className="select__icon-check-mark"
+            height={24}
+            viewBox="0 0 24 24"
+            width={24}
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              clipRule="evenodd"
+              d="M9.563 15.2 18.622 6 20 7.4 9.563 18 4 12.35l1.379-1.4 4.184 4.25Z"
+              fillRule="evenodd"
+            />
+          </svg>
+          Мали
+        </div>
+        <div
+          aria-disabled={false}
+          className="select__option css-10wo9uf-option"
+          id="react-select-6-option-1"
+          onClick={[Function]}
+          onMouseMove={[Function]}
+          onMouseOver={[Function]}
+          tabIndex={-1}
+        >
+          <svg
+            height={24}
+            viewBox="0 0 24 24"
+            width={24}
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              clipRule="evenodd"
+              d="M3 5h12a2 2 0 0 1 2 2v1.382l6-3v13.236l-6-3V17a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V7a2 2 0 0 1 2-2Zm14 8.382 4 2V8.618l-4 2v2.764ZM3 7v10h12V7H3Z"
+              fillRule="evenodd"
+            />
+          </svg>
+          Индонезия
+        </div>
+        <div
+          aria-disabled={false}
+          className="select__option css-10wo9uf-option"
+          id="react-select-6-option-2"
+          onClick={[Function]}
+          onMouseMove={[Function]}
+          onMouseOver={[Function]}
+          tabIndex={-1}
+        >
+          Болгария
+          <svg
+            height={24}
+            viewBox="0 0 24 24"
+            width={24}
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              clipRule="evenodd"
+              d="M10 18a8 8 0 1 1 6.32-3.094l5.387 5.387-1.414 1.414-5.387-5.387A7.965 7.965 0 0 1 10 18Zm6-8a6 6 0 1 1-12 0 6 6 0 0 1 12 0Z"
+              fillRule="evenodd"
+            />
+          </svg>
+        </div>
+        <div
+          aria-disabled={false}
+          className="select__option css-10wo9uf-option"
+          id="react-select-6-option-3"
+          onClick={[Function]}
+          onMouseMove={[Function]}
+          onMouseOver={[Function]}
+          tabIndex={-1}
+        >
+          <svg
+            height={24}
+            viewBox="0 0 24 24"
+            width={24}
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              clipRule="evenodd"
+              d="M16.293 9.293 13 12.586V2h-2v10.586L7.707 9.293l-1.414 1.414L12 16.414l5.707-5.707-1.414-1.414ZM22 20v-4h-2v4H4v-4H2v4a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2Z"
+              fillRule="evenodd"
+            />
+          </svg>
+          Замбия
+          <svg
+            height={24}
+            viewBox="0 0 24 24"
+            width={24}
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              clipRule="evenodd"
+              d="M6 6h2V5h8v1h2V5h2v3H4V5h2v1Zm-2 4v10h16V10H4Zm4-7h8V2h2v1h2a2 2 0 0 1 2 2v15a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h2V2h2v1Z"
+              fillRule="evenodd"
+            />
+          </svg>
+        </div>
+        <div
+          aria-disabled={false}
+          className="select__option css-10wo9uf-option"
+          id="react-select-6-option-4"
+          onClick={[Function]}
+          onMouseMove={[Function]}
+          onMouseOver={[Function]}
+          tabIndex={-1}
+        >
+          <svg
+            height={24}
+            viewBox="0 0 24 24"
+            width={24}
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              clipRule="evenodd"
+              d="M20 19V9a2 2 0 0 0 2-2V5a2 2 0 0 0-2-2H4a2 2 0 0 0-2 2v2a2 2 0 0 0 2 2v10a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2ZM6 19V9h12v10H6Zm3-7v-2h6v2H9ZM4 7V5h16v2H4Z"
+              fillRule="evenodd"
+            />
+          </svg>
+          Мексика
+          <svg
+            height={24}
+            viewBox="0 0 24 24"
+            width={24}
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              clipRule="evenodd"
+              d="M1 12c0 6.075 4.925 11 11 11s11-4.925 11-11S18.075 1 12 1 1 5.925 1 12Zm20 0a9 9 0 1 1-18 0 9 9 0 0 1 18 0Zm-7.996 1.998h.999v2h-4v-2h1v-2h-1v-2h3v4Zm-.003-6a1 1 0 1 1-2 0 1 1 0 0 1 2 0Z"
+              fillRule="evenodd"
+            />
+          </svg>
+        </div>
+        <div
+          aria-disabled={true}
+          className="select__option select__option_disabled css-nkt5xy-option"
+          id="react-select-6-option-5"
+          tabIndex={-1}
+        >
+          Кыргызстан
+        </div>
+        <div
+          aria-disabled={false}
+          className="select__option css-10wo9uf-option"
+          id="react-select-6-option-6"
+          onClick={[Function]}
+          onMouseMove={[Function]}
+          onMouseOver={[Function]}
+          tabIndex={-1}
+        >
+          Кения
+        </div>
+        <div
+          aria-disabled={false}
+          className="select__option css-10wo9uf-option"
+          id="react-select-6-option-7"
+          onClick={[Function]}
+          onMouseMove={[Function]}
+          onMouseOver={[Function]}
+          tabIndex={-1}
+        >
+          Фарерские Острова (не признана)
+        </div>
+        <div
+          aria-disabled={false}
+          className="select__option css-10wo9uf-option"
+          id="react-select-6-option-8"
+          onClick={[Function]}
+          onMouseMove={[Function]}
+          onMouseOver={[Function]}
+          tabIndex={-1}
+        >
+          Филиппины
+        </div>
+        <div
+          aria-disabled={false}
+          className="select__option css-10wo9uf-option"
+          id="react-select-6-option-9"
+          onClick={[Function]}
+          onMouseMove={[Function]}
+          onMouseOver={[Function]}
+          tabIndex={-1}
+        >
+          Армения
+        </div>
+      </div>
+    </div>
+  </div>
+</label>
+`;
+
+exports[`Disabled 1`] = `
+<label
+  className="select"
+>
+  <div
+    className=" css-3iigni-container"
+    onKeyDown={[Function]}
+  >
+    <span
+      className="css-1f43avz-a11yText-A11yText"
+      id="react-select-5-live-region"
+    />
+    <span
+      aria-atomic="false"
+      aria-live="polite"
+      aria-relevant="additions text"
+      className="css-1f43avz-a11yText-A11yText"
+    />
+    <div
+      className="select__control select__control_disabled css-16xfy0z-control"
+      onMouseDown={[Function]}
+      onTouchEnd={[Function]}
+    >
+      <div
+        className="select__value-container css-1fdsijx-ValueContainer"
+      >
+        <div
+          className="select__placeholder css-1jqq78o-placeholder"
+          id="react-select-5-placeholder"
+        />
+        <input
+          aria-autocomplete="list"
+          aria-describedby="react-select-5-placeholder"
+          aria-expanded={false}
+          aria-haspopup={true}
+          aria-readonly={true}
+          className="css-mohuvp-dummyInput-DummyInput"
+          disabled={true}
+          id="react-select-5-input"
+          inputMode="none"
+          onBlur={[Function]}
+          onChange={[Function]}
+          onFocus={[Function]}
+          role="combobox"
+          tabIndex={0}
+          value=""
+        />
+      </div>
+      <div
+        className=" css-1hb7zxy-IndicatorsContainer"
+      >
+        <svg
+          className="select__icon-arrow-bottom select__icon-arrow-bottom_disabled"
+          height={24}
+          viewBox="0 0 24 24"
+          width={24}
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            clipRule="evenodd"
+            d="m19.293 7.293 1.414 1.414L12 17.414 3.293 8.707l1.414-1.414L12 14.586l7.293-7.293Z"
+            fillRule="evenodd"
+          />
+        </svg>
+      </div>
+    </div>
+  </div>
+</label>
+`;
+
+exports[`Error 1`] = `
+<label
+  className="select"
+>
+  <div
+    className=" css-b62m3t-container"
+    onKeyDown={[Function]}
+  >
+    <span
+      className="css-1f43avz-a11yText-A11yText"
+      id="react-select-4-live-region"
+    />
+    <span
+      aria-atomic="false"
+      aria-live="polite"
+      aria-relevant="additions text"
+      className="css-1f43avz-a11yText-A11yText"
+    />
+    <div
+      className="select__control select__control_error css-13cymwt-control"
+      onMouseDown={[Function]}
+      onTouchEnd={[Function]}
+    >
+      <div
+        className="select__value-container css-1fdsijx-ValueContainer"
+      >
+        <div
+          className="select__placeholder css-1jqq78o-placeholder"
+          id="react-select-4-placeholder"
+        />
+        <input
+          aria-autocomplete="list"
+          aria-describedby="react-select-4-placeholder"
+          aria-expanded={false}
+          aria-haspopup={true}
+          aria-readonly={true}
+          className="css-mohuvp-dummyInput-DummyInput"
+          disabled={false}
+          id="react-select-4-input"
+          inputMode="none"
+          onBlur={[Function]}
+          onChange={[Function]}
+          onFocus={[Function]}
+          role="combobox"
+          tabIndex={0}
+          value=""
+        />
+      </div>
+      <div
+        className=" css-1hb7zxy-IndicatorsContainer"
+      >
+        <svg
+          className="select__icon-arrow-bottom"
+          height={24}
+          viewBox="0 0 24 24"
+          width={24}
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            clipRule="evenodd"
+            d="m19.293 7.293 1.414 1.414L12 17.414 3.293 8.707l1.414-1.414L12 14.586l7.293-7.293Z"
+            fillRule="evenodd"
+          />
+        </svg>
+      </div>
+    </div>
+  </div>
+</label>
+`;
+
+exports[`Label 1`] = `
+<label
+  className="select"
+>
+  <span
+    className="select__label"
+  >
+    Label field
+  </span>
+  <div
+    className=" css-b62m3t-container"
+    onKeyDown={[Function]}
+  >
+    <span
+      className="css-1f43avz-a11yText-A11yText"
+      id="react-select-7-live-region"
+    />
+    <span
+      aria-atomic="false"
+      aria-live="polite"
+      aria-relevant="additions text"
+      className="css-1f43avz-a11yText-A11yText"
+    />
+    <div
+      className="select__control css-13cymwt-control"
+      onMouseDown={[Function]}
+      onTouchEnd={[Function]}
+    >
+      <div
+        className="select__value-container css-1fdsijx-ValueContainer"
+      >
+        <div
+          className="select__placeholder css-1jqq78o-placeholder"
+          id="react-select-7-placeholder"
+        />
+        <input
+          aria-autocomplete="list"
+          aria-describedby="react-select-7-placeholder"
+          aria-expanded={false}
+          aria-haspopup={true}
+          aria-readonly={true}
+          className="css-mohuvp-dummyInput-DummyInput"
+          disabled={false}
+          id="react-select-7-input"
+          inputMode="none"
+          onBlur={[Function]}
+          onChange={[Function]}
+          onFocus={[Function]}
+          role="combobox"
+          tabIndex={0}
+          value=""
+        />
+      </div>
+      <div
+        className=" css-1hb7zxy-IndicatorsContainer"
+      >
+        <svg
+          className="select__icon-arrow-bottom"
+          height={24}
+          viewBox="0 0 24 24"
+          width={24}
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            clipRule="evenodd"
+            d="m19.293 7.293 1.414 1.414L12 17.414 3.293 8.707l1.414-1.414L12 14.586l7.293-7.293Z"
+            fillRule="evenodd"
+          />
+        </svg>
+      </div>
+    </div>
+  </div>
+</label>
+`;

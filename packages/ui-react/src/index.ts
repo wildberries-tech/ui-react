@@ -18,6 +18,9 @@ export { debounce } from './tools/debounce';
  * Components
  **/
 export { DesignTokens, type IProps as IPropsDesignTokens } from './components/design-tokens';
+export { InputCode, type IProps as IPropsInputCode } from './components/input-code';
+export { InputPatternFormat, type IProps as IPropsInputPatternFormat } from './components/input-pattern-format';
+export { Select, type IProps as IPropsSelect } from './components/select';
 export { TabsComposition, type IProps as IPropsTabsComposition } from './components/tabs';
 export { Tabs, type IProps as IPropsTabs } from './components/tabs/components/tabs';
 export { Tab, type IProps as IPropsTab } from './components/tabs/components/tab';
@@ -52,6 +55,12 @@ export { DatePicker, type IProps as IPropsDatePicker } from './components/date-p
  **/
 export type { IProps as IPropsIcon } from './components/icons';
 export { IconBarChart } from './components/icons/bar-chart';
+export { IconFlagsBY } from './components/icons/flags/by';
+export { IconFlagsAM } from './components/icons/flags/am';
+export { IconFlagsKG } from './components/icons/flags/kg';
+export { IconFlagsKZ } from './components/icons/flags/kz';
+export { IconFlagsRU } from './components/icons/flags/ru';
+export { IconFlagsUZ } from './components/icons/flags/uz';
 export { IconBook } from './components/icons/book';
 export { IconBookmark } from './components/icons/bookmark';
 export { IconBookmarkAdd } from './components/icons/bookmark-add';
