@@ -23,19 +23,20 @@ interface ICustomTriggerElement {
     triggerText?: string
 }
 
+// eslint-disable-next-line @typescript-eslint/no-explicit-any
 export interface IProps<T extends ReactElement | ICustomTriggerElement = any> extends Pick<HTMLAttributes<HTMLDivElement>, 'style'>, IPopoverProps {
     /**
      * Render выпадающего элемента дропдауна
      **/
-    render?: ((isOpen: boolean, onClose: () => void, ref: MutableRefObject<HTMLElement | null>) => ReactNode | null),
+    readonly render?: ((isOpen: boolean, onClose: () => void, ref: MutableRefObject<HTMLElement | null>) => ReactNode | null),
     /**
      * Триггер-элемент дропдауна
      */
-    triggerElement?: T | ((isOpen: boolean) => T | null),
+    readonly triggerElement?: T | ((isOpen: boolean) => T | null),
     /**
      * Задает дополнительные CSS классы для стилизации родительского компонента Popover
      */
-    popoverClassname?: TStyle | string
+    readonly popoverClassname?: TStyle | string
 }
 
 export const Dropdown = ({ placement = 'bottom-end', syncOptionsWidth = true, className, ...props }: IProps) => {

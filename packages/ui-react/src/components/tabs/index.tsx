@@ -9,7 +9,7 @@ export interface IProps extends Omit<IPropsTabs, 'children'> {
     /**
      * Набор параметров для табов и их панелей
      */
-    items?: Array<{
+    readonly items?: Array<{
         id?: string | number,
         disabled?: boolean,
         elTab: IPropsTab['children'],

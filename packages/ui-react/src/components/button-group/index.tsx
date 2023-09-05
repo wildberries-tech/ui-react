@@ -8,27 +8,27 @@ export interface IProps {
     /**
      * Уникальный идентификатор компонента.
      **/
-    id?: string,
+    readonly id?: string,
     /**
      * Один или несколько классов для стилизации компонента.
      **/
-    className?: TStyle | string,
+    readonly className?: TStyle | string,
     /**
      * Ориентация кнопок в группе.
      **/
-    direction?: 'row' | 'column',
+    readonly direction?: 'row' | 'column',
     /**
      * Предустановленный стиль для компонента.
      **/
-    presetStyle?: 'desktop' | 'mobile',
+    readonly presetStyle?: 'desktop' | 'mobile',
     /**
      * Кнопки, которые нужно группировать.
      **/
-    children?: ReactNode,
+    readonly children?: ReactNode,
     /**
      * Тег, который будет использоваться для рендеринга компонента.
      **/
-    tagName?: keyof ReactHTML | ''
+    readonly tagName?: keyof ReactHTML | ''
 }
 
 /**

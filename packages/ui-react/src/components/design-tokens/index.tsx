@@ -6,11 +6,11 @@ export interface IProps extends IOptions {
     /**
      * Параметр `children` может содержать любые дочерние элементы, например строки, числа, другие компоненты React и т. д.
      */
-    children?: ReactNode,
+    readonly children?: ReactNode,
     /**
      * Параметр `tagName` используется для указания HTML-тега, который будет использоваться для отображения компонента или его части.
      */
-    tagName?: keyof ReactHTML
+    readonly tagName?: keyof ReactHTML
 }
 
 /**

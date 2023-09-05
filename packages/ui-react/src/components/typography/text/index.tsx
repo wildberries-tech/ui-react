@@ -13,28 +13,30 @@ export type TTypographyTextColor = typeof typographyColor[number];
 
 export type TProps<
     Element = Omit<HTMLAttributes<HTMLHeadingElement | HTMLParagraphElement | HTMLSpanElement>, 'className'>,
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
     AdditionalProps = Record<PropertyKey, any>
 > = Element & {
     /**
      * Параметр `className` используется для добавления пользовательских CSS классов к компоненту. Это позволяет настраивать внешний вид компонента с помощью пользовательских стилей.
      */
-    className?: TStyle | string,
+    readonly className?: TStyle | string,
     /**
      * Параметр `presetSize` используется для задания размера текста из заранее установленного списка
      */
-    presetSize?: TTypographyTextSizes,
+    readonly presetSize?: TTypographyTextSizes,
     /**
      * Параметр `tagName` используется для задания тэга или компонента, который будет рендериться
      */
-    tagName?: TTypographyTextTags | ComponentType<any>,
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
+    readonly tagName?: TTypographyTextTags | ComponentType<any>,
     /**
      * Параметр `presetColor` используется для задания цвета текста из заранее установленного списка
      */
-    presetColor?: TTypographyTextColor,
+    readonly presetColor?: TTypographyTextColor,
     /**
      * Параметр `componentProps` используется для пробрасывания пропсов в кастомный компонент из свойства `tagName`
      */
-    componentProps?: AdditionalProps
+    readonly componentProps?: AdditionalProps
 };
 
 export const Text = ({

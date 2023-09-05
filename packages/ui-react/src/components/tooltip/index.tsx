@@ -9,27 +9,27 @@ export interface IProps {
     /**
      * Задает дополнительные CSS классы для стилизации компонента.
      **/
-    className?: TStyle | string,
+    readonly className?: TStyle | string,
     /**
      * Принимает элементы, которые будут использованы в качестве триггера.
      **/
-    children?: IPropsPopover['children'],
+    readonly children?: IPropsPopover['children'],
     /**
      * Событие, при котором будет открываться `Popover`.
      **/
-    trigger?: IPropsPopover['trigger'],
+    readonly trigger?: IPropsPopover['trigger'],
     /**
      * Определяет, будет ли `Popover` отображаться при первоначальном рендеринге компонента.
      **/
-    defaultIsOpen?: IPropsPopover['defaultIsOpen'],
+    readonly defaultIsOpen?: IPropsPopover['defaultIsOpen'],
     /**
      * Определяет местоположение, куда будет отображаться всплывающий блок.
      **/
-    placement?: IPropsPopover['placement'],
+    readonly placement?: IPropsPopover['placement'],
     /**
      * Определяет, какой контент будет отображаться внутри всплывающего окна.
      **/
-    render?: IPropsPopover['render']
+    readonly render?: IPropsPopover['render']
 }
 
 /**

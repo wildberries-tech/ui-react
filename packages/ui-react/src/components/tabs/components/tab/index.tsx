@@ -7,8 +7,8 @@ import { context } from '../../context';
 import style from './index.module.pcss';
 
 export interface IProps extends Omit<TabProps, 'className' | 'disabledClassName' | 'selectedClassName' | 'children'> {
-    className?: string | TStyle,
-    children?: ReactNode | ((props: IProps) => ReactNode)
+    readonly className?: string | TStyle,
+    readonly children?: ReactNode | ((props: IProps) => ReactNode)
 }
 
 export const Tab = ({ className, ...props }: IProps) => {

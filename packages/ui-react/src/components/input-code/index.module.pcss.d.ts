@@ -4,6 +4,7 @@
 interface Stylesheet {
     'input-code': string
     'input-code__input': string
+    'input-code__input_is-error': string
 }
 
 

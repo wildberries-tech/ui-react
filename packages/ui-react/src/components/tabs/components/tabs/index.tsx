@@ -10,11 +10,11 @@ export interface IProps extends Omit<TabsProps, 'className' | 'selectedTabClassN
     /**
      * При использовании `presetStyle` компонент будет автоматически применять стили, соответствующие выбранному значению.
      */
-    presetStyle?: TContext,
+    readonly presetStyle?: TContext,
     /**
      * Параметр `className` используется для добавления пользовательских CSS классов к компоненту. Это позволяет настраивать внешний вид компонента с помощью пользовательских стилей.
      */
-    className?: string | TStyle
+    readonly className?: string | TStyle
 }
 
 export const Tabs = ({ presetStyle = 'pane', className, ...props }: IProps) => {

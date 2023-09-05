@@ -8,11 +8,11 @@ import { getMiddlePageButtons } from './get-middle-page-buttons';
 import styles from './index.module.pcss';
 
 interface IProps {
-    currentPage: number,
-    numberOfEdgeButtons: number,
-    numberOfMiddleButtons: number,
-    numberOfPages: number,
-    onChangePage: (page: number) => void
+    readonly currentPage: number,
+    readonly numberOfEdgeButtons: number,
+    readonly numberOfMiddleButtons: number,
+    readonly numberOfPages: number,
+    readonly onChangePage: (page: number) => void
 }
 
 const PaginationButtons = ({

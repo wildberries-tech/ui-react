@@ -1,8 +1,8 @@
 import React, { SVGAttributes, ReactNode } from 'react';
 
 export interface IProps extends SVGAttributes<SVGElement> {
-    children?: ReactNode,
-    className?: string
+    readonly children?: ReactNode,
+    readonly className?: string
 }
 
 export const SVG = ({

@@ -21,131 +21,131 @@ export interface IProps {
     /**
      * Определяет CSS-классы, которые будут применены к корневому элементу или CSS модулю
      **/
-    className?: string | TStyle,
+    readonly className?: string | TStyle,
     /**
      * Значение инпута по умолчанию
      **/
-    defaultInputValue?: string,
+    readonly defaultInputValue?: string,
     /**
      * Включает возможность выбора нескольких опций
      **/
-    isMulti?: boolean,
+    readonly isMulti?: boolean,
     /**
      * Скрывать выбранные опции
      **/
-    hideSelectedOptions?: boolean,
+    readonly hideSelectedOptions?: boolean,
     /**
      * Открывает меню выбора
      **/
-    menuIsOpen?: boolean,
+    readonly menuIsOpen?: boolean,
     /**
      * Открывать меню при первом рендере компонента
      **/
-    defaultMenuIsOpen?: boolean,
+    readonly defaultMenuIsOpen?: boolean,
     /**
      * Режим чтения справа налево
      **/
-    isRtl?: boolean,
+    readonly isRtl?: boolean,
     /**
      * Коллеция выбранных значений
      **/
-    value?: Array<IOption>,
+    readonly value?: Array<IOption>,
     /**
      * Выбранные опции по умолчанию
      **/
-    defaultValue?: Array<IOption>,
+    readonly defaultValue?: Array<IOption>,
     /**
      * Коллекция опций
      **/
-    options: Array<IOption>,
+    readonly options: Array<IOption>,
     /**
      * Отображается пока не выбран не один элемент
      **/
-    placeholder?: ReactNode,
+    readonly placeholder?: ReactNode,
     /**
      * Срабатывает при потере фокуса на элемента
      **/
-    onBlur?: FocusEventHandler<HTMLInputElement>,
+    readonly onBlur?: FocusEventHandler<HTMLInputElement>,
     /**
      * Срабатывает при фокусе элемента
      **/
-    onFocus?: FocusEventHandler<HTMLInputElement>,
+    readonly onFocus?: FocusEventHandler<HTMLInputElement>,
     /**
      * Срабатывает при нажатии кнопки
      **/
-    onKeyDown?: KeyboardEventHandler<HTMLDivElement>,
+    readonly onKeyDown?: KeyboardEventHandler<HTMLDivElement>,
     /**
      * Срабатывает когда пользователь прокрутил меню до начала
      **/
-    onMenuScrollToTop?: (event: WheelEvent | TouchEvent) => void,
+    readonly onMenuScrollToTop?: (event: WheelEvent | TouchEvent) => void,
     /**
      * Срабатывает когда пользователь прокрутил меню до конца
      **/
-    onMenuScrollToBottom?: (event: WheelEvent | TouchEvent) => void,
+    readonly onMenuScrollToBottom?: (event: WheelEvent | TouchEvent) => void,
     /**
      * Срабатывает при изменении значения
      **/
-    onChange?: (newValue: OnChangeValue<IOption, boolean>, actionMeta: ActionMeta<IOption>) => void,
+    readonly onChange?: (newValue: OnChangeValue<IOption, boolean>, actionMeta: ActionMeta<IOption>) => void,
     /**
      * Открывать меню при фокусе на элемент
      **/
-    openMenuOnFocus?: boolean,
+    readonly openMenuOnFocus?: boolean,
     /**
      * Открывать меню при клике
      **/
-    openMenuOnClick?: boolean,
+    readonly openMenuOnClick?: boolean,
     /**
      * Количество элементов при нажатии клавиш вверх/вниз
      **/
-    pageSize?: number,
+    readonly pageSize?: number,
     /**
      * Параметр `required` указывает, что данное поле является обязательным для заполнения перед отправкой формы
      */
-    required?: boolean,
+    readonly required?: boolean,
     /**
      * Устанавливает порядок перехода по кнопке с помощью клавиши `Tab`.
      **/
-    tabIndex?: number,
+    readonly tabIndex?: number,
     /**
      * Название инпута
      **/
-    name?: string,
+    readonly name?: string,
     /**
      * Прокрутка меню при открытии
      **/
-    menuShouldScrollIntoView?: boolean,
+    readonly menuShouldScrollIntoView?: boolean,
     /**
      * Блокировка прокрутки при открытом меню
      **/
-    menuShouldBlockScroll?: boolean,
+    readonly menuShouldBlockScroll?: boolean,
     /**
      * Включает возможность поиска по опциям
      **/
-    isSearchable?: boolean,
+    readonly isSearchable?: boolean,
     /**
      * Включает возможность очистки выбранного значения
      **/
-    isClearable?: boolean,
+    readonly isClearable?: boolean,
     /**
      * Устанавливает фокус на элемент при первом рендере компонента
      **/
-    autoFocus?: boolean,
+    readonly autoFocus?: boolean,
     /**
      * Удалять выбранную в данный момент опцию, когда пользователь нажимает клавишу Backspace при выборе isClearable или isMulti.
      **/
-    backspaceRemovesValue?: boolean,
+    readonly backspaceRemovesValue?: boolean,
     /**
      * Удалять фокус ввода, когда пользователь выбирает опцию (удобно для отключения клавиатуры на сенсорных устройствах).
      **/
-    blurInputOnSelect?: boolean,
+    readonly blurInputOnSelect?: boolean,
     /**
      * Когда пользователь достигает верхней/нижней части меню, запретите прокрутку родительского элемента прокрутки.
      **/
-    captureMenuScroll?: boolean,
+    readonly captureMenuScroll?: boolean,
     /**
      * Закрывать меню выбора, когда пользователь выбирает опцию
      **/
-    closeMenuOnSelect?: boolean,
+    readonly closeMenuOnSelect?: boolean,
     /**
      * Если `true`, закроет меню выбора, когда пользователь прокручивает `document/body`.
      *
@@ -153,28 +153,28 @@ export interface IProps {
      *
      * Это полезно, когда у вас есть прокручиваемое модальное окно и вы хотите перенести меню, но хотите избежать артефактов.
      **/
-    closeMenuOnScroll?: boolean | ((event: Event) => boolean),
-    controlShouldRenderValue?: boolean,
+    readonly closeMenuOnScroll?: boolean | ((event: Event) => boolean),
+    readonly controlShouldRenderValue?: boolean,
     /**
      * Очистить все значения и закрыть меню при нажатии `esc`
      **/
-    escapeClearsValue?: boolean,
+    readonly escapeClearsValue?: boolean,
     /**
      * Фильтрация опций
      **/
-    filterOption?: (option: FilterOptionOption<IOption>) => boolean,
+    readonly filterOption?: (option: FilterOptionOption<IOption>) => boolean,
     /**
      * Отключает поле ввода
      **/
-    isDisabled?: boolean,
+    readonly isDisabled?: boolean,
     /**
      * Приводит компонент в состояние ошибки
      **/
-    isError?: boolean,
+    readonly isError?: boolean,
     /**
      * Лейбл поля
      **/
-    label?: ReactNode
+    readonly label?: ReactNode
 }
 
 /**

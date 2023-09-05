@@ -8,18 +8,18 @@ import style from './index.module.pcss';
 type TAttributes = 'id' | 'onChange' | 'onClick' | 'onBlur' | 'onKeyDownCapture' | 'onKeyUpCapture' | 'onFocus' | 'autoFocus' | 'tabIndex' | 'disabled' | 'maxLength' | 'minLength' | 'pattern' | 'placeholder' | 'readOnly' | 'required' | 'size' | 'autoComplete' | 'inputMode' | 'title' | 'autoCorrect';
 
 export interface IProps extends Pick<InputHTMLAttributes<HTMLInputElement>, TAttributes> {
-    name: string,
-    className?: TStyle | string,
-    direction?: 'row' | 'column',
-    minDate?: Date,
-    maxDate?: Date,
-    label?: ReactNode,
-    tabIndex?: number,
-    elError?: boolean,
-    elIcon?: boolean,
-    value?: string,
-    defaultValue?: string,
-    type?: 'datetime-local' | 'date'
+    readonly name: string,
+    readonly className?: TStyle | string,
+    readonly direction?: 'row' | 'column',
+    readonly minDate?: Date,
+    readonly maxDate?: Date,
+    readonly label?: ReactNode,
+    readonly tabIndex?: number,
+    readonly elError?: boolean,
+    readonly elIcon?: boolean,
+    readonly value?: string,
+    readonly defaultValue?: string,
+    readonly type?: 'datetime-local' | 'date'
 }
 
 export const InputDate = ({ type = 'date', elIcon = true, ...props }: IProps) => {

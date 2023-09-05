@@ -10,39 +10,39 @@ export interface IProps {
     /**
      * Позволяет задавать дополнительные классы для стилизации элемента.
      */
-    className?: TStyle | string,
+    readonly className?: TStyle | string,
     /**
      * Определяет предустановленный стиль элемента навигации.
      */
-    presetStyle?: 'default' | 'active',
+    readonly presetStyle?: 'default' | 'active',
     /**
      * Определяет, отключен ли элемент навигации
      */
-    isDisabled?: boolean,
+    readonly isDisabled?: boolean,
     /**
      * Задает текстовое описание, которое будет отображаться при наведении курсора на элемент навигации.
      */
-    title?: TNative['title'],
+    readonly title?: TNative['title'],
     /**
      * Содержимое элемента
      */
-    children?: TNative['children'],
+    readonly children?: TNative['children'],
     /**
      * Обработчик клика на элементе
      */
-    onClick?: TNative['onClick'],
+    readonly onClick?: TNative['onClick'],
     /**
      * Адрес ссылки, на который будет осуществлен переход при клике
      */
-    href?: TNative['href'],
+    readonly href?: TNative['href'],
     /**
      * Задает, в каком окне или фрейме должна быть загружена связанная с пунктом навигации страница, когда пользователь нажимает на этот пункт.
      */
-    target?: TNative['target'],
+    readonly target?: TNative['target'],
     /**
      * Указывает, должен ли браузер загружать ресурс по ссылке, вместо того, чтобы отображать его в браузере.
      */
-    download?: TNative['download']
+    readonly download?: TNative['download']
 }
 
 /**

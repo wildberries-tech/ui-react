@@ -1,5 +1,5 @@
 import React from 'react';
-import { render, fireEvent, screen, act } from '@testing-library/react';
+import { render } from '@testing-library/react';
 
 import { InputCode } from '..';
 

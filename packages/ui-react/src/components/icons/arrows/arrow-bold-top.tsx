@@ -3,7 +3,7 @@ import React from 'react';
 import { SVG, IProps as IPropsSVG } from '..';
 
 export interface IProps {
-    svg?: IPropsSVG
+    readonly svg?: IPropsSVG
 }
 
 export const IconArrowsArrowBoldTop = (props: IProps) => (

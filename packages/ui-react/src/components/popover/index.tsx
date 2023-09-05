@@ -21,57 +21,57 @@ export interface IProps {
     /**
      * Задает дополнительные CSS классы для стилизации компонента.
      **/
-    className?: TStyle | string,
+    readonly className?: TStyle | string,
     /**
      * Тег, который будет использоваться для рендеринга компонента.
      **/
-    triggerTagName?: keyof ReactHTML | '',
+    readonly triggerTagName?: keyof ReactHTML | '',
     /**
      * Принимает элементы, которые будут использованы в качестве триггера.
      **/
-    children?: ReactNode | ((isOpen: boolean, onClose: () => void) => ReactNode),
+    readonly children?: ReactNode | ((isOpen: boolean, onClose: () => void) => ReactNode),
     /**
      * Событие, при котором будет открываться `Popover`.
      **/
-    trigger?: 'click' | 'hover',
+    readonly trigger?: 'click' | 'hover',
     /**
      * Определяет, будет ли `Popover` отображаться при первоначальном рендеринге компонента.
      **/
-    defaultIsOpen?: boolean,
-    overflowContainer?: boolean,
+    readonly defaultIsOpen?: boolean,
+    readonly overflowContainer?: boolean,
     /**
      * Определяет, должен ли автоматически подстраиваться под размеры экрана.
      **/
-    auto?: boolean,
+    readonly auto?: boolean,
     /**
      * Определяет местоположение, куда будет отображаться всплывающий блок.
      **/
-    placement?: Options['placement'],
+    readonly placement?: Options['placement'],
     /**
      * Определяет смещение позиции относительно триггера, который вызывает всплывающее окно.
      **/
-    triggerOffset?: number,
+    readonly triggerOffset?: number,
     /**
      * Задает смещение относительно контейнера, в котором находится.
      **/
-    containerOffset?: number,
+    readonly containerOffset?: number,
     /**
      * Определяет смещение стрелки.
      **/
-    arrowOffset?: number,
-    preferX?: Options['preferX'],
-    preferY?: Options['preferY'],
+    readonly arrowOffset?: number,
+    readonly preferX?: Options['preferX'],
+    readonly preferY?: Options['preferY'],
     /**
      * Определяет, какой контент будет отображаться внутри всплывающего окна.
      **/
-    render?: ReactNode | ((isOpen: boolean, onClose: () => void, ref: MutableRefObject<HTMLElement | null>) => ReactNode),
-    onCloseCallback?: () => void,
-    hoverOptions?: UseHoverOptions,
+    readonly render?: ReactNode | ((isOpen: boolean, onClose: () => void, ref: MutableRefObject<HTMLElement | null>) => ReactNode),
+    readonly onCloseCallback?: () => void,
+    readonly hoverOptions?: UseHoverOptions,
     /**
      * Определяет, должна ли стрелка быть отображена внутри всплывающего блока.
      **/
-    arrow?: boolean,
-    arrowOptions?: {
+    readonly arrow?: boolean,
+    readonly arrowOptions?: {
         angle?: number,
         size?: number,
         roundness?: number,
@@ -82,15 +82,15 @@ export interface IProps {
     /**
      * Устанавливает минимальную ширину выпадающего списка, равную элементу триггера
      **/
-    syncOptionsWidth?: boolean,
+    readonly syncOptionsWidth?: boolean,
     /**
      * Свойство определяет, можно ли взаимодействовать с содержимым компонента
      **/
-    isOptionsHoverable?: boolean,
+    readonly isOptionsHoverable?: boolean,
     /**
      * Свойство позволяет указать кастомный контейнер для рендера компонента
      **/
-    container?: HTMLElement
+    readonly container?: HTMLElement
 }
 
 /**

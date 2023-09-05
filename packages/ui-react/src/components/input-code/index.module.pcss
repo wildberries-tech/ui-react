@@ -29,13 +29,18 @@
 
         &:focus {
             outline: none;
-            box-shadow: inset 0 0 0 2px #3a0078;
+            box-shadow: 0 0 0 2px #3a0078;
             background-color: #fff;
             caret-color: #000;
         }
 
         &[disabled] {
             opacity: 0.5;
+        }
+
+        &_is-error {
+            border: solid 1px #f96666;
+            line-height: 58px;
         }
     }
 }

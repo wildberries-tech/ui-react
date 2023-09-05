@@ -8,15 +8,15 @@ export interface IProps {
     /**
      * Параметр `children` может содержать любое количество дочерних компонентов `Tag`.
      */
-    children?: ReactNode,
+    readonly children?: ReactNode,
     /**
      * Параметр `className` используется для добавления пользовательских CSS классов к компоненту. Это позволяет настраивать внешний вид компонента с помощью пользовательских стилей.
      */
-    className?: string | TStyle,
+    readonly className?: string | TStyle,
     /**
      * Параметр `tagName` используется для указания HTML-тега, который будет использоваться для отображения компонента или его части.
      */
-    tagName?: keyof ReactHTML
+    readonly tagName?: keyof ReactHTML
 }
 
 /**

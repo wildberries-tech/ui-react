@@ -60,3 +60,14 @@ export const CustomLength: StoryObj<typeof META> = {
         length: 4
     }
 };
+
+/**
+ * Установка длинны кода
+ **/
+export const Error: StoryObj<typeof META> = {
+    name: 'Состояние ошибки',
+    args: {
+        isError     : true,
+        defaultValue: '250987'
+    }
+};

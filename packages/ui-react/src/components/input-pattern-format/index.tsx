@@ -10,30 +10,30 @@ export interface IProps extends IPropsInputText {
     /**
      * Указывает тип поля
      **/
-    type: 'text' | 'tel' | 'password',
+    readonly type: 'text' | 'tel' | 'password',
     /**
      * Форматирование пустых значений
      **/
-    allowEmptyFormatting?: boolean,
+    readonly allowEmptyFormatting?: boolean,
     /**
      * Шаблон формата с помощью символа `patternChar`.
      **/
-    format: string,
+    readonly format: string,
     /**
      * Используется как символ маски
      **/
-    mask?: Array<string> | string,
+    readonly mask?: Array<string> | string,
     /**
      * Символ-заполнитель для чисел.
      **/
-    patternChar?: string,
+    readonly patternChar?: string,
     /**
      * Функция проверки для проверки входного значения. Если эта функция возвращает `false`, метод `onChange` не сработает и входное значение не изменится.
      **/
-    isAllowed?: Parameters<typeof PatternFormat>[0]['isAllowed'],
-    valueIsNumericString?: Parameters<typeof PatternFormat>[0]['valueIsNumericString'],
-    onValueChange?: Parameters<typeof PatternFormat>[0]['onValueChange'],
-    renderText?: Parameters<typeof PatternFormat>[0]['renderText']
+    readonly isAllowed?: Parameters<typeof PatternFormat>[0]['isAllowed'],
+    readonly valueIsNumericString?: Parameters<typeof PatternFormat>[0]['valueIsNumericString'],
+    readonly onValueChange?: Parameters<typeof PatternFormat>[0]['onValueChange'],
+    readonly renderText?: Parameters<typeof PatternFormat>[0]['renderText']
 }
 
 /**

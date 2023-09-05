@@ -10,9 +10,9 @@ export type TTypographyTitleTags = typeof typographyTitleTags[number];
 export type TTypographyTitleColor = typeof typographyColor[number];
 
 export interface IProps extends Omit<HTMLAttributes<HTMLHeadingElement | HTMLParagraphElement | HTMLSpanElement>, 'className'> {
-    className?: TStyle | string,
-    tagName?: TTypographyTitleTags,
-    presetColor?: TTypographyTitleColor
+    readonly className?: TStyle | string,
+    readonly tagName?: TTypographyTitleTags,
+    readonly presetColor?: TTypographyTitleColor
 }
 
 export const Title = ({ tagName = 'h1', presetColor = 'basic', className, ...attrs }: IProps) => {

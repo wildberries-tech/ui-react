@@ -59,25 +59,25 @@ export interface IConfigI18n {
 }
 
 export interface IProps {
-    className?: string | TStyle,
-    dropdownClassName?: TStyle,
-    readOnly?: boolean,
-    placeholder?: string,
-    isDateRange?: boolean,
-    maxPeriodDays?: number,
-    disableDatesInPast?: boolean,
-    defaultMinDate?: Date,
-    defaultMaxDate?: Date,
-    disabledDates?: TDateValuesArray,
-    defaultSelectedDate?: TDateValuesArray,
-    weekView?: boolean,
-    enabled?: boolean,
-    onChange?: (value: TDateValuesArray) => void,
-    i18nConfig: IConfigI18n,
-    isMobile?: boolean,
-    qa?: boolean,
-    container?: HTMLElement,
-    elCalendarIcon?: ReactNode
+    readonly className?: string | TStyle,
+    readonly dropdownClassName?: TStyle,
+    readonly readOnly?: boolean,
+    readonly placeholder?: string,
+    readonly isDateRange?: boolean,
+    readonly maxPeriodDays?: number,
+    readonly disableDatesInPast?: boolean,
+    readonly defaultMinDate?: Date,
+    readonly defaultMaxDate?: Date,
+    readonly disabledDates?: TDateValuesArray,
+    readonly defaultSelectedDate?: TDateValuesArray,
+    readonly weekView?: boolean,
+    readonly enabled?: boolean,
+    readonly onChange?: (value: TDateValuesArray) => void,
+    readonly i18nConfig: IConfigI18n,
+    readonly isMobile?: boolean,
+    readonly qa?: boolean,
+    readonly container?: HTMLElement,
+    readonly elCalendarIcon?: ReactNode
 }
 
 interface ICalendarDate {

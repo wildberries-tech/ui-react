@@ -11,18 +11,18 @@ import { consoleFormat } from '../../tools/console-format';
 import style from './index.module.pcss';
 
 export interface IProps {
-    className?: string | TStyle,
-    header?: ReactNode,
-    children: ReactNode,
-    placement?: 'center' | 'bottom',
-    onClose?: () => void,
-    primaryButton?: IButtonProps,
-    secondaryButton?: IButtonProps,
-    anchorElement?: HTMLElement,
-    bodyPaddingPreset?: 'default' | 'reduced',
-    isCloseIconShow?: boolean,
-    isOpen?: boolean,
-    widthPreset?: 's' | 'm' | 'l' | 'xl'
+    readonly className?: string | TStyle,
+    readonly header?: ReactNode,
+    readonly children: ReactNode,
+    readonly placement?: 'center' | 'bottom',
+    readonly onClose?: () => void,
+    readonly primaryButton?: IButtonProps,
+    readonly secondaryButton?: IButtonProps,
+    readonly anchorElement?: HTMLElement,
+    readonly bodyPaddingPreset?: 'default' | 'reduced',
+    readonly isCloseIconShow?: boolean,
+    readonly isOpen?: boolean,
+    readonly widthPreset?: 's' | 'm' | 'l' | 'xl'
 }
 
 export const Modal = ({
@@ -151,6 +151,7 @@ export const Modal = ({
                             >
                                 {props.children}
                             </div>
+                            {/* eslint-disable-next-line @typescript-eslint/prefer-nullish-coalescing */}
                             {props.primaryButton || props.secondaryButton ? (
                                 <div
                                     className={cn('modal__footer', {

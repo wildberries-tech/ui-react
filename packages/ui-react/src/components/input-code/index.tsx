@@ -65,7 +65,11 @@ export interface IProps {
     /**
      * Параметр `onChange` предназначен для обработки события изменения содержимого поля ввода
      **/
-    readonly onChange?: (value: string) => void
+    readonly onChange?: (value: string) => void,
+    /**
+     * Состояние ошибки
+     **/
+    readonly isError?: boolean
 }
 
 /**
@@ -203,7 +207,9 @@ export const InputCode = ({ length = 6, autoComplete = 'off', type = 'text', ...
                     min={0}
                     max={9}
                     maxLength={1}
-                    className={cn('input-code__input')}
+                    className={cn('input-code__input', {
+                        'input-code__input_is-error': props.isError
+                    })}
                     autoComplete={autoComplete}
                     onFocus={onFocus}
                     onKeyDown={onKeyDown(index)}

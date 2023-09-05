@@ -4,7 +4,7 @@ import postcssModulesDTS from '@guanghechen/postcss-modules-dts';
 import postcssNested from 'postcss-nested';
 import postcssNestedAncestors from 'postcss-nested-ancestors';
 
-export default async () => {
+export default () => {
     return defineConfig({
         resolve: {
             extensions: ['.ts', '.tsx', '.js', '.jsx', '.json']
