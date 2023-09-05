@@ -572,6 +572,7 @@ overrides:
         - error
         - 4
         - VariableDeclarator: first
+          SwitchCase: 1
           MemberExpression: 1
           FunctionDeclaration:
             body: 1
