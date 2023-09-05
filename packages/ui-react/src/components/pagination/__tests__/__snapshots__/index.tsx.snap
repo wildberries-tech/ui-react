@@ -676,6 +676,298 @@ exports[`Default use 2`] = `
 </DocumentFragment>
 `;
 
+exports[`Deprecated props 1`] = `
+<DocumentFragment>
+  <div
+    class="pagination"
+  >
+    <div
+      class="pagination__wrapper"
+    >
+      Показать записей
+      <div
+        class="dropdown"
+      >
+        <span
+          class="popover__trigger"
+        >
+          <div
+            class="pagination__dropdown-trigger"
+          >
+            <p
+              class="typography typography_size-large typography_color-basic typography_no-spacing"
+            >
+              10
+            </p>
+            <svg
+              class="pagination__dropdown-trigger-icon"
+              height="24"
+              viewBox="0 0 24 24"
+              width="24"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                clip-rule="evenodd"
+                d="m19.293 7.293 1.414 1.414L12 17.414 3.293 8.707l1.414-1.414L12 14.586l7.293-7.293Z"
+                fill-rule="evenodd"
+              />
+            </svg>
+          </div>
+        </span>
+      </div>
+    </div>
+    <label
+      class="input-text"
+    >
+      <div
+        class="input-text__field"
+      >
+        <input
+          autocomplete="off"
+          class="input-text__input"
+          name="pageNumber"
+          placeholder="№ страницы"
+          tabindex="0"
+          type="text"
+          value=""
+        />
+      </div>
+    </label>
+    <ul
+      class="pagination-buttons"
+    >
+      <li
+        class="pagination-buttons__item"
+      >
+        <button
+          class="pagination-buttons__button pagination-buttons__button_selected"
+          type="button"
+        >
+          1
+        </button>
+      </li>
+      <li
+        class="pagination-buttons__item"
+      >
+        <button
+          class="pagination-buttons__button"
+          type="button"
+        >
+          2
+        </button>
+      </li>
+      <li
+        class="pagination-buttons__item"
+      >
+        <button
+          class="pagination-buttons__button"
+          type="button"
+        >
+          3
+        </button>
+      </li>
+      <li
+        class="pagination-buttons__item"
+      >
+        <button
+          class="pagination-buttons__button"
+          type="button"
+        >
+          4
+        </button>
+      </li>
+      <li
+        class="pagination-buttons__item"
+      >
+        <span
+          class="pagination-buttons__dots"
+        >
+          ...
+        </span>
+      </li>
+      <li
+        class="pagination-buttons__item"
+      >
+        <button
+          class="pagination-buttons__button"
+          type="button"
+        >
+          100
+        </button>
+      </li>
+      <li
+        class="pagination-buttons__item"
+      >
+        <button
+          class="pagination-buttons__icon-button"
+          type="button"
+        >
+          <svg
+            class="pagination-buttons__icon"
+            height="24"
+            viewBox="0 0 24 24"
+            width="24"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              clip-rule="evenodd"
+              d="M14.586 12 7.293 4.707l1.414-1.414L17.414 12l-8.707 8.707-1.414-1.414L14.586 12Z"
+              fill-rule="evenodd"
+            />
+          </svg>
+        </button>
+      </li>
+    </ul>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`Deprecated props 2`] = `
+<DocumentFragment>
+  <div
+    class="pagination"
+  >
+    <div
+      class="pagination__wrapper"
+    >
+      Показать записей
+      <div
+        class="dropdown"
+      >
+        <span
+          class="popover__trigger"
+        >
+          <div
+            class="pagination__dropdown-trigger"
+          >
+            <p
+              class="typography typography_size-large typography_color-basic typography_no-spacing"
+            >
+              10
+            </p>
+            <svg
+              class="pagination__dropdown-trigger-icon"
+              height="24"
+              viewBox="0 0 24 24"
+              width="24"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                clip-rule="evenodd"
+                d="m19.293 7.293 1.414 1.414L12 17.414 3.293 8.707l1.414-1.414L12 14.586l7.293-7.293Z"
+                fill-rule="evenodd"
+              />
+            </svg>
+          </div>
+        </span>
+      </div>
+    </div>
+    <label
+      class="input-text"
+    >
+      <div
+        class="input-text__field"
+      >
+        <input
+          autocomplete="off"
+          class="input-text__input"
+          name="pageNumber"
+          placeholder="№ страницы"
+          tabindex="0"
+          type="text"
+          value=""
+        />
+      </div>
+    </label>
+    <ul
+      class="pagination-buttons"
+    >
+      <li
+        class="pagination-buttons__item"
+      >
+        <button
+          class="pagination-buttons__button pagination-buttons__button_selected"
+          type="button"
+        >
+          1
+        </button>
+      </li>
+      <li
+        class="pagination-buttons__item"
+      >
+        <button
+          class="pagination-buttons__button"
+          type="button"
+        >
+          2
+        </button>
+      </li>
+      <li
+        class="pagination-buttons__item"
+      >
+        <button
+          class="pagination-buttons__button"
+          type="button"
+        >
+          3
+        </button>
+      </li>
+      <li
+        class="pagination-buttons__item"
+      >
+        <button
+          class="pagination-buttons__button"
+          type="button"
+        >
+          4
+        </button>
+      </li>
+      <li
+        class="pagination-buttons__item"
+      >
+        <span
+          class="pagination-buttons__dots"
+        >
+          ...
+        </span>
+      </li>
+      <li
+        class="pagination-buttons__item"
+      >
+        <button
+          class="pagination-buttons__button"
+          type="button"
+        >
+          100
+        </button>
+      </li>
+      <li
+        class="pagination-buttons__item"
+      >
+        <button
+          class="pagination-buttons__icon-button"
+          type="button"
+        >
+          <svg
+            class="pagination-buttons__icon"
+            height="24"
+            viewBox="0 0 24 24"
+            width="24"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              clip-rule="evenodd"
+              d="M14.586 12 7.293 4.707l1.414-1.414L17.414 12l-8.707 8.707-1.414-1.414L14.586 12Z"
+              fill-rule="evenodd"
+            />
+          </svg>
+        </button>
+      </li>
+    </ul>
+  </div>
+</DocumentFragment>
+`;
+
 exports[`Many items 1`] = `
 <DocumentFragment>
   <div
