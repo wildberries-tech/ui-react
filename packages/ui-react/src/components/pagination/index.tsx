@@ -7,6 +7,7 @@ import { IconArrowsChevronBottom } from '../icons/arrows/chevron-bottom';
 import { Text } from '../typography/text';
 import { InputText } from '../input-text';
 import { debounce } from '../../tools/debounce';
+import { consoleFormat } from '../../tools/console-format';
 
 import PaginationButtons from './pagination-buttons';
 import styles from './index.module.pcss';
@@ -66,6 +67,10 @@ export interface IProps {
      **/
     onChangePageSize?: (pageSize: number) => void,
     /**
+     * Обработчик на смену размера страницы и номера страницы
+     **/
+    onChangePagination?: ({ pageSize, pageNumber }: { pageSize?: number, pageNumber: number }) => void,
+    /**
      * Показывать инпут ручного выбора страницы
      **/
     showPageInput?: boolean,
@@ -110,6 +115,12 @@ export const Pagination = ({
         }
     }, [props.numberOfItems, props.numberItemsPerPage, numberItemsPerPage]);
 
+    useEffect(() => {
+        if(props.onChangePage || props.onChangePageSize) {
+            consoleFormat('Свойства `onChangePage` и `onChangePageSize` устарели и будут удалены в следующих релизах, используйте `onChangePagination`');
+        }
+    }, [props.onChangePage, props.onChangePageSize]);
+
     const resetInput = () => {
         setIsInputError(false);
 
@@ -118,8 +129,13 @@ export const Pagination = ({
         }
     };
 
-    const handleChangePage = (page: number) => {
-        props.onChangePage?.(page);
+    const onChangePage = (pageNumber: number) => {
+        // TODO Deprecated, убрать в следующих релизах
+        props.onChangePage?.(pageNumber);
+
+        props.onChangePagination?.({
+            pageNumber
+        });
 
         resetInput();
     };
@@ -129,15 +145,27 @@ export const Pagination = ({
 
         resetInput();
 
+        // TODO Deprecated, убрать в следующих релизах
         props.onChangePageSize?.(preset);
 
+        // TODO Deprecated, убрать в следующих релизах
         props.onChangePage?.(1);
+
+        props.onChangePagination?.({
+            pageSize: preset,
+            pageNumber: 1
+        });
     };
 
     const onSetCurrentPage = debounce((e: ChangeEvent<HTMLInputElement>) => {
         const value = parseInt(e.target.value, 10);
 
+        // TODO Deprecated, убрать в следующих релизах
         props.onChangePage?.(!isNaN(value) ? value : 1);
+
+        props.onChangePagination?.({
+            pageNumber: !isNaN(value) ? value : 1
+        });
 
         setIsInputError(value > numberOfPages);
     }, pageInputTimeout);
@@ -250,7 +278,7 @@ export const Pagination = ({
                 numberOfEdgeButtons={numberOfEdgeButtons}
                 numberOfMiddleButtons={numberOfMiddleButtons}
                 numberOfPages={numberOfPages}
-                onChangePage={handleChangePage}
+                onChangePage={onChangePage}
             />
         </div>
     );

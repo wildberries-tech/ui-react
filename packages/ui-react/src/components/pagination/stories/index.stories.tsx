@@ -31,7 +31,7 @@ export const Default: StoryFn<typeof Pagination> = () => {
                 label: 'Показать записей'
             }}
             currentPage={currentPageOne}
-            onChangePage={setCurrentPageOne}
+            onChangePagination={({ pageNumber }) => setCurrentPageOne(pageNumber)}
             numberOfItems={10}
             numberItemsPerPage={10}
         />
@@ -49,7 +49,7 @@ export const CombinedTrigger: StoryFn<typeof Pagination> = () => {
             }}
             isTriggerCombined={true}
             currentPage={currentPageOne}
-            onChangePage={setCurrentPageOne}
+            onChangePagination={({ pageNumber }) => setCurrentPageOne(pageNumber)}
             numberOfItems={10}
             numberItemsPerPage={10}
         />
@@ -68,7 +68,7 @@ export const CombinedTriggerColumn: StoryFn<typeof Pagination> = () => {
             direction="column"
             isTriggerCombined={true}
             currentPage={currentPageOne}
-            onChangePage={setCurrentPageOne}
+            onChangePagination={({ pageNumber }) => setCurrentPageOne(pageNumber)}
             numberOfItems={1000}
             numberItemsPerPage={10}
         />
@@ -86,7 +86,7 @@ export const Column: StoryFn<typeof Pagination> = () => {
             }}
             direction="column"
             currentPage={currentPageOne}
-            onChangePage={setCurrentPageOne}
+            onChangePagination={({ pageNumber }) => setCurrentPageOne(pageNumber)}
             numberOfItems={1000}
             numberItemsPerPage={10}
         />
@@ -103,7 +103,7 @@ export const ErrorProps: StoryFn<typeof Pagination> = () => {
                 label: 'Показать записей'
             }}
             currentPage={currentPageOne}
-            onChangePage={setCurrentPageOne}
+            onChangePagination={({ pageNumber }) => setCurrentPageOne(pageNumber)}
             numberOfItems={10}
             numberItemsPerPage={10}
             showPageInput={true}
@@ -121,7 +121,7 @@ export const ManyItems: StoryFn<typeof Pagination> = () => {
                 label: 'Показать записей'
             }}
             currentPage={currentPageOne}
-            onChangePage={setCurrentPageOne}
+            onChangePagination={({ pageNumber }) => setCurrentPageOne(pageNumber)}
             numberOfItems={1000}
             numberItemsPerPage={10}
         />
@@ -139,7 +139,7 @@ export const ManyItemsCombinedTrigger: StoryFn<typeof Pagination> = () => {
             }}
             isTriggerCombined={true}
             currentPage={currentPageOne}
-            onChangePage={setCurrentPageOne}
+            onChangePagination={({ pageNumber }) => setCurrentPageOne(pageNumber)}
             numberOfItems={1000}
             numberItemsPerPage={10}
         />
@@ -157,9 +157,7 @@ export const ManyItemsWithInput: StoryFn<typeof Pagination> = () => {
                 placeholder: '№ страницы'
             }}
             currentPage={currentPageOne}
-            onChangePage={(page: number) => {
-                setCurrentPageOne(page);
-            }}
+            onChangePagination={({ pageNumber }) => setCurrentPageOne(pageNumber)}
             numberOfItems={1000}
             numberItemsPerPage={10}
             showPageInput={true}
@@ -169,6 +167,26 @@ export const ManyItemsWithInput: StoryFn<typeof Pagination> = () => {
 
 // eslint-disable-next-line react/no-multi-comp
 export const ManyItemsWithInputCombinedTrigger: StoryFn<typeof Pagination> = () => {
+    const [currentPageOne, setCurrentPageOne] = useState<number>(1);
+
+    return (
+        <Pagination
+            i18n={{
+                label: 'Показать записей',
+                placeholder: 'placeholder'
+            }}
+            isTriggerCombined={true}
+            currentPage={currentPageOne}
+            onChangePagination={({ pageNumber }) => setCurrentPageOne(pageNumber)}
+            numberOfItems={10}
+            numberItemsPerPage={10}
+            showPageInput={true}
+        />
+    );
+};
+
+// eslint-disable-next-line react/no-multi-comp
+export const DeprecatedProps: StoryFn<typeof Pagination> = () => {
     const [currentPageOne, setCurrentPageOne] = useState<number>(1);
 
     return (

@@ -10,7 +10,7 @@ test('Default use', async () => {
                 label: 'Показать записей'
             }}
             currentPage={1}
-            onChangePage={() => 2}
+            onChangePagination={({ pageNumber }) => pageNumber + 1}
             numberOfItems={10}
             numberItemsPerPage={10}
         />
@@ -31,7 +31,7 @@ test('Combined trigger', async () => {
             }}
             isTriggerCombined={true}
             currentPage={1}
-            onChangePage={() => 2}
+            onChangePagination={({ pageNumber }) => pageNumber + 1}
             numberOfItems={10}
             numberItemsPerPage={10}
         />
@@ -53,7 +53,7 @@ test('Combined trigger column', async () => {
             direction="column"
             isTriggerCombined={true}
             currentPage={1}
-            onChangePage={() => 2}
+            onChangePagination={({ pageNumber }) => pageNumber + 1}
             numberOfItems={10}
             numberItemsPerPage={10}
         />
@@ -76,7 +76,7 @@ test('Combined trigger column input', async () => {
             isTriggerCombined={true}
             currentPage={1}
             showPageInput={true}
-            onChangePage={() => 2}
+            onChangePagination={({ pageNumber }) => pageNumber + 1}
             numberOfItems={10}
             numberItemsPerPage={10}
         />
@@ -96,7 +96,7 @@ test('Many items', async () => {
                 label: 'Показать записей'
             }}
             currentPage={1}
-            onChangePage={() => 2}
+            onChangePagination={({ pageNumber }) => pageNumber + 1}
             numberOfItems={1000}
             numberItemsPerPage={10}
         />
@@ -110,6 +110,28 @@ test('Many items', async () => {
 });
 
 test('Many items with input', async () => {
+    const { asFragment } = render(
+        <Pagination
+            i18n={{
+                label: 'Показать записей',
+                placeholder: '№ страницы'
+            }}
+            currentPage={1}
+            onChangePagination={({ pageNumber }) => pageNumber + 1}
+            numberOfItems={1000}
+            numberItemsPerPage={10}
+            showPageInput={true}
+        />
+    );
+
+    expect(asFragment()).toMatchSnapshot();
+
+    await waitFor(() => {
+        expect(asFragment()).toMatchSnapshot();
+    });
+});
+
+test('Deprecated props', async () => {
     const { asFragment } = render(
         <Pagination
             i18n={{
@@ -140,7 +162,7 @@ test('Zero pages', async () => {
                 placeholder: placeholderText
             }}
             currentPage={1}
-            onChangePage={() => 2}
+            onChangePagination={({ pageNumber }) => pageNumber + 1}
             numberOfItems={0}
             numberItemsPerPage={0}
             showPageInput={true}
@@ -163,7 +185,7 @@ test('Clicks on elements', async () => {
                 placeholder: placeholderText
             }}
             currentPage={1}
-            onChangePage={() => 2}
+            onChangePagination={({ pageNumber }) => pageNumber + 1}
             numberOfItems={1000}
             numberItemsPerPage={10}
             showPageInput={true}
@@ -202,7 +224,7 @@ test('Throw error', async () => {
                 label: 'Показать записей'
             }}
             currentPage={1}
-            onChangePage={() => 2}
+            onChangePagination={({ pageNumber }) => pageNumber + 1}
             numberOfItems={0}
             numberItemsPerPage={0}
             showPageInput={true}
