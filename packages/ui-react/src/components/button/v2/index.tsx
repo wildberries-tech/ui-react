@@ -9,57 +9,61 @@ type TNative = ButtonHTMLAttributes<HTMLButtonElement>;
 
 export interface IProps {
     /**
+     * Устанавливает связь с формой
+     **/
+    readonly form?: TNative['form'],
+    /**
      * CSS класс или классы, которые будут применены к кнопке.
      **/
-    className?: TStyle | string,
+    readonly className?: TStyle | string,
     /**
      * Устанавливает размер кнопки.
      **/
-    presetSize?: 'medium' | 'small',
+    readonly presetSize?: 'medium' | 'small',
     /**
      * Устанавливает стиль кнопки.
      **/
-    presetStyle?: 'primary' | 'primary-circle' | 'secondary' | 'secondary-circle' | 'interface' | 'interface-circle' | 'error' | 'ghost' | 'ghost-error',
+    readonly presetStyle?: 'primary' | 'primary-circle' | 'secondary' | 'secondary-circle' | 'interface' | 'interface-circle' | 'error' | 'ghost' | 'ghost-error',
     /**
      * Если установлен в true, то кнопка будет в состоянии загрузки.
      **/
-    isLoading?: boolean,
+    readonly isLoading?: boolean,
     /**
      * Если установлен в true, то кнопка будет компактной.
      **/
-    isCompact?: boolean,
+    readonly isCompact?: boolean,
     /**
      * Уникальный идентификатор для кнопки.
      **/
-    id?: TNative['id'],
+    readonly id?: TNative['id'],
     /**
      * Устанавливает тип кнопки.
      **/
-    type?: TNative['type'],
+    readonly type?: TNative['type'],
     /**
      * Устанавливает порядок перехода по кнопке с помощью клавиши `Tab`.
      **/
-    tabIndex?: TNative['tabIndex'],
+    readonly tabIndex?: TNative['tabIndex'],
     /**
      * Определяет функцию обратного вызова, которая будет вызвана при фокусировке на кнопке.
      **/
-    onFocus?: TNative['onFocus'],
+    readonly onFocus?: TNative['onFocus'],
     /**
      * Определяет функцию обратного вызова, которая будет выполнена при нажатии на кнопку.
      **/
-    onClick?: TNative['onClick'],
+    readonly onClick?: TNative['onClick'],
     /**
      * Содержимое кнопки.
      **/
-    children?: TNative['children'],
+    readonly children?: TNative['children'],
     /**
      * Устанавливает горячую клавишу для кнопки.
      **/
-    accessKey?: TNative['accessKey'],
+    readonly accessKey?: TNative['accessKey'],
     /**
      * Если установлен в true, то кнопка будет заблокирована.
      **/
-    disabled?: TNative['disabled']
+    readonly disabled?: TNative['disabled']
 }
 
 const isValidCompact = (element: IProps['children']) => {
@@ -68,6 +72,8 @@ const isValidCompact = (element: IProps['children']) => {
 };
 
 const isCompact = (element: IProps['children']) => {
+    console.log('asd', element);
+
     return !Array.isArray(element) && isValidCompact(element);
 };
 
@@ -82,8 +88,10 @@ export const Button = forwardRef<HTMLButtonElement | null, IProps>(({ presetSize
             id={props.id}
             type={type}
             ref={ref}
+            form={props.form}
             // eslint-disable-next-line @typescript-eslint/prefer-nullish-coalescing
             disabled={props.isLoading || props.disabled}
+            // eslint-disable-next-line @typescript-eslint/prefer-nullish-coalescing
             tabIndex={props.isLoading || props.disabled ? -1 : props.tabIndex}
             onFocus={props.onFocus}
             onClick={props.onClick}

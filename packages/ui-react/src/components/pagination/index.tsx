@@ -26,46 +26,46 @@ export interface IProps {
     /**
      * Задает дополнительные CSS классы для стилизации компонента
      **/
-    className?: string | TStyle,
+    readonly className?: string | TStyle,
     /**
      * Начальная страница по-умолчанию
      **/
-    currentPage?: number,
+    readonly currentPage?: number,
     /**
      * Пресеты для выпадающего списка выбора количества записей, дефолт [5, 10, 20, 50, 100]
      **/
-    itemsPerPagePreset?: Array<number>,
+    readonly itemsPerPagePreset?: Array<number>,
     /**
      * Объект переводов
      **/
-    i18n: {
+    readonly i18n: {
         label: string,
         placeholder?: string
     },
     /**
      * Количество айтемов на странице
      **/
-    numberItemsPerPage: number,
+    readonly numberItemsPerPage: number,
     /**
      * Количество кнопок справа и слева от выборанной страницы
      **/
-    numberOfEdgeButtons?: number,
+    readonly numberOfEdgeButtons?: number,
     /**
      * Общее количество айтемов
      **/
-    numberOfItems: number,
+    readonly numberOfItems: number,
     /**
      * Количество средних кнопок
      **/
-    numberOfMiddleButtons?: number,
+    readonly numberOfMiddleButtons?: number,
     /**
      * Обработчик на смену страницы
      **/
-    onChangePage?: (page: number) => void,
+    readonly onChangePage?: (page: number) => void,
     /**
      * Обработчик на смену размера страницы
      **/
-    onChangePageSize?: (pageSize: number) => void,
+    readonly onChangePageSize?: (pageSize: number) => void,
     /**
      * Обработчик на смену размера страницы и номера страницы
      **/
@@ -73,19 +73,19 @@ export interface IProps {
     /**
      * Показывать инпут ручного выбора страницы
      **/
-    showPageInput?: boolean,
+    readonly showPageInput?: boolean,
     /**
      * Изменить таймаут инпута ручного выбора страницы, дефолт 300 мс
      **/
-    pageInputTimeout?: number,
+    readonly pageInputTimeout?: number,
     /**
      * Свойство позволяет объединить лейбл пагинации с триггером
      **/
-    isTriggerCombined?: boolean,
+    readonly isTriggerCombined?: boolean,
     /**
      * Свойство определяет расположение триггера относительно кнопок
      **/
-    direction?: 'row' | 'column'
+    readonly direction?: 'row' | 'column'
 }
 
 export const Pagination = ({

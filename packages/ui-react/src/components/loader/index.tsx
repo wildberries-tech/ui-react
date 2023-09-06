@@ -8,19 +8,19 @@ export interface IProps {
     /**
      * Уникальный идентификатор компонента.
      */
-    id?: string,
+    readonly id?: string,
     /**
      * Класс(ы) для дополнительного оформления компонента.
      */
-    className?: TStyle | string,
+    readonly className?: TStyle | string,
     /**
      * Определяет размер лоадера
      */
-    presetSize?: 'small' | 'medium' | 'large' | 'button',
+    readonly presetSize?: 'small' | 'medium' | 'large' | 'button',
     /**
      * Определяет цветовую схему лоадера, предустановленную разработчиком.
      */
-    presetStyle?: 'white' | 'rich-grey' | 'grey' | 'red' | 'light-green' | 'dark-purple'
+    readonly presetStyle?: 'white' | 'rich-grey' | 'grey' | 'red' | 'light-green' | 'dark-purple'
 }
 
 /**

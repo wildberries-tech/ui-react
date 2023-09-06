@@ -11,67 +11,67 @@ export interface IProps {
     /**
      * Название поля ввода, которое будет отправлено на сервер вместе со значением.
      **/
-    name: string,
+    readonly name: string,
     /**
      * Позволяет добавить пользовательские CSS-классы
      **/
-    className?: string | TStyle,
+    readonly className?: string | TStyle,
     /**
      * Текст метки, связанной с переключателем.
      **/
-    label?: ReactNode,
+    readonly label?: ReactNode,
     /**
      * Значение, которое будет отправлено на сервер при отправке формы.
      **/
-    value?: string,
+    readonly value?: string,
     /**
      * Значение переключателя по умолчанию.
      **/
-    defaultValue?: string,
+    readonly defaultValue?: string,
     /**
      * Дополнительный текст, который поясняет, что выбирает переключатель.
      **/
-    description?: ReactNode,
+    readonly description?: ReactNode,
     /**
      * Устанавливает или определяет, должен ли компонент быть отмечен.
      **/
-    checked?: TNative['checked'],
+    readonly checked?: TNative['checked'],
     /**
      * Определяет, должен ли флажок быть установлен при первоначальной загрузке компонента.
      **/
-    defaultChecked?: TNative['defaultChecked'],
+    readonly defaultChecked?: TNative['defaultChecked'],
     /**
      * Функция обратного вызова, которая будет вызываться при изменении значения переключателя.
      **/
-    onChange?: TNative['onChange'],
+    readonly onChange?: TNative['onChange'],
     /**
      * Функция обратного вызова, которая будет вызываться при клике на переключатель.
      **/
-    onClick?: TNative['onClick'],
+    readonly onClick?: TNative['onClick'],
     /**
      * Функция обратного вызова, которая будет вызываться при потере фокуса на переключателе.
      **/
-    onBlur?: TNative['onBlur'],
+    readonly onBlur?: TNative['onBlur'],
     /**
      * Функция обратного вызова, которая будет вызываться при получении фокуса на переключателе.
      **/
-    onFocus?: TNative['onFocus'],
+    readonly onFocus?: TNative['onFocus'],
     /**
      * Указывает, должен ли компонент получать фокус при монтировании (отрисовке) на странице.
      **/
-    autoFocus?: TNative['autoFocus'],
+    readonly autoFocus?: TNative['autoFocus'],
     /**
      * Уникальный идентификатор переключателя.
      **/
-    id?: TNative['id'],
+    readonly id?: TNative['id'],
     /**
      * Порядковый номер элемента при переключении по `Tab`.
      **/
-    tabIndex?: TNative['tabIndex'],
+    readonly tabIndex?: TNative['tabIndex'],
     /**
      * Определяет, будет ли компонент отключен.
      **/
-    disabled?: TNative['disabled']
+    readonly disabled?: TNative['disabled']
 }
 
 export const Radio = forwardRef<HTMLInputElement | null, IProps>(({ tabIndex = 0, ...props }, ref) => {

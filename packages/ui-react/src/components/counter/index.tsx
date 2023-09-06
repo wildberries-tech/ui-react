@@ -8,27 +8,27 @@ export interface IProps {
     /**
      * Параметр `children` может содержать любые дочерние элементы, например строки, числа, другие компоненты React и т. д.
      */
-    children?: ReactNode,
+    readonly children?: ReactNode,
     /**
      * Параметр `className` используется для добавления пользовательских CSS классов к компоненту. Это позволяет настраивать внешний вид компонента с помощью пользовательских стилей.
      */
-    className?: string | TStyle,
+    readonly className?: string | TStyle,
     /**
      * При использовании `presetStyle` компонент будет автоматически применять стили, соответствующие выбранному значению.
      */
-    presetStyle?: 'orange' | 'dark-gray',
+    readonly presetStyle?: 'orange' | 'dark-gray',
     /**
      * При использовании `presetSize` компонент будет автоматически применять размер, соответствующий выбранному значению.
      */
-    presetSize?: 'small' | 'big',
+    readonly presetSize?: 'small' | 'big',
     /**
      * Параметр `tagName` используется для указания HTML-тега, который будет использоваться для отображения компонента или его части.
      */
-    tagName?: keyof ReactHTML,
+    readonly tagName?: keyof ReactHTML,
     /**
      * Обработчик события клика на компоненте.
      */
-    onClick?: (e: MouseEvent) => void
+    readonly onClick?: (e: MouseEvent) => void
 }
 
 /**

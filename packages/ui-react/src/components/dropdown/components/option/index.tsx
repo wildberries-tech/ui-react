@@ -8,19 +8,19 @@ export interface IProps {
     /**
      * Задает дополнительные CSS классы для стилизации компонента
      **/
-    className?: string | TStyle,
+    readonly className?: string | TStyle,
     /**
      * Содержимое опции
      **/
-    children: ReactNode,
+    readonly children: ReactNode,
     /**
      * Активное состояние
      **/
-    isActive?: boolean,
+    readonly isActive?: boolean,
     /**
      * События клика
      **/
-    onClick?: (event: MouseEvent<HTMLDivElement>) => void
+    readonly onClick?: (event: MouseEvent<HTMLDivElement>) => void
 }
 
 export const DropdownOption = (props: IProps) => {

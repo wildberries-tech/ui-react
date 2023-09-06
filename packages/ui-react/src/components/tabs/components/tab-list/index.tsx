@@ -6,7 +6,7 @@ import { type TStyle, useClassnames } from '../../../../hooks/use-classnames';
 import style from './index.module.pcss';
 
 export interface IProps extends Omit<TabListProps, 'className'> {
-    className?: string | TStyle
+    readonly className?: string | TStyle
 }
 
 export const TabList = ({ className, ...props }: IProps) => {

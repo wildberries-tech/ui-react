@@ -10,27 +10,27 @@ export interface IProps {
     /**
      * React-компоненты `Checkbox`, которые являются частью группы.
      **/
-    children: ReactNode,
+    readonly children: ReactNode,
     /**
      * Определяет CSS-классы, которые будут применены к корневому элементу
      **/
-    className?: string | TStyle,
+    readonly className?: string | TStyle,
     /**
      * Текст, который будет использован в качестве заголовка группы чекбоксов.
      **/
-    legend?: ReactNode,
+    readonly legend?: ReactNode,
     /**
      * Направление, в котором будут располагаться чекбоксы.
      **/
-    direction?: 'row' | 'column',
+    readonly direction?: 'row' | 'column',
     /**
      * Определяет, должны ли все чекбоксы в группе быть отключеными.
      **/
-    disabled?: TNative['disabled'],
+    readonly disabled?: TNative['disabled'],
     /**
      * Уникальный идентификатор компонента
      **/
-    id?: TNative['id']
+    readonly id?: TNative['id']
 }
 
 /**
