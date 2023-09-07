@@ -152,7 +152,7 @@ export interface IProps {
      * Это полезно, когда у вас есть прокручиваемое модальное окно и вы хотите перенести меню, но хотите избежать артефактов.
      **/
     readonly closeMenuOnScroll?: Props['closeMenuOnScroll'],
-    readonly controlShouldRenderValue?: boolean,
+    readonly controlShouldRenderValue?: Props['controlShouldRenderValue'],
     /**
      * Очистить все значения и закрыть меню при нажатии `esc`
      **/
