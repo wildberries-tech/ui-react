@@ -1,7 +1,5 @@
-import React, { FocusEventHandler, KeyboardEventHandler, ReactNode, useCallback, useMemo } from 'react';
-import SelectSource, { components, IndicatorsContainerProps, OptionProps, SingleValueProps } from 'react-select';
-import type { FilterOptionOption } from 'react-select/dist/declarations/src/filters';
-import type { ActionMeta, OnChangeValue } from 'react-select/dist/declarations/src/types';
+import React, { ReactNode, useCallback, useMemo } from 'react';
+import SelectSource, { components, IndicatorsContainerProps, OptionProps, SingleValueProps, ActionMeta, OnChangeValue, Props } from 'react-select';
 
 import { type TStyle, useClassnames } from '../../hooks/use-classnames';
 import { IconCheckMark } from '../icons/check-mark';
@@ -25,27 +23,27 @@ export interface IProps {
     /**
      * Значение инпута по умолчанию
      **/
-    readonly defaultInputValue?: string,
+    readonly defaultInputValue?: Props['defaultInputValue'],
     /**
      * Включает возможность выбора нескольких опций
      **/
-    readonly isMulti?: boolean,
+    readonly isMulti?: Props['isMulti'],
     /**
      * Скрывать выбранные опции
      **/
-    readonly hideSelectedOptions?: boolean,
+    readonly hideSelectedOptions?: Props['hideSelectedOptions'],
     /**
      * Открывает меню выбора
      **/
-    readonly menuIsOpen?: boolean,
+    readonly menuIsOpen?: Props['menuIsOpen'],
     /**
      * Открывать меню при первом рендере компонента
      **/
-    readonly defaultMenuIsOpen?: boolean,
+    readonly defaultMenuIsOpen?: Props['defaultMenuIsOpen'],
     /**
      * Режим чтения справа налево
      **/
-    readonly isRtl?: boolean,
+    readonly isRtl?: Props['isRtl'],
     /**
      * Коллеция выбранных значений
      **/
@@ -61,27 +59,27 @@ export interface IProps {
     /**
      * Отображается пока не выбран не один элемент
      **/
-    readonly placeholder?: ReactNode,
+    readonly placeholder?: Props['placeholder'],
     /**
      * Срабатывает при потере фокуса на элемента
      **/
-    readonly onBlur?: FocusEventHandler<HTMLInputElement>,
+    readonly onBlur?: Props['onBlur'],
     /**
      * Срабатывает при фокусе элемента
      **/
-    readonly onFocus?: FocusEventHandler<HTMLInputElement>,
+    readonly onFocus?: Props['onFocus'],
     /**
      * Срабатывает при нажатии кнопки
      **/
-    readonly onKeyDown?: KeyboardEventHandler<HTMLDivElement>,
+    readonly onKeyDown?: Props['onKeyDown'],
     /**
      * Срабатывает когда пользователь прокрутил меню до начала
      **/
-    readonly onMenuScrollToTop?: (event: WheelEvent | TouchEvent) => void,
+    readonly onMenuScrollToTop?: Props['onMenuScrollToTop'],
     /**
      * Срабатывает когда пользователь прокрутил меню до конца
      **/
-    readonly onMenuScrollToBottom?: (event: WheelEvent | TouchEvent) => void,
+    readonly onMenuScrollToBottom?: Props['onMenuScrollToBottom'],
     /**
      * Срабатывает при изменении значения
      **/
@@ -89,63 +87,63 @@ export interface IProps {
     /**
      * Открывать меню при фокусе на элемент
      **/
-    readonly openMenuOnFocus?: boolean,
+    readonly openMenuOnFocus?: Props['openMenuOnFocus'],
     /**
      * Открывать меню при клике
      **/
-    readonly openMenuOnClick?: boolean,
+    readonly openMenuOnClick?: Props['openMenuOnClick'],
     /**
      * Количество элементов при нажатии клавиш вверх/вниз
      **/
-    readonly pageSize?: number,
+    readonly pageSize?: Props['pageSize'],
     /**
      * Параметр `required` указывает, что данное поле является обязательным для заполнения перед отправкой формы
      */
-    readonly required?: boolean,
+    readonly required?: Props['required'],
     /**
      * Устанавливает порядок перехода по кнопке с помощью клавиши `Tab`.
      **/
-    readonly tabIndex?: number,
+    readonly tabIndex?: Props['tabIndex'],
     /**
      * Название инпута
      **/
-    readonly name?: string,
+    readonly name?: Props['name'],
     /**
      * Прокрутка меню при открытии
      **/
-    readonly menuShouldScrollIntoView?: boolean,
+    readonly menuShouldScrollIntoView?: Props['menuShouldScrollIntoView'],
     /**
      * Блокировка прокрутки при открытом меню
      **/
-    readonly menuShouldBlockScroll?: boolean,
+    readonly menuShouldBlockScroll?: Props['menuShouldBlockScroll'],
     /**
      * Включает возможность поиска по опциям
      **/
-    readonly isSearchable?: boolean,
+    readonly isSearchable?: Props['isSearchable'],
     /**
      * Включает возможность очистки выбранного значения
      **/
-    readonly isClearable?: boolean,
+    readonly isClearable?: Props['isClearable'],
     /**
      * Устанавливает фокус на элемент при первом рендере компонента
      **/
-    readonly autoFocus?: boolean,
+    readonly autoFocus?: Props['autoFocus'],
     /**
      * Удалять выбранную в данный момент опцию, когда пользователь нажимает клавишу Backspace при выборе isClearable или isMulti.
      **/
-    readonly backspaceRemovesValue?: boolean,
+    readonly backspaceRemovesValue?: Props['backspaceRemovesValue'],
     /**
      * Удалять фокус ввода, когда пользователь выбирает опцию (удобно для отключения клавиатуры на сенсорных устройствах).
      **/
-    readonly blurInputOnSelect?: boolean,
+    readonly blurInputOnSelect?: Props['blurInputOnSelect'],
     /**
      * Когда пользователь достигает верхней/нижней части меню, запретите прокрутку родительского элемента прокрутки.
      **/
-    readonly captureMenuScroll?: boolean,
+    readonly captureMenuScroll?: Props['captureMenuScroll'],
     /**
      * Закрывать меню выбора, когда пользователь выбирает опцию
      **/
-    readonly closeMenuOnSelect?: boolean,
+    readonly closeMenuOnSelect?: Props['closeMenuOnSelect'],
     /**
      * Если `true`, закроет меню выбора, когда пользователь прокручивает `document/body`.
      *
@@ -153,20 +151,20 @@ export interface IProps {
      *
      * Это полезно, когда у вас есть прокручиваемое модальное окно и вы хотите перенести меню, но хотите избежать артефактов.
      **/
-    readonly closeMenuOnScroll?: boolean | ((event: Event) => boolean),
+    readonly closeMenuOnScroll?: Props['closeMenuOnScroll'],
     readonly controlShouldRenderValue?: boolean,
     /**
      * Очистить все значения и закрыть меню при нажатии `esc`
      **/
-    readonly escapeClearsValue?: boolean,
+    readonly escapeClearsValue?: Props['escapeClearsValue'],
     /**
      * Фильтрация опций
      **/
-    readonly filterOption?: (option: FilterOptionOption<IOption>) => boolean,
+    readonly filterOption?: Props['filterOption'],
     /**
      * Отключает поле ввода
      **/
-    readonly isDisabled?: boolean,
+    readonly isDisabled?: Props['isDisabled'],
     /**
      * Приводит компонент в состояние ошибки
      **/
