@@ -1,5 +1,12 @@
 import React, { ReactNode, useCallback, useMemo } from 'react';
-import SelectSource, { components, IndicatorsContainerProps, OptionProps, SingleValueProps, ActionMeta, OnChangeValue, Props } from 'react-select';
+import SelectSource, {
+    components,
+    IndicatorsContainerProps,
+    OptionProps,
+    SingleValueProps,
+    Props,
+    MultiValue, SingleValue, ActionMeta, OptionsOrGroups, GroupBase
+} from 'react-select';
 
 import { type TStyle, useClassnames } from '../../hooks/use-classnames';
 import { IconCheckMark } from '../icons/check-mark';
@@ -15,135 +22,141 @@ interface IOption {
     disabled?: boolean
 }
 
-export interface IProps {
+type TSelectValue = SingleValue<IOption> | MultiValue<IOption>;
+
+type TSelectOptions = OptionsOrGroups<IOption, GroupBase<IOption>>;
+
+type TSelectProps = Props<IOption>;
+
+export interface IProps extends Omit<TSelectProps, 'className'> {
     /**
      * Определяет CSS-классы, которые будут применены к корневому элементу или CSS модулю
      **/
     readonly className?: string | TStyle,
     /**
-     * Значение инпута по умолчанию
-     **/
-    readonly defaultInputValue?: Props['defaultInputValue'],
-    /**
-     * Включает возможность выбора нескольких опций
-     **/
-    readonly isMulti?: Props['isMulti'],
-    /**
-     * Скрывать выбранные опции
-     **/
-    readonly hideSelectedOptions?: Props['hideSelectedOptions'],
-    /**
-     * Открывает меню выбора
-     **/
-    readonly menuIsOpen?: Props['menuIsOpen'],
-    /**
-     * Открывать меню при первом рендере компонента
-     **/
-    readonly defaultMenuIsOpen?: Props['defaultMenuIsOpen'],
-    /**
-     * Режим чтения справа налево
-     **/
-    readonly isRtl?: Props['isRtl'],
-    /**
      * Коллеция выбранных значений
      **/
-    readonly value?: Array<IOption>,
-    /**
-     * Выбранные опции по умолчанию
-     **/
-    readonly defaultValue?: Array<IOption>,
+    readonly value?: TSelectValue,
     /**
      * Коллекция опций
      **/
-    readonly options: Array<IOption>,
-    /**
-     * Отображается пока не выбран не один элемент
-     **/
-    readonly placeholder?: Props['placeholder'],
-    /**
-     * Срабатывает при потере фокуса на элемента
-     **/
-    readonly onBlur?: Props['onBlur'],
-    /**
-     * Срабатывает при фокусе элемента
-     **/
-    readonly onFocus?: Props['onFocus'],
-    /**
-     * Срабатывает при нажатии кнопки
-     **/
-    readonly onKeyDown?: Props['onKeyDown'],
-    /**
-     * Срабатывает когда пользователь прокрутил меню до начала
-     **/
-    readonly onMenuScrollToTop?: Props['onMenuScrollToTop'],
-    /**
-     * Срабатывает когда пользователь прокрутил меню до конца
-     **/
-    readonly onMenuScrollToBottom?: Props['onMenuScrollToBottom'],
+    readonly options: TSelectOptions,
     /**
      * Срабатывает при изменении значения
      **/
-    readonly onChange?: (newValue: OnChangeValue<IOption, boolean>, actionMeta: ActionMeta<IOption>) => void,
+    readonly onChange?: (newValue: TSelectValue, actionMeta: ActionMeta<IOption>) => void,
+    /**
+     * Значение инпута по умолчанию
+     **/
+    readonly defaultInputValue?: TSelectProps['defaultInputValue'],
+    /**
+     * Включает возможность выбора нескольких опций
+     **/
+    readonly isMulti?: TSelectProps['isMulti'],
+    /**
+     * Скрывать выбранные опции
+     **/
+    readonly hideSelectedOptions?: TSelectProps['hideSelectedOptions'],
+    /**
+     * Открывает меню выбора
+     **/
+    readonly menuIsOpen?: TSelectProps['menuIsOpen'],
+    /**
+     * Открывать меню при первом рендере компонента
+     **/
+    readonly defaultMenuIsOpen?: TSelectProps['defaultMenuIsOpen'],
+    /**
+     * Режим чтения справа налево
+     **/
+    readonly isRtl?: TSelectProps['isRtl'],
+    /**
+     * Выбранные опции по умолчанию
+     **/
+    readonly defaultValue?: TSelectProps['defaultValue'],
+    /**
+     * Отображается пока не выбран не один элемент
+     **/
+    readonly placeholder?: TSelectProps['placeholder'],
+    /**
+     * Срабатывает при потере фокуса на элемента
+     **/
+    readonly onBlur?: TSelectProps['onBlur'],
+    /**
+     * Срабатывает при фокусе элемента
+     **/
+    readonly onFocus?: TSelectProps['onFocus'],
+    /**
+     * Срабатывает при нажатии кнопки
+     **/
+    readonly onKeyDown?: TSelectProps['onKeyDown'],
+    /**
+     * Срабатывает когда пользователь прокрутил меню до начала
+     **/
+    readonly onMenuScrollToTop?: TSelectProps['onMenuScrollToTop'],
+    /**
+     * Срабатывает когда пользователь прокрутил меню до конца
+     **/
+    readonly onMenuScrollToBottom?: TSelectProps['onMenuScrollToBottom'],
     /**
      * Открывать меню при фокусе на элемент
      **/
-    readonly openMenuOnFocus?: Props['openMenuOnFocus'],
+    readonly openMenuOnFocus?: TSelectProps['openMenuOnFocus'],
     /**
      * Открывать меню при клике
      **/
-    readonly openMenuOnClick?: Props['openMenuOnClick'],
+    readonly openMenuOnClick?: TSelectProps['openMenuOnClick'],
     /**
      * Количество элементов при нажатии клавиш вверх/вниз
      **/
-    readonly pageSize?: Props['pageSize'],
+    readonly pageSize?: TSelectProps['pageSize'],
     /**
      * Параметр `required` указывает, что данное поле является обязательным для заполнения перед отправкой формы
      */
-    readonly required?: Props['required'],
+    readonly required?: TSelectProps['required'],
     /**
      * Устанавливает порядок перехода по кнопке с помощью клавиши `Tab`.
      **/
-    readonly tabIndex?: Props['tabIndex'],
+    readonly tabIndex?: TSelectProps['tabIndex'],
     /**
      * Название инпута
      **/
-    readonly name?: Props['name'],
+    readonly name?: TSelectProps['name'],
     /**
      * Прокрутка меню при открытии
      **/
-    readonly menuShouldScrollIntoView?: Props['menuShouldScrollIntoView'],
+    readonly menuShouldScrollIntoView?: TSelectProps['menuShouldScrollIntoView'],
     /**
      * Блокировка прокрутки при открытом меню
      **/
-    readonly menuShouldBlockScroll?: Props['menuShouldBlockScroll'],
+    readonly menuShouldBlockScroll?: TSelectProps['menuShouldBlockScroll'],
     /**
      * Включает возможность поиска по опциям
      **/
-    readonly isSearchable?: Props['isSearchable'],
+    readonly isSearchable?: TSelectProps['isSearchable'],
     /**
      * Включает возможность очистки выбранного значения
      **/
-    readonly isClearable?: Props['isClearable'],
+    readonly isClearable?: TSelectProps['isClearable'],
     /**
      * Устанавливает фокус на элемент при первом рендере компонента
      **/
-    readonly autoFocus?: Props['autoFocus'],
+    readonly autoFocus?: TSelectProps['autoFocus'],
     /**
      * Удалять выбранную в данный момент опцию, когда пользователь нажимает клавишу Backspace при выборе isClearable или isMulti.
      **/
-    readonly backspaceRemovesValue?: Props['backspaceRemovesValue'],
+    readonly backspaceRemovesValue?: TSelectProps['backspaceRemovesValue'],
     /**
      * Удалять фокус ввода, когда пользователь выбирает опцию (удобно для отключения клавиатуры на сенсорных устройствах).
      **/
-    readonly blurInputOnSelect?: Props['blurInputOnSelect'],
+    readonly blurInputOnSelect?: TSelectProps['blurInputOnSelect'],
     /**
      * Когда пользователь достигает верхней/нижней части меню, запретите прокрутку родительского элемента прокрутки.
      **/
-    readonly captureMenuScroll?: Props['captureMenuScroll'],
+    readonly captureMenuScroll?: TSelectProps['captureMenuScroll'],
     /**
      * Закрывать меню выбора, когда пользователь выбирает опцию
      **/
-    readonly closeMenuOnSelect?: Props['closeMenuOnSelect'],
+    readonly closeMenuOnSelect?: TSelectProps['closeMenuOnSelect'],
     /**
      * Если `true`, закроет меню выбора, когда пользователь прокручивает `document/body`.
      *
@@ -151,20 +164,23 @@ export interface IProps {
      *
      * Это полезно, когда у вас есть прокручиваемое модальное окно и вы хотите перенести меню, но хотите избежать артефактов.
      **/
-    readonly closeMenuOnScroll?: Props['closeMenuOnScroll'],
-    readonly controlShouldRenderValue?: Props['controlShouldRenderValue'],
+    readonly closeMenuOnScroll?: TSelectProps['closeMenuOnScroll'],
+    /**
+     * Показывать ли значение в элементе Control
+     **/
+    readonly controlShouldRenderValue?: TSelectProps['controlShouldRenderValue'],
     /**
      * Очистить все значения и закрыть меню при нажатии `esc`
      **/
-    readonly escapeClearsValue?: Props['escapeClearsValue'],
+    readonly escapeClearsValue?: TSelectProps['escapeClearsValue'],
     /**
      * Фильтрация опций
      **/
-    readonly filterOption?: Props['filterOption'],
+    readonly filterOption?: TSelectProps['filterOption'],
     /**
      * Отключает поле ввода
      **/
-    readonly isDisabled?: Props['isDisabled'],
+    readonly isDisabled?: TSelectProps['isDisabled'],
     /**
      * Приводит компонент в состояние ошибки
      **/
@@ -238,7 +254,7 @@ export const Select = ({ isSearchable = false, ...props }: IProps) => {
                 svg={{
                     className: cn('select__icon-arrow-bottom', {
                         'select__icon-arrow-bottom_disabled': option.isDisabled,
-                        'select__icon-arrow-bottom_open'    : option.selectProps.menuIsOpen
+                        'select__icon-arrow-bottom_open': option.selectProps.menuIsOpen
                     })
                 }}
             />
@@ -296,25 +312,25 @@ export const Select = ({ isSearchable = false, ...props }: IProps) => {
                 pageSize={props.pageSize}
                 tabIndex={props.tabIndex}
                 classNames={{
-                    menu          : () => cn('select__menu'),
-                    menuList      : () => cn('select__menu-list'),
-                    singleValue   : () => cn('select__single-value'),
-                    control       : (option) => cn('select__control', {
+                    menu: () => cn('select__menu'),
+                    menuList: () => cn('select__menu-list'),
+                    singleValue: () => cn('select__single-value'),
+                    control: (option) => cn('select__control', {
                         'select__control_disabled': option.isDisabled,
-                        'select__control_error'   : props.isError
+                        'select__control_error': props.isError
                     }),
                     valueContainer: () => cn('select__value-container'),
-                    placeholder   : () => cn('select__placeholder'),
-                    option        : (option) => cn('select__option', {
-                        'select__option_focused' : option.isFocused,
+                    placeholder: () => cn('select__placeholder'),
+                    option: (option) => cn('select__option', {
+                        'select__option_focused': option.isFocused,
                         'select__option_disabled': option.isDisabled,
                         'select__option_selected': option.isSelected
                     })
                 }}
                 components={{
-                    Option             : componentOption,
-                    SingleValue        : componentSingleValue,
-                    IndicatorSeparator : null,
+                    Option: componentOption,
+                    SingleValue: componentSingleValue,
+                    IndicatorSeparator: null,
                     IndicatorsContainer: componentIndicatorsContainer
                 }}
                 getOptionLabel={(option) => option.label}

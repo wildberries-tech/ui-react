@@ -69,7 +69,7 @@ export interface IProps {
     /**
      * Обработчик на смену размера страницы и номера страницы
      **/
-    onChangePagination?: ({ pageSize, pageNumber }: { pageSize?: number, pageNumber: number }) => void,
+    readonly onChangePagination?: ({ pageSize, pageNumber }: { pageSize?: number, pageNumber: number }) => void,
     /**
      * Показывать инпут ручного выбора страницы
      **/
@@ -116,7 +116,7 @@ export const Pagination = ({
     }, [props.numberOfItems, props.numberItemsPerPage, numberItemsPerPage]);
 
     useEffect(() => {
-        if(props.onChangePage || props.onChangePageSize) {
+        if(props.onChangePage ?? props.onChangePageSize) {
             consoleFormat('Свойства `onChangePage` и `onChangePageSize` устарели и будут удалены в следующих релизах, используйте `onChangePagination`');
         }
     }, [props.onChangePage, props.onChangePageSize]);
