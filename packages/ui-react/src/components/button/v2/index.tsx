@@ -72,8 +72,6 @@ const isValidCompact = (element: IProps['children']) => {
 };
 
 const isCompact = (element: IProps['children']) => {
-    console.log('asd', element);
-
     return !Array.isArray(element) && isValidCompact(element);
 };
 
