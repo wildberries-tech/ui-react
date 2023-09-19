@@ -11,8 +11,8 @@ export interface IProps extends Pick<InputHTMLAttributes<HTMLInputElement>, TAtt
     readonly name: string,
     readonly className?: TStyle | string,
     readonly direction?: 'row' | 'column',
-    readonly minDate?: Date,
-    readonly maxDate?: Date,
+    readonly minDate?: string,
+    readonly maxDate?: string,
     readonly label?: ReactNode,
     readonly tabIndex?: number,
     readonly elError?: boolean,
@@ -22,7 +22,7 @@ export interface IProps extends Pick<InputHTMLAttributes<HTMLInputElement>, TAtt
     readonly type?: 'datetime-local' | 'date'
 }
 
-export const InputDate = ({ type = 'date', elIcon = true, ...props }: IProps) => {
+export const InputDate = ({ type = 'date', elIcon = true, minDate, maxDate, ...props }: IProps) => {
     const cn = useClassnames(style, props.className, true);
     const [inputValue, setInputValue] = useState<string | undefined>(props.value);
 
@@ -78,6 +78,8 @@ export const InputDate = ({ type = 'date', elIcon = true, ...props }: IProps) =>
                     {...props}
                     disabled={props.disabled}
                     type={type}
+                    min={minDate}
+                    max={maxDate}
                     onChange={(event) => {
                         const { value } = event.target;
 

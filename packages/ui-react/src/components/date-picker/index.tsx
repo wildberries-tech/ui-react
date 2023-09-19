@@ -31,7 +31,6 @@ import { createPortal } from 'react-dom';
 
 import { getWeekDaysList, TWeekdays, useDateFnsFormatWithOptions } from '../../hooks/use-format-with-options';
 import { consoleFormat } from '../../tools/console-format';
-import { InputText } from '../input-text';
 import { IconCalendarDates } from '../icons/calendar-dates';
 import { IconArrowsArrowRight } from '../icons/arrows/arrow-right';
 import { IconArrowsArrowLeft } from '../icons/arrows/arrow-left';
@@ -41,6 +40,7 @@ import { Dropdown } from '../dropdown';
 import { Button } from '../button/v1';
 import { useClassnames, TStyle } from '../../hooks/use-classnames';
 import { InputDate } from '../input-date';
+import { Text } from '../typography/text';
 
 import style from './index.module.pcss';
 
@@ -59,8 +59,15 @@ export interface IConfigI18n {
 }
 
 export interface IProps {
+    /**
+     * Параметр `className` используется для добавления пользовательских CSS классов к компоненту. Это позволяет настраивать внешний вид компонента с помощью пользовательских стилей.
+     */
     readonly className?: string | TStyle,
+    /**
+     * Параметр `dropdownClassName` используется для добавления пользовательских CSS классов к компоненту Dropdown
+     */
     readonly dropdownClassName?: TStyle,
+
     readonly readOnly?: boolean,
     readonly placeholder?: string,
     readonly isDateRange?: boolean,
@@ -77,7 +84,9 @@ export interface IProps {
     readonly isMobile?: boolean,
     readonly qa?: boolean,
     readonly container?: HTMLElement,
-    readonly elCalendarIcon?: ReactNode
+    readonly elCalendarIcon?: ReactNode,
+    readonly disabled?: boolean,
+    readonly isDateInputsReadOnly?: boolean
 }
 
 interface ICalendarDate {
@@ -175,7 +184,7 @@ export const DatePicker = ({
         if(!props.defaultMaxDate && defaultSelectedDate[1]) {
             setMaxDate(defaultSelectedDate[1]);
         }
-    }, [props.defaultMaxDate, props.defaultMinDate, defaultSelectedDate]);
+    }, [props.defaultMaxDate, props.defaultMinDate]);
 
     const defaultCalendar = {
         month   : defaultSelectedDate[0] ? new Date(defaultSelectedDate[0]) : new Date(),
@@ -321,7 +330,7 @@ export const DatePicker = ({
 
     useEffect(() => {
         setDates();
-    }, [calendar.month]);
+    }, [calendar.month, minDate, maxDate]);
 
     const writeValue = (value: Array<Date> | undefined, callback?: () => void): void => {
         if(value) {
@@ -343,8 +352,10 @@ export const DatePicker = ({
                         return a.getTime() - b.getTime();
                     });
 
-                    const firstSelectedPeriod = format(value[0], 'dd.MM.yyyy');
-                    const secondSelectedPeriod = format(value[1], 'dd.MM.yyyy');
+                    console.log('value', value);
+
+                    const firstSelectedPeriod = value[0] ? format(value[0], 'dd.MM.yyyy') : '';
+                    const secondSelectedPeriod = value[1] ? format(value[1], 'dd.MM.yyyy') : '';
 
                     if(isSameDay(value[0], value[1])) {
                         setDisplayDate(firstSelectedPeriod);
@@ -363,6 +374,8 @@ export const DatePicker = ({
             if(props.isMobile) {
                 setIsMobileOpen(false);
             }
+
+            props.onChange?.(value);
         }
     };
 
@@ -372,10 +385,10 @@ export const DatePicker = ({
 
             writeValue(defaultSelectedDate);
         }
-    }, [defaultSelectedDate]);
+    }, []);
 
     useEffect(() => {
-        props.onChange?.(selectedPeriod);
+        // props.onChange?.(selectedPeriod);
     }, [selectedPeriod]);
 
     const setDate = (date: ICalendarDate | [ICalendarDate, ICalendarDate]) => {
@@ -435,8 +448,6 @@ export const DatePicker = ({
 
         if(checked) {
             setDate([{ day: minDate }, { day: maxDate }]);
-        } else {
-            setSelectedPeriod([]);
         }
     };
 
@@ -450,6 +461,8 @@ export const DatePicker = ({
             if(index >= 0 && isValid(parsedString)) {
                 newSelectedPeriod[index] = parsedString;
 
+                // console.log({newSelectedPeriod, maxDate, minDate})
+                //
                 if(isAfter(newSelectedPeriod[index], maxDate)) {
                     newSelectedPeriod[index] = new Date(maxDate);
                 } else if(isBefore(newSelectedPeriod[index], minDate)) {
@@ -468,6 +481,8 @@ export const DatePicker = ({
                     newSelectedPeriod[0].setDate(newSelectedPeriod[0].getDate());
                 }
             }
+
+            console.log('NEW SELECTED', newSelectedPeriod);
 
             return newSelectedPeriod;
         });
@@ -641,27 +656,37 @@ export const DatePicker = ({
     const elPeriodCalendar = useCallback((onClose?: () => void) => {
         const startValue = selectedPeriod[0] ? format(selectedPeriod[0], 'yyyy-MM-dd') : '';
         const endValue = selectedPeriod[1] ? format(selectedPeriod[1], 'yyyy-MM-dd') : '';
+        const minDateInner = format(minDate, 'yyyy-MM-dd');
+        const maxDateInner = format(maxDate, 'yyyy-MM-dd');
 
         if(props.isDateRange) {
             return (
                 <div className={cn('date-picker__period-calendar')}>
-                    <Checkbox
-                        name="isAllPeriod"
-                        checked={isAllPeriod}
-                        label={i18nConfig.translation['whole-period']}
-                        onChange={onChangeCheckboxButt}
-                    />
+                    {!!defaultSelectedDate.length && (
+                        <Checkbox
+                            name="isAllPeriod"
+                            checked={isAllPeriod}
+                            label={i18nConfig.translation['whole-period']}
+                            onChange={onChangeCheckboxButt}
+                        />
+                    )}
                     <div className={cn('date-picker__period-calendar-inputs')}>
                         <InputDate
                             label={i18nConfig.translation['start-date']}
                             name="startDate"
+                            // disabled={props.isDateInputsReadOnly}
                             value={startValue}
+                            minDate={minDateInner}
+                            maxDate={maxDateInner}
                             onChange={onChangeDate(0)}
                         />
                         <InputDate
                             label={i18nConfig.translation['end-date']}
                             name="endDate"
                             value={endValue}
+                            // disabled={props.isDateInputsReadOnly}
+                            minDate={minDateInner}
+                            maxDate={maxDateInner}
                             onChange={onChangeDate(1)}
                         />
                     </div>
@@ -677,7 +702,7 @@ export const DatePicker = ({
                 </div>
             );
         }
-    }, [isAllPeriod, selectedPeriod, props.isDateRange, props.isMobile]);
+    }, [isAllPeriod, selectedPeriod, props.isDateRange, props.isMobile, defaultSelectedDate, minDate, maxDate]);
 
     const onClickChangeButton = (type: 'plus' | 'minus') => {
         const amount = type === 'plus' ? 1 : -1;
@@ -760,29 +785,34 @@ export const DatePicker = ({
         return (
             <button
                 type="button"
+                disabled={props.disabled}
                 title={props.qa ? 'date-picker' : undefined}
                 className={cn('date-picker__trigger', {
                     'date-picker__trigger_range': props.isDateRange
                 })}
                 onClick={onClickTrigger}
             >
-                <InputText
-                    disabled={props.readOnly}
-                    readOnly={true}
-                    name="date-picker"
-                    value={displayDate ?? ''}
-                    placeholder={props.placeholder}
-                    className={{
-                        'input-text__field': cn('date-picker__input-field')
+                <Text
+                    className={cn('date-picker__field')}
+                    presetSize="body"
+                >
+                    {displayDate ?? ''}
+                </Text>
+                <IconCalendarDates
+                    svg={{
+                        className: cn('date-picker__field-icon')
                     }}
-                    elAfter={<IconCalendarDates />}
                 />
             </button>
         );
-    }, [props.readOnly, props.placeholder, displayDate, props.isDateRange, props.isMobile]);
+    }, [props.readOnly, props.placeholder, displayDate, props.isDateRange, props.isMobile, props.disabled]);
 
     const onCloseCalendar = () => {
         setCalendar(defaultCalendar);
+
+        if(!defaultSelectedDate.length) {
+            setSelectedPeriod([]);
+        }
     };
 
     if(props.readOnly) {

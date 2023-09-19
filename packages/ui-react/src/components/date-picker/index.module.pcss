@@ -1,5 +1,8 @@
 /* stylelint-disable selector-type-no-unknown, selector-class-pattern, no-descending-specificity */
 .date-picker {
+    --datepicker-trigger-size-base: 44px;
+    --datepicker-width-base: 260px;
+    --datepicker-color-disabled: var(--color-bg-base-1);
     font-family: var(--font-family-primary);
     position: relative;
 
@@ -8,13 +11,29 @@
         min-width: 200px;
         width: 100%;
         align-items: center;
-        padding: 0;
-        border: none;
         background: none;
+        display: flex;
+        justify-content: space-between;
+        height: var(--datepicker-trigger-size-base);
+        border: 1px solid var(--color-border-basic);
+        border-radius: 4px;
+        padding: 12px;
 
         &_range {
-            min-width: 260px;
-            width: 100%;
+            width: var(--datepicker-width-base);
+        }
+
+        @media (hover: hover) and (pointer: fine) {
+
+            &:hover {
+                cursor: pointer;
+            }
+        }
+
+        &:disabled {
+            pointer-events: none;
+            cursor: default;
+            background-color: var(--datepicker-color-disabled);
         }
     }
 
@@ -22,8 +41,12 @@
         width: 100%;
     }
 
-    &__input-field {
+    &__field {
         background-color: var(--color-bg-base);
+    }
+
+    &__field-icon {
+        fill: var(--color-icon-secondary);
     }
 
     &__period-calendar-inputs {
