@@ -832,10 +832,7 @@ export const DatePicker = ({
                 })}
                 onClick={onClickTrigger}
             >
-                <Text
-                    className={cn('date-picker__field')}
-                    presetSize="body"
-                >
+                <Text presetSize="body">
                     {displayDate ?? ''}
                 </Text>
                 <IconCalendarDates
