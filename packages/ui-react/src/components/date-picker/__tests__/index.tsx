@@ -154,7 +154,7 @@ test('Default Min Max Dates Period', async () => {
             defaultMaxDate={new Date('2023-06-27')}
             defaultSelectedDate={[new Date('2023-06-25')]}
             disabledDates={[new Date('2023-06-25'), new Date('2023-06-25')]}
-            enabled={false}
+            disabled={true}
             maxPeriodDays={14}
             qa={true}
         />
