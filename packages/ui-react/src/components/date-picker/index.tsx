@@ -1,4 +1,4 @@
-import React, { ChangeEvent, Fragment, ReactNode, useCallback, useEffect, useMemo, useRef, useState } from 'react';
+import React, { ChangeEvent, Fragment, useCallback, useEffect, useMemo, useRef, useState } from 'react';
 import {
     add,
     addDays,
@@ -67,25 +67,69 @@ export interface IProps {
      * Параметр `dropdownClassName` используется для добавления пользовательских CSS классов к компоненту Dropdown
      */
     readonly dropdownClassName?: TStyle,
-
+    /**
+     * Параметр `readOnly` делает компонент доступным только для чтения
+     */
     readonly readOnly?: boolean,
-    readonly placeholder?: string,
+    /**
+     * Параметр `isDateRange` для указания, что поле содержит интервал
+     */
     readonly isDateRange?: boolean,
+    /**
+     * Параметр `maxPeriodDays` для указания максимального периода в днях
+     */
     readonly maxPeriodDays?: number,
+    /**
+     * Параметр `disableDatesInPast` отключает возмодность выбора дат в прошлом
+     */
     readonly disableDatesInPast?: boolean,
+    /**
+     * Параметр `defaultMinDate` указывает минимальную дату
+     */
     readonly defaultMinDate?: Date,
+    /**
+     * Параметр `defaultMaxDate` указывает максимальную дату
+     */
     readonly defaultMaxDate?: Date,
+    /**
+     * Параметр `disabledDates` указывает отключнные даты
+     */
     readonly disabledDates?: TDateValuesArray,
+    /**
+     * Параметр `disabledDates` указывает отключнные даты
+     */
     readonly defaultSelectedDate?: TDateValuesArray,
+    /**
+     * Параметр `weekView` включает отображение вида в неделях. Пока не реализован
+     */
     readonly weekView?: boolean,
-    readonly enabled?: boolean,
+    /**
+     * Параметр `onChange` - функция, которая срабатывает на изменении значения
+     */
     readonly onChange?: (value: TDateValuesArray) => void,
+    /**
+     * Параметр `i18nConfig` - конфиг переводов компонента
+     */
     readonly i18nConfig: IConfigI18n,
+    /**
+     * Параметр `isMobile` включает мобильный вид
+     */
     readonly isMobile?: boolean,
+    /**
+     * Параметр `qa` для тестовых целей
+     */
     readonly qa?: boolean,
+    /**
+     * Параметр `container` позволяет указать альтернативный контейнер для рендера
+     */
     readonly container?: HTMLElement,
-    readonly elCalendarIcon?: ReactNode,
+    /**
+     * Параметр `disabled` позволяет отключить ввод данных в компонент
+     */
     readonly disabled?: boolean,
+    /**
+     * Параметр `isDateInputsReadOnly` позволяет отключить ввод данных в инпуты даты
+     */
     readonly isDateInputsReadOnly?: boolean
 }
 
@@ -176,16 +220,6 @@ export const DatePicker = ({
     const [displayDate, setDisplayDate] = useState<string>();
     const [isAllPeriod, setIsAllPeriod] = useState<boolean>(!!defaultSelectedDate.length);
 
-    useEffect(() => {
-        if(!props.defaultMinDate && defaultSelectedDate[0]) {
-            setMinDate(defaultSelectedDate[0]);
-        }
-
-        if(!props.defaultMaxDate && defaultSelectedDate[1]) {
-            setMaxDate(defaultSelectedDate[1]);
-        }
-    }, [props.defaultMaxDate, props.defaultMinDate]);
-
     const defaultCalendar = {
         month   : defaultSelectedDate[0] ? new Date(defaultSelectedDate[0]) : new Date(),
         selected: defaultSelectedDate[0] ? new Date(defaultSelectedDate[0]) : new Date(),
@@ -260,7 +294,7 @@ export const DatePicker = ({
                 disabled = !!props.disabledDates.find((date) => isSameDay(day, date));
             }
 
-            if(props.enabled === false && !disabled) {
+            if(props.disabled && !disabled) {
                 disabled = true;
             }
 
@@ -330,7 +364,7 @@ export const DatePicker = ({
 
     useEffect(() => {
         setDates();
-    }, [calendar.month, minDate, maxDate]);
+    }, [calendar.month, minDate, maxDate, props.disabled]);
 
     const writeValue = (value: Array<Date> | undefined, callback?: () => void): void => {
         if(value) {
@@ -380,16 +414,22 @@ export const DatePicker = ({
     };
 
     useEffect(() => {
-        if(defaultSelectedDate.length) {
+        if(!props.defaultMinDate && defaultSelectedDate[0]) {
+            setMinDate(defaultSelectedDate[0]);
+        }
+
+        if(!props.defaultMaxDate && defaultSelectedDate[1]) {
+            setMaxDate(defaultSelectedDate[1]);
+        }
+    }, [props.defaultMaxDate, props.defaultMinDate]);
+
+    useEffect(() => {
+        if(defaultSelectedDate.length && !selectedPeriod.length) {
             setSelectedPeriod(defaultSelectedDate);
 
             writeValue(defaultSelectedDate);
         }
-    }, []);
-
-    useEffect(() => {
-        // props.onChange?.(selectedPeriod);
-    }, [selectedPeriod]);
+    }, [selectedPeriod, defaultSelectedDate]);
 
     const setDate = (date: ICalendarDate | [ICalendarDate, ICalendarDate]) => {
         if(Array.isArray(date)) {
@@ -805,7 +845,7 @@ export const DatePicker = ({
                 />
             </button>
         );
-    }, [props.readOnly, props.placeholder, displayDate, props.isDateRange, props.isMobile, props.disabled]);
+    }, [props.readOnly, displayDate, props.isDateRange, props.isMobile, props.disabled]);
 
     const onCloseCalendar = () => {
         setCalendar(defaultCalendar);
