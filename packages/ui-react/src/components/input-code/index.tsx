@@ -172,7 +172,7 @@ export const InputCode = ({ length = 6, autoComplete = 'off', type = 'text', ...
             }
         }
 
-        const $el = $inputs.current[index + 1] ?? $inputs.current[index];
+        const $el = (value.length > 1 ? $inputs.current[value.length - 1] : $inputs.current[index + 1]) ?? $inputs.current[index];
 
         if($el) {
             $el.focus();
@@ -183,7 +183,19 @@ export const InputCode = ({ length = 6, autoComplete = 'off', type = 'text', ...
         setValues((prevState) => {
             const result = [...prevState];
 
-            result[index] = value;
+            if(value.length > 1) {
+                value
+                    .split('')
+                    .map((chart, i) => {
+                        const position = index + i;
+
+                        if(position < length) {
+                            result[position] = chart;
+                        }
+                    });
+            } else {
+                result[index] = value;
+            }
 
             return result;
         });
@@ -206,7 +218,7 @@ export const InputCode = ({ length = 6, autoComplete = 'off', type = 'text', ...
                     value={value}
                     min={0}
                     max={9}
-                    maxLength={1}
+                    maxLength={index ? 1 : values.length}
                     className={cn('input-code__input', {
                         'input-code__input_is-error': props.isError
                     })}
