@@ -18,7 +18,6 @@ interface Stylesheet {
     'date-picker__date_today': string
     'date-picker__dates': string
     'date-picker__dates-week': string
-    'date-picker__field': string
     'date-picker__field-icon': string
     'date-picker__month-name': string
     'date-picker__month-row': string
