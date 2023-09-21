@@ -57,7 +57,9 @@ jobs:
     name: New version publish
     runs-on: ubuntu-latest
     steps:
-      - name: Context
+      - name: Dump GitHub context
+        env:
+          GITHUB_CONTEXT: ${{ toJson(github) }}
         run: echo "$GITHUB_CONTEXT"
       - name: Send telegram message
         uses: appleboy/telegram-action@master
