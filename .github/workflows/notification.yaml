@@ -57,6 +57,8 @@ jobs:
     name: New version publish
     runs-on: ubuntu-latest
     steps:
+      - name: Context
+        run: echo "$GITHUB_CONTEXT"
       - name: Send telegram message
         uses: appleboy/telegram-action@master
         if: ${{ github.event.workflow.name == 'Publish package' && github.event.workflow_run.conclusion == 'success' }}
