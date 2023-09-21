@@ -167,7 +167,7 @@ export const InputCode = ({ length = 6, autoComplete = 'off', type = 'text', ...
         if(type === 'number') {
             value = value.replace(/[^\d]/g, '');
 
-            if(event.target.valueAsNumber > 9) {
+            if(event.target.valueAsNumber > 9 && index) {
                 return;
             }
         }
