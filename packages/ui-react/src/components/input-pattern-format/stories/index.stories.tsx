@@ -21,6 +21,9 @@ export const Default: StoryObj<typeof META> = {
     name: 'Песочница'
 };
 
+/**
+ * Простой пример с телефонным номером
+ **/
 export const Phone: StoryObj<typeof META> = {
     name: 'Телефон',
     args: {
@@ -29,11 +32,28 @@ export const Phone: StoryObj<typeof META> = {
     }
 };
 
+/**
+ * Форматирование поля применяется даже на пустое значение
+ **/
 export const EmptyFormat: StoryObj<typeof META> = {
     name: 'Форматирование по умолчанию',
     args: {
         label: 'Номер телефона',
         allowEmptyFormatting: true,
         format: '+7 (###) ###-##-##'
+    }
+};
+
+/**
+ * В примере в препроцессинг функции вырезаются цифры `5`
+ **/
+export const PreProcessing: StoryObj<typeof META> = {
+    name: 'С препроцессингом',
+    args: {
+        label: 'Номер телефона',
+        format: '+7 (###) ###-##-##',
+        preFormat: (value) => {
+            return value.replace(/5+/g, '');
+        }
     }
 };

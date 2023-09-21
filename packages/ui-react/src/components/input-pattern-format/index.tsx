@@ -1,5 +1,5 @@
 import React, { forwardRef } from 'react';
-import { PatternFormat } from 'react-number-format';
+import { NumberFormatBase, usePatternFormat } from 'react-number-format';
 
 import { useClassnames } from '../../hooks/use-classnames';
 import { InputText, type IProps as IPropsInputText } from '../input-text';
@@ -20,6 +20,10 @@ export interface IProps extends IPropsInputText {
      **/
     readonly format: string,
     /**
+     * Функция препроцессинга форматирования
+     **/
+    readonly preFormat?: (value: string) => string,
+    /**
      * Используется как символ маски
      **/
     readonly mask?: Array<string> | string,
@@ -30,10 +34,10 @@ export interface IProps extends IPropsInputText {
     /**
      * Функция проверки для проверки входного значения. Если эта функция возвращает `false`, метод `onChange` не сработает и входное значение не изменится.
      **/
-    readonly isAllowed?: Parameters<typeof PatternFormat>[0]['isAllowed'],
-    readonly valueIsNumericString?: Parameters<typeof PatternFormat>[0]['valueIsNumericString'],
-    readonly onValueChange?: Parameters<typeof PatternFormat>[0]['onValueChange'],
-    readonly renderText?: Parameters<typeof PatternFormat>[0]['renderText']
+    readonly isAllowed?: Parameters<typeof NumberFormatBase>[0]['isAllowed'],
+    readonly valueIsNumericString?: Parameters<typeof NumberFormatBase>[0]['valueIsNumericString'],
+    readonly onValueChange?: Parameters<typeof NumberFormatBase>[0]['onValueChange'],
+    readonly renderText?: Parameters<typeof NumberFormatBase>[0]['renderText']
 }
 
 /**
@@ -41,14 +45,22 @@ export interface IProps extends IPropsInputText {
  **/
 export const InputPatternFormat = forwardRef<HTMLInputElement | null, IProps>((props, ref) => {
     const cn = useClassnames(style, props.className);
+    const { format, ...attrs } = usePatternFormat({
+        ...props,
+        className  : cn('input-number-format'),
+        customInput: InputText,
+        displayType: 'input',
+        getInputRef: ref
+    });
 
     return (
-        <PatternFormat
-            {...props}
-            className={cn('input-number-format')}
-            customInput={InputText}
-            displayType="input"
-            getInputRef={ref}
+        <NumberFormatBase
+            format={(value) => {
+                const result = props.preFormat ? props.preFormat(value) : value;
+
+                return format ? format(result) : result;
+            }}
+            {...attrs}
         />
     );
 });
