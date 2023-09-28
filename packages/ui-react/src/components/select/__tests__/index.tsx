@@ -113,3 +113,14 @@ test('Label', () => {
 
     expect(tree.toJSON()).toMatchSnapshot();
 });
+
+test('Label', () => {
+    const tree = create(
+        <Select
+            label="Label field"
+            options={OPTIONS}
+        />
+    );
+
+    expect(tree.toJSON()).toMatchSnapshot();
+});

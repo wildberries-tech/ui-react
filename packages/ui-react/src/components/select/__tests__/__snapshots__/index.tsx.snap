@@ -821,3 +821,78 @@ exports[`Label 1`] = `
   </div>
 </label>
 `;
+
+exports[`Label 2`] = `
+<label
+  className="select"
+>
+  <span
+    className="select__label"
+  >
+    Label field
+  </span>
+  <div
+    className=" css-b62m3t-container"
+    onKeyDown={[Function]}
+  >
+    <span
+      className="css-1f43avz-a11yText-A11yText"
+      id="react-select-8-live-region"
+    />
+    <span
+      aria-atomic="false"
+      aria-live="polite"
+      aria-relevant="additions text"
+      className="css-1f43avz-a11yText-A11yText"
+    />
+    <div
+      className="select__control css-13cymwt-control"
+      onMouseDown={[Function]}
+      onTouchEnd={[Function]}
+    >
+      <div
+        className="select__value-container css-1fdsijx-ValueContainer"
+      >
+        <div
+          className="select__placeholder css-1jqq78o-placeholder"
+          id="react-select-8-placeholder"
+        />
+        <input
+          aria-autocomplete="list"
+          aria-describedby="react-select-8-placeholder"
+          aria-expanded={false}
+          aria-haspopup={true}
+          aria-readonly={true}
+          className="css-mohuvp-dummyInput-DummyInput"
+          disabled={false}
+          id="react-select-8-input"
+          inputMode="none"
+          onBlur={[Function]}
+          onChange={[Function]}
+          onFocus={[Function]}
+          role="combobox"
+          tabIndex={0}
+          value=""
+        />
+      </div>
+      <div
+        className=" css-1hb7zxy-IndicatorsContainer"
+      >
+        <svg
+          className="select__icon-arrow-bottom"
+          height={24}
+          viewBox="0 0 24 24"
+          width={24}
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            clipRule="evenodd"
+            d="m19.293 7.293 1.414 1.414L12 17.414 3.293 8.707l1.414-1.414L12 14.586l7.293-7.293Z"
+            fillRule="evenodd"
+          />
+        </svg>
+      </div>
+    </div>
+  </div>
+</label>
+`;
