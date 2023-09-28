@@ -27,7 +27,7 @@ interface IOption {
     disabled?: boolean
 }
 
-type TSelectProps<IsMulti extends boolean = boolean> = Props<IOption, IsMulti, GroupBase<IOption>>;
+type TSelectProps<IsMulti extends boolean = boolean> = Partial<Props<IOption, IsMulti, GroupBase<IOption>>>;
 
 export interface IProps<IsMulti extends boolean = boolean> extends Omit<TSelectProps<IsMulti>, 'className'> {
     /**
@@ -192,7 +192,28 @@ export interface IProps<IsMulti extends boolean = boolean> extends Omit<TSelectP
     /**
      * Фильтрация опций
      **/
-    readonly filterOption?: TSelectProps['filterOption']
+    readonly filterOption?: TSelectProps['filterOption'],
+    readonly classNames?: TSelectProps['classNames'],
+    readonly components?: TSelectProps['components'],
+    readonly formatGroupLabel?: TSelectProps['formatGroupLabel'],
+    readonly getOptionLabel?: TSelectProps['getOptionLabel'],
+    readonly getOptionValue?: TSelectProps['getOptionValue'],
+    readonly inputValue?: TSelectProps['inputValue'],
+    readonly isDisabled?: TSelectProps['isDisabled'],
+    readonly isLoading?: TSelectProps['isLoading'],
+    readonly isOptionDisabled?: TSelectProps['isOptionDisabled'],
+    readonly loadingMessage?: TSelectProps['loadingMessage'],
+    readonly maxMenuHeight?: TSelectProps['maxMenuHeight'],
+    readonly menuPlacement?: TSelectProps['menuPlacement'],
+    readonly minMenuHeight?: TSelectProps['minMenuHeight'],
+    readonly noOptionsMessage?: TSelectProps['noOptionsMessage'],
+    readonly onInputChange?: TSelectProps['onInputChange'],
+    readonly onMenuClose?: TSelectProps['onMenuClose'],
+    readonly onMenuOpen?: TSelectProps['onMenuOpen'],
+    readonly screenReaderStatus?: TSelectProps['screenReaderStatus'],
+    readonly styles?: TSelectProps['styles'],
+    readonly tabSelectsValue?: TSelectProps['tabSelectsValue'],
+    readonly unstyled?: TSelectProps['unstyled']
 }
 
 /**
