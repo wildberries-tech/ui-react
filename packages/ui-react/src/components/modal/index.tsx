@@ -132,7 +132,6 @@ export const Modal = ({
                         className={cn('modal__content', `modal__content_${widthPreset}`)}
                         ref={$body}
                         onClick={onClickLayout}
-                        title="layout"
                         role="dialog"
                     >
                         <div
