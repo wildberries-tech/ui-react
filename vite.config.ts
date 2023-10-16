@@ -7,7 +7,7 @@ import postcssNestedAncestors from 'postcss-nested-ancestors';
 export default () => {
     return defineConfig({
         resolve: {
-            extensions: ['.ts', '.tsx', '.js', '.jsx', '.json']
+            extensions: ['.ts', '.tsx', '.jsx', '.cjs', '.mjs', '.js', '.json']
         },
         css: {
             modules: {
