@@ -139,7 +139,9 @@ exports[`Default Min Max Dates 1`] = `
       >
         <p
           class="typography typography_size-body typography_color-basic typography_no-spacing"
-        />
+        >
+          25.06.2023 - 27.06.2023
+        </p>
         <svg
           class="date-picker__field-icon"
           height="24"
@@ -174,7 +176,9 @@ exports[`Default Min Max Dates 2`] = `
       >
         <p
           class="typography typography_size-body typography_color-basic typography_no-spacing"
-        />
+        >
+          25.06.2023 - 27.06.2023
+        </p>
         <svg
           class="date-picker__field-icon"
           height="24"
@@ -209,7 +213,9 @@ exports[`Default Min Max Dates 3`] = `
       >
         <p
           class="typography typography_size-body typography_color-basic typography_no-spacing"
-        />
+        >
+          25.06.2023 - 27.06.2023
+        </p>
         <svg
           class="date-picker__field-icon"
           height="24"
@@ -244,7 +250,9 @@ exports[`Default Min Max Dates 4`] = `
       >
         <p
           class="typography typography_size-body typography_color-basic typography_no-spacing"
-        />
+        >
+          25.06.2023 - 27.06.2023
+        </p>
         <svg
           class="date-picker__field-icon"
           height="24"
@@ -491,7 +499,9 @@ exports[`Range Picker With Dates 1`] = `
       >
         <p
           class="typography typography_size-body typography_color-basic typography_no-spacing"
-        />
+        >
+          25.06.2023 - 27.06.2023
+        </p>
         <svg
           class="date-picker__field-icon"
           height="24"
@@ -526,7 +536,9 @@ exports[`Range Picker With Dates 2`] = `
       >
         <p
           class="typography typography_size-body typography_color-basic typography_no-spacing"
-        />
+        >
+          25.06.2023 - 27.06.2023
+        </p>
         <svg
           class="date-picker__field-icon"
           height="24"
@@ -555,7 +567,9 @@ exports[`Same period 1`] = `
   >
     <p
       class="typography typography_size-body typography_color-basic typography_no-spacing"
-    />
+    >
+      25.06.2023
+    </p>
     <svg
       class="date-picker__field-icon"
       height="24"
@@ -582,7 +596,9 @@ exports[`Same period 2`] = `
   >
     <p
       class="typography typography_size-body typography_color-basic typography_no-spacing"
-    />
+    >
+      25.06.2023
+    </p>
     <svg
       class="date-picker__field-icon"
       height="24"
@@ -615,7 +631,9 @@ exports[`Single With Dates 1`] = `
       >
         <p
           class="typography typography_size-body typography_color-basic typography_no-spacing"
-        />
+        >
+          25.06.2023 - 27.06.2023
+        </p>
         <svg
           class="date-picker__field-icon"
           height="24"
@@ -650,7 +668,9 @@ exports[`Single With Dates 2`] = `
       >
         <p
           class="typography typography_size-body typography_color-basic typography_no-spacing"
-        />
+        >
+          25.06.2023 - 27.06.2023
+        </p>
         <svg
           class="date-picker__field-icon"
           height="24"
