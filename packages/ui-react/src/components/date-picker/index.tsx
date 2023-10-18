@@ -193,6 +193,8 @@ const defaultTranslationConfig = {
     },
     locale: ru
 };
+const defaultFormatDate = 'dd.MM.yyyy';
+const revertedFormatDate = 'yyyy-MM-dd';
 
 export const DatePicker = ({
     container = document.body,
@@ -366,11 +368,32 @@ export const DatePicker = ({
         setDates();
     }, [calendar.month, minDate, maxDate, props.disabled]);
 
+    const showPeriodDateInInput = (value: Array<Date>) => {
+        const firstDate = value[0] ? format(value[0], defaultFormatDate) : '';
+        const secondDate = value[1] ? format(value[1], defaultFormatDate) : '';
+
+        if(isSameDay(value[0], value[1])) {
+            setDisplayDate(firstDate);
+        } else {
+            setDisplayDate(`${firstDate} - ${secondDate}`);
+        }
+    };
+
+    useEffect(() => {
+        if(selectedPeriod.length === 2) {
+            showPeriodDateInInput(selectedPeriod);
+        }
+
+        if(selected) {
+            setDisplayDate(format(selected, defaultFormatDate));
+        }
+    }, [selectedPeriod, selected]);
+
     const writeValue = (value: Array<Date> | undefined, callback?: () => void): void => {
         if(value) {
             if(!props.isDateRange) {
                 setSelected(value[0]);
-                const dateTime = format(value[0], 'dd.MM.yyyy');
+                const dateTime = format(value[0], defaultFormatDate);
 
                 setDisplayDate(dateTime);
             } else if(value[0]?.getTime() > new Date(0).getTime()) {
@@ -388,14 +411,7 @@ export const DatePicker = ({
 
                     console.log('value', value);
 
-                    const firstSelectedPeriod = value[0] ? format(value[0], 'dd.MM.yyyy') : '';
-                    const secondSelectedPeriod = value[1] ? format(value[1], 'dd.MM.yyyy') : '';
-
-                    if(isSameDay(value[0], value[1])) {
-                        setDisplayDate(firstSelectedPeriod);
-                    } else {
-                        setDisplayDate(`${firstSelectedPeriod} - ${secondSelectedPeriod}`);
-                    }
+                    showPeriodDateInInput(value);
                 }
             }
 
@@ -493,32 +509,41 @@ export const DatePicker = ({
 
     const onChangeDate = (index: 0 | 1) => (event: ChangeEvent<HTMLInputElement>) => {
         const { value } = event.target;
-        const parsedString = parse(value, 'yyyy-MM-dd', new Date());
+        const parsedString = parse(value, revertedFormatDate, new Date());
 
         setSelectedPeriod((prev) => {
             const newSelectedPeriod = [...prev];
 
-            if(index >= 0 && isValid(parsedString)) {
-                newSelectedPeriod[index] = parsedString;
+            if(index >= 0) {
+                if(isValid(parsedString)) {
+                    newSelectedPeriod[index] = parsedString;
 
-                // console.log({newSelectedPeriod, maxDate, minDate})
-                //
-                if(isAfter(newSelectedPeriod[index], maxDate)) {
-                    newSelectedPeriod[index] = new Date(maxDate);
-                } else if(isBefore(newSelectedPeriod[index], minDate)) {
-                    newSelectedPeriod[index] = new Date(minDate);
+                    // console.log({newSelectedPeriod, maxDate, minDate})
+                    //
+                    if(isAfter(newSelectedPeriod[index], maxDate)) {
+                        newSelectedPeriod[index] = new Date(maxDate);
+                    } else if(isBefore(newSelectedPeriod[index], minDate)) {
+                        newSelectedPeriod[index] = new Date(minDate);
 
-                    newSelectedPeriod[index].setDate(newSelectedPeriod[index].getDate() + 1);
-                }
+                        newSelectedPeriod[index].setDate(newSelectedPeriod[index].getDate() + 1);
+                    }
 
-                if(index === 0 && isAfter(newSelectedPeriod[0], newSelectedPeriod[1])) {
-                    newSelectedPeriod[1] = new Date(newSelectedPeriod[0]);
+                    if(index === 0 && isAfter(newSelectedPeriod[0], newSelectedPeriod[1])) {
+                        newSelectedPeriod[1] = new Date(newSelectedPeriod[0]);
 
-                    newSelectedPeriod[1].setDate(newSelectedPeriod[1].getDate());
-                } else if(index === 1 && isAfter(newSelectedPeriod[0], newSelectedPeriod[1])) {
-                    newSelectedPeriod[0] = new Date(newSelectedPeriod[1]);
+                        newSelectedPeriod[1].setDate(newSelectedPeriod[1].getDate());
+                    } else if(index === 1 && isAfter(newSelectedPeriod[0], newSelectedPeriod[1])) {
+                        newSelectedPeriod[0] = new Date(newSelectedPeriod[1]);
 
-                    newSelectedPeriod[0].setDate(newSelectedPeriod[0].getDate());
+                        newSelectedPeriod[0].setDate(newSelectedPeriod[0].getDate());
+                    }
+                } else {
+                    const returnPeriodMap = {
+                        'index_0': isBefore(defaultMinDate, defaultSelectedDate[index]) ? defaultMinDate : startOfYear(defaultSelectedDate[index]),
+                        'index_1': isAfter(defaultMaxDate, defaultSelectedDate[index]) ? defaultMaxDate : defaultSelectedDate[index]
+                    };
+
+                    newSelectedPeriod[index] = returnPeriodMap[`index_${index}`];
                 }
             }
 
@@ -694,10 +719,10 @@ export const DatePicker = ({
     }, [calendar, elMonthItem]);
 
     const elPeriodCalendar = useCallback((onClose?: () => void) => {
-        const startValue = selectedPeriod[0] ? format(selectedPeriod[0], 'yyyy-MM-dd') : '';
-        const endValue = selectedPeriod[1] ? format(selectedPeriod[1], 'yyyy-MM-dd') : '';
-        const minDateInner = format(minDate, 'yyyy-MM-dd');
-        const maxDateInner = format(maxDate, 'yyyy-MM-dd');
+        const startValue = selectedPeriod[0] ? format(selectedPeriod[0], revertedFormatDate) : '';
+        const endValue = selectedPeriod[1] ? format(selectedPeriod[1], revertedFormatDate) : '';
+        const minDateInner = format(minDate, revertedFormatDate);
+        const maxDateInner = format(maxDate, revertedFormatDate);
 
         if(props.isDateRange) {
             return (
