@@ -29,7 +29,7 @@ import {
 import { ru } from 'date-fns/locale';
 import { createPortal } from 'react-dom';
 
-import { getWeekDaysList, TWeekdays, useDateFnsFormatWithOptions } from '../../hooks/use-format-with-options';
+import { getWeekDaysList, useDateFnsFormatWithOptions } from '../../hooks/use-format-with-options';
 import { consoleFormat } from '../../tools/console-format';
 import { IconCalendarDates } from '../icons/calendar-dates';
 import { IconArrowsArrowRight } from '../icons/arrows/arrow-right';
@@ -47,11 +47,6 @@ import style from './index.module.pcss';
 type TDateValuesArray = Array<Date>;
 
 type TControls = 'whole-period' | 'start-date' | 'end-date' | 'apply';
-
-interface IDays {
-    name: TWeekdays,
-    isWeekend: boolean
-}
 
 export interface IConfigI18n {
     translation: Record<TControls, string>,
@@ -589,28 +584,6 @@ export const DatePicker = ({
     }, [selectedPeriod]);
 
     const elMonthItem = useCallback((monthItem: TMonths[number], onClose?: () => void) => {
-        const days: Array<IDays> = [{
-            name     : 'monday',
-            isWeekend: false
-        }, {
-            name     : 'tuesday',
-            isWeekend: false
-        }, {
-            name     : 'wednesday',
-            isWeekend: false
-        }, {
-            name     : 'thursday',
-            isWeekend: false
-        }, {
-            name     : 'friday',
-            isWeekend: false
-        }, {
-            name     : 'saturday',
-            isWeekend: true
-        }, {
-            name     : 'sunday',
-            isWeekend: true
-        }];
         const weekdays = getWeekDaysList(locale);
 
         return (
@@ -621,14 +594,14 @@ export const DatePicker = ({
                     </div>
                 ) : null}
                 <div className={cn('date-picker__weekdays')}>
-                    {days.map((dayItem) => (
+                    {Object.values(weekdays).map((dayItem) => (
                         <div
-                            key={dayItem.name}
+                            key={dayItem.shortName}
                             className={cn('date-picker__weekday', {
                                 'date-picker__weekday_weekend': dayItem.isWeekend
                             })}
                         >
-                            {weekdays[dayItem.name]}
+                            {dayItem.shortName}
                         </div>
                     ))}
                 </div>

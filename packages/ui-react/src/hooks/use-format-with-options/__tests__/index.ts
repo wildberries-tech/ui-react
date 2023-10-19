@@ -21,13 +21,34 @@ test('Get week days RU', () => {
     const weekdays = getWeekDaysList(ru);
 
     expect(weekdays).toStrictEqual({
-        'monday': 'пн',
-        'tuesday': 'вт',
-        'wednesday': 'ср',
-        'thursday': 'чт',
-        'friday': 'пт',
-        'saturday': 'сб',
-        'sunday': 'вс'
+        'sunday': {
+            'shortName': 'вс',
+            'isWeekend': true
+        },
+        'monday': {
+            'shortName': 'пн',
+            'isWeekend': false
+        },
+        'tuesday': {
+            'shortName': 'вт',
+            'isWeekend': false
+        },
+        'wednesday': {
+            'shortName': 'ср',
+            'isWeekend': false
+        },
+        'thursday': {
+            'shortName': 'чт',
+            'isWeekend': false
+        },
+        'friday': {
+            'shortName': 'пт',
+            'isWeekend': false
+        },
+        'saturday': {
+            'shortName': 'сб',
+            'isWeekend': true
+        }
     });
 });
 
@@ -35,13 +56,34 @@ test('Get week days EN', () => {
     const weekdays = getWeekDaysList(enUS);
 
     expect(weekdays).toStrictEqual({
-        'sunday': 'Su',
-        'monday': 'Mo',
-        'tuesday': 'Tu',
-        'wednesday': 'We',
-        'thursday': 'Th',
-        'friday': 'Fr',
-        'saturday': 'Sa'
+        'sunday': {
+            'shortName': 'Su',
+            'isWeekend': true
+        },
+        'monday': {
+            'shortName': 'Mo',
+            'isWeekend': false
+        },
+        'tuesday': {
+            'shortName': 'Tu',
+            'isWeekend': false
+        },
+        'wednesday': {
+            'shortName': 'We',
+            'isWeekend': false
+        },
+        'thursday': {
+            'shortName': 'Th',
+            'isWeekend': false
+        },
+        'friday': {
+            'shortName': 'Fr',
+            'isWeekend': false
+        },
+        'saturday': {
+            'shortName': 'Sa',
+            'isWeekend': true
+        }
     });
 });
 
