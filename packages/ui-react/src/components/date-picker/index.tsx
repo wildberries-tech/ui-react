@@ -289,7 +289,7 @@ export const DatePicker = ({
             }
 
             if(!disabled) {
-                disabled = isBefore(day, minDate) && (!isSameDay(day, minDate) || isAfter(day, maxDate));
+                disabled = isBefore(day, minDate) && !isSameDay(day, minDate) || isAfter(day, maxDate);
             }
 
             if(props.disabledDates && !disabled) {
@@ -644,13 +644,14 @@ export const DatePicker = ({
                                 let isDataScroll!: boolean;
                                 const isNotSameDay = !isSameDay(dayItem.day, selectedPeriod[0]);
                                 const isBeforeSelected = isBefore(dayItem.day, selectedPeriod[0]);
+                                const isAfterMaxDate = isAfter(dayItem.day, maxDate);
 
                                 if(isSelected(dayItem.day)) {
                                     isDataScroll = true;
                                 }
 
                                 if(selectedPeriod[0] && !selectedPeriod[1]) {
-                                    isDisabled = isNotSameDay && isBeforeSelected;
+                                    isDisabled = isNotSameDay && isBeforeSelected || isAfterMaxDate;
 
                                     if(currentHoveredDate) {
                                         // TODO тут падает, если заховерил значение не из интервала
