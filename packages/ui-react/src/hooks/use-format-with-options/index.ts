@@ -1,10 +1,11 @@
 import { useCallback } from 'react';
 import { formatWithOptions } from 'date-fns/fp';
+import { enGB } from 'date-fns/locale';
 import { addDays, startOfWeek, eachDayOfInterval, Locale } from 'date-fns';
 
 export type TWeekdays = 'monday' | 'tuesday' | 'wednesday' | 'thursday' | 'friday' | 'saturday' | 'sunday';
 
-type TWeekHashMap = Record<TWeekdays, string>;
+type TWeekHashMap = Record<TWeekdays, { shortName: string, fullName: string }>;
 
 const formatWithOptionsFunc = (date: Date, options: { locale?: Locale, format?: string }) => {
     return formatWithOptions({ locale: options.locale }, options.format ?? 'dd.MM.yyyy HH:mm')(date);
@@ -20,6 +21,10 @@ export const getWeekDaysList = (locale: Locale) => {
     const weekHashMap: Partial<TWeekHashMap> = {};
 
     for(const day of week) {
+        const dayOriginalName = formatWithOptionsFunc(day, {
+            format: 'EEEE',
+            locale: enGB
+        }).toLowerCase() as TWeekdays;
         const dayFullName = formatWithOptionsFunc(day, {
             format: 'EEEE'
         }).toLowerCase() as TWeekdays;
@@ -28,7 +33,10 @@ export const getWeekDaysList = (locale: Locale) => {
             locale
         });
 
-        weekHashMap[dayFullName] = dayShortName;
+        weekHashMap[dayOriginalName] = {
+            shortName: dayShortName,
+            fullName: dayFullName
+        };
     }
 
     return weekHashMap;

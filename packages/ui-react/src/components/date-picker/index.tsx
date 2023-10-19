@@ -628,7 +628,7 @@ export const DatePicker = ({
                                 'date-picker__weekday_weekend': dayItem.isWeekend
                             })}
                         >
-                            {weekdays[dayItem.name]}
+                            {weekdays[dayItem.name].shortName}
                         </div>
                     ))}
                 </div>
