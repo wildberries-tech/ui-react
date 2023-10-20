@@ -424,6 +424,13 @@ export const DatePicker = ({
         }
     };
 
+    const getIsSelectedAllPeriod = (period: TDateValuesArray) => {
+        const isSameDayMinDate = isSameDay(period[0], minDate);
+        const isSameDayMaxDate = isSameDay(period[1], maxDate);
+
+        setIsAllPeriod(isSameDayMinDate && isSameDayMaxDate);
+    };
+
     useEffect(() => {
         if(!props.defaultMinDate && defaultSelectedDate[0]) {
             setMinDate(defaultSelectedDate[0]);
@@ -441,6 +448,10 @@ export const DatePicker = ({
             writeValue(defaultSelectedDate);
         }
     }, [selectedPeriod, defaultSelectedDate]);
+
+    useEffect(() => {
+        getIsSelectedAllPeriod(selectedPeriod);
+    }, [defaultSelectedDate, selectedPeriod, minDate, maxDate]);
 
     const setDate = (date: ICalendarDate | [ICalendarDate, ICalendarDate]) => {
         if(Array.isArray(date)) {
@@ -467,15 +478,6 @@ export const DatePicker = ({
 
                     if(newSelectedPeriod.length === 0) {
                         newSelectedPeriod.push(date.day);
-                    }
-
-                    const isSameDayMinDate = isSameDay(newSelectedPeriod[0], minDate);
-                    const isSameDayMaxDate = isSameDay(newSelectedPeriod[1], maxDate);
-
-                    if(isSameDayMinDate && isSameDayMaxDate) {
-                        setIsAllPeriod(true);
-                    } else {
-                        setIsAllPeriod(false);
                     }
                 }
 
