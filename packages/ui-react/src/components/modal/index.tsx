@@ -51,7 +51,7 @@ export const Modal = ({
                 enableBodyScroll(tempRef);
             }
         };
-    }, []);
+    }, [isOpen]);
 
     useEffect(() => {
         if(placement === 'bottom' && (widthPreset === 'l' || widthPreset === 'xl')) {
