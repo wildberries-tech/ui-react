@@ -90,7 +90,12 @@ export interface IProps {
     /**
      * Свойство позволяет указать кастомный контейнер для рендера компонента
      **/
-    readonly container?: HTMLElement
+    readonly container?: HTMLElement,
+    /**
+     * Полезно при работе с вложенными слоями.
+     * Он используется родительским слоем, чтобы сигнализировать дочерним слоям о том, что их слои должны закрыться.
+     */
+    readonly onParentClose?: () => void
 }
 
 /**
@@ -123,6 +128,7 @@ export const Popover = ({ trigger = 'click', triggerTagName = 'div', auto = true
         arrowOffset: props.arrowOffset,
         preferX: props.preferX,
         preferY: props.preferY,
+        onParentClose: props.onParentClose ?? onClose,
         auto,
         placement
     });

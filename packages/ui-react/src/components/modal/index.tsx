@@ -34,7 +34,7 @@ export const Modal = ({
     isOpen = false,
     ...props
 }: IProps) => {
-    const cn = useClassnames(style, props.className, true);
+    const cn = useClassnames(style, props.className);
 
     const $root = useRef<HTMLDivElement>(null);
     const $body = useRef<HTMLDivElement>(null);
