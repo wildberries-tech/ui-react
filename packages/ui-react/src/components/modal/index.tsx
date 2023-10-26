@@ -36,13 +36,12 @@ export const Modal = ({
 }: IProps) => {
     const cn = useClassnames(style, props.className);
 
-    const $root = useRef<HTMLDivElement>(null);
-    const $body = useRef<HTMLDivElement>(null);
+    const $documentBody = useRef<HTMLBodyElement>(document.querySelector('body'));
 
     useEffect(() => {
-        const tempRef = $root.current;
+        const tempRef = $documentBody.current;
 
-        if(tempRef && placement !== 'bottom') {
+        if(isOpen && tempRef && placement !== 'bottom') {
             disableBodyScroll(tempRef);
         }
 
@@ -51,7 +50,7 @@ export const Modal = ({
                 enableBodyScroll(tempRef);
             }
         };
-    }, []);
+    }, [isOpen]);
 
     useEffect(() => {
         if(placement === 'bottom' && (widthPreset === 'l' || widthPreset === 'xl')) {
@@ -125,12 +124,10 @@ export const Modal = ({
             (
                 <div
                     className={cn('modal', `modal_${placement}`)}
-                    ref={$root}
                     onClick={props.onClose}
                 >
                     <div
                         className={cn('modal__content', `modal__content_${widthPreset}`)}
-                        ref={$body}
                         onClick={onClickLayout}
                         role="dialog"
                     >
