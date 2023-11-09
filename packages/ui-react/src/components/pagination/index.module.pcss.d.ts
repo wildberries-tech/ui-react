@@ -17,6 +17,7 @@ interface Stylesheet {
     'pagination__dropdown': string
     'pagination__dropdown-trigger': string
     'pagination__dropdown-trigger-icon': string
+    'pagination__dropdown-trigger-icon_is-open': string
     'pagination__dropdown-trigger-text': string
     'pagination__dropdown-trigger_combined': string
     'pagination__option': string
