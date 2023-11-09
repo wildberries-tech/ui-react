@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useMemo, ChangeEvent, useRef, useCallback } from 'react';
+import React, { useState, useEffect, ChangeEvent, useRef, useCallback } from 'react';
 
 import { type TStyle, useClassnames } from '../../hooks/use-classnames';
 import { Dropdown } from '../dropdown';
@@ -175,7 +175,7 @@ export const Pagination = ({
         label  : String(preset)
     }));
 
-    const elDefaultTrigger = useCallback((isCombined?: boolean) => {
+    const elDefaultTrigger = useCallback((isOpen: boolean, isCombined?: boolean) => {
         return (
             <div
                 className={cn('pagination__dropdown-trigger', {
@@ -190,14 +190,16 @@ export const Pagination = ({
                 </Text>
                 <IconArrowsChevronBottom
                     svg={{
-                        className: cn('pagination__dropdown-trigger-icon')
+                        className: cn('pagination__dropdown-trigger-icon', {
+                            'pagination__dropdown-trigger-icon_is-open': isOpen
+                        })
                     }}
                 />
             </div>
         );
     }, [numberItemsPerPage]);
 
-    const elPaginationTrigger = useMemo(() => {
+    const elPaginationTrigger = useCallback((isOpen: boolean) => {
         if(props.isTriggerCombined) {
             return (
                 <div
@@ -206,12 +208,12 @@ export const Pagination = ({
                     })}
                 >
                     {label}
-                    {elDefaultTrigger(true)}
+                    {elDefaultTrigger(isOpen, true)}
                 </div>
             );
         }
 
-        return elDefaultTrigger();
+        return elDefaultTrigger(isOpen);
     }, [numberItemsPerPage, props.isTriggerCombined, label]);
 
     if(props.showPageInput && !placeholder) {
