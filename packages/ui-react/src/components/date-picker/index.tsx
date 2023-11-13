@@ -35,7 +35,7 @@ import { IconCalendarDates } from '../icons/calendar-dates';
 import { IconArrowsArrowRight } from '../icons/arrows/arrow-right';
 import { IconArrowsArrowLeft } from '../icons/arrows/arrow-left';
 import { IconClear } from '../icons/clear';
-import { Checkbox } from '../checkbox';
+import { Checkbox } from '../checkbox/v1';
 import { Dropdown } from '../dropdown';
 import { Button } from '../button/v1';
 import { useClassnames, TStyle } from '../../hooks/use-classnames';
