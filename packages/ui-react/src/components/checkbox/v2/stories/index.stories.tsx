@@ -1,5 +1,5 @@
 import type { Meta, StoryObj } from '@storybook/react';
-import React, { Fragment } from 'react';
+import React from 'react';
 
 import { Checkbox } from '..';
 import module from '../index.module.pcss';
