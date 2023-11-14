@@ -20,7 +20,7 @@ const preview: Preview = {
         },
         options: {
             storySort: {
-                order: ['Documentation', 'Builders'],
+                order: ['Documentation', 'Builders', 'Version 2 (Beta)', 'Version 1'],
             }
         },
         viewport: {
