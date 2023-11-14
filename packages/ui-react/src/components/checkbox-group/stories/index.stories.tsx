@@ -2,7 +2,7 @@ import React from 'react';
 import type { Meta, StoryObj } from '@storybook/react';
 
 import { CheckboxGroup } from '..';
-import { Checkbox } from '../../checkbox';
+import { Checkbox } from '../../checkbox/v1';
 import module from '../index.module.pcss';
 
 const META: Meta<typeof CheckboxGroup> = {
