@@ -95,6 +95,12 @@ export const InputCode = ({ length = 6, autoComplete = 'off', type = 'text', ...
     }, []);
 
     const onKeyDown = useCallback((index: number) => (event: KeyboardEvent<HTMLInputElement>) => {
+        const isNumberKey = /^\d$/.test(event.key);
+
+        if(!isNumberKey) {
+            event.preventDefault();
+        }
+
         switch (event.keyCode) {
             case KEYS.backspace: {
                 event.preventDefault();
