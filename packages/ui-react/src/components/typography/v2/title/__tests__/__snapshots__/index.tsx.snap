@@ -1,0 +1,129 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Text basic 1`] = `
+<h1
+  className="typography typography_size-h1 typography_color-basic typography_no-spacing"
+>
+  basic
+</h1>
+`;
+
+exports[`Text brand 1`] = `
+<h1
+  className="typography typography_size-h1 typography_color-brand typography_no-spacing"
+>
+  brand
+</h1>
+`;
+
+exports[`Text brand-1 1`] = `
+<h1
+  className="typography typography_size-h1 typography_color-brand-1 typography_no-spacing"
+>
+  brand-1
+</h1>
+`;
+
+exports[`Text disabled 1`] = `
+<h1
+  className="typography typography_size-h1 typography_color-disabled typography_no-spacing"
+>
+  disabled
+</h1>
+`;
+
+exports[`Text error 1`] = `
+<h1
+  className="typography typography_size-h1 typography_color-error typography_no-spacing"
+>
+  error
+</h1>
+`;
+
+exports[`Text h1 1`] = `
+<h1
+  className="typography typography_size-h1 typography_color-basic typography_no-spacing"
+>
+  h1
+</h1>
+`;
+
+exports[`Text h2 1`] = `
+<h2
+  className="typography typography_size-h2 typography_color-basic typography_no-spacing"
+>
+  h2
+</h2>
+`;
+
+exports[`Text h3 1`] = `
+<h3
+  className="typography typography_size-h3 typography_color-basic typography_no-spacing"
+>
+  h3
+</h3>
+`;
+
+exports[`Text h4 1`] = `
+<h4
+  className="typography typography_size-h4 typography_color-basic typography_no-spacing"
+>
+  h4
+</h4>
+`;
+
+exports[`Text headers 1`] = `
+<h1
+  className="typography typography_size-h1 typography_color-headers typography_no-spacing"
+>
+  headers
+</h1>
+`;
+
+exports[`Text inherit 1`] = `
+<h1
+  className="typography typography_size-h1 typography_color-inherit typography_no-spacing"
+>
+  inherit
+</h1>
+`;
+
+exports[`Text inverse 1`] = `
+<h1
+  className="typography typography_size-h1 typography_color-inverse typography_no-spacing"
+>
+  inverse
+</h1>
+`;
+
+exports[`Text link 1`] = `
+<h1
+  className="typography typography_size-h1 typography_color-link typography_no-spacing"
+>
+  link
+</h1>
+`;
+
+exports[`Text secondary 1`] = `
+<h1
+  className="typography typography_size-h1 typography_color-secondary typography_no-spacing"
+>
+  secondary
+</h1>
+`;
+
+exports[`Text success 1`] = `
+<h1
+  className="typography typography_size-h1 typography_color-success typography_no-spacing"
+>
+  success
+</h1>
+`;
+
+exports[`Text warning 1`] = `
+<h1
+  className="typography typography_size-h1 typography_color-warning typography_no-spacing"
+>
+  warning
+</h1>
+`;

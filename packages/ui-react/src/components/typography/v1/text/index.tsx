@@ -1,6 +1,6 @@
 import { ComponentType, createElement, HTMLAttributes } from 'react';
 
-import { TStyle, useClassnames } from '../../../hooks/use-classnames';
+import { TStyle, useClassnames } from '../../../../hooks/use-classnames';
 import { typographyColor } from '../types';
 import style from '../index.module.pcss';
 

@@ -4,7 +4,7 @@ import { type TStyle, useClassnames } from '../../hooks/use-classnames';
 import { Dropdown } from '../dropdown';
 import { DropdownOption } from '../dropdown/components/option';
 import { IconArrowsChevronBottom } from '../icons/arrows/chevron-bottom';
-import { Text } from '../typography/text';
+import { Text } from '../typography/v1/text';
 import { InputText } from '../input-text';
 import { debounce } from '../../tools/debounce';
 import { consoleFormat } from '../../tools/console-format';
