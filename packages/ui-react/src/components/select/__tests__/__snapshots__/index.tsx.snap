@@ -17,6 +17,7 @@ exports[`Default 1`] = `
       aria-live="polite"
       aria-relevant="additions text"
       className="css-1f43avz-a11yText-A11yText"
+      role="log"
     />
     <div
       className="select__control css-13cymwt-control"
@@ -31,6 +32,7 @@ exports[`Default 1`] = `
           id="react-select-2-placeholder"
         />
         <input
+          aria-activedescendant=""
           aria-autocomplete="list"
           aria-describedby="react-select-2-placeholder"
           aria-expanded={false}
@@ -87,6 +89,7 @@ exports[`Default menu open 1`] = `
       aria-live="polite"
       aria-relevant="additions text"
       className="css-1f43avz-a11yText-A11yText"
+      role="log"
     />
     <div
       className="select__control css-13cymwt-control"
@@ -101,12 +104,12 @@ exports[`Default menu open 1`] = `
           id="react-select-3-placeholder"
         />
         <input
+          aria-activedescendant=""
           aria-autocomplete="list"
           aria-controls="react-select-3-listbox"
           aria-describedby="react-select-3-placeholder"
           aria-expanded={true}
           aria-haspopup={true}
-          aria-owns="react-select-3-listbox"
           aria-readonly={true}
           className="css-mohuvp-dummyInput-DummyInput"
           disabled={false}
@@ -140,31 +143,37 @@ exports[`Default menu open 1`] = `
     </div>
     <div
       className="select__menu css-1nmdiq5-menu"
-      id="react-select-3-listbox"
       onMouseDown={[Function]}
       onMouseMove={[Function]}
     >
       <div
+        aria-multiselectable={false}
         className="select__menu-list css-1n6sfyn-MenuList"
+        id="react-select-3-listbox"
+        role="listbox"
       >
         <div
           aria-disabled={false}
+          aria-selected={false}
           className="select__option css-10wo9uf-option"
           id="react-select-3-option-0"
           onClick={[Function]}
           onMouseMove={[Function]}
           onMouseOver={[Function]}
+          role="option"
           tabIndex={-1}
         >
           Мали
         </div>
         <div
           aria-disabled={false}
+          aria-selected={false}
           className="select__option css-10wo9uf-option"
           id="react-select-3-option-1"
           onClick={[Function]}
           onMouseMove={[Function]}
           onMouseOver={[Function]}
+          role="option"
           tabIndex={-1}
         >
           <svg
@@ -183,11 +192,13 @@ exports[`Default menu open 1`] = `
         </div>
         <div
           aria-disabled={false}
+          aria-selected={false}
           className="select__option css-10wo9uf-option"
           id="react-select-3-option-2"
           onClick={[Function]}
           onMouseMove={[Function]}
           onMouseOver={[Function]}
+          role="option"
           tabIndex={-1}
         >
           Болгария
@@ -206,11 +217,13 @@ exports[`Default menu open 1`] = `
         </div>
         <div
           aria-disabled={false}
+          aria-selected={false}
           className="select__option css-10wo9uf-option"
           id="react-select-3-option-3"
           onClick={[Function]}
           onMouseMove={[Function]}
           onMouseOver={[Function]}
+          role="option"
           tabIndex={-1}
         >
           <svg
@@ -241,11 +254,13 @@ exports[`Default menu open 1`] = `
         </div>
         <div
           aria-disabled={false}
+          aria-selected={false}
           className="select__option css-10wo9uf-option"
           id="react-select-3-option-4"
           onClick={[Function]}
           onMouseMove={[Function]}
           onMouseOver={[Function]}
+          role="option"
           tabIndex={-1}
         >
           <svg
@@ -276,52 +291,62 @@ exports[`Default menu open 1`] = `
         </div>
         <div
           aria-disabled={true}
+          aria-selected={false}
           className="select__option select__option_disabled css-nkt5xy-option"
           id="react-select-3-option-5"
+          role="option"
           tabIndex={-1}
         >
           Кыргызстан
         </div>
         <div
           aria-disabled={false}
+          aria-selected={false}
           className="select__option css-10wo9uf-option"
           id="react-select-3-option-6"
           onClick={[Function]}
           onMouseMove={[Function]}
           onMouseOver={[Function]}
+          role="option"
           tabIndex={-1}
         >
           Кения
         </div>
         <div
           aria-disabled={false}
+          aria-selected={false}
           className="select__option css-10wo9uf-option"
           id="react-select-3-option-7"
           onClick={[Function]}
           onMouseMove={[Function]}
           onMouseOver={[Function]}
+          role="option"
           tabIndex={-1}
         >
           Фарерские Острова (не признана)
         </div>
         <div
           aria-disabled={false}
+          aria-selected={false}
           className="select__option css-10wo9uf-option"
           id="react-select-3-option-8"
           onClick={[Function]}
           onMouseMove={[Function]}
           onMouseOver={[Function]}
+          role="option"
           tabIndex={-1}
         >
           Филиппины
         </div>
         <div
           aria-disabled={false}
+          aria-selected={false}
           className="select__option css-10wo9uf-option"
           id="react-select-3-option-9"
           onClick={[Function]}
           onMouseMove={[Function]}
           onMouseOver={[Function]}
+          role="option"
           tabIndex={-1}
         >
           Армения
@@ -349,6 +374,7 @@ exports[`Default value 1`] = `
       aria-live="polite"
       aria-relevant="additions text"
       className="css-1f43avz-a11yText-A11yText"
+      role="log"
     />
     <div
       className="select__control css-13cymwt-control"
@@ -364,11 +390,11 @@ exports[`Default value 1`] = `
           Мали
         </div>
         <input
+          aria-activedescendant="react-select-6-option-0"
           aria-autocomplete="list"
           aria-controls="react-select-6-listbox"
           aria-expanded={true}
           aria-haspopup={true}
-          aria-owns="react-select-6-listbox"
           aria-readonly={true}
           className="css-mohuvp-dummyInput-DummyInput"
           disabled={false}
@@ -402,20 +428,24 @@ exports[`Default value 1`] = `
     </div>
     <div
       className="select__menu css-1nmdiq5-menu"
-      id="react-select-6-listbox"
       onMouseDown={[Function]}
       onMouseMove={[Function]}
     >
       <div
+        aria-multiselectable={false}
         className="select__menu-list css-1n6sfyn-MenuList"
+        id="react-select-6-listbox"
+        role="listbox"
       >
         <div
           aria-disabled={false}
+          aria-selected={true}
           className="select__option select__option_focused select__option_selected css-tr4s17-option"
           id="react-select-6-option-0"
           onClick={[Function]}
           onMouseMove={[Function]}
           onMouseOver={[Function]}
+          role="option"
           tabIndex={-1}
         >
           <svg
@@ -435,11 +465,13 @@ exports[`Default value 1`] = `
         </div>
         <div
           aria-disabled={false}
+          aria-selected={false}
           className="select__option css-10wo9uf-option"
           id="react-select-6-option-1"
           onClick={[Function]}
           onMouseMove={[Function]}
           onMouseOver={[Function]}
+          role="option"
           tabIndex={-1}
         >
           <svg
@@ -458,11 +490,13 @@ exports[`Default value 1`] = `
         </div>
         <div
           aria-disabled={false}
+          aria-selected={false}
           className="select__option css-10wo9uf-option"
           id="react-select-6-option-2"
           onClick={[Function]}
           onMouseMove={[Function]}
           onMouseOver={[Function]}
+          role="option"
           tabIndex={-1}
         >
           Болгария
@@ -481,11 +515,13 @@ exports[`Default value 1`] = `
         </div>
         <div
           aria-disabled={false}
+          aria-selected={false}
           className="select__option css-10wo9uf-option"
           id="react-select-6-option-3"
           onClick={[Function]}
           onMouseMove={[Function]}
           onMouseOver={[Function]}
+          role="option"
           tabIndex={-1}
         >
           <svg
@@ -516,11 +552,13 @@ exports[`Default value 1`] = `
         </div>
         <div
           aria-disabled={false}
+          aria-selected={false}
           className="select__option css-10wo9uf-option"
           id="react-select-6-option-4"
           onClick={[Function]}
           onMouseMove={[Function]}
           onMouseOver={[Function]}
+          role="option"
           tabIndex={-1}
         >
           <svg
@@ -551,52 +589,62 @@ exports[`Default value 1`] = `
         </div>
         <div
           aria-disabled={true}
+          aria-selected={false}
           className="select__option select__option_disabled css-nkt5xy-option"
           id="react-select-6-option-5"
+          role="option"
           tabIndex={-1}
         >
           Кыргызстан
         </div>
         <div
           aria-disabled={false}
+          aria-selected={false}
           className="select__option css-10wo9uf-option"
           id="react-select-6-option-6"
           onClick={[Function]}
           onMouseMove={[Function]}
           onMouseOver={[Function]}
+          role="option"
           tabIndex={-1}
         >
           Кения
         </div>
         <div
           aria-disabled={false}
+          aria-selected={false}
           className="select__option css-10wo9uf-option"
           id="react-select-6-option-7"
           onClick={[Function]}
           onMouseMove={[Function]}
           onMouseOver={[Function]}
+          role="option"
           tabIndex={-1}
         >
           Фарерские Острова (не признана)
         </div>
         <div
           aria-disabled={false}
+          aria-selected={false}
           className="select__option css-10wo9uf-option"
           id="react-select-6-option-8"
           onClick={[Function]}
           onMouseMove={[Function]}
           onMouseOver={[Function]}
+          role="option"
           tabIndex={-1}
         >
           Филиппины
         </div>
         <div
           aria-disabled={false}
+          aria-selected={false}
           className="select__option css-10wo9uf-option"
           id="react-select-6-option-9"
           onClick={[Function]}
           onMouseMove={[Function]}
           onMouseOver={[Function]}
+          role="option"
           tabIndex={-1}
         >
           Армения
@@ -624,8 +672,10 @@ exports[`Disabled 1`] = `
       aria-live="polite"
       aria-relevant="additions text"
       className="css-1f43avz-a11yText-A11yText"
+      role="log"
     />
     <div
+      aria-disabled={true}
       className="select__control select__control_disabled css-16xfy0z-control"
       onMouseDown={[Function]}
       onTouchEnd={[Function]}
@@ -638,6 +688,7 @@ exports[`Disabled 1`] = `
           id="react-select-5-placeholder"
         />
         <input
+          aria-activedescendant=""
           aria-autocomplete="list"
           aria-describedby="react-select-5-placeholder"
           aria-expanded={false}
@@ -694,6 +745,7 @@ exports[`Error 1`] = `
       aria-live="polite"
       aria-relevant="additions text"
       className="css-1f43avz-a11yText-A11yText"
+      role="log"
     />
     <div
       className="select__control select__control_error css-13cymwt-control"
@@ -708,6 +760,7 @@ exports[`Error 1`] = `
           id="react-select-4-placeholder"
         />
         <input
+          aria-activedescendant=""
           aria-autocomplete="list"
           aria-describedby="react-select-4-placeholder"
           aria-expanded={false}
@@ -769,6 +822,7 @@ exports[`Label 1`] = `
       aria-live="polite"
       aria-relevant="additions text"
       className="css-1f43avz-a11yText-A11yText"
+      role="log"
     />
     <div
       className="select__control css-13cymwt-control"
@@ -783,6 +837,7 @@ exports[`Label 1`] = `
           id="react-select-7-placeholder"
         />
         <input
+          aria-activedescendant=""
           aria-autocomplete="list"
           aria-describedby="react-select-7-placeholder"
           aria-expanded={false}
@@ -844,6 +899,7 @@ exports[`Label 2`] = `
       aria-live="polite"
       aria-relevant="additions text"
       className="css-1f43avz-a11yText-A11yText"
+      role="log"
     />
     <div
       className="select__control css-13cymwt-control"
@@ -858,6 +914,7 @@ exports[`Label 2`] = `
           id="react-select-8-placeholder"
         />
         <input
+          aria-activedescendant=""
           aria-autocomplete="list"
           aria-describedby="react-select-8-placeholder"
           aria-expanded={false}
