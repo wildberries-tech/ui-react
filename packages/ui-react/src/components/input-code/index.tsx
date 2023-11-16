@@ -7,7 +7,8 @@ import React, {
     type InputHTMLAttributes,
     type FocusEvent,
     type KeyboardEvent,
-    type ChangeEvent
+    type ChangeEvent,
+    type ClipboardEvent
 } from 'react';
 
 import { type TStyle, useClassnames } from '../../hooks/use-classnames';
@@ -95,6 +96,10 @@ export const InputCode = ({ length = 6, autoComplete = 'off', type = 'text', ...
     }, []);
 
     const onKeyDown = useCallback((index: number) => (event: KeyboardEvent<HTMLInputElement>) => {
+        if(type === 'number' && !/^\d*$/.test(event.key) && !event.ctrlKey && !event.metaKey) {
+            event.preventDefault();
+        }
+
         switch (event.keyCode) {
             case KEYS.backspace: {
                 event.preventDefault();
@@ -160,6 +165,12 @@ export const InputCode = ({ length = 6, autoComplete = 'off', type = 'text', ...
                 break;
         }
     }, [type]);
+
+    const onPaste = (event: ClipboardEvent<HTMLInputElement>) => {
+        if(type === 'number' && !/^\d$/.test(event.clipboardData.getData('text'))) {
+            event.preventDefault();
+        }
+    };
 
     const onChange = useCallback((index: number) => (event: ChangeEvent<HTMLInputElement>) => {
         let value = String(event.target.value);
@@ -229,6 +240,7 @@ export const InputCode = ({ length = 6, autoComplete = 'off', type = 'text', ...
                     disabled={props.disabled}
                     pattern={props.pattern}
                     inputMode={props.inputMode}
+                    onPaste={onPaste}
                 />
             ))}
         </div>
