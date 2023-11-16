@@ -1,7 +1,7 @@
 import React, { forwardRef, InputHTMLAttributes, ReactNode, useMemo } from 'react';
 
 import { TStyle, useClassnames } from '../../hooks/use-classnames';
-import { Text } from '../typography/text';
+import { Text } from '../typography/v1/text';
 
 import style from './index.module.pcss';
 

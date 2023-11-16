@@ -1,0 +1,317 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Component as prop basic 1`] = `
+<button
+  className="button button_medium button_default"
+  type="button"
+>
+  basic
+</button>
+`;
+
+exports[`Component as prop brand 1`] = `
+<button
+  className="button button_medium button_default"
+  type="button"
+>
+  brand
+</button>
+`;
+
+exports[`Component as prop brand-1 1`] = `
+<button
+  className="button button_medium button_default"
+  type="button"
+>
+  brand-1
+</button>
+`;
+
+exports[`Component as prop disabled 1`] = `
+<button
+  className="button button_medium button_default"
+  type="button"
+>
+  disabled
+</button>
+`;
+
+exports[`Component as prop error 1`] = `
+<button
+  className="button button_medium button_default"
+  type="button"
+>
+  error
+</button>
+`;
+
+exports[`Component as prop headers 1`] = `
+<button
+  className="button button_medium button_default"
+  type="button"
+>
+  headers
+</button>
+`;
+
+exports[`Component as prop inherit 1`] = `
+<button
+  className="button button_medium button_default"
+  type="button"
+>
+  inherit
+</button>
+`;
+
+exports[`Component as prop inverse 1`] = `
+<button
+  className="button button_medium button_default"
+  type="button"
+>
+  inverse
+</button>
+`;
+
+exports[`Component as prop link 1`] = `
+<button
+  className="button button_medium button_default"
+  type="button"
+>
+  link
+</button>
+`;
+
+exports[`Component as prop secondary 1`] = `
+<button
+  className="button button_medium button_default"
+  type="button"
+>
+  secondary
+</button>
+`;
+
+exports[`Component as prop success 1`] = `
+<button
+  className="button button_medium button_default"
+  type="button"
+>
+  success
+</button>
+`;
+
+exports[`Component as prop warning 1`] = `
+<button
+  className="button button_medium button_default"
+  type="button"
+>
+  warning
+</button>
+`;
+
+exports[`Text a 1`] = `
+<a
+  className="typography typography_size-body typography_color-basic typography_no-spacing"
+>
+  a
+</a>
+`;
+
+exports[`Text b 1`] = `
+<b
+  className="typography typography_size-body typography_color-basic typography_no-spacing"
+>
+  b
+</b>
+`;
+
+exports[`Text basic 1`] = `
+<p
+  className="typography typography_size-body typography_color-basic typography_no-spacing"
+>
+  basic
+</p>
+`;
+
+exports[`Text body 1`] = `
+<p
+  className="typography typography_size-body typography_color-basic typography_no-spacing"
+>
+  body
+</p>
+`;
+
+exports[`Text body-bold 1`] = `
+<p
+  className="typography typography_size-body-bold typography_color-basic typography_no-spacing"
+>
+  body-bold
+</p>
+`;
+
+exports[`Text brand 1`] = `
+<p
+  className="typography typography_size-body typography_color-brand typography_no-spacing"
+>
+  brand
+</p>
+`;
+
+exports[`Text brand-1 1`] = `
+<p
+  className="typography typography_size-body typography_color-brand-1 typography_no-spacing"
+>
+  brand-1
+</p>
+`;
+
+exports[`Text caption 1`] = `
+<p
+  className="typography typography_size-caption typography_color-basic typography_no-spacing"
+>
+  caption
+</p>
+`;
+
+exports[`Text caption-bold 1`] = `
+<p
+  className="typography typography_size-caption-bold typography_color-basic typography_no-spacing"
+>
+  caption-bold
+</p>
+`;
+
+exports[`Text disabled 1`] = `
+<p
+  className="typography typography_size-body typography_color-disabled typography_no-spacing"
+>
+  disabled
+</p>
+`;
+
+exports[`Text em 1`] = `
+<em
+  className="typography typography_size-body typography_color-basic typography_no-spacing"
+>
+  em
+</em>
+`;
+
+exports[`Text error 1`] = `
+<p
+  className="typography typography_size-body typography_color-error typography_no-spacing"
+>
+  error
+</p>
+`;
+
+exports[`Text headers 1`] = `
+<p
+  className="typography typography_size-body typography_color-headers typography_no-spacing"
+>
+  headers
+</p>
+`;
+
+exports[`Text i 1`] = `
+<i
+  className="typography typography_size-body typography_color-basic typography_no-spacing"
+>
+  i
+</i>
+`;
+
+exports[`Text inherit 1`] = `
+<p
+  className="typography typography_size-body typography_color-inherit typography_no-spacing"
+>
+  inherit
+</p>
+`;
+
+exports[`Text inverse 1`] = `
+<p
+  className="typography typography_size-body typography_color-inverse typography_no-spacing"
+>
+  inverse
+</p>
+`;
+
+exports[`Text large 1`] = `
+<p
+  className="typography typography_size-large typography_color-basic typography_no-spacing"
+>
+  large
+</p>
+`;
+
+exports[`Text large-bold 1`] = `
+<p
+  className="typography typography_size-large-bold typography_color-basic typography_no-spacing"
+>
+  large-bold
+</p>
+`;
+
+exports[`Text legend 1`] = `
+<legend
+  className="typography typography_size-body typography_color-basic typography_no-spacing"
+>
+  legend
+</legend>
+`;
+
+exports[`Text link 1`] = `
+<p
+  className="typography typography_size-body typography_color-link typography_no-spacing"
+>
+  link
+</p>
+`;
+
+exports[`Text p 1`] = `
+<p
+  className="typography typography_size-body typography_color-basic typography_no-spacing"
+>
+  p
+</p>
+`;
+
+exports[`Text secondary 1`] = `
+<p
+  className="typography typography_size-body typography_color-secondary typography_no-spacing"
+>
+  secondary
+</p>
+`;
+
+exports[`Text span 1`] = `
+<span
+  className="typography typography_size-body typography_color-basic typography_no-spacing"
+>
+  span
+</span>
+`;
+
+exports[`Text strong 1`] = `
+<strong
+  className="typography typography_size-body typography_color-basic typography_no-spacing"
+>
+  strong
+</strong>
+`;
+
+exports[`Text success 1`] = `
+<p
+  className="typography typography_size-body typography_color-success typography_no-spacing"
+>
+  success
+</p>
+`;
+
+exports[`Text warning 1`] = `
+<p
+  className="typography typography_size-body typography_color-warning typography_no-spacing"
+>
+  warning
+</p>
+`;

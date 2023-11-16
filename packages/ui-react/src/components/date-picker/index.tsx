@@ -40,7 +40,7 @@ import { Dropdown } from '../dropdown';
 import { Button } from '../button/v1';
 import { useClassnames, TStyle } from '../../hooks/use-classnames';
 import { InputDate } from '../input-date';
-import { Text } from '../typography/text';
+import { Text } from '../typography/v1/text';
 
 import style from './index.module.pcss';
 
