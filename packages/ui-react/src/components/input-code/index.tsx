@@ -207,7 +207,7 @@ export const InputCode = ({ length = 6, autoComplete = 'off', type = 'text', ...
     }, []);
 
     const onPaste = (event: ClipboardEvent<HTMLInputElement>) => {
-        if(type === 'number' && !/^\d$/.test(event.clipboardData.getData('text'))) {
+        if(type === 'number' && !/^\d+$/.test(event.clipboardData.getData('text'))) {
             event.preventDefault();
         }
     };
