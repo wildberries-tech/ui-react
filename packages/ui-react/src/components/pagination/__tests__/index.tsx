@@ -153,6 +153,26 @@ test('Deprecated props', async () => {
     });
 });
 
+test('Hidden page buttons',  async () => {
+    const { asFragment } = render(
+        <Pagination
+            i18n={{
+                label: 'Показать записей',
+                placeholder: '№ страницы'
+            }}
+            numberItemsPerPage={10}
+            numberOfItems={10}
+            isHideButtonsWithOnePage={true}
+        />
+    );
+
+    expect(asFragment()).toMatchSnapshot();
+
+    await waitFor(() => {
+        expect(asFragment()).toMatchSnapshot();
+    });
+});
+
 test('Zero pages', async () => {
     const placeholderText = '№ страницы';
     const { asFragment } = render(

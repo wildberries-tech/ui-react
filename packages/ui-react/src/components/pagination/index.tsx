@@ -85,7 +85,11 @@ export interface IProps {
     /**
      * Свойство определяет расположение триггера относительно кнопок
      **/
-    readonly direction?: 'row' | 'column'
+    readonly direction?: 'row' | 'column',
+    /**
+     * Свойство позволяет скрывать кнопки пагинации в случае, если страница одна
+     **/
+    readonly isHideButtonsWithOnePage?: boolean
 }
 
 export const Pagination = ({
@@ -232,6 +236,8 @@ export const Pagination = ({
         );
     }
 
+    const isShowButtons = props.isHideButtonsWithOnePage ? numberOfPages > 1 : true;
+
     return (
         <div
             className={cn('pagination', {
@@ -275,13 +281,15 @@ export const Pagination = ({
                     placeholder={placeholder}
                 />
             ) : null}
-            <PaginationButtons
-                currentPage={currentPage}
-                numberOfEdgeButtons={numberOfEdgeButtons}
-                numberOfMiddleButtons={numberOfMiddleButtons}
-                numberOfPages={numberOfPages}
-                onChangePage={onChangePage}
-            />
+            {isShowButtons ? (
+                <PaginationButtons
+                    currentPage={currentPage}
+                    numberOfEdgeButtons={numberOfEdgeButtons}
+                    numberOfMiddleButtons={numberOfMiddleButtons}
+                    numberOfPages={numberOfPages}
+                    onChangePage={onChangePage}
+                />
+            ) : null}
         </div>
     );
 };
