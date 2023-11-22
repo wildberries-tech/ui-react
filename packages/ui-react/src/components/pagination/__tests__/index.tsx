@@ -171,7 +171,7 @@ test('Hidden page buttons',  async () => {
     await waitFor(() => {
         expect(asFragment()).toMatchSnapshot();
     });
-})
+});
 
 test('Zero pages', async () => {
     const placeholderText = '№ страницы';
