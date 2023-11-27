@@ -1,9 +1,9 @@
 import React, { Fragment, useState } from 'react';
 import type { Meta, StoryFn } from '@storybook/react';
 
-import { Modal } from '..';
+import { Modal } from '../index';
 import module from '../index.module.pcss';
-import { Button } from '../../button/v1';
+import { Button } from '../../../button/v1';
 
 const META: Meta<typeof Modal> = {
     title: 'Components/Modal',
