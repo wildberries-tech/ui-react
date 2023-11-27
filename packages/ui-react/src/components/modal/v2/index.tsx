@@ -150,6 +150,7 @@ export const Modal = ({
                             >
                                 {props.children}
                             </div>
+                            {/* eslint-disable-next-line @typescript-eslint/prefer-nullish-coalescing */}
                             {props.primaryButton || props.secondaryButton ? (
                                 <div
                                     className={cn('modal__footer', {
