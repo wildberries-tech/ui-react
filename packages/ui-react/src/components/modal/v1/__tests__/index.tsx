@@ -2,7 +2,7 @@ import React, { Fragment } from 'react';
 import { fireEvent, render, waitFor } from '@testing-library/react';
 
 import { Modal } from '..';
-import { Button } from '../../button/v1';
+import { Button } from '../../../button/v1';
 
 test('Default use', async () => {
     let isOpen = false;
