@@ -209,7 +209,7 @@ export const Popover = ({ trigger = 'click', triggerTagName = 'div', auto = true
                 </span>
             );
         }
-    }, [isOpen, isOver, trigger, layerProps, elArrow, renderLayer, props, hoverProps]);
+    }, [isOpen, isOver, trigger, layerProps, elArrow, renderLayer]);
 
     return (
         <Fragment>
