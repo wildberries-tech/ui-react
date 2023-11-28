@@ -95,13 +95,17 @@ export interface IProps {
      * Полезно при работе с вложенными слоями.
      * Он используется родительским слоем, чтобы сигнализировать дочерним слоям о том, что их слои должны закрыться.
      */
-    readonly onParentClose?: () => void
+    readonly onParentClose?: () => void,
+    /**
+     * Необходимо для корректной работы поповера в пагинации на мобильных устройствах
+     */
+    readonly isShouldCloseOnDisappear?: boolean
 }
 
 /**
  * Компонент `Popover` используется для отображения содержимого во всплывающем блоке при клике или наведении на указанный элемент-триггер. Поповер может использоваться для отображения дополнительной информации, подсказок или контекстного меню.
  **/
-export const Popover = ({ trigger = 'click', triggerTagName = 'div', auto = true, placement = 'bottom-center', ...props }: IProps) => {
+export const Popover = ({ trigger = 'click', triggerTagName = 'div', auto = true, placement = 'bottom-center', isShouldCloseOnDisappear = true, ...props }: IProps) => {
     const cn = useClassnames(style, props.className);
     const [isOpen, setIsOpen] = useState(!!props.defaultIsOpen);
     const [isOver, hoverProps] = useHover(props.hoverOptions);
@@ -120,7 +124,11 @@ export const Popover = ({ trigger = 'click', triggerTagName = 'div', auto = true
     const { renderLayer, triggerProps, layerProps, arrowProps } = useLayer({
         isOpen: trigger === 'hover' ? isOver : isOpen,
         onOutsideClick: onClose,
-        onDisappear: onClose,
+        onDisappear: () => {
+            if(isShouldCloseOnDisappear) {
+                onClose();
+            }
+        },
         container: props.container ?? $trigger.current?.parentElement ?? undefined,
         overflowContainer: props.overflowContainer,
         triggerOffset: props.triggerOffset,

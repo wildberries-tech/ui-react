@@ -251,6 +251,7 @@ export const Pagination = ({
             >
                 {!props.isTriggerCombined && label}
                 <Dropdown
+                    isShouldCloseOnDisappear={false}
                     className={cn('pagination__dropdown')}
                     triggerElement={elPaginationTrigger}
                     render={(isOpen, onClose) => {
