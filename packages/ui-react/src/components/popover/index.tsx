@@ -101,7 +101,7 @@ export interface IProps {
 /**
  * Компонент `Popover` используется для отображения содержимого во всплывающем блоке при клике или наведении на указанный элемент-триггер. Поповер может использоваться для отображения дополнительной информации, подсказок или контекстного меню.
  **/
-export const Popover = ({ trigger = 'click', triggerTagName = 'div', auto = true, placement = 'bottom-center', isShouldCloseOnDisappear = true, ...props }: IProps) => {
+export const Popover = ({ trigger = 'click', triggerTagName = 'div', auto = true, placement = 'bottom-center', ...props }: IProps) => {
     const cn = useClassnames(style, props.className);
     const [isOpen, setIsOpen] = useState(!!props.defaultIsOpen);
     const [isOver, hoverProps] = useHover(props.hoverOptions);
