@@ -95,11 +95,7 @@ export interface IProps {
      * Полезно при работе с вложенными слоями.
      * Он используется родительским слоем, чтобы сигнализировать дочерним слоям о том, что их слои должны закрыться.
      */
-    readonly onParentClose?: () => void,
-    /**
-     * Необходимо для корректной работы поповера в пагинации на мобильных устройствах
-     */
-    readonly isShouldCloseOnDisappear?: boolean
+    readonly onParentClose?: () => void
 }
 
 /**
@@ -124,11 +120,7 @@ export const Popover = ({ trigger = 'click', triggerTagName = 'div', auto = true
     const { renderLayer, triggerProps, layerProps, arrowProps } = useLayer({
         isOpen: trigger === 'hover' ? isOver : isOpen,
         onOutsideClick: onClose,
-        onDisappear: () => {
-            if(isShouldCloseOnDisappear) {
-                onClose();
-            }
-        },
+        onDisappear: (type) => type === 'partial' && onClose(),
         container: props.container ?? $trigger.current?.parentElement ?? undefined,
         overflowContainer: props.overflowContainer,
         triggerOffset: props.triggerOffset,
@@ -217,7 +209,7 @@ export const Popover = ({ trigger = 'click', triggerTagName = 'div', auto = true
                 </span>
             );
         }
-    }, [isOpen, isOver, trigger, layerProps, elArrow, renderLayer]);
+    }, [isOpen, isOver, trigger, layerProps, elArrow, renderLayer, props, hoverProps]);
 
     return (
         <Fragment>
