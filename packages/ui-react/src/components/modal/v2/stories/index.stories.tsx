@@ -6,7 +6,7 @@ import module from '../index.module.pcss';
 import { Button } from '../../../button/v1';
 
 const META: Meta<typeof Modal> = {
-    title: 'Components/Modal',
+    title: 'Version 2 (Beta)/Components/Modal',
     component: Modal,
     tags: ['autodocs'],
     args: {
@@ -16,6 +16,13 @@ const META: Meta<typeof Modal> = {
     parameters: {
         css: {
             module
+        },
+        documentation: {
+            setup: {
+                import: {
+                    version: '/v2'
+                }
+            }
         }
     }
 };

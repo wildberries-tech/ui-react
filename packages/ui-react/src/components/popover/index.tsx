@@ -120,7 +120,7 @@ export const Popover = ({ trigger = 'click', triggerTagName = 'div', auto = true
     const { renderLayer, triggerProps, layerProps, arrowProps } = useLayer({
         isOpen: trigger === 'hover' ? isOver : isOpen,
         onOutsideClick: onClose,
-        onDisappear: onClose,
+        onDisappear: (type) => type === 'partial' && onClose(),
         container: props.container ?? $trigger.current?.parentElement ?? undefined,
         overflowContainer: props.overflowContainer,
         triggerOffset: props.triggerOffset,
