@@ -1,5 +1,4 @@
 import React, { MouseEvent, ReactNode, useEffect, useMemo, useRef } from 'react';
-import { enableBodyScroll, disableBodyScroll } from 'body-scroll-lock';
 import { createPortal } from 'react-dom';
 
 import { TStyle, useClassnames } from '../../../hooks/use-classnames';
@@ -40,16 +39,12 @@ export const Modal = ({
     const $body = useRef<HTMLDivElement>(null);
 
     useEffect(() => {
-        const tempRef = $root.current;
-
-        if(tempRef && placement !== 'bottom') {
-            disableBodyScroll(tempRef);
+        if(isOpen) {
+            document.body.style.overflow = 'hidden';
         }
 
         return () => {
-            if(tempRef && placement !== 'bottom') {
-                enableBodyScroll(tempRef);
-            }
+            document.body.style.overflow = 'auto';
         };
     }, [isOpen]);
 
