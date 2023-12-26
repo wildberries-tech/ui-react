@@ -1,8 +1,8 @@
 import React, { MouseEvent, ReactNode, useEffect, useMemo, useRef } from 'react';
-import { enableBodyScroll, disableBodyScroll } from 'body-scroll-lock';
 import { createPortal } from 'react-dom';
 
 import { TStyle, useClassnames } from '../../../hooks/use-classnames';
+import { useBodyScrollLock } from '../../../hooks/use-body-scroll-lock';
 import { Button, IProps as IButtonProps } from '../../button/v1';
 import { Title } from '../../typography/v1/title';
 import { IconClear } from '../../icons/clear';
@@ -35,6 +35,7 @@ export const Modal = ({
     ...props
 }: IProps) => {
     const cn = useClassnames(style, props.className);
+    const { enableBodyScroll, disableBodyScroll } = useBodyScrollLock();
 
     const $root = useRef<HTMLDivElement>(null);
     const $body = useRef<HTMLDivElement>(null);
