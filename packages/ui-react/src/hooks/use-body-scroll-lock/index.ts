@@ -17,8 +17,11 @@ interface ILock {
     options: IBodyScrollOptions
 }
 
-// eslint-disable-next-line @typescript-eslint/prefer-optional-chain, @typescript-eslint/no-unnecessary-condition
-const isIosDevice = typeof window !== 'undefined' && window.navigator && window.navigator.platform && (/iP(ad|hone|od)/.test(window.navigator.platform) || window.navigator.platform === 'MacIntel' && window.navigator.maxTouchPoints > 1);
+// eslint-disable-next-line @typescript-eslint/no-unnecessary-condition
+const isIosDevice = window?.navigator?.platform && (
+    // eslint-disable-next-line @typescript-eslint/no-unnecessary-condition
+    /iP(ad|hone|od)/.test(window?.navigator?.platform) || window.navigator.platform === 'MacIntel' && window.navigator.maxTouchPoints > 1
+);
 
 export function useBodyScrollLock() {
     // Older browsers don't support event options, feature detect it.
@@ -60,11 +63,7 @@ export function useBodyScrollLock() {
 
     // returns true if `el` should be allowed to receive touchmove events.
     const allowTouchMove = (el: EventTarget): boolean => locks.some((lock) => {
-        if(lock.options.allowTouchMove && lock.options.allowTouchMove(el)) {
-            return true;
-        }
-
-        return false;
+        return !!(lock.options.allowTouchMove && lock.options.allowTouchMove(el));
     });
 
     const preventDefault = (rawEvent: THandleScrollEvent): boolean => {
@@ -378,7 +377,7 @@ export function useBodyScrollLock() {
 
         locksIndex.set(
             targetElement,
-            locksIndex.get(targetElement)                ? locksIndex.get(targetElement)! - 1                : 0
+            locksIndex.get(targetElement) ? locksIndex.get(targetElement)! - 1 : 0
         );
 
         if(locksIndex.get(targetElement) === 0) {
