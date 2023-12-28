@@ -8,6 +8,7 @@ export { useDesignTokensNative } from './native/design-tokens';
  **/
 export { useClassnames, type TStyle } from './hooks/use-classnames';
 export { useDesignTokens, type IOptions as IOptionsDesignTokens } from './hooks/use-design-tokens';
+export { useBodyScrollLock, type IBodyScrollOptions } from './hooks/use-body-scroll-lock';
 
 /**
  * Tools

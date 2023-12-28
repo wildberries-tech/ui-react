@@ -6,6 +6,7 @@ import { Button, IProps as IButtonProps } from '../../button/v2';
 import { Title } from '../../typography/v2/title';
 import { IconClear } from '../../icons/clear';
 import { consoleFormat } from '../../../tools/console-format';
+import { useBodyScrollLock } from '../../../hooks/use-body-scroll-lock';
 
 import style from './index.module.pcss';
 
@@ -34,17 +35,22 @@ export const Modal = ({
     ...props
 }: IProps) => {
     const cn = useClassnames(style, props.className);
+    const { disableBodyScroll, enableBodyScroll } = useBodyScrollLock();
 
     const $root = useRef<HTMLDivElement>(null);
     const $body = useRef<HTMLDivElement>(null);
 
     useEffect(() => {
-        if(isOpen) {
-            document.body.style.overflow = 'hidden';
+        const tempRef = $root.current;
+
+        if(tempRef && placement !== 'bottom') {
+            disableBodyScroll(tempRef);
         }
 
         return () => {
-            document.body.style.overflow = 'auto';
+            if(tempRef && placement !== 'bottom') {
+                enableBodyScroll(tempRef);
+            }
         };
     }, [isOpen]);
 
