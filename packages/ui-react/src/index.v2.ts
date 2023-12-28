@@ -6,3 +6,4 @@ export { Checkbox, type IProps as IPropsCheckbox } from './components/checkbox/v
 export { Title, type IProps as IPropsTypographyTitle } from './components/typography/v2/title';
 export { Text, type TProps as IPropsTypographyText } from './components/typography/v2/text';
 export { Modal, type IProps as IPropsModal } from './components/modal/v2';
+export { Switch, type IProps as IPropsSwitch } from './components/switch/v2';
