@@ -58,6 +58,29 @@ describe('Default', () => {
 
         expect(tree.toJSON()).toMatchSnapshot();
     });
+
+    test('Not Checked & loading', () => {
+        const tree = create(
+            <Switch
+                name="default"
+                loading={true}
+            />
+        );
+
+        expect(tree.toJSON()).toMatchSnapshot();
+    });
+
+    test('Checked & loading', () => {
+        const tree = create(
+            <Switch
+                name="default"
+                checked={true}
+                loading={true}
+            />
+        );
+
+        expect(tree.toJSON()).toMatchSnapshot();
+    });
 });
 
 describe('Label', () => {
@@ -109,53 +132,24 @@ describe('Label', () => {
 
         expect(tree.toJSON()).toMatchSnapshot();
     });
-});
 
-describe('Label & Description', () => {
-    const PROPS = {
-        name       : 'default',
-        label      : 'Checkbox label',
-        description: 'Checkbox description'
-    };
-
-    test('Not checked', () => {
+    test('Not Checked & loading', () => {
         const tree = create(
             <Switch
                 {...PROPS}
+                loading={true}
             />
         );
 
         expect(tree.toJSON()).toMatchSnapshot();
     });
 
-    test('Not checked & disabled', () => {
-        const tree = create(
-            <Switch
-                {...PROPS}
-                disabled={true}
-            />
-        );
-
-        expect(tree.toJSON()).toMatchSnapshot();
-    });
-
-    test('Checked', () => {
+    test('Checked & loading', () => {
         const tree = create(
             <Switch
                 {...PROPS}
                 checked={true}
-            />
-        );
-
-        expect(tree.toJSON()).toMatchSnapshot();
-    });
-
-    test('Checked & disabled', () => {
-        const tree = create(
-            <Switch
-                {...PROPS}
-                checked={true}
-                disabled={true}
+                loading={true}
             />
         );
 

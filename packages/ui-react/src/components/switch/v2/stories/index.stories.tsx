@@ -1,4 +1,6 @@
-import type { Meta, StoryObj } from '@storybook/react';
+/* eslint-disable react/no-multi-comp */
+import type { Meta, StoryFn } from '@storybook/react';
+import React from 'react';
 
 import { Switch } from '..';
 import module from '../index.module.pcss';
@@ -26,41 +28,197 @@ const META: Meta<typeof Switch> = {
 
 export default META;
 
-export const Default: StoryObj<typeof META> = {};
-
-export const Label: StoryObj<typeof META> = {
-    args: {
-        label: 'Checkbox label'
-    }
+export const Default: StoryFn<typeof META> = () => {
+    return (
+        <React.Fragment>
+            <div>
+                <span>Size: sm</span>
+                <Switch
+                    name="default"
+                    size="sm"
+                />
+            </div>
+            <div>
+                <span>Size: md</span>
+                <Switch
+                    name="default"
+                />
+            </div>
+            <div>
+                <span>Size: lg</span>
+                <Switch
+                    name="default"
+                    size="lg"
+                />
+            </div>
+        </React.Fragment>
+    );
 };
 
-export const Disable: StoryObj<typeof META> = {
-    args: {
-        disabled: true,
-        label   : 'Checkbox label'
-    }
+export const Label: StoryFn<typeof META> = () => {
+    return (
+        <React.Fragment>
+            <div>
+                <span>Size: sm</span>
+                <Switch
+                    name="default"
+                    size="sm"
+                    label="Checkbox label"
+                />
+            </div>
+            <div>
+                <span>Size: md</span>
+                <Switch
+                    name="default"
+                    label="Checkbox label"
+                />
+            </div>
+            <div>
+                <span>Size: lg</span>
+                <Switch
+                    name="default"
+                    size="lg"
+                    label="Checkbox label"
+                />
+            </div>
+        </React.Fragment>
+    );
 };
 
-export const DisableActive: StoryObj<typeof META> = {
-    args: {
-        checked : true,
-        disabled: true,
-        label   : 'Checkbox label'
-    }
+export const Disable: StoryFn<typeof META> = () => {
+    return (
+        <React.Fragment>
+            <div>
+                <span>Size: sm</span>
+                <Switch
+                    name="default"
+                    size="sm"
+                    label="Checkbox label"
+                    disabled={true}
+                />
+            </div>
+            <div>
+                <span>Size: md</span>
+                <Switch
+                    name="default"
+                    label="Checkbox label"
+                    disabled={true}
+                />
+            </div>
+            <div>
+                <span>Size: lg</span>
+                <Switch
+                    name="default"
+                    size="lg"
+                    label="Checkbox label"
+                    disabled={true}
+                />
+            </div>
+        </React.Fragment>
+    );
 };
 
-export const Loading: StoryObj<typeof META> = {
-    args: {
-        loading: true,
-        label   : 'Checkbox label'
-    }
+export const DisableActive: StoryFn<typeof META> = () => {
+    return (
+        <React.Fragment>
+            <div>
+                <span>Size: sm</span>
+                <Switch
+                    name="default"
+                    size="sm"
+                    label="Checkbox label"
+                    disabled={true}
+                    checked={true}
+                />
+            </div>
+            <div>
+                <span>Size: md</span>
+                <Switch
+                    name="default"
+                    label="Checkbox label"
+                    disabled={true}
+                    checked={true}
+                />
+            </div>
+            <div>
+                <span>Size: lg</span>
+                <Switch
+                    name="default"
+                    size="lg"
+                    label="Checkbox label"
+                    disabled={true}
+                    checked={true}
+                />
+            </div>
+        </React.Fragment>
+    );
 };
 
-export const LoadingActive: StoryObj<typeof META> = {
-    args: {
-        checked : true,
-        loading: true,
-        label   : 'Checkbox label'    
-    }
+export const Loading: StoryFn<typeof META> = () => {
+    return (
+        <React.Fragment>
+            <div>
+                <span>Size: sm</span>
+                <Switch
+                    name="default"
+                    size="sm"
+                    label="Checkbox label"
+                    loading={true}
+                />
+            </div>
+            <div>
+                <span>Size: md</span>
+                <Switch
+                    name="default"
+                    label="Checkbox label"
+                    loading={true}
+                />
+            </div>
+            <div>
+                <span>Size: lg</span>
+                <Switch
+                    name="default"
+                    size="lg"
+                    label="Checkbox label"
+                    loading={true}
+                />
+            </div>
+        </React.Fragment>
+    );
 };
 
+export const LoadingActive: StoryFn<typeof META> = () => {
+    return (
+        <React.Fragment>
+            <div>
+                <span>Size: sm</span>
+                <Switch
+                    name="default"
+                    size="sm"
+                    label="Checkbox label"
+                    loading={true}
+                    checked={true}
+                />
+            </div>
+            <div>
+                <span>Size: md</span>
+                <Switch
+                    name="default"
+                    label="Checkbox label"
+                    loading={true}
+                    checked={true}
+                />
+            </div>
+            <div>
+                <span>Size: lg</span>
+                <Switch
+                    name="default"
+                    size="lg"
+                    label="Checkbox label"
+                    loading={true}
+                    checked={true}
+                />
+            </div>
+        </React.Fragment>
+    );
+};

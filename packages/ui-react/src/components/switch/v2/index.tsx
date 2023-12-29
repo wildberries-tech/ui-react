@@ -1,5 +1,4 @@
-import React, { forwardRef, InputHTMLAttributes, ReactNode, useState, useRef, useImperativeHandle } from 'react';
-import KeyCode from 'rc-util/lib/KeyCode';
+import React, { forwardRef, InputHTMLAttributes, ReactNode, useState, useRef, useImperativeHandle, useMemo } from 'react';
 
 import { type TStyle, useClassnames } from '../../../hooks/use-classnames';
 import { IconArrowsRefreshCcw } from '../../icons/arrows/refresh-ccw';
@@ -118,10 +117,10 @@ export const Switch = forwardRef<HTMLButtonElement | null, IProps>(({ tabIndex =
     };
   
     const onInternalKeyDown = (event: React.KeyboardEvent<HTMLButtonElement>) => {
-        if(event.which === KeyCode.LEFT) {
-            triggerChange(false, event);
-        } else if(event.which === KeyCode.RIGHT) {
+        if(event.key === 'ArrowRight') {
             triggerChange(true, event);
+        } else if(event.key === 'ArrowLeft') {
+            triggerChange(false, event);
         }
 
         props.onKeyDown?.(event);
@@ -136,6 +135,16 @@ export const Switch = forwardRef<HTMLButtonElement | null, IProps>(({ tabIndex =
     const onMouseLeaveCallback = () => {
         switchRef.current?.blur();
     };
+
+    const elLoading = useMemo(() => {
+        if(props.loading) {
+            return (
+                <span className={cn('switch__track-point_loading')}>
+                    <IconArrowsRefreshCcw />
+                </span>
+            );
+        }
+    }, [props.loading]);
 
     return (
         <label
@@ -168,11 +177,7 @@ export const Switch = forwardRef<HTMLButtonElement | null, IProps>(({ tabIndex =
                         'switch__track-point_checked': innerChecked
                     })}
                 >
-                    {props.loading ? (
-                        <span className={cn('switch__track-point_loading')}>
-                            <IconArrowsRefreshCcw />
-                        </span>
-                    ) : null}
+                    {elLoading}
                 </div>
             </button>
             {props.label}

@@ -108,6 +108,13 @@
                     height: 0.5em;
                 }
             }
+
+            &_checked &_loading {
+
+                svg {
+                    fill: var(--color-bg-base);
+                }
+            }
         }
 
         &_disabled &-point {
@@ -127,6 +134,11 @@
             --switch-border-color: var(--switch-purple-light-color);
             --switch-background-color: var(--switch-purple-light-color);
             outline: none;
+        }
+
+        &:hover:not(&_disabled):not(&_checked),
+        &:focus:not(&_disabled):not(&_checked) {
+            --switch-background-color: var(--color-bg-base);
         }
 
         &:hover:not(&_disabled) &-point,
