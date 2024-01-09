@@ -7,9 +7,11 @@
     --switch-purple-lighter-color: #d4b2f8;
     --switch-purple-lighter2-color: #f1ebfb;
     --switch-purple-lighter3-color: #be84f8;
-    --switch-background-color: var(--color-bg-base);
-    --switch-border-color: var(--switch-grey-light-color);
-    --switch-border-size: 2px;
+    --switch-track-background-color: var(--color-bg-base);
+    --switch-track-border-color: var(--switch-grey-light-color);
+    --switch-track-border-size: 2px;
+    --switch-track-padding-size: 2px;
+    --switch-track-padding-hover-size: 1px;
     --switch-track-min-width: 30px;
     --switch-track-height: 20px;
     --switch-track-padding: 3px;
@@ -27,7 +29,8 @@
     width: max-content;
 
     &_size-sm {
-        --switch-border-size: 1.5px;
+        --switch-track-border-size: 1.5px;
+        --switch-track-padding-size: 1.5px;
         --switch-track-min-width: 22px;
         --switch-track-height: 14px;
         --switch-track-padding: 2px;
@@ -37,7 +40,9 @@
     }
 
     &_size-lg {
-        --switch-border-size: 3px;
+        --switch-track-border-size: 2px;
+        --switch-track-padding-size: 2.5px;
+        --switch-track-padding-hover-size: 1.5px;
         --switch-track-min-width: 36px;
         --switch-track-height: 24px;
         --switch-track-padding: 5px;
@@ -51,14 +56,14 @@
         height: var(--switch-track-height);
         width: var(--switch-track-min-width);
         border-radius: var(--switch-track-border-radius);
-        border: var(--switch-border-size) solid var(--switch-border-color);
+        border: var(--switch-track-border-size) solid var(--switch-track-border-color);
         overflow: hidden;
         transition: all 100ms linear;
         display: flex;
         justify-content: start;
         align-items: center;
-        padding: var(--switch-border-size);
-        background-color: var(--switch-background-color);
+        padding: var(--switch-track-padding-size);
+        background-color: var(--switch-track-background-color);
         cursor: pointer;
 
         &_disabled {
@@ -67,20 +72,20 @@
         }
 
         &_disabled:not(&_checked) {
-            --switch-background-color: var(--color-bg-base);
-            --switch-border-color: var(--switch-grey-lighter-color);
+            --switch-track-background-color: var(--color-bg-base);
+            --switch-track-border-color: var(--switch-grey-lighter-color);
         }
 
         &_checked {
-            --switch-background-color: var(--switch-purple-lighter2-color);
-            --switch-border-color: var(--switch-purple-lighter-color);
+            --switch-track-background-color: var(--switch-purple-lighter2-color);
+            --switch-track-border-color: var(--switch-purple-lighter-color);
             --switch-point-background-color: var(--switch-purple-color);
             justify-content: end;
         }
 
         &_checked:not(&_disabled) {
-            --switch-background-color: var(--switch-purple-lighter-color);
-            --switch-border-color: var(--switch-purple-lighter-color);
+            --switch-track-background-color: var(--switch-purple-lighter-color);
+            --switch-track-border-color: var(--switch-purple-lighter-color);
         }
 
         &-point {
@@ -121,24 +126,25 @@
 
             &_checked {
                 --switch-point-background-color: var(--switch-purple-lighter3-color);
-                border: var(--switch-border-size) solid var(--switch-purple-lighter3-color);
+                border: var(--switch-track-border-size) solid var(--switch-purple-lighter3-color);
             }
 
             &:not(&_checked) {
-                border: var(--switch-border-size) solid var(--switch-grey-lighter-color);
+                border: var(--switch-track-border-size) solid var(--switch-grey-lighter-color);
             }
         }
 
         &:hover:not(&_disabled),
         &:focus:not(&_disabled) {
-            --switch-border-color: var(--switch-purple-light-color);
-            --switch-background-color: var(--switch-purple-light-color);
+            --switch-track-padding-size: var(--switch-track-padding-hover-size);
+            --switch-track-border-color: var(--switch-purple-light-color);
+            --switch-track-background-color: var(--switch-purple-light-color);
             outline: none;
         }
 
         &:hover:not(&_disabled):not(&_checked),
         &:focus:not(&_disabled):not(&_checked) {
-            --switch-background-color: var(--color-bg-base);
+            --switch-track-background-color: var(--color-bg-base);
         }
 
         &:hover:not(&_disabled) &-point,
