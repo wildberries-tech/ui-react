@@ -1,0 +1,345 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Default Checked & disabled 1`] = `
+<label
+  className="switch switch_size-md"
+>
+  <button
+    aria-checked={true}
+    className="switch__track switch__track_checked switch__track_disabled"
+    disabled={true}
+    name="default"
+    onClick={[Function]}
+    onKeyDown={[Function]}
+    onMouseLeave={[Function]}
+    tabIndex={-1}
+  >
+    <div
+      className="switch__track-point switch__track-point_checked"
+    />
+  </button>
+</label>
+`;
+
+exports[`Default Checked & loading 1`] = `
+<label
+  className="switch switch_size-md"
+>
+  <button
+    aria-checked={true}
+    className="switch__track switch__track_checked switch__track_disabled"
+    disabled={true}
+    name="default"
+    onClick={[Function]}
+    onKeyDown={[Function]}
+    onMouseLeave={[Function]}
+    tabIndex={0}
+  >
+    <div
+      className="switch__track-point switch__track-point_checked"
+    >
+      <span
+        className="switch__track-point_loading"
+      >
+        <svg
+          height={24}
+          viewBox="0 0 24 24"
+          width={24}
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            clipRule="evenodd"
+            d="M10 7H6.193C7.553 5.079 9.606 4 12 4a8 8 0 0 1 8 8h2c0-5.523-4.477-10-10-10-2.804 0-5.275 1.183-7 3.27V2H3v7h7V7Zm4 10h3.807c-1.36 1.921-3.413 3-5.807 3a8 8 0 0 1-8-8H2c0 5.523 4.477 10 10 10 2.804 0 5.275-1.183 7-3.27V22h2v-7h-7v2Z"
+            fillRule="evenodd"
+          />
+        </svg>
+      </span>
+    </div>
+  </button>
+</label>
+`;
+
+exports[`Default Checked 1`] = `
+<label
+  className="switch switch_size-md"
+>
+  <button
+    aria-checked={true}
+    className="switch__track switch__track_checked"
+    name="default"
+    onClick={[Function]}
+    onKeyDown={[Function]}
+    onMouseLeave={[Function]}
+    tabIndex={0}
+  >
+    <div
+      className="switch__track-point switch__track-point_checked"
+    />
+  </button>
+</label>
+`;
+
+exports[`Default Not Checked & loading 1`] = `
+<label
+  className="switch switch_size-md"
+>
+  <button
+    aria-checked={false}
+    className="switch__track switch__track_disabled"
+    disabled={true}
+    name="default"
+    onClick={[Function]}
+    onKeyDown={[Function]}
+    onMouseLeave={[Function]}
+    tabIndex={0}
+  >
+    <div
+      className="switch__track-point"
+    >
+      <span
+        className="switch__track-point_loading"
+      >
+        <svg
+          height={24}
+          viewBox="0 0 24 24"
+          width={24}
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            clipRule="evenodd"
+            d="M10 7H6.193C7.553 5.079 9.606 4 12 4a8 8 0 0 1 8 8h2c0-5.523-4.477-10-10-10-2.804 0-5.275 1.183-7 3.27V2H3v7h7V7Zm4 10h3.807c-1.36 1.921-3.413 3-5.807 3a8 8 0 0 1-8-8H2c0 5.523 4.477 10 10 10 2.804 0 5.275-1.183 7-3.27V22h2v-7h-7v2Z"
+            fillRule="evenodd"
+          />
+        </svg>
+      </span>
+    </div>
+  </button>
+</label>
+`;
+
+exports[`Default Not checked & disabled 1`] = `
+<label
+  className="switch switch_size-md"
+>
+  <button
+    aria-checked={false}
+    className="switch__track switch__track_disabled"
+    disabled={true}
+    name="default"
+    onClick={[Function]}
+    onKeyDown={[Function]}
+    onMouseLeave={[Function]}
+    tabIndex={-1}
+  >
+    <div
+      className="switch__track-point"
+    />
+  </button>
+</label>
+`;
+
+exports[`Default Not checked 1`] = `
+<label
+  className="switch switch_size-md"
+>
+  <button
+    aria-checked={false}
+    className="switch__track"
+    name="default"
+    onClick={[Function]}
+    onKeyDown={[Function]}
+    onMouseLeave={[Function]}
+    tabIndex={0}
+  >
+    <div
+      className="switch__track-point"
+    />
+  </button>
+</label>
+`;
+
+exports[`Default With ID 1`] = `
+<label
+  className="switch switch_size-md"
+  id="custom-id"
+>
+  <button
+    aria-checked={false}
+    className="switch__track"
+    id="custom-id-input"
+    name="default"
+    onClick={[Function]}
+    onKeyDown={[Function]}
+    onMouseLeave={[Function]}
+    tabIndex={0}
+  >
+    <div
+      className="switch__track-point"
+    />
+  </button>
+</label>
+`;
+
+exports[`Label Checked & disabled 1`] = `
+<label
+  className="switch switch_size-md"
+>
+  <button
+    aria-checked={true}
+    className="switch__track switch__track_checked switch__track_disabled"
+    disabled={true}
+    name="default"
+    onClick={[Function]}
+    onKeyDown={[Function]}
+    onMouseLeave={[Function]}
+    tabIndex={-1}
+  >
+    <div
+      className="switch__track-point switch__track-point_checked"
+    />
+  </button>
+  Checkbox label
+</label>
+`;
+
+exports[`Label Checked & loading 1`] = `
+<label
+  className="switch switch_size-md"
+>
+  <button
+    aria-checked={true}
+    className="switch__track switch__track_checked switch__track_disabled"
+    disabled={true}
+    name="default"
+    onClick={[Function]}
+    onKeyDown={[Function]}
+    onMouseLeave={[Function]}
+    tabIndex={0}
+  >
+    <div
+      className="switch__track-point switch__track-point_checked"
+    >
+      <span
+        className="switch__track-point_loading"
+      >
+        <svg
+          height={24}
+          viewBox="0 0 24 24"
+          width={24}
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            clipRule="evenodd"
+            d="M10 7H6.193C7.553 5.079 9.606 4 12 4a8 8 0 0 1 8 8h2c0-5.523-4.477-10-10-10-2.804 0-5.275 1.183-7 3.27V2H3v7h7V7Zm4 10h3.807c-1.36 1.921-3.413 3-5.807 3a8 8 0 0 1-8-8H2c0 5.523 4.477 10 10 10 2.804 0 5.275-1.183 7-3.27V22h2v-7h-7v2Z"
+            fillRule="evenodd"
+          />
+        </svg>
+      </span>
+    </div>
+  </button>
+  Checkbox label
+</label>
+`;
+
+exports[`Label Checked 1`] = `
+<label
+  className="switch switch_size-md"
+>
+  <button
+    aria-checked={true}
+    className="switch__track switch__track_checked"
+    name="default"
+    onClick={[Function]}
+    onKeyDown={[Function]}
+    onMouseLeave={[Function]}
+    tabIndex={0}
+  >
+    <div
+      className="switch__track-point switch__track-point_checked"
+    />
+  </button>
+  Checkbox label
+</label>
+`;
+
+exports[`Label Not Checked & loading 1`] = `
+<label
+  className="switch switch_size-md"
+>
+  <button
+    aria-checked={false}
+    className="switch__track switch__track_disabled"
+    disabled={true}
+    name="default"
+    onClick={[Function]}
+    onKeyDown={[Function]}
+    onMouseLeave={[Function]}
+    tabIndex={0}
+  >
+    <div
+      className="switch__track-point"
+    >
+      <span
+        className="switch__track-point_loading"
+      >
+        <svg
+          height={24}
+          viewBox="0 0 24 24"
+          width={24}
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            clipRule="evenodd"
+            d="M10 7H6.193C7.553 5.079 9.606 4 12 4a8 8 0 0 1 8 8h2c0-5.523-4.477-10-10-10-2.804 0-5.275 1.183-7 3.27V2H3v7h7V7Zm4 10h3.807c-1.36 1.921-3.413 3-5.807 3a8 8 0 0 1-8-8H2c0 5.523 4.477 10 10 10 2.804 0 5.275-1.183 7-3.27V22h2v-7h-7v2Z"
+            fillRule="evenodd"
+          />
+        </svg>
+      </span>
+    </div>
+  </button>
+  Checkbox label
+</label>
+`;
+
+exports[`Label Not checked & disabled 1`] = `
+<label
+  className="switch switch_size-md"
+>
+  <button
+    aria-checked={false}
+    className="switch__track switch__track_disabled"
+    disabled={true}
+    name="default"
+    onClick={[Function]}
+    onKeyDown={[Function]}
+    onMouseLeave={[Function]}
+    tabIndex={-1}
+  >
+    <div
+      className="switch__track-point"
+    />
+  </button>
+  Checkbox label
+</label>
+`;
+
+exports[`Label Not checked 1`] = `
+<label
+  className="switch switch_size-md"
+>
+  <button
+    aria-checked={false}
+    className="switch__track"
+    name="default"
+    onClick={[Function]}
+    onKeyDown={[Function]}
+    onMouseLeave={[Function]}
+    tabIndex={0}
+  >
+    <div
+      className="switch__track-point"
+    />
+  </button>
+  Checkbox label
+</label>
+`;

@@ -1,6 +1,6 @@
 import React, { forwardRef, InputHTMLAttributes, ReactNode } from 'react';
 
-import { type TStyle, useClassnames } from '../../hooks/use-classnames';
+import { type TStyle, useClassnames } from '../../../hooks/use-classnames';
 
 import style from './index.module.pcss';
 
