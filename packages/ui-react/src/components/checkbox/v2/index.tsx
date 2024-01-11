@@ -1,4 +1,4 @@
-import React, { forwardRef, InputHTMLAttributes, useMemo } from 'react';
+import React, { forwardRef, InputHTMLAttributes, ReactNode, useMemo } from 'react';
 
 import { type TStyle, useClassnames } from '../../../hooks/use-classnames';
 
@@ -22,7 +22,7 @@ export interface IProps {
     /**
      * Текст метки, связанной с переключателем.
      **/
-    readonly label?: string,
+    readonly label?: string | ReactNode,
     /**
      * Значение, которое будет отправлено на сервер при отправке формы.
      **/
@@ -128,12 +128,16 @@ export const Checkbox = forwardRef<HTMLInputElement | null, IProps>(({ tabIndex 
 
     const elLabel = useMemo(() => {
         if(props.label) {
-            return (
-                <strong
-                    className={cn('checkbox__label')}
-                    children={props.label}
-                />
-            );
+            if(typeof props.label === 'string') {
+                return (
+                    <strong
+                        className={cn('checkbox__label')}
+                        children={props.label}
+                    />
+                );
+            } else {
+                return props.label;
+            }
         }
     }, [props.label]);
 
