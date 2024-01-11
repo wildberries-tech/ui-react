@@ -1,4 +1,5 @@
-import React, { forwardRef, InputHTMLAttributes, ReactNode, useState, useRef, useImperativeHandle, useMemo } from 'react';
+import React, { forwardRef, InputHTMLAttributes, ReactNode, useRef, useImperativeHandle, useMemo } from 'react';
+import { useMergedState } from 'rc-util';
 
 import { type TStyle, useClassnames } from '../../../hooks/use-classnames';
 import { IconArrowsRefreshCcw } from '../../icons/arrows/refresh-ccw';
@@ -91,7 +92,10 @@ export interface IProps {
 export const Switch = forwardRef<HTMLButtonElement | null, IProps>(({ tabIndex = 0, size = 'md', ...props }, ref) => {
     const cn = useClassnames(style, props.className);
 
-    const [innerChecked, setInnerChecked] = useState<boolean>(props.defaultChecked ?? props.checked ?? false);
+    const [innerChecked, setInnerChecked] = useMergedState<boolean>(false, {
+        value       : props.checked,
+        defaultValue: props.defaultChecked
+    });
 
     const switchRef = useRef<HTMLButtonElement | null>(null);
 
