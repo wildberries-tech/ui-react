@@ -29,20 +29,24 @@ export interface IProps {
     /**
      * Определяет, какой контент будет отображаться внутри всплывающего окна.
      **/
-    readonly render?: IPropsPopover['render']
+    readonly render?: IPropsPopover['render'],
+    /**
+     * Определяет смещение позиции относительно триггера, который вызывает всплывающее окно.
+     **/
+    readonly triggerOffset?: IPropsPopover['triggerOffset']
 }
 
 /**
  * Компонент `Tooltip` используется для отображения содержимого во всплывающем блоке при клике или наведении на указанный элемент-триггер. `Tooltip` может использоваться для отображения дополнительной информации, подсказок.
  **/
-export const Tooltip = ({ className, ...props }: IProps) => {
+export const Tooltip = ({ className, triggerOffset = 10, ...props }: IProps) => {
     const cn = useClassnames(style, className);
 
     return (
         <Popover
             {...props}
             className={cn('tooltip')}
-            triggerOffset={10}
+            triggerOffset={triggerOffset}
             arrow={true}
             arrowOptions={{
                 angle          : 45,
