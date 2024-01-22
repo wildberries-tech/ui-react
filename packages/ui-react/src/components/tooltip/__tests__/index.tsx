@@ -95,7 +95,10 @@ test('Render function', async () => {
         <Tooltip
             children="Text trigger"
             render={() => 'Text render'}
-        />
+        />,
+        {
+            container: document.body
+        }
     );
 
     expect(asFragment()).toMatchSnapshot();
