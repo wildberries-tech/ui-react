@@ -8,7 +8,10 @@ test('Default use', async () => {
         <Tooltip
             children="Text trigger"
             render="Text render"
-        />
+        />,
+        {
+            container: document.body
+        }
     );
 
     expect(asFragment()).toMatchSnapshot();
@@ -28,7 +31,10 @@ test('Close', async () => {
                 render="Text render"
             />
             <div>Out click</div>
-        </div>
+        </div>,
+        {
+            container: document.body
+        }
     );
 
     expect(asFragment()).toMatchSnapshot();
@@ -51,7 +57,10 @@ test('Element', async () => {
         <Tooltip
             children={<a href="#">Text trigger</a>}
             render="Text render"
-        />
+        />,
+        {
+            container: document.body
+        }
     );
 
     expect(asFragment()).toMatchSnapshot();

@@ -27,6 +27,30 @@ exports[`Close 2`] = `
       Out click
     </div>
   </div>
+  <span
+    class="popover__content"
+    style="position: fixed; top: 0px; left: 0px;"
+  >
+    Text render
+    <svg
+      height="11.999999999999998"
+      preserveAspectRatio="xMaxYMax"
+      style="position: absolute; top: 0px; left: 0px; transform: translateX(-50%);"
+      viewBox="0 0 11.999999999999998 6"
+      width="11.999999999999998"
+    >
+      <path
+        d="M 0 6 H 11.999999999999998 C 6.749999999999999 0.75 5.999999999999999 0 5.999999999999999 0 C 5.999999999999999 0 5.249999999999999 0.75 0 6"
+        fill="var(--tooltip-background-color)"
+        stroke="black"
+        stroke-width="0"
+      />
+      <path
+        d="M 0 6 H 11.999999999999998 L 11.999999999999998 6 H 0 Z"
+        fill="var(--tooltip-background-color)"
+      />
+    </svg>
+  </span>
 </DocumentFragment>
 `;
 
@@ -62,6 +86,30 @@ exports[`Default use 2`] = `
   >
     Text trigger
   </div>
+  <span
+    class="popover__content"
+    style="position: fixed; top: 0px; left: 0px;"
+  >
+    Text render
+    <svg
+      height="11.999999999999998"
+      preserveAspectRatio="xMaxYMax"
+      style="position: absolute; top: 0px; left: 0px; transform: translateX(-50%);"
+      viewBox="0 0 11.999999999999998 6"
+      width="11.999999999999998"
+    >
+      <path
+        d="M 0 6 H 11.999999999999998 C 6.749999999999999 0.75 5.999999999999999 0 5.999999999999999 0 C 5.999999999999999 0 5.249999999999999 0.75 0 6"
+        fill="var(--tooltip-background-color)"
+        stroke="black"
+        stroke-width="0"
+      />
+      <path
+        d="M 0 6 H 11.999999999999998 L 11.999999999999998 6 H 0 Z"
+        fill="var(--tooltip-background-color)"
+      />
+    </svg>
+  </span>
 </DocumentFragment>
 `;
 
@@ -89,6 +137,30 @@ exports[`Element 2`] = `
     >
       Text trigger
     </a>
+  </span>
+  <span
+    class="popover__content"
+    style="position: fixed; top: 0px; left: 0px;"
+  >
+    Text render
+    <svg
+      height="11.999999999999998"
+      preserveAspectRatio="xMaxYMax"
+      style="position: absolute; top: 0px; left: 0px; transform: translateX(-50%);"
+      viewBox="0 0 11.999999999999998 6"
+      width="11.999999999999998"
+    >
+      <path
+        d="M 0 6 H 11.999999999999998 C 6.749999999999999 0.75 5.999999999999999 0 5.999999999999999 0 C 5.999999999999999 0 5.249999999999999 0.75 0 6"
+        fill="var(--tooltip-background-color)"
+        stroke="black"
+        stroke-width="0"
+      />
+      <path
+        d="M 0 6 H 11.999999999999998 L 11.999999999999998 6 H 0 Z"
+        fill="var(--tooltip-background-color)"
+      />
+    </svg>
   </span>
 </DocumentFragment>
 `;
