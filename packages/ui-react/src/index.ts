@@ -125,6 +125,7 @@ export { IconNewspaper } from './components/icons/newspaper';
 export { IconOptions } from './components/icons/options';
 export { IconPencilCreate } from './components/icons/pencil-create';
 export { IconPencilEdit } from './components/icons/pencil-edit';
+export { IconPin } from './components/icons/pin';
 export { IconPlus } from './components/icons/plus';
 export { IconPresentation } from './components/icons/presentation';
 export { IconPrinter } from './components/icons/printer';
