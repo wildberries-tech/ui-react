@@ -66,6 +66,13 @@ export const Modal = ({
         }
     };
 
+    // необходимо, чтобы при событии mousedown внутри модалки и mouseup вне модалки окно не закрывалось
+    const onClickOutside = (e: MouseEvent<HTMLDivElement>) => {
+        if(e.type === 'mousedown') {
+            props?.onClose?.();
+        }
+    };
+
     const onClickLayout = (e: MouseEvent<HTMLDivElement>) => {
         e.stopPropagation();
 
@@ -127,12 +134,13 @@ export const Modal = ({
                 <div
                     className={cn('modal', `modal_${placement}`)}
                     ref={$root}
-                    onClick={props.onClose}
+                    onMouseDown={onClickOutside}
+                    onMouseUp={onClickOutside}
                 >
                     <div
                         className={cn('modal__content', `modal__content_${widthPreset}`)}
                         ref={$body}
-                        onClick={onClickLayout}
+                        onMouseDown={onClickLayout}
                         role="dialog"
                     >
                         <div
