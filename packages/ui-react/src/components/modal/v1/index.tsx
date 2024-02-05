@@ -69,7 +69,7 @@ export const Modal = ({
     // необходимо, чтобы при событии mousedown внутри модалки и mouseup вне модалки окно не закрывалось
     const onClickOutside = (e: MouseEvent<HTMLDivElement>) => {
         if(e.type === 'mousedown') {
-            props?.onClose?.();
+            props.onClose?.();
         }
     };
 
