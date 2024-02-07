@@ -75,7 +75,7 @@ export interface IProps {
      */
     readonly maxPeriodDays?: number,
     /**
-     * Параметр `disableDatesInPast` отключает возмодность выбора дат в прошлом
+     * Параметр `disableDatesInPast` отключает возможность выбора дат в прошлом
      */
     readonly disableDatesInPast?: boolean,
     /**
@@ -87,13 +87,17 @@ export interface IProps {
      */
     readonly defaultMaxDate?: Date,
     /**
-     * Параметр `disabledDates` указывает отключнные даты
+     * Параметр `disabledDates` указывает отключенные даты
      */
     readonly disabledDates?: TDateValuesArray,
     /**
-     * Параметр `disabledDates` указывает отключнные даты
+     * Параметр `disabledDates` указывает отключенные даты
      */
     readonly defaultSelectedDate?: TDateValuesArray,
+    /**
+     * Параметр `dateFormat` задает форматирование даты
+     */
+    readonly dateFormat?: string,
     /**
      * Параметр `weekView` включает отображение вида в неделях. Пока не реализован
      */
@@ -195,6 +199,7 @@ export const DatePicker = ({
     container = document.body,
     defaultSelectedDate = defaultSelectedDateEmpty,
     i18nConfig = defaultTranslationConfig,
+    dateFormat = defaultFormatDate,
     ...props
 }: IProps) => {
     const cn = useClassnames(style, props.className);
@@ -238,7 +243,7 @@ export const DatePicker = ({
 
     useEffect(() => {
         if(!props.isDateRange && defaultSelectedDate.length > 1) {
-            consoleFormat('DatePicker: Свойство `isDateRange=false` не поддержвает длину `defaultSelectedDate` более 1');
+            consoleFormat('DatePicker: Свойство `isDateRange=false` не поддерживает длину `defaultSelectedDate` более 1');
         }
     }, [props.isDateRange, defaultSelectedDate]);
 
@@ -364,8 +369,8 @@ export const DatePicker = ({
     }, [calendar.month, minDate, maxDate, props.disabled]);
 
     const showPeriodDateInInput = (value: Array<Date>) => {
-        const firstDate = value[0] ? format(value[0], defaultFormatDate) : '';
-        const secondDate = value[1] ? format(value[1], defaultFormatDate) : '';
+        const firstDate = value[0] ? format(value[0], dateFormat) : '';
+        const secondDate = value[1] ? format(value[1], dateFormat) : '';
 
         if(isSameDay(value[0], value[1])) {
             setDisplayDate(firstDate);
@@ -380,7 +385,7 @@ export const DatePicker = ({
         }
 
         if(selected) {
-            setDisplayDate(format(selected, defaultFormatDate));
+            setDisplayDate(format(selected, dateFormat));
         }
     }, [selectedPeriod, selected]);
 
@@ -388,7 +393,7 @@ export const DatePicker = ({
         if(value) {
             if(!props.isDateRange) {
                 setSelected(value[0]);
-                const dateTime = format(value[0], defaultFormatDate);
+                const dateTime = format(value[0], dateFormat);
 
                 setDisplayDate(dateTime);
             } else if(value[0]?.getTime() > new Date(0).getTime()) {
