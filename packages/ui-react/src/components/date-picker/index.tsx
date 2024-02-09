@@ -748,7 +748,7 @@ export const DatePicker = ({
                 </div>
             );
         }
-    }, [isAllPeriod, selectedPeriod, props.isDateRange, props.isMobile, defaultSelectedDate, minDate, maxDate]);
+    }, [isAllPeriod, selectedPeriod, props.isDateRange, props.isMobile, defaultSelectedDate, minDate, maxDate, i18nConfig]);
 
     const onClickChangeButton = (type: 'plus' | 'minus') => {
         const amount = type === 'plus' ? 1 : -1;
