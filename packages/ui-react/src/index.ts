@@ -62,6 +62,8 @@ export { IconFlagsKG } from './components/icons/flags/kg';
 export { IconFlagsKZ } from './components/icons/flags/kz';
 export { IconFlagsRU } from './components/icons/flags/ru';
 export { IconFlagsUZ } from './components/icons/flags/uz';
+export { IconFlagsGB } from './components/icons/flags/gb';
+export { IconFlagsCN } from './components/icons/flags/cn';
 export { IconBook } from './components/icons/book';
 export { IconBookmark } from './components/icons/bookmark';
 export { IconBookmarkAdd } from './components/icons/bookmark-add';
