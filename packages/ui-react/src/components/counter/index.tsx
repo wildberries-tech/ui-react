@@ -16,7 +16,7 @@ export interface IProps {
     /**
      * При использовании `presetStyle` компонент будет автоматически применять стили, соответствующие выбранному значению.
      */
-    readonly presetStyle?: 'orange' | 'dark-gray',
+    readonly presetStyle?: 'orange' | 'dark-gray' | 'purple',
     /**
      * При использовании `presetSize` компонент будет автоматически применять размер, соответствующий выбранному значению.
      */
