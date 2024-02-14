@@ -387,7 +387,7 @@ export const DatePicker = ({
         if(selected) {
             setDisplayDate(format(selected, dateFormat));
         }
-    }, [selectedPeriod, selected]);
+    }, [dateFormat, selectedPeriod, selected]);
 
     const writeValue = (value: Array<Date> | undefined, callback?: () => void): void => {
         if(value) {
