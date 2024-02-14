@@ -33,6 +33,12 @@ export const DarkGray: StoryObj<typeof META> = {
     }
 };
 
+export const Purple: StoryObj<typeof META> = {
+    args: {
+        presetStyle: 'purple'
+    }
+};
+
 export const Big: StoryObj<typeof META> = {
     args: {
         presetSize : 'big'
