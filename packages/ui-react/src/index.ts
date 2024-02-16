@@ -22,6 +22,7 @@ export { DesignTokens, type IProps as IPropsDesignTokens } from './components/de
 export { InputCode, type IProps as IPropsInputCode } from './components/input-code';
 export { InputPatternFormat, type IProps as IPropsInputPatternFormat } from './components/input-pattern-format';
 export { Select, type IProps as IPropsSelect } from './components/select';
+export { AsyncSelect, type IProps as IPropsAsyncSelect } from './components/async-select';
 export { TabsComposition, type IProps as IPropsTabsComposition } from './components/tabs';
 export { Tabs, type IProps as IPropsTabs } from './components/tabs/components/tabs';
 export { Tab, type IProps as IPropsTab } from './components/tabs/components/tab';
