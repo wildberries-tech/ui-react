@@ -40,8 +40,6 @@ interface ICallbackParams {
     [key: string | number]: string | number | boolean | null | undefined | ICallbackParams
 }
 
-type TComponentType = 'sync' | 'async';
-
 type TSelectProps<IsMulti extends boolean = boolean> = Partial<Props<IOption, IsMulti, GroupBase<IOption>>>;
 
 export interface IProps<IsMulti extends boolean = boolean> extends Omit<TSelectProps<IsMulti>, 'className'> {
@@ -228,17 +226,18 @@ export interface IProps<IsMulti extends boolean = boolean> extends Omit<TSelectP
     readonly screenReaderStatus?: TSelectProps['screenReaderStatus'],
     readonly styles?: TSelectProps['styles'],
     readonly tabSelectsValue?: TSelectProps['tabSelectsValue'],
-    readonly unstyled?: TSelectProps['unstyled'],
-    readonly typeComponent?: TComponentType
+    readonly unstyled?: TSelectProps['unstyled']
 }
 
 type TAsyncSelectProps<IsMulti extends boolean> = IProps<IsMulti> & {
+    readonly typeComponent: 'async',
     readonly loadCallback: (pageParams: IPageParams, callbackParams: ICallbackParams | undefined) => unknown,
     readonly hasMore: boolean,
     readonly callbackParams?: ICallbackParams
 };
 
 type TSyncSelectProps<IsMulti extends boolean> = IProps<IsMulti> & {
+    readonly typeComponent?: 'sync',
     readonly loadCallback?: never,
     readonly hasMore?: never,
     readonly callbackParams?: never
@@ -364,7 +363,7 @@ export const Select = <IsMulti extends boolean = false>({
         search: string,
         prevOptions: OptionsOrGroups<IOption, GroupBase<IOption>>
     ): { options: Array<IOption | GroupBase<IOption>>, hasMore: boolean } => {
-        props?.loadCallback?.({ pageSize }, props?.callbackParams);
+        props.loadCallback?.({ pageSize }, props.callbackParams);
 
         let filteredOptions;
 
@@ -376,7 +375,7 @@ export const Select = <IsMulti extends boolean = false>({
             filteredOptions = props.options.filter(({ label }) => label?.toLowerCase().includes(searchLower));
         }
 
-        const hasMore = props?.hasMore || false;
+        const hasMore = props.hasMore ?? false;
         const slicedOptions = filteredOptions.slice(
             prevOptions.length,
             prevOptions.length + pageSize
@@ -445,7 +444,7 @@ export const Select = <IsMulti extends boolean = false>({
             'select__option_disabled': option.isDisabled,
             'select__option_selected': option.isSelected
         })
-    }
+    };
 
     if(typeComponent === 'async') {
         return elContainer(
