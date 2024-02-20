@@ -124,3 +124,93 @@ test('Label', () => {
 
     expect(tree.toJSON()).toMatchSnapshot();
 });
+
+const sleep = async () => new Promise<void>((resolve) => {
+    setTimeout(() => {
+        resolve();
+    }, 1000);
+});
+
+test('Default async', () => {
+    const tree = create(
+        <Select
+            typeComponent="async"
+            hasMore={false}
+            loadCallback={sleep}
+            options={OPTIONS}
+        />
+    );
+
+    expect(tree.toJSON()).toMatchSnapshot();
+});
+
+test('Default async menu open', () => {
+    const tree = create(
+        <Select
+            typeComponent="async"
+            hasMore={false}
+            loadCallback={sleep}
+            defaultMenuIsOpen={true}
+            options={OPTIONS}
+        />
+    );
+
+    expect(tree.toJSON()).toMatchSnapshot();
+});
+
+test('Error async', () => {
+    const tree = create(
+        <Select
+            typeComponent="async"
+            hasMore={false}
+            loadCallback={sleep}
+            isError={true}
+            options={OPTIONS}
+        />
+    );
+
+    expect(tree.toJSON()).toMatchSnapshot();
+});
+
+test('Disabled async', () => {
+    const tree = create(
+        <Select
+            typeComponent="async"
+            hasMore={false}
+            loadCallback={sleep}
+            isDisabled={true}
+            options={OPTIONS}
+        />
+    );
+
+    expect(tree.toJSON()).toMatchSnapshot();
+});
+
+test('Default async value', () => {
+    const tree = create(
+        <Select
+            typeComponent="async"
+            hasMore={false}
+            loadCallback={sleep}
+            defaultMenuIsOpen={true}
+            defaultValue={[OPTIONS[0]]}
+            options={OPTIONS}
+        />
+    );
+
+    expect(tree.toJSON()).toMatchSnapshot();
+});
+
+test('Label async', () => {
+    const tree = create(
+        <Select
+            typeComponent="async"
+            hasMore={false}
+            loadCallback={sleep}
+            label="Label field"
+            options={OPTIONS}
+        />
+    );
+
+    expect(tree.toJSON()).toMatchSnapshot();
+});
