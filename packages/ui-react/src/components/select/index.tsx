@@ -5,12 +5,16 @@ import SelectSource, {
     OptionProps,
     SingleValueProps,
     Props,
-    GroupBase, PropsValue, ActionMeta, OptionsOrGroups,
-    OnChangeValue, ControlProps
+    GroupBase,
+    PropsValue,
+    ActionMeta,
+    OptionsOrGroups,
+    OnChangeValue,
+    ControlProps,
+    LoadingIndicatorProps,
+    NoticeProps
 } from 'react-select';
 import { AsyncPaginate } from 'react-select-async-paginate';
-import { LoadingIndicatorProps } from 'react-select/dist/declarations/src/components/indicators';
-import { NoticeProps } from 'react-select/dist/declarations/src/components/Menu';
 
 import { type TStyle, useClassnames } from '../../hooks/use-classnames';
 import { IconCheckMark } from '../icons/check-mark';
