@@ -363,11 +363,11 @@ export const Select = <IsMulti extends boolean = false>({
         );
     }, []);
 
-    const loadOptions = (
+    const loadOptions = useCallback(async (
         search: string,
         prevOptions: OptionsOrGroups<IOption, GroupBase<IOption>>
-    ): { options: Array<IOption | GroupBase<IOption>>, hasMore: boolean } => {
-        props.loadCallback?.({ pageSize }, props.callbackParams);
+    ): Promise<{ options: Array<IOption | GroupBase<IOption>>, hasMore: boolean }> => {
+        await props.loadCallback?.({ pageSize }, props.callbackParams);
 
         let filteredOptions;
 
@@ -389,7 +389,7 @@ export const Select = <IsMulti extends boolean = false>({
             options: slicedOptions,
             hasMore
         };
-    };
+    }, [props.options.length, props.hasMore, props.loadCallback, props.callbackParams]);
 
     const params = {
         placeholder: props.placeholder ?? '',
