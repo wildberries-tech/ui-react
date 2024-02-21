@@ -67,7 +67,7 @@ const META: Meta<typeof Select> = {
 
 let count = 1;
 let hasMore = true;
-let options: Array<IOptionType> = [];
+const options: Array<IOptionType> = [];
 
 for(let i = 0; i < 10; i++) {
     options.push({
