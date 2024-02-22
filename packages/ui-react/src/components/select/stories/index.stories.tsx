@@ -9,6 +9,11 @@ import { IconCalendar } from '../../icons/calendar';
 import { IconBox } from '../../icons/box';
 import { IconInfo } from '../../icons/info';
 
+export interface IOptionType {
+    value: number,
+    label: string
+}
+
 const META: Meta<typeof Select> = {
     title    : 'Components/Fields/Select',
     component: Select,
@@ -60,6 +65,36 @@ const META: Meta<typeof Select> = {
     }
 };
 
+let count = 1;
+let hasMore = true;
+const options: Array<IOptionType> = [];
+
+for(let i = 0; i < 10; i++) {
+    options.push({
+        value: i + 1,
+        label: `Option ${i + 1}`
+    });
+}
+
+const sleep = async () => new Promise<void>((resolve) => {
+    setTimeout(() => {
+        if(count < 5) {
+            for(let i = count * 10; i < (count + 1) * 10; i++) {
+                options.push({
+                    value: i + 1,
+                    label: `Option ${i + 1}`
+                });
+            }
+
+            count++;
+        } else {
+            hasMore = false;
+        }
+
+        resolve();
+    }, 2000);
+});
+
 export default META;
 
 export const Default: StoryObj<typeof META> = {
@@ -84,5 +119,17 @@ export const Multi: StoryObj<typeof META> = {
     name: 'Множественный выбор',
     args: {
         isMulti: true
+    }
+};
+
+export const AsyncDefault: StoryObj<typeof META> = {
+    name: 'Асинхронный селект',
+    args: {
+        typeComponent: 'async',
+        loadCallback: sleep,
+        label: 'Опции',
+        placeholder: 'Выберите опцию',
+        options,
+        hasMore
     }
 };

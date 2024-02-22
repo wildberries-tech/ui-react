@@ -5,13 +5,21 @@ import SelectSource, {
     OptionProps,
     SingleValueProps,
     Props,
-    GroupBase, PropsValue, ActionMeta, OptionsOrGroups,
-    OnChangeValue
+    GroupBase,
+    PropsValue,
+    ActionMeta,
+    OptionsOrGroups,
+    OnChangeValue,
+    ControlProps,
+    LoadingIndicatorProps,
+    NoticeProps
 } from 'react-select';
+import { AsyncPaginate } from 'react-select-async-paginate';
 
 import { type TStyle, useClassnames } from '../../hooks/use-classnames';
 import { IconCheckMark } from '../icons/check-mark';
 import { IconArrowsChevronBottom } from '../icons/arrows/chevron-bottom';
+import { Loader } from '../loader';
 
 import style from './index.module.pcss';
 
@@ -25,6 +33,15 @@ interface IOption {
     elBefore?: ReactNode | ((option: TOptionOrSingleValueProps<IOption>) => ReactNode),
     elAfter?: ReactNode | ((option: TOptionOrSingleValueProps<IOption>) => ReactNode),
     disabled?: boolean
+}
+
+interface IPageParams {
+    pageNumber?: number | string,
+    pageSize?: number | string
+}
+
+interface ICallbackParams {
+    [key: string | number]: string | number | boolean | null | undefined | ICallbackParams
 }
 
 type TSelectProps<IsMulti extends boolean = boolean> = Partial<Props<IOption, IsMulti, GroupBase<IOption>>>;
@@ -216,10 +233,34 @@ export interface IProps<IsMulti extends boolean = boolean> extends Omit<TSelectP
     readonly unstyled?: TSelectProps['unstyled']
 }
 
+type TAsyncSelectProps<IsMulti extends boolean> = IProps<IsMulti> & {
+    readonly typeComponent: 'async',
+    readonly loadCallback: (pageParams: IPageParams, callbackParams: ICallbackParams | undefined) => unknown,
+    readonly hasMore: boolean,
+    readonly callbackParams?: ICallbackParams
+};
+
+type TSyncSelectProps<IsMulti extends boolean> = IProps<IsMulti> & {
+    readonly typeComponent?: 'sync',
+    readonly loadCallback?: never,
+    readonly hasMore?: never,
+    readonly callbackParams?: never
+};
+
+type TComponentSelectProps<IsMulti extends boolean> = TAsyncSelectProps<IsMulti> | TSyncSelectProps<IsMulti>;
+
+const DEFAULT_PAGE_SIZE = 10;
+
 /**
  * Компонент позволяет создавать поля ввода с выпадающим списком
  **/
-export const Select = <IsMulti extends boolean = false>({ isSearchable = false, ...props }: IProps<IsMulti>) => {
+export const Select = <IsMulti extends boolean = false>({
+    typeComponent = 'sync',
+    isSearchable = false,
+    isLoading = false,
+    pageSize = DEFAULT_PAGE_SIZE,
+    ...props
+}: TComponentSelectProps<IsMulti>) => {
     const cn = useClassnames(style, props.className);
 
     const elOptionSelected = useCallback((option: OptionProps<IOption, IsMulti, GroupBase<IOption>>) => {
@@ -286,6 +327,22 @@ export const Select = <IsMulti extends boolean = false>({ isSearchable = false, 
         </components.IndicatorsContainer>
     ), []);
 
+    const componentLoadingIndicator = useCallback((option: LoadingIndicatorProps<IOption, IsMulti, GroupBase<IOption>>) => {
+        return (
+            <components.LoadingIndicator {...option}>
+                <Loader presetSize="small" />
+            </components.LoadingIndicator>
+        );
+    }, []);
+
+    const componentLoadingMessage = useCallback((option: NoticeProps<IOption, IsMulti, GroupBase<IOption>>) => {
+        return (
+            <components.LoadingMessage {...option}>
+                <Loader presetSize="small" />
+            </components.LoadingMessage>
+        );
+    }, []);
+
     const elLabel = useMemo(() => {
         if(props.label) {
             return (
@@ -297,72 +354,131 @@ export const Select = <IsMulti extends boolean = false>({ isSearchable = false, 
         }
     }, [props.label]);
 
-    return (
-        <label className={cn('select')}>
-            {elLabel}
-            <SelectSource
-                placeholder={props.placeholder ?? ''}
-                options={props.options}
-                isMulti={props.isMulti}
-                hideSelectedOptions={props.hideSelectedOptions}
-                menuIsOpen={props.menuIsOpen}
-                defaultMenuIsOpen={props.defaultMenuIsOpen}
-                defaultValue={props.defaultValue}
-                filterOption={props.filterOption}
-                isSearchable={isSearchable}
-                name={props.name}
-                isClearable={props.isClearable}
-                escapeClearsValue={props.escapeClearsValue}
-                value={props.value}
-                autoFocus={props.autoFocus}
-                isRtl={props.isRtl}
-                backspaceRemovesValue={props.backspaceRemovesValue}
-                blurInputOnSelect={props.blurInputOnSelect}
-                captureMenuScroll={props.captureMenuScroll}
-                closeMenuOnSelect={props.closeMenuOnSelect}
-                closeMenuOnScroll={props.closeMenuOnScroll}
-                controlShouldRenderValue={props.controlShouldRenderValue}
-                isDisabled={props.isDisabled}
-                defaultInputValue={props.defaultInputValue}
-                menuShouldBlockScroll={props.menuShouldBlockScroll}
-                menuShouldScrollIntoView={props.menuShouldScrollIntoView}
-                onBlur={props.onBlur}
-                onFocus={props.onFocus}
-                onKeyDown={props.onKeyDown}
-                onMenuScrollToTop={props.onMenuScrollToTop}
-                onMenuScrollToBottom={props.onMenuScrollToBottom}
-                onChange={props.onChange}
-                openMenuOnFocus={props.openMenuOnFocus}
-                openMenuOnClick={props.openMenuOnClick}
-                pageSize={props.pageSize}
-                tabIndex={props.tabIndex}
-                menuPortalTarget={props.menuPortalTarget}
-                menuPosition={props.menuPosition}
-                classNames={{
-                    menu: () => cn('select__menu'),
-                    menuList: () => cn('select__menu-list'),
-                    singleValue: () => cn('select__single-value'),
-                    control: (option) => cn('select__control', {
-                        'select__control_disabled': option.isDisabled,
-                        'select__control_error': props.isError
-                    }),
-                    valueContainer: () => cn('select__value-container'),
-                    placeholder: () => cn('select__placeholder'),
-                    option: (option) => cn('select__option', {
-                        'select__option_focused': option.isFocused,
-                        'select__option_disabled': option.isDisabled,
-                        'select__option_selected': option.isSelected
-                    })
-                }}
+    const elContainer = useCallback((children: ReactNode) => {
+        return (
+            <label className={cn('select')}>
+                {elLabel}
+                {children}
+            </label>
+        );
+    }, []);
+
+    const loadOptions = useCallback(async (
+        search: string,
+        prevOptions: OptionsOrGroups<IOption, GroupBase<IOption>>
+    ): Promise<{ options: Array<IOption | GroupBase<IOption>>, hasMore: boolean }> => {
+        await props.loadCallback?.({ pageSize }, props.callbackParams);
+
+        let filteredOptions;
+
+        if(!search) {
+            filteredOptions = props.options;
+        } else {
+            const searchLower = search.toLowerCase();
+
+            filteredOptions = props.options.filter(({ label }) => label?.toLowerCase().includes(searchLower));
+        }
+
+        const hasMore = props.hasMore ?? false;
+        const slicedOptions = filteredOptions.slice(
+            prevOptions.length,
+            prevOptions.length + pageSize
+        );
+
+        return {
+            options: slicedOptions,
+            hasMore
+        };
+    }, [props.options.length, props.hasMore, props.loadCallback, props.callbackParams]);
+
+    const params = {
+        placeholder: props.placeholder ?? '',
+        options: props.options,
+        isMulti: props.isMulti,
+        hideSelectedOptions: props.hideSelectedOptions,
+        menuIsOpen: props.menuIsOpen,
+        defaultMenuIsOpen: props.defaultMenuIsOpen,
+        defaultValue: props.defaultValue,
+        filterOption: props.filterOption,
+        isSearchable: isSearchable,
+        name: props.name,
+        isClearable: props.isClearable,
+        escapeClearsValue: props.escapeClearsValue,
+        value: props.value,
+        autoFocus: props.autoFocus,
+        isRtl: props.isRtl,
+        backspaceRemovesValue: props.backspaceRemovesValue,
+        blurInputOnSelect: props.blurInputOnSelect,
+        captureMenuScroll: props.captureMenuScroll,
+        closeMenuOnSelect: props.closeMenuOnSelect,
+        closeMenuOnScroll: props.closeMenuOnScroll,
+        controlShouldRenderValue: props.controlShouldRenderValue,
+        isDisabled: props.isDisabled,
+        defaultInputValue: props.defaultInputValue,
+        menuShouldBlockScroll: props.menuShouldBlockScroll,
+        menuShouldScrollIntoView: props.menuShouldScrollIntoView,
+        onBlur: props.onBlur,
+        onFocus: props.onFocus,
+        onKeyDown: props.onKeyDown,
+        onMenuScrollToTop: props.onMenuScrollToTop,
+        onMenuScrollToBottom: props.onMenuScrollToBottom,
+        onChange: props.onChange,
+        openMenuOnFocus: props.openMenuOnFocus,
+        openMenuOnClick: props.openMenuOnClick,
+        pageSize: pageSize,
+        tabIndex: props.tabIndex,
+        menuPortalTarget: props.menuPortalTarget,
+        menuPosition: props.menuPosition,
+        getOptionLabel: (option: IOption) => option.label,
+        isOptionDisabled: (option: IOption) => !!option.disabled
+    };
+
+    const classNames = {
+        menu: () => cn('select__menu'),
+        menuList: () => cn('select__menu-list'),
+        singleValue: () => cn('select__single-value'),
+        control: (option: ControlProps<IOption, IsMulti, GroupBase<IOption>>) => cn('select__control', {
+            'select__control_disabled': option.isDisabled,
+            'select__control_error': props.isError
+        }),
+        valueContainer: () => cn('select__value-container'),
+        placeholder: () => cn('select__placeholder'),
+        option: (option: OptionProps<IOption, IsMulti, GroupBase<IOption>>) => cn('select__option', {
+            'select__option_focused': option.isFocused,
+            'select__option_disabled': option.isDisabled,
+            'select__option_selected': option.isSelected
+        })
+    };
+
+    if(typeComponent === 'async') {
+        return elContainer(
+            <AsyncPaginate
+                loadOptions={loadOptions}
+                isLoading={isLoading}
+                classNames={classNames}
                 components={{
                     Option: componentOption,
                     SingleValue: componentSingleValue,
                     IndicatorSeparator: null,
-                    IndicatorsContainer: componentIndicatorsContainer
+                    IndicatorsContainer: componentIndicatorsContainer,
+                    LoadingIndicator: componentLoadingIndicator,
+                    LoadingMessage: componentLoadingMessage
                 }}
-                getOptionLabel={(option) => option.label}
-                isOptionDisabled={(option) => !!option.disabled}
+                {...params}
             />
-        </label>
+        );
+    }
+
+    return elContainer(
+        <SelectSource
+            classNames={classNames}
+            components={{
+                Option: componentOption,
+                SingleValue: componentSingleValue,
+                IndicatorSeparator: null,
+                IndicatorsContainer: componentIndicatorsContainer
+            }}
+            {...params}
+        />
     );
 };
