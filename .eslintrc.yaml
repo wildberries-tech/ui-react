@@ -29,7 +29,6 @@ overrides:
       yml/no-empty-mapping-value: error
       yml/no-empty-sequence-entry: error
       yml/no-tab-indent: error
-      yml/plain-scalar: error
       yml/require-string-key: error
       yml/flow-mapping-curly-newline: error
       yml/flow-sequence-bracket-newline: error
@@ -61,6 +60,7 @@ overrides:
       - '*.htm'
     plugins:
       - '@html-eslint'
+      - 'react-hooks'
     rules:
       '@html-eslint/require-doctype': error
       '@html-eslint/no-duplicate-id': error
@@ -672,3 +672,5 @@ overrides:
         - blankLine: always
           prev: '*'
           next: block-like
+      'react-hooks/exhaustive-deps': 
+        - warn
