@@ -472,7 +472,7 @@ export const Select = <IsMulti extends boolean = false>({
                 Option: componentOption,
                 SingleValue: componentSingleValue,
                 IndicatorSeparator: null,
-                IndicatorsContainer:componentIndicatorsContainer
+                IndicatorsContainer: componentIndicatorsContainer
             }}
             {...params}
         />
