@@ -11,9 +11,9 @@ import SelectSource, {
     OptionsOrGroups,
     OnChangeValue,
     LoadingIndicatorProps,
-    NoticeProps,
-    SelectComponentsConfig
+    NoticeProps
 } from 'react-select';
+import { SelectComponents } from 'react-select/dist/declarations/src/components';
 import { AsyncPaginate, useComponents } from 'react-select-async-paginate';
 
 import { type TStyle, useClassnames } from '../../hooks/use-classnames';
@@ -446,24 +446,20 @@ export const Select = <IsMulti extends boolean = false>({
         })
     };
 
-    const componentsList: SelectComponentsConfig<IOption, IsMulti, GroupBase<IOption>> = {
-        Option: (option) => componentOption(option),
-        SingleValue: (option) => componentSingleValue(option),
-        IndicatorSeparator: null,
-        IndicatorsContainer: (option) => componentIndicatorsContainer(option)
-    };
-
     if(typeComponent === 'async') {
         return elContainer(
             <AsyncPaginate
                 loadOptions={loadOptions}
                 isLoading={isLoading}
                 classNames={classNames}
-                components={{
-                    ...componentsList,
-                    LoadingIndicator: (option) => componentLoadingIndicator(option),
-                    LoadingMessage: (option) => componentLoadingMessage(option)
-                } as SelectComponentsConfig<IOption, IsMulti, GroupBase<IOption>>}
+                components={useComponents({
+                    Option: (option) => componentOption(option as OptionProps<IOption, IsMulti, GroupBase<IOption>>),
+                    SingleValue: (option) => componentSingleValue(option as SingleValueProps<IOption, IsMulti, GroupBase<IOption>>),
+                    IndicatorSeparator: null,
+                    IndicatorsContainer: (option) => componentIndicatorsContainer(option as IndicatorsContainerProps<IOption, IsMulti, GroupBase<IOption>>),
+                    LoadingIndicator: (option) => componentLoadingIndicator(option as LoadingIndicatorProps<IOption, IsMulti, GroupBase<IOption>>),
+                    LoadingMessage: (option) => componentLoadingMessage(option as NoticeProps<IOption, IsMulti, GroupBase<IOption>>)
+                }) as SelectComponents<IOption, IsMulti, GroupBase<IOption>>}
                 {...params}
             />
         );
@@ -472,7 +468,12 @@ export const Select = <IsMulti extends boolean = false>({
     return elContainer(
         <SelectSource
             classNames={classNames}
-            components={componentsList}
+            components={{
+                Option: componentOption,
+                SingleValue: componentSingleValue,
+                IndicatorSeparator: null,
+                IndicatorsContainer:componentIndicatorsContainer
+            }}
             {...params}
         />
     );
