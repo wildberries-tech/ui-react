@@ -12,9 +12,10 @@ import SelectSource, {
     OnChangeValue,
     ControlProps,
     LoadingIndicatorProps,
-    NoticeProps
+    NoticeProps,
+    ClassNamesConfig
 } from 'react-select';
-import { AsyncPaginate } from 'react-select-async-paginate';
+import { AsyncPaginate, useComponents } from 'react-select-async-paginate';
 
 import { type TStyle, useClassnames } from '../../hooks/use-classnames';
 import { IconCheckMark } from '../icons/check-mark';
@@ -327,21 +328,17 @@ export const Select = <IsMulti extends boolean = false>({
         </components.IndicatorsContainer>
     ), []);
 
-    const componentLoadingIndicator = useCallback((option: LoadingIndicatorProps<IOption, IsMulti, GroupBase<IOption>>) => {
-        return (
-            <components.LoadingIndicator {...option}>
-                <Loader presetSize="small" />
-            </components.LoadingIndicator>
-        );
-    }, []);
+    const componentLoadingIndicator = useCallback((option: LoadingIndicatorProps<IOption, IsMulti, GroupBase<IOption>>) => (
+        <components.LoadingIndicator {...option}>
+            <Loader presetSize="small" />
+        </components.LoadingIndicator>
+    ), []);
 
-    const componentLoadingMessage = useCallback((option: NoticeProps<IOption, IsMulti, GroupBase<IOption>>) => {
-        return (
-            <components.LoadingMessage {...option}>
-                <Loader presetSize="small" />
-            </components.LoadingMessage>
-        );
-    }, []);
+    const componentLoadingMessage = useCallback((option: NoticeProps<IOption, IsMulti, GroupBase<IOption>>) => (
+        <components.LoadingMessage {...option}>
+            <Loader presetSize="small" />
+        </components.LoadingMessage>
+    ), []);
 
     const elLabel = useMemo(() => {
         if(props.label) {
@@ -448,6 +445,13 @@ export const Select = <IsMulti extends boolean = false>({
             'select__option_disabled': option.isDisabled,
             'select__option_selected': option.isSelected
         })
+    } as ClassNamesConfig<IOption, IsMulti, GroupBase<IOption>>;
+
+    const componentsList = {
+        Option: componentOption,
+        SingleValue: componentSingleValue,
+        IndicatorSeparator: null,
+        IndicatorsContainer: componentIndicatorsContainer
     };
 
     if(typeComponent === 'async') {
@@ -456,14 +460,11 @@ export const Select = <IsMulti extends boolean = false>({
                 loadOptions={loadOptions}
                 isLoading={isLoading}
                 classNames={classNames}
-                components={{
-                    Option: componentOption,
-                    SingleValue: componentSingleValue,
-                    IndicatorSeparator: null,
-                    IndicatorsContainer: componentIndicatorsContainer,
+                components={useComponents({
+                    ...componentsList,
                     LoadingIndicator: componentLoadingIndicator,
                     LoadingMessage: componentLoadingMessage
-                }}
+                })}
                 {...params}
             />
         );
@@ -472,12 +473,7 @@ export const Select = <IsMulti extends boolean = false>({
     return elContainer(
         <SelectSource
             classNames={classNames}
-            components={{
-                Option: componentOption,
-                SingleValue: componentSingleValue,
-                IndicatorSeparator: null,
-                IndicatorsContainer: componentIndicatorsContainer
-            }}
+            components={componentsList}
             {...params}
         />
     );
