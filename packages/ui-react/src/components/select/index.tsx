@@ -453,14 +453,14 @@ export const Select = <IsMulti extends boolean = false>({
                 isLoading={isLoading}
                 classNames={classNames}
                 components={useComponents({
-                    /* eslint-disable no-return-assign, no-param-reassign */
+                    /* eslint-disable @typescript-eslint/no-unnecessary-type-assertion */
                     Option: (option) => componentOption(option as OptionProps<IOption, IsMulti, GroupBase<IOption>>),
                     SingleValue: (option) => componentSingleValue(option as SingleValueProps<IOption, IsMulti, GroupBase<IOption>>),
                     IndicatorSeparator: null,
                     IndicatorsContainer: (option) => componentIndicatorsContainer(option as IndicatorsContainerProps<IOption, IsMulti, GroupBase<IOption>>),
                     LoadingIndicator: (option) => componentLoadingIndicator(option as LoadingIndicatorProps<IOption, IsMulti, GroupBase<IOption>>),
                     LoadingMessage: (option) => componentLoadingMessage(option as NoticeProps<IOption, IsMulti, GroupBase<IOption>>)
-                    /* eslint-enable no-return-assign, no-param-reassign */
+                    /* eslint-enable @typescript-eslint/no-unnecessary-type-assertion */
                 }) as SelectComponents<IOption, IsMulti, GroupBase<IOption>>}
                 {...params}
             />
