@@ -10,10 +10,9 @@ import SelectSource, {
     ActionMeta,
     OptionsOrGroups,
     OnChangeValue,
-    ControlProps,
     LoadingIndicatorProps,
     NoticeProps,
-    ClassNamesConfig
+    SelectComponentsConfig
 } from 'react-select';
 import { AsyncPaginate, useComponents } from 'react-select-async-paginate';
 
@@ -434,24 +433,24 @@ export const Select = <IsMulti extends boolean = false>({
         menu: () => cn('select__menu'),
         menuList: () => cn('select__menu-list'),
         singleValue: () => cn('select__single-value'),
-        control: (option: ControlProps<IOption, IsMulti, GroupBase<IOption>>) => cn('select__control', {
+        control: (option: { isDisabled: boolean }) => cn('select__control', {
             'select__control_disabled': option.isDisabled,
             'select__control_error': props.isError
         }),
         valueContainer: () => cn('select__value-container'),
         placeholder: () => cn('select__placeholder'),
-        option: (option: OptionProps<IOption, IsMulti, GroupBase<IOption>>) => cn('select__option', {
+        option: (option: { isDisabled: boolean, isFocused: boolean, isSelected: boolean }) => cn('select__option', {
             'select__option_focused': option.isFocused,
             'select__option_disabled': option.isDisabled,
             'select__option_selected': option.isSelected
         })
-    } as ClassNamesConfig<IOption, IsMulti, GroupBase<IOption>>;
+    };
 
-    const componentsList = {
-        Option: componentOption,
-        SingleValue: componentSingleValue,
+    const componentsList: SelectComponentsConfig<IOption, IsMulti, GroupBase<IOption>> = {
+        Option: (option) => componentOption(option),
+        SingleValue: (option) => componentSingleValue(option),
         IndicatorSeparator: null,
-        IndicatorsContainer: componentIndicatorsContainer
+        IndicatorsContainer: (option) => componentIndicatorsContainer(option)
     };
 
     if(typeComponent === 'async') {
@@ -460,11 +459,11 @@ export const Select = <IsMulti extends boolean = false>({
                 loadOptions={loadOptions}
                 isLoading={isLoading}
                 classNames={classNames}
-                components={useComponents({
+                components={{
                     ...componentsList,
-                    LoadingIndicator: componentLoadingIndicator,
-                    LoadingMessage: componentLoadingMessage
-                })}
+                    LoadingIndicator: (option) => componentLoadingIndicator(option),
+                    LoadingMessage: (option) => componentLoadingMessage(option)
+                } as SelectComponentsConfig<IOption, IsMulti, GroupBase<IOption>>}
                 {...params}
             />
         );
