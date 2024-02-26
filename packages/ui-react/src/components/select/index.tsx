@@ -10,11 +10,11 @@ import SelectSource, {
     ActionMeta,
     OptionsOrGroups,
     OnChangeValue,
-    ControlProps,
     LoadingIndicatorProps,
     NoticeProps
 } from 'react-select';
-import { AsyncPaginate } from 'react-select-async-paginate';
+import { SelectComponents } from 'react-select/dist/declarations/src/components';
+import { AsyncPaginate, useComponents } from 'react-select-async-paginate';
 
 import { type TStyle, useClassnames } from '../../hooks/use-classnames';
 import { IconCheckMark } from '../icons/check-mark';
@@ -327,21 +327,17 @@ export const Select = <IsMulti extends boolean = false>({
         </components.IndicatorsContainer>
     ), []);
 
-    const componentLoadingIndicator = useCallback((option: LoadingIndicatorProps<IOption, IsMulti, GroupBase<IOption>>) => {
-        return (
-            <components.LoadingIndicator {...option}>
-                <Loader presetSize="small" />
-            </components.LoadingIndicator>
-        );
-    }, []);
+    const componentLoadingIndicator = useCallback((option: LoadingIndicatorProps<IOption, IsMulti, GroupBase<IOption>>) => (
+        <components.LoadingIndicator {...option}>
+            <Loader presetSize="small" />
+        </components.LoadingIndicator>
+    ), []);
 
-    const componentLoadingMessage = useCallback((option: NoticeProps<IOption, IsMulti, GroupBase<IOption>>) => {
-        return (
-            <components.LoadingMessage {...option}>
-                <Loader presetSize="small" />
-            </components.LoadingMessage>
-        );
-    }, []);
+    const componentLoadingMessage = useCallback((option: NoticeProps<IOption, IsMulti, GroupBase<IOption>>) => (
+        <components.LoadingMessage {...option}>
+            <Loader presetSize="small" />
+        </components.LoadingMessage>
+    ), []);
 
     const elLabel = useMemo(() => {
         if(props.label) {
@@ -437,13 +433,13 @@ export const Select = <IsMulti extends boolean = false>({
         menu: () => cn('select__menu'),
         menuList: () => cn('select__menu-list'),
         singleValue: () => cn('select__single-value'),
-        control: (option: ControlProps<IOption, IsMulti, GroupBase<IOption>>) => cn('select__control', {
+        control: (option: { isDisabled: boolean }) => cn('select__control', {
             'select__control_disabled': option.isDisabled,
             'select__control_error': props.isError
         }),
         valueContainer: () => cn('select__value-container'),
         placeholder: () => cn('select__placeholder'),
-        option: (option: OptionProps<IOption, IsMulti, GroupBase<IOption>>) => cn('select__option', {
+        option: (option: { isDisabled: boolean, isFocused: boolean, isSelected: boolean }) => cn('select__option', {
             'select__option_focused': option.isFocused,
             'select__option_disabled': option.isDisabled,
             'select__option_selected': option.isSelected
@@ -456,14 +452,16 @@ export const Select = <IsMulti extends boolean = false>({
                 loadOptions={loadOptions}
                 isLoading={isLoading}
                 classNames={classNames}
-                components={{
-                    Option: componentOption,
-                    SingleValue: componentSingleValue,
+                components={useComponents({
+                    /* eslint-disable @typescript-eslint/no-unnecessary-type-assertion */
+                    Option: (option) => componentOption(option as OptionProps<IOption, IsMulti, GroupBase<IOption>>),
+                    SingleValue: (option) => componentSingleValue(option as SingleValueProps<IOption, IsMulti, GroupBase<IOption>>),
                     IndicatorSeparator: null,
-                    IndicatorsContainer: componentIndicatorsContainer,
-                    LoadingIndicator: componentLoadingIndicator,
-                    LoadingMessage: componentLoadingMessage
-                }}
+                    IndicatorsContainer: (option) => componentIndicatorsContainer(option as IndicatorsContainerProps<IOption, IsMulti, GroupBase<IOption>>),
+                    LoadingIndicator: (option) => componentLoadingIndicator(option as LoadingIndicatorProps<IOption, IsMulti, GroupBase<IOption>>),
+                    LoadingMessage: (option) => componentLoadingMessage(option as NoticeProps<IOption, IsMulti, GroupBase<IOption>>)
+                    /* eslint-enable @typescript-eslint/no-unnecessary-type-assertion */
+                }) as SelectComponents<IOption, IsMulti, GroupBase<IOption>>}
                 {...params}
             />
         );
