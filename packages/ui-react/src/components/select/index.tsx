@@ -13,8 +13,7 @@ import SelectSource, {
     LoadingIndicatorProps,
     NoticeProps
 } from 'react-select';
-import { SelectComponents } from 'react-select/dist/declarations/src/components';
-import { AsyncPaginate, useComponents } from 'react-select-async-paginate';
+import { AsyncPaginate } from 'react-select-async-paginate';
 
 import { type TStyle, useClassnames } from '../../hooks/use-classnames';
 import { IconCheckMark } from '../icons/check-mark';
@@ -448,11 +447,11 @@ export const Select = <IsMulti extends boolean = false>({
 
     if(typeComponent === 'async') {
         return elContainer(
-            <AsyncPaginate
+            <AsyncPaginate<IOption, GroupBase<IOption>, unknown, IsMulti>
                 loadOptions={loadOptions}
                 isLoading={isLoading}
                 classNames={classNames}
-                components={useComponents({
+                components={{
                     /* eslint-disable @typescript-eslint/no-unnecessary-type-assertion */
                     Option: (option) => componentOption(option as OptionProps<IOption, IsMulti, GroupBase<IOption>>),
                     SingleValue: (option) => componentSingleValue(option as SingleValueProps<IOption, IsMulti, GroupBase<IOption>>),
@@ -461,7 +460,7 @@ export const Select = <IsMulti extends boolean = false>({
                     LoadingIndicator: (option) => componentLoadingIndicator(option as LoadingIndicatorProps<IOption, IsMulti, GroupBase<IOption>>),
                     LoadingMessage: (option) => componentLoadingMessage(option as NoticeProps<IOption, IsMulti, GroupBase<IOption>>)
                     /* eslint-enable @typescript-eslint/no-unnecessary-type-assertion */
-                }) as SelectComponents<IOption, IsMulti, GroupBase<IOption>>}
+                }}
                 {...params}
             />
         );
