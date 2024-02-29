@@ -343,6 +343,7 @@ export { IconStarActive } from './components/icons/custom/star-active';
 export { IconStarNotActive } from './components/icons/custom/star-not-active';
 export { IconWarningOrange } from './components/icons/custom/warning-orange';
 export { IconWarningRed } from './components/icons/custom/warning-red';
+export { IconSnowflake } from './components/icons/custom/snowflake';
 export { IconBag } from './components/icons/shopping/bag';
 export { IconBasket } from './components/icons/shopping/basket';
 export { IconCart } from './components/icons/shopping/cart';
