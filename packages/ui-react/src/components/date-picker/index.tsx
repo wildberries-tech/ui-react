@@ -409,8 +409,6 @@ export const DatePicker = ({
                         return a.getTime() - b.getTime();
                     });
 
-                    console.log('value', value);
-
                     showPeriodDateInInput(value);
                 }
             }
@@ -520,8 +518,6 @@ export const DatePicker = ({
                 if(isValid(parsedString)) {
                     newSelectedPeriod[index] = parsedString;
 
-                    // console.log({newSelectedPeriod, maxDate, minDate})
-                    //
                     if(isAfter(newSelectedPeriod[index], maxDate)) {
                         newSelectedPeriod[index] = new Date(maxDate);
                     } else if(isBefore(newSelectedPeriod[index], minDate)) {
@@ -548,8 +544,6 @@ export const DatePicker = ({
                     newSelectedPeriod[index] = returnPeriodMap[`index_${index}`];
                 }
             }
-
-            console.log('NEW SELECTED', newSelectedPeriod);
 
             return newSelectedPeriod;
         });
