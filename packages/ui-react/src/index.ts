@@ -357,3 +357,6 @@ export { IconMarket } from './components/icons/shopping/market';
 export { IconPos } from './components/icons/shopping/pos';
 export { IconTag } from './components/icons/shopping/tag';
 export { IconTote } from './components/icons/shopping/tote';
+export { IconAlertTriangleSharp } from './components/icons/alert-triangle-sharp';
+export { IconMegaphone } from './components/icons/megaphone';
+export { IconCircleBlockLeft } from './components/icons/circle-block-left';
