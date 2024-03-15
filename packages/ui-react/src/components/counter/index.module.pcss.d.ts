@@ -9,6 +9,7 @@ interface Stylesheet {
     'counter_preset-size-small': string
     'counter_preset-style-dark-gray': string
     'counter_preset-style-orange': string
+    'counter_preset-style-purple': string
 }
 
 

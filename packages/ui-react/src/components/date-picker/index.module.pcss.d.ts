@@ -19,6 +19,9 @@ interface Stylesheet {
     'date-picker__dates': string
     'date-picker__dates-week': string
     'date-picker__field-icon': string
+    'date-picker__input-date-field': string
+    'date-picker__input-date-icon': string
+    'date-picker__input-date-input': string
     'date-picker__month-name': string
     'date-picker__month-row': string
     'date-picker__month-row-controls': string
