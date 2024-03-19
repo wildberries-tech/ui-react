@@ -362,7 +362,10 @@ export const Select = <IsMulti extends boolean = false>({
         search: string,
         prevOptions: OptionsOrGroups<IOption, GroupBase<IOption>>
     ): Promise<{ options: Array<IOption | GroupBase<IOption>>, hasMore: boolean }> => {
-        await props.loadCallback?.({ pageSize }, props.callbackParams);
+        await props.loadCallback?.({ pageSize }, {
+            ...props.callbackParams,
+            search 
+        });
 
         let filteredOptions;
 
@@ -371,7 +374,29 @@ export const Select = <IsMulti extends boolean = false>({
         } else {
             const searchLower = search.toLowerCase();
 
-            filteredOptions = props.options.filter(({ label }) => label?.toLowerCase().includes(searchLower));
+            const filter = props.options
+                .filter(({ label }) => label?.toLowerCase().includes(searchLower));
+
+            const map: { ids: Set<string | number>, list: Array<IOption> } = {
+                ids: new Set(),
+                list: []
+            };
+
+            const unique = filter.reduce((acc, currentValue) => {
+                if('value' in currentValue) {
+                    const id = currentValue.value;
+
+                    if(!acc.ids.has(id)) {
+                        acc.ids.add(id);
+
+                        acc.list.push(currentValue);
+                    }
+                }
+
+                return acc;
+            }, map);
+
+            filteredOptions = unique.list;
         }
 
         const hasMore = props.hasMore ?? false;
@@ -384,7 +409,7 @@ export const Select = <IsMulti extends boolean = false>({
             options: slicedOptions,
             hasMore
         };
-    }, [props.options.length, props.hasMore, props.loadCallback, props.callbackParams]);
+    }, [props.options, props.hasMore, props.loadCallback, props.callbackParams]);
 
     const params = {
         placeholder: props.placeholder ?? '',
@@ -461,6 +486,7 @@ export const Select = <IsMulti extends boolean = false>({
                     LoadingMessage: (option) => componentLoadingMessage(option as NoticeProps<IOption, IsMulti, GroupBase<IOption>>)
                     /* eslint-enable @typescript-eslint/no-unnecessary-type-assertion */
                 }}
+                debounceTimeout={300}
                 {...params}
             />
         );
