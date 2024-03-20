@@ -714,6 +714,11 @@ export const DatePicker = ({
                         <InputDate
                             label={i18nConfig.translation['start-date']}
                             name="startDate"
+                            className={{
+                                'input-date__field': cn('date-picker__input-date-field'),
+                                'input-date__input': cn('date-picker__input-date-input'),
+                                'input-date__icon' : cn('date-picker__input-date-icon')
+                            }}
                             // disabled={props.isDateInputsReadOnly}
                             value={startValue}
                             minDate={minDateInner}
@@ -723,6 +728,11 @@ export const DatePicker = ({
                         <InputDate
                             label={i18nConfig.translation['end-date']}
                             name="endDate"
+                            className={{
+                                'input-date__field': cn('date-picker__input-date-field'),
+                                'input-date__input': cn('date-picker__input-date-input'),
+                                'input-date__icon' : cn('date-picker__input-date-icon')
+                            }}
                             value={endValue}
                             // disabled={props.isDateInputsReadOnly}
                             minDate={minDateInner}

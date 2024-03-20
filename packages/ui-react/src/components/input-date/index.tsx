@@ -23,7 +23,7 @@ export interface IProps extends Pick<InputHTMLAttributes<HTMLInputElement>, TAtt
 }
 
 export const InputDate = ({ type = 'date', elIcon = true, minDate, maxDate, ...props }: IProps) => {
-    const cn = useClassnames(style, props.className, true);
+    const cn = useClassnames(style, props.className);
     const [inputValue, setInputValue] = useState<string | undefined>(props.value);
 
     useEffect(() => {
