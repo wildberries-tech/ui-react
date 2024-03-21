@@ -210,7 +210,7 @@ export interface IProps<IsMulti extends boolean = boolean> extends Omit<TSelectP
      **/
     readonly filterOption?: TSelectProps['filterOption'],
     readonly classNames?: TSelectProps['classNames'],
-    readonly components?: TSelectProps['components'],
+    // readonly components?: TSelectProps['components'],
     readonly formatGroupLabel?: TSelectProps['formatGroupLabel'],
     readonly getOptionLabel?: TSelectProps['getOptionLabel'],
     readonly getOptionValue?: TSelectProps['getOptionValue'],
