@@ -3,6 +3,7 @@ export const select__control: string
 export const select__control_disabled: string
 export const select__control_error: string
 export const select__label: string
+export const select__loading: string
 export const select__menu: string
 export const select__option: string
 export const select__option_disabled: string
@@ -22,8 +23,10 @@ interface Stylesheet {
     'select__icon-check-mark': string
     'select__icon-check-mark_disabled': string
     'select__label': string
+    'select__loading': string
     'select__menu': string
     'select__menu-list': string
+    'select__no-options': string
     'select__option': string
     'select__option_disabled': string
     'select__option_focused': string

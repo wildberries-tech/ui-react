@@ -9,16 +9,14 @@ import SelectSource, {
     PropsValue,
     ActionMeta,
     OptionsOrGroups,
-    OnChangeValue,
-    LoadingIndicatorProps,
-    NoticeProps
+    OnChangeValue
 } from 'react-select';
 import { AsyncPaginate } from 'react-select-async-paginate';
 
 import { type TStyle, useClassnames } from '../../hooks/use-classnames';
 import { IconCheckMark } from '../icons/check-mark';
 import { IconArrowsChevronBottom } from '../icons/arrows/chevron-bottom';
-import { Loader } from '../loader';
+import { Text } from '../typography/v2/text';
 
 import style from './index.module.pcss';
 
@@ -34,16 +32,13 @@ interface IOption {
     disabled?: boolean
 }
 
-interface IPageParams {
-    pageNumber?: number | string,
-    pageSize?: number | string
-}
-
 interface ICallbackParams {
     [key: string | number]: string | number | boolean | null | undefined | ICallbackParams
 }
 
 type TSelectProps<IsMulti extends boolean = boolean> = Partial<Props<IOption, IsMulti, GroupBase<IOption>>>;
+
+export type TArrayOptions = Array<IOption | GroupBase<IOption>>
 
 export interface IProps<IsMulti extends boolean = boolean> extends Omit<TSelectProps<IsMulti>, 'className'> {
     /**
@@ -229,12 +224,13 @@ export interface IProps<IsMulti extends boolean = boolean> extends Omit<TSelectP
     readonly screenReaderStatus?: TSelectProps['screenReaderStatus'],
     readonly styles?: TSelectProps['styles'],
     readonly tabSelectsValue?: TSelectProps['tabSelectsValue'],
-    readonly unstyled?: TSelectProps['unstyled']
+    readonly unstyled?: TSelectProps['unstyled'],
+    readonly noOptionsText?: string
 }
 
 type TAsyncSelectProps<IsMulti extends boolean> = IProps<IsMulti> & {
     readonly typeComponent: 'async',
-    readonly loadCallback: (pageParams: IPageParams, callbackParams: ICallbackParams | undefined) => unknown,
+    readonly loadCallback: (callbackParams?: ICallbackParams) => Promise<void | TArrayOptions>,
     readonly hasMore: boolean,
     readonly callbackParams?: ICallbackParams
 };
@@ -326,16 +322,12 @@ export const Select = <IsMulti extends boolean = false>({
         </components.IndicatorsContainer>
     ), []);
 
-    const componentLoadingIndicator = useCallback((option: LoadingIndicatorProps<IOption, IsMulti, GroupBase<IOption>>) => (
-        <components.LoadingIndicator {...option}>
-            <Loader presetSize="small" />
-        </components.LoadingIndicator>
-    ), []);
-
-    const componentLoadingMessage = useCallback((option: NoticeProps<IOption, IsMulti, GroupBase<IOption>>) => (
-        <components.LoadingMessage {...option}>
-            <Loader presetSize="small" />
-        </components.LoadingMessage>
+    const componentNoOptions = useCallback(() => (
+        <div className={cn('select__no-options')}>
+            <Text presetColor="secondary">
+                {props.noOptionsText ?? 'No options'}
+            </Text>
+        </div>
     ), []);
 
     const elLabel = useMemo(() => {
@@ -359,61 +351,27 @@ export const Select = <IsMulti extends boolean = false>({
     }, []);
 
     const loadOptions = useCallback(async (
-        search: string,
-        prevOptions: OptionsOrGroups<IOption, GroupBase<IOption>>
+        search: string
     ): Promise<{ options: Array<IOption | GroupBase<IOption>>, hasMore: boolean }> => {
-        await props.loadCallback?.({ pageSize }, {
+        let options: Array<IOption | GroupBase<IOption>> = [];
+
+        const params = {
             ...props.callbackParams,
-            search 
-        });
+            search
+        };
 
-        let filteredOptions;
-
-        if(!search) {
-            filteredOptions = props.options;
-        } else {
-            const searchLower = search.toLowerCase();
-
-            const filter = props.options
-                .filter(({ label }) => label?.toLowerCase().includes(searchLower));
-
-            const map: { ids: Set<string | number>, list: Array<IOption> } = {
-                ids: new Set(),
-                list: []
-            };
-
-            const unique = filter.reduce((acc, currentValue) => {
-                if('value' in currentValue) {
-                    const id = currentValue.value;
-
-                    if(!acc.ids.has(id)) {
-                        acc.ids.add(id);
-
-                        acc.list.push(currentValue);
-                    }
-                }
-
-                return acc;
-            }, map);
-
-            filteredOptions = unique.list;
+        if(props.loadCallback) {
+            options = await props.loadCallback(params) || [];
         }
 
-        const hasMore = props.hasMore ?? false;
-        const slicedOptions = filteredOptions.slice(
-            prevOptions.length,
-            prevOptions.length + pageSize
-        );
-
         return {
-            options: slicedOptions,
-            hasMore
+            options,
+            hasMore: props.hasMore ?? false
         };
-    }, [props.options, props.hasMore, props.loadCallback, props.callbackParams]);
+    }, [props.options, props.hasMore, props.callbackParams]);
 
     const params = {
         placeholder: props.placeholder ?? '',
-        options: props.options,
         isMulti: props.isMulti,
         hideSelectedOptions: props.hideSelectedOptions,
         menuIsOpen: props.menuIsOpen,
@@ -476,14 +434,19 @@ export const Select = <IsMulti extends boolean = false>({
                 loadOptions={loadOptions}
                 isLoading={isLoading}
                 classNames={classNames}
+                onInputChange={(newValue, actionMeta) => {
+                    if(newValue && props.onInputChange) {
+                        props.onInputChange(newValue, actionMeta);
+                    }
+                }}
                 components={{
                     /* eslint-disable @typescript-eslint/no-unnecessary-type-assertion */
                     Option: (option) => componentOption(option as OptionProps<IOption, IsMulti, GroupBase<IOption>>),
                     SingleValue: (option) => componentSingleValue(option as SingleValueProps<IOption, IsMulti, GroupBase<IOption>>),
                     IndicatorSeparator: null,
                     IndicatorsContainer: (option) => componentIndicatorsContainer(option as IndicatorsContainerProps<IOption, IsMulti, GroupBase<IOption>>),
-                    LoadingIndicator: (option) => componentLoadingIndicator(option as LoadingIndicatorProps<IOption, IsMulti, GroupBase<IOption>>),
-                    LoadingMessage: (option) => componentLoadingMessage(option as NoticeProps<IOption, IsMulti, GroupBase<IOption>>)
+                    LoadingIndicator: components.LoadingIndicator,
+                    NoOptionsMessage: componentNoOptions
                     /* eslint-enable @typescript-eslint/no-unnecessary-type-assertion */
                 }}
                 debounceTimeout={300}
@@ -501,6 +464,7 @@ export const Select = <IsMulti extends boolean = false>({
                 IndicatorSeparator: null,
                 IndicatorsContainer: componentIndicatorsContainer
             }}
+            options={props.options}
             {...params}
         />
     );
