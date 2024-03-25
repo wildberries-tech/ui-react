@@ -16,6 +16,7 @@
         "stylelint": "stylelint",
         "lint:style": "stylelint ./**/*.{css,pcss}",
         "lint:es": "eslint . --ext .ts,.tsx,.yaml,.yml,.htm,.html",
+        "lint:fix": "npm run lint:es -- --fix && npm run lint:style -- --fix",
         "start": "storybook dev -p 6006",
         "storybook:build": "storybook build --disable-telemetry -o ./build",
         "test": "jest --coverage",

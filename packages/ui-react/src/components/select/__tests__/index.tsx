@@ -125,9 +125,9 @@ test('Label', () => {
     expect(tree.toJSON()).toMatchSnapshot();
 });
 
-const sleep = async () => new Promise<void>((resolve) => {
+const sleep = async () => new Promise<Array<any>>((resolve) => {
     setTimeout(() => {
-        resolve();
+        resolve(OPTIONS);
     }, 1000);
 });
 
@@ -137,7 +137,7 @@ test('Default async', () => {
             typeComponent="async"
             hasMore={false}
             loadCallback={sleep}
-            options={OPTIONS}
+            options={[]}
         />
     );
 
