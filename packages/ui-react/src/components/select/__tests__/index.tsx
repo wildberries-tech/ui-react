@@ -1,7 +1,7 @@
 import React from 'react';
 import { create } from 'react-test-renderer';
 
-import { Select } from '..';
+import { IOption, Select } from '..';
 import { IconVideo } from '../../icons/video';
 import { IconSearch } from '../../icons/search';
 import { IconDownload } from '../../icons/download';
@@ -9,7 +9,7 @@ import { IconCalendar } from '../../icons/calendar';
 import { IconBox } from '../../icons/box';
 import { IconInfo } from '../../icons/info';
 
-const OPTIONS = [{
+const OPTIONS: Array<IOption> = [{
     label: 'Мали',
     value: '1'
 }, {
@@ -125,7 +125,7 @@ test('Label', () => {
     expect(tree.toJSON()).toMatchSnapshot();
 });
 
-const sleep = async () => new Promise<Array<any>>((resolve) => {
+const sleep = async () => new Promise<Array<IOption>>((resolve) => {
     setTimeout(() => {
         resolve(OPTIONS);
     }, 1000);

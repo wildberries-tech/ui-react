@@ -24,7 +24,7 @@ export declare type TOptionOrSingleValueProps<Option, IsMulti extends boolean = 
     OptionProps<Option, IsMulti, Group>
     | SingleValueProps<Option, IsMulti, Group>;
 
-interface IOption {
+export interface IOption {
     label: string,
     value: string,
     elBefore?: ReactNode | ((option: TOptionOrSingleValueProps<IOption>) => ReactNode),
@@ -38,7 +38,7 @@ interface ICallbackParams {
 
 type TSelectProps<IsMulti extends boolean = boolean> = Partial<Props<IOption, IsMulti, GroupBase<IOption>>>;
 
-export type TArrayOptions = Array<IOption | GroupBase<IOption>>
+export type TArrayOptions = Array<IOption | GroupBase<IOption>>;
 
 export interface IProps<IsMulti extends boolean = boolean> extends Omit<TSelectProps<IsMulti>, 'className'> {
     /**
@@ -230,7 +230,7 @@ export interface IProps<IsMulti extends boolean = boolean> extends Omit<TSelectP
 
 type TAsyncSelectProps<IsMulti extends boolean> = IProps<IsMulti> & {
     readonly typeComponent: 'async',
-    readonly loadCallback: (callbackParams?: ICallbackParams) => Promise<void | TArrayOptions>,
+    readonly loadCallback: (callbackParams?: ICallbackParams) => Promise<TArrayOptions>,
     readonly hasMore: boolean,
     readonly callbackParams?: ICallbackParams
 };
@@ -361,7 +361,7 @@ export const Select = <IsMulti extends boolean = false>({
         };
 
         if(props.loadCallback) {
-            options = await props.loadCallback(params) || [];
+            options = await props.loadCallback(params);
         }
 
         return {
