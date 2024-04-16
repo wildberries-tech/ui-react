@@ -176,6 +176,8 @@ export const Popover = ({ trigger = 'click', triggerTagName = 'div', auto = true
     const elArrow = useMemo(() => {
         if(props.arrow) {
             return (
+                // @TODO: Ошибка в типах onPointerEnterCapture, onPointerLeaveCapture
+                // @ts-ignore
                 <Arrow
                     {...props.arrowOptions}
                     {...arrowProps}

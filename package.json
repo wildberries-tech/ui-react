@@ -68,7 +68,7 @@
         "stylelint": "15.11.0",
         "stylelint-declaration-block-no-ignored-properties": "2.7.0",
         "ts-jest": "29.1.1",
-        "typescript": "5.2.2",
+        "typescript": "5.4.5",
         "vite": "4.5.0"
     },
     "private": false,
@@ -80,12 +80,15 @@
         "@types/react": "18.2.37",
         "@types/react-dom": "18.2.15",
         "@types/react-is": "17.x || 18.x",
-        "classnames": "2.x",
+        "@types/uuid": "9.0.8",
+        "classnames": "2.5.1",
         "date-fns": "2.30.0",
         "rc-util": "5.38.1",
         "react": "16.x || 17.x || 18.x",
         "react-dom": "16.x || 17.x || 18.x",
-        "react-is": "17.x || 18.x"
+        "react-is": "17.x || 18.x",
+        "react-number-format": "5.3.4",
+        "react-select-async-paginate": "0.7.4"
     },
     "contributors": [
         "Aleksey Novikov (https://github.com/lamo2k123)"
