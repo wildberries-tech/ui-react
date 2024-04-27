@@ -328,7 +328,7 @@ export const Select = <IsMulti extends boolean = false>({
                 {props.noOptionsText ?? 'No options'}
             </Text>
         </div>
-    ), []);
+    ), [props.noOptionsText]);
 
     const elLabel = useMemo(() => {
         if(props.label) {
