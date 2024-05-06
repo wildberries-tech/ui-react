@@ -77,55 +77,6 @@
         }
     }
 
-    &__icon-rect {
-        fill: var(--ui-kit-checkbox-icon-rect-fill, #fff);
-        stroke-width: 1.5;
-        stroke: var(--ui-kit-checkbox-icon-rect-stroke, #bbb7c9);
-        transition-property: stroke, fill;
-        transition-duration: 100ms;
-        transition-timing-function: linear;
-
-        @media screen and (prefers-reduced-motion: reduce) {
-            transition: none;
-        }
-    }
-
-    &__icon-indeterminate {
-        fill: #fff;
-    }
-
-    &__icon-check {
-        stroke: var(--ui-kit-checkbox-icon-check-stroke, #fff);
-        stroke-width: 2;
-        transform: var(--ui-kit-checkbox-icon-check-transform, scale(0));
-        transform-origin: center;
-        transition: transform linear 150ms;
-
-        @media screen and (prefers-reduced-motion: reduce) {
-            transition: none;
-        }
-    }
-
-    &__icon-disabled {
-        stroke-width: 1.5;
-        stroke: #e3e4ea;
-    }
-
-    &__icon {
-        width: var(--ui-kit-checkbox-container-size);
-        height: var(--ui-kit-checkbox-container-size);
-        min-width: var(--ui-kit-checkbox-container-size);
-        min-height: var(--ui-kit-checkbox-container-size);
-        display: block;
-        fill: none;
-        transition: transform linear 150ms;
-        transform: var(--ui-kit-checkbox-icon-transform, none);
-
-        @media screen and (prefers-reduced-motion: reduce) {
-            transition: none;
-        }
-    }
-
     &__input {
         position: absolute;
         top: 0;
