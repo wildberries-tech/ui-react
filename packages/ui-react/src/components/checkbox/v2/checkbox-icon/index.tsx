@@ -33,13 +33,14 @@ export const CheckboxIcon = (props: IProps) => {
                     y="7"
                     rx="1"
                 />
-            ) : null}
-            <path
-                className={cn('checkbox-icon__check')}
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                d="m5 7.8 2.3 2.3 4.271-4.6"
-            />
+            ) : (
+                <path
+                    className={cn('checkbox-icon__check')}
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    d="m5 7.8 2.3 2.3 4.271-4.6"
+                />
+            )}
             {props.disabled && !props.checked && !props.indeterminate ? (
                 <path
                     className={cn('checkbox-icon__disabled')}
