@@ -31,9 +31,11 @@
 
         --ui-kit-checkbox-icon-default-container-visibility: hidden;
         --ui-kit-checkbox-icon-container-background-image: url("./img/container/disabled.svg");
+        --ui-kit-checkbox-icon-mark-background-image: url("./img/mark/disabled.svg");
     }
 
     @media (hover: hover) and (pointer: fine) {
+
         &:hover:not(&_disabled) {
             cursor: pointer;
 
@@ -74,7 +76,10 @@
         padding: var(--ui-kit-checkbox-card-padding, 0);
         border-radius: 12px;
         border: 1px solid var(--ui-kit-checkbox-card-border-color, #f0f0f3);
-        background-color: var(--ui-kit-checkbox-card-background-color, transparent);
+        background-color: var(
+            --ui-kit-checkbox-card-background-color,
+            transparent
+        );
         transition-property: background-color, border-color;
         transition-duration: 100ms;
         transition-timing-function: linear;
@@ -118,14 +123,19 @@
     }
 
     &__icon-container {
-        visibility: var(--ui-kit-checkbox-icon-default-container-visibility, visible);
+        visibility: var(
+            --ui-kit-checkbox-icon-default-container-visibility,
+            visible
+        );
     }
 
     &__icon-container-state {
         background-size: var(--ui-kit-checkbox-container-size);
         background-position: center center;
         background-repeat: no-repeat;
-        background-image: var(--ui-kit-checkbox-icon-container-background-image);
+        background-image: var(
+            --ui-kit-checkbox-icon-container-background-image
+        );
     }
 
     &__icon-mark,
@@ -157,11 +167,6 @@
 
         &_indeterminate {
             --ui-kit-checkbox-icon-mark-background-image: url("./img/mark/indeterminate.svg");
-        }
-
-        &_disabled {
-            transform: none;
-            --ui-kit-checkbox-icon-mark-background-image: url("./img/mark/disabled.svg");
         }
     }
 

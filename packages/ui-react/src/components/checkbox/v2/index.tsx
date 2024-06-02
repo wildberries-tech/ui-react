@@ -167,7 +167,6 @@ export const Checkbox = forwardRef<HTMLInputElement | null, IProps>(({ tabIndex 
                 <span className={cn('checkbox__icon-container-state')} />
                 <span
                     className={cn('checkbox__icon-mark', {
-                        'checkbox__icon-mark_disabled'     : props.disabled && !props.checked && !props.indeterminate,
                         'checkbox__icon-mark_indeterminate': props.indeterminate
                     })}
                 />
