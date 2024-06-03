@@ -43,9 +43,7 @@
             --ui-kit-checkbox-icon-container-transform: scale(1.15);
             --ui-kit-checkbox-card-background-color: #f7f7fa;
             --ui-kit-checkbox-card-border-color: #f0f0f3;
-
             --ui-kit-checkbox-icon-default-container-visibility: hidden;
-
             --ui-kit-checkbox-icon-container-background-image: url("./img/container/hover.svg");
         }
 
@@ -94,12 +92,11 @@
         align-items: center;
         justify-content: center;
         position: relative;
-
+        display: block;
         width: var(--ui-kit-checkbox-container-size);
         height: var(--ui-kit-checkbox-container-size);
         min-width: var(--ui-kit-checkbox-container-size);
         min-height: var(--ui-kit-checkbox-container-size);
-        display: block;
     }
 
     &__icon-container,
@@ -108,12 +105,10 @@
         top: 0;
         left: 0;
         padding: inherit;
-
         width: var(--ui-kit-checkbox-container-size);
         height: var(--ui-kit-checkbox-container-size);
         min-width: var(--ui-kit-checkbox-container-size);
         min-height: var(--ui-kit-checkbox-container-size);
-        display: block;
         transition: transform linear 150ms;
         transform: var(--ui-kit-checkbox-icon-container-transform, none);
 
@@ -123,19 +118,14 @@
     }
 
     &__icon-container {
-        visibility: var(
-            --ui-kit-checkbox-icon-default-container-visibility,
-            visible
-        );
+        visibility: var(--ui-kit-checkbox-icon-default-container-visibility, visible);
     }
 
     &__icon-container-state {
         background-size: var(--ui-kit-checkbox-container-size);
         background-position: center center;
         background-repeat: no-repeat;
-        background-image: var(
-            --ui-kit-checkbox-icon-container-background-image
-        );
+        background-image: var(--ui-kit-checkbox-icon-container-background-image);
     }
 
     &__icon-mark,
