@@ -2,6 +2,7 @@ import React, { forwardRef, InputHTMLAttributes, ReactNode, useMemo } from 'reac
 
 import { type TStyle, useClassnames } from '../../../hooks/use-classnames';
 
+import ContainerDefault from './img/container/default.svg';
 import style from './index.module.pcss';
 
 type TNative = InputHTMLAttributes<HTMLInputElement>;
@@ -91,41 +92,6 @@ export interface IProps {
 export const Checkbox = forwardRef<HTMLInputElement | null, IProps>(({ tabIndex = 0, presetSize = 'medium', presetStyle = 'default', ...props }, ref) => {
     const cn = useClassnames(style, props.className);
 
-    const elIconDisabled = useMemo(() => {
-        if(props.disabled && !props.checked && !props.indeterminate) {
-            return (
-                <path
-                    className={cn('checkbox__icon-disabled')}
-                    d="m3 3 10 10"
-                />
-            );
-        }
-    }, [props.disabled, props.checked, props.indeterminate]);
-
-    const elIconCheck = useMemo(() => {
-        if(props.indeterminate) {
-            return (
-                <rect
-                    className={cn('checkbox__icon-indeterminate')}
-                    width="6"
-                    height="2"
-                    x="5"
-                    y="7"
-                    rx="1"
-                />
-            );
-        }
-
-        return (
-            <path
-                className={cn('checkbox__icon-check')}
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                d="m5 7.8 2.3 2.3 4.271-4.6"
-            />
-        );
-    }, [props.indeterminate]);
-
     const elLabel = useMemo(() => {
         if(props.label) {
             if(typeof props.label === 'string') {
@@ -192,18 +158,19 @@ export const Checkbox = forwardRef<HTMLInputElement | null, IProps>(({ tabIndex 
                 tabIndex={props.disabled ? -1 : tabIndex}
                 className={cn('checkbox__input')}
             />
-            <svg
-                xmlns="http://www.w3.org/2000/svg"
-                viewBox="0 0 16 16"
-                className={cn('checkbox__icon')}
-            >
-                <path
-                    className={cn('checkbox__icon-rect')}
-                    d="M2.223 4.741a2.968 2.968 0 0 1 2.518-2.518 23.042 23.042 0 0 1 6.518 0 2.968 2.968 0 0 1 2.518 2.518 23.049 23.049 0 0 1 0 6.518 2.968 2.968 0 0 1-2.518 2.518 23.049 23.049 0 0 1-6.518 0 2.968 2.968 0 0 1-2.518-2.518 23.042 23.042 0 0 1 0-6.518Z"
+            <div className={cn('checkbox__icon-wrap')}>
+                <img
+                    src={ContainerDefault}
+                    alt="checkbox-icon"
+                    className={cn('checkbox__icon-container')}
                 />
-                {elIconCheck}
-                {elIconDisabled}
-            </svg>
+                <span className={cn('checkbox__icon-container-state')} />
+                <span
+                    className={cn('checkbox__icon-mark', {
+                        'checkbox__icon-mark_indeterminate': props.indeterminate
+                    })}
+                />
+            </div>
             {elContent}
         </label>
     );

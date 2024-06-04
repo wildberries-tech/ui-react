@@ -1,7 +1,6 @@
 export const checkbox: string
 export const checkbox__content: string
 export const checkbox__description: string
-export const checkbox__icon: string
 export const checkbox__input: string
 export const checkbox__label: string
 export const checkbox_card: string
@@ -15,11 +14,12 @@ interface Stylesheet {
     'checkbox': string
     'checkbox__content': string
     'checkbox__description': string
-    'checkbox__icon': string
-    'checkbox__icon-check': string
-    'checkbox__icon-disabled': string
-    'checkbox__icon-indeterminate': string
-    'checkbox__icon-rect': string
+    'checkbox__icon-container': string
+    'checkbox__icon-container-state': string
+    'checkbox__icon-mark': string
+    'checkbox__icon-mark_disabled': string
+    'checkbox__icon-mark_indeterminate': string
+    'checkbox__icon-wrap': string
     'checkbox__input': string
     'checkbox__label': string
     'checkbox_card': string
