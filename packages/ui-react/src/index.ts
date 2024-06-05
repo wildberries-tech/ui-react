@@ -360,3 +360,4 @@ export { IconTote } from './components/icons/shopping/tote';
 export { IconAlertTriangleSharp } from './components/icons/alert-triangle-sharp';
 export { IconMegaphone } from './components/icons/megaphone';
 export { IconCircleBlockLeft } from './components/icons/circle-block-left';
+export { IconNoteText } from './components/icons/note-text';
