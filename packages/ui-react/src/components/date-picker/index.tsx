@@ -259,12 +259,15 @@ export const DatePicker = ({
         const selectedWithValues = selectedPeriod.filter((value) => Boolean(value));
 
         if(props.isDateRange && selectedWithValues.length === 2) {
-            const interval = {
+            const datesArray = eachDayOfInterval({
                 start: selectedWithValues[0],
                 end: selectedWithValues[1]
-            };
+            });
+            const found = datesArray.find((el) => {
+                return el.getTime() === day.getTime();
+            });
 
-            if(isWithinInterval(day, interval)) {
+            if(found) {
                 return true;
             }
         } else if(selectedWithValues.length === 1) {
@@ -689,6 +692,8 @@ export const DatePicker = ({
     const elPeriodCalendar = useCallback((onClose?: () => void) => {
         const minDateInner = format(minDate, revertedFormatDate);
         const maxDateInner = format(maxDate, revertedFormatDate);
+        const formattedStartDate = selectedPeriod[0] && isValid(selectedPeriod[0]) ? format(selectedPeriod[0], revertedFormatDate) : '';
+        const formattedEndDate = selectedPeriod[1] && isValid(selectedPeriod[1]) ? format(selectedPeriod[1], revertedFormatDate) : '';
 
         if(props.isDateRange) {
             return (
@@ -713,7 +718,7 @@ export const DatePicker = ({
                             // disabled={props.isDateInputsReadOnly}
                             minDate={minDateInner}
                             maxDate={maxDateInner}
-                            value={inputValues.start || format(selectedPeriod[0], revertedFormatDate)}
+                            value={inputValues.start || formattedStartDate}
                             onChange={onChangeDate('start')}
                             onBlur={onBlurDate}
                         />
@@ -728,7 +733,7 @@ export const DatePicker = ({
                             // disabled={props.isDateInputsReadOnly}
                             minDate={minDateInner}
                             maxDate={maxDateInner}
-                            value={inputValues.end || format(selectedPeriod[1], revertedFormatDate)}
+                            value={inputValues.end || formattedEndDate}
                             onChange={onChangeDate('end')}
                             onBlur={onBlurDate}
                         />
