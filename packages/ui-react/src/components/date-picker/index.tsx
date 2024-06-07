@@ -221,6 +221,10 @@ export const DatePicker = ({
     const [currentHoveredDate, setCurrentHoveredDate] = useState<ICalendarDate | null>(null);
     const [displayDate, setDisplayDate] = useState<string>();
     const [isAllPeriod, setIsAllPeriod] = useState<boolean>(!!defaultSelectedDate.length);
+    const [inputValues, setInputValues] = useState({
+        start: '',
+        end: ''
+    });
 
     const defaultCalendar = {
         month   : defaultSelectedDate[0] ? new Date(defaultSelectedDate[0]) : new Date(),
@@ -255,15 +259,12 @@ export const DatePicker = ({
         const selectedWithValues = selectedPeriod.filter((value) => Boolean(value));
 
         if(props.isDateRange && selectedWithValues.length === 2) {
-            const datesArray = eachDayOfInterval({
+            const interval = {
                 start: selectedWithValues[0],
                 end: selectedWithValues[1]
-            });
-            const found = datesArray.find((el) => {
-                return el.getTime() === day.getTime();
-            });
+            };
 
-            if(found) {
+            if(isWithinInterval(day, interval)) {
                 return true;
             }
         } else if(selectedWithValues.length === 1) {
@@ -507,45 +508,37 @@ export const DatePicker = ({
         }
     };
 
-    const onChangeDate = (index: 0 | 1) => (event: ChangeEvent<HTMLInputElement>) => {
-        const { value } = event.target;
-        const parsedString = parse(value, revertedFormatDate, new Date());
+    const onChangeDate = (name: string) => (event: ChangeEvent<HTMLInputElement>) => {
+        setInputValues((prev) => ({
+            ...prev,
+            [name]: event.target.value
+        }));
+    };
 
-        setSelectedPeriod((prev) => {
-            const newSelectedPeriod = [...prev];
+    const onBlurDate = () =>  {
+        const startDate = parse(inputValues.start, revertedFormatDate, new Date());
+        const endDate = parse(inputValues.end, revertedFormatDate, new Date());
+        const newPeriod = [...selectedPeriod];
 
-            if(index >= 0) {
-                if(isValid(parsedString)) {
-                    newSelectedPeriod[index] = parsedString;
+        if(isValid(startDate) && isWithinInterval(startDate, {
+            start: minDate,
+            end: maxDate
+        })) {
+            newPeriod[0] = startDate;
+        }
 
-                    if(isAfter(newSelectedPeriod[index], maxDate)) {
-                        newSelectedPeriod[index] = new Date(maxDate);
-                    } else if(isBefore(newSelectedPeriod[index], minDate)) {
-                        newSelectedPeriod[index] = new Date(minDate);
+        if(isValid(endDate) && isWithinInterval(endDate, {
+            start: minDate,
+            end: maxDate
+        })) {
+            newPeriod[1] = endDate;
+        }
 
-                        newSelectedPeriod[index].setDate(newSelectedPeriod[index].getDate() + 1);
-                    }
+        setSelectedPeriod(newPeriod);
 
-                    if(index === 0 && isAfter(newSelectedPeriod[0], newSelectedPeriod[1])) {
-                        newSelectedPeriod[1] = new Date(newSelectedPeriod[0]);
-
-                        newSelectedPeriod[1].setDate(newSelectedPeriod[1].getDate());
-                    } else if(index === 1 && isAfter(newSelectedPeriod[0], newSelectedPeriod[1])) {
-                        newSelectedPeriod[0] = new Date(newSelectedPeriod[1]);
-
-                        newSelectedPeriod[0].setDate(newSelectedPeriod[0].getDate());
-                    }
-                } else {
-                    const returnPeriodMap = {
-                        'index_0': isBefore(defaultMinDate, defaultSelectedDate[index]) ? defaultMinDate : startOfYear(defaultSelectedDate[index]),
-                        'index_1': isAfter(defaultMaxDate, defaultSelectedDate[index]) ? defaultMaxDate : defaultSelectedDate[index]
-                    };
-
-                    newSelectedPeriod[index] = returnPeriodMap[`index_${index}`];
-                }
-            }
-
-            return newSelectedPeriod;
+        setInputValues({
+            start: '',
+            end: ''
         });
     };
 
@@ -694,8 +687,6 @@ export const DatePicker = ({
     }, [calendar, elMonthItem]);
 
     const elPeriodCalendar = useCallback((onClose?: () => void) => {
-        const startValue = selectedPeriod[0] ? format(selectedPeriod[0], revertedFormatDate) : '';
-        const endValue = selectedPeriod[1] ? format(selectedPeriod[1], revertedFormatDate) : '';
         const minDateInner = format(minDate, revertedFormatDate);
         const maxDateInner = format(maxDate, revertedFormatDate);
 
@@ -720,10 +711,11 @@ export const DatePicker = ({
                                 'input-date__icon' : cn('date-picker__input-date-icon')
                             }}
                             // disabled={props.isDateInputsReadOnly}
-                            value={startValue}
                             minDate={minDateInner}
                             maxDate={maxDateInner}
-                            onChange={onChangeDate(0)}
+                            value={inputValues.start || format(selectedPeriod[0], revertedFormatDate)}
+                            onChange={onChangeDate('start')}
+                            onBlur={onBlurDate}
                         />
                         <InputDate
                             label={i18nConfig.translation['end-date']}
@@ -733,11 +725,12 @@ export const DatePicker = ({
                                 'input-date__input': cn('date-picker__input-date-input'),
                                 'input-date__icon' : cn('date-picker__input-date-icon')
                             }}
-                            value={endValue}
                             // disabled={props.isDateInputsReadOnly}
                             minDate={minDateInner}
                             maxDate={maxDateInner}
-                            onChange={onChangeDate(1)}
+                            value={inputValues.end || format(selectedPeriod[1], revertedFormatDate)}
+                            onChange={onChangeDate('end')}
+                            onBlur={onBlurDate}
                         />
                     </div>
                     <Button
@@ -752,7 +745,7 @@ export const DatePicker = ({
                 </div>
             );
         }
-    }, [isAllPeriod, selectedPeriod, props.isDateRange, props.isMobile, defaultSelectedDate, minDate, maxDate, i18nConfig]);
+    }, [inputValues, isAllPeriod, selectedPeriod, props.isDateRange, props.isMobile, defaultSelectedDate, minDate, maxDate, i18nConfig]);
 
     const onClickChangeButton = (type: 'plus' | 'minus') => {
         const amount = type === 'plus' ? 1 : -1;
