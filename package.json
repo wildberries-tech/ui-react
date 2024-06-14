@@ -46,6 +46,7 @@
         "@storybook/testing-library": "0.2.2",
         "@testing-library/react": "14.1.0",
         "@types/jest": "29.5.8",
+        "@types/lodash.debounce": "4.0.9",
         "@types/react-test-renderer": "18.0.6",
         "@typescript-eslint/eslint-plugin": "6.11.0",
         "@typescript-eslint/parser": "6.11.0",

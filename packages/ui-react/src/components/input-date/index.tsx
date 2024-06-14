@@ -44,6 +44,16 @@ export const InputDate = ({ type = 'date', elIcon = true, minDate, maxDate, ...p
         }
     }, [props.label, props.disabled, props.readOnly, props.required]);
 
+    const handleOnChange = (event: React.ChangeEvent<HTMLInputElement>) => {
+        const { value } = event.target;
+
+        setInputValue(value);
+
+        if(props.onChange) {
+            props.onChange(event);
+        }
+    };
+
     const elPlaceholder = useMemo(() => {
         if(props.placeholder && !inputValue) {
             return (
@@ -80,13 +90,7 @@ export const InputDate = ({ type = 'date', elIcon = true, minDate, maxDate, ...p
                     type={type}
                     min={minDate}
                     max={maxDate}
-                    onChange={(event) => {
-                        const { value } = event.target;
-
-                        setInputValue(value);
-
-                        props.onChange?.(event);
-                    }}
+                    onChange={handleOnChange}
                     className={cn('input-date__input', {
                         'input-date__input_filled': inputValue
                     })}
