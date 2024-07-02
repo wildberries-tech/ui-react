@@ -94,7 +94,7 @@ export interface IProps {
     /**
      * Тип поля ввода.
      */
-    readonly type?: 'email' | 'password' | 'search' | 'text' | 'tel' | 'url',
+    readonly type?: 'email' | 'password' | 'search' | 'text' | 'tel' | 'url' | 'number',
     /**
      * Параметр `value` используется для задания значения поля.
      */
