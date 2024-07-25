@@ -3,6 +3,7 @@ import react from '@vitejs/plugin-react';
 import postcssModulesDTS from '@guanghechen/postcss-modules-dts';
 import postcssNested from 'postcss-nested';
 import postcssNestedAncestors from 'postcss-nested-ancestors';
+import svgLoader from 'vite-svg-loader';
 
 export default () => {
     return defineConfig({
@@ -23,7 +24,8 @@ export default () => {
             }
         },
         plugins: [
-            react()
+            react(),
+            svgLoader()
         ]
     });
 };
