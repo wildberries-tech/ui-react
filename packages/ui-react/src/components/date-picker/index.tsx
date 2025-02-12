@@ -129,7 +129,11 @@ export interface IProps {
     /**
      * Параметр `isDateInputsReadOnly` позволяет отключить ввод данных в инпуты даты
      */
-    readonly isDateInputsReadOnly?: boolean
+    readonly isDateInputsReadOnly?: boolean,
+    /**
+     * Параметр `noValueText` текст, которые отображается при отсутствии дефолтной или сбросе выбранной даты
+     */
+    readonly noValueText?: string
 }
 
 interface ICalendarDate {
@@ -200,6 +204,7 @@ export const DatePicker = ({
     defaultSelectedDate = defaultSelectedDateEmpty,
     i18nConfig = defaultTranslationConfig,
     dateFormat = defaultFormatDate,
+    noValueText = '',
     ...props
 }: IProps) => {
     const cn = useClassnames(style, props.className);
@@ -841,7 +846,7 @@ export const DatePicker = ({
                 onClick={onClickTrigger}
             >
                 <Text presetSize="body">
-                    {displayDate ?? ''}
+                    {displayDate ?? noValueText}
                 </Text>
                 <IconCalendarDates
                     svg={{
@@ -850,7 +855,7 @@ export const DatePicker = ({
                 />
             </button>
         );
-    }, [props.readOnly, displayDate, props.isDateRange, props.isMobile, props.disabled]);
+    }, [props.readOnly, displayDate, props.isDateRange, props.isMobile, props.disabled, noValueText]);
 
     const onCloseCalendar = () => {
         setCalendar(defaultCalendar);
