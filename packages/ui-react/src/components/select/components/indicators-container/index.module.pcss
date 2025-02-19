@@ -1,0 +1,19 @@
+.select {
+
+    &__icon-arrow-bottom {
+        width: 24px;
+        height: 24px;
+        fill: #000;
+
+        &_open {
+            transform: rotateX(180deg);
+        }
+
+        @media (hover: hover) and (pointer: fine) {
+
+            &:hover:not(&_disabled) {
+                cursor: pointer;
+            }
+        }
+    }
+}

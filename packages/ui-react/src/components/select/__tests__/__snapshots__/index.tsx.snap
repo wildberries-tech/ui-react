@@ -2,7 +2,7 @@
 
 exports[`Default 1`] = `
 <label
-  className="select"
+  className="select__container"
 >
   <div
     className=" css-b62m3t-container"
@@ -74,7 +74,7 @@ exports[`Default 1`] = `
 
 exports[`Default async 1`] = `
 <label
-  className="select"
+  className="select__container"
 >
   <div
     className=" css-b62m3t-container"
@@ -146,7 +146,7 @@ exports[`Default async 1`] = `
 
 exports[`Default async menu open 1`] = `
 <label
-  className="select"
+  className="select__container"
 >
   <div
     className=" css-b62m3t-container"
@@ -241,7 +241,7 @@ exports[`Default async menu open 1`] = `
 
 exports[`Default async value 1`] = `
 <label
-  className="select"
+  className="select__container"
 >
   <div
     className=" css-b62m3t-container"
@@ -336,7 +336,7 @@ exports[`Default async value 1`] = `
 
 exports[`Default menu open 1`] = `
 <label
-  className="select"
+  className="select__container"
 >
   <div
     className=" css-b62m3t-container"
@@ -621,7 +621,7 @@ exports[`Default menu open 1`] = `
 
 exports[`Default value 1`] = `
 <label
-  className="select"
+  className="select__container"
 >
   <div
     className=" css-b62m3t-container"
@@ -919,7 +919,7 @@ exports[`Default value 1`] = `
 
 exports[`Disabled 1`] = `
 <label
-  className="select"
+  className="select__container"
 >
   <div
     className=" css-3iigni-container"
@@ -992,7 +992,7 @@ exports[`Disabled 1`] = `
 
 exports[`Disabled async 1`] = `
 <label
-  className="select"
+  className="select__container"
 >
   <div
     className=" css-3iigni-container"
@@ -1065,7 +1065,7 @@ exports[`Disabled async 1`] = `
 
 exports[`Error 1`] = `
 <label
-  className="select"
+  className="select__container"
 >
   <div
     className=" css-b62m3t-container"
@@ -1137,7 +1137,7 @@ exports[`Error 1`] = `
 
 exports[`Error async 1`] = `
 <label
-  className="select"
+  className="select__container"
 >
   <div
     className=" css-b62m3t-container"
@@ -1209,7 +1209,7 @@ exports[`Error async 1`] = `
 
 exports[`Label 1`] = `
 <label
-  className="select"
+  className="select__container"
 >
   <span
     className="select__label"
@@ -1286,7 +1286,7 @@ exports[`Label 1`] = `
 
 exports[`Label 2`] = `
 <label
-  className="select"
+  className="select__container"
 >
   <span
     className="select__label"
@@ -1363,7 +1363,7 @@ exports[`Label 2`] = `
 
 exports[`Label async 1`] = `
 <label
-  className="select"
+  className="select__container"
 >
   <span
     className="select__label"
