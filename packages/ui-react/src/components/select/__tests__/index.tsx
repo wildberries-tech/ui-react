@@ -1,13 +1,14 @@
 import React from 'react';
 import { create } from 'react-test-renderer';
 
-import { IOption, Select } from '..';
+import { Select } from '..';
 import { IconVideo } from '../../icons/video';
 import { IconSearch } from '../../icons/search';
 import { IconDownload } from '../../icons/download';
 import { IconCalendar } from '../../icons/calendar';
 import { IconBox } from '../../icons/box';
 import { IconInfo } from '../../icons/info';
+import { IOption } from '../types';
 
 const OPTIONS: Array<IOption> = [{
     label: 'Мали',
@@ -135,8 +136,8 @@ test('Default async', () => {
     const tree = create(
         <Select
             typeComponent="async"
-            hasMore={false}
-            loadCallback={sleep}
+            isOptionsForFetch={false}
+            fetchOptions={sleep}
             options={[]}
         />
     );
@@ -148,8 +149,8 @@ test('Default async menu open', () => {
     const tree = create(
         <Select
             typeComponent="async"
-            hasMore={false}
-            loadCallback={sleep}
+            isOptionsForFetch={false}
+            fetchOptions={sleep}
             defaultMenuIsOpen={true}
             options={OPTIONS}
         />
@@ -162,8 +163,8 @@ test('Error async', () => {
     const tree = create(
         <Select
             typeComponent="async"
-            hasMore={false}
-            loadCallback={sleep}
+            isOptionsForFetch={false}
+            fetchOptions={sleep}
             isError={true}
             options={OPTIONS}
         />
@@ -176,8 +177,8 @@ test('Disabled async', () => {
     const tree = create(
         <Select
             typeComponent="async"
-            hasMore={false}
-            loadCallback={sleep}
+            isOptionsForFetch={false}
+            fetchOptions={sleep}
             isDisabled={true}
             options={OPTIONS}
         />
@@ -190,8 +191,8 @@ test('Default async value', () => {
     const tree = create(
         <Select
             typeComponent="async"
-            hasMore={false}
-            loadCallback={sleep}
+            isOptionsForFetch={false}
+            fetchOptions={sleep}
             defaultMenuIsOpen={true}
             defaultValue={[OPTIONS[0]]}
             options={OPTIONS}
@@ -205,8 +206,8 @@ test('Label async', () => {
     const tree = create(
         <Select
             typeComponent="async"
-            hasMore={false}
-            loadCallback={sleep}
+            isOptionsForFetch={false}
+            fetchOptions={sleep}
             label="Label field"
             options={OPTIONS}
         />
